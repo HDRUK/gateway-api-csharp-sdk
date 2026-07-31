@@ -51,15 +51,15 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test B60e5c6bd58001740003449e91216454
+        /// Test SearchDatasets
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task B60e5c6bd58001740003449e91216454AsyncTest()
+        public async Task SearchDatasetsAsyncTest()
         {
-            B60e5c6bd58001740003449e91216454Request b60e5c6bd58001740003449e91216454Request = default!;
-            var response = await _instance.B60e5c6bd58001740003449e91216454Async(b60e5c6bd58001740003449e91216454Request);
+            SearchDatasetsRequest searchDatasetsRequest = default!;
+            var response = await _instance.SearchDatasetsAsync(searchDatasetsRequest);
             var model = response.Ok();
-            Assert.IsType<B60e5c6bd58001740003449e91216454200Response>(model);
+            Assert.IsType<SearchDatasets200Response>(model);
         }
     }
 }

@@ -51,89 +51,89 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test C5bb5300d6a46cc5b1b6a3bb1c3fa869
+        /// Test CreateDataProviderColl
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task C5bb5300d6a46cc5b1b6a3bb1c3fa869AsyncTest()
+        public async Task CreateDataProviderCollAsyncTest()
         {
-            int id = default!;
-            C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request = default!;
-            var response = await _instance.C5bb5300d6a46cc5b1b6a3bb1c3fa869Async(id, c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call02ada355a680c816624e98ae028dc8b6
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call02ada355a680c816624e98ae028dc8b6AsyncTest()
-        {
-            Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request = default!;
-            var response = await _instance.Call02ada355a680c816624e98ae028dc8b6Async(model02ada355a680c816624e98ae028dc8b6Request);
+            CreateDataProviderCollRequest createDataProviderCollRequest = default!;
+            var response = await _instance.CreateDataProviderCollAsync(createDataProviderCollRequest);
             var model = response.Ok();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
-        /// Test Call08f75648c437bdf2ba9f66d0c1371d0c
+        /// Test DeleteDataProviderColl
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call08f75648c437bdf2ba9f66d0c1371d0cAsyncTest()
+        public async Task DeleteDataProviderCollAsyncTest()
         {
             int id = default!;
-            var response = await _instance.Call08f75648c437bdf2ba9f66d0c1371d0cAsync(id);
+            var response = await _instance.DeleteDataProviderCollAsync(id);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test EditDataProviderColl
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task EditDataProviderCollAsyncTest()
+        {
+            int id = default!;
+            EditDataProviderCollRequest editDataProviderCollRequest = default!;
+            var response = await _instance.EditDataProviderCollAsync(id, editDataProviderCollRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchDataProviderColl
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchDataProviderCollAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.FetchDataProviderCollAsync(id);
             var model = response.Ok();
-            Assert.IsType<Model08f75648c437bdf2ba9f66d0c1371d0c200Response>(model);
+            Assert.IsType<FetchDataProviderColl200Response>(model);
         }
 
         /// <summary>
-        /// Test Call3351120ae1ae550ab36ee958b1feaf48
+        /// Test FetchDataProviderCollSummary
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call3351120ae1ae550ab36ee958b1feaf48AsyncTest()
+        public async Task FetchDataProviderCollSummaryAsyncTest()
         {
             int id = default!;
-            var response = await _instance.Call3351120ae1ae550ab36ee958b1feaf48Async(id);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            var response = await _instance.FetchDataProviderCollSummaryAsync(id);
+            var model = response.Ok();
+            Assert.IsType<FetchDataProviderCollSummary200Response>(model);
         }
 
         /// <summary>
-        /// Test Call81b552b8803870790579d840279ce8a3
+        /// Test FetchDataProviderColls
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call81b552b8803870790579d840279ce8a3AsyncTest()
-        {
-            int id = default!;
-            Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request = default!;
-            var response = await _instance.Call81b552b8803870790579d840279ce8a3Async(id, model81b552b8803870790579d840279ce8a3Request);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test D0fe0e1c60dd979135440e3e0b440b75
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task D0fe0e1c60dd979135440e3e0b440b75AsyncTest()
+        public async Task FetchDataProviderCollsAsyncTest()
         {
             Client.Option<int> perPage = default!;
-            var response = await _instance.D0fe0e1c60dd979135440e3e0b440b75Async(perPage);
+            var response = await _instance.FetchDataProviderCollsAsync(perPage);
             var model = response.Ok();
-            Assert.IsType<D0fe0e1c60dd979135440e3e0b440b75200Response>(model);
+            Assert.IsType<FetchDataProviderColls200Response>(model);
         }
 
         /// <summary>
-        /// Test Ed769d8210100bbcd0e3a11660d25dc0
+        /// Test UpdateDataProviderColl
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Ed769d8210100bbcd0e3a11660d25dc0AsyncTest()
+        public async Task UpdateDataProviderCollAsyncTest()
         {
             int id = default!;
-            var response = await _instance.Ed769d8210100bbcd0e3a11660d25dc0Async(id);
-            var model = response.Ok();
-            Assert.IsType<Ed769d8210100bbcd0e3a11660d25dc0200Response>(model);
+            UpdateDataProviderCollRequest updateDataProviderCollRequest = default!;
+            var response = await _instance.UpdateDataProviderCollAsync(id, updateDataProviderCollRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
         }
     }
 }

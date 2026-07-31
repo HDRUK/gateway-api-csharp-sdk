@@ -45,13 +45,13 @@ namespace GatewayApiSdk.Api
         /// Returns gateway data custodians related to the provided query term(s)
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ada26698c9cdc86c01aaf53b0677a48dRequest">Submit search query</param>
+        /// <param name="searchDataCustodiansRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="perPage">Number of results to return per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAda26698c9cdc86c01aaf53b0677a48dApiResponse"/>&gt;</returns>
-        Task<IAda26698c9cdc86c01aaf53b0677a48dApiResponse> Ada26698c9cdc86c01aaf53b0677a48dAsync(Ada26698c9cdc86c01aaf53b0677a48dRequest ada26698c9cdc86c01aaf53b0677a48dRequest, Option<string> sort = default, Option<string> direction = default, Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchDataCustodiansApiResponse"/>&gt;</returns>
+        Task<ISearchDataCustodiansApiResponse> SearchDataCustodiansAsync(SearchDataCustodiansRequest searchDataCustodiansRequest, Option<string> sort = default, Option<string> direction = default, Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Search@data_custodians
@@ -59,19 +59,19 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Returns gateway data custodians related to the provided query term(s)
         /// </remarks>
-        /// <param name="ada26698c9cdc86c01aaf53b0677a48dRequest">Submit search query</param>
+        /// <param name="searchDataCustodiansRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="perPage">Number of results to return per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAda26698c9cdc86c01aaf53b0677a48dApiResponse"/>?&gt;</returns>
-        Task<IAda26698c9cdc86c01aaf53b0677a48dApiResponse?> Ada26698c9cdc86c01aaf53b0677a48dOrDefaultAsync(Ada26698c9cdc86c01aaf53b0677a48dRequest ada26698c9cdc86c01aaf53b0677a48dRequest, Option<string> sort = default, Option<string> direction = default, Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchDataCustodiansApiResponse"/>?&gt;</returns>
+        Task<ISearchDataCustodiansApiResponse?> SearchDataCustodiansOrDefaultAsync(SearchDataCustodiansRequest searchDataCustodiansRequest, Option<string> sort = default, Option<string> direction = default, Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="IAda26698c9cdc86c01aaf53b0677a48dApiResponse"/>
+    /// The <see cref="ISearchDataCustodiansApiResponse"/>
     /// </summary>
-    public interface IAda26698c9cdc86c01aaf53b0677a48dApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Ada26698c9cdc86c01aaf53b0677a48d200Response?>
+    public interface ISearchDataCustodiansApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.SearchDataCustodians200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -88,21 +88,21 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnAda26698c9cdc86c01aaf53b0677a48d;
+        public event EventHandler<ApiResponseEventArgs>? OnSearchDataCustodians;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorAda26698c9cdc86c01aaf53b0677a48d;
+        public event EventHandler<ExceptionEventArgs>? OnErrorSearchDataCustodians;
 
-        internal void ExecuteOnAda26698c9cdc86c01aaf53b0677a48d(SearchDataCustodiansApi.Ada26698c9cdc86c01aaf53b0677a48dApiResponse apiResponse)
+        internal void ExecuteOnSearchDataCustodians(SearchDataCustodiansApi.SearchDataCustodiansApiResponse apiResponse)
         {
-            OnAda26698c9cdc86c01aaf53b0677a48d?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnSearchDataCustodians?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorAda26698c9cdc86c01aaf53b0677a48d(Exception exception)
+        internal void ExecuteOnErrorSearchDataCustodians(Exception exception)
         {
-            OnErrorAda26698c9cdc86c01aaf53b0677a48d?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorSearchDataCustodians?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -147,19 +147,19 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatAda26698c9cdc86c01aaf53b0677a48d(Ada26698c9cdc86c01aaf53b0677a48dRequest ada26698c9cdc86c01aaf53b0677a48dRequest, ref Option<string> sort, ref Option<string> direction, ref Option<int> perPage);
+        partial void FormatSearchDataCustodians(SearchDataCustodiansRequest searchDataCustodiansRequest, ref Option<string> sort, ref Option<string> direction, ref Option<int> perPage);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="ada26698c9cdc86c01aaf53b0677a48dRequest"></param>
+        /// <param name="searchDataCustodiansRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
         /// <returns></returns>
-        private void ValidateAda26698c9cdc86c01aaf53b0677a48d(Ada26698c9cdc86c01aaf53b0677a48dRequest ada26698c9cdc86c01aaf53b0677a48dRequest, Option<string> sort, Option<string> direction)
+        private void ValidateSearchDataCustodians(SearchDataCustodiansRequest searchDataCustodiansRequest, Option<string> sort, Option<string> direction)
         {
-            if (ada26698c9cdc86c01aaf53b0677a48dRequest == null)
-                throw new ArgumentNullException(nameof(ada26698c9cdc86c01aaf53b0677a48dRequest));
+            if (searchDataCustodiansRequest == null)
+                throw new ArgumentNullException(nameof(searchDataCustodiansRequest));
 
             if (sort.IsSet && sort.Value == null)
                 throw new ArgumentNullException(nameof(sort));
@@ -172,14 +172,14 @@ namespace GatewayApiSdk.Api
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="ada26698c9cdc86c01aaf53b0677a48dRequest"></param>
+        /// <param name="searchDataCustodiansRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
         /// <param name="perPage"></param>
-        private void AfterAda26698c9cdc86c01aaf53b0677a48dDefaultImplementation(IAda26698c9cdc86c01aaf53b0677a48dApiResponse apiResponseLocalVar, Ada26698c9cdc86c01aaf53b0677a48dRequest ada26698c9cdc86c01aaf53b0677a48dRequest, Option<string> sort, Option<string> direction, Option<int> perPage)
+        private void AfterSearchDataCustodiansDefaultImplementation(ISearchDataCustodiansApiResponse apiResponseLocalVar, SearchDataCustodiansRequest searchDataCustodiansRequest, Option<string> sort, Option<string> direction, Option<int> perPage)
         {
             bool suppressDefaultLog = false;
-            AfterAda26698c9cdc86c01aaf53b0677a48d(ref suppressDefaultLog, apiResponseLocalVar, ada26698c9cdc86c01aaf53b0677a48dRequest, sort, direction, perPage);
+            AfterSearchDataCustodians(ref suppressDefaultLog, apiResponseLocalVar, searchDataCustodiansRequest, sort, direction, perPage);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -189,11 +189,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="ada26698c9cdc86c01aaf53b0677a48dRequest"></param>
+        /// <param name="searchDataCustodiansRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
         /// <param name="perPage"></param>
-        partial void AfterAda26698c9cdc86c01aaf53b0677a48d(ref bool suppressDefaultLog, IAda26698c9cdc86c01aaf53b0677a48dApiResponse apiResponseLocalVar, Ada26698c9cdc86c01aaf53b0677a48dRequest ada26698c9cdc86c01aaf53b0677a48dRequest, Option<string> sort, Option<string> direction, Option<int> perPage);
+        partial void AfterSearchDataCustodians(ref bool suppressDefaultLog, ISearchDataCustodiansApiResponse apiResponseLocalVar, SearchDataCustodiansRequest searchDataCustodiansRequest, Option<string> sort, Option<string> direction, Option<int> perPage);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -201,14 +201,14 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="ada26698c9cdc86c01aaf53b0677a48dRequest"></param>
+        /// <param name="searchDataCustodiansRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
         /// <param name="perPage"></param>
-        private void OnErrorAda26698c9cdc86c01aaf53b0677a48dDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Ada26698c9cdc86c01aaf53b0677a48dRequest ada26698c9cdc86c01aaf53b0677a48dRequest, Option<string> sort, Option<string> direction, Option<int> perPage)
+        private void OnErrorSearchDataCustodiansDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, SearchDataCustodiansRequest searchDataCustodiansRequest, Option<string> sort, Option<string> direction, Option<int> perPage)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorAda26698c9cdc86c01aaf53b0677a48d(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, ada26698c9cdc86c01aaf53b0677a48dRequest, sort, direction, perPage);
+            OnErrorSearchDataCustodians(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, searchDataCustodiansRequest, sort, direction, perPage);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -220,26 +220,26 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="ada26698c9cdc86c01aaf53b0677a48dRequest"></param>
+        /// <param name="searchDataCustodiansRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
         /// <param name="perPage"></param>
-        partial void OnErrorAda26698c9cdc86c01aaf53b0677a48d(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Ada26698c9cdc86c01aaf53b0677a48dRequest ada26698c9cdc86c01aaf53b0677a48dRequest, Option<string> sort, Option<string> direction, Option<int> perPage);
+        partial void OnErrorSearchDataCustodians(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, SearchDataCustodiansRequest searchDataCustodiansRequest, Option<string> sort, Option<string> direction, Option<int> perPage);
 
         /// <summary>
         /// Search@data_custodians Returns gateway data custodians related to the provided query term(s)
         /// </summary>
-        /// <param name="ada26698c9cdc86c01aaf53b0677a48dRequest">Submit search query</param>
+        /// <param name="searchDataCustodiansRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="perPage">Number of results to return per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAda26698c9cdc86c01aaf53b0677a48dApiResponse"/>&gt;</returns>
-        public async Task<IAda26698c9cdc86c01aaf53b0677a48dApiResponse?> Ada26698c9cdc86c01aaf53b0677a48dOrDefaultAsync(Ada26698c9cdc86c01aaf53b0677a48dRequest ada26698c9cdc86c01aaf53b0677a48dRequest, Option<string> sort = default, Option<string> direction = default, Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchDataCustodiansApiResponse"/>&gt;</returns>
+        public async Task<ISearchDataCustodiansApiResponse?> SearchDataCustodiansOrDefaultAsync(SearchDataCustodiansRequest searchDataCustodiansRequest, Option<string> sort = default, Option<string> direction = default, Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Ada26698c9cdc86c01aaf53b0677a48dAsync(ada26698c9cdc86c01aaf53b0677a48dRequest, sort, direction, perPage, cancellationToken).ConfigureAwait(false);
+                return await SearchDataCustodiansAsync(searchDataCustodiansRequest, sort, direction, perPage, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -251,21 +251,21 @@ namespace GatewayApiSdk.Api
         /// Search@data_custodians Returns gateway data custodians related to the provided query term(s)
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ada26698c9cdc86c01aaf53b0677a48dRequest">Submit search query</param>
+        /// <param name="searchDataCustodiansRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="perPage">Number of results to return per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAda26698c9cdc86c01aaf53b0677a48dApiResponse"/>&gt;</returns>
-        public async Task<IAda26698c9cdc86c01aaf53b0677a48dApiResponse> Ada26698c9cdc86c01aaf53b0677a48dAsync(Ada26698c9cdc86c01aaf53b0677a48dRequest ada26698c9cdc86c01aaf53b0677a48dRequest, Option<string> sort = default, Option<string> direction = default, Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchDataCustodiansApiResponse"/>&gt;</returns>
+        public async Task<ISearchDataCustodiansApiResponse> SearchDataCustodiansAsync(SearchDataCustodiansRequest searchDataCustodiansRequest, Option<string> sort = default, Option<string> direction = default, Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateAda26698c9cdc86c01aaf53b0677a48d(ada26698c9cdc86c01aaf53b0677a48dRequest, sort, direction);
+                ValidateSearchDataCustodians(searchDataCustodiansRequest, sort, direction);
 
-                FormatAda26698c9cdc86c01aaf53b0677a48d(ada26698c9cdc86c01aaf53b0677a48dRequest, ref sort, ref direction, ref perPage);
+                FormatSearchDataCustodians(searchDataCustodiansRequest, ref sort, ref direction, ref perPage);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -289,9 +289,9 @@ namespace GatewayApiSdk.Api
 
                     uriBuilderLocalVar.Query = parseQueryStringLocalVar.ToString();
 
-                    httpRequestMessageLocalVar.Content = (ada26698c9cdc86c01aaf53b0677a48dRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (searchDataCustodiansRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(ada26698c9cdc86c01aaf53b0677a48dRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(searchDataCustodiansRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -326,7 +326,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Ada26698c9cdc86c01aaf53b0677a48dApiResponse apiResponseLocalVar;
+                        SearchDataCustodiansApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -337,9 +337,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterAda26698c9cdc86c01aaf53b0677a48dDefaultImplementation(apiResponseLocalVar, ada26698c9cdc86c01aaf53b0677a48dRequest, sort, direction, perPage);
+                        AfterSearchDataCustodiansDefaultImplementation(apiResponseLocalVar, searchDataCustodiansRequest, sort, direction, perPage);
 
-                        Events.ExecuteOnAda26698c9cdc86c01aaf53b0677a48d(apiResponseLocalVar);
+                        Events.ExecuteOnSearchDataCustodians(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -351,16 +351,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorAda26698c9cdc86c01aaf53b0677a48dDefaultImplementation(e, "/api/v1/search/data_custodians", uriBuilderLocalVar.Path, ada26698c9cdc86c01aaf53b0677a48dRequest, sort, direction, perPage);
-                Events.ExecuteOnErrorAda26698c9cdc86c01aaf53b0677a48d(e);
+                OnErrorSearchDataCustodiansDefaultImplementation(e, "/api/v1/search/data_custodians", uriBuilderLocalVar.Path, searchDataCustodiansRequest, sort, direction, perPage);
+                Events.ExecuteOnErrorSearchDataCustodians(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Ada26698c9cdc86c01aaf53b0677a48dApiResponse"/>
+        /// The <see cref="SearchDataCustodiansApiResponse"/>
         /// </summary>
-        public partial class Ada26698c9cdc86c01aaf53b0677a48dApiResponse : GatewayApiSdk.Client.ApiResponse, IAda26698c9cdc86c01aaf53b0677a48dApiResponse
+        public partial class SearchDataCustodiansApiResponse : GatewayApiSdk.Client.ApiResponse, ISearchDataCustodiansApiResponse
         {
             /// <summary>
             /// The logger
@@ -368,7 +368,7 @@ namespace GatewayApiSdk.Api
             public ILogger<SearchDataCustodiansApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Ada26698c9cdc86c01aaf53b0677a48dApiResponse"/>
+            /// The <see cref="SearchDataCustodiansApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -377,14 +377,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Ada26698c9cdc86c01aaf53b0677a48dApiResponse(ILogger<SearchDataCustodiansApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public SearchDataCustodiansApiResponse(ILogger<SearchDataCustodiansApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Ada26698c9cdc86c01aaf53b0677a48dApiResponse"/>
+            /// The <see cref="SearchDataCustodiansApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -393,7 +393,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Ada26698c9cdc86c01aaf53b0677a48dApiResponse(ILogger<SearchDataCustodiansApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public SearchDataCustodiansApiResponse(ILogger<SearchDataCustodiansApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -411,11 +411,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Ada26698c9cdc86c01aaf53b0677a48d200Response? Ok()
+            public GatewayApiSdk.Model.SearchDataCustodians200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Ada26698c9cdc86c01aaf53b0677a48d200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.SearchDataCustodians200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -424,7 +424,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Ada26698c9cdc86c01aaf53b0677a48d200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.SearchDataCustodians200Response? result)
             {
                 result = null;
 

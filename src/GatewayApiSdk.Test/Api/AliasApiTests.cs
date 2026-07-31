@@ -51,76 +51,76 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test AliasControllerindex
+        /// Test CreateAliases
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task AliasControllerindexAsyncTest()
+        public async Task CreateAliasesAsyncTest()
         {
-            var response = await _instance.AliasControllerindexAsync();
+            CreateAliasesRequest createAliasesRequest = default!;
+            var response = await _instance.CreateAliasesAsync(createAliasesRequest);
             var model = response.Ok();
-            Assert.IsType<AliasControllerIndex200Response>(model);
+            Assert.IsType<CreateAliases200Response>(model);
         }
 
         /// <summary>
-        /// Test AliasControllershow
+        /// Test DeleteAliases
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task AliasControllershowAsyncTest()
+        public async Task DeleteAliasesAsyncTest()
         {
             int id = default!;
-            var response = await _instance.AliasControllershowAsync(id);
+            var response = await _instance.DeleteAliasesAsync(id);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test EditAliases
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task EditAliasesAsyncTest()
+        {
+            int id = default!;
+            EditAliasesRequest editAliasesRequest = default!;
+            var response = await _instance.EditAliasesAsync(id, editAliasesRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchAliases
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchAliasesAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.FetchAliasesAsync(id);
             var model = response.Ok();
-            Assert.IsType<AliasControllerShow200Response>(model);
+            Assert.IsType<FetchAliases200Response>(model);
         }
 
         /// <summary>
-        /// Test B801ec1af9f360216286166894719a1e
+        /// Test FetchAllAliases
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task B801ec1af9f360216286166894719a1eAsyncTest()
+        public async Task FetchAllAliasesAsyncTest()
         {
-            int id = default!;
-            Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request = default!;
-            var response = await _instance.B801ec1af9f360216286166894719a1eAsync(id, model079b2d545c7f4705016912f5de1bf444Request);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test C29b5b3424f7317b69b4bda048ccfafb
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task C29b5b3424f7317b69b4bda048ccfafbAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.C29b5b3424f7317b69b4bda048ccfafbAsync(id);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call079b2d545c7f4705016912f5de1bf444
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call079b2d545c7f4705016912f5de1bf444AsyncTest()
-        {
-            Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request = default!;
-            var response = await _instance.Call079b2d545c7f4705016912f5de1bf444Async(model079b2d545c7f4705016912f5de1bf444Request);
+            var response = await _instance.FetchAllAliasesAsync();
             var model = response.Ok();
-            Assert.IsType<Model079b2d545c7f4705016912f5de1bf444200Response>(model);
+            Assert.IsType<FetchAllAliases200Response>(model);
         }
 
         /// <summary>
-        /// Test E93f53867884432d9a6b592066431af3
+        /// Test UpdateAliases
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task E93f53867884432d9a6b592066431af3AsyncTest()
+        public async Task UpdateAliasesAsyncTest()
         {
             int id = default!;
-            E93f53867884432d9a6b592066431af3Request e93f53867884432d9a6b592066431af3Request = default!;
-            var response = await _instance.E93f53867884432d9a6b592066431af3Async(id, e93f53867884432d9a6b592066431af3Request);
+            CreateAliasesRequest createAliasesRequest = default!;
+            var response = await _instance.UpdateAliasesAsync(id, createAliasesRequest);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
     }
 }

@@ -45,12 +45,12 @@ namespace GatewayApiSdk.Api
         /// Returns gateway data custodian networks related to the provided query term(s)
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model9b95892cc29cee3ccd11e3f92223224cRequest">Submit search query</param>
+        /// <param name="searchDataCustodianNetworksRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9b95892cc29cee3ccd11e3f92223224cApiResponse"/>&gt;</returns>
-        Task<ICall9b95892cc29cee3ccd11e3f92223224cApiResponse> Call9b95892cc29cee3ccd11e3f92223224cAsync(Model9b95892cc29cee3ccd11e3f92223224cRequest model9b95892cc29cee3ccd11e3f92223224cRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchDataCustodianNetworksApiResponse"/>&gt;</returns>
+        Task<ISearchDataCustodianNetworksApiResponse> SearchDataCustodianNetworksAsync(SearchDataCustodianNetworksRequest searchDataCustodianNetworksRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Search@data_custodian_networks
@@ -58,18 +58,18 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Returns gateway data custodian networks related to the provided query term(s)
         /// </remarks>
-        /// <param name="model9b95892cc29cee3ccd11e3f92223224cRequest">Submit search query</param>
+        /// <param name="searchDataCustodianNetworksRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9b95892cc29cee3ccd11e3f92223224cApiResponse"/>?&gt;</returns>
-        Task<ICall9b95892cc29cee3ccd11e3f92223224cApiResponse?> Call9b95892cc29cee3ccd11e3f92223224cOrDefaultAsync(Model9b95892cc29cee3ccd11e3f92223224cRequest model9b95892cc29cee3ccd11e3f92223224cRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchDataCustodianNetworksApiResponse"/>?&gt;</returns>
+        Task<ISearchDataCustodianNetworksApiResponse?> SearchDataCustodianNetworksOrDefaultAsync(SearchDataCustodianNetworksRequest searchDataCustodianNetworksRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="ICall9b95892cc29cee3ccd11e3f92223224cApiResponse"/>
+    /// The <see cref="ISearchDataCustodianNetworksApiResponse"/>
     /// </summary>
-    public interface ICall9b95892cc29cee3ccd11e3f92223224cApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model9b95892cc29cee3ccd11e3f92223224c200Response?>
+    public interface ISearchDataCustodianNetworksApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.SearchDataCustodianNetworks200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -86,21 +86,21 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall9b95892cc29cee3ccd11e3f92223224c;
+        public event EventHandler<ApiResponseEventArgs>? OnSearchDataCustodianNetworks;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall9b95892cc29cee3ccd11e3f92223224c;
+        public event EventHandler<ExceptionEventArgs>? OnErrorSearchDataCustodianNetworks;
 
-        internal void ExecuteOnCall9b95892cc29cee3ccd11e3f92223224c(SearchDataCustodianNetworksApi.Call9b95892cc29cee3ccd11e3f92223224cApiResponse apiResponse)
+        internal void ExecuteOnSearchDataCustodianNetworks(SearchDataCustodianNetworksApi.SearchDataCustodianNetworksApiResponse apiResponse)
         {
-            OnCall9b95892cc29cee3ccd11e3f92223224c?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnSearchDataCustodianNetworks?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall9b95892cc29cee3ccd11e3f92223224c(Exception exception)
+        internal void ExecuteOnErrorSearchDataCustodianNetworks(Exception exception)
         {
-            OnErrorCall9b95892cc29cee3ccd11e3f92223224c?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorSearchDataCustodianNetworks?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -145,19 +145,19 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatCall9b95892cc29cee3ccd11e3f92223224c(Model9b95892cc29cee3ccd11e3f92223224cRequest model9b95892cc29cee3ccd11e3f92223224cRequest, ref Option<string> sort, ref Option<string> direction);
+        partial void FormatSearchDataCustodianNetworks(SearchDataCustodianNetworksRequest searchDataCustodianNetworksRequest, ref Option<string> sort, ref Option<string> direction);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="model9b95892cc29cee3ccd11e3f92223224cRequest"></param>
+        /// <param name="searchDataCustodianNetworksRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
         /// <returns></returns>
-        private void ValidateCall9b95892cc29cee3ccd11e3f92223224c(Model9b95892cc29cee3ccd11e3f92223224cRequest model9b95892cc29cee3ccd11e3f92223224cRequest, Option<string> sort, Option<string> direction)
+        private void ValidateSearchDataCustodianNetworks(SearchDataCustodianNetworksRequest searchDataCustodianNetworksRequest, Option<string> sort, Option<string> direction)
         {
-            if (model9b95892cc29cee3ccd11e3f92223224cRequest == null)
-                throw new ArgumentNullException(nameof(model9b95892cc29cee3ccd11e3f92223224cRequest));
+            if (searchDataCustodianNetworksRequest == null)
+                throw new ArgumentNullException(nameof(searchDataCustodianNetworksRequest));
 
             if (sort.IsSet && sort.Value == null)
                 throw new ArgumentNullException(nameof(sort));
@@ -170,13 +170,13 @@ namespace GatewayApiSdk.Api
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model9b95892cc29cee3ccd11e3f92223224cRequest"></param>
+        /// <param name="searchDataCustodianNetworksRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
-        private void AfterCall9b95892cc29cee3ccd11e3f92223224cDefaultImplementation(ICall9b95892cc29cee3ccd11e3f92223224cApiResponse apiResponseLocalVar, Model9b95892cc29cee3ccd11e3f92223224cRequest model9b95892cc29cee3ccd11e3f92223224cRequest, Option<string> sort, Option<string> direction)
+        private void AfterSearchDataCustodianNetworksDefaultImplementation(ISearchDataCustodianNetworksApiResponse apiResponseLocalVar, SearchDataCustodianNetworksRequest searchDataCustodianNetworksRequest, Option<string> sort, Option<string> direction)
         {
             bool suppressDefaultLog = false;
-            AfterCall9b95892cc29cee3ccd11e3f92223224c(ref suppressDefaultLog, apiResponseLocalVar, model9b95892cc29cee3ccd11e3f92223224cRequest, sort, direction);
+            AfterSearchDataCustodianNetworks(ref suppressDefaultLog, apiResponseLocalVar, searchDataCustodianNetworksRequest, sort, direction);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -186,10 +186,10 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model9b95892cc29cee3ccd11e3f92223224cRequest"></param>
+        /// <param name="searchDataCustodianNetworksRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
-        partial void AfterCall9b95892cc29cee3ccd11e3f92223224c(ref bool suppressDefaultLog, ICall9b95892cc29cee3ccd11e3f92223224cApiResponse apiResponseLocalVar, Model9b95892cc29cee3ccd11e3f92223224cRequest model9b95892cc29cee3ccd11e3f92223224cRequest, Option<string> sort, Option<string> direction);
+        partial void AfterSearchDataCustodianNetworks(ref bool suppressDefaultLog, ISearchDataCustodianNetworksApiResponse apiResponseLocalVar, SearchDataCustodianNetworksRequest searchDataCustodianNetworksRequest, Option<string> sort, Option<string> direction);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -197,13 +197,13 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model9b95892cc29cee3ccd11e3f92223224cRequest"></param>
+        /// <param name="searchDataCustodianNetworksRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
-        private void OnErrorCall9b95892cc29cee3ccd11e3f92223224cDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model9b95892cc29cee3ccd11e3f92223224cRequest model9b95892cc29cee3ccd11e3f92223224cRequest, Option<string> sort, Option<string> direction)
+        private void OnErrorSearchDataCustodianNetworksDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, SearchDataCustodianNetworksRequest searchDataCustodianNetworksRequest, Option<string> sort, Option<string> direction)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall9b95892cc29cee3ccd11e3f92223224c(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, model9b95892cc29cee3ccd11e3f92223224cRequest, sort, direction);
+            OnErrorSearchDataCustodianNetworks(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, searchDataCustodianNetworksRequest, sort, direction);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -215,24 +215,24 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model9b95892cc29cee3ccd11e3f92223224cRequest"></param>
+        /// <param name="searchDataCustodianNetworksRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
-        partial void OnErrorCall9b95892cc29cee3ccd11e3f92223224c(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model9b95892cc29cee3ccd11e3f92223224cRequest model9b95892cc29cee3ccd11e3f92223224cRequest, Option<string> sort, Option<string> direction);
+        partial void OnErrorSearchDataCustodianNetworks(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, SearchDataCustodianNetworksRequest searchDataCustodianNetworksRequest, Option<string> sort, Option<string> direction);
 
         /// <summary>
         /// Search@data_custodian_networks Returns gateway data custodian networks related to the provided query term(s)
         /// </summary>
-        /// <param name="model9b95892cc29cee3ccd11e3f92223224cRequest">Submit search query</param>
+        /// <param name="searchDataCustodianNetworksRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9b95892cc29cee3ccd11e3f92223224cApiResponse"/>&gt;</returns>
-        public async Task<ICall9b95892cc29cee3ccd11e3f92223224cApiResponse?> Call9b95892cc29cee3ccd11e3f92223224cOrDefaultAsync(Model9b95892cc29cee3ccd11e3f92223224cRequest model9b95892cc29cee3ccd11e3f92223224cRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchDataCustodianNetworksApiResponse"/>&gt;</returns>
+        public async Task<ISearchDataCustodianNetworksApiResponse?> SearchDataCustodianNetworksOrDefaultAsync(SearchDataCustodianNetworksRequest searchDataCustodianNetworksRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call9b95892cc29cee3ccd11e3f92223224cAsync(model9b95892cc29cee3ccd11e3f92223224cRequest, sort, direction, cancellationToken).ConfigureAwait(false);
+                return await SearchDataCustodianNetworksAsync(searchDataCustodianNetworksRequest, sort, direction, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -244,20 +244,20 @@ namespace GatewayApiSdk.Api
         /// Search@data_custodian_networks Returns gateway data custodian networks related to the provided query term(s)
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model9b95892cc29cee3ccd11e3f92223224cRequest">Submit search query</param>
+        /// <param name="searchDataCustodianNetworksRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9b95892cc29cee3ccd11e3f92223224cApiResponse"/>&gt;</returns>
-        public async Task<ICall9b95892cc29cee3ccd11e3f92223224cApiResponse> Call9b95892cc29cee3ccd11e3f92223224cAsync(Model9b95892cc29cee3ccd11e3f92223224cRequest model9b95892cc29cee3ccd11e3f92223224cRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchDataCustodianNetworksApiResponse"/>&gt;</returns>
+        public async Task<ISearchDataCustodianNetworksApiResponse> SearchDataCustodianNetworksAsync(SearchDataCustodianNetworksRequest searchDataCustodianNetworksRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall9b95892cc29cee3ccd11e3f92223224c(model9b95892cc29cee3ccd11e3f92223224cRequest, sort, direction);
+                ValidateSearchDataCustodianNetworks(searchDataCustodianNetworksRequest, sort, direction);
 
-                FormatCall9b95892cc29cee3ccd11e3f92223224c(model9b95892cc29cee3ccd11e3f92223224cRequest, ref sort, ref direction);
+                FormatSearchDataCustodianNetworks(searchDataCustodianNetworksRequest, ref sort, ref direction);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -278,9 +278,9 @@ namespace GatewayApiSdk.Api
 
                     uriBuilderLocalVar.Query = parseQueryStringLocalVar.ToString();
 
-                    httpRequestMessageLocalVar.Content = (model9b95892cc29cee3ccd11e3f92223224cRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (searchDataCustodianNetworksRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model9b95892cc29cee3ccd11e3f92223224cRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(searchDataCustodianNetworksRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -315,7 +315,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call9b95892cc29cee3ccd11e3f92223224cApiResponse apiResponseLocalVar;
+                        SearchDataCustodianNetworksApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -326,9 +326,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall9b95892cc29cee3ccd11e3f92223224cDefaultImplementation(apiResponseLocalVar, model9b95892cc29cee3ccd11e3f92223224cRequest, sort, direction);
+                        AfterSearchDataCustodianNetworksDefaultImplementation(apiResponseLocalVar, searchDataCustodianNetworksRequest, sort, direction);
 
-                        Events.ExecuteOnCall9b95892cc29cee3ccd11e3f92223224c(apiResponseLocalVar);
+                        Events.ExecuteOnSearchDataCustodianNetworks(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -340,16 +340,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall9b95892cc29cee3ccd11e3f92223224cDefaultImplementation(e, "/api/v1/search/data_custodian_networks", uriBuilderLocalVar.Path, model9b95892cc29cee3ccd11e3f92223224cRequest, sort, direction);
-                Events.ExecuteOnErrorCall9b95892cc29cee3ccd11e3f92223224c(e);
+                OnErrorSearchDataCustodianNetworksDefaultImplementation(e, "/api/v1/search/data_custodian_networks", uriBuilderLocalVar.Path, searchDataCustodianNetworksRequest, sort, direction);
+                Events.ExecuteOnErrorSearchDataCustodianNetworks(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call9b95892cc29cee3ccd11e3f92223224cApiResponse"/>
+        /// The <see cref="SearchDataCustodianNetworksApiResponse"/>
         /// </summary>
-        public partial class Call9b95892cc29cee3ccd11e3f92223224cApiResponse : GatewayApiSdk.Client.ApiResponse, ICall9b95892cc29cee3ccd11e3f92223224cApiResponse
+        public partial class SearchDataCustodianNetworksApiResponse : GatewayApiSdk.Client.ApiResponse, ISearchDataCustodianNetworksApiResponse
         {
             /// <summary>
             /// The logger
@@ -357,7 +357,7 @@ namespace GatewayApiSdk.Api
             public ILogger<SearchDataCustodianNetworksApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call9b95892cc29cee3ccd11e3f92223224cApiResponse"/>
+            /// The <see cref="SearchDataCustodianNetworksApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -366,14 +366,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call9b95892cc29cee3ccd11e3f92223224cApiResponse(ILogger<SearchDataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public SearchDataCustodianNetworksApiResponse(ILogger<SearchDataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call9b95892cc29cee3ccd11e3f92223224cApiResponse"/>
+            /// The <see cref="SearchDataCustodianNetworksApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -382,7 +382,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call9b95892cc29cee3ccd11e3f92223224cApiResponse(ILogger<SearchDataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public SearchDataCustodianNetworksApiResponse(ILogger<SearchDataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -400,11 +400,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model9b95892cc29cee3ccd11e3f92223224c200Response? Ok()
+            public GatewayApiSdk.Model.SearchDataCustodianNetworks200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model9b95892cc29cee3ccd11e3f92223224c200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.SearchDataCustodianNetworks200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -413,7 +413,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model9b95892cc29cee3ccd11e3f92223224c200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.SearchDataCustodianNetworks200Response? result)
             {
                 result = null;
 

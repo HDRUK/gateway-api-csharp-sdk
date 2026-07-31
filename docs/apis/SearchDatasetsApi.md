@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**B60e5c6bd58001740003449e91216454**](SearchDatasetsApi.md#b60e5c6bd58001740003449e91216454) | **POST** /api/v1/search/datasets | Search@datasets |
+| [**SearchDatasets**](SearchDatasetsApi.md#searchdatasets) | **POST** /api/v1/search/datasets | Search@datasets |
 
-<a id="b60e5c6bd58001740003449e91216454"></a>
-# **B60e5c6bd58001740003449e91216454**
-> B60e5c6bd58001740003449e91216454200Response B60e5c6bd58001740003449e91216454 (B60e5c6bd58001740003449e91216454Request b60e5c6bd58001740003449e91216454Request)
+<a id="searchdatasets"></a>
+# **SearchDatasets**
+> SearchDatasets200Response SearchDatasets (SearchDatasetsRequest searchDatasetsRequest)
 
 Search@datasets
 
@@ -19,11 +19,11 @@ Returns gateway datasets related to the provided query term(s)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **b60e5c6bd58001740003449e91216454Request** | [**B60e5c6bd58001740003449e91216454Request**](B60e5c6bd58001740003449e91216454Request.md) | Submit search query |  |
+| **searchDatasetsRequest** | [**SearchDatasetsRequest**](SearchDatasetsRequest.md) | Submit search query |  |
 
 ### Return type
 
-[**B60e5c6bd58001740003449e91216454200Response**](B60e5c6bd58001740003449e91216454200Response.md)
+[**SearchDatasets200Response**](SearchDatasets200Response.md)
 
 ### Authorization
 

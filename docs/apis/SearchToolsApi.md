@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**A3e02b5a05b56708998c4bd96935d5f5**](SearchToolsApi.md#a3e02b5a05b56708998c4bd96935d5f5) | **POST** /api/v1/search/tools | Search@tools |
+| [**SearchTools**](SearchToolsApi.md#searchtools) | **POST** /api/v1/search/tools | Search@tools |
 
-<a id="a3e02b5a05b56708998c4bd96935d5f5"></a>
-# **A3e02b5a05b56708998c4bd96935d5f5**
-> A3e02b5a05b56708998c4bd96935d5f5200Response A3e02b5a05b56708998c4bd96935d5f5 (A3e02b5a05b56708998c4bd96935d5f5Request a3e02b5a05b56708998c4bd96935d5f5Request, string sort = null, string direction = null)
+<a id="searchtools"></a>
+# **SearchTools**
+> SearchTools200Response SearchTools (SearchToolsRequest searchToolsRequest, string sort = null, string direction = null)
 
 Search@tools
 
@@ -19,13 +19,13 @@ Returns gateway tools related to the provided query term(s)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **a3e02b5a05b56708998c4bd96935d5f5Request** | [**A3e02b5a05b56708998c4bd96935d5f5Request**](A3e02b5a05b56708998c4bd96935d5f5Request.md) | Submit search query |  |
+| **searchToolsRequest** | [**SearchToolsRequest**](SearchToolsRequest.md) | Submit search query |  |
 | **sort** | **string** | Field to sort by (default: &#39;score&#39;) | [optional]  |
 | **direction** | **string** | Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) | [optional]  |
 
 ### Return type
 
-[**A3e02b5a05b56708998c4bd96935d5f5200Response**](A3e02b5a05b56708998c4bd96935d5f5200Response.md)
+[**SearchTools200Response**](SearchTools200Response.md)
 
 ### Authorization
 

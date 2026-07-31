@@ -51,89 +51,89 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test B1fa0f3b5f03176ce6b96d1d4ee27aa8
+        /// Test CreateDarTemplate
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task B1fa0f3b5f03176ce6b96d1d4ee27aa8AsyncTest()
+        public async Task CreateDarTemplateAsyncTest()
         {
-            int id = default!;
-            await _instance.B1fa0f3b5f03176ce6b96d1d4ee27aa8Async(id);
+            CreateDarTemplateRequest createDarTemplateRequest = default!;
+            var response = await _instance.CreateDarTemplateAsync(createDarTemplateRequest);
+            var model = response.Ok();
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
-        /// Test C0e9ad253ec08e6e03a40ed8759e744d
+        /// Test DeleteDarTemplate
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task C0e9ad253ec08e6e03a40ed8759e744dAsyncTest()
+        public async Task DeleteDarTemplateAsyncTest()
         {
             int id = default!;
-            var response = await _instance.C0e9ad253ec08e6e03a40ed8759e744dAsync(id);
+            var response = await _instance.DeleteDarTemplateAsync(id);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
-        /// Test Call234386e06c6b29d5aaca2ed8f89cb9aa
+        /// Test DownloadDarTemplateFile
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call234386e06c6b29d5aaca2ed8f89cb9aaAsyncTest()
+        public async Task DownloadDarTemplateFileAsyncTest()
+        {
+            int id = default!;
+            await _instance.DownloadDarTemplateFileAsync(id);
+        }
+
+        /// <summary>
+        /// Test FetchDarTemplate
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchDarTemplateAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.FetchDarTemplateAsync(id);
+            var model = response.Ok();
+            Assert.IsType<FetchDarTemplate200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchDarTemplates
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchDarTemplatesAsyncTest()
         {
             Client.Option<int> withQuestions = default!;
             Client.Option<string> published = default!;
-            var response = await _instance.Call234386e06c6b29d5aaca2ed8f89cb9aaAsync(withQuestions, published);
+            var response = await _instance.FetchDarTemplatesAsync(withQuestions, published);
             var model = response.Ok();
-            Assert.IsType<Model234386e06c6b29d5aaca2ed8f89cb9aa200Response>(model);
+            Assert.IsType<FetchDarTemplates200Response>(model);
         }
 
         /// <summary>
-        /// Test Call3f2b4dcc3b5e548e62f79a32aa8f0052
+        /// Test PatchDarTemplate
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call3f2b4dcc3b5e548e62f79a32aa8f0052AsyncTest()
+        public async Task PatchDarTemplateAsyncTest()
         {
             int id = default!;
-            var response = await _instance.Call3f2b4dcc3b5e548e62f79a32aa8f0052Async(id);
-            var model = response.Ok();
-            Assert.IsType<Model3f2b4dcc3b5e548e62f79a32aa8f0052200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call6196987e50c600396a439939cea635a3
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call6196987e50c600396a439939cea635a3AsyncTest()
-        {
-            int id = default!;
-            Model6196987e50c600396a439939cea635a3Request model6196987e50c600396a439939cea635a3Request = default!;
+            PatchDarTemplateRequest patchDarTemplateRequest = default!;
             Client.Option<int> sectionId = default!;
-            var response = await _instance.Call6196987e50c600396a439939cea635a3Async(id, model6196987e50c600396a439939cea635a3Request, sectionId);
+            var response = await _instance.PatchDarTemplateAsync(id, patchDarTemplateRequest, sectionId);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
-        /// Test Call6dae0c2af6ca442f90a65e7c65a13252
+        /// Test UpdateDarTemplate
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call6dae0c2af6ca442f90a65e7c65a13252AsyncTest()
+        public async Task UpdateDarTemplateAsyncTest()
         {
             int id = default!;
-            Model6dae0c2af6ca442f90a65e7c65a13252Request model6dae0c2af6ca442f90a65e7c65a13252Request = default!;
-            var response = await _instance.Call6dae0c2af6ca442f90a65e7c65a13252Async(id, model6dae0c2af6ca442f90a65e7c65a13252Request);
+            UpdateDarTemplateRequest updateDarTemplateRequest = default!;
+            var response = await _instance.UpdateDarTemplateAsync(id, updateDarTemplateRequest);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call70d4b0fcc281e6491f510f58028762c9
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call70d4b0fcc281e6491f510f58028762c9AsyncTest()
-        {
-            Model70d4b0fcc281e6491f510f58028762c9Request model70d4b0fcc281e6491f510f58028762c9Request = default!;
-            var response = await _instance.Call70d4b0fcc281e6491f510f58028762c9Async(model70d4b0fcc281e6491f510f58028762c9Request);
-            var model = response.Ok();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
     }
 }

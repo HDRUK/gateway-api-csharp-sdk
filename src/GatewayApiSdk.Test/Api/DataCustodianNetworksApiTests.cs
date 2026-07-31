@@ -51,125 +51,125 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Abbd5469b6946b3822b4d156b522b03b
+        /// Test CreateDataCustodianNetwork
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Abbd5469b6946b3822b4d156b522b03bAsyncTest()
+        public async Task CreateDataCustodianNetworkAsyncTest()
         {
-            Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request = default!;
-            var response = await _instance.Abbd5469b6946b3822b4d156b522b03bAsync(model02ada355a680c816624e98ae028dc8b6Request);
+            CreateDataProviderCollRequest createDataProviderCollRequest = default!;
+            var response = await _instance.CreateDataCustodianNetworkAsync(createDataProviderCollRequest);
             var model = response.Ok();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
-        /// Test B42015102cb75735f63c91ed0c89aadc
+        /// Test DeleteDataCustodianNetwork
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task B42015102cb75735f63c91ed0c89aadcAsyncTest()
+        public async Task DeleteDataCustodianNetworkAsyncTest()
         {
             int id = default!;
-            var response = await _instance.B42015102cb75735f63c91ed0c89aadcAsync(id);
-            var model = response.Ok();
-            Assert.IsType<B42015102cb75735f63c91ed0c89aadc200Response>(model);
-        }
-
-        /// <summary>
-        /// Test C7827b344f35440af530383c74573c6f
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task C7827b344f35440af530383c74573c6fAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.C7827b344f35440af530383c74573c6fAsync(id);
-            var model = response.Ok();
-            Assert.IsType<C7827b344f35440af530383c74573c6f200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call0a51cc2388e3015851122c32c548b07e
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call0a51cc2388e3015851122c32c548b07eAsyncTest()
-        {
-            int id = default!;
-            Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request = default!;
-            var response = await _instance.Call0a51cc2388e3015851122c32c548b07eAsync(id, model81b552b8803870790579d840279ce8a3Request);
+            var response = await _instance.DeleteDataCustodianNetworkAsync(id);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
-        /// Test Call3b69b09a466561df872e104a19a2ad65
+        /// Test EditDataCustodianNetwork
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call3b69b09a466561df872e104a19a2ad65AsyncTest()
+        public async Task EditDataCustodianNetworkAsyncTest()
         {
             int id = default!;
-            var response = await _instance.Call3b69b09a466561df872e104a19a2ad65Async(id);
-            var model = response.Ok();
-            Assert.IsType<Model3b69b09a466561df872e104a19a2ad65200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call5e9eca031c07d46c2fa4007e916bc5e1
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call5e9eca031c07d46c2fa4007e916bc5e1AsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.Call5e9eca031c07d46c2fa4007e916bc5e1Async(id);
+            EditDataProviderCollRequest editDataProviderCollRequest = default!;
+            var response = await _instance.EditDataCustodianNetworkAsync(id, editDataProviderCollRequest);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
-        /// Test Call71e5fbca2b5aa8a0160d621feb662ecb
+        /// Test FetchDataCustodianNetwork
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call71e5fbca2b5aa8a0160d621feb662ecbAsyncTest()
+        public async Task FetchDataCustodianNetworkAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.FetchDataCustodianNetworkAsync(id);
+            var model = response.Ok();
+            Assert.IsType<FetchDataCustodianNetwork200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchDataCustodianNetworkCustodiansSummary
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchDataCustodianNetworkCustodiansSummaryAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.FetchDataCustodianNetworkCustodiansSummaryAsync(id);
+            var model = response.Ok();
+            Assert.IsType<FetchDataCustodianNetworkCustodiansSummary200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchDataCustodianNetworkDatasetsSummary
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchDataCustodianNetworkDatasetsSummaryAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.FetchDataCustodianNetworkDatasetsSummaryAsync(id);
+            var model = response.Ok();
+            Assert.IsType<FetchDataCustodianNetworkDatasetsSummary200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchDataCustodianNetworkEntitiesSummary
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchDataCustodianNetworkEntitiesSummaryAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.FetchDataCustodianNetworkEntitiesSummaryAsync(id);
+            var model = response.Ok();
+            Assert.IsType<FetchDataCustodianNetworkEntitiesSummary200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchDataCustodianNetworkInfo
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchDataCustodianNetworkInfoAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.FetchDataCustodianNetworkInfoAsync(id);
+            var model = response.Ok();
+            Assert.IsType<FetchDataCustodianNetworkInfo200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchDataCustodianNetworks
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchDataCustodianNetworksAsyncTest()
         {
             Client.Option<int> perPage = default!;
-            var response = await _instance.Call71e5fbca2b5aa8a0160d621feb662ecbAsync(perPage);
+            var response = await _instance.FetchDataCustodianNetworksAsync(perPage);
             var model = response.Ok();
-            Assert.IsType<Model71e5fbca2b5aa8a0160d621feb662ecb200Response>(model);
+            Assert.IsType<FetchDataCustodianNetworks200Response>(model);
         }
 
         /// <summary>
-        /// Test Call9ce0c491d34067e8cf15eb9e9b5ec147
+        /// Test UpdateDataCustodianNetwork
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call9ce0c491d34067e8cf15eb9e9b5ec147AsyncTest()
+        public async Task UpdateDataCustodianNetworkAsyncTest()
         {
             int id = default!;
-            var response = await _instance.Call9ce0c491d34067e8cf15eb9e9b5ec147Async(id);
-            var model = response.Ok();
-            Assert.IsType<Model9ce0c491d34067e8cf15eb9e9b5ec147200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Ced8add57941554cde6a5fc53f6555e5
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Ced8add57941554cde6a5fc53f6555e5AsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.Ced8add57941554cde6a5fc53f6555e5Async(id);
-            var model = response.Ok();
-            Assert.IsType<Ced8add57941554cde6a5fc53f6555e5200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Ddc2f5ebf51037175006c6017e20d358
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Ddc2f5ebf51037175006c6017e20d358AsyncTest()
-        {
-            int id = default!;
-            C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request = default!;
-            var response = await _instance.Ddc2f5ebf51037175006c6017e20d358Async(id, c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
+            UpdateDataProviderCollRequest updateDataProviderCollRequest = default!;
+            var response = await _instance.UpdateDataCustodianNetworkAsync(id, updateDataProviderCollRequest);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
     }
 }

@@ -51,44 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call205dc23d44b18ca0b5c26a293cc69cf7
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call205dc23d44b18ca0b5c26a293cc69cf7AsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.Call205dc23d44b18ca0b5c26a293cc69cf7Async(id);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call31ad2467e98e52298b4e39e2741447f1
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call31ad2467e98e52298b4e39e2741447f1AsyncTest()
-        {
-            int id = default!;
-            CreateReviewsRequest createReviewsRequest = default!;
-            var response = await _instance.Call31ad2467e98e52298b4e39e2741447f1Async(id, createReviewsRequest);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call64b4b952592ebe8e0b00204e76bd991c
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call64b4b952592ebe8e0b00204e76bd991cAsyncTest()
-        {
-            int id = default!;
-            CreateReviewsRequest createReviewsRequest = default!;
-            var response = await _instance.Call64b4b952592ebe8e0b00204e76bd991cAsync(id, createReviewsRequest);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
         /// Test CreateReviews
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -97,7 +59,32 @@ namespace GatewayApiSdk.Test.Api
             CreateReviewsRequest createReviewsRequest = default!;
             var response = await _instance.CreateReviewsAsync(createReviewsRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
+        }
+
+        /// <summary>
+        /// Test DeleteReviews
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task DeleteReviewsAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.DeleteReviewsAsync(id);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test EditReviews
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task EditReviewsAsyncTest()
+        {
+            int id = default!;
+            CreateReviewsRequest createReviewsRequest = default!;
+            var response = await _instance.EditReviewsAsync(id, createReviewsRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
@@ -121,6 +108,19 @@ namespace GatewayApiSdk.Test.Api
             var response = await _instance.FetchReviewsAsync(id);
             var model = response.Ok();
             Assert.IsType<FetchAllReviews200Response>(model);
+        }
+
+        /// <summary>
+        /// Test UpdateReviews
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task UpdateReviewsAsyncTest()
+        {
+            int id = default!;
+            CreateReviewsRequest createReviewsRequest = default!;
+            var response = await _instance.UpdateReviewsAsync(id, createReviewsRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
         }
     }
 }

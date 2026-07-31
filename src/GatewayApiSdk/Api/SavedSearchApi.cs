@@ -45,10 +45,10 @@ namespace GatewayApiSdk.Api
         /// Creates a new saved search
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model39500344ecf1a14150bbe26c4a138c56Request">Saved search definition</param>
+        /// <param name="createSavedSearchesRequest">Saved search definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall39500344ecf1a14150bbe26c4a138c56ApiResponse"/>&gt;</returns>
-        Task<ICall39500344ecf1a14150bbe26c4a138c56ApiResponse> Call39500344ecf1a14150bbe26c4a138c56Async(Model39500344ecf1a14150bbe26c4a138c56Request model39500344ecf1a14150bbe26c4a138c56Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateSavedSearchesApiResponse"/>&gt;</returns>
+        Task<ICreateSavedSearchesApiResponse> CreateSavedSearchesAsync(CreateSavedSearchesRequest createSavedSearchesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// SavedSearch@store
@@ -56,81 +56,10 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Creates a new saved search
         /// </remarks>
-        /// <param name="model39500344ecf1a14150bbe26c4a138c56Request">Saved search definition</param>
+        /// <param name="createSavedSearchesRequest">Saved search definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall39500344ecf1a14150bbe26c4a138c56ApiResponse"/>?&gt;</returns>
-        Task<ICall39500344ecf1a14150bbe26c4a138c56ApiResponse?> Call39500344ecf1a14150bbe26c4a138c56OrDefaultAsync(Model39500344ecf1a14150bbe26c4a138c56Request model39500344ecf1a14150bbe26c4a138c56Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// SavedSearch@update
-        /// </summary>
-        /// <remarks>
-        /// Update a saved search
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">saved search id</param>
-        /// <param name="model3b59d921ea47286a669054ef67350b03Request">Saved search definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3b59d921ea47286a669054ef67350b03ApiResponse"/>&gt;</returns>
-        Task<ICall3b59d921ea47286a669054ef67350b03ApiResponse> Call3b59d921ea47286a669054ef67350b03Async(int id, Model3b59d921ea47286a669054ef67350b03Request model3b59d921ea47286a669054ef67350b03Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// SavedSearch@update
-        /// </summary>
-        /// <remarks>
-        /// Update a saved search
-        /// </remarks>
-        /// <param name="id">saved search id</param>
-        /// <param name="model3b59d921ea47286a669054ef67350b03Request">Saved search definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3b59d921ea47286a669054ef67350b03ApiResponse"/>?&gt;</returns>
-        Task<ICall3b59d921ea47286a669054ef67350b03ApiResponse?> Call3b59d921ea47286a669054ef67350b03OrDefaultAsync(int id, Model3b59d921ea47286a669054ef67350b03Request model3b59d921ea47286a669054ef67350b03Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// SavedSearch@index
-        /// </summary>
-        /// <remarks>
-        /// Returns a list of saved searches enabled on the system
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="perPage">Specify number of results per page (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4f2a3c56631a5fccb45a9e7972df02b0ApiResponse"/>&gt;</returns>
-        Task<ICall4f2a3c56631a5fccb45a9e7972df02b0ApiResponse> Call4f2a3c56631a5fccb45a9e7972df02b0Async(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// SavedSearch@index
-        /// </summary>
-        /// <remarks>
-        /// Returns a list of saved searches enabled on the system
-        /// </remarks>
-        /// <param name="perPage">Specify number of results per page (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4f2a3c56631a5fccb45a9e7972df02b0ApiResponse"/>?&gt;</returns>
-        Task<ICall4f2a3c56631a5fccb45a9e7972df02b0ApiResponse?> Call4f2a3c56631a5fccb45a9e7972df02b0OrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// SavedSearch@show
-        /// </summary>
-        /// <remarks>
-        /// Return a single saved search
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">saved search id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall8d6878e4937dd67c5e2480c6f4e9149fApiResponse"/>&gt;</returns>
-        Task<ICall8d6878e4937dd67c5e2480c6f4e9149fApiResponse> Call8d6878e4937dd67c5e2480c6f4e9149fAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// SavedSearch@show
-        /// </summary>
-        /// <remarks>
-        /// Return a single saved search
-        /// </remarks>
-        /// <param name="id">saved search id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall8d6878e4937dd67c5e2480c6f4e9149fApiResponse"/>?&gt;</returns>
-        Task<ICall8d6878e4937dd67c5e2480c6f4e9149fApiResponse?> Call8d6878e4937dd67c5e2480c6f4e9149fOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateSavedSearchesApiResponse"/>?&gt;</returns>
+        Task<ICreateSavedSearchesApiResponse?> CreateSavedSearchesOrDefaultAsync(CreateSavedSearchesRequest createSavedSearchesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// SavedSearch@destroy
@@ -141,8 +70,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">saved search id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICdcdceead49fe1554534af83c50c8af5ApiResponse"/>&gt;</returns>
-        Task<ICdcdceead49fe1554534af83c50c8af5ApiResponse> Cdcdceead49fe1554534af83c50c8af5Async(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteSavedSearchesApiResponse"/>&gt;</returns>
+        Task<IDeleteSavedSearchesApiResponse> DeleteSavedSearchesAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// SavedSearch@destroy
@@ -152,8 +81,8 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="id">saved search id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICdcdceead49fe1554534af83c50c8af5ApiResponse"/>?&gt;</returns>
-        Task<ICdcdceead49fe1554534af83c50c8af5ApiResponse?> Cdcdceead49fe1554534af83c50c8af5OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteSavedSearchesApiResponse"/>?&gt;</returns>
+        Task<IDeleteSavedSearchesApiResponse?> DeleteSavedSearchesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// SavedSearch@update
@@ -163,10 +92,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">saved search id</param>
-        /// <param name="fa314398c7a73002fee4ffc7e62e9fb6Request">Saved search definition</param>
+        /// <param name="editSavedSearchesRequest">Saved search definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFa314398c7a73002fee4ffc7e62e9fb6ApiResponse"/>&gt;</returns>
-        Task<IFa314398c7a73002fee4ffc7e62e9fb6ApiResponse> Fa314398c7a73002fee4ffc7e62e9fb6Async(int id, Fa314398c7a73002fee4ffc7e62e9fb6Request fa314398c7a73002fee4ffc7e62e9fb6Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditSavedSearchesApiResponse"/>&gt;</returns>
+        Task<IEditSavedSearchesApiResponse> EditSavedSearchesAsync(int id, EditSavedSearchesRequest editSavedSearchesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// SavedSearch@update
@@ -175,16 +104,87 @@ namespace GatewayApiSdk.Api
         /// Edit a saved search
         /// </remarks>
         /// <param name="id">saved search id</param>
-        /// <param name="fa314398c7a73002fee4ffc7e62e9fb6Request">Saved search definition</param>
+        /// <param name="editSavedSearchesRequest">Saved search definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFa314398c7a73002fee4ffc7e62e9fb6ApiResponse"/>?&gt;</returns>
-        Task<IFa314398c7a73002fee4ffc7e62e9fb6ApiResponse?> Fa314398c7a73002fee4ffc7e62e9fb6OrDefaultAsync(int id, Fa314398c7a73002fee4ffc7e62e9fb6Request fa314398c7a73002fee4ffc7e62e9fb6Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditSavedSearchesApiResponse"/>?&gt;</returns>
+        Task<IEditSavedSearchesApiResponse?> EditSavedSearchesOrDefaultAsync(int id, EditSavedSearchesRequest editSavedSearchesRequest, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// SavedSearch@index
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of saved searches enabled on the system
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="perPage">Specify number of results per page (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllSavedSearchesApiResponse"/>&gt;</returns>
+        Task<IFetchAllSavedSearchesApiResponse> FetchAllSavedSearchesAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// SavedSearch@index
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of saved searches enabled on the system
+        /// </remarks>
+        /// <param name="perPage">Specify number of results per page (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllSavedSearchesApiResponse"/>?&gt;</returns>
+        Task<IFetchAllSavedSearchesApiResponse?> FetchAllSavedSearchesOrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// SavedSearch@show
+        /// </summary>
+        /// <remarks>
+        /// Return a single saved search
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">saved search id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchSavedSearchesApiResponse"/>&gt;</returns>
+        Task<IFetchSavedSearchesApiResponse> FetchSavedSearchesAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// SavedSearch@show
+        /// </summary>
+        /// <remarks>
+        /// Return a single saved search
+        /// </remarks>
+        /// <param name="id">saved search id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchSavedSearchesApiResponse"/>?&gt;</returns>
+        Task<IFetchSavedSearchesApiResponse?> FetchSavedSearchesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// SavedSearch@update
+        /// </summary>
+        /// <remarks>
+        /// Update a saved search
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">saved search id</param>
+        /// <param name="updateSavedSearchesRequest">Saved search definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateSavedSearchesApiResponse"/>&gt;</returns>
+        Task<IUpdateSavedSearchesApiResponse> UpdateSavedSearchesAsync(int id, UpdateSavedSearchesRequest updateSavedSearchesRequest, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// SavedSearch@update
+        /// </summary>
+        /// <remarks>
+        /// Update a saved search
+        /// </remarks>
+        /// <param name="id">saved search id</param>
+        /// <param name="updateSavedSearchesRequest">Saved search definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateSavedSearchesApiResponse"/>?&gt;</returns>
+        Task<IUpdateSavedSearchesApiResponse?> UpdateSavedSearchesOrDefaultAsync(int id, UpdateSavedSearchesRequest updateSavedSearchesRequest, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="ICall39500344ecf1a14150bbe26c4a138c56ApiResponse"/>
+    /// The <see cref="ICreateSavedSearchesApiResponse"/>
     /// </summary>
-    public interface ICall39500344ecf1a14150bbe26c4a138c56ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface ICreateSavedSearchesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CreateCategories200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -200,9 +200,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall3b59d921ea47286a669054ef67350b03ApiResponse"/>
+    /// The <see cref="IDeleteSavedSearchesApiResponse"/>
     /// </summary>
-    public interface ICall3b59d921ea47286a669054ef67350b03ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.Model3b59d921ea47286a669054ef67350b03200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IDeleteSavedSearchesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -224,39 +224,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall4f2a3c56631a5fccb45a9e7972df02b0ApiResponse"/>
+    /// The <see cref="IEditSavedSearchesApiResponse"/>
     /// </summary>
-    public interface ICall4f2a3c56631a5fccb45a9e7972df02b0ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model4f2a3c56631a5fccb45a9e7972df02b0200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ICall8d6878e4937dd67c5e2480c6f4e9149fApiResponse"/>
-    /// </summary>
-    public interface ICall8d6878e4937dd67c5e2480c6f4e9149fApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model4f2a3c56631a5fccb45a9e7972df02b0200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ICdcdceead49fe1554534af83c50c8af5ApiResponse"/>
-    /// </summary>
-    public interface ICdcdceead49fe1554534af83c50c8af5ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IEditSavedSearchesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateSavedSearches200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -278,9 +248,39 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IFa314398c7a73002fee4ffc7e62e9fb6ApiResponse"/>
+    /// The <see cref="IFetchAllSavedSearchesApiResponse"/>
     /// </summary>
-    public interface IFa314398c7a73002fee4ffc7e62e9fb6ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.Model3b59d921ea47286a669054ef67350b03200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IFetchAllSavedSearchesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchAllSavedSearches200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchSavedSearchesApiResponse"/>
+    /// </summary>
+    public interface IFetchSavedSearchesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchAllSavedSearches200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 404 NotFound
+        /// </summary>
+        /// <returns></returns>
+        bool IsNotFound { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IUpdateSavedSearchesApiResponse"/>
+    /// </summary>
+    public interface IUpdateSavedSearchesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateSavedSearches200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -309,121 +309,121 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall39500344ecf1a14150bbe26c4a138c56;
+        public event EventHandler<ApiResponseEventArgs>? OnCreateSavedSearches;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall39500344ecf1a14150bbe26c4a138c56;
+        public event EventHandler<ExceptionEventArgs>? OnErrorCreateSavedSearches;
 
-        internal void ExecuteOnCall39500344ecf1a14150bbe26c4a138c56(SavedSearchApi.Call39500344ecf1a14150bbe26c4a138c56ApiResponse apiResponse)
+        internal void ExecuteOnCreateSavedSearches(SavedSearchApi.CreateSavedSearchesApiResponse apiResponse)
         {
-            OnCall39500344ecf1a14150bbe26c4a138c56?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnCreateSavedSearches?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall39500344ecf1a14150bbe26c4a138c56(Exception exception)
+        internal void ExecuteOnErrorCreateSavedSearches(Exception exception)
         {
-            OnErrorCall39500344ecf1a14150bbe26c4a138c56?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorCreateSavedSearches?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall3b59d921ea47286a669054ef67350b03;
+        public event EventHandler<ApiResponseEventArgs>? OnDeleteSavedSearches;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall3b59d921ea47286a669054ef67350b03;
+        public event EventHandler<ExceptionEventArgs>? OnErrorDeleteSavedSearches;
 
-        internal void ExecuteOnCall3b59d921ea47286a669054ef67350b03(SavedSearchApi.Call3b59d921ea47286a669054ef67350b03ApiResponse apiResponse)
+        internal void ExecuteOnDeleteSavedSearches(SavedSearchApi.DeleteSavedSearchesApiResponse apiResponse)
         {
-            OnCall3b59d921ea47286a669054ef67350b03?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnDeleteSavedSearches?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall3b59d921ea47286a669054ef67350b03(Exception exception)
+        internal void ExecuteOnErrorDeleteSavedSearches(Exception exception)
         {
-            OnErrorCall3b59d921ea47286a669054ef67350b03?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorDeleteSavedSearches?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall4f2a3c56631a5fccb45a9e7972df02b0;
+        public event EventHandler<ApiResponseEventArgs>? OnEditSavedSearches;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall4f2a3c56631a5fccb45a9e7972df02b0;
+        public event EventHandler<ExceptionEventArgs>? OnErrorEditSavedSearches;
 
-        internal void ExecuteOnCall4f2a3c56631a5fccb45a9e7972df02b0(SavedSearchApi.Call4f2a3c56631a5fccb45a9e7972df02b0ApiResponse apiResponse)
+        internal void ExecuteOnEditSavedSearches(SavedSearchApi.EditSavedSearchesApiResponse apiResponse)
         {
-            OnCall4f2a3c56631a5fccb45a9e7972df02b0?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnEditSavedSearches?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall4f2a3c56631a5fccb45a9e7972df02b0(Exception exception)
+        internal void ExecuteOnErrorEditSavedSearches(Exception exception)
         {
-            OnErrorCall4f2a3c56631a5fccb45a9e7972df02b0?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorEditSavedSearches?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall8d6878e4937dd67c5e2480c6f4e9149f;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchAllSavedSearches;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall8d6878e4937dd67c5e2480c6f4e9149f;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchAllSavedSearches;
 
-        internal void ExecuteOnCall8d6878e4937dd67c5e2480c6f4e9149f(SavedSearchApi.Call8d6878e4937dd67c5e2480c6f4e9149fApiResponse apiResponse)
+        internal void ExecuteOnFetchAllSavedSearches(SavedSearchApi.FetchAllSavedSearchesApiResponse apiResponse)
         {
-            OnCall8d6878e4937dd67c5e2480c6f4e9149f?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchAllSavedSearches?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall8d6878e4937dd67c5e2480c6f4e9149f(Exception exception)
+        internal void ExecuteOnErrorFetchAllSavedSearches(Exception exception)
         {
-            OnErrorCall8d6878e4937dd67c5e2480c6f4e9149f?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchAllSavedSearches?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCdcdceead49fe1554534af83c50c8af5;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchSavedSearches;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCdcdceead49fe1554534af83c50c8af5;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchSavedSearches;
 
-        internal void ExecuteOnCdcdceead49fe1554534af83c50c8af5(SavedSearchApi.Cdcdceead49fe1554534af83c50c8af5ApiResponse apiResponse)
+        internal void ExecuteOnFetchSavedSearches(SavedSearchApi.FetchSavedSearchesApiResponse apiResponse)
         {
-            OnCdcdceead49fe1554534af83c50c8af5?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchSavedSearches?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCdcdceead49fe1554534af83c50c8af5(Exception exception)
+        internal void ExecuteOnErrorFetchSavedSearches(Exception exception)
         {
-            OnErrorCdcdceead49fe1554534af83c50c8af5?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchSavedSearches?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFa314398c7a73002fee4ffc7e62e9fb6;
+        public event EventHandler<ApiResponseEventArgs>? OnUpdateSavedSearches;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFa314398c7a73002fee4ffc7e62e9fb6;
+        public event EventHandler<ExceptionEventArgs>? OnErrorUpdateSavedSearches;
 
-        internal void ExecuteOnFa314398c7a73002fee4ffc7e62e9fb6(SavedSearchApi.Fa314398c7a73002fee4ffc7e62e9fb6ApiResponse apiResponse)
+        internal void ExecuteOnUpdateSavedSearches(SavedSearchApi.UpdateSavedSearchesApiResponse apiResponse)
         {
-            OnFa314398c7a73002fee4ffc7e62e9fb6?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnUpdateSavedSearches?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorFa314398c7a73002fee4ffc7e62e9fb6(Exception exception)
+        internal void ExecuteOnErrorUpdateSavedSearches(Exception exception)
         {
-            OnErrorFa314398c7a73002fee4ffc7e62e9fb6?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorUpdateSavedSearches?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -468,28 +468,28 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatCall39500344ecf1a14150bbe26c4a138c56(Model39500344ecf1a14150bbe26c4a138c56Request model39500344ecf1a14150bbe26c4a138c56Request);
+        partial void FormatCreateSavedSearches(CreateSavedSearchesRequest createSavedSearchesRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="model39500344ecf1a14150bbe26c4a138c56Request"></param>
+        /// <param name="createSavedSearchesRequest"></param>
         /// <returns></returns>
-        private void ValidateCall39500344ecf1a14150bbe26c4a138c56(Model39500344ecf1a14150bbe26c4a138c56Request model39500344ecf1a14150bbe26c4a138c56Request)
+        private void ValidateCreateSavedSearches(CreateSavedSearchesRequest createSavedSearchesRequest)
         {
-            if (model39500344ecf1a14150bbe26c4a138c56Request == null)
-                throw new ArgumentNullException(nameof(model39500344ecf1a14150bbe26c4a138c56Request));
+            if (createSavedSearchesRequest == null)
+                throw new ArgumentNullException(nameof(createSavedSearchesRequest));
         }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model39500344ecf1a14150bbe26c4a138c56Request"></param>
-        private void AfterCall39500344ecf1a14150bbe26c4a138c56DefaultImplementation(ICall39500344ecf1a14150bbe26c4a138c56ApiResponse apiResponseLocalVar, Model39500344ecf1a14150bbe26c4a138c56Request model39500344ecf1a14150bbe26c4a138c56Request)
+        /// <param name="createSavedSearchesRequest"></param>
+        private void AfterCreateSavedSearchesDefaultImplementation(ICreateSavedSearchesApiResponse apiResponseLocalVar, CreateSavedSearchesRequest createSavedSearchesRequest)
         {
             bool suppressDefaultLog = false;
-            AfterCall39500344ecf1a14150bbe26c4a138c56(ref suppressDefaultLog, apiResponseLocalVar, model39500344ecf1a14150bbe26c4a138c56Request);
+            AfterCreateSavedSearches(ref suppressDefaultLog, apiResponseLocalVar, createSavedSearchesRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -499,8 +499,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model39500344ecf1a14150bbe26c4a138c56Request"></param>
-        partial void AfterCall39500344ecf1a14150bbe26c4a138c56(ref bool suppressDefaultLog, ICall39500344ecf1a14150bbe26c4a138c56ApiResponse apiResponseLocalVar, Model39500344ecf1a14150bbe26c4a138c56Request model39500344ecf1a14150bbe26c4a138c56Request);
+        /// <param name="createSavedSearchesRequest"></param>
+        partial void AfterCreateSavedSearches(ref bool suppressDefaultLog, ICreateSavedSearchesApiResponse apiResponseLocalVar, CreateSavedSearchesRequest createSavedSearchesRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -508,11 +508,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model39500344ecf1a14150bbe26c4a138c56Request"></param>
-        private void OnErrorCall39500344ecf1a14150bbe26c4a138c56DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model39500344ecf1a14150bbe26c4a138c56Request model39500344ecf1a14150bbe26c4a138c56Request)
+        /// <param name="createSavedSearchesRequest"></param>
+        private void OnErrorCreateSavedSearchesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateSavedSearchesRequest createSavedSearchesRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall39500344ecf1a14150bbe26c4a138c56(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, model39500344ecf1a14150bbe26c4a138c56Request);
+            OnErrorCreateSavedSearches(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createSavedSearchesRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -524,20 +524,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model39500344ecf1a14150bbe26c4a138c56Request"></param>
-        partial void OnErrorCall39500344ecf1a14150bbe26c4a138c56(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model39500344ecf1a14150bbe26c4a138c56Request model39500344ecf1a14150bbe26c4a138c56Request);
+        /// <param name="createSavedSearchesRequest"></param>
+        partial void OnErrorCreateSavedSearches(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateSavedSearchesRequest createSavedSearchesRequest);
 
         /// <summary>
         /// SavedSearch@store Creates a new saved search
         /// </summary>
-        /// <param name="model39500344ecf1a14150bbe26c4a138c56Request">Saved search definition</param>
+        /// <param name="createSavedSearchesRequest">Saved search definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall39500344ecf1a14150bbe26c4a138c56ApiResponse"/>&gt;</returns>
-        public async Task<ICall39500344ecf1a14150bbe26c4a138c56ApiResponse?> Call39500344ecf1a14150bbe26c4a138c56OrDefaultAsync(Model39500344ecf1a14150bbe26c4a138c56Request model39500344ecf1a14150bbe26c4a138c56Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateSavedSearchesApiResponse"/>&gt;</returns>
+        public async Task<ICreateSavedSearchesApiResponse?> CreateSavedSearchesOrDefaultAsync(CreateSavedSearchesRequest createSavedSearchesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call39500344ecf1a14150bbe26c4a138c56Async(model39500344ecf1a14150bbe26c4a138c56Request, cancellationToken).ConfigureAwait(false);
+                return await CreateSavedSearchesAsync(createSavedSearchesRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -549,18 +549,18 @@ namespace GatewayApiSdk.Api
         /// SavedSearch@store Creates a new saved search
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model39500344ecf1a14150bbe26c4a138c56Request">Saved search definition</param>
+        /// <param name="createSavedSearchesRequest">Saved search definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall39500344ecf1a14150bbe26c4a138c56ApiResponse"/>&gt;</returns>
-        public async Task<ICall39500344ecf1a14150bbe26c4a138c56ApiResponse> Call39500344ecf1a14150bbe26c4a138c56Async(Model39500344ecf1a14150bbe26c4a138c56Request model39500344ecf1a14150bbe26c4a138c56Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateSavedSearchesApiResponse"/>&gt;</returns>
+        public async Task<ICreateSavedSearchesApiResponse> CreateSavedSearchesAsync(CreateSavedSearchesRequest createSavedSearchesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall39500344ecf1a14150bbe26c4a138c56(model39500344ecf1a14150bbe26c4a138c56Request);
+                ValidateCreateSavedSearches(createSavedSearchesRequest);
 
-                FormatCall39500344ecf1a14150bbe26c4a138c56(model39500344ecf1a14150bbe26c4a138c56Request);
+                FormatCreateSavedSearches(createSavedSearchesRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -571,9 +571,9 @@ namespace GatewayApiSdk.Api
                         ? "/api/v1/saved_searches"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/saved_searches");
 
-                    httpRequestMessageLocalVar.Content = (model39500344ecf1a14150bbe26c4a138c56Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (createSavedSearchesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model39500344ecf1a14150bbe26c4a138c56Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createSavedSearchesRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -608,7 +608,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call39500344ecf1a14150bbe26c4a138c56ApiResponse apiResponseLocalVar;
+                        CreateSavedSearchesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -619,9 +619,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall39500344ecf1a14150bbe26c4a138c56DefaultImplementation(apiResponseLocalVar, model39500344ecf1a14150bbe26c4a138c56Request);
+                        AfterCreateSavedSearchesDefaultImplementation(apiResponseLocalVar, createSavedSearchesRequest);
 
-                        Events.ExecuteOnCall39500344ecf1a14150bbe26c4a138c56(apiResponseLocalVar);
+                        Events.ExecuteOnCreateSavedSearches(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -633,16 +633,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall39500344ecf1a14150bbe26c4a138c56DefaultImplementation(e, "/api/v1/saved_searches", uriBuilderLocalVar.Path, model39500344ecf1a14150bbe26c4a138c56Request);
-                Events.ExecuteOnErrorCall39500344ecf1a14150bbe26c4a138c56(e);
+                OnErrorCreateSavedSearchesDefaultImplementation(e, "/api/v1/saved_searches", uriBuilderLocalVar.Path, createSavedSearchesRequest);
+                Events.ExecuteOnErrorCreateSavedSearches(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call39500344ecf1a14150bbe26c4a138c56ApiResponse"/>
+        /// The <see cref="CreateSavedSearchesApiResponse"/>
         /// </summary>
-        public partial class Call39500344ecf1a14150bbe26c4a138c56ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall39500344ecf1a14150bbe26c4a138c56ApiResponse
+        public partial class CreateSavedSearchesApiResponse : GatewayApiSdk.Client.ApiResponse, ICreateSavedSearchesApiResponse
         {
             /// <summary>
             /// The logger
@@ -650,7 +650,7 @@ namespace GatewayApiSdk.Api
             public ILogger<SavedSearchApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call39500344ecf1a14150bbe26c4a138c56ApiResponse"/>
+            /// The <see cref="CreateSavedSearchesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -659,14 +659,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call39500344ecf1a14150bbe26c4a138c56ApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public CreateSavedSearchesApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call39500344ecf1a14150bbe26c4a138c56ApiResponse"/>
+            /// The <see cref="CreateSavedSearchesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -675,7 +675,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call39500344ecf1a14150bbe26c4a138c56ApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public CreateSavedSearchesApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -693,11 +693,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? Ok()
+            public GatewayApiSdk.Model.CreateCategories200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -706,7 +706,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
             {
                 result = null;
 
@@ -731,11 +731,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -744,7 +744,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -770,29 +770,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall3b59d921ea47286a669054ef67350b03(ref int id, Model3b59d921ea47286a669054ef67350b03Request model3b59d921ea47286a669054ef67350b03Request);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="model3b59d921ea47286a669054ef67350b03Request"></param>
-        /// <returns></returns>
-        private void ValidateCall3b59d921ea47286a669054ef67350b03(Model3b59d921ea47286a669054ef67350b03Request model3b59d921ea47286a669054ef67350b03Request)
-        {
-            if (model3b59d921ea47286a669054ef67350b03Request == null)
-                throw new ArgumentNullException(nameof(model3b59d921ea47286a669054ef67350b03Request));
-        }
+        partial void FormatDeleteSavedSearches(ref int id);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model3b59d921ea47286a669054ef67350b03Request"></param>
-        private void AfterCall3b59d921ea47286a669054ef67350b03DefaultImplementation(ICall3b59d921ea47286a669054ef67350b03ApiResponse apiResponseLocalVar, int id, Model3b59d921ea47286a669054ef67350b03Request model3b59d921ea47286a669054ef67350b03Request)
+        private void AfterDeleteSavedSearchesDefaultImplementation(IDeleteSavedSearchesApiResponse apiResponseLocalVar, int id)
         {
             bool suppressDefaultLog = false;
-            AfterCall3b59d921ea47286a669054ef67350b03(ref suppressDefaultLog, apiResponseLocalVar, id, model3b59d921ea47286a669054ef67350b03Request);
+            AfterDeleteSavedSearches(ref suppressDefaultLog, apiResponseLocalVar, id);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -803,8 +791,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model3b59d921ea47286a669054ef67350b03Request"></param>
-        partial void AfterCall3b59d921ea47286a669054ef67350b03(ref bool suppressDefaultLog, ICall3b59d921ea47286a669054ef67350b03ApiResponse apiResponseLocalVar, int id, Model3b59d921ea47286a669054ef67350b03Request model3b59d921ea47286a669054ef67350b03Request);
+        partial void AfterDeleteSavedSearches(ref bool suppressDefaultLog, IDeleteSavedSearchesApiResponse apiResponseLocalVar, int id);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -813,11 +800,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model3b59d921ea47286a669054ef67350b03Request"></param>
-        private void OnErrorCall3b59d921ea47286a669054ef67350b03DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model3b59d921ea47286a669054ef67350b03Request model3b59d921ea47286a669054ef67350b03Request)
+        private void OnErrorDeleteSavedSearchesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall3b59d921ea47286a669054ef67350b03(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, model3b59d921ea47286a669054ef67350b03Request);
+            OnErrorDeleteSavedSearches(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -830,21 +816,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model3b59d921ea47286a669054ef67350b03Request"></param>
-        partial void OnErrorCall3b59d921ea47286a669054ef67350b03(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model3b59d921ea47286a669054ef67350b03Request model3b59d921ea47286a669054ef67350b03Request);
+        partial void OnErrorDeleteSavedSearches(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
 
         /// <summary>
-        /// SavedSearch@update Update a saved search
+        /// SavedSearch@destroy Delete a saved search
         /// </summary>
         /// <param name="id">saved search id</param>
-        /// <param name="model3b59d921ea47286a669054ef67350b03Request">Saved search definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3b59d921ea47286a669054ef67350b03ApiResponse"/>&gt;</returns>
-        public async Task<ICall3b59d921ea47286a669054ef67350b03ApiResponse?> Call3b59d921ea47286a669054ef67350b03OrDefaultAsync(int id, Model3b59d921ea47286a669054ef67350b03Request model3b59d921ea47286a669054ef67350b03Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteSavedSearchesApiResponse"/>&gt;</returns>
+        public async Task<IDeleteSavedSearchesApiResponse?> DeleteSavedSearchesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call3b59d921ea47286a669054ef67350b03Async(id, model3b59d921ea47286a669054ef67350b03Request, cancellationToken).ConfigureAwait(false);
+                return await DeleteSavedSearchesAsync(id, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -853,22 +837,19 @@ namespace GatewayApiSdk.Api
         }
 
         /// <summary>
-        /// SavedSearch@update Update a saved search
+        /// SavedSearch@destroy Delete a saved search
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">saved search id</param>
-        /// <param name="model3b59d921ea47286a669054ef67350b03Request">Saved search definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3b59d921ea47286a669054ef67350b03ApiResponse"/>&gt;</returns>
-        public async Task<ICall3b59d921ea47286a669054ef67350b03ApiResponse> Call3b59d921ea47286a669054ef67350b03Async(int id, Model3b59d921ea47286a669054ef67350b03Request model3b59d921ea47286a669054ef67350b03Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteSavedSearchesApiResponse"/>&gt;</returns>
+        public async Task<IDeleteSavedSearchesApiResponse> DeleteSavedSearchesAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall3b59d921ea47286a669054ef67350b03(model3b59d921ea47286a669054ef67350b03Request);
-
-                FormatCall3b59d921ea47286a669054ef67350b03(ref id, model3b59d921ea47286a669054ef67350b03Request);
+                FormatDeleteSavedSearches(ref id);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -880,9 +861,343 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/saved_searches/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (model3b59d921ea47286a669054ef67350b03Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Delete;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        DeleteSavedSearchesApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/saved_searches/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterDeleteSavedSearchesDefaultImplementation(apiResponseLocalVar, id);
+
+                        Events.ExecuteOnDeleteSavedSearches(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorDeleteSavedSearchesDefaultImplementation(e, "/api/v1/saved_searches/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorDeleteSavedSearches(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="DeleteSavedSearchesApiResponse"/>
+        /// </summary>
+        public partial class DeleteSavedSearchesApiResponse : GatewayApiSdk.Client.ApiResponse, IDeleteSavedSearchesApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<SavedSearchApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="DeleteSavedSearchesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public DeleteSavedSearchesApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="DeleteSavedSearchesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public DeleteSavedSearchesApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public bool IsInternalServerError => 500 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsInternalServerError
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = InternalServerError();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatEditSavedSearches(ref int id, EditSavedSearchesRequest editSavedSearchesRequest);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="editSavedSearchesRequest"></param>
+        /// <returns></returns>
+        private void ValidateEditSavedSearches(EditSavedSearchesRequest editSavedSearchesRequest)
+        {
+            if (editSavedSearchesRequest == null)
+                throw new ArgumentNullException(nameof(editSavedSearchesRequest));
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="editSavedSearchesRequest"></param>
+        private void AfterEditSavedSearchesDefaultImplementation(IEditSavedSearchesApiResponse apiResponseLocalVar, int id, EditSavedSearchesRequest editSavedSearchesRequest)
+        {
+            bool suppressDefaultLog = false;
+            AfterEditSavedSearches(ref suppressDefaultLog, apiResponseLocalVar, id, editSavedSearchesRequest);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="editSavedSearchesRequest"></param>
+        partial void AfterEditSavedSearches(ref bool suppressDefaultLog, IEditSavedSearchesApiResponse apiResponseLocalVar, int id, EditSavedSearchesRequest editSavedSearchesRequest);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="editSavedSearchesRequest"></param>
+        private void OnErrorEditSavedSearchesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditSavedSearchesRequest editSavedSearchesRequest)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorEditSavedSearches(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, editSavedSearchesRequest);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="editSavedSearchesRequest"></param>
+        partial void OnErrorEditSavedSearches(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditSavedSearchesRequest editSavedSearchesRequest);
+
+        /// <summary>
+        /// SavedSearch@update Edit a saved search
+        /// </summary>
+        /// <param name="id">saved search id</param>
+        /// <param name="editSavedSearchesRequest">Saved search definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditSavedSearchesApiResponse"/>&gt;</returns>
+        public async Task<IEditSavedSearchesApiResponse?> EditSavedSearchesOrDefaultAsync(int id, EditSavedSearchesRequest editSavedSearchesRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await EditSavedSearchesAsync(id, editSavedSearchesRequest, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// SavedSearch@update Edit a saved search
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">saved search id</param>
+        /// <param name="editSavedSearchesRequest">Saved search definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditSavedSearchesApiResponse"/>&gt;</returns>
+        public async Task<IEditSavedSearchesApiResponse> EditSavedSearchesAsync(int id, EditSavedSearchesRequest editSavedSearchesRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                ValidateEditSavedSearches(editSavedSearchesRequest);
+
+                FormatEditSavedSearches(ref id, editSavedSearchesRequest);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/saved_searches/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/saved_searches/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    httpRequestMessageLocalVar.Content = (editSavedSearchesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model3b59d921ea47286a669054ef67350b03Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(editSavedSearchesRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -911,13 +1226,13 @@ namespace GatewayApiSdk.Api
                     foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
                         httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
 
-                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
+                    httpRequestMessageLocalVar.Method = HttpMethod.Patch;
 
                     DateTime requestedAtLocalVar = DateTime.UtcNow;
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call3b59d921ea47286a669054ef67350b03ApiResponse apiResponseLocalVar;
+                        EditSavedSearchesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -928,9 +1243,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall3b59d921ea47286a669054ef67350b03DefaultImplementation(apiResponseLocalVar, id, model3b59d921ea47286a669054ef67350b03Request);
+                        AfterEditSavedSearchesDefaultImplementation(apiResponseLocalVar, id, editSavedSearchesRequest);
 
-                        Events.ExecuteOnCall3b59d921ea47286a669054ef67350b03(apiResponseLocalVar);
+                        Events.ExecuteOnEditSavedSearches(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -942,16 +1257,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall3b59d921ea47286a669054ef67350b03DefaultImplementation(e, "/api/v1/saved_searches/{id}", uriBuilderLocalVar.Path, id, model3b59d921ea47286a669054ef67350b03Request);
-                Events.ExecuteOnErrorCall3b59d921ea47286a669054ef67350b03(e);
+                OnErrorEditSavedSearchesDefaultImplementation(e, "/api/v1/saved_searches/{id}", uriBuilderLocalVar.Path, id, editSavedSearchesRequest);
+                Events.ExecuteOnErrorEditSavedSearches(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call3b59d921ea47286a669054ef67350b03ApiResponse"/>
+        /// The <see cref="EditSavedSearchesApiResponse"/>
         /// </summary>
-        public partial class Call3b59d921ea47286a669054ef67350b03ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall3b59d921ea47286a669054ef67350b03ApiResponse
+        public partial class EditSavedSearchesApiResponse : GatewayApiSdk.Client.ApiResponse, IEditSavedSearchesApiResponse
         {
             /// <summary>
             /// The logger
@@ -959,7 +1274,7 @@ namespace GatewayApiSdk.Api
             public ILogger<SavedSearchApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call3b59d921ea47286a669054ef67350b03ApiResponse"/>
+            /// The <see cref="EditSavedSearchesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -968,14 +1283,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call3b59d921ea47286a669054ef67350b03ApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public EditSavedSearchesApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call3b59d921ea47286a669054ef67350b03ApiResponse"/>
+            /// The <see cref="EditSavedSearchesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -984,7 +1299,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call3b59d921ea47286a669054ef67350b03ApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public EditSavedSearchesApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1002,11 +1317,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1015,7 +1330,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -1040,11 +1355,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model3b59d921ea47286a669054ef67350b03200Response? Ok()
+            public GatewayApiSdk.Model.UpdateSavedSearches200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model3b59d921ea47286a669054ef67350b03200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateSavedSearches200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1053,7 +1368,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model3b59d921ea47286a669054ef67350b03200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateSavedSearches200Response? result)
             {
                 result = null;
 
@@ -1078,11 +1393,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1091,7 +1406,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -1117,17 +1432,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall4f2a3c56631a5fccb45a9e7972df02b0(ref Option<int> perPage);
+        partial void FormatFetchAllSavedSearches(ref Option<int> perPage);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="perPage"></param>
-        private void AfterCall4f2a3c56631a5fccb45a9e7972df02b0DefaultImplementation(ICall4f2a3c56631a5fccb45a9e7972df02b0ApiResponse apiResponseLocalVar, Option<int> perPage)
+        private void AfterFetchAllSavedSearchesDefaultImplementation(IFetchAllSavedSearchesApiResponse apiResponseLocalVar, Option<int> perPage)
         {
             bool suppressDefaultLog = false;
-            AfterCall4f2a3c56631a5fccb45a9e7972df02b0(ref suppressDefaultLog, apiResponseLocalVar, perPage);
+            AfterFetchAllSavedSearches(ref suppressDefaultLog, apiResponseLocalVar, perPage);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1138,7 +1453,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="perPage"></param>
-        partial void AfterCall4f2a3c56631a5fccb45a9e7972df02b0(ref bool suppressDefaultLog, ICall4f2a3c56631a5fccb45a9e7972df02b0ApiResponse apiResponseLocalVar, Option<int> perPage);
+        partial void AfterFetchAllSavedSearches(ref bool suppressDefaultLog, IFetchAllSavedSearchesApiResponse apiResponseLocalVar, Option<int> perPage);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1147,10 +1462,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="perPage"></param>
-        private void OnErrorCall4f2a3c56631a5fccb45a9e7972df02b0DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage)
+        private void OnErrorFetchAllSavedSearchesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall4f2a3c56631a5fccb45a9e7972df02b0(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, perPage);
+            OnErrorFetchAllSavedSearches(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, perPage);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1163,19 +1478,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="perPage"></param>
-        partial void OnErrorCall4f2a3c56631a5fccb45a9e7972df02b0(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage);
+        partial void OnErrorFetchAllSavedSearches(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage);
 
         /// <summary>
         /// SavedSearch@index Returns a list of saved searches enabled on the system
         /// </summary>
         /// <param name="perPage">Specify number of results per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4f2a3c56631a5fccb45a9e7972df02b0ApiResponse"/>&gt;</returns>
-        public async Task<ICall4f2a3c56631a5fccb45a9e7972df02b0ApiResponse?> Call4f2a3c56631a5fccb45a9e7972df02b0OrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllSavedSearchesApiResponse"/>&gt;</returns>
+        public async Task<IFetchAllSavedSearchesApiResponse?> FetchAllSavedSearchesOrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call4f2a3c56631a5fccb45a9e7972df02b0Async(perPage, cancellationToken).ConfigureAwait(false);
+                return await FetchAllSavedSearchesAsync(perPage, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1189,14 +1504,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">Specify number of results per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4f2a3c56631a5fccb45a9e7972df02b0ApiResponse"/>&gt;</returns>
-        public async Task<ICall4f2a3c56631a5fccb45a9e7972df02b0ApiResponse> Call4f2a3c56631a5fccb45a9e7972df02b0Async(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllSavedSearchesApiResponse"/>&gt;</returns>
+        public async Task<IFetchAllSavedSearchesApiResponse> FetchAllSavedSearchesAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatCall4f2a3c56631a5fccb45a9e7972df02b0(ref perPage);
+                FormatFetchAllSavedSearches(ref perPage);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1238,7 +1553,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call4f2a3c56631a5fccb45a9e7972df02b0ApiResponse apiResponseLocalVar;
+                        FetchAllSavedSearchesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -1249,9 +1564,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall4f2a3c56631a5fccb45a9e7972df02b0DefaultImplementation(apiResponseLocalVar, perPage);
+                        AfterFetchAllSavedSearchesDefaultImplementation(apiResponseLocalVar, perPage);
 
-                        Events.ExecuteOnCall4f2a3c56631a5fccb45a9e7972df02b0(apiResponseLocalVar);
+                        Events.ExecuteOnFetchAllSavedSearches(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -1263,16 +1578,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall4f2a3c56631a5fccb45a9e7972df02b0DefaultImplementation(e, "/api/v1/saved_searches", uriBuilderLocalVar.Path, perPage);
-                Events.ExecuteOnErrorCall4f2a3c56631a5fccb45a9e7972df02b0(e);
+                OnErrorFetchAllSavedSearchesDefaultImplementation(e, "/api/v1/saved_searches", uriBuilderLocalVar.Path, perPage);
+                Events.ExecuteOnErrorFetchAllSavedSearches(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call4f2a3c56631a5fccb45a9e7972df02b0ApiResponse"/>
+        /// The <see cref="FetchAllSavedSearchesApiResponse"/>
         /// </summary>
-        public partial class Call4f2a3c56631a5fccb45a9e7972df02b0ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall4f2a3c56631a5fccb45a9e7972df02b0ApiResponse
+        public partial class FetchAllSavedSearchesApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchAllSavedSearchesApiResponse
         {
             /// <summary>
             /// The logger
@@ -1280,7 +1595,7 @@ namespace GatewayApiSdk.Api
             public ILogger<SavedSearchApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call4f2a3c56631a5fccb45a9e7972df02b0ApiResponse"/>
+            /// The <see cref="FetchAllSavedSearchesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1289,14 +1604,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call4f2a3c56631a5fccb45a9e7972df02b0ApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchAllSavedSearchesApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call4f2a3c56631a5fccb45a9e7972df02b0ApiResponse"/>
+            /// The <see cref="FetchAllSavedSearchesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1305,7 +1620,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call4f2a3c56631a5fccb45a9e7972df02b0ApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchAllSavedSearchesApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1323,11 +1638,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model4f2a3c56631a5fccb45a9e7972df02b0200Response? Ok()
+            public GatewayApiSdk.Model.FetchAllSavedSearches200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model4f2a3c56631a5fccb45a9e7972df02b0200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllSavedSearches200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1336,7 +1651,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model4f2a3c56631a5fccb45a9e7972df02b0200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllSavedSearches200Response? result)
             {
                 result = null;
 
@@ -1362,17 +1677,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall8d6878e4937dd67c5e2480c6f4e9149f(ref int id);
+        partial void FormatFetchSavedSearches(ref int id);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        private void AfterCall8d6878e4937dd67c5e2480c6f4e9149fDefaultImplementation(ICall8d6878e4937dd67c5e2480c6f4e9149fApiResponse apiResponseLocalVar, int id)
+        private void AfterFetchSavedSearchesDefaultImplementation(IFetchSavedSearchesApiResponse apiResponseLocalVar, int id)
         {
             bool suppressDefaultLog = false;
-            AfterCall8d6878e4937dd67c5e2480c6f4e9149f(ref suppressDefaultLog, apiResponseLocalVar, id);
+            AfterFetchSavedSearches(ref suppressDefaultLog, apiResponseLocalVar, id);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1383,7 +1698,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        partial void AfterCall8d6878e4937dd67c5e2480c6f4e9149f(ref bool suppressDefaultLog, ICall8d6878e4937dd67c5e2480c6f4e9149fApiResponse apiResponseLocalVar, int id);
+        partial void AfterFetchSavedSearches(ref bool suppressDefaultLog, IFetchSavedSearchesApiResponse apiResponseLocalVar, int id);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1392,10 +1707,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        private void OnErrorCall8d6878e4937dd67c5e2480c6f4e9149fDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        private void OnErrorFetchSavedSearchesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall8d6878e4937dd67c5e2480c6f4e9149f(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            OnErrorFetchSavedSearches(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1408,19 +1723,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        partial void OnErrorCall8d6878e4937dd67c5e2480c6f4e9149f(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+        partial void OnErrorFetchSavedSearches(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
 
         /// <summary>
         /// SavedSearch@show Return a single saved search
         /// </summary>
         /// <param name="id">saved search id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall8d6878e4937dd67c5e2480c6f4e9149fApiResponse"/>&gt;</returns>
-        public async Task<ICall8d6878e4937dd67c5e2480c6f4e9149fApiResponse?> Call8d6878e4937dd67c5e2480c6f4e9149fOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchSavedSearchesApiResponse"/>&gt;</returns>
+        public async Task<IFetchSavedSearchesApiResponse?> FetchSavedSearchesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call8d6878e4937dd67c5e2480c6f4e9149fAsync(id, cancellationToken).ConfigureAwait(false);
+                return await FetchSavedSearchesAsync(id, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1434,14 +1749,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">saved search id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall8d6878e4937dd67c5e2480c6f4e9149fApiResponse"/>&gt;</returns>
-        public async Task<ICall8d6878e4937dd67c5e2480c6f4e9149fApiResponse> Call8d6878e4937dd67c5e2480c6f4e9149fAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchSavedSearchesApiResponse"/>&gt;</returns>
+        public async Task<IFetchSavedSearchesApiResponse> FetchSavedSearchesAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatCall8d6878e4937dd67c5e2480c6f4e9149f(ref id);
+                FormatFetchSavedSearches(ref id);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1477,7 +1792,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call8d6878e4937dd67c5e2480c6f4e9149fApiResponse apiResponseLocalVar;
+                        FetchSavedSearchesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -1488,9 +1803,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall8d6878e4937dd67c5e2480c6f4e9149fDefaultImplementation(apiResponseLocalVar, id);
+                        AfterFetchSavedSearchesDefaultImplementation(apiResponseLocalVar, id);
 
-                        Events.ExecuteOnCall8d6878e4937dd67c5e2480c6f4e9149f(apiResponseLocalVar);
+                        Events.ExecuteOnFetchSavedSearches(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -1502,16 +1817,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall8d6878e4937dd67c5e2480c6f4e9149fDefaultImplementation(e, "/api/v1/saved_searches/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorCall8d6878e4937dd67c5e2480c6f4e9149f(e);
+                OnErrorFetchSavedSearchesDefaultImplementation(e, "/api/v1/saved_searches/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorFetchSavedSearches(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call8d6878e4937dd67c5e2480c6f4e9149fApiResponse"/>
+        /// The <see cref="FetchSavedSearchesApiResponse"/>
         /// </summary>
-        public partial class Call8d6878e4937dd67c5e2480c6f4e9149fApiResponse : GatewayApiSdk.Client.ApiResponse, ICall8d6878e4937dd67c5e2480c6f4e9149fApiResponse
+        public partial class FetchSavedSearchesApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchSavedSearchesApiResponse
         {
             /// <summary>
             /// The logger
@@ -1519,7 +1834,7 @@ namespace GatewayApiSdk.Api
             public ILogger<SavedSearchApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call8d6878e4937dd67c5e2480c6f4e9149fApiResponse"/>
+            /// The <see cref="FetchSavedSearchesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1528,14 +1843,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call8d6878e4937dd67c5e2480c6f4e9149fApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchSavedSearchesApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call8d6878e4937dd67c5e2480c6f4e9149fApiResponse"/>
+            /// The <see cref="FetchSavedSearchesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1544,7 +1859,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call8d6878e4937dd67c5e2480c6f4e9149fApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchSavedSearchesApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1562,11 +1877,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model4f2a3c56631a5fccb45a9e7972df02b0200Response? Ok()
+            public GatewayApiSdk.Model.FetchAllSavedSearches200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model4f2a3c56631a5fccb45a9e7972df02b0200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllSavedSearches200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1575,7 +1890,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model4f2a3c56631a5fccb45a9e7972df02b0200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllSavedSearches200Response? result)
             {
                 result = null;
 
@@ -1600,11 +1915,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1613,7 +1928,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -1639,332 +1954,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCdcdceead49fe1554534af83c50c8af5(ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterCdcdceead49fe1554534af83c50c8af5DefaultImplementation(ICdcdceead49fe1554534af83c50c8af5ApiResponse apiResponseLocalVar, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterCdcdceead49fe1554534af83c50c8af5(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterCdcdceead49fe1554534af83c50c8af5(ref bool suppressDefaultLog, ICdcdceead49fe1554534af83c50c8af5ApiResponse apiResponseLocalVar, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorCdcdceead49fe1554534af83c50c8af5DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCdcdceead49fe1554534af83c50c8af5(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorCdcdceead49fe1554534af83c50c8af5(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
-
-        /// <summary>
-        /// SavedSearch@destroy Delete a saved search
-        /// </summary>
-        /// <param name="id">saved search id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICdcdceead49fe1554534af83c50c8af5ApiResponse"/>&gt;</returns>
-        public async Task<ICdcdceead49fe1554534af83c50c8af5ApiResponse?> Cdcdceead49fe1554534af83c50c8af5OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Cdcdceead49fe1554534af83c50c8af5Async(id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// SavedSearch@destroy Delete a saved search
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">saved search id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICdcdceead49fe1554534af83c50c8af5ApiResponse"/>&gt;</returns>
-        public async Task<ICdcdceead49fe1554534af83c50c8af5ApiResponse> Cdcdceead49fe1554534af83c50c8af5Async(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatCdcdceead49fe1554534af83c50c8af5(ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/saved_searches/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/saved_searches/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Delete;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Cdcdceead49fe1554534af83c50c8af5ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/saved_searches/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCdcdceead49fe1554534af83c50c8af5DefaultImplementation(apiResponseLocalVar, id);
-
-                        Events.ExecuteOnCdcdceead49fe1554534af83c50c8af5(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCdcdceead49fe1554534af83c50c8af5DefaultImplementation(e, "/api/v1/saved_searches/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorCdcdceead49fe1554534af83c50c8af5(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Cdcdceead49fe1554534af83c50c8af5ApiResponse"/>
-        /// </summary>
-        public partial class Cdcdceead49fe1554534af83c50c8af5ApiResponse : GatewayApiSdk.Client.ApiResponse, ICdcdceead49fe1554534af83c50c8af5ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<SavedSearchApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Cdcdceead49fe1554534af83c50c8af5ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Cdcdceead49fe1554534af83c50c8af5ApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Cdcdceead49fe1554534af83c50c8af5ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Cdcdceead49fe1554534af83c50c8af5ApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatFa314398c7a73002fee4ffc7e62e9fb6(ref int id, Fa314398c7a73002fee4ffc7e62e9fb6Request fa314398c7a73002fee4ffc7e62e9fb6Request);
+        partial void FormatUpdateSavedSearches(ref int id, UpdateSavedSearchesRequest updateSavedSearchesRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="fa314398c7a73002fee4ffc7e62e9fb6Request"></param>
+        /// <param name="updateSavedSearchesRequest"></param>
         /// <returns></returns>
-        private void ValidateFa314398c7a73002fee4ffc7e62e9fb6(Fa314398c7a73002fee4ffc7e62e9fb6Request fa314398c7a73002fee4ffc7e62e9fb6Request)
+        private void ValidateUpdateSavedSearches(UpdateSavedSearchesRequest updateSavedSearchesRequest)
         {
-            if (fa314398c7a73002fee4ffc7e62e9fb6Request == null)
-                throw new ArgumentNullException(nameof(fa314398c7a73002fee4ffc7e62e9fb6Request));
+            if (updateSavedSearchesRequest == null)
+                throw new ArgumentNullException(nameof(updateSavedSearchesRequest));
         }
 
         /// <summary>
@@ -1972,11 +1972,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="fa314398c7a73002fee4ffc7e62e9fb6Request"></param>
-        private void AfterFa314398c7a73002fee4ffc7e62e9fb6DefaultImplementation(IFa314398c7a73002fee4ffc7e62e9fb6ApiResponse apiResponseLocalVar, int id, Fa314398c7a73002fee4ffc7e62e9fb6Request fa314398c7a73002fee4ffc7e62e9fb6Request)
+        /// <param name="updateSavedSearchesRequest"></param>
+        private void AfterUpdateSavedSearchesDefaultImplementation(IUpdateSavedSearchesApiResponse apiResponseLocalVar, int id, UpdateSavedSearchesRequest updateSavedSearchesRequest)
         {
             bool suppressDefaultLog = false;
-            AfterFa314398c7a73002fee4ffc7e62e9fb6(ref suppressDefaultLog, apiResponseLocalVar, id, fa314398c7a73002fee4ffc7e62e9fb6Request);
+            AfterUpdateSavedSearches(ref suppressDefaultLog, apiResponseLocalVar, id, updateSavedSearchesRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1987,8 +1987,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="fa314398c7a73002fee4ffc7e62e9fb6Request"></param>
-        partial void AfterFa314398c7a73002fee4ffc7e62e9fb6(ref bool suppressDefaultLog, IFa314398c7a73002fee4ffc7e62e9fb6ApiResponse apiResponseLocalVar, int id, Fa314398c7a73002fee4ffc7e62e9fb6Request fa314398c7a73002fee4ffc7e62e9fb6Request);
+        /// <param name="updateSavedSearchesRequest"></param>
+        partial void AfterUpdateSavedSearches(ref bool suppressDefaultLog, IUpdateSavedSearchesApiResponse apiResponseLocalVar, int id, UpdateSavedSearchesRequest updateSavedSearchesRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1997,11 +1997,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="fa314398c7a73002fee4ffc7e62e9fb6Request"></param>
-        private void OnErrorFa314398c7a73002fee4ffc7e62e9fb6DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Fa314398c7a73002fee4ffc7e62e9fb6Request fa314398c7a73002fee4ffc7e62e9fb6Request)
+        /// <param name="updateSavedSearchesRequest"></param>
+        private void OnErrorUpdateSavedSearchesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateSavedSearchesRequest updateSavedSearchesRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorFa314398c7a73002fee4ffc7e62e9fb6(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, fa314398c7a73002fee4ffc7e62e9fb6Request);
+            OnErrorUpdateSavedSearches(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, updateSavedSearchesRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -2014,21 +2014,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="fa314398c7a73002fee4ffc7e62e9fb6Request"></param>
-        partial void OnErrorFa314398c7a73002fee4ffc7e62e9fb6(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Fa314398c7a73002fee4ffc7e62e9fb6Request fa314398c7a73002fee4ffc7e62e9fb6Request);
+        /// <param name="updateSavedSearchesRequest"></param>
+        partial void OnErrorUpdateSavedSearches(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateSavedSearchesRequest updateSavedSearchesRequest);
 
         /// <summary>
-        /// SavedSearch@update Edit a saved search
+        /// SavedSearch@update Update a saved search
         /// </summary>
         /// <param name="id">saved search id</param>
-        /// <param name="fa314398c7a73002fee4ffc7e62e9fb6Request">Saved search definition</param>
+        /// <param name="updateSavedSearchesRequest">Saved search definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFa314398c7a73002fee4ffc7e62e9fb6ApiResponse"/>&gt;</returns>
-        public async Task<IFa314398c7a73002fee4ffc7e62e9fb6ApiResponse?> Fa314398c7a73002fee4ffc7e62e9fb6OrDefaultAsync(int id, Fa314398c7a73002fee4ffc7e62e9fb6Request fa314398c7a73002fee4ffc7e62e9fb6Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateSavedSearchesApiResponse"/>&gt;</returns>
+        public async Task<IUpdateSavedSearchesApiResponse?> UpdateSavedSearchesOrDefaultAsync(int id, UpdateSavedSearchesRequest updateSavedSearchesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Fa314398c7a73002fee4ffc7e62e9fb6Async(id, fa314398c7a73002fee4ffc7e62e9fb6Request, cancellationToken).ConfigureAwait(false);
+                return await UpdateSavedSearchesAsync(id, updateSavedSearchesRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -2037,22 +2037,22 @@ namespace GatewayApiSdk.Api
         }
 
         /// <summary>
-        /// SavedSearch@update Edit a saved search
+        /// SavedSearch@update Update a saved search
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">saved search id</param>
-        /// <param name="fa314398c7a73002fee4ffc7e62e9fb6Request">Saved search definition</param>
+        /// <param name="updateSavedSearchesRequest">Saved search definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFa314398c7a73002fee4ffc7e62e9fb6ApiResponse"/>&gt;</returns>
-        public async Task<IFa314398c7a73002fee4ffc7e62e9fb6ApiResponse> Fa314398c7a73002fee4ffc7e62e9fb6Async(int id, Fa314398c7a73002fee4ffc7e62e9fb6Request fa314398c7a73002fee4ffc7e62e9fb6Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateSavedSearchesApiResponse"/>&gt;</returns>
+        public async Task<IUpdateSavedSearchesApiResponse> UpdateSavedSearchesAsync(int id, UpdateSavedSearchesRequest updateSavedSearchesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateFa314398c7a73002fee4ffc7e62e9fb6(fa314398c7a73002fee4ffc7e62e9fb6Request);
+                ValidateUpdateSavedSearches(updateSavedSearchesRequest);
 
-                FormatFa314398c7a73002fee4ffc7e62e9fb6(ref id, fa314398c7a73002fee4ffc7e62e9fb6Request);
+                FormatUpdateSavedSearches(ref id, updateSavedSearchesRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -2064,9 +2064,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/saved_searches/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (fa314398c7a73002fee4ffc7e62e9fb6Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (updateSavedSearchesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(fa314398c7a73002fee4ffc7e62e9fb6Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateSavedSearchesRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -2095,13 +2095,13 @@ namespace GatewayApiSdk.Api
                     foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
                         httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
 
-                    httpRequestMessageLocalVar.Method = HttpMethod.Patch;
+                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
 
                     DateTime requestedAtLocalVar = DateTime.UtcNow;
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Fa314398c7a73002fee4ffc7e62e9fb6ApiResponse apiResponseLocalVar;
+                        UpdateSavedSearchesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -2112,9 +2112,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterFa314398c7a73002fee4ffc7e62e9fb6DefaultImplementation(apiResponseLocalVar, id, fa314398c7a73002fee4ffc7e62e9fb6Request);
+                        AfterUpdateSavedSearchesDefaultImplementation(apiResponseLocalVar, id, updateSavedSearchesRequest);
 
-                        Events.ExecuteOnFa314398c7a73002fee4ffc7e62e9fb6(apiResponseLocalVar);
+                        Events.ExecuteOnUpdateSavedSearches(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -2126,16 +2126,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorFa314398c7a73002fee4ffc7e62e9fb6DefaultImplementation(e, "/api/v1/saved_searches/{id}", uriBuilderLocalVar.Path, id, fa314398c7a73002fee4ffc7e62e9fb6Request);
-                Events.ExecuteOnErrorFa314398c7a73002fee4ffc7e62e9fb6(e);
+                OnErrorUpdateSavedSearchesDefaultImplementation(e, "/api/v1/saved_searches/{id}", uriBuilderLocalVar.Path, id, updateSavedSearchesRequest);
+                Events.ExecuteOnErrorUpdateSavedSearches(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Fa314398c7a73002fee4ffc7e62e9fb6ApiResponse"/>
+        /// The <see cref="UpdateSavedSearchesApiResponse"/>
         /// </summary>
-        public partial class Fa314398c7a73002fee4ffc7e62e9fb6ApiResponse : GatewayApiSdk.Client.ApiResponse, IFa314398c7a73002fee4ffc7e62e9fb6ApiResponse
+        public partial class UpdateSavedSearchesApiResponse : GatewayApiSdk.Client.ApiResponse, IUpdateSavedSearchesApiResponse
         {
             /// <summary>
             /// The logger
@@ -2143,7 +2143,7 @@ namespace GatewayApiSdk.Api
             public ILogger<SavedSearchApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Fa314398c7a73002fee4ffc7e62e9fb6ApiResponse"/>
+            /// The <see cref="UpdateSavedSearchesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2152,14 +2152,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Fa314398c7a73002fee4ffc7e62e9fb6ApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public UpdateSavedSearchesApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Fa314398c7a73002fee4ffc7e62e9fb6ApiResponse"/>
+            /// The <see cref="UpdateSavedSearchesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2168,7 +2168,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Fa314398c7a73002fee4ffc7e62e9fb6ApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public UpdateSavedSearchesApiResponse(ILogger<SavedSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -2186,11 +2186,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2199,7 +2199,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -2224,11 +2224,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model3b59d921ea47286a669054ef67350b03200Response? Ok()
+            public GatewayApiSdk.Model.UpdateSavedSearches200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model3b59d921ea47286a669054ef67350b03200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateSavedSearches200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2237,7 +2237,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model3b59d921ea47286a669054ef67350b03200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateSavedSearches200Response? result)
             {
                 result = null;
 
@@ -2262,11 +2262,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2275,7 +2275,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 

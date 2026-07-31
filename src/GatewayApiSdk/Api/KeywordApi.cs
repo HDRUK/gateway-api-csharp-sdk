@@ -39,6 +39,29 @@ namespace GatewayApiSdk.Api
         KeywordApiEvents Events { get; }
 
         /// <summary>
+        /// KeywordController@store
+        /// </summary>
+        /// <remarks>
+        /// Creates a new keyword
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createCategoriesRequest">Keyword definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateKeywordsApiResponse"/>&gt;</returns>
+        Task<ICreateKeywordsApiResponse> CreateKeywordsAsync(CreateCategoriesRequest createCategoriesRequest, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// KeywordController@store
+        /// </summary>
+        /// <remarks>
+        /// Creates a new keyword
+        /// </remarks>
+        /// <param name="createCategoriesRequest">Keyword definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateKeywordsApiResponse"/>?&gt;</returns>
+        Task<ICreateKeywordsApiResponse?> CreateKeywordsOrDefaultAsync(CreateCategoriesRequest createCategoriesRequest, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
         /// KeywordController@destroy
         /// </summary>
         /// <remarks>
@@ -47,8 +70,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">keyword id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC144e4dec467e0666f1a6eb1b905a080ApiResponse"/>&gt;</returns>
-        Task<IC144e4dec467e0666f1a6eb1b905a080ApiResponse> C144e4dec467e0666f1a6eb1b905a080Async(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteKeywordsApiResponse"/>&gt;</returns>
+        Task<IDeleteKeywordsApiResponse> DeleteKeywordsAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// KeywordController@destroy
@@ -58,8 +81,8 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="id">keyword id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC144e4dec467e0666f1a6eb1b905a080ApiResponse"/>?&gt;</returns>
-        Task<IC144e4dec467e0666f1a6eb1b905a080ApiResponse?> C144e4dec467e0666f1a6eb1b905a080OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteKeywordsApiResponse"/>?&gt;</returns>
+        Task<IDeleteKeywordsApiResponse?> DeleteKeywordsOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// KeywordController@update
@@ -69,10 +92,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">keyword id</param>
-        /// <param name="a5f6e0a9550d3c58c50dda55412cd051Request">Category definition</param>
+        /// <param name="editCategoriesRequest">Category definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall5e7d6f311632134045864947649b04d4ApiResponse"/>&gt;</returns>
-        Task<ICall5e7d6f311632134045864947649b04d4ApiResponse> Call5e7d6f311632134045864947649b04d4Async(int id, A5f6e0a9550d3c58c50dda55412cd051Request a5f6e0a9550d3c58c50dda55412cd051Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditKeywordsApiResponse"/>&gt;</returns>
+        Task<IEditKeywordsApiResponse> EditKeywordsAsync(int id, EditCategoriesRequest editCategoriesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// KeywordController@update
@@ -81,10 +104,10 @@ namespace GatewayApiSdk.Api
         /// Edit a keyword by id
         /// </remarks>
         /// <param name="id">keyword id</param>
-        /// <param name="a5f6e0a9550d3c58c50dda55412cd051Request">Category definition</param>
+        /// <param name="editCategoriesRequest">Category definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall5e7d6f311632134045864947649b04d4ApiResponse"/>?&gt;</returns>
-        Task<ICall5e7d6f311632134045864947649b04d4ApiResponse?> Call5e7d6f311632134045864947649b04d4OrDefaultAsync(int id, A5f6e0a9550d3c58c50dda55412cd051Request a5f6e0a9550d3c58c50dda55412cd051Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditKeywordsApiResponse"/>?&gt;</returns>
+        Task<IEditKeywordsApiResponse?> EditKeywordsOrDefaultAsync(int id, EditCategoriesRequest editCategoriesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// KeywordController@index
@@ -95,8 +118,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">Alternative output schema version. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID59dbdaa4244200f6b9060e166e337d9ApiResponse"/>&gt;</returns>
-        Task<ID59dbdaa4244200f6b9060e166e337d9ApiResponse> D59dbdaa4244200f6b9060e166e337d9Async(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllKeywordsApiResponse"/>&gt;</returns>
+        Task<IFetchAllKeywordsApiResponse> FetchAllKeywordsAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// KeywordController@index
@@ -106,56 +129,8 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="perPage">Alternative output schema version. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID59dbdaa4244200f6b9060e166e337d9ApiResponse"/>?&gt;</returns>
-        Task<ID59dbdaa4244200f6b9060e166e337d9ApiResponse?> D59dbdaa4244200f6b9060e166e337d9OrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// KeywordController@store
-        /// </summary>
-        /// <remarks>
-        /// Creates a new keyword
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dd76b8d73b7ea8b4951f03d7c0904c92Request">Keyword definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IEc00b8619507d4ac62cec63eb9684501ApiResponse"/>&gt;</returns>
-        Task<IEc00b8619507d4ac62cec63eb9684501ApiResponse> Ec00b8619507d4ac62cec63eb9684501Async(Dd76b8d73b7ea8b4951f03d7c0904c92Request dd76b8d73b7ea8b4951f03d7c0904c92Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// KeywordController@store
-        /// </summary>
-        /// <remarks>
-        /// Creates a new keyword
-        /// </remarks>
-        /// <param name="dd76b8d73b7ea8b4951f03d7c0904c92Request">Keyword definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IEc00b8619507d4ac62cec63eb9684501ApiResponse"/>?&gt;</returns>
-        Task<IEc00b8619507d4ac62cec63eb9684501ApiResponse?> Ec00b8619507d4ac62cec63eb9684501OrDefaultAsync(Dd76b8d73b7ea8b4951f03d7c0904c92Request dd76b8d73b7ea8b4951f03d7c0904c92Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// KeywordController@update
-        /// </summary>
-        /// <remarks>
-        /// Update a keyword by id
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">keyword id</param>
-        /// <param name="model988e8695bc991d7f8e40131db5ba7a76Request">Keyword definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IF2450127ddd5aa4ad77c822ba256e01aApiResponse"/>&gt;</returns>
-        Task<IF2450127ddd5aa4ad77c822ba256e01aApiResponse> F2450127ddd5aa4ad77c822ba256e01aAsync(int id, Model988e8695bc991d7f8e40131db5ba7a76Request model988e8695bc991d7f8e40131db5ba7a76Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// KeywordController@update
-        /// </summary>
-        /// <remarks>
-        /// Update a keyword by id
-        /// </remarks>
-        /// <param name="id">keyword id</param>
-        /// <param name="model988e8695bc991d7f8e40131db5ba7a76Request">Keyword definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IF2450127ddd5aa4ad77c822ba256e01aApiResponse"/>?&gt;</returns>
-        Task<IF2450127ddd5aa4ad77c822ba256e01aApiResponse?> F2450127ddd5aa4ad77c822ba256e01aOrDefaultAsync(int id, Model988e8695bc991d7f8e40131db5ba7a76Request model988e8695bc991d7f8e40131db5ba7a76Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllKeywordsApiResponse"/>?&gt;</returns>
+        Task<IFetchAllKeywordsApiResponse?> FetchAllKeywordsOrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// KeywordController@show
@@ -166,8 +141,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">keyword id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFaadd5f355273c0ee61ef48436d03dedApiResponse"/>&gt;</returns>
-        Task<IFaadd5f355273c0ee61ef48436d03dedApiResponse> Faadd5f355273c0ee61ef48436d03dedAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchKeywordsApiResponse"/>&gt;</returns>
+        Task<IFetchKeywordsApiResponse> FetchKeywordsAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// KeywordController@show
@@ -177,74 +152,39 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="id">keyword id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFaadd5f355273c0ee61ef48436d03dedApiResponse"/>?&gt;</returns>
-        Task<IFaadd5f355273c0ee61ef48436d03dedApiResponse?> Faadd5f355273c0ee61ef48436d03dedOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchKeywordsApiResponse"/>?&gt;</returns>
+        Task<IFetchKeywordsApiResponse?> FetchKeywordsOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// KeywordController@update
+        /// </summary>
+        /// <remarks>
+        /// Update a keyword by id
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">keyword id</param>
+        /// <param name="updateCategoriesRequest">Keyword definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateKeywordsApiResponse"/>&gt;</returns>
+        Task<IUpdateKeywordsApiResponse> UpdateKeywordsAsync(int id, UpdateCategoriesRequest updateCategoriesRequest, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// KeywordController@update
+        /// </summary>
+        /// <remarks>
+        /// Update a keyword by id
+        /// </remarks>
+        /// <param name="id">keyword id</param>
+        /// <param name="updateCategoriesRequest">Keyword definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateKeywordsApiResponse"/>?&gt;</returns>
+        Task<IUpdateKeywordsApiResponse?> UpdateKeywordsOrDefaultAsync(int id, UpdateCategoriesRequest updateCategoriesRequest, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="IC144e4dec467e0666f1a6eb1b905a080ApiResponse"/>
+    /// The <see cref="ICreateKeywordsApiResponse"/>
     /// </summary>
-    public interface IC144e4dec467e0666f1a6eb1b905a080ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 500 InternalServerError
-        /// </summary>
-        /// <returns></returns>
-        bool IsInternalServerError { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ICall5e7d6f311632134045864947649b04d4ApiResponse"/>
-    /// </summary>
-    public interface ICall5e7d6f311632134045864947649b04d4ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.F2450127ddd5aa4ad77c822ba256e01a200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 500 InternalServerError
-        /// </summary>
-        /// <returns></returns>
-        bool IsInternalServerError { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ID59dbdaa4244200f6b9060e166e337d9ApiResponse"/>
-    /// </summary>
-    public interface ID59dbdaa4244200f6b9060e166e337d9ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.D59dbdaa4244200f6b9060e166e337d9200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IEc00b8619507d4ac62cec63eb9684501ApiResponse"/>
-    /// </summary>
-    public interface IEc00b8619507d4ac62cec63eb9684501ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>, IConflict<GatewayApiSdk.Model.Ec00b8619507d4ac62cec63eb9684501409Response?>
+    public interface ICreateKeywordsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CreateCategories200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>, IConflict<GatewayApiSdk.Model.CreateKeywords409Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -266,9 +206,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IF2450127ddd5aa4ad77c822ba256e01aApiResponse"/>
+    /// The <see cref="IDeleteKeywordsApiResponse"/>
     /// </summary>
-    public interface IF2450127ddd5aa4ad77c822ba256e01aApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.F2450127ddd5aa4ad77c822ba256e01a200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IDeleteKeywordsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -290,9 +230,45 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IFaadd5f355273c0ee61ef48436d03dedApiResponse"/>
+    /// The <see cref="IEditKeywordsApiResponse"/>
     /// </summary>
-    public interface IFaadd5f355273c0ee61ef48436d03dedApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Faadd5f355273c0ee61ef48436d03ded200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
+    public interface IEditKeywordsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateKeywords200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 404 NotFound
+        /// </summary>
+        /// <returns></returns>
+        bool IsNotFound { get; }
+
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 500 InternalServerError
+        /// </summary>
+        /// <returns></returns>
+        bool IsInternalServerError { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchAllKeywordsApiResponse"/>
+    /// </summary>
+    public interface IFetchAllKeywordsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchAllKeywords200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchKeywordsApiResponse"/>
+    /// </summary>
+    public interface IFetchKeywordsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchKeywords200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -308,6 +284,30 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
+    /// The <see cref="IUpdateKeywordsApiResponse"/>
+    /// </summary>
+    public interface IUpdateKeywordsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateKeywords200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 404 NotFound
+        /// </summary>
+        /// <returns></returns>
+        bool IsNotFound { get; }
+
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 500 InternalServerError
+        /// </summary>
+        /// <returns></returns>
+        bool IsInternalServerError { get; }
+    }
+
+    /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public class KeywordApiEvents
@@ -315,121 +315,121 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnC144e4dec467e0666f1a6eb1b905a080;
+        public event EventHandler<ApiResponseEventArgs>? OnCreateKeywords;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorC144e4dec467e0666f1a6eb1b905a080;
+        public event EventHandler<ExceptionEventArgs>? OnErrorCreateKeywords;
 
-        internal void ExecuteOnC144e4dec467e0666f1a6eb1b905a080(KeywordApi.C144e4dec467e0666f1a6eb1b905a080ApiResponse apiResponse)
+        internal void ExecuteOnCreateKeywords(KeywordApi.CreateKeywordsApiResponse apiResponse)
         {
-            OnC144e4dec467e0666f1a6eb1b905a080?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnCreateKeywords?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorC144e4dec467e0666f1a6eb1b905a080(Exception exception)
+        internal void ExecuteOnErrorCreateKeywords(Exception exception)
         {
-            OnErrorC144e4dec467e0666f1a6eb1b905a080?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorCreateKeywords?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall5e7d6f311632134045864947649b04d4;
+        public event EventHandler<ApiResponseEventArgs>? OnDeleteKeywords;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall5e7d6f311632134045864947649b04d4;
+        public event EventHandler<ExceptionEventArgs>? OnErrorDeleteKeywords;
 
-        internal void ExecuteOnCall5e7d6f311632134045864947649b04d4(KeywordApi.Call5e7d6f311632134045864947649b04d4ApiResponse apiResponse)
+        internal void ExecuteOnDeleteKeywords(KeywordApi.DeleteKeywordsApiResponse apiResponse)
         {
-            OnCall5e7d6f311632134045864947649b04d4?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnDeleteKeywords?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall5e7d6f311632134045864947649b04d4(Exception exception)
+        internal void ExecuteOnErrorDeleteKeywords(Exception exception)
         {
-            OnErrorCall5e7d6f311632134045864947649b04d4?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorDeleteKeywords?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnD59dbdaa4244200f6b9060e166e337d9;
+        public event EventHandler<ApiResponseEventArgs>? OnEditKeywords;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorD59dbdaa4244200f6b9060e166e337d9;
+        public event EventHandler<ExceptionEventArgs>? OnErrorEditKeywords;
 
-        internal void ExecuteOnD59dbdaa4244200f6b9060e166e337d9(KeywordApi.D59dbdaa4244200f6b9060e166e337d9ApiResponse apiResponse)
+        internal void ExecuteOnEditKeywords(KeywordApi.EditKeywordsApiResponse apiResponse)
         {
-            OnD59dbdaa4244200f6b9060e166e337d9?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnEditKeywords?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorD59dbdaa4244200f6b9060e166e337d9(Exception exception)
+        internal void ExecuteOnErrorEditKeywords(Exception exception)
         {
-            OnErrorD59dbdaa4244200f6b9060e166e337d9?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorEditKeywords?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnEc00b8619507d4ac62cec63eb9684501;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchAllKeywords;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorEc00b8619507d4ac62cec63eb9684501;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchAllKeywords;
 
-        internal void ExecuteOnEc00b8619507d4ac62cec63eb9684501(KeywordApi.Ec00b8619507d4ac62cec63eb9684501ApiResponse apiResponse)
+        internal void ExecuteOnFetchAllKeywords(KeywordApi.FetchAllKeywordsApiResponse apiResponse)
         {
-            OnEc00b8619507d4ac62cec63eb9684501?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchAllKeywords?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorEc00b8619507d4ac62cec63eb9684501(Exception exception)
+        internal void ExecuteOnErrorFetchAllKeywords(Exception exception)
         {
-            OnErrorEc00b8619507d4ac62cec63eb9684501?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchAllKeywords?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnF2450127ddd5aa4ad77c822ba256e01a;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchKeywords;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorF2450127ddd5aa4ad77c822ba256e01a;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchKeywords;
 
-        internal void ExecuteOnF2450127ddd5aa4ad77c822ba256e01a(KeywordApi.F2450127ddd5aa4ad77c822ba256e01aApiResponse apiResponse)
+        internal void ExecuteOnFetchKeywords(KeywordApi.FetchKeywordsApiResponse apiResponse)
         {
-            OnF2450127ddd5aa4ad77c822ba256e01a?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchKeywords?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorF2450127ddd5aa4ad77c822ba256e01a(Exception exception)
+        internal void ExecuteOnErrorFetchKeywords(Exception exception)
         {
-            OnErrorF2450127ddd5aa4ad77c822ba256e01a?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchKeywords?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFaadd5f355273c0ee61ef48436d03ded;
+        public event EventHandler<ApiResponseEventArgs>? OnUpdateKeywords;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFaadd5f355273c0ee61ef48436d03ded;
+        public event EventHandler<ExceptionEventArgs>? OnErrorUpdateKeywords;
 
-        internal void ExecuteOnFaadd5f355273c0ee61ef48436d03ded(KeywordApi.Faadd5f355273c0ee61ef48436d03dedApiResponse apiResponse)
+        internal void ExecuteOnUpdateKeywords(KeywordApi.UpdateKeywordsApiResponse apiResponse)
         {
-            OnFaadd5f355273c0ee61ef48436d03ded?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnUpdateKeywords?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorFaadd5f355273c0ee61ef48436d03ded(Exception exception)
+        internal void ExecuteOnErrorUpdateKeywords(Exception exception)
         {
-            OnErrorFaadd5f355273c0ee61ef48436d03ded?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorUpdateKeywords?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -474,17 +474,357 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatC144e4dec467e0666f1a6eb1b905a080(ref int id);
+        partial void FormatCreateKeywords(CreateCategoriesRequest createCategoriesRequest);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="createCategoriesRequest"></param>
+        /// <returns></returns>
+        private void ValidateCreateKeywords(CreateCategoriesRequest createCategoriesRequest)
+        {
+            if (createCategoriesRequest == null)
+                throw new ArgumentNullException(nameof(createCategoriesRequest));
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="createCategoriesRequest"></param>
+        private void AfterCreateKeywordsDefaultImplementation(ICreateKeywordsApiResponse apiResponseLocalVar, CreateCategoriesRequest createCategoriesRequest)
+        {
+            bool suppressDefaultLog = false;
+            AfterCreateKeywords(ref suppressDefaultLog, apiResponseLocalVar, createCategoriesRequest);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="createCategoriesRequest"></param>
+        partial void AfterCreateKeywords(ref bool suppressDefaultLog, ICreateKeywordsApiResponse apiResponseLocalVar, CreateCategoriesRequest createCategoriesRequest);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="createCategoriesRequest"></param>
+        private void OnErrorCreateKeywordsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateCategoriesRequest createCategoriesRequest)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorCreateKeywords(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createCategoriesRequest);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="createCategoriesRequest"></param>
+        partial void OnErrorCreateKeywords(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateCategoriesRequest createCategoriesRequest);
+
+        /// <summary>
+        /// KeywordController@store Creates a new keyword
+        /// </summary>
+        /// <param name="createCategoriesRequest">Keyword definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateKeywordsApiResponse"/>&gt;</returns>
+        public async Task<ICreateKeywordsApiResponse?> CreateKeywordsOrDefaultAsync(CreateCategoriesRequest createCategoriesRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await CreateKeywordsAsync(createCategoriesRequest, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// KeywordController@store Creates a new keyword
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createCategoriesRequest">Keyword definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateKeywordsApiResponse"/>&gt;</returns>
+        public async Task<ICreateKeywordsApiResponse> CreateKeywordsAsync(CreateCategoriesRequest createCategoriesRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                ValidateCreateKeywords(createCategoriesRequest);
+
+                FormatCreateKeywords(createCategoriesRequest);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/keywords"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/keywords");
+
+                    httpRequestMessageLocalVar.Content = (createCategoriesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createCategoriesRequest, _jsonSerializerOptions));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] contentTypes = new string[] {
+                        "application/json"
+                    };
+
+                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
+
+                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
+                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Post;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        CreateKeywordsApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/keywords", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterCreateKeywordsDefaultImplementation(apiResponseLocalVar, createCategoriesRequest);
+
+                        Events.ExecuteOnCreateKeywords(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorCreateKeywordsDefaultImplementation(e, "/api/v1/keywords", uriBuilderLocalVar.Path, createCategoriesRequest);
+                Events.ExecuteOnErrorCreateKeywords(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="CreateKeywordsApiResponse"/>
+        /// </summary>
+        public partial class CreateKeywordsApiResponse : GatewayApiSdk.Client.ApiResponse, ICreateKeywordsApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<KeywordApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="CreateKeywordsApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public CreateKeywordsApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="CreateKeywordsApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public CreateKeywordsApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.CreateCategories200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public bool IsInternalServerError => 500 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsInternalServerError
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = InternalServerError();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 409 Conflict
+            /// </summary>
+            /// <returns></returns>
+            public bool IsConflict => 409 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 409 Conflict
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.CreateKeywords409Response? Conflict()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsConflict
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateKeywords409Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 409 Conflict and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryConflict([NotNullWhen(true)]out GatewayApiSdk.Model.CreateKeywords409Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Conflict();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)409);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatDeleteKeywords(ref int id);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        private void AfterC144e4dec467e0666f1a6eb1b905a080DefaultImplementation(IC144e4dec467e0666f1a6eb1b905a080ApiResponse apiResponseLocalVar, int id)
+        private void AfterDeleteKeywordsDefaultImplementation(IDeleteKeywordsApiResponse apiResponseLocalVar, int id)
         {
             bool suppressDefaultLog = false;
-            AfterC144e4dec467e0666f1a6eb1b905a080(ref suppressDefaultLog, apiResponseLocalVar, id);
+            AfterDeleteKeywords(ref suppressDefaultLog, apiResponseLocalVar, id);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -495,7 +835,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        partial void AfterC144e4dec467e0666f1a6eb1b905a080(ref bool suppressDefaultLog, IC144e4dec467e0666f1a6eb1b905a080ApiResponse apiResponseLocalVar, int id);
+        partial void AfterDeleteKeywords(ref bool suppressDefaultLog, IDeleteKeywordsApiResponse apiResponseLocalVar, int id);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -504,10 +844,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        private void OnErrorC144e4dec467e0666f1a6eb1b905a080DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        private void OnErrorDeleteKeywordsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorC144e4dec467e0666f1a6eb1b905a080(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            OnErrorDeleteKeywords(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -520,19 +860,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        partial void OnErrorC144e4dec467e0666f1a6eb1b905a080(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+        partial void OnErrorDeleteKeywords(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
 
         /// <summary>
         /// KeywordController@destroy Delete a keyword by id
         /// </summary>
         /// <param name="id">keyword id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC144e4dec467e0666f1a6eb1b905a080ApiResponse"/>&gt;</returns>
-        public async Task<IC144e4dec467e0666f1a6eb1b905a080ApiResponse?> C144e4dec467e0666f1a6eb1b905a080OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteKeywordsApiResponse"/>&gt;</returns>
+        public async Task<IDeleteKeywordsApiResponse?> DeleteKeywordsOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await C144e4dec467e0666f1a6eb1b905a080Async(id, cancellationToken).ConfigureAwait(false);
+                return await DeleteKeywordsAsync(id, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -546,14 +886,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">keyword id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC144e4dec467e0666f1a6eb1b905a080ApiResponse"/>&gt;</returns>
-        public async Task<IC144e4dec467e0666f1a6eb1b905a080ApiResponse> C144e4dec467e0666f1a6eb1b905a080Async(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteKeywordsApiResponse"/>&gt;</returns>
+        public async Task<IDeleteKeywordsApiResponse> DeleteKeywordsAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatC144e4dec467e0666f1a6eb1b905a080(ref id);
+                FormatDeleteKeywords(ref id);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -589,7 +929,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        C144e4dec467e0666f1a6eb1b905a080ApiResponse apiResponseLocalVar;
+                        DeleteKeywordsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -600,9 +940,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterC144e4dec467e0666f1a6eb1b905a080DefaultImplementation(apiResponseLocalVar, id);
+                        AfterDeleteKeywordsDefaultImplementation(apiResponseLocalVar, id);
 
-                        Events.ExecuteOnC144e4dec467e0666f1a6eb1b905a080(apiResponseLocalVar);
+                        Events.ExecuteOnDeleteKeywords(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -614,16 +954,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorC144e4dec467e0666f1a6eb1b905a080DefaultImplementation(e, "/api/v1/keywords/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorC144e4dec467e0666f1a6eb1b905a080(e);
+                OnErrorDeleteKeywordsDefaultImplementation(e, "/api/v1/keywords/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorDeleteKeywords(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="C144e4dec467e0666f1a6eb1b905a080ApiResponse"/>
+        /// The <see cref="DeleteKeywordsApiResponse"/>
         /// </summary>
-        public partial class C144e4dec467e0666f1a6eb1b905a080ApiResponse : GatewayApiSdk.Client.ApiResponse, IC144e4dec467e0666f1a6eb1b905a080ApiResponse
+        public partial class DeleteKeywordsApiResponse : GatewayApiSdk.Client.ApiResponse, IDeleteKeywordsApiResponse
         {
             /// <summary>
             /// The logger
@@ -631,7 +971,7 @@ namespace GatewayApiSdk.Api
             public ILogger<KeywordApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="C144e4dec467e0666f1a6eb1b905a080ApiResponse"/>
+            /// The <see cref="DeleteKeywordsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -640,14 +980,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public C144e4dec467e0666f1a6eb1b905a080ApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public DeleteKeywordsApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="C144e4dec467e0666f1a6eb1b905a080ApiResponse"/>
+            /// The <see cref="DeleteKeywordsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -656,7 +996,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public C144e4dec467e0666f1a6eb1b905a080ApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public DeleteKeywordsApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -674,11 +1014,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -687,7 +1027,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -712,11 +1052,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? Ok()
+            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -725,7 +1065,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
             {
                 result = null;
 
@@ -750,11 +1090,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -763,7 +1103,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -789,17 +1129,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall5e7d6f311632134045864947649b04d4(ref int id, A5f6e0a9550d3c58c50dda55412cd051Request a5f6e0a9550d3c58c50dda55412cd051Request);
+        partial void FormatEditKeywords(ref int id, EditCategoriesRequest editCategoriesRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="a5f6e0a9550d3c58c50dda55412cd051Request"></param>
+        /// <param name="editCategoriesRequest"></param>
         /// <returns></returns>
-        private void ValidateCall5e7d6f311632134045864947649b04d4(A5f6e0a9550d3c58c50dda55412cd051Request a5f6e0a9550d3c58c50dda55412cd051Request)
+        private void ValidateEditKeywords(EditCategoriesRequest editCategoriesRequest)
         {
-            if (a5f6e0a9550d3c58c50dda55412cd051Request == null)
-                throw new ArgumentNullException(nameof(a5f6e0a9550d3c58c50dda55412cd051Request));
+            if (editCategoriesRequest == null)
+                throw new ArgumentNullException(nameof(editCategoriesRequest));
         }
 
         /// <summary>
@@ -807,11 +1147,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="a5f6e0a9550d3c58c50dda55412cd051Request"></param>
-        private void AfterCall5e7d6f311632134045864947649b04d4DefaultImplementation(ICall5e7d6f311632134045864947649b04d4ApiResponse apiResponseLocalVar, int id, A5f6e0a9550d3c58c50dda55412cd051Request a5f6e0a9550d3c58c50dda55412cd051Request)
+        /// <param name="editCategoriesRequest"></param>
+        private void AfterEditKeywordsDefaultImplementation(IEditKeywordsApiResponse apiResponseLocalVar, int id, EditCategoriesRequest editCategoriesRequest)
         {
             bool suppressDefaultLog = false;
-            AfterCall5e7d6f311632134045864947649b04d4(ref suppressDefaultLog, apiResponseLocalVar, id, a5f6e0a9550d3c58c50dda55412cd051Request);
+            AfterEditKeywords(ref suppressDefaultLog, apiResponseLocalVar, id, editCategoriesRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -822,8 +1162,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="a5f6e0a9550d3c58c50dda55412cd051Request"></param>
-        partial void AfterCall5e7d6f311632134045864947649b04d4(ref bool suppressDefaultLog, ICall5e7d6f311632134045864947649b04d4ApiResponse apiResponseLocalVar, int id, A5f6e0a9550d3c58c50dda55412cd051Request a5f6e0a9550d3c58c50dda55412cd051Request);
+        /// <param name="editCategoriesRequest"></param>
+        partial void AfterEditKeywords(ref bool suppressDefaultLog, IEditKeywordsApiResponse apiResponseLocalVar, int id, EditCategoriesRequest editCategoriesRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -832,11 +1172,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="a5f6e0a9550d3c58c50dda55412cd051Request"></param>
-        private void OnErrorCall5e7d6f311632134045864947649b04d4DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, A5f6e0a9550d3c58c50dda55412cd051Request a5f6e0a9550d3c58c50dda55412cd051Request)
+        /// <param name="editCategoriesRequest"></param>
+        private void OnErrorEditKeywordsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditCategoriesRequest editCategoriesRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall5e7d6f311632134045864947649b04d4(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, a5f6e0a9550d3c58c50dda55412cd051Request);
+            OnErrorEditKeywords(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, editCategoriesRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -849,21 +1189,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="a5f6e0a9550d3c58c50dda55412cd051Request"></param>
-        partial void OnErrorCall5e7d6f311632134045864947649b04d4(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, A5f6e0a9550d3c58c50dda55412cd051Request a5f6e0a9550d3c58c50dda55412cd051Request);
+        /// <param name="editCategoriesRequest"></param>
+        partial void OnErrorEditKeywords(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditCategoriesRequest editCategoriesRequest);
 
         /// <summary>
         /// KeywordController@update Edit a keyword by id
         /// </summary>
         /// <param name="id">keyword id</param>
-        /// <param name="a5f6e0a9550d3c58c50dda55412cd051Request">Category definition</param>
+        /// <param name="editCategoriesRequest">Category definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall5e7d6f311632134045864947649b04d4ApiResponse"/>&gt;</returns>
-        public async Task<ICall5e7d6f311632134045864947649b04d4ApiResponse?> Call5e7d6f311632134045864947649b04d4OrDefaultAsync(int id, A5f6e0a9550d3c58c50dda55412cd051Request a5f6e0a9550d3c58c50dda55412cd051Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditKeywordsApiResponse"/>&gt;</returns>
+        public async Task<IEditKeywordsApiResponse?> EditKeywordsOrDefaultAsync(int id, EditCategoriesRequest editCategoriesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call5e7d6f311632134045864947649b04d4Async(id, a5f6e0a9550d3c58c50dda55412cd051Request, cancellationToken).ConfigureAwait(false);
+                return await EditKeywordsAsync(id, editCategoriesRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -876,18 +1216,18 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">keyword id</param>
-        /// <param name="a5f6e0a9550d3c58c50dda55412cd051Request">Category definition</param>
+        /// <param name="editCategoriesRequest">Category definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall5e7d6f311632134045864947649b04d4ApiResponse"/>&gt;</returns>
-        public async Task<ICall5e7d6f311632134045864947649b04d4ApiResponse> Call5e7d6f311632134045864947649b04d4Async(int id, A5f6e0a9550d3c58c50dda55412cd051Request a5f6e0a9550d3c58c50dda55412cd051Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditKeywordsApiResponse"/>&gt;</returns>
+        public async Task<IEditKeywordsApiResponse> EditKeywordsAsync(int id, EditCategoriesRequest editCategoriesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall5e7d6f311632134045864947649b04d4(a5f6e0a9550d3c58c50dda55412cd051Request);
+                ValidateEditKeywords(editCategoriesRequest);
 
-                FormatCall5e7d6f311632134045864947649b04d4(ref id, a5f6e0a9550d3c58c50dda55412cd051Request);
+                FormatEditKeywords(ref id, editCategoriesRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -899,9 +1239,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/keywords/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (a5f6e0a9550d3c58c50dda55412cd051Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (editCategoriesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(a5f6e0a9550d3c58c50dda55412cd051Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(editCategoriesRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -936,7 +1276,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call5e7d6f311632134045864947649b04d4ApiResponse apiResponseLocalVar;
+                        EditKeywordsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -947,9 +1287,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall5e7d6f311632134045864947649b04d4DefaultImplementation(apiResponseLocalVar, id, a5f6e0a9550d3c58c50dda55412cd051Request);
+                        AfterEditKeywordsDefaultImplementation(apiResponseLocalVar, id, editCategoriesRequest);
 
-                        Events.ExecuteOnCall5e7d6f311632134045864947649b04d4(apiResponseLocalVar);
+                        Events.ExecuteOnEditKeywords(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -961,16 +1301,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall5e7d6f311632134045864947649b04d4DefaultImplementation(e, "/api/v1/keywords/{id}", uriBuilderLocalVar.Path, id, a5f6e0a9550d3c58c50dda55412cd051Request);
-                Events.ExecuteOnErrorCall5e7d6f311632134045864947649b04d4(e);
+                OnErrorEditKeywordsDefaultImplementation(e, "/api/v1/keywords/{id}", uriBuilderLocalVar.Path, id, editCategoriesRequest);
+                Events.ExecuteOnErrorEditKeywords(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call5e7d6f311632134045864947649b04d4ApiResponse"/>
+        /// The <see cref="EditKeywordsApiResponse"/>
         /// </summary>
-        public partial class Call5e7d6f311632134045864947649b04d4ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall5e7d6f311632134045864947649b04d4ApiResponse
+        public partial class EditKeywordsApiResponse : GatewayApiSdk.Client.ApiResponse, IEditKeywordsApiResponse
         {
             /// <summary>
             /// The logger
@@ -978,7 +1318,7 @@ namespace GatewayApiSdk.Api
             public ILogger<KeywordApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call5e7d6f311632134045864947649b04d4ApiResponse"/>
+            /// The <see cref="EditKeywordsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -987,14 +1327,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call5e7d6f311632134045864947649b04d4ApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public EditKeywordsApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call5e7d6f311632134045864947649b04d4ApiResponse"/>
+            /// The <see cref="EditKeywordsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1003,7 +1343,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call5e7d6f311632134045864947649b04d4ApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public EditKeywordsApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1021,11 +1361,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1034,7 +1374,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -1059,11 +1399,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.F2450127ddd5aa4ad77c822ba256e01a200Response? Ok()
+            public GatewayApiSdk.Model.UpdateKeywords200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.F2450127ddd5aa4ad77c822ba256e01a200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateKeywords200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1072,7 +1412,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.F2450127ddd5aa4ad77c822ba256e01a200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateKeywords200Response? result)
             {
                 result = null;
 
@@ -1097,11 +1437,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1110,7 +1450,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -1136,17 +1476,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatD59dbdaa4244200f6b9060e166e337d9(ref Option<int> perPage);
+        partial void FormatFetchAllKeywords(ref Option<int> perPage);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="perPage"></param>
-        private void AfterD59dbdaa4244200f6b9060e166e337d9DefaultImplementation(ID59dbdaa4244200f6b9060e166e337d9ApiResponse apiResponseLocalVar, Option<int> perPage)
+        private void AfterFetchAllKeywordsDefaultImplementation(IFetchAllKeywordsApiResponse apiResponseLocalVar, Option<int> perPage)
         {
             bool suppressDefaultLog = false;
-            AfterD59dbdaa4244200f6b9060e166e337d9(ref suppressDefaultLog, apiResponseLocalVar, perPage);
+            AfterFetchAllKeywords(ref suppressDefaultLog, apiResponseLocalVar, perPage);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1157,7 +1497,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="perPage"></param>
-        partial void AfterD59dbdaa4244200f6b9060e166e337d9(ref bool suppressDefaultLog, ID59dbdaa4244200f6b9060e166e337d9ApiResponse apiResponseLocalVar, Option<int> perPage);
+        partial void AfterFetchAllKeywords(ref bool suppressDefaultLog, IFetchAllKeywordsApiResponse apiResponseLocalVar, Option<int> perPage);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1166,10 +1506,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="perPage"></param>
-        private void OnErrorD59dbdaa4244200f6b9060e166e337d9DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage)
+        private void OnErrorFetchAllKeywordsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorD59dbdaa4244200f6b9060e166e337d9(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, perPage);
+            OnErrorFetchAllKeywords(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, perPage);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1182,19 +1522,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="perPage"></param>
-        partial void OnErrorD59dbdaa4244200f6b9060e166e337d9(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage);
+        partial void OnErrorFetchAllKeywords(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage);
 
         /// <summary>
         /// KeywordController@index Returns a list of keywords
         /// </summary>
         /// <param name="perPage">Alternative output schema version. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID59dbdaa4244200f6b9060e166e337d9ApiResponse"/>&gt;</returns>
-        public async Task<ID59dbdaa4244200f6b9060e166e337d9ApiResponse?> D59dbdaa4244200f6b9060e166e337d9OrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllKeywordsApiResponse"/>&gt;</returns>
+        public async Task<IFetchAllKeywordsApiResponse?> FetchAllKeywordsOrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await D59dbdaa4244200f6b9060e166e337d9Async(perPage, cancellationToken).ConfigureAwait(false);
+                return await FetchAllKeywordsAsync(perPage, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1208,14 +1548,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">Alternative output schema version. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID59dbdaa4244200f6b9060e166e337d9ApiResponse"/>&gt;</returns>
-        public async Task<ID59dbdaa4244200f6b9060e166e337d9ApiResponse> D59dbdaa4244200f6b9060e166e337d9Async(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllKeywordsApiResponse"/>&gt;</returns>
+        public async Task<IFetchAllKeywordsApiResponse> FetchAllKeywordsAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatD59dbdaa4244200f6b9060e166e337d9(ref perPage);
+                FormatFetchAllKeywords(ref perPage);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1257,7 +1597,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        D59dbdaa4244200f6b9060e166e337d9ApiResponse apiResponseLocalVar;
+                        FetchAllKeywordsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -1268,9 +1608,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterD59dbdaa4244200f6b9060e166e337d9DefaultImplementation(apiResponseLocalVar, perPage);
+                        AfterFetchAllKeywordsDefaultImplementation(apiResponseLocalVar, perPage);
 
-                        Events.ExecuteOnD59dbdaa4244200f6b9060e166e337d9(apiResponseLocalVar);
+                        Events.ExecuteOnFetchAllKeywords(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -1282,16 +1622,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorD59dbdaa4244200f6b9060e166e337d9DefaultImplementation(e, "/api/v1/keywords", uriBuilderLocalVar.Path, perPage);
-                Events.ExecuteOnErrorD59dbdaa4244200f6b9060e166e337d9(e);
+                OnErrorFetchAllKeywordsDefaultImplementation(e, "/api/v1/keywords", uriBuilderLocalVar.Path, perPage);
+                Events.ExecuteOnErrorFetchAllKeywords(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="D59dbdaa4244200f6b9060e166e337d9ApiResponse"/>
+        /// The <see cref="FetchAllKeywordsApiResponse"/>
         /// </summary>
-        public partial class D59dbdaa4244200f6b9060e166e337d9ApiResponse : GatewayApiSdk.Client.ApiResponse, ID59dbdaa4244200f6b9060e166e337d9ApiResponse
+        public partial class FetchAllKeywordsApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchAllKeywordsApiResponse
         {
             /// <summary>
             /// The logger
@@ -1299,7 +1639,7 @@ namespace GatewayApiSdk.Api
             public ILogger<KeywordApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="D59dbdaa4244200f6b9060e166e337d9ApiResponse"/>
+            /// The <see cref="FetchAllKeywordsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1308,14 +1648,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public D59dbdaa4244200f6b9060e166e337d9ApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchAllKeywordsApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="D59dbdaa4244200f6b9060e166e337d9ApiResponse"/>
+            /// The <see cref="FetchAllKeywordsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1324,7 +1664,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public D59dbdaa4244200f6b9060e166e337d9ApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchAllKeywordsApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1342,11 +1682,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.D59dbdaa4244200f6b9060e166e337d9200Response? Ok()
+            public GatewayApiSdk.Model.FetchAllKeywords200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.D59dbdaa4244200f6b9060e166e337d9200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllKeywords200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1355,7 +1695,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.D59dbdaa4244200f6b9060e166e337d9200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllKeywords200Response? result)
             {
                 result = null;
 
@@ -1381,369 +1721,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatEc00b8619507d4ac62cec63eb9684501(Dd76b8d73b7ea8b4951f03d7c0904c92Request dd76b8d73b7ea8b4951f03d7c0904c92Request);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="dd76b8d73b7ea8b4951f03d7c0904c92Request"></param>
-        /// <returns></returns>
-        private void ValidateEc00b8619507d4ac62cec63eb9684501(Dd76b8d73b7ea8b4951f03d7c0904c92Request dd76b8d73b7ea8b4951f03d7c0904c92Request)
-        {
-            if (dd76b8d73b7ea8b4951f03d7c0904c92Request == null)
-                throw new ArgumentNullException(nameof(dd76b8d73b7ea8b4951f03d7c0904c92Request));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="dd76b8d73b7ea8b4951f03d7c0904c92Request"></param>
-        private void AfterEc00b8619507d4ac62cec63eb9684501DefaultImplementation(IEc00b8619507d4ac62cec63eb9684501ApiResponse apiResponseLocalVar, Dd76b8d73b7ea8b4951f03d7c0904c92Request dd76b8d73b7ea8b4951f03d7c0904c92Request)
-        {
-            bool suppressDefaultLog = false;
-            AfterEc00b8619507d4ac62cec63eb9684501(ref suppressDefaultLog, apiResponseLocalVar, dd76b8d73b7ea8b4951f03d7c0904c92Request);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="dd76b8d73b7ea8b4951f03d7c0904c92Request"></param>
-        partial void AfterEc00b8619507d4ac62cec63eb9684501(ref bool suppressDefaultLog, IEc00b8619507d4ac62cec63eb9684501ApiResponse apiResponseLocalVar, Dd76b8d73b7ea8b4951f03d7c0904c92Request dd76b8d73b7ea8b4951f03d7c0904c92Request);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="dd76b8d73b7ea8b4951f03d7c0904c92Request"></param>
-        private void OnErrorEc00b8619507d4ac62cec63eb9684501DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Dd76b8d73b7ea8b4951f03d7c0904c92Request dd76b8d73b7ea8b4951f03d7c0904c92Request)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorEc00b8619507d4ac62cec63eb9684501(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, dd76b8d73b7ea8b4951f03d7c0904c92Request);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="dd76b8d73b7ea8b4951f03d7c0904c92Request"></param>
-        partial void OnErrorEc00b8619507d4ac62cec63eb9684501(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Dd76b8d73b7ea8b4951f03d7c0904c92Request dd76b8d73b7ea8b4951f03d7c0904c92Request);
-
-        /// <summary>
-        /// KeywordController@store Creates a new keyword
-        /// </summary>
-        /// <param name="dd76b8d73b7ea8b4951f03d7c0904c92Request">Keyword definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IEc00b8619507d4ac62cec63eb9684501ApiResponse"/>&gt;</returns>
-        public async Task<IEc00b8619507d4ac62cec63eb9684501ApiResponse?> Ec00b8619507d4ac62cec63eb9684501OrDefaultAsync(Dd76b8d73b7ea8b4951f03d7c0904c92Request dd76b8d73b7ea8b4951f03d7c0904c92Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Ec00b8619507d4ac62cec63eb9684501Async(dd76b8d73b7ea8b4951f03d7c0904c92Request, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// KeywordController@store Creates a new keyword
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dd76b8d73b7ea8b4951f03d7c0904c92Request">Keyword definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IEc00b8619507d4ac62cec63eb9684501ApiResponse"/>&gt;</returns>
-        public async Task<IEc00b8619507d4ac62cec63eb9684501ApiResponse> Ec00b8619507d4ac62cec63eb9684501Async(Dd76b8d73b7ea8b4951f03d7c0904c92Request dd76b8d73b7ea8b4951f03d7c0904c92Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateEc00b8619507d4ac62cec63eb9684501(dd76b8d73b7ea8b4951f03d7c0904c92Request);
-
-                FormatEc00b8619507d4ac62cec63eb9684501(dd76b8d73b7ea8b4951f03d7c0904c92Request);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/keywords"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/keywords");
-
-                    httpRequestMessageLocalVar.Content = (dd76b8d73b7ea8b4951f03d7c0904c92Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(dd76b8d73b7ea8b4951f03d7c0904c92Request, _jsonSerializerOptions));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Post;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Ec00b8619507d4ac62cec63eb9684501ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/keywords", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterEc00b8619507d4ac62cec63eb9684501DefaultImplementation(apiResponseLocalVar, dd76b8d73b7ea8b4951f03d7c0904c92Request);
-
-                        Events.ExecuteOnEc00b8619507d4ac62cec63eb9684501(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorEc00b8619507d4ac62cec63eb9684501DefaultImplementation(e, "/api/v1/keywords", uriBuilderLocalVar.Path, dd76b8d73b7ea8b4951f03d7c0904c92Request);
-                Events.ExecuteOnErrorEc00b8619507d4ac62cec63eb9684501(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Ec00b8619507d4ac62cec63eb9684501ApiResponse"/>
-        /// </summary>
-        public partial class Ec00b8619507d4ac62cec63eb9684501ApiResponse : GatewayApiSdk.Client.ApiResponse, IEc00b8619507d4ac62cec63eb9684501ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<KeywordApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Ec00b8619507d4ac62cec63eb9684501ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Ec00b8619507d4ac62cec63eb9684501ApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Ec00b8619507d4ac62cec63eb9684501ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Ec00b8619507d4ac62cec63eb9684501ApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 409 Conflict
-            /// </summary>
-            /// <returns></returns>
-            public bool IsConflict => 409 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 409 Conflict
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Ec00b8619507d4ac62cec63eb9684501409Response? Conflict()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsConflict
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Ec00b8619507d4ac62cec63eb9684501409Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 409 Conflict and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryConflict([NotNullWhen(true)]out GatewayApiSdk.Model.Ec00b8619507d4ac62cec63eb9684501409Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Conflict();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)409);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatF2450127ddd5aa4ad77c822ba256e01a(ref int id, Model988e8695bc991d7f8e40131db5ba7a76Request model988e8695bc991d7f8e40131db5ba7a76Request);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="model988e8695bc991d7f8e40131db5ba7a76Request"></param>
-        /// <returns></returns>
-        private void ValidateF2450127ddd5aa4ad77c822ba256e01a(Model988e8695bc991d7f8e40131db5ba7a76Request model988e8695bc991d7f8e40131db5ba7a76Request)
-        {
-            if (model988e8695bc991d7f8e40131db5ba7a76Request == null)
-                throw new ArgumentNullException(nameof(model988e8695bc991d7f8e40131db5ba7a76Request));
-        }
+        partial void FormatFetchKeywords(ref int id);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model988e8695bc991d7f8e40131db5ba7a76Request"></param>
-        private void AfterF2450127ddd5aa4ad77c822ba256e01aDefaultImplementation(IF2450127ddd5aa4ad77c822ba256e01aApiResponse apiResponseLocalVar, int id, Model988e8695bc991d7f8e40131db5ba7a76Request model988e8695bc991d7f8e40131db5ba7a76Request)
+        private void AfterFetchKeywordsDefaultImplementation(IFetchKeywordsApiResponse apiResponseLocalVar, int id)
         {
             bool suppressDefaultLog = false;
-            AfterF2450127ddd5aa4ad77c822ba256e01a(ref suppressDefaultLog, apiResponseLocalVar, id, model988e8695bc991d7f8e40131db5ba7a76Request);
+            AfterFetchKeywords(ref suppressDefaultLog, apiResponseLocalVar, id);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1754,8 +1742,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model988e8695bc991d7f8e40131db5ba7a76Request"></param>
-        partial void AfterF2450127ddd5aa4ad77c822ba256e01a(ref bool suppressDefaultLog, IF2450127ddd5aa4ad77c822ba256e01aApiResponse apiResponseLocalVar, int id, Model988e8695bc991d7f8e40131db5ba7a76Request model988e8695bc991d7f8e40131db5ba7a76Request);
+        partial void AfterFetchKeywords(ref bool suppressDefaultLog, IFetchKeywordsApiResponse apiResponseLocalVar, int id);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1764,11 +1751,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model988e8695bc991d7f8e40131db5ba7a76Request"></param>
-        private void OnErrorF2450127ddd5aa4ad77c822ba256e01aDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model988e8695bc991d7f8e40131db5ba7a76Request model988e8695bc991d7f8e40131db5ba7a76Request)
+        private void OnErrorFetchKeywordsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorF2450127ddd5aa4ad77c822ba256e01a(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, model988e8695bc991d7f8e40131db5ba7a76Request);
+            OnErrorFetchKeywords(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1781,352 +1767,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model988e8695bc991d7f8e40131db5ba7a76Request"></param>
-        partial void OnErrorF2450127ddd5aa4ad77c822ba256e01a(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model988e8695bc991d7f8e40131db5ba7a76Request model988e8695bc991d7f8e40131db5ba7a76Request);
-
-        /// <summary>
-        /// KeywordController@update Update a keyword by id
-        /// </summary>
-        /// <param name="id">keyword id</param>
-        /// <param name="model988e8695bc991d7f8e40131db5ba7a76Request">Keyword definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IF2450127ddd5aa4ad77c822ba256e01aApiResponse"/>&gt;</returns>
-        public async Task<IF2450127ddd5aa4ad77c822ba256e01aApiResponse?> F2450127ddd5aa4ad77c822ba256e01aOrDefaultAsync(int id, Model988e8695bc991d7f8e40131db5ba7a76Request model988e8695bc991d7f8e40131db5ba7a76Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await F2450127ddd5aa4ad77c822ba256e01aAsync(id, model988e8695bc991d7f8e40131db5ba7a76Request, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// KeywordController@update Update a keyword by id
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">keyword id</param>
-        /// <param name="model988e8695bc991d7f8e40131db5ba7a76Request">Keyword definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IF2450127ddd5aa4ad77c822ba256e01aApiResponse"/>&gt;</returns>
-        public async Task<IF2450127ddd5aa4ad77c822ba256e01aApiResponse> F2450127ddd5aa4ad77c822ba256e01aAsync(int id, Model988e8695bc991d7f8e40131db5ba7a76Request model988e8695bc991d7f8e40131db5ba7a76Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateF2450127ddd5aa4ad77c822ba256e01a(model988e8695bc991d7f8e40131db5ba7a76Request);
-
-                FormatF2450127ddd5aa4ad77c822ba256e01a(ref id, model988e8695bc991d7f8e40131db5ba7a76Request);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/keywords/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/keywords/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    httpRequestMessageLocalVar.Content = (model988e8695bc991d7f8e40131db5ba7a76Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model988e8695bc991d7f8e40131db5ba7a76Request, _jsonSerializerOptions));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        F2450127ddd5aa4ad77c822ba256e01aApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/keywords/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterF2450127ddd5aa4ad77c822ba256e01aDefaultImplementation(apiResponseLocalVar, id, model988e8695bc991d7f8e40131db5ba7a76Request);
-
-                        Events.ExecuteOnF2450127ddd5aa4ad77c822ba256e01a(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorF2450127ddd5aa4ad77c822ba256e01aDefaultImplementation(e, "/api/v1/keywords/{id}", uriBuilderLocalVar.Path, id, model988e8695bc991d7f8e40131db5ba7a76Request);
-                Events.ExecuteOnErrorF2450127ddd5aa4ad77c822ba256e01a(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="F2450127ddd5aa4ad77c822ba256e01aApiResponse"/>
-        /// </summary>
-        public partial class F2450127ddd5aa4ad77c822ba256e01aApiResponse : GatewayApiSdk.Client.ApiResponse, IF2450127ddd5aa4ad77c822ba256e01aApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<KeywordApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="F2450127ddd5aa4ad77c822ba256e01aApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public F2450127ddd5aa4ad77c822ba256e01aApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="F2450127ddd5aa4ad77c822ba256e01aApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public F2450127ddd5aa4ad77c822ba256e01aApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.F2450127ddd5aa4ad77c822ba256e01a200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.F2450127ddd5aa4ad77c822ba256e01a200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.F2450127ddd5aa4ad77c822ba256e01a200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatFaadd5f355273c0ee61ef48436d03ded(ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterFaadd5f355273c0ee61ef48436d03dedDefaultImplementation(IFaadd5f355273c0ee61ef48436d03dedApiResponse apiResponseLocalVar, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterFaadd5f355273c0ee61ef48436d03ded(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterFaadd5f355273c0ee61ef48436d03ded(ref bool suppressDefaultLog, IFaadd5f355273c0ee61ef48436d03dedApiResponse apiResponseLocalVar, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorFaadd5f355273c0ee61ef48436d03dedDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorFaadd5f355273c0ee61ef48436d03ded(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorFaadd5f355273c0ee61ef48436d03ded(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+        partial void OnErrorFetchKeywords(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
 
         /// <summary>
         /// KeywordController@show Return a single keyword
         /// </summary>
         /// <param name="id">keyword id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFaadd5f355273c0ee61ef48436d03dedApiResponse"/>&gt;</returns>
-        public async Task<IFaadd5f355273c0ee61ef48436d03dedApiResponse?> Faadd5f355273c0ee61ef48436d03dedOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchKeywordsApiResponse"/>&gt;</returns>
+        public async Task<IFetchKeywordsApiResponse?> FetchKeywordsOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Faadd5f355273c0ee61ef48436d03dedAsync(id, cancellationToken).ConfigureAwait(false);
+                return await FetchKeywordsAsync(id, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -2140,14 +1793,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">keyword id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFaadd5f355273c0ee61ef48436d03dedApiResponse"/>&gt;</returns>
-        public async Task<IFaadd5f355273c0ee61ef48436d03dedApiResponse> Faadd5f355273c0ee61ef48436d03dedAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchKeywordsApiResponse"/>&gt;</returns>
+        public async Task<IFetchKeywordsApiResponse> FetchKeywordsAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatFaadd5f355273c0ee61ef48436d03ded(ref id);
+                FormatFetchKeywords(ref id);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -2183,7 +1836,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Faadd5f355273c0ee61ef48436d03dedApiResponse apiResponseLocalVar;
+                        FetchKeywordsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -2194,9 +1847,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterFaadd5f355273c0ee61ef48436d03dedDefaultImplementation(apiResponseLocalVar, id);
+                        AfterFetchKeywordsDefaultImplementation(apiResponseLocalVar, id);
 
-                        Events.ExecuteOnFaadd5f355273c0ee61ef48436d03ded(apiResponseLocalVar);
+                        Events.ExecuteOnFetchKeywords(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -2208,16 +1861,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorFaadd5f355273c0ee61ef48436d03dedDefaultImplementation(e, "/api/v1/keywords/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorFaadd5f355273c0ee61ef48436d03ded(e);
+                OnErrorFetchKeywordsDefaultImplementation(e, "/api/v1/keywords/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorFetchKeywords(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Faadd5f355273c0ee61ef48436d03dedApiResponse"/>
+        /// The <see cref="FetchKeywordsApiResponse"/>
         /// </summary>
-        public partial class Faadd5f355273c0ee61ef48436d03dedApiResponse : GatewayApiSdk.Client.ApiResponse, IFaadd5f355273c0ee61ef48436d03dedApiResponse
+        public partial class FetchKeywordsApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchKeywordsApiResponse
         {
             /// <summary>
             /// The logger
@@ -2225,7 +1878,7 @@ namespace GatewayApiSdk.Api
             public ILogger<KeywordApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Faadd5f355273c0ee61ef48436d03dedApiResponse"/>
+            /// The <see cref="FetchKeywordsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2234,14 +1887,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Faadd5f355273c0ee61ef48436d03dedApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchKeywordsApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Faadd5f355273c0ee61ef48436d03dedApiResponse"/>
+            /// The <see cref="FetchKeywordsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2250,7 +1903,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Faadd5f355273c0ee61ef48436d03dedApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchKeywordsApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -2268,11 +1921,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Faadd5f355273c0ee61ef48436d03ded200Response? Ok()
+            public GatewayApiSdk.Model.FetchKeywords200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Faadd5f355273c0ee61ef48436d03ded200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchKeywords200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2281,7 +1934,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Faadd5f355273c0ee61ef48436d03ded200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchKeywords200Response? result)
             {
                 result = null;
 
@@ -2306,11 +1959,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2319,7 +1972,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -2329,6 +1982,353 @@ namespace GatewayApiSdk.Api
                 } catch (Exception e)
                 {
                     OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatUpdateKeywords(ref int id, UpdateCategoriesRequest updateCategoriesRequest);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="updateCategoriesRequest"></param>
+        /// <returns></returns>
+        private void ValidateUpdateKeywords(UpdateCategoriesRequest updateCategoriesRequest)
+        {
+            if (updateCategoriesRequest == null)
+                throw new ArgumentNullException(nameof(updateCategoriesRequest));
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="updateCategoriesRequest"></param>
+        private void AfterUpdateKeywordsDefaultImplementation(IUpdateKeywordsApiResponse apiResponseLocalVar, int id, UpdateCategoriesRequest updateCategoriesRequest)
+        {
+            bool suppressDefaultLog = false;
+            AfterUpdateKeywords(ref suppressDefaultLog, apiResponseLocalVar, id, updateCategoriesRequest);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="updateCategoriesRequest"></param>
+        partial void AfterUpdateKeywords(ref bool suppressDefaultLog, IUpdateKeywordsApiResponse apiResponseLocalVar, int id, UpdateCategoriesRequest updateCategoriesRequest);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="updateCategoriesRequest"></param>
+        private void OnErrorUpdateKeywordsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateCategoriesRequest updateCategoriesRequest)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorUpdateKeywords(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, updateCategoriesRequest);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="updateCategoriesRequest"></param>
+        partial void OnErrorUpdateKeywords(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateCategoriesRequest updateCategoriesRequest);
+
+        /// <summary>
+        /// KeywordController@update Update a keyword by id
+        /// </summary>
+        /// <param name="id">keyword id</param>
+        /// <param name="updateCategoriesRequest">Keyword definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateKeywordsApiResponse"/>&gt;</returns>
+        public async Task<IUpdateKeywordsApiResponse?> UpdateKeywordsOrDefaultAsync(int id, UpdateCategoriesRequest updateCategoriesRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await UpdateKeywordsAsync(id, updateCategoriesRequest, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// KeywordController@update Update a keyword by id
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">keyword id</param>
+        /// <param name="updateCategoriesRequest">Keyword definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateKeywordsApiResponse"/>&gt;</returns>
+        public async Task<IUpdateKeywordsApiResponse> UpdateKeywordsAsync(int id, UpdateCategoriesRequest updateCategoriesRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                ValidateUpdateKeywords(updateCategoriesRequest);
+
+                FormatUpdateKeywords(ref id, updateCategoriesRequest);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/keywords/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/keywords/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    httpRequestMessageLocalVar.Content = (updateCategoriesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateCategoriesRequest, _jsonSerializerOptions));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] contentTypes = new string[] {
+                        "application/json"
+                    };
+
+                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
+
+                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
+                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        UpdateKeywordsApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/keywords/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterUpdateKeywordsDefaultImplementation(apiResponseLocalVar, id, updateCategoriesRequest);
+
+                        Events.ExecuteOnUpdateKeywords(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorUpdateKeywordsDefaultImplementation(e, "/api/v1/keywords/{id}", uriBuilderLocalVar.Path, id, updateCategoriesRequest);
+                Events.ExecuteOnErrorUpdateKeywords(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="UpdateKeywordsApiResponse"/>
+        /// </summary>
+        public partial class UpdateKeywordsApiResponse : GatewayApiSdk.Client.ApiResponse, IUpdateKeywordsApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<KeywordApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="UpdateKeywordsApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public UpdateKeywordsApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="UpdateKeywordsApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public UpdateKeywordsApiResponse(ILogger<KeywordApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.UpdateKeywords200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateKeywords200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateKeywords200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public bool IsInternalServerError => 500 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsInternalServerError
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = InternalServerError();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
                 }
 
                 return result != null;

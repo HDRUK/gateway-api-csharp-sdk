@@ -147,7 +147,7 @@ Get user counts for distinct entries of a field in the model
 
 <a id="createtools"></a>
 # **CreateTools**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreateTools (CreateToolsRequest createToolsRequest)
+> CreateCategories200Response CreateTools (CreateToolsRequest createToolsRequest)
 
 ToolController@store
 
@@ -162,7 +162,7 @@ Create a new tool
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ Create a new tool
 
 <a id="createtoolsbyteamv2"></a>
 # **CreateToolsByTeamV2**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreateToolsByTeamV2 (int teamId, CreateToolsRequest createToolsRequest)
+> CreateCategories200Response CreateToolsByTeamV2 (int teamId, CreateToolsRequest createToolsRequest)
 
 ToolController@store
 
@@ -202,7 +202,7 @@ Create a new tool by team v2
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -226,7 +226,7 @@ Create a new tool by team v2
 
 <a id="createtoolsbyuserv2"></a>
 # **CreateToolsByUserV2**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreateToolsByUserV2 (int userId, CreateToolsRequest createToolsRequest)
+> CreateCategories200Response CreateToolsByUserV2 (int userId, CreateToolsRequest createToolsRequest)
 
 UserToolController@store
 
@@ -242,7 +242,7 @@ Create a new tool by user v2
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -266,7 +266,7 @@ Create a new tool by user v2
 
 <a id="createtoolsintegrations"></a>
 # **CreateToolsIntegrations**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreateToolsIntegrations (CreateToolsIntegrationsRequest createToolsIntegrationsRequest)
+> CreateCategories200Response CreateToolsIntegrations (CreateToolsIntegrationsRequest createToolsIntegrationsRequest)
 
 IntegrationToolController@store
 
@@ -281,7 +281,7 @@ Create a new tool
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 

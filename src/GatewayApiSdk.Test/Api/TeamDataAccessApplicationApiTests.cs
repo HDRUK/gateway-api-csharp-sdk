@@ -51,53 +51,15 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call0dabe0dfdf4eebd0c76560fd691c6472
+        /// Test CountTeamDarApplications
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call0dabe0dfdf4eebd0c76560fd691c6472AsyncTest()
+        public async Task CountTeamDarApplicationsAsyncTest()
         {
             int teamId = default!;
-            int id = default!;
-            var response = await _instance.Call0dabe0dfdf4eebd0c76560fd691c6472Async(teamId, id);
-            var model = response.Ok();
-            Assert.IsType<Model0dabe0dfdf4eebd0c76560fd691c6472200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call0ff8ad69b213abf8d671b3695d0b69b5
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call0ff8ad69b213abf8d671b3695d0b69b5AsyncTest()
-        {
-            int teamId = default!;
-            var response = await _instance.Call0ff8ad69b213abf8d671b3695d0b69b5Async(teamId);
-            var model = response.Ok();
-            Assert.IsType<Model0ff8ad69b213abf8d671b3695d0b69b5200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call3f8472e47cdd8aaabb42e1065a7a0afb
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call3f8472e47cdd8aaabb42e1065a7a0afbAsyncTest()
-        {
-            int teamId = default!;
-            var response = await _instance.Call3f8472e47cdd8aaabb42e1065a7a0afbAsync(teamId);
+            var response = await _instance.CountTeamDarApplicationsAsync(teamId);
             var model = response.Ok();
             Assert.IsType<CountUniqueFieldsCollections200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call4e4d590ec8943163168e4fc34bd166a1
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call4e4d590ec8943163168e4fc34bd166a1AsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            var response = await _instance.Call4e4d590ec8943163168e4fc34bd166a1Async(teamId, id);
-            var model = response.Ok();
-            Assert.IsType<Model4e4d590ec8943163168e4fc34bd166a1200Response>(model);
         }
 
         /// <summary>
@@ -111,6 +73,44 @@ namespace GatewayApiSdk.Test.Api
             var response = await _instance.CountUniqueFieldsDarApplicationsAsync(teamId, field);
             var model = response.Ok();
             Assert.IsType<CountUniqueFieldsCollections200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchTeamDarApplication
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchTeamDarApplicationAsyncTest()
+        {
+            int teamId = default!;
+            int id = default!;
+            var response = await _instance.FetchTeamDarApplicationAsync(teamId, id);
+            var model = response.Ok();
+            Assert.IsType<FetchTeamDarApplication200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchTeamDarApplicationHeader
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchTeamDarApplicationHeaderAsyncTest()
+        {
+            int teamId = default!;
+            int id = default!;
+            var response = await _instance.FetchTeamDarApplicationHeaderAsync(teamId, id);
+            var model = response.Ok();
+            Assert.IsType<FetchTeamDarApplicationHeader200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchTeamDarApplications
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchTeamDarApplicationsAsyncTest()
+        {
+            int teamId = default!;
+            var response = await _instance.FetchTeamDarApplicationsAsync(teamId);
+            var model = response.Ok();
+            Assert.IsType<FetchTeamDarApplications200Response>(model);
         }
     }
 }

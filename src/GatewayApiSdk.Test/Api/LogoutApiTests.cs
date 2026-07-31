@@ -58,7 +58,7 @@ namespace GatewayApiSdk.Test.Api
         {
             var response = await _instance.LogoutAsync();
             var model = response.Ok();
-            Assert.IsType<C29b5b3424f7317b69b4bda048ccfafb200Response>(model);
+            Assert.IsType<DeleteAliases200Response>(model);
         }
     }
 }

@@ -16,7 +16,7 @@ All URIs are relative to *http://localhost*
 
 <a id="createfederationteam"></a>
 # **CreateFederationTeam**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreateFederationTeam (int teamId, CreateFederationTeamRequest createFederationTeamRequest)
+> CreateCategories200Response CreateFederationTeam (int teamId, CreateFederationTeamRequest createFederationTeamRequest)
 
 FederationController@store
 
@@ -32,7 +32,7 @@ Create federation
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -95,7 +95,7 @@ Delete federation for team
 
 <a id="editfederationteam"></a>
 # **EditFederationTeam**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response EditFederationTeam (int teamId, int federationId, CreateFederationTeamRequest createFederationTeamRequest)
+> CreateCategories200Response EditFederationTeam (int teamId, int federationId, CreateFederationTeamRequest createFederationTeamRequest)
 
 FederationController@edit
 
@@ -112,7 +112,7 @@ Edit federation for team
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -319,7 +319,7 @@ Test federation configuration
 
 <a id="updatefederationteam"></a>
 # **UpdateFederationTeam**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response UpdateFederationTeam (int teamId, int federationId, UpdateFederationTeamRequest updateFederationTeamRequest)
+> CreateCategories200Response UpdateFederationTeam (int teamId, int federationId, UpdateFederationTeamRequest updateFederationTeamRequest)
 
 FederationController@update
 
@@ -336,7 +336,7 @@ Update federation for team
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 

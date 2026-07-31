@@ -45,10 +45,10 @@ namespace GatewayApiSdk.Api
         /// Returns top three gateway datasets most similar to the provided dataset
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cd41e1bd1b9f9918da2bb53a240b8bfeRequest">Submit dataset id</param>
+        /// <param name="searchSimilarDatasetsRequest">Submit dataset id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICd41e1bd1b9f9918da2bb53a240b8bfeApiResponse"/>&gt;</returns>
-        Task<ICd41e1bd1b9f9918da2bb53a240b8bfeApiResponse> Cd41e1bd1b9f9918da2bb53a240b8bfeAsync(Cd41e1bd1b9f9918da2bb53a240b8bfeRequest cd41e1bd1b9f9918da2bb53a240b8bfeRequest, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchSimilarDatasetsApiResponse"/>&gt;</returns>
+        Task<ISearchSimilarDatasetsApiResponse> SearchSimilarDatasetsAsync(SearchSimilarDatasetsRequest searchSimilarDatasetsRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Search@similarDatasets
@@ -56,16 +56,16 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Returns top three gateway datasets most similar to the provided dataset
         /// </remarks>
-        /// <param name="cd41e1bd1b9f9918da2bb53a240b8bfeRequest">Submit dataset id</param>
+        /// <param name="searchSimilarDatasetsRequest">Submit dataset id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICd41e1bd1b9f9918da2bb53a240b8bfeApiResponse"/>?&gt;</returns>
-        Task<ICd41e1bd1b9f9918da2bb53a240b8bfeApiResponse?> Cd41e1bd1b9f9918da2bb53a240b8bfeOrDefaultAsync(Cd41e1bd1b9f9918da2bb53a240b8bfeRequest cd41e1bd1b9f9918da2bb53a240b8bfeRequest, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchSimilarDatasetsApiResponse"/>?&gt;</returns>
+        Task<ISearchSimilarDatasetsApiResponse?> SearchSimilarDatasetsOrDefaultAsync(SearchSimilarDatasetsRequest searchSimilarDatasetsRequest, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="ICd41e1bd1b9f9918da2bb53a240b8bfeApiResponse"/>
+    /// The <see cref="ISearchSimilarDatasetsApiResponse"/>
     /// </summary>
-    public interface ICd41e1bd1b9f9918da2bb53a240b8bfeApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Cd41e1bd1b9f9918da2bb53a240b8bfe200Response?>
+    public interface ISearchSimilarDatasetsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.SearchSimilarDatasets200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -82,21 +82,21 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCd41e1bd1b9f9918da2bb53a240b8bfe;
+        public event EventHandler<ApiResponseEventArgs>? OnSearchSimilarDatasets;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCd41e1bd1b9f9918da2bb53a240b8bfe;
+        public event EventHandler<ExceptionEventArgs>? OnErrorSearchSimilarDatasets;
 
-        internal void ExecuteOnCd41e1bd1b9f9918da2bb53a240b8bfe(SearchSimilarDatasetsApi.Cd41e1bd1b9f9918da2bb53a240b8bfeApiResponse apiResponse)
+        internal void ExecuteOnSearchSimilarDatasets(SearchSimilarDatasetsApi.SearchSimilarDatasetsApiResponse apiResponse)
         {
-            OnCd41e1bd1b9f9918da2bb53a240b8bfe?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnSearchSimilarDatasets?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCd41e1bd1b9f9918da2bb53a240b8bfe(Exception exception)
+        internal void ExecuteOnErrorSearchSimilarDatasets(Exception exception)
         {
-            OnErrorCd41e1bd1b9f9918da2bb53a240b8bfe?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorSearchSimilarDatasets?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -141,28 +141,28 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatCd41e1bd1b9f9918da2bb53a240b8bfe(Cd41e1bd1b9f9918da2bb53a240b8bfeRequest cd41e1bd1b9f9918da2bb53a240b8bfeRequest);
+        partial void FormatSearchSimilarDatasets(SearchSimilarDatasetsRequest searchSimilarDatasetsRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="cd41e1bd1b9f9918da2bb53a240b8bfeRequest"></param>
+        /// <param name="searchSimilarDatasetsRequest"></param>
         /// <returns></returns>
-        private void ValidateCd41e1bd1b9f9918da2bb53a240b8bfe(Cd41e1bd1b9f9918da2bb53a240b8bfeRequest cd41e1bd1b9f9918da2bb53a240b8bfeRequest)
+        private void ValidateSearchSimilarDatasets(SearchSimilarDatasetsRequest searchSimilarDatasetsRequest)
         {
-            if (cd41e1bd1b9f9918da2bb53a240b8bfeRequest == null)
-                throw new ArgumentNullException(nameof(cd41e1bd1b9f9918da2bb53a240b8bfeRequest));
+            if (searchSimilarDatasetsRequest == null)
+                throw new ArgumentNullException(nameof(searchSimilarDatasetsRequest));
         }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="cd41e1bd1b9f9918da2bb53a240b8bfeRequest"></param>
-        private void AfterCd41e1bd1b9f9918da2bb53a240b8bfeDefaultImplementation(ICd41e1bd1b9f9918da2bb53a240b8bfeApiResponse apiResponseLocalVar, Cd41e1bd1b9f9918da2bb53a240b8bfeRequest cd41e1bd1b9f9918da2bb53a240b8bfeRequest)
+        /// <param name="searchSimilarDatasetsRequest"></param>
+        private void AfterSearchSimilarDatasetsDefaultImplementation(ISearchSimilarDatasetsApiResponse apiResponseLocalVar, SearchSimilarDatasetsRequest searchSimilarDatasetsRequest)
         {
             bool suppressDefaultLog = false;
-            AfterCd41e1bd1b9f9918da2bb53a240b8bfe(ref suppressDefaultLog, apiResponseLocalVar, cd41e1bd1b9f9918da2bb53a240b8bfeRequest);
+            AfterSearchSimilarDatasets(ref suppressDefaultLog, apiResponseLocalVar, searchSimilarDatasetsRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -172,8 +172,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="cd41e1bd1b9f9918da2bb53a240b8bfeRequest"></param>
-        partial void AfterCd41e1bd1b9f9918da2bb53a240b8bfe(ref bool suppressDefaultLog, ICd41e1bd1b9f9918da2bb53a240b8bfeApiResponse apiResponseLocalVar, Cd41e1bd1b9f9918da2bb53a240b8bfeRequest cd41e1bd1b9f9918da2bb53a240b8bfeRequest);
+        /// <param name="searchSimilarDatasetsRequest"></param>
+        partial void AfterSearchSimilarDatasets(ref bool suppressDefaultLog, ISearchSimilarDatasetsApiResponse apiResponseLocalVar, SearchSimilarDatasetsRequest searchSimilarDatasetsRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -181,11 +181,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="cd41e1bd1b9f9918da2bb53a240b8bfeRequest"></param>
-        private void OnErrorCd41e1bd1b9f9918da2bb53a240b8bfeDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Cd41e1bd1b9f9918da2bb53a240b8bfeRequest cd41e1bd1b9f9918da2bb53a240b8bfeRequest)
+        /// <param name="searchSimilarDatasetsRequest"></param>
+        private void OnErrorSearchSimilarDatasetsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, SearchSimilarDatasetsRequest searchSimilarDatasetsRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCd41e1bd1b9f9918da2bb53a240b8bfe(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, cd41e1bd1b9f9918da2bb53a240b8bfeRequest);
+            OnErrorSearchSimilarDatasets(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, searchSimilarDatasetsRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -197,20 +197,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="cd41e1bd1b9f9918da2bb53a240b8bfeRequest"></param>
-        partial void OnErrorCd41e1bd1b9f9918da2bb53a240b8bfe(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Cd41e1bd1b9f9918da2bb53a240b8bfeRequest cd41e1bd1b9f9918da2bb53a240b8bfeRequest);
+        /// <param name="searchSimilarDatasetsRequest"></param>
+        partial void OnErrorSearchSimilarDatasets(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, SearchSimilarDatasetsRequest searchSimilarDatasetsRequest);
 
         /// <summary>
         /// Search@similarDatasets Returns top three gateway datasets most similar to the provided dataset
         /// </summary>
-        /// <param name="cd41e1bd1b9f9918da2bb53a240b8bfeRequest">Submit dataset id</param>
+        /// <param name="searchSimilarDatasetsRequest">Submit dataset id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICd41e1bd1b9f9918da2bb53a240b8bfeApiResponse"/>&gt;</returns>
-        public async Task<ICd41e1bd1b9f9918da2bb53a240b8bfeApiResponse?> Cd41e1bd1b9f9918da2bb53a240b8bfeOrDefaultAsync(Cd41e1bd1b9f9918da2bb53a240b8bfeRequest cd41e1bd1b9f9918da2bb53a240b8bfeRequest, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchSimilarDatasetsApiResponse"/>&gt;</returns>
+        public async Task<ISearchSimilarDatasetsApiResponse?> SearchSimilarDatasetsOrDefaultAsync(SearchSimilarDatasetsRequest searchSimilarDatasetsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Cd41e1bd1b9f9918da2bb53a240b8bfeAsync(cd41e1bd1b9f9918da2bb53a240b8bfeRequest, cancellationToken).ConfigureAwait(false);
+                return await SearchSimilarDatasetsAsync(searchSimilarDatasetsRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -222,18 +222,18 @@ namespace GatewayApiSdk.Api
         /// Search@similarDatasets Returns top three gateway datasets most similar to the provided dataset
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cd41e1bd1b9f9918da2bb53a240b8bfeRequest">Submit dataset id</param>
+        /// <param name="searchSimilarDatasetsRequest">Submit dataset id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICd41e1bd1b9f9918da2bb53a240b8bfeApiResponse"/>&gt;</returns>
-        public async Task<ICd41e1bd1b9f9918da2bb53a240b8bfeApiResponse> Cd41e1bd1b9f9918da2bb53a240b8bfeAsync(Cd41e1bd1b9f9918da2bb53a240b8bfeRequest cd41e1bd1b9f9918da2bb53a240b8bfeRequest, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchSimilarDatasetsApiResponse"/>&gt;</returns>
+        public async Task<ISearchSimilarDatasetsApiResponse> SearchSimilarDatasetsAsync(SearchSimilarDatasetsRequest searchSimilarDatasetsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCd41e1bd1b9f9918da2bb53a240b8bfe(cd41e1bd1b9f9918da2bb53a240b8bfeRequest);
+                ValidateSearchSimilarDatasets(searchSimilarDatasetsRequest);
 
-                FormatCd41e1bd1b9f9918da2bb53a240b8bfe(cd41e1bd1b9f9918da2bb53a240b8bfeRequest);
+                FormatSearchSimilarDatasets(searchSimilarDatasetsRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -244,9 +244,9 @@ namespace GatewayApiSdk.Api
                         ? "/api/v1/search/similar/datasets"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/search/similar/datasets");
 
-                    httpRequestMessageLocalVar.Content = (cd41e1bd1b9f9918da2bb53a240b8bfeRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (searchSimilarDatasetsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(cd41e1bd1b9f9918da2bb53a240b8bfeRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(searchSimilarDatasetsRequest, _jsonSerializerOptions));
 
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
 
@@ -274,7 +274,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Cd41e1bd1b9f9918da2bb53a240b8bfeApiResponse apiResponseLocalVar;
+                        SearchSimilarDatasetsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -285,9 +285,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCd41e1bd1b9f9918da2bb53a240b8bfeDefaultImplementation(apiResponseLocalVar, cd41e1bd1b9f9918da2bb53a240b8bfeRequest);
+                        AfterSearchSimilarDatasetsDefaultImplementation(apiResponseLocalVar, searchSimilarDatasetsRequest);
 
-                        Events.ExecuteOnCd41e1bd1b9f9918da2bb53a240b8bfe(apiResponseLocalVar);
+                        Events.ExecuteOnSearchSimilarDatasets(apiResponseLocalVar);
 
                         return apiResponseLocalVar;
                     }
@@ -295,16 +295,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCd41e1bd1b9f9918da2bb53a240b8bfeDefaultImplementation(e, "/api/v1/search/similar/datasets", uriBuilderLocalVar.Path, cd41e1bd1b9f9918da2bb53a240b8bfeRequest);
-                Events.ExecuteOnErrorCd41e1bd1b9f9918da2bb53a240b8bfe(e);
+                OnErrorSearchSimilarDatasetsDefaultImplementation(e, "/api/v1/search/similar/datasets", uriBuilderLocalVar.Path, searchSimilarDatasetsRequest);
+                Events.ExecuteOnErrorSearchSimilarDatasets(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Cd41e1bd1b9f9918da2bb53a240b8bfeApiResponse"/>
+        /// The <see cref="SearchSimilarDatasetsApiResponse"/>
         /// </summary>
-        public partial class Cd41e1bd1b9f9918da2bb53a240b8bfeApiResponse : GatewayApiSdk.Client.ApiResponse, ICd41e1bd1b9f9918da2bb53a240b8bfeApiResponse
+        public partial class SearchSimilarDatasetsApiResponse : GatewayApiSdk.Client.ApiResponse, ISearchSimilarDatasetsApiResponse
         {
             /// <summary>
             /// The logger
@@ -312,7 +312,7 @@ namespace GatewayApiSdk.Api
             public ILogger<SearchSimilarDatasetsApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Cd41e1bd1b9f9918da2bb53a240b8bfeApiResponse"/>
+            /// The <see cref="SearchSimilarDatasetsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -321,14 +321,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Cd41e1bd1b9f9918da2bb53a240b8bfeApiResponse(ILogger<SearchSimilarDatasetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public SearchSimilarDatasetsApiResponse(ILogger<SearchSimilarDatasetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Cd41e1bd1b9f9918da2bb53a240b8bfeApiResponse"/>
+            /// The <see cref="SearchSimilarDatasetsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -337,7 +337,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Cd41e1bd1b9f9918da2bb53a240b8bfeApiResponse(ILogger<SearchSimilarDatasetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public SearchSimilarDatasetsApiResponse(ILogger<SearchSimilarDatasetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -355,11 +355,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Cd41e1bd1b9f9918da2bb53a240b8bfe200Response? Ok()
+            public GatewayApiSdk.Model.SearchSimilarDatasets200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Cd41e1bd1b9f9918da2bb53a240b8bfe200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.SearchSimilarDatasets200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -368,7 +368,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Cd41e1bd1b9f9918da2bb53a240b8bfe200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.SearchSimilarDatasets200Response? result)
             {
                 result = null;
 

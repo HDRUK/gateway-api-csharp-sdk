@@ -51,32 +51,32 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call4ff0fc5e7c66284608ce55dc6cb7d846
+        /// Test CreateAdminSearchReindex
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call4ff0fc5e7c66284608ce55dc6cb7d846AsyncTest()
+        public async Task CreateAdminSearchReindexAsyncTest()
         {
-            Model4ff0fc5e7c66284608ce55dc6cb7d846Request model4ff0fc5e7c66284608ce55dc6cb7d846Request = default!;
-            await _instance.Call4ff0fc5e7c66284608ce55dc6cb7d846Async(model4ff0fc5e7c66284608ce55dc6cb7d846Request);
+            CreateAdminSearchReindexRequest createAdminSearchReindexRequest = default!;
+            await _instance.CreateAdminSearchReindexAsync(createAdminSearchReindexRequest);
         }
 
         /// <summary>
-        /// Test Call8918bd9dfb8e055a335f3c0695428e73
+        /// Test FetchAdminSearchStatus
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call8918bd9dfb8e055a335f3c0695428e73AsyncTest()
+        public async Task FetchAdminSearchStatusAsyncTest()
         {
-            await _instance.Call8918bd9dfb8e055a335f3c0695428e73Async();
+            await _instance.FetchAdminSearchStatusAsync();
         }
 
         /// <summary>
-        /// Test Call92a06ea019f5560b5c9e76e02fe38e31
+        /// Test UpdateAdminSearchFeature
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call92a06ea019f5560b5c9e76e02fe38e31AsyncTest()
+        public async Task UpdateAdminSearchFeatureAsyncTest()
         {
-            Model92a06ea019f5560b5c9e76e02fe38e31Request model92a06ea019f5560b5c9e76e02fe38e31Request = default!;
-            await _instance.Call92a06ea019f5560b5c9e76e02fe38e31Async(model92a06ea019f5560b5c9e76e02fe38e31Request);
+            UpdateAdminSearchFeatureRequest updateAdminSearchFeatureRequest = default!;
+            await _instance.UpdateAdminSearchFeatureAsync(updateAdminSearchFeatureRequest);
         }
     }
 }

@@ -51,14 +51,14 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call58e41162a49b5b1bf92231b359ea70cb
+        /// Test FetchUserOrganisations
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call58e41162a49b5b1bf92231b359ea70cbAsyncTest()
+        public async Task FetchUserOrganisationsAsyncTest()
         {
-            var response = await _instance.Call58e41162a49b5b1bf92231b359ea70cbAsync();
+            var response = await _instance.FetchUserOrganisationsAsync();
             var model = response.Ok();
-            Assert.IsType<Model58e41162a49b5b1bf92231b359ea70cb200Response>(model);
+            Assert.IsType<FetchUserOrganisations200Response>(model);
         }
     }
 }

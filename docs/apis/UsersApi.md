@@ -15,7 +15,7 @@ All URIs are relative to *http://localhost*
 
 <a id="createusers"></a>
 # **CreateUsers**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreateUsers (CreateUsersRequest createUsersRequest)
+> CreateCategories200Response CreateUsers (CreateUsersRequest createUsersRequest)
 
 UserController@store
 
@@ -30,7 +30,7 @@ Create a new user
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 

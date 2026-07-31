@@ -39,75 +39,6 @@ namespace GatewayApiSdk.Api
         UploadApiEvents Events { get; }
 
         /// <summary>
-        /// Upload@destroy
-        /// </summary>
-        /// <remarks>
-        /// Delete a processed file
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">file uuid</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IBa8ab1a2710efebacb7909736d7d2d52ApiResponse"/>&gt;</returns>
-        Task<IBa8ab1a2710efebacb7909736d7d2d52ApiResponse> Ba8ab1a2710efebacb7909736d7d2d52Async(string id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Upload@destroy
-        /// </summary>
-        /// <remarks>
-        /// Delete a processed file
-        /// </remarks>
-        /// <param name="id">file uuid</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IBa8ab1a2710efebacb7909736d7d2d52ApiResponse"/>?&gt;</returns>
-        Task<IBa8ab1a2710efebacb7909736d7d2d52ApiResponse?> Ba8ab1a2710efebacb7909736d7d2d52OrDefaultAsync(string id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Upload@content
-        /// </summary>
-        /// <remarks>
-        /// Get the content of a processed file
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="uuid">upload id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall21a780f609f0b91c198ab5de91dc27c6ApiResponse"/>&gt;</returns>
-        Task<ICall21a780f609f0b91c198ab5de91dc27c6ApiResponse> Call21a780f609f0b91c198ab5de91dc27c6Async(string uuid, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Upload@content
-        /// </summary>
-        /// <remarks>
-        /// Get the content of a processed file
-        /// </remarks>
-        /// <param name="uuid">upload id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall21a780f609f0b91c198ab5de91dc27c6ApiResponse"/>?&gt;</returns>
-        Task<ICall21a780f609f0b91c198ab5de91dc27c6ApiResponse?> Call21a780f609f0b91c198ab5de91dc27c6OrDefaultAsync(string uuid, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Upload@show
-        /// </summary>
-        /// <remarks>
-        /// Get the scanning status of an upload
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="uuid">upload id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IE72aa4b4f0a80caa9fe872bdff983455ApiResponse"/>&gt;</returns>
-        Task<IE72aa4b4f0a80caa9fe872bdff983455ApiResponse> E72aa4b4f0a80caa9fe872bdff983455Async(string uuid, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Upload@show
-        /// </summary>
-        /// <remarks>
-        /// Get the scanning status of an upload
-        /// </remarks>
-        /// <param name="uuid">upload id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IE72aa4b4f0a80caa9fe872bdff983455ApiResponse"/>?&gt;</returns>
-        Task<IE72aa4b4f0a80caa9fe872bdff983455ApiResponse?> E72aa4b4f0a80caa9fe872bdff983455OrDefaultAsync(string uuid, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
         /// Upload@upload
         /// </summary>
         /// <remarks>
@@ -119,8 +50,8 @@ namespace GatewayApiSdk.Api
         /// <param name="applicationId">Id of dar application associated with the file upload (optional)</param>
         /// <param name="questionId">Id of the question in the dar application associated with the file upload (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFceeda218a8998a137b9d7692e7947b6ApiResponse"/>&gt;</returns>
-        Task<IFceeda218a8998a137b9d7692e7947b6ApiResponse> Fceeda218a8998a137b9d7692e7947b6Async(Option<string> entityFlag = default, Option<int> teamId = default, Option<int> applicationId = default, Option<int> questionId = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateFilesApiResponse"/>&gt;</returns>
+        Task<ICreateFilesApiResponse> CreateFilesAsync(Option<string> entityFlag = default, Option<int> teamId = default, Option<int> applicationId = default, Option<int> questionId = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Upload@upload
@@ -133,14 +64,95 @@ namespace GatewayApiSdk.Api
         /// <param name="applicationId">Id of dar application associated with the file upload (optional)</param>
         /// <param name="questionId">Id of the question in the dar application associated with the file upload (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFceeda218a8998a137b9d7692e7947b6ApiResponse"/>?&gt;</returns>
-        Task<IFceeda218a8998a137b9d7692e7947b6ApiResponse?> Fceeda218a8998a137b9d7692e7947b6OrDefaultAsync(Option<string> entityFlag = default, Option<int> teamId = default, Option<int> applicationId = default, Option<int> questionId = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateFilesApiResponse"/>?&gt;</returns>
+        Task<ICreateFilesApiResponse?> CreateFilesOrDefaultAsync(Option<string> entityFlag = default, Option<int> teamId = default, Option<int> applicationId = default, Option<int> questionId = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Upload@destroy
+        /// </summary>
+        /// <remarks>
+        /// Delete a processed file
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">file uuid</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteFilesProcessedApiResponse"/>&gt;</returns>
+        Task<IDeleteFilesProcessedApiResponse> DeleteFilesProcessedAsync(string id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Upload@destroy
+        /// </summary>
+        /// <remarks>
+        /// Delete a processed file
+        /// </remarks>
+        /// <param name="id">file uuid</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteFilesProcessedApiResponse"/>?&gt;</returns>
+        Task<IDeleteFilesProcessedApiResponse?> DeleteFilesProcessedOrDefaultAsync(string id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Upload@show
+        /// </summary>
+        /// <remarks>
+        /// Get the scanning status of an upload
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuid">upload id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchFilesApiResponse"/>&gt;</returns>
+        Task<IFetchFilesApiResponse> FetchFilesAsync(string uuid, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Upload@show
+        /// </summary>
+        /// <remarks>
+        /// Get the scanning status of an upload
+        /// </remarks>
+        /// <param name="uuid">upload id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchFilesApiResponse"/>?&gt;</returns>
+        Task<IFetchFilesApiResponse?> FetchFilesOrDefaultAsync(string uuid, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Upload@content
+        /// </summary>
+        /// <remarks>
+        /// Get the content of a processed file
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuid">upload id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchFilesProcessedContentApiResponse"/>&gt;</returns>
+        Task<IFetchFilesProcessedContentApiResponse> FetchFilesProcessedContentAsync(string uuid, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Upload@content
+        /// </summary>
+        /// <remarks>
+        /// Get the content of a processed file
+        /// </remarks>
+        /// <param name="uuid">upload id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchFilesProcessedContentApiResponse"/>?&gt;</returns>
+        Task<IFetchFilesProcessedContentApiResponse?> FetchFilesProcessedContentOrDefaultAsync(string uuid, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="IBa8ab1a2710efebacb7909736d7d2d52ApiResponse"/>
+    /// The <see cref="ICreateFilesApiResponse"/>
     /// </summary>
-    public interface IBa8ab1a2710efebacb7909736d7d2d52ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface ICreateFilesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CreateFiles200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IDeleteFilesProcessedApiResponse"/>
+    /// </summary>
+    public interface IDeleteFilesProcessedApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -162,9 +174,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall21a780f609f0b91c198ab5de91dc27c6ApiResponse"/>
+    /// The <see cref="IFetchFilesApiResponse"/>
     /// </summary>
-    public interface ICall21a780f609f0b91c198ab5de91dc27c6ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model21a780f609f0b91c198ab5de91dc27c6200Response?>
+    public interface IFetchFilesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchFiles200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -174,21 +186,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IE72aa4b4f0a80caa9fe872bdff983455ApiResponse"/>
+    /// The <see cref="IFetchFilesProcessedContentApiResponse"/>
     /// </summary>
-    public interface IE72aa4b4f0a80caa9fe872bdff983455ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.E72aa4b4f0a80caa9fe872bdff983455200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IFceeda218a8998a137b9d7692e7947b6ApiResponse"/>
-    /// </summary>
-    public interface IFceeda218a8998a137b9d7692e7947b6ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Fceeda218a8998a137b9d7692e7947b6200Response?>
+    public interface IFetchFilesProcessedContentApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchFilesProcessedContent200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -205,81 +205,81 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnBa8ab1a2710efebacb7909736d7d2d52;
+        public event EventHandler<ApiResponseEventArgs>? OnCreateFiles;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorBa8ab1a2710efebacb7909736d7d2d52;
+        public event EventHandler<ExceptionEventArgs>? OnErrorCreateFiles;
 
-        internal void ExecuteOnBa8ab1a2710efebacb7909736d7d2d52(UploadApi.Ba8ab1a2710efebacb7909736d7d2d52ApiResponse apiResponse)
+        internal void ExecuteOnCreateFiles(UploadApi.CreateFilesApiResponse apiResponse)
         {
-            OnBa8ab1a2710efebacb7909736d7d2d52?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnCreateFiles?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorBa8ab1a2710efebacb7909736d7d2d52(Exception exception)
+        internal void ExecuteOnErrorCreateFiles(Exception exception)
         {
-            OnErrorBa8ab1a2710efebacb7909736d7d2d52?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorCreateFiles?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall21a780f609f0b91c198ab5de91dc27c6;
+        public event EventHandler<ApiResponseEventArgs>? OnDeleteFilesProcessed;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall21a780f609f0b91c198ab5de91dc27c6;
+        public event EventHandler<ExceptionEventArgs>? OnErrorDeleteFilesProcessed;
 
-        internal void ExecuteOnCall21a780f609f0b91c198ab5de91dc27c6(UploadApi.Call21a780f609f0b91c198ab5de91dc27c6ApiResponse apiResponse)
+        internal void ExecuteOnDeleteFilesProcessed(UploadApi.DeleteFilesProcessedApiResponse apiResponse)
         {
-            OnCall21a780f609f0b91c198ab5de91dc27c6?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnDeleteFilesProcessed?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall21a780f609f0b91c198ab5de91dc27c6(Exception exception)
+        internal void ExecuteOnErrorDeleteFilesProcessed(Exception exception)
         {
-            OnErrorCall21a780f609f0b91c198ab5de91dc27c6?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorDeleteFilesProcessed?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnE72aa4b4f0a80caa9fe872bdff983455;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchFiles;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorE72aa4b4f0a80caa9fe872bdff983455;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchFiles;
 
-        internal void ExecuteOnE72aa4b4f0a80caa9fe872bdff983455(UploadApi.E72aa4b4f0a80caa9fe872bdff983455ApiResponse apiResponse)
+        internal void ExecuteOnFetchFiles(UploadApi.FetchFilesApiResponse apiResponse)
         {
-            OnE72aa4b4f0a80caa9fe872bdff983455?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchFiles?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorE72aa4b4f0a80caa9fe872bdff983455(Exception exception)
+        internal void ExecuteOnErrorFetchFiles(Exception exception)
         {
-            OnErrorE72aa4b4f0a80caa9fe872bdff983455?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchFiles?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFceeda218a8998a137b9d7692e7947b6;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchFilesProcessedContent;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFceeda218a8998a137b9d7692e7947b6;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchFilesProcessedContent;
 
-        internal void ExecuteOnFceeda218a8998a137b9d7692e7947b6(UploadApi.Fceeda218a8998a137b9d7692e7947b6ApiResponse apiResponse)
+        internal void ExecuteOnFetchFilesProcessedContent(UploadApi.FetchFilesProcessedContentApiResponse apiResponse)
         {
-            OnFceeda218a8998a137b9d7692e7947b6?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchFilesProcessedContent?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorFceeda218a8998a137b9d7692e7947b6(Exception exception)
+        internal void ExecuteOnErrorFetchFilesProcessedContent(Exception exception)
         {
-            OnErrorFceeda218a8998a137b9d7692e7947b6?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchFilesProcessedContent?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -324,824 +324,14 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatBa8ab1a2710efebacb7909736d7d2d52(ref string id);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        private void ValidateBa8ab1a2710efebacb7909736d7d2d52(string id)
-        {
-            if (id == null)
-                throw new ArgumentNullException(nameof(id));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterBa8ab1a2710efebacb7909736d7d2d52DefaultImplementation(IBa8ab1a2710efebacb7909736d7d2d52ApiResponse apiResponseLocalVar, string id)
-        {
-            bool suppressDefaultLog = false;
-            AfterBa8ab1a2710efebacb7909736d7d2d52(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterBa8ab1a2710efebacb7909736d7d2d52(ref bool suppressDefaultLog, IBa8ab1a2710efebacb7909736d7d2d52ApiResponse apiResponseLocalVar, string id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorBa8ab1a2710efebacb7909736d7d2d52DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorBa8ab1a2710efebacb7909736d7d2d52(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorBa8ab1a2710efebacb7909736d7d2d52(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string id);
-
-        /// <summary>
-        /// Upload@destroy Delete a processed file
-        /// </summary>
-        /// <param name="id">file uuid</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IBa8ab1a2710efebacb7909736d7d2d52ApiResponse"/>&gt;</returns>
-        public async Task<IBa8ab1a2710efebacb7909736d7d2d52ApiResponse?> Ba8ab1a2710efebacb7909736d7d2d52OrDefaultAsync(string id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Ba8ab1a2710efebacb7909736d7d2d52Async(id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Upload@destroy Delete a processed file
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">file uuid</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IBa8ab1a2710efebacb7909736d7d2d52ApiResponse"/>&gt;</returns>
-        public async Task<IBa8ab1a2710efebacb7909736d7d2d52ApiResponse> Ba8ab1a2710efebacb7909736d7d2d52Async(string id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateBa8ab1a2710efebacb7909736d7d2d52(id);
-
-                FormatBa8ab1a2710efebacb7909736d7d2d52(ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/files/processed/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/files/processed/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Delete;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Ba8ab1a2710efebacb7909736d7d2d52ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/files/processed/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterBa8ab1a2710efebacb7909736d7d2d52DefaultImplementation(apiResponseLocalVar, id);
-
-                        Events.ExecuteOnBa8ab1a2710efebacb7909736d7d2d52(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorBa8ab1a2710efebacb7909736d7d2d52DefaultImplementation(e, "/api/v1/files/processed/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorBa8ab1a2710efebacb7909736d7d2d52(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Ba8ab1a2710efebacb7909736d7d2d52ApiResponse"/>
-        /// </summary>
-        public partial class Ba8ab1a2710efebacb7909736d7d2d52ApiResponse : GatewayApiSdk.Client.ApiResponse, IBa8ab1a2710efebacb7909736d7d2d52ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<UploadApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Ba8ab1a2710efebacb7909736d7d2d52ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Ba8ab1a2710efebacb7909736d7d2d52ApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Ba8ab1a2710efebacb7909736d7d2d52ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Ba8ab1a2710efebacb7909736d7d2d52ApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall21a780f609f0b91c198ab5de91dc27c6(ref string uuid);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="uuid"></param>
-        /// <returns></returns>
-        private void ValidateCall21a780f609f0b91c198ab5de91dc27c6(string uuid)
-        {
-            if (uuid == null)
-                throw new ArgumentNullException(nameof(uuid));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="uuid"></param>
-        private void AfterCall21a780f609f0b91c198ab5de91dc27c6DefaultImplementation(ICall21a780f609f0b91c198ab5de91dc27c6ApiResponse apiResponseLocalVar, string uuid)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall21a780f609f0b91c198ab5de91dc27c6(ref suppressDefaultLog, apiResponseLocalVar, uuid);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="uuid"></param>
-        partial void AfterCall21a780f609f0b91c198ab5de91dc27c6(ref bool suppressDefaultLog, ICall21a780f609f0b91c198ab5de91dc27c6ApiResponse apiResponseLocalVar, string uuid);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="uuid"></param>
-        private void OnErrorCall21a780f609f0b91c198ab5de91dc27c6DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string uuid)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall21a780f609f0b91c198ab5de91dc27c6(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, uuid);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="uuid"></param>
-        partial void OnErrorCall21a780f609f0b91c198ab5de91dc27c6(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string uuid);
-
-        /// <summary>
-        /// Upload@content Get the content of a processed file
-        /// </summary>
-        /// <param name="uuid">upload id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall21a780f609f0b91c198ab5de91dc27c6ApiResponse"/>&gt;</returns>
-        public async Task<ICall21a780f609f0b91c198ab5de91dc27c6ApiResponse?> Call21a780f609f0b91c198ab5de91dc27c6OrDefaultAsync(string uuid, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call21a780f609f0b91c198ab5de91dc27c6Async(uuid, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Upload@content Get the content of a processed file
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="uuid">upload id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall21a780f609f0b91c198ab5de91dc27c6ApiResponse"/>&gt;</returns>
-        public async Task<ICall21a780f609f0b91c198ab5de91dc27c6ApiResponse> Call21a780f609f0b91c198ab5de91dc27c6Async(string uuid, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateCall21a780f609f0b91c198ab5de91dc27c6(uuid);
-
-                FormatCall21a780f609f0b91c198ab5de91dc27c6(ref uuid);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/files/processed/{uuid}/download"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/files/processed/{uuid}/download");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Buuid%7D", Uri.EscapeDataString(uuid.ToString()));
-
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call21a780f609f0b91c198ab5de91dc27c6ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/files/processed/{uuid}/download", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall21a780f609f0b91c198ab5de91dc27c6DefaultImplementation(apiResponseLocalVar, uuid);
-
-                        Events.ExecuteOnCall21a780f609f0b91c198ab5de91dc27c6(apiResponseLocalVar);
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall21a780f609f0b91c198ab5de91dc27c6DefaultImplementation(e, "/api/v1/files/processed/{uuid}/download", uriBuilderLocalVar.Path, uuid);
-                Events.ExecuteOnErrorCall21a780f609f0b91c198ab5de91dc27c6(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call21a780f609f0b91c198ab5de91dc27c6ApiResponse"/>
-        /// </summary>
-        public partial class Call21a780f609f0b91c198ab5de91dc27c6ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall21a780f609f0b91c198ab5de91dc27c6ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<UploadApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call21a780f609f0b91c198ab5de91dc27c6ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call21a780f609f0b91c198ab5de91dc27c6ApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call21a780f609f0b91c198ab5de91dc27c6ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call21a780f609f0b91c198ab5de91dc27c6ApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model21a780f609f0b91c198ab5de91dc27c6200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model21a780f609f0b91c198ab5de91dc27c6200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model21a780f609f0b91c198ab5de91dc27c6200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatE72aa4b4f0a80caa9fe872bdff983455(ref string uuid);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="uuid"></param>
-        /// <returns></returns>
-        private void ValidateE72aa4b4f0a80caa9fe872bdff983455(string uuid)
-        {
-            if (uuid == null)
-                throw new ArgumentNullException(nameof(uuid));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="uuid"></param>
-        private void AfterE72aa4b4f0a80caa9fe872bdff983455DefaultImplementation(IE72aa4b4f0a80caa9fe872bdff983455ApiResponse apiResponseLocalVar, string uuid)
-        {
-            bool suppressDefaultLog = false;
-            AfterE72aa4b4f0a80caa9fe872bdff983455(ref suppressDefaultLog, apiResponseLocalVar, uuid);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="uuid"></param>
-        partial void AfterE72aa4b4f0a80caa9fe872bdff983455(ref bool suppressDefaultLog, IE72aa4b4f0a80caa9fe872bdff983455ApiResponse apiResponseLocalVar, string uuid);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="uuid"></param>
-        private void OnErrorE72aa4b4f0a80caa9fe872bdff983455DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string uuid)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorE72aa4b4f0a80caa9fe872bdff983455(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, uuid);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="uuid"></param>
-        partial void OnErrorE72aa4b4f0a80caa9fe872bdff983455(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string uuid);
-
-        /// <summary>
-        /// Upload@show Get the scanning status of an upload
-        /// </summary>
-        /// <param name="uuid">upload id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IE72aa4b4f0a80caa9fe872bdff983455ApiResponse"/>&gt;</returns>
-        public async Task<IE72aa4b4f0a80caa9fe872bdff983455ApiResponse?> E72aa4b4f0a80caa9fe872bdff983455OrDefaultAsync(string uuid, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await E72aa4b4f0a80caa9fe872bdff983455Async(uuid, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Upload@show Get the scanning status of an upload
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="uuid">upload id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IE72aa4b4f0a80caa9fe872bdff983455ApiResponse"/>&gt;</returns>
-        public async Task<IE72aa4b4f0a80caa9fe872bdff983455ApiResponse> E72aa4b4f0a80caa9fe872bdff983455Async(string uuid, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateE72aa4b4f0a80caa9fe872bdff983455(uuid);
-
-                FormatE72aa4b4f0a80caa9fe872bdff983455(ref uuid);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/files/{uuid}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/files/{uuid}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Buuid%7D", Uri.EscapeDataString(uuid.ToString()));
-
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        E72aa4b4f0a80caa9fe872bdff983455ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/files/{uuid}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterE72aa4b4f0a80caa9fe872bdff983455DefaultImplementation(apiResponseLocalVar, uuid);
-
-                        Events.ExecuteOnE72aa4b4f0a80caa9fe872bdff983455(apiResponseLocalVar);
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorE72aa4b4f0a80caa9fe872bdff983455DefaultImplementation(e, "/api/v1/files/{uuid}", uriBuilderLocalVar.Path, uuid);
-                Events.ExecuteOnErrorE72aa4b4f0a80caa9fe872bdff983455(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="E72aa4b4f0a80caa9fe872bdff983455ApiResponse"/>
-        /// </summary>
-        public partial class E72aa4b4f0a80caa9fe872bdff983455ApiResponse : GatewayApiSdk.Client.ApiResponse, IE72aa4b4f0a80caa9fe872bdff983455ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<UploadApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="E72aa4b4f0a80caa9fe872bdff983455ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public E72aa4b4f0a80caa9fe872bdff983455ApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="E72aa4b4f0a80caa9fe872bdff983455ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public E72aa4b4f0a80caa9fe872bdff983455ApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.E72aa4b4f0a80caa9fe872bdff983455200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.E72aa4b4f0a80caa9fe872bdff983455200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.E72aa4b4f0a80caa9fe872bdff983455200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatFceeda218a8998a137b9d7692e7947b6(ref Option<string> entityFlag, ref Option<int> teamId, ref Option<int> applicationId, ref Option<int> questionId);
+        partial void FormatCreateFiles(ref Option<string> entityFlag, ref Option<int> teamId, ref Option<int> applicationId, ref Option<int> questionId);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
         /// <param name="entityFlag"></param>
         /// <returns></returns>
-        private void ValidateFceeda218a8998a137b9d7692e7947b6(Option<string> entityFlag)
+        private void ValidateCreateFiles(Option<string> entityFlag)
         {
             if (entityFlag.IsSet && entityFlag.Value == null)
                 throw new ArgumentNullException(nameof(entityFlag));
@@ -1155,10 +345,10 @@ namespace GatewayApiSdk.Api
         /// <param name="teamId"></param>
         /// <param name="applicationId"></param>
         /// <param name="questionId"></param>
-        private void AfterFceeda218a8998a137b9d7692e7947b6DefaultImplementation(IFceeda218a8998a137b9d7692e7947b6ApiResponse apiResponseLocalVar, Option<string> entityFlag, Option<int> teamId, Option<int> applicationId, Option<int> questionId)
+        private void AfterCreateFilesDefaultImplementation(ICreateFilesApiResponse apiResponseLocalVar, Option<string> entityFlag, Option<int> teamId, Option<int> applicationId, Option<int> questionId)
         {
             bool suppressDefaultLog = false;
-            AfterFceeda218a8998a137b9d7692e7947b6(ref suppressDefaultLog, apiResponseLocalVar, entityFlag, teamId, applicationId, questionId);
+            AfterCreateFiles(ref suppressDefaultLog, apiResponseLocalVar, entityFlag, teamId, applicationId, questionId);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1172,7 +362,7 @@ namespace GatewayApiSdk.Api
         /// <param name="teamId"></param>
         /// <param name="applicationId"></param>
         /// <param name="questionId"></param>
-        partial void AfterFceeda218a8998a137b9d7692e7947b6(ref bool suppressDefaultLog, IFceeda218a8998a137b9d7692e7947b6ApiResponse apiResponseLocalVar, Option<string> entityFlag, Option<int> teamId, Option<int> applicationId, Option<int> questionId);
+        partial void AfterCreateFiles(ref bool suppressDefaultLog, ICreateFilesApiResponse apiResponseLocalVar, Option<string> entityFlag, Option<int> teamId, Option<int> applicationId, Option<int> questionId);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1184,10 +374,10 @@ namespace GatewayApiSdk.Api
         /// <param name="teamId"></param>
         /// <param name="applicationId"></param>
         /// <param name="questionId"></param>
-        private void OnErrorFceeda218a8998a137b9d7692e7947b6DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<string> entityFlag, Option<int> teamId, Option<int> applicationId, Option<int> questionId)
+        private void OnErrorCreateFilesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<string> entityFlag, Option<int> teamId, Option<int> applicationId, Option<int> questionId)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorFceeda218a8998a137b9d7692e7947b6(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, entityFlag, teamId, applicationId, questionId);
+            OnErrorCreateFiles(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, entityFlag, teamId, applicationId, questionId);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1203,7 +393,7 @@ namespace GatewayApiSdk.Api
         /// <param name="teamId"></param>
         /// <param name="applicationId"></param>
         /// <param name="questionId"></param>
-        partial void OnErrorFceeda218a8998a137b9d7692e7947b6(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<string> entityFlag, Option<int> teamId, Option<int> applicationId, Option<int> questionId);
+        partial void OnErrorCreateFiles(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<string> entityFlag, Option<int> teamId, Option<int> applicationId, Option<int> questionId);
 
         /// <summary>
         /// Upload@upload Upload a file to the gateway-api via scanning sub-service
@@ -1213,12 +403,12 @@ namespace GatewayApiSdk.Api
         /// <param name="applicationId">Id of dar application associated with the file upload (optional)</param>
         /// <param name="questionId">Id of the question in the dar application associated with the file upload (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFceeda218a8998a137b9d7692e7947b6ApiResponse"/>&gt;</returns>
-        public async Task<IFceeda218a8998a137b9d7692e7947b6ApiResponse?> Fceeda218a8998a137b9d7692e7947b6OrDefaultAsync(Option<string> entityFlag = default, Option<int> teamId = default, Option<int> applicationId = default, Option<int> questionId = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateFilesApiResponse"/>&gt;</returns>
+        public async Task<ICreateFilesApiResponse?> CreateFilesOrDefaultAsync(Option<string> entityFlag = default, Option<int> teamId = default, Option<int> applicationId = default, Option<int> questionId = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Fceeda218a8998a137b9d7692e7947b6Async(entityFlag, teamId, applicationId, questionId, cancellationToken).ConfigureAwait(false);
+                return await CreateFilesAsync(entityFlag, teamId, applicationId, questionId, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1235,16 +425,16 @@ namespace GatewayApiSdk.Api
         /// <param name="applicationId">Id of dar application associated with the file upload (optional)</param>
         /// <param name="questionId">Id of the question in the dar application associated with the file upload (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFceeda218a8998a137b9d7692e7947b6ApiResponse"/>&gt;</returns>
-        public async Task<IFceeda218a8998a137b9d7692e7947b6ApiResponse> Fceeda218a8998a137b9d7692e7947b6Async(Option<string> entityFlag = default, Option<int> teamId = default, Option<int> applicationId = default, Option<int> questionId = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateFilesApiResponse"/>&gt;</returns>
+        public async Task<ICreateFilesApiResponse> CreateFilesAsync(Option<string> entityFlag = default, Option<int> teamId = default, Option<int> applicationId = default, Option<int> questionId = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateFceeda218a8998a137b9d7692e7947b6(entityFlag);
+                ValidateCreateFiles(entityFlag);
 
-                FormatFceeda218a8998a137b9d7692e7947b6(ref entityFlag, ref teamId, ref applicationId, ref questionId);
+                FormatCreateFiles(ref entityFlag, ref teamId, ref applicationId, ref questionId);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1288,7 +478,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Fceeda218a8998a137b9d7692e7947b6ApiResponse apiResponseLocalVar;
+                        CreateFilesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -1299,9 +489,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterFceeda218a8998a137b9d7692e7947b6DefaultImplementation(apiResponseLocalVar, entityFlag, teamId, applicationId, questionId);
+                        AfterCreateFilesDefaultImplementation(apiResponseLocalVar, entityFlag, teamId, applicationId, questionId);
 
-                        Events.ExecuteOnFceeda218a8998a137b9d7692e7947b6(apiResponseLocalVar);
+                        Events.ExecuteOnCreateFiles(apiResponseLocalVar);
 
                         return apiResponseLocalVar;
                     }
@@ -1309,16 +499,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorFceeda218a8998a137b9d7692e7947b6DefaultImplementation(e, "/api/v1/files", uriBuilderLocalVar.Path, entityFlag, teamId, applicationId, questionId);
-                Events.ExecuteOnErrorFceeda218a8998a137b9d7692e7947b6(e);
+                OnErrorCreateFilesDefaultImplementation(e, "/api/v1/files", uriBuilderLocalVar.Path, entityFlag, teamId, applicationId, questionId);
+                Events.ExecuteOnErrorCreateFiles(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Fceeda218a8998a137b9d7692e7947b6ApiResponse"/>
+        /// The <see cref="CreateFilesApiResponse"/>
         /// </summary>
-        public partial class Fceeda218a8998a137b9d7692e7947b6ApiResponse : GatewayApiSdk.Client.ApiResponse, IFceeda218a8998a137b9d7692e7947b6ApiResponse
+        public partial class CreateFilesApiResponse : GatewayApiSdk.Client.ApiResponse, ICreateFilesApiResponse
         {
             /// <summary>
             /// The logger
@@ -1326,7 +516,7 @@ namespace GatewayApiSdk.Api
             public ILogger<UploadApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Fceeda218a8998a137b9d7692e7947b6ApiResponse"/>
+            /// The <see cref="CreateFilesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1335,14 +525,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Fceeda218a8998a137b9d7692e7947b6ApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public CreateFilesApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Fceeda218a8998a137b9d7692e7947b6ApiResponse"/>
+            /// The <see cref="CreateFilesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1351,7 +541,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Fceeda218a8998a137b9d7692e7947b6ApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public CreateFilesApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1369,11 +559,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Fceeda218a8998a137b9d7692e7947b6200Response? Ok()
+            public GatewayApiSdk.Model.CreateFiles200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Fceeda218a8998a137b9d7692e7947b6200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateFiles200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1382,7 +572,817 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Fceeda218a8998a137b9d7692e7947b6200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.CreateFiles200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatDeleteFilesProcessed(ref string id);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        private void ValidateDeleteFilesProcessed(string id)
+        {
+            if (id == null)
+                throw new ArgumentNullException(nameof(id));
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        private void AfterDeleteFilesProcessedDefaultImplementation(IDeleteFilesProcessedApiResponse apiResponseLocalVar, string id)
+        {
+            bool suppressDefaultLog = false;
+            AfterDeleteFilesProcessed(ref suppressDefaultLog, apiResponseLocalVar, id);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        partial void AfterDeleteFilesProcessed(ref bool suppressDefaultLog, IDeleteFilesProcessedApiResponse apiResponseLocalVar, string id);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        private void OnErrorDeleteFilesProcessedDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string id)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorDeleteFilesProcessed(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        partial void OnErrorDeleteFilesProcessed(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string id);
+
+        /// <summary>
+        /// Upload@destroy Delete a processed file
+        /// </summary>
+        /// <param name="id">file uuid</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteFilesProcessedApiResponse"/>&gt;</returns>
+        public async Task<IDeleteFilesProcessedApiResponse?> DeleteFilesProcessedOrDefaultAsync(string id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await DeleteFilesProcessedAsync(id, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Upload@destroy Delete a processed file
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">file uuid</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteFilesProcessedApiResponse"/>&gt;</returns>
+        public async Task<IDeleteFilesProcessedApiResponse> DeleteFilesProcessedAsync(string id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                ValidateDeleteFilesProcessed(id);
+
+                FormatDeleteFilesProcessed(ref id);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/files/processed/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/files/processed/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Delete;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        DeleteFilesProcessedApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/files/processed/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterDeleteFilesProcessedDefaultImplementation(apiResponseLocalVar, id);
+
+                        Events.ExecuteOnDeleteFilesProcessed(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorDeleteFilesProcessedDefaultImplementation(e, "/api/v1/files/processed/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorDeleteFilesProcessed(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="DeleteFilesProcessedApiResponse"/>
+        /// </summary>
+        public partial class DeleteFilesProcessedApiResponse : GatewayApiSdk.Client.ApiResponse, IDeleteFilesProcessedApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<UploadApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="DeleteFilesProcessedApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public DeleteFilesProcessedApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="DeleteFilesProcessedApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public DeleteFilesProcessedApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public bool IsInternalServerError => 500 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsInternalServerError
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = InternalServerError();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchFiles(ref string uuid);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="uuid"></param>
+        /// <returns></returns>
+        private void ValidateFetchFiles(string uuid)
+        {
+            if (uuid == null)
+                throw new ArgumentNullException(nameof(uuid));
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="uuid"></param>
+        private void AfterFetchFilesDefaultImplementation(IFetchFilesApiResponse apiResponseLocalVar, string uuid)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchFiles(ref suppressDefaultLog, apiResponseLocalVar, uuid);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="uuid"></param>
+        partial void AfterFetchFiles(ref bool suppressDefaultLog, IFetchFilesApiResponse apiResponseLocalVar, string uuid);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="uuid"></param>
+        private void OnErrorFetchFilesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string uuid)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchFiles(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, uuid);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="uuid"></param>
+        partial void OnErrorFetchFiles(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string uuid);
+
+        /// <summary>
+        /// Upload@show Get the scanning status of an upload
+        /// </summary>
+        /// <param name="uuid">upload id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchFilesApiResponse"/>&gt;</returns>
+        public async Task<IFetchFilesApiResponse?> FetchFilesOrDefaultAsync(string uuid, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchFilesAsync(uuid, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Upload@show Get the scanning status of an upload
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuid">upload id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchFilesApiResponse"/>&gt;</returns>
+        public async Task<IFetchFilesApiResponse> FetchFilesAsync(string uuid, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                ValidateFetchFiles(uuid);
+
+                FormatFetchFiles(ref uuid);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/files/{uuid}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/files/{uuid}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Buuid%7D", Uri.EscapeDataString(uuid.ToString()));
+
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchFilesApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/files/{uuid}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchFilesDefaultImplementation(apiResponseLocalVar, uuid);
+
+                        Events.ExecuteOnFetchFiles(apiResponseLocalVar);
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchFilesDefaultImplementation(e, "/api/v1/files/{uuid}", uriBuilderLocalVar.Path, uuid);
+                Events.ExecuteOnErrorFetchFiles(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchFilesApiResponse"/>
+        /// </summary>
+        public partial class FetchFilesApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchFilesApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<UploadApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchFilesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchFilesApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchFilesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchFilesApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchFiles200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchFiles200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchFiles200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchFilesProcessedContent(ref string uuid);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="uuid"></param>
+        /// <returns></returns>
+        private void ValidateFetchFilesProcessedContent(string uuid)
+        {
+            if (uuid == null)
+                throw new ArgumentNullException(nameof(uuid));
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="uuid"></param>
+        private void AfterFetchFilesProcessedContentDefaultImplementation(IFetchFilesProcessedContentApiResponse apiResponseLocalVar, string uuid)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchFilesProcessedContent(ref suppressDefaultLog, apiResponseLocalVar, uuid);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="uuid"></param>
+        partial void AfterFetchFilesProcessedContent(ref bool suppressDefaultLog, IFetchFilesProcessedContentApiResponse apiResponseLocalVar, string uuid);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="uuid"></param>
+        private void OnErrorFetchFilesProcessedContentDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string uuid)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchFilesProcessedContent(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, uuid);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="uuid"></param>
+        partial void OnErrorFetchFilesProcessedContent(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string uuid);
+
+        /// <summary>
+        /// Upload@content Get the content of a processed file
+        /// </summary>
+        /// <param name="uuid">upload id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchFilesProcessedContentApiResponse"/>&gt;</returns>
+        public async Task<IFetchFilesProcessedContentApiResponse?> FetchFilesProcessedContentOrDefaultAsync(string uuid, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchFilesProcessedContentAsync(uuid, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Upload@content Get the content of a processed file
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuid">upload id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchFilesProcessedContentApiResponse"/>&gt;</returns>
+        public async Task<IFetchFilesProcessedContentApiResponse> FetchFilesProcessedContentAsync(string uuid, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                ValidateFetchFilesProcessedContent(uuid);
+
+                FormatFetchFilesProcessedContent(ref uuid);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/files/processed/{uuid}/download"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/files/processed/{uuid}/download");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Buuid%7D", Uri.EscapeDataString(uuid.ToString()));
+
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchFilesProcessedContentApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/files/processed/{uuid}/download", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchFilesProcessedContentDefaultImplementation(apiResponseLocalVar, uuid);
+
+                        Events.ExecuteOnFetchFilesProcessedContent(apiResponseLocalVar);
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchFilesProcessedContentDefaultImplementation(e, "/api/v1/files/processed/{uuid}/download", uriBuilderLocalVar.Path, uuid);
+                Events.ExecuteOnErrorFetchFilesProcessedContent(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchFilesProcessedContentApiResponse"/>
+        /// </summary>
+        public partial class FetchFilesProcessedContentApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchFilesProcessedContentApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<UploadApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchFilesProcessedContentApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchFilesProcessedContentApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchFilesProcessedContentApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchFilesProcessedContentApiResponse(ILogger<UploadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchFilesProcessedContent200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchFilesProcessedContent200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchFilesProcessedContent200Response? result)
             {
                 result = null;
 

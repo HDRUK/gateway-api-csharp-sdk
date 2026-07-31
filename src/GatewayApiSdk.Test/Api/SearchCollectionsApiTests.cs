@@ -51,17 +51,17 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Aa33edfdace17b70600d964e0db4d44b
+        /// Test SearchCollections
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Aa33edfdace17b70600d964e0db4d44bAsyncTest()
+        public async Task SearchCollectionsAsyncTest()
         {
-            Aa33edfdace17b70600d964e0db4d44bRequest aa33edfdace17b70600d964e0db4d44bRequest = default!;
+            SearchCollectionsRequest searchCollectionsRequest = default!;
             Client.Option<string> sort = default!;
             Client.Option<string> direction = default!;
-            var response = await _instance.Aa33edfdace17b70600d964e0db4d44bAsync(aa33edfdace17b70600d964e0db4d44bRequest, sort, direction);
+            var response = await _instance.SearchCollectionsAsync(searchCollectionsRequest, sort, direction);
             var model = response.Ok();
-            Assert.IsType<Aa33edfdace17b70600d964e0db4d44b200Response>(model);
+            Assert.IsType<SearchCollections200Response>(model);
         }
     }
 }

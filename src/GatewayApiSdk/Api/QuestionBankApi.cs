@@ -39,106 +39,50 @@ namespace GatewayApiSdk.Api
         QuestionBankApiEvents Events { get; }
 
         /// <summary>
-        /// QuestionBank@showVersion
+        /// QuestionBank@store
         /// </summary>
         /// <remarks>
-        /// Return a single system question bank question version
+        /// Create a new system question bank question with FE-helpful input format
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">question bank question version id</param>
+        /// <param name="createQuestionBankQuestionRequest">QuestionBank definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IA3f9ce42420fdef136cfc7b0de8e2683ApiResponse"/>&gt;</returns>
-        Task<IA3f9ce42420fdef136cfc7b0de8e2683ApiResponse> A3f9ce42420fdef136cfc7b0de8e2683Async(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateQuestionBankQuestionApiResponse"/>&gt;</returns>
+        Task<ICreateQuestionBankQuestionApiResponse> CreateQuestionBankQuestionAsync(CreateQuestionBankQuestionRequest createQuestionBankQuestionRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// QuestionBank@showVersion
+        /// QuestionBank@store
         /// </summary>
         /// <remarks>
-        /// Return a single system question bank question version
+        /// Create a new system question bank question with FE-helpful input format
         /// </remarks>
-        /// <param name="id">question bank question version id</param>
+        /// <param name="createQuestionBankQuestionRequest">QuestionBank definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IA3f9ce42420fdef136cfc7b0de8e2683ApiResponse"/>?&gt;</returns>
-        Task<IA3f9ce42420fdef136cfc7b0de8e2683ApiResponse?> A3f9ce42420fdef136cfc7b0de8e2683OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateQuestionBankQuestionApiResponse"/>?&gt;</returns>
+        Task<ICreateQuestionBankQuestionApiResponse?> CreateQuestionBankQuestionOrDefaultAsync(CreateQuestionBankQuestionRequest createQuestionBankQuestionRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// TeamQuestionBank@indexBySection
+        /// QuestionBank@destroy
         /// </summary>
         /// <remarks>
-        /// List of question bank questions by section
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">Team ID</param>
-        /// <param name="sectionId">section id</param>
-        /// <param name="isChild">filter on is_child field (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall04e09f4aada3406dbc08715865880f4fApiResponse"/>&gt;</returns>
-        Task<ICall04e09f4aada3406dbc08715865880f4fApiResponse> Call04e09f4aada3406dbc08715865880f4fAsync(int teamId, int sectionId, Option<int> isChild = default, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// TeamQuestionBank@indexBySection
-        /// </summary>
-        /// <remarks>
-        /// List of question bank questions by section
-        /// </remarks>
-        /// <param name="teamId">Team ID</param>
-        /// <param name="sectionId">section id</param>
-        /// <param name="isChild">filter on is_child field (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall04e09f4aada3406dbc08715865880f4fApiResponse"/>?&gt;</returns>
-        Task<ICall04e09f4aada3406dbc08715865880f4fApiResponse?> Call04e09f4aada3406dbc08715865880f4fOrDefaultAsync(int teamId, int sectionId, Option<int> isChild = default, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// QuestionBank@show
-        /// </summary>
-        /// <remarks>
-        /// Return the latest question bank question version for the supplied question id, in an FE-friendly format
+        /// Delete a system question bank question
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">question bank question id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall17336ba551813e00975d3c2da09211c0ApiResponse"/>&gt;</returns>
-        Task<ICall17336ba551813e00975d3c2da09211c0ApiResponse> Call17336ba551813e00975d3c2da09211c0Async(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteQuestionBankQuestionApiResponse"/>&gt;</returns>
+        Task<IDeleteQuestionBankQuestionApiResponse> DeleteQuestionBankQuestionAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// QuestionBank@show
+        /// QuestionBank@destroy
         /// </summary>
         /// <remarks>
-        /// Return the latest question bank question version for the supplied question id, in an FE-friendly format
+        /// Delete a system question bank question
         /// </remarks>
         /// <param name="id">question bank question id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall17336ba551813e00975d3c2da09211c0ApiResponse"/>?&gt;</returns>
-        Task<ICall17336ba551813e00975d3c2da09211c0ApiResponse?> Call17336ba551813e00975d3c2da09211c0OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// QuestionBank@index
-        /// </summary>
-        /// <remarks>
-        /// List of question bank questions
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sectionId">section id (optional)</param>
-        /// <param name="isChild">filter on is_child field (optional)</param>
-        /// <param name="perPage">per page (optional)</param>
-        /// <param name="page">page (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall35856fcdf6980ae4da3303ec5a8d90b7ApiResponse"/>&gt;</returns>
-        Task<ICall35856fcdf6980ae4da3303ec5a8d90b7ApiResponse> Call35856fcdf6980ae4da3303ec5a8d90b7Async(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// QuestionBank@index
-        /// </summary>
-        /// <remarks>
-        /// List of question bank questions
-        /// </remarks>
-        /// <param name="sectionId">section id (optional)</param>
-        /// <param name="isChild">filter on is_child field (optional)</param>
-        /// <param name="perPage">per page (optional)</param>
-        /// <param name="page">page (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall35856fcdf6980ae4da3303ec5a8d90b7ApiResponse"/>?&gt;</returns>
-        Task<ICall35856fcdf6980ae4da3303ec5a8d90b7ApiResponse?> Call35856fcdf6980ae4da3303ec5a8d90b7OrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteQuestionBankQuestionApiResponse"/>?&gt;</returns>
+        Task<IDeleteQuestionBankQuestionApiResponse?> DeleteQuestionBankQuestionOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// QuestionBank@destroyFile
@@ -150,8 +94,8 @@ namespace GatewayApiSdk.Api
         /// <param name="id">question bank question id</param>
         /// <param name="fileId">file uuid</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall35b36a3a067579d62500b09623dbffb6ApiResponse"/>&gt;</returns>
-        Task<ICall35b36a3a067579d62500b09623dbffb6ApiResponse> Call35b36a3a067579d62500b09623dbffb6Async(int id, int fileId, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDownloadQuestionBankQuestionFileApiResponse"/>&gt;</returns>
+        Task<IDownloadQuestionBankQuestionFileApiResponse> DownloadQuestionBankQuestionFileAsync(int id, int fileId, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// QuestionBank@destroyFile
@@ -162,56 +106,8 @@ namespace GatewayApiSdk.Api
         /// <param name="id">question bank question id</param>
         /// <param name="fileId">file uuid</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall35b36a3a067579d62500b09623dbffb6ApiResponse"/>?&gt;</returns>
-        Task<ICall35b36a3a067579d62500b09623dbffb6ApiResponse?> Call35b36a3a067579d62500b09623dbffb6OrDefaultAsync(int id, int fileId, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// QuestionBank@store
-        /// </summary>
-        /// <remarks>
-        /// Create a new system question bank question with FE-helpful input format
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model38b0b31c2029a219013fa640588a4a69Request">QuestionBank definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall38b0b31c2029a219013fa640588a4a69ApiResponse"/>&gt;</returns>
-        Task<ICall38b0b31c2029a219013fa640588a4a69ApiResponse> Call38b0b31c2029a219013fa640588a4a69Async(Model38b0b31c2029a219013fa640588a4a69Request model38b0b31c2029a219013fa640588a4a69Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// QuestionBank@store
-        /// </summary>
-        /// <remarks>
-        /// Create a new system question bank question with FE-helpful input format
-        /// </remarks>
-        /// <param name="model38b0b31c2029a219013fa640588a4a69Request">QuestionBank definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall38b0b31c2029a219013fa640588a4a69ApiResponse"/>?&gt;</returns>
-        Task<ICall38b0b31c2029a219013fa640588a4a69ApiResponse?> Call38b0b31c2029a219013fa640588a4a69OrDefaultAsync(Model38b0b31c2029a219013fa640588a4a69Request model38b0b31c2029a219013fa640588a4a69Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// QuestionBank@update
-        /// </summary>
-        /// <remarks>
-        /// Update a system question bank question - children and their versions are updated through parents
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">question bank question id</param>
-        /// <param name="model64d6f1d6c88cbcfccd3e511b29c394d6Request">QuestionBank definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse"/>&gt;</returns>
-        Task<ICall64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse> Call64d6f1d6c88cbcfccd3e511b29c394d6Async(int id, Model64d6f1d6c88cbcfccd3e511b29c394d6Request model64d6f1d6c88cbcfccd3e511b29c394d6Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// QuestionBank@update
-        /// </summary>
-        /// <remarks>
-        /// Update a system question bank question - children and their versions are updated through parents
-        /// </remarks>
-        /// <param name="id">question bank question id</param>
-        /// <param name="model64d6f1d6c88cbcfccd3e511b29c394d6Request">QuestionBank definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse"/>?&gt;</returns>
-        Task<ICall64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse?> Call64d6f1d6c88cbcfccd3e511b29c394d6OrDefaultAsync(int id, Model64d6f1d6c88cbcfccd3e511b29c394d6Request model64d6f1d6c88cbcfccd3e511b29c394d6Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDownloadQuestionBankQuestionFileApiResponse"/>?&gt;</returns>
+        Task<IDownloadQuestionBankQuestionFileApiResponse?> DownloadQuestionBankQuestionFileOrDefaultAsync(int id, int fileId, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// QuestionBank@update
@@ -221,10 +117,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">question bank question id</param>
-        /// <param name="d38b27b30f91d05932ca855e021c8ffdRequest">QuestionBank definition</param>
+        /// <param name="editQuestionBankQuestionRequest">QuestionBank definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID38b27b30f91d05932ca855e021c8ffdApiResponse"/>&gt;</returns>
-        Task<ID38b27b30f91d05932ca855e021c8ffdApiResponse> D38b27b30f91d05932ca855e021c8ffdAsync(int id, D38b27b30f91d05932ca855e021c8ffdRequest d38b27b30f91d05932ca855e021c8ffdRequest, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditQuestionBankQuestionApiResponse"/>&gt;</returns>
+        Task<IEditQuestionBankQuestionApiResponse> EditQuestionBankQuestionAsync(int id, EditQuestionBankQuestionRequest editQuestionBankQuestionRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// QuestionBank@update
@@ -233,35 +129,10 @@ namespace GatewayApiSdk.Api
         /// Edit a system question bank question - use this for parents and children separately
         /// </remarks>
         /// <param name="id">question bank question id</param>
-        /// <param name="d38b27b30f91d05932ca855e021c8ffdRequest">QuestionBank definition</param>
+        /// <param name="editQuestionBankQuestionRequest">QuestionBank definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID38b27b30f91d05932ca855e021c8ffdApiResponse"/>?&gt;</returns>
-        Task<ID38b27b30f91d05932ca855e021c8ffdApiResponse?> D38b27b30f91d05932ca855e021c8ffdOrDefaultAsync(int id, D38b27b30f91d05932ca855e021c8ffdRequest d38b27b30f91d05932ca855e021c8ffdRequest, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// QuestionBank@updateStatus
-        /// </summary>
-        /// <remarks>
-        /// Lock, unlock, archive or unarchive a question bank question
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">question bank question id</param>
-        /// <param name="status">lock or unlock</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDa82f7ce4870bd37af28a192877b22a7ApiResponse"/>&gt;</returns>
-        Task<IDa82f7ce4870bd37af28a192877b22a7ApiResponse> Da82f7ce4870bd37af28a192877b22a7Async(int id, string status, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// QuestionBank@updateStatus
-        /// </summary>
-        /// <remarks>
-        /// Lock, unlock, archive or unarchive a question bank question
-        /// </remarks>
-        /// <param name="id">question bank question id</param>
-        /// <param name="status">lock or unlock</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDa82f7ce4870bd37af28a192877b22a7ApiResponse"/>?&gt;</returns>
-        Task<IDa82f7ce4870bd37af28a192877b22a7ApiResponse?> Da82f7ce4870bd37af28a192877b22a7OrDefaultAsync(int id, string status, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditQuestionBankQuestionApiResponse"/>?&gt;</returns>
+        Task<IEditQuestionBankQuestionApiResponse?> EditQuestionBankQuestionOrDefaultAsync(int id, EditQuestionBankQuestionRequest editQuestionBankQuestionRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// QuestionBank@indexArchived
@@ -275,8 +146,8 @@ namespace GatewayApiSdk.Api
         /// <param name="perPage">per page (optional)</param>
         /// <param name="page">page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDbaa6922ceaa314314605cba51dbb9dfApiResponse"/>&gt;</returns>
-        Task<IDbaa6922ceaa314314605cba51dbb9dfApiResponse> Dbaa6922ceaa314314605cba51dbb9dfAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchArchivedQuestionBankQuestionsApiResponse"/>&gt;</returns>
+        Task<IFetchArchivedQuestionBankQuestionsApiResponse> FetchArchivedQuestionBankQuestionsAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// QuestionBank@indexArchived
@@ -289,60 +160,8 @@ namespace GatewayApiSdk.Api
         /// <param name="perPage">per page (optional)</param>
         /// <param name="page">page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDbaa6922ceaa314314605cba51dbb9dfApiResponse"/>?&gt;</returns>
-        Task<IDbaa6922ceaa314314605cba51dbb9dfApiResponse?> Dbaa6922ceaa314314605cba51dbb9dfOrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// QuestionBank@destroy
-        /// </summary>
-        /// <remarks>
-        /// Delete a system question bank question
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">question bank question id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IE7408526aeb9ed9cc633d4a9f25cfa14ApiResponse"/>&gt;</returns>
-        Task<IE7408526aeb9ed9cc633d4a9f25cfa14ApiResponse> E7408526aeb9ed9cc633d4a9f25cfa14Async(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// QuestionBank@destroy
-        /// </summary>
-        /// <remarks>
-        /// Delete a system question bank question
-        /// </remarks>
-        /// <param name="id">question bank question id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IE7408526aeb9ed9cc633d4a9f25cfa14ApiResponse"/>?&gt;</returns>
-        Task<IE7408526aeb9ed9cc633d4a9f25cfa14ApiResponse?> E7408526aeb9ed9cc633d4a9f25cfa14OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// QuestionBank@indexStandard
-        /// </summary>
-        /// <remarks>
-        /// List of standard question bank questions
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sectionId">section id (optional)</param>
-        /// <param name="isChild">filter on is_child field (optional)</param>
-        /// <param name="perPage">per page (optional)</param>
-        /// <param name="page">page (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IEa6f671b0436fa57891fe098994556a1ApiResponse"/>&gt;</returns>
-        Task<IEa6f671b0436fa57891fe098994556a1ApiResponse> Ea6f671b0436fa57891fe098994556a1Async(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// QuestionBank@indexStandard
-        /// </summary>
-        /// <remarks>
-        /// List of standard question bank questions
-        /// </remarks>
-        /// <param name="sectionId">section id (optional)</param>
-        /// <param name="isChild">filter on is_child field (optional)</param>
-        /// <param name="perPage">per page (optional)</param>
-        /// <param name="page">page (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IEa6f671b0436fa57891fe098994556a1ApiResponse"/>?&gt;</returns>
-        Task<IEa6f671b0436fa57891fe098994556a1ApiResponse?> Ea6f671b0436fa57891fe098994556a1OrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchArchivedQuestionBankQuestionsApiResponse"/>?&gt;</returns>
+        Task<IFetchArchivedQuestionBankQuestionsApiResponse?> FetchArchivedQuestionBankQuestionsOrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// QuestionBank@indexCustom
@@ -356,8 +175,8 @@ namespace GatewayApiSdk.Api
         /// <param name="perPage">per page (optional)</param>
         /// <param name="page">page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFa7079be66c6e1f5a236ecac24b63e2bApiResponse"/>&gt;</returns>
-        Task<IFa7079be66c6e1f5a236ecac24b63e2bApiResponse> Fa7079be66c6e1f5a236ecac24b63e2bAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchCustomQuestionBankQuestionsApiResponse"/>&gt;</returns>
+        Task<IFetchCustomQuestionBankQuestionsApiResponse> FetchCustomQuestionBankQuestionsAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// QuestionBank@indexCustom
@@ -370,14 +189,195 @@ namespace GatewayApiSdk.Api
         /// <param name="perPage">per page (optional)</param>
         /// <param name="page">page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFa7079be66c6e1f5a236ecac24b63e2bApiResponse"/>?&gt;</returns>
-        Task<IFa7079be66c6e1f5a236ecac24b63e2bApiResponse?> Fa7079be66c6e1f5a236ecac24b63e2bOrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchCustomQuestionBankQuestionsApiResponse"/>?&gt;</returns>
+        Task<IFetchCustomQuestionBankQuestionsApiResponse?> FetchCustomQuestionBankQuestionsOrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// QuestionBank@show
+        /// </summary>
+        /// <remarks>
+        /// Return the latest question bank question version for the supplied question id, in an FE-friendly format
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">question bank question id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchQuestionBankQuestionApiResponse"/>&gt;</returns>
+        Task<IFetchQuestionBankQuestionApiResponse> FetchQuestionBankQuestionAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// QuestionBank@show
+        /// </summary>
+        /// <remarks>
+        /// Return the latest question bank question version for the supplied question id, in an FE-friendly format
+        /// </remarks>
+        /// <param name="id">question bank question id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchQuestionBankQuestionApiResponse"/>?&gt;</returns>
+        Task<IFetchQuestionBankQuestionApiResponse?> FetchQuestionBankQuestionOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// QuestionBank@showVersion
+        /// </summary>
+        /// <remarks>
+        /// Return a single system question bank question version
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">question bank question version id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchQuestionBankQuestionVersionApiResponse"/>&gt;</returns>
+        Task<IFetchQuestionBankQuestionVersionApiResponse> FetchQuestionBankQuestionVersionAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// QuestionBank@showVersion
+        /// </summary>
+        /// <remarks>
+        /// Return a single system question bank question version
+        /// </remarks>
+        /// <param name="id">question bank question version id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchQuestionBankQuestionVersionApiResponse"/>?&gt;</returns>
+        Task<IFetchQuestionBankQuestionVersionApiResponse?> FetchQuestionBankQuestionVersionOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// QuestionBank@index
+        /// </summary>
+        /// <remarks>
+        /// List of question bank questions
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sectionId">section id (optional)</param>
+        /// <param name="isChild">filter on is_child field (optional)</param>
+        /// <param name="perPage">per page (optional)</param>
+        /// <param name="page">page (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchQuestionBankQuestionsApiResponse"/>&gt;</returns>
+        Task<IFetchQuestionBankQuestionsApiResponse> FetchQuestionBankQuestionsAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// QuestionBank@index
+        /// </summary>
+        /// <remarks>
+        /// List of question bank questions
+        /// </remarks>
+        /// <param name="sectionId">section id (optional)</param>
+        /// <param name="isChild">filter on is_child field (optional)</param>
+        /// <param name="perPage">per page (optional)</param>
+        /// <param name="page">page (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchQuestionBankQuestionsApiResponse"/>?&gt;</returns>
+        Task<IFetchQuestionBankQuestionsApiResponse?> FetchQuestionBankQuestionsOrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// QuestionBank@indexStandard
+        /// </summary>
+        /// <remarks>
+        /// List of standard question bank questions
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sectionId">section id (optional)</param>
+        /// <param name="isChild">filter on is_child field (optional)</param>
+        /// <param name="perPage">per page (optional)</param>
+        /// <param name="page">page (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchStandardQuestionBankQuestionsApiResponse"/>&gt;</returns>
+        Task<IFetchStandardQuestionBankQuestionsApiResponse> FetchStandardQuestionBankQuestionsAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// QuestionBank@indexStandard
+        /// </summary>
+        /// <remarks>
+        /// List of standard question bank questions
+        /// </remarks>
+        /// <param name="sectionId">section id (optional)</param>
+        /// <param name="isChild">filter on is_child field (optional)</param>
+        /// <param name="perPage">per page (optional)</param>
+        /// <param name="page">page (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchStandardQuestionBankQuestionsApiResponse"/>?&gt;</returns>
+        Task<IFetchStandardQuestionBankQuestionsApiResponse?> FetchStandardQuestionBankQuestionsOrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// TeamQuestionBank@indexBySection
+        /// </summary>
+        /// <remarks>
+        /// List of question bank questions by section
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="sectionId">section id</param>
+        /// <param name="isChild">filter on is_child field (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamQuestionBankQuestionsBySectionApiResponse"/>&gt;</returns>
+        Task<IFetchTeamQuestionBankQuestionsBySectionApiResponse> FetchTeamQuestionBankQuestionsBySectionAsync(int teamId, int sectionId, Option<int> isChild = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// TeamQuestionBank@indexBySection
+        /// </summary>
+        /// <remarks>
+        /// List of question bank questions by section
+        /// </remarks>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="sectionId">section id</param>
+        /// <param name="isChild">filter on is_child field (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamQuestionBankQuestionsBySectionApiResponse"/>?&gt;</returns>
+        Task<IFetchTeamQuestionBankQuestionsBySectionApiResponse?> FetchTeamQuestionBankQuestionsBySectionOrDefaultAsync(int teamId, int sectionId, Option<int> isChild = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// QuestionBank@update
+        /// </summary>
+        /// <remarks>
+        /// Update a system question bank question - children and their versions are updated through parents
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">question bank question id</param>
+        /// <param name="updateQuestionBankQuestionRequest">QuestionBank definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateQuestionBankQuestionApiResponse"/>&gt;</returns>
+        Task<IUpdateQuestionBankQuestionApiResponse> UpdateQuestionBankQuestionAsync(int id, UpdateQuestionBankQuestionRequest updateQuestionBankQuestionRequest, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// QuestionBank@update
+        /// </summary>
+        /// <remarks>
+        /// Update a system question bank question - children and their versions are updated through parents
+        /// </remarks>
+        /// <param name="id">question bank question id</param>
+        /// <param name="updateQuestionBankQuestionRequest">QuestionBank definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateQuestionBankQuestionApiResponse"/>?&gt;</returns>
+        Task<IUpdateQuestionBankQuestionApiResponse?> UpdateQuestionBankQuestionOrDefaultAsync(int id, UpdateQuestionBankQuestionRequest updateQuestionBankQuestionRequest, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// QuestionBank@updateStatus
+        /// </summary>
+        /// <remarks>
+        /// Lock, unlock, archive or unarchive a question bank question
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">question bank question id</param>
+        /// <param name="status">lock or unlock</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateQuestionBankQuestionStatusApiResponse"/>&gt;</returns>
+        Task<IUpdateQuestionBankQuestionStatusApiResponse> UpdateQuestionBankQuestionStatusAsync(int id, string status, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// QuestionBank@updateStatus
+        /// </summary>
+        /// <remarks>
+        /// Lock, unlock, archive or unarchive a question bank question
+        /// </remarks>
+        /// <param name="id">question bank question id</param>
+        /// <param name="status">lock or unlock</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateQuestionBankQuestionStatusApiResponse"/>?&gt;</returns>
+        Task<IUpdateQuestionBankQuestionStatusApiResponse?> UpdateQuestionBankQuestionStatusOrDefaultAsync(int id, string status, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="IA3f9ce42420fdef136cfc7b0de8e2683ApiResponse"/>
+    /// The <see cref="ICreateQuestionBankQuestionApiResponse"/>
     /// </summary>
-    public interface IA3f9ce42420fdef136cfc7b0de8e2683ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.A3f9ce42420fdef136cfc7b0de8e2683200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
+    public interface ICreateQuestionBankQuestionApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CreateCategories200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -386,52 +386,16 @@ namespace GatewayApiSdk.Api
         bool IsOk { get; }
 
         /// <summary>
-        /// Returns true if the response is 404 NotFound
+        /// Returns true if the response is 500 InternalServerError
         /// </summary>
         /// <returns></returns>
-        bool IsNotFound { get; }
+        bool IsInternalServerError { get; }
     }
 
     /// <summary>
-    /// The <see cref="ICall04e09f4aada3406dbc08715865880f4fApiResponse"/>
+    /// The <see cref="IDeleteQuestionBankQuestionApiResponse"/>
     /// </summary>
-    public interface ICall04e09f4aada3406dbc08715865880f4fApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model04e09f4aada3406dbc08715865880f4f200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ICall17336ba551813e00975d3c2da09211c0ApiResponse"/>
-    /// </summary>
-    public interface ICall17336ba551813e00975d3c2da09211c0ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model17336ba551813e00975d3c2da09211c0200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ICall35856fcdf6980ae4da3303ec5a8d90b7ApiResponse"/>
-    /// </summary>
-    public interface ICall35856fcdf6980ae4da3303ec5a8d90b7ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model35856fcdf6980ae4da3303ec5a8d90b7200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ICall35b36a3a067579d62500b09623dbffb6ApiResponse"/>
-    /// </summary>
-    public interface ICall35b36a3a067579d62500b09623dbffb6ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IDeleteQuestionBankQuestionApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -453,27 +417,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall38b0b31c2029a219013fa640588a4a69ApiResponse"/>
+    /// The <see cref="IDownloadQuestionBankQuestionFileApiResponse"/>
     /// </summary>
-    public interface ICall38b0b31c2029a219013fa640588a4a69ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 500 InternalServerError
-        /// </summary>
-        /// <returns></returns>
-        bool IsInternalServerError { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ICall64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse"/>
-    /// </summary>
-    public interface ICall64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.Model64d6f1d6c88cbcfccd3e511b29c394d6200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IDownloadQuestionBankQuestionFileApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -495,9 +441,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ID38b27b30f91d05932ca855e021c8ffdApiResponse"/>
+    /// The <see cref="IEditQuestionBankQuestionApiResponse"/>
     /// </summary>
-    public interface ID38b27b30f91d05932ca855e021c8ffdApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.Model64d6f1d6c88cbcfccd3e511b29c394d6200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IEditQuestionBankQuestionApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateQuestionBankQuestion200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -519,9 +465,99 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IDa82f7ce4870bd37af28a192877b22a7ApiResponse"/>
+    /// The <see cref="IFetchArchivedQuestionBankQuestionsApiResponse"/>
     /// </summary>
-    public interface IDa82f7ce4870bd37af28a192877b22a7ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.Da82f7ce4870bd37af28a192877b22a7200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IFetchArchivedQuestionBankQuestionsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchQuestionBankQuestions200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchCustomQuestionBankQuestionsApiResponse"/>
+    /// </summary>
+    public interface IFetchCustomQuestionBankQuestionsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchCustomQuestionBankQuestions200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchQuestionBankQuestionApiResponse"/>
+    /// </summary>
+    public interface IFetchQuestionBankQuestionApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchQuestionBankQuestion200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchQuestionBankQuestionVersionApiResponse"/>
+    /// </summary>
+    public interface IFetchQuestionBankQuestionVersionApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchQuestionBankQuestionVersion200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 404 NotFound
+        /// </summary>
+        /// <returns></returns>
+        bool IsNotFound { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchQuestionBankQuestionsApiResponse"/>
+    /// </summary>
+    public interface IFetchQuestionBankQuestionsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchQuestionBankQuestions200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchStandardQuestionBankQuestionsApiResponse"/>
+    /// </summary>
+    public interface IFetchStandardQuestionBankQuestionsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchStandardQuestionBankQuestions200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchTeamQuestionBankQuestionsBySectionApiResponse"/>
+    /// </summary>
+    public interface IFetchTeamQuestionBankQuestionsBySectionApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchTeamQuestionBankQuestionsBySection200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IUpdateQuestionBankQuestionApiResponse"/>
+    /// </summary>
+    public interface IUpdateQuestionBankQuestionApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateQuestionBankQuestion200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -543,21 +579,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IDbaa6922ceaa314314605cba51dbb9dfApiResponse"/>
+    /// The <see cref="IUpdateQuestionBankQuestionStatusApiResponse"/>
     /// </summary>
-    public interface IDbaa6922ceaa314314605cba51dbb9dfApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model35856fcdf6980ae4da3303ec5a8d90b7200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IE7408526aeb9ed9cc633d4a9f25cfa14ApiResponse"/>
-    /// </summary>
-    public interface IE7408526aeb9ed9cc633d4a9f25cfa14ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IUpdateQuestionBankQuestionStatusApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateQuestionBankQuestionStatus200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -576,30 +600,6 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <returns></returns>
         bool IsInternalServerError { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IEa6f671b0436fa57891fe098994556a1ApiResponse"/>
-    /// </summary>
-    public interface IEa6f671b0436fa57891fe098994556a1ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Ea6f671b0436fa57891fe098994556a1200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IFa7079be66c6e1f5a236ecac24b63e2bApiResponse"/>
-    /// </summary>
-    public interface IFa7079be66c6e1f5a236ecac24b63e2bApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Fa7079be66c6e1f5a236ecac24b63e2b200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
     }
 
     /// <summary>
@@ -610,261 +610,261 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnA3f9ce42420fdef136cfc7b0de8e2683;
+        public event EventHandler<ApiResponseEventArgs>? OnCreateQuestionBankQuestion;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorA3f9ce42420fdef136cfc7b0de8e2683;
+        public event EventHandler<ExceptionEventArgs>? OnErrorCreateQuestionBankQuestion;
 
-        internal void ExecuteOnA3f9ce42420fdef136cfc7b0de8e2683(QuestionBankApi.A3f9ce42420fdef136cfc7b0de8e2683ApiResponse apiResponse)
+        internal void ExecuteOnCreateQuestionBankQuestion(QuestionBankApi.CreateQuestionBankQuestionApiResponse apiResponse)
         {
-            OnA3f9ce42420fdef136cfc7b0de8e2683?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnCreateQuestionBankQuestion?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorA3f9ce42420fdef136cfc7b0de8e2683(Exception exception)
+        internal void ExecuteOnErrorCreateQuestionBankQuestion(Exception exception)
         {
-            OnErrorA3f9ce42420fdef136cfc7b0de8e2683?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorCreateQuestionBankQuestion?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall04e09f4aada3406dbc08715865880f4f;
+        public event EventHandler<ApiResponseEventArgs>? OnDeleteQuestionBankQuestion;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall04e09f4aada3406dbc08715865880f4f;
+        public event EventHandler<ExceptionEventArgs>? OnErrorDeleteQuestionBankQuestion;
 
-        internal void ExecuteOnCall04e09f4aada3406dbc08715865880f4f(QuestionBankApi.Call04e09f4aada3406dbc08715865880f4fApiResponse apiResponse)
+        internal void ExecuteOnDeleteQuestionBankQuestion(QuestionBankApi.DeleteQuestionBankQuestionApiResponse apiResponse)
         {
-            OnCall04e09f4aada3406dbc08715865880f4f?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnDeleteQuestionBankQuestion?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall04e09f4aada3406dbc08715865880f4f(Exception exception)
+        internal void ExecuteOnErrorDeleteQuestionBankQuestion(Exception exception)
         {
-            OnErrorCall04e09f4aada3406dbc08715865880f4f?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorDeleteQuestionBankQuestion?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall17336ba551813e00975d3c2da09211c0;
+        public event EventHandler<ApiResponseEventArgs>? OnDownloadQuestionBankQuestionFile;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall17336ba551813e00975d3c2da09211c0;
+        public event EventHandler<ExceptionEventArgs>? OnErrorDownloadQuestionBankQuestionFile;
 
-        internal void ExecuteOnCall17336ba551813e00975d3c2da09211c0(QuestionBankApi.Call17336ba551813e00975d3c2da09211c0ApiResponse apiResponse)
+        internal void ExecuteOnDownloadQuestionBankQuestionFile(QuestionBankApi.DownloadQuestionBankQuestionFileApiResponse apiResponse)
         {
-            OnCall17336ba551813e00975d3c2da09211c0?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnDownloadQuestionBankQuestionFile?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall17336ba551813e00975d3c2da09211c0(Exception exception)
+        internal void ExecuteOnErrorDownloadQuestionBankQuestionFile(Exception exception)
         {
-            OnErrorCall17336ba551813e00975d3c2da09211c0?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorDownloadQuestionBankQuestionFile?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall35856fcdf6980ae4da3303ec5a8d90b7;
+        public event EventHandler<ApiResponseEventArgs>? OnEditQuestionBankQuestion;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall35856fcdf6980ae4da3303ec5a8d90b7;
+        public event EventHandler<ExceptionEventArgs>? OnErrorEditQuestionBankQuestion;
 
-        internal void ExecuteOnCall35856fcdf6980ae4da3303ec5a8d90b7(QuestionBankApi.Call35856fcdf6980ae4da3303ec5a8d90b7ApiResponse apiResponse)
+        internal void ExecuteOnEditQuestionBankQuestion(QuestionBankApi.EditQuestionBankQuestionApiResponse apiResponse)
         {
-            OnCall35856fcdf6980ae4da3303ec5a8d90b7?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnEditQuestionBankQuestion?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall35856fcdf6980ae4da3303ec5a8d90b7(Exception exception)
+        internal void ExecuteOnErrorEditQuestionBankQuestion(Exception exception)
         {
-            OnErrorCall35856fcdf6980ae4da3303ec5a8d90b7?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorEditQuestionBankQuestion?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall35b36a3a067579d62500b09623dbffb6;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchArchivedQuestionBankQuestions;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall35b36a3a067579d62500b09623dbffb6;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchArchivedQuestionBankQuestions;
 
-        internal void ExecuteOnCall35b36a3a067579d62500b09623dbffb6(QuestionBankApi.Call35b36a3a067579d62500b09623dbffb6ApiResponse apiResponse)
+        internal void ExecuteOnFetchArchivedQuestionBankQuestions(QuestionBankApi.FetchArchivedQuestionBankQuestionsApiResponse apiResponse)
         {
-            OnCall35b36a3a067579d62500b09623dbffb6?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchArchivedQuestionBankQuestions?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall35b36a3a067579d62500b09623dbffb6(Exception exception)
+        internal void ExecuteOnErrorFetchArchivedQuestionBankQuestions(Exception exception)
         {
-            OnErrorCall35b36a3a067579d62500b09623dbffb6?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchArchivedQuestionBankQuestions?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall38b0b31c2029a219013fa640588a4a69;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchCustomQuestionBankQuestions;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall38b0b31c2029a219013fa640588a4a69;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchCustomQuestionBankQuestions;
 
-        internal void ExecuteOnCall38b0b31c2029a219013fa640588a4a69(QuestionBankApi.Call38b0b31c2029a219013fa640588a4a69ApiResponse apiResponse)
+        internal void ExecuteOnFetchCustomQuestionBankQuestions(QuestionBankApi.FetchCustomQuestionBankQuestionsApiResponse apiResponse)
         {
-            OnCall38b0b31c2029a219013fa640588a4a69?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchCustomQuestionBankQuestions?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall38b0b31c2029a219013fa640588a4a69(Exception exception)
+        internal void ExecuteOnErrorFetchCustomQuestionBankQuestions(Exception exception)
         {
-            OnErrorCall38b0b31c2029a219013fa640588a4a69?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchCustomQuestionBankQuestions?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall64d6f1d6c88cbcfccd3e511b29c394d6;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchQuestionBankQuestion;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall64d6f1d6c88cbcfccd3e511b29c394d6;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchQuestionBankQuestion;
 
-        internal void ExecuteOnCall64d6f1d6c88cbcfccd3e511b29c394d6(QuestionBankApi.Call64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse apiResponse)
+        internal void ExecuteOnFetchQuestionBankQuestion(QuestionBankApi.FetchQuestionBankQuestionApiResponse apiResponse)
         {
-            OnCall64d6f1d6c88cbcfccd3e511b29c394d6?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchQuestionBankQuestion?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall64d6f1d6c88cbcfccd3e511b29c394d6(Exception exception)
+        internal void ExecuteOnErrorFetchQuestionBankQuestion(Exception exception)
         {
-            OnErrorCall64d6f1d6c88cbcfccd3e511b29c394d6?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchQuestionBankQuestion?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnD38b27b30f91d05932ca855e021c8ffd;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchQuestionBankQuestionVersion;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorD38b27b30f91d05932ca855e021c8ffd;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchQuestionBankQuestionVersion;
 
-        internal void ExecuteOnD38b27b30f91d05932ca855e021c8ffd(QuestionBankApi.D38b27b30f91d05932ca855e021c8ffdApiResponse apiResponse)
+        internal void ExecuteOnFetchQuestionBankQuestionVersion(QuestionBankApi.FetchQuestionBankQuestionVersionApiResponse apiResponse)
         {
-            OnD38b27b30f91d05932ca855e021c8ffd?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchQuestionBankQuestionVersion?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorD38b27b30f91d05932ca855e021c8ffd(Exception exception)
+        internal void ExecuteOnErrorFetchQuestionBankQuestionVersion(Exception exception)
         {
-            OnErrorD38b27b30f91d05932ca855e021c8ffd?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchQuestionBankQuestionVersion?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnDa82f7ce4870bd37af28a192877b22a7;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchQuestionBankQuestions;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorDa82f7ce4870bd37af28a192877b22a7;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchQuestionBankQuestions;
 
-        internal void ExecuteOnDa82f7ce4870bd37af28a192877b22a7(QuestionBankApi.Da82f7ce4870bd37af28a192877b22a7ApiResponse apiResponse)
+        internal void ExecuteOnFetchQuestionBankQuestions(QuestionBankApi.FetchQuestionBankQuestionsApiResponse apiResponse)
         {
-            OnDa82f7ce4870bd37af28a192877b22a7?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchQuestionBankQuestions?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorDa82f7ce4870bd37af28a192877b22a7(Exception exception)
+        internal void ExecuteOnErrorFetchQuestionBankQuestions(Exception exception)
         {
-            OnErrorDa82f7ce4870bd37af28a192877b22a7?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchQuestionBankQuestions?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnDbaa6922ceaa314314605cba51dbb9df;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchStandardQuestionBankQuestions;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorDbaa6922ceaa314314605cba51dbb9df;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchStandardQuestionBankQuestions;
 
-        internal void ExecuteOnDbaa6922ceaa314314605cba51dbb9df(QuestionBankApi.Dbaa6922ceaa314314605cba51dbb9dfApiResponse apiResponse)
+        internal void ExecuteOnFetchStandardQuestionBankQuestions(QuestionBankApi.FetchStandardQuestionBankQuestionsApiResponse apiResponse)
         {
-            OnDbaa6922ceaa314314605cba51dbb9df?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchStandardQuestionBankQuestions?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorDbaa6922ceaa314314605cba51dbb9df(Exception exception)
+        internal void ExecuteOnErrorFetchStandardQuestionBankQuestions(Exception exception)
         {
-            OnErrorDbaa6922ceaa314314605cba51dbb9df?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchStandardQuestionBankQuestions?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnE7408526aeb9ed9cc633d4a9f25cfa14;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchTeamQuestionBankQuestionsBySection;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorE7408526aeb9ed9cc633d4a9f25cfa14;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchTeamQuestionBankQuestionsBySection;
 
-        internal void ExecuteOnE7408526aeb9ed9cc633d4a9f25cfa14(QuestionBankApi.E7408526aeb9ed9cc633d4a9f25cfa14ApiResponse apiResponse)
+        internal void ExecuteOnFetchTeamQuestionBankQuestionsBySection(QuestionBankApi.FetchTeamQuestionBankQuestionsBySectionApiResponse apiResponse)
         {
-            OnE7408526aeb9ed9cc633d4a9f25cfa14?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchTeamQuestionBankQuestionsBySection?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorE7408526aeb9ed9cc633d4a9f25cfa14(Exception exception)
+        internal void ExecuteOnErrorFetchTeamQuestionBankQuestionsBySection(Exception exception)
         {
-            OnErrorE7408526aeb9ed9cc633d4a9f25cfa14?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchTeamQuestionBankQuestionsBySection?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnEa6f671b0436fa57891fe098994556a1;
+        public event EventHandler<ApiResponseEventArgs>? OnUpdateQuestionBankQuestion;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorEa6f671b0436fa57891fe098994556a1;
+        public event EventHandler<ExceptionEventArgs>? OnErrorUpdateQuestionBankQuestion;
 
-        internal void ExecuteOnEa6f671b0436fa57891fe098994556a1(QuestionBankApi.Ea6f671b0436fa57891fe098994556a1ApiResponse apiResponse)
+        internal void ExecuteOnUpdateQuestionBankQuestion(QuestionBankApi.UpdateQuestionBankQuestionApiResponse apiResponse)
         {
-            OnEa6f671b0436fa57891fe098994556a1?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnUpdateQuestionBankQuestion?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorEa6f671b0436fa57891fe098994556a1(Exception exception)
+        internal void ExecuteOnErrorUpdateQuestionBankQuestion(Exception exception)
         {
-            OnErrorEa6f671b0436fa57891fe098994556a1?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorUpdateQuestionBankQuestion?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFa7079be66c6e1f5a236ecac24b63e2b;
+        public event EventHandler<ApiResponseEventArgs>? OnUpdateQuestionBankQuestionStatus;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFa7079be66c6e1f5a236ecac24b63e2b;
+        public event EventHandler<ExceptionEventArgs>? OnErrorUpdateQuestionBankQuestionStatus;
 
-        internal void ExecuteOnFa7079be66c6e1f5a236ecac24b63e2b(QuestionBankApi.Fa7079be66c6e1f5a236ecac24b63e2bApiResponse apiResponse)
+        internal void ExecuteOnUpdateQuestionBankQuestionStatus(QuestionBankApi.UpdateQuestionBankQuestionStatusApiResponse apiResponse)
         {
-            OnFa7079be66c6e1f5a236ecac24b63e2b?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnUpdateQuestionBankQuestionStatus?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorFa7079be66c6e1f5a236ecac24b63e2b(Exception exception)
+        internal void ExecuteOnErrorUpdateQuestionBankQuestionStatus(Exception exception)
         {
-            OnErrorFa7079be66c6e1f5a236ecac24b63e2b?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorUpdateQuestionBankQuestionStatus?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -909,17 +909,28 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatA3f9ce42420fdef136cfc7b0de8e2683(ref int id);
+        partial void FormatCreateQuestionBankQuestion(CreateQuestionBankQuestionRequest createQuestionBankQuestionRequest);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="createQuestionBankQuestionRequest"></param>
+        /// <returns></returns>
+        private void ValidateCreateQuestionBankQuestion(CreateQuestionBankQuestionRequest createQuestionBankQuestionRequest)
+        {
+            if (createQuestionBankQuestionRequest == null)
+                throw new ArgumentNullException(nameof(createQuestionBankQuestionRequest));
+        }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterA3f9ce42420fdef136cfc7b0de8e2683DefaultImplementation(IA3f9ce42420fdef136cfc7b0de8e2683ApiResponse apiResponseLocalVar, int id)
+        /// <param name="createQuestionBankQuestionRequest"></param>
+        private void AfterCreateQuestionBankQuestionDefaultImplementation(ICreateQuestionBankQuestionApiResponse apiResponseLocalVar, CreateQuestionBankQuestionRequest createQuestionBankQuestionRequest)
         {
             bool suppressDefaultLog = false;
-            AfterA3f9ce42420fdef136cfc7b0de8e2683(ref suppressDefaultLog, apiResponseLocalVar, id);
+            AfterCreateQuestionBankQuestion(ref suppressDefaultLog, apiResponseLocalVar, createQuestionBankQuestionRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -929,8 +940,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterA3f9ce42420fdef136cfc7b0de8e2683(ref bool suppressDefaultLog, IA3f9ce42420fdef136cfc7b0de8e2683ApiResponse apiResponseLocalVar, int id);
+        /// <param name="createQuestionBankQuestionRequest"></param>
+        partial void AfterCreateQuestionBankQuestion(ref bool suppressDefaultLog, ICreateQuestionBankQuestionApiResponse apiResponseLocalVar, CreateQuestionBankQuestionRequest createQuestionBankQuestionRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -938,11 +949,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorA3f9ce42420fdef136cfc7b0de8e2683DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        /// <param name="createQuestionBankQuestionRequest"></param>
+        private void OnErrorCreateQuestionBankQuestionDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateQuestionBankQuestionRequest createQuestionBankQuestionRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorA3f9ce42420fdef136cfc7b0de8e2683(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            OnErrorCreateQuestionBankQuestion(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createQuestionBankQuestionRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -954,20 +965,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorA3f9ce42420fdef136cfc7b0de8e2683(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+        /// <param name="createQuestionBankQuestionRequest"></param>
+        partial void OnErrorCreateQuestionBankQuestion(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateQuestionBankQuestionRequest createQuestionBankQuestionRequest);
 
         /// <summary>
-        /// QuestionBank@showVersion Return a single system question bank question version
+        /// QuestionBank@store Create a new system question bank question with FE-helpful input format
         /// </summary>
-        /// <param name="id">question bank question version id</param>
+        /// <param name="createQuestionBankQuestionRequest">QuestionBank definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IA3f9ce42420fdef136cfc7b0de8e2683ApiResponse"/>&gt;</returns>
-        public async Task<IA3f9ce42420fdef136cfc7b0de8e2683ApiResponse?> A3f9ce42420fdef136cfc7b0de8e2683OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateQuestionBankQuestionApiResponse"/>&gt;</returns>
+        public async Task<ICreateQuestionBankQuestionApiResponse?> CreateQuestionBankQuestionOrDefaultAsync(CreateQuestionBankQuestionRequest createQuestionBankQuestionRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await A3f9ce42420fdef136cfc7b0de8e2683Async(id, cancellationToken).ConfigureAwait(false);
+                return await CreateQuestionBankQuestionAsync(createQuestionBankQuestionRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -976,19 +987,21 @@ namespace GatewayApiSdk.Api
         }
 
         /// <summary>
-        /// QuestionBank@showVersion Return a single system question bank question version
+        /// QuestionBank@store Create a new system question bank question with FE-helpful input format
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">question bank question version id</param>
+        /// <param name="createQuestionBankQuestionRequest">QuestionBank definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IA3f9ce42420fdef136cfc7b0de8e2683ApiResponse"/>&gt;</returns>
-        public async Task<IA3f9ce42420fdef136cfc7b0de8e2683ApiResponse> A3f9ce42420fdef136cfc7b0de8e2683Async(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateQuestionBankQuestionApiResponse"/>&gt;</returns>
+        public async Task<ICreateQuestionBankQuestionApiResponse> CreateQuestionBankQuestionAsync(CreateQuestionBankQuestionRequest createQuestionBankQuestionRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatA3f9ce42420fdef136cfc7b0de8e2683(ref id);
+                ValidateCreateQuestionBankQuestion(createQuestionBankQuestionRequest);
+
+                FormatCreateQuestionBankQuestion(createQuestionBankQuestionRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -996,9 +1009,12 @@ namespace GatewayApiSdk.Api
                     uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
                     uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
                     uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/questions/version/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/questions/version/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+                        ? "/api/v1/questions"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/questions");
+
+                    httpRequestMessageLocalVar.Content = (createQuestionBankQuestionRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createQuestionBankQuestionRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -1009,6 +1025,15 @@ namespace GatewayApiSdk.Api
 
                     bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
 
+                    string[] contentTypes = new string[] {
+                        "application/json"
+                    };
+
+                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
+
+                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
+                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
+
                     string[] acceptLocalVars = new string[] {
                         "application/json"
                     };
@@ -1018,26 +1043,26 @@ namespace GatewayApiSdk.Api
                     foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
                         httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
 
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+                    httpRequestMessageLocalVar.Method = HttpMethod.Post;
 
                     DateTime requestedAtLocalVar = DateTime.UtcNow;
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        A3f9ce42420fdef136cfc7b0de8e2683ApiResponse apiResponseLocalVar;
+                        CreateQuestionBankQuestionApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
                                 string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/questions/version/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/questions", requestedAtLocalVar, _jsonSerializerOptions);
 
                                 break;
                             }
                         }
 
-                        AfterA3f9ce42420fdef136cfc7b0de8e2683DefaultImplementation(apiResponseLocalVar, id);
+                        AfterCreateQuestionBankQuestionDefaultImplementation(apiResponseLocalVar, createQuestionBankQuestionRequest);
 
-                        Events.ExecuteOnA3f9ce42420fdef136cfc7b0de8e2683(apiResponseLocalVar);
+                        Events.ExecuteOnCreateQuestionBankQuestion(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -1049,16 +1074,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorA3f9ce42420fdef136cfc7b0de8e2683DefaultImplementation(e, "/api/v1/questions/version/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorA3f9ce42420fdef136cfc7b0de8e2683(e);
+                OnErrorCreateQuestionBankQuestionDefaultImplementation(e, "/api/v1/questions", uriBuilderLocalVar.Path, createQuestionBankQuestionRequest);
+                Events.ExecuteOnErrorCreateQuestionBankQuestion(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="A3f9ce42420fdef136cfc7b0de8e2683ApiResponse"/>
+        /// The <see cref="CreateQuestionBankQuestionApiResponse"/>
         /// </summary>
-        public partial class A3f9ce42420fdef136cfc7b0de8e2683ApiResponse : GatewayApiSdk.Client.ApiResponse, IA3f9ce42420fdef136cfc7b0de8e2683ApiResponse
+        public partial class CreateQuestionBankQuestionApiResponse : GatewayApiSdk.Client.ApiResponse, ICreateQuestionBankQuestionApiResponse
         {
             /// <summary>
             /// The logger
@@ -1066,7 +1091,7 @@ namespace GatewayApiSdk.Api
             public ILogger<QuestionBankApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="A3f9ce42420fdef136cfc7b0de8e2683ApiResponse"/>
+            /// The <see cref="CreateQuestionBankQuestionApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1075,14 +1100,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public A3f9ce42420fdef136cfc7b0de8e2683ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public CreateQuestionBankQuestionApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="A3f9ce42420fdef136cfc7b0de8e2683ApiResponse"/>
+            /// The <see cref="CreateQuestionBankQuestionApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1091,7 +1116,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public A3f9ce42420fdef136cfc7b0de8e2683ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public CreateQuestionBankQuestionApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1109,11 +1134,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.A3f9ce42420fdef136cfc7b0de8e2683200Response? Ok()
+            public GatewayApiSdk.Model.CreateCategories200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.A3f9ce42420fdef136cfc7b0de8e2683200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1122,7 +1147,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.A3f9ce42420fdef136cfc7b0de8e2683200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
             {
                 result = null;
 
@@ -1138,38 +1163,38 @@ namespace GatewayApiSdk.Api
             }
 
             /// <summary>
-            /// Returns true if the response is 404 NotFound
+            /// Returns true if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
+            public bool IsInternalServerError => 500 == (int)StatusCode;
 
             /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
+            /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                return IsInternalServerError
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
             /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
                 try
                 {
-                    result = NotFound();
+                    result = InternalServerError();
                 } catch (Exception e)
                 {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
                 }
 
                 return result != null;
@@ -1186,276 +1211,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall04e09f4aada3406dbc08715865880f4f(ref int teamId, ref int sectionId, ref Option<int> isChild);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="sectionId"></param>
-        /// <param name="isChild"></param>
-        private void AfterCall04e09f4aada3406dbc08715865880f4fDefaultImplementation(ICall04e09f4aada3406dbc08715865880f4fApiResponse apiResponseLocalVar, int teamId, int sectionId, Option<int> isChild)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall04e09f4aada3406dbc08715865880f4f(ref suppressDefaultLog, apiResponseLocalVar, teamId, sectionId, isChild);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="sectionId"></param>
-        /// <param name="isChild"></param>
-        partial void AfterCall04e09f4aada3406dbc08715865880f4f(ref bool suppressDefaultLog, ICall04e09f4aada3406dbc08715865880f4fApiResponse apiResponseLocalVar, int teamId, int sectionId, Option<int> isChild);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="sectionId"></param>
-        /// <param name="isChild"></param>
-        private void OnErrorCall04e09f4aada3406dbc08715865880f4fDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int sectionId, Option<int> isChild)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall04e09f4aada3406dbc08715865880f4f(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, sectionId, isChild);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="sectionId"></param>
-        /// <param name="isChild"></param>
-        partial void OnErrorCall04e09f4aada3406dbc08715865880f4f(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int sectionId, Option<int> isChild);
-
-        /// <summary>
-        /// TeamQuestionBank@indexBySection List of question bank questions by section
-        /// </summary>
-        /// <param name="teamId">Team ID</param>
-        /// <param name="sectionId">section id</param>
-        /// <param name="isChild">filter on is_child field (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall04e09f4aada3406dbc08715865880f4fApiResponse"/>&gt;</returns>
-        public async Task<ICall04e09f4aada3406dbc08715865880f4fApiResponse?> Call04e09f4aada3406dbc08715865880f4fOrDefaultAsync(int teamId, int sectionId, Option<int> isChild = default, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call04e09f4aada3406dbc08715865880f4fAsync(teamId, sectionId, isChild, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// TeamQuestionBank@indexBySection List of question bank questions by section
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">Team ID</param>
-        /// <param name="sectionId">section id</param>
-        /// <param name="isChild">filter on is_child field (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall04e09f4aada3406dbc08715865880f4fApiResponse"/>&gt;</returns>
-        public async Task<ICall04e09f4aada3406dbc08715865880f4fApiResponse> Call04e09f4aada3406dbc08715865880f4fAsync(int teamId, int sectionId, Option<int> isChild = default, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatCall04e09f4aada3406dbc08715865880f4f(ref teamId, ref sectionId, ref isChild);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/teams/{teamId}/questions/section/{sectionId}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/teams/{teamId}/questions/section/{sectionId}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BsectionId%7D", Uri.EscapeDataString(sectionId.ToString()));
-
-                    System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
-
-                    if (isChild.IsSet)
-                        parseQueryStringLocalVar["is_child"] = ClientUtils.ParameterToString(isChild.Value);
-
-                    uriBuilderLocalVar.Query = parseQueryStringLocalVar.ToString();
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call04e09f4aada3406dbc08715865880f4fApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/teams/{teamId}/questions/section/{sectionId}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall04e09f4aada3406dbc08715865880f4fDefaultImplementation(apiResponseLocalVar, teamId, sectionId, isChild);
-
-                        Events.ExecuteOnCall04e09f4aada3406dbc08715865880f4f(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall04e09f4aada3406dbc08715865880f4fDefaultImplementation(e, "/api/v1/teams/{teamId}/questions/section/{sectionId}", uriBuilderLocalVar.Path, teamId, sectionId, isChild);
-                Events.ExecuteOnErrorCall04e09f4aada3406dbc08715865880f4f(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call04e09f4aada3406dbc08715865880f4fApiResponse"/>
-        /// </summary>
-        public partial class Call04e09f4aada3406dbc08715865880f4fApiResponse : GatewayApiSdk.Client.ApiResponse, ICall04e09f4aada3406dbc08715865880f4fApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<QuestionBankApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call04e09f4aada3406dbc08715865880f4fApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call04e09f4aada3406dbc08715865880f4fApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call04e09f4aada3406dbc08715865880f4fApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call04e09f4aada3406dbc08715865880f4fApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model04e09f4aada3406dbc08715865880f4f200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model04e09f4aada3406dbc08715865880f4f200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model04e09f4aada3406dbc08715865880f4f200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall17336ba551813e00975d3c2da09211c0(ref int id);
+        partial void FormatDeleteQuestionBankQuestion(ref int id);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        private void AfterCall17336ba551813e00975d3c2da09211c0DefaultImplementation(ICall17336ba551813e00975d3c2da09211c0ApiResponse apiResponseLocalVar, int id)
+        private void AfterDeleteQuestionBankQuestionDefaultImplementation(IDeleteQuestionBankQuestionApiResponse apiResponseLocalVar, int id)
         {
             bool suppressDefaultLog = false;
-            AfterCall17336ba551813e00975d3c2da09211c0(ref suppressDefaultLog, apiResponseLocalVar, id);
+            AfterDeleteQuestionBankQuestion(ref suppressDefaultLog, apiResponseLocalVar, id);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1466,7 +1232,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        partial void AfterCall17336ba551813e00975d3c2da09211c0(ref bool suppressDefaultLog, ICall17336ba551813e00975d3c2da09211c0ApiResponse apiResponseLocalVar, int id);
+        partial void AfterDeleteQuestionBankQuestion(ref bool suppressDefaultLog, IDeleteQuestionBankQuestionApiResponse apiResponseLocalVar, int id);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1475,10 +1241,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        private void OnErrorCall17336ba551813e00975d3c2da09211c0DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        private void OnErrorDeleteQuestionBankQuestionDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall17336ba551813e00975d3c2da09211c0(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            OnErrorDeleteQuestionBankQuestion(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1491,19 +1257,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        partial void OnErrorCall17336ba551813e00975d3c2da09211c0(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+        partial void OnErrorDeleteQuestionBankQuestion(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
 
         /// <summary>
-        /// QuestionBank@show Return the latest question bank question version for the supplied question id, in an FE-friendly format
+        /// QuestionBank@destroy Delete a system question bank question
         /// </summary>
         /// <param name="id">question bank question id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall17336ba551813e00975d3c2da09211c0ApiResponse"/>&gt;</returns>
-        public async Task<ICall17336ba551813e00975d3c2da09211c0ApiResponse?> Call17336ba551813e00975d3c2da09211c0OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteQuestionBankQuestionApiResponse"/>&gt;</returns>
+        public async Task<IDeleteQuestionBankQuestionApiResponse?> DeleteQuestionBankQuestionOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call17336ba551813e00975d3c2da09211c0Async(id, cancellationToken).ConfigureAwait(false);
+                return await DeleteQuestionBankQuestionAsync(id, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1512,19 +1278,19 @@ namespace GatewayApiSdk.Api
         }
 
         /// <summary>
-        /// QuestionBank@show Return the latest question bank question version for the supplied question id, in an FE-friendly format
+        /// QuestionBank@destroy Delete a system question bank question
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">question bank question id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall17336ba551813e00975d3c2da09211c0ApiResponse"/>&gt;</returns>
-        public async Task<ICall17336ba551813e00975d3c2da09211c0ApiResponse> Call17336ba551813e00975d3c2da09211c0Async(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteQuestionBankQuestionApiResponse"/>&gt;</returns>
+        public async Task<IDeleteQuestionBankQuestionApiResponse> DeleteQuestionBankQuestionAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatCall17336ba551813e00975d3c2da09211c0(ref id);
+                FormatDeleteQuestionBankQuestion(ref id);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1554,13 +1320,13 @@ namespace GatewayApiSdk.Api
                     foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
                         httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
 
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+                    httpRequestMessageLocalVar.Method = HttpMethod.Delete;
 
                     DateTime requestedAtLocalVar = DateTime.UtcNow;
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call17336ba551813e00975d3c2da09211c0ApiResponse apiResponseLocalVar;
+                        DeleteQuestionBankQuestionApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -1571,9 +1337,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall17336ba551813e00975d3c2da09211c0DefaultImplementation(apiResponseLocalVar, id);
+                        AfterDeleteQuestionBankQuestionDefaultImplementation(apiResponseLocalVar, id);
 
-                        Events.ExecuteOnCall17336ba551813e00975d3c2da09211c0(apiResponseLocalVar);
+                        Events.ExecuteOnDeleteQuestionBankQuestion(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -1585,16 +1351,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall17336ba551813e00975d3c2da09211c0DefaultImplementation(e, "/api/v1/questions/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorCall17336ba551813e00975d3c2da09211c0(e);
+                OnErrorDeleteQuestionBankQuestionDefaultImplementation(e, "/api/v1/questions/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorDeleteQuestionBankQuestion(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call17336ba551813e00975d3c2da09211c0ApiResponse"/>
+        /// The <see cref="DeleteQuestionBankQuestionApiResponse"/>
         /// </summary>
-        public partial class Call17336ba551813e00975d3c2da09211c0ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall17336ba551813e00975d3c2da09211c0ApiResponse
+        public partial class DeleteQuestionBankQuestionApiResponse : GatewayApiSdk.Client.ApiResponse, IDeleteQuestionBankQuestionApiResponse
         {
             /// <summary>
             /// The logger
@@ -1602,7 +1368,7 @@ namespace GatewayApiSdk.Api
             public ILogger<QuestionBankApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call17336ba551813e00975d3c2da09211c0ApiResponse"/>
+            /// The <see cref="DeleteQuestionBankQuestionApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1611,14 +1377,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call17336ba551813e00975d3c2da09211c0ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public DeleteQuestionBankQuestionApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call17336ba551813e00975d3c2da09211c0ApiResponse"/>
+            /// The <see cref="DeleteQuestionBankQuestionApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1627,13 +1393,51 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call17336ba551813e00975d3c2da09211c0ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public DeleteQuestionBankQuestionApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
 
             /// <summary>
             /// Returns true if the response is 200 Ok
@@ -1645,11 +1449,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model17336ba551813e00975d3c2da09211c0200Response? Ok()
+            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model17336ba551813e00975d3c2da09211c0200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1658,7 +1462,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model17336ba551813e00975d3c2da09211c0200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
             {
                 result = null;
 
@@ -1668,6 +1472,44 @@ namespace GatewayApiSdk.Api
                 } catch (Exception e)
                 {
                     OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public bool IsInternalServerError => 500 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsInternalServerError
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = InternalServerError();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
                 }
 
                 return result != null;
@@ -1684,279 +1526,7 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall35856fcdf6980ae4da3303ec5a8d90b7(ref Option<int> sectionId, ref Option<int> isChild, ref Option<int> perPage, ref Option<int> page);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="sectionId"></param>
-        /// <param name="isChild"></param>
-        /// <param name="perPage"></param>
-        /// <param name="page"></param>
-        private void AfterCall35856fcdf6980ae4da3303ec5a8d90b7DefaultImplementation(ICall35856fcdf6980ae4da3303ec5a8d90b7ApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall35856fcdf6980ae4da3303ec5a8d90b7(ref suppressDefaultLog, apiResponseLocalVar, sectionId, isChild, perPage, page);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="sectionId"></param>
-        /// <param name="isChild"></param>
-        /// <param name="perPage"></param>
-        /// <param name="page"></param>
-        partial void AfterCall35856fcdf6980ae4da3303ec5a8d90b7(ref bool suppressDefaultLog, ICall35856fcdf6980ae4da3303ec5a8d90b7ApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="sectionId"></param>
-        /// <param name="isChild"></param>
-        /// <param name="perPage"></param>
-        /// <param name="page"></param>
-        private void OnErrorCall35856fcdf6980ae4da3303ec5a8d90b7DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall35856fcdf6980ae4da3303ec5a8d90b7(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, sectionId, isChild, perPage, page);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="sectionId"></param>
-        /// <param name="isChild"></param>
-        /// <param name="perPage"></param>
-        /// <param name="page"></param>
-        partial void OnErrorCall35856fcdf6980ae4da3303ec5a8d90b7(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
-
-        /// <summary>
-        /// QuestionBank@index List of question bank questions
-        /// </summary>
-        /// <param name="sectionId">section id (optional)</param>
-        /// <param name="isChild">filter on is_child field (optional)</param>
-        /// <param name="perPage">per page (optional)</param>
-        /// <param name="page">page (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall35856fcdf6980ae4da3303ec5a8d90b7ApiResponse"/>&gt;</returns>
-        public async Task<ICall35856fcdf6980ae4da3303ec5a8d90b7ApiResponse?> Call35856fcdf6980ae4da3303ec5a8d90b7OrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call35856fcdf6980ae4da3303ec5a8d90b7Async(sectionId, isChild, perPage, page, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// QuestionBank@index List of question bank questions
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sectionId">section id (optional)</param>
-        /// <param name="isChild">filter on is_child field (optional)</param>
-        /// <param name="perPage">per page (optional)</param>
-        /// <param name="page">page (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall35856fcdf6980ae4da3303ec5a8d90b7ApiResponse"/>&gt;</returns>
-        public async Task<ICall35856fcdf6980ae4da3303ec5a8d90b7ApiResponse> Call35856fcdf6980ae4da3303ec5a8d90b7Async(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatCall35856fcdf6980ae4da3303ec5a8d90b7(ref sectionId, ref isChild, ref perPage, ref page);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/questions"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/questions");
-
-                    System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
-
-                    if (sectionId.IsSet)
-                        parseQueryStringLocalVar["section_id"] = ClientUtils.ParameterToString(sectionId.Value);
-
-                    if (isChild.IsSet)
-                        parseQueryStringLocalVar["is_child"] = ClientUtils.ParameterToString(isChild.Value);
-
-                    if (perPage.IsSet)
-                        parseQueryStringLocalVar["per_page"] = ClientUtils.ParameterToString(perPage.Value);
-
-                    if (page.IsSet)
-                        parseQueryStringLocalVar["page"] = ClientUtils.ParameterToString(page.Value);
-
-                    uriBuilderLocalVar.Query = parseQueryStringLocalVar.ToString();
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call35856fcdf6980ae4da3303ec5a8d90b7ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/questions", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall35856fcdf6980ae4da3303ec5a8d90b7DefaultImplementation(apiResponseLocalVar, sectionId, isChild, perPage, page);
-
-                        Events.ExecuteOnCall35856fcdf6980ae4da3303ec5a8d90b7(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall35856fcdf6980ae4da3303ec5a8d90b7DefaultImplementation(e, "/api/v1/questions", uriBuilderLocalVar.Path, sectionId, isChild, perPage, page);
-                Events.ExecuteOnErrorCall35856fcdf6980ae4da3303ec5a8d90b7(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call35856fcdf6980ae4da3303ec5a8d90b7ApiResponse"/>
-        /// </summary>
-        public partial class Call35856fcdf6980ae4da3303ec5a8d90b7ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall35856fcdf6980ae4da3303ec5a8d90b7ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<QuestionBankApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call35856fcdf6980ae4da3303ec5a8d90b7ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call35856fcdf6980ae4da3303ec5a8d90b7ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call35856fcdf6980ae4da3303ec5a8d90b7ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call35856fcdf6980ae4da3303ec5a8d90b7ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model35856fcdf6980ae4da3303ec5a8d90b7200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model35856fcdf6980ae4da3303ec5a8d90b7200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model35856fcdf6980ae4da3303ec5a8d90b7200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall35b36a3a067579d62500b09623dbffb6(ref int id, ref int fileId);
+        partial void FormatDownloadQuestionBankQuestionFile(ref int id, ref int fileId);
 
         /// <summary>
         /// Processes the server response
@@ -1964,10 +1534,10 @@ namespace GatewayApiSdk.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
         /// <param name="fileId"></param>
-        private void AfterCall35b36a3a067579d62500b09623dbffb6DefaultImplementation(ICall35b36a3a067579d62500b09623dbffb6ApiResponse apiResponseLocalVar, int id, int fileId)
+        private void AfterDownloadQuestionBankQuestionFileDefaultImplementation(IDownloadQuestionBankQuestionFileApiResponse apiResponseLocalVar, int id, int fileId)
         {
             bool suppressDefaultLog = false;
-            AfterCall35b36a3a067579d62500b09623dbffb6(ref suppressDefaultLog, apiResponseLocalVar, id, fileId);
+            AfterDownloadQuestionBankQuestionFile(ref suppressDefaultLog, apiResponseLocalVar, id, fileId);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1979,7 +1549,7 @@ namespace GatewayApiSdk.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
         /// <param name="fileId"></param>
-        partial void AfterCall35b36a3a067579d62500b09623dbffb6(ref bool suppressDefaultLog, ICall35b36a3a067579d62500b09623dbffb6ApiResponse apiResponseLocalVar, int id, int fileId);
+        partial void AfterDownloadQuestionBankQuestionFile(ref bool suppressDefaultLog, IDownloadQuestionBankQuestionFileApiResponse apiResponseLocalVar, int id, int fileId);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1989,10 +1559,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
         /// <param name="fileId"></param>
-        private void OnErrorCall35b36a3a067579d62500b09623dbffb6DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, int fileId)
+        private void OnErrorDownloadQuestionBankQuestionFileDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, int fileId)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall35b36a3a067579d62500b09623dbffb6(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, fileId);
+            OnErrorDownloadQuestionBankQuestionFile(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, fileId);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -2006,7 +1576,7 @@ namespace GatewayApiSdk.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
         /// <param name="fileId"></param>
-        partial void OnErrorCall35b36a3a067579d62500b09623dbffb6(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, int fileId);
+        partial void OnErrorDownloadQuestionBankQuestionFile(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, int fileId);
 
         /// <summary>
         /// QuestionBank@destroyFile Download a system question bank question
@@ -2014,12 +1584,12 @@ namespace GatewayApiSdk.Api
         /// <param name="id">question bank question id</param>
         /// <param name="fileId">file uuid</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall35b36a3a067579d62500b09623dbffb6ApiResponse"/>&gt;</returns>
-        public async Task<ICall35b36a3a067579d62500b09623dbffb6ApiResponse?> Call35b36a3a067579d62500b09623dbffb6OrDefaultAsync(int id, int fileId, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDownloadQuestionBankQuestionFileApiResponse"/>&gt;</returns>
+        public async Task<IDownloadQuestionBankQuestionFileApiResponse?> DownloadQuestionBankQuestionFileOrDefaultAsync(int id, int fileId, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call35b36a3a067579d62500b09623dbffb6Async(id, fileId, cancellationToken).ConfigureAwait(false);
+                return await DownloadQuestionBankQuestionFileAsync(id, fileId, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -2034,14 +1604,14 @@ namespace GatewayApiSdk.Api
         /// <param name="id">question bank question id</param>
         /// <param name="fileId">file uuid</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall35b36a3a067579d62500b09623dbffb6ApiResponse"/>&gt;</returns>
-        public async Task<ICall35b36a3a067579d62500b09623dbffb6ApiResponse> Call35b36a3a067579d62500b09623dbffb6Async(int id, int fileId, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDownloadQuestionBankQuestionFileApiResponse"/>&gt;</returns>
+        public async Task<IDownloadQuestionBankQuestionFileApiResponse> DownloadQuestionBankQuestionFileAsync(int id, int fileId, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatCall35b36a3a067579d62500b09623dbffb6(ref id, ref fileId);
+                FormatDownloadQuestionBankQuestionFile(ref id, ref fileId);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -2078,7 +1648,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call35b36a3a067579d62500b09623dbffb6ApiResponse apiResponseLocalVar;
+                        DownloadQuestionBankQuestionFileApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -2089,9 +1659,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall35b36a3a067579d62500b09623dbffb6DefaultImplementation(apiResponseLocalVar, id, fileId);
+                        AfterDownloadQuestionBankQuestionFileDefaultImplementation(apiResponseLocalVar, id, fileId);
 
-                        Events.ExecuteOnCall35b36a3a067579d62500b09623dbffb6(apiResponseLocalVar);
+                        Events.ExecuteOnDownloadQuestionBankQuestionFile(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -2103,16 +1673,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall35b36a3a067579d62500b09623dbffb6DefaultImplementation(e, "/api/v1/questions/{id}/files/{fileId}", uriBuilderLocalVar.Path, id, fileId);
-                Events.ExecuteOnErrorCall35b36a3a067579d62500b09623dbffb6(e);
+                OnErrorDownloadQuestionBankQuestionFileDefaultImplementation(e, "/api/v1/questions/{id}/files/{fileId}", uriBuilderLocalVar.Path, id, fileId);
+                Events.ExecuteOnErrorDownloadQuestionBankQuestionFile(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call35b36a3a067579d62500b09623dbffb6ApiResponse"/>
+        /// The <see cref="DownloadQuestionBankQuestionFileApiResponse"/>
         /// </summary>
-        public partial class Call35b36a3a067579d62500b09623dbffb6ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall35b36a3a067579d62500b09623dbffb6ApiResponse
+        public partial class DownloadQuestionBankQuestionFileApiResponse : GatewayApiSdk.Client.ApiResponse, IDownloadQuestionBankQuestionFileApiResponse
         {
             /// <summary>
             /// The logger
@@ -2120,7 +1690,7 @@ namespace GatewayApiSdk.Api
             public ILogger<QuestionBankApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call35b36a3a067579d62500b09623dbffb6ApiResponse"/>
+            /// The <see cref="DownloadQuestionBankQuestionFileApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2129,14 +1699,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call35b36a3a067579d62500b09623dbffb6ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public DownloadQuestionBankQuestionFileApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call35b36a3a067579d62500b09623dbffb6ApiResponse"/>
+            /// The <see cref="DownloadQuestionBankQuestionFileApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2145,7 +1715,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call35b36a3a067579d62500b09623dbffb6ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public DownloadQuestionBankQuestionFileApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -2163,11 +1733,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2176,7 +1746,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -2201,11 +1771,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? Ok()
+            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2214,7 +1784,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
             {
                 result = null;
 
@@ -2239,11 +1809,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2252,7 +1822,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -2278,319 +1848,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall38b0b31c2029a219013fa640588a4a69(Model38b0b31c2029a219013fa640588a4a69Request model38b0b31c2029a219013fa640588a4a69Request);
+        partial void FormatEditQuestionBankQuestion(ref int id, EditQuestionBankQuestionRequest editQuestionBankQuestionRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="model38b0b31c2029a219013fa640588a4a69Request"></param>
+        /// <param name="editQuestionBankQuestionRequest"></param>
         /// <returns></returns>
-        private void ValidateCall38b0b31c2029a219013fa640588a4a69(Model38b0b31c2029a219013fa640588a4a69Request model38b0b31c2029a219013fa640588a4a69Request)
+        private void ValidateEditQuestionBankQuestion(EditQuestionBankQuestionRequest editQuestionBankQuestionRequest)
         {
-            if (model38b0b31c2029a219013fa640588a4a69Request == null)
-                throw new ArgumentNullException(nameof(model38b0b31c2029a219013fa640588a4a69Request));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model38b0b31c2029a219013fa640588a4a69Request"></param>
-        private void AfterCall38b0b31c2029a219013fa640588a4a69DefaultImplementation(ICall38b0b31c2029a219013fa640588a4a69ApiResponse apiResponseLocalVar, Model38b0b31c2029a219013fa640588a4a69Request model38b0b31c2029a219013fa640588a4a69Request)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall38b0b31c2029a219013fa640588a4a69(ref suppressDefaultLog, apiResponseLocalVar, model38b0b31c2029a219013fa640588a4a69Request);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model38b0b31c2029a219013fa640588a4a69Request"></param>
-        partial void AfterCall38b0b31c2029a219013fa640588a4a69(ref bool suppressDefaultLog, ICall38b0b31c2029a219013fa640588a4a69ApiResponse apiResponseLocalVar, Model38b0b31c2029a219013fa640588a4a69Request model38b0b31c2029a219013fa640588a4a69Request);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="model38b0b31c2029a219013fa640588a4a69Request"></param>
-        private void OnErrorCall38b0b31c2029a219013fa640588a4a69DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model38b0b31c2029a219013fa640588a4a69Request model38b0b31c2029a219013fa640588a4a69Request)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall38b0b31c2029a219013fa640588a4a69(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, model38b0b31c2029a219013fa640588a4a69Request);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="model38b0b31c2029a219013fa640588a4a69Request"></param>
-        partial void OnErrorCall38b0b31c2029a219013fa640588a4a69(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model38b0b31c2029a219013fa640588a4a69Request model38b0b31c2029a219013fa640588a4a69Request);
-
-        /// <summary>
-        /// QuestionBank@store Create a new system question bank question with FE-helpful input format
-        /// </summary>
-        /// <param name="model38b0b31c2029a219013fa640588a4a69Request">QuestionBank definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall38b0b31c2029a219013fa640588a4a69ApiResponse"/>&gt;</returns>
-        public async Task<ICall38b0b31c2029a219013fa640588a4a69ApiResponse?> Call38b0b31c2029a219013fa640588a4a69OrDefaultAsync(Model38b0b31c2029a219013fa640588a4a69Request model38b0b31c2029a219013fa640588a4a69Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call38b0b31c2029a219013fa640588a4a69Async(model38b0b31c2029a219013fa640588a4a69Request, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// QuestionBank@store Create a new system question bank question with FE-helpful input format
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model38b0b31c2029a219013fa640588a4a69Request">QuestionBank definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall38b0b31c2029a219013fa640588a4a69ApiResponse"/>&gt;</returns>
-        public async Task<ICall38b0b31c2029a219013fa640588a4a69ApiResponse> Call38b0b31c2029a219013fa640588a4a69Async(Model38b0b31c2029a219013fa640588a4a69Request model38b0b31c2029a219013fa640588a4a69Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateCall38b0b31c2029a219013fa640588a4a69(model38b0b31c2029a219013fa640588a4a69Request);
-
-                FormatCall38b0b31c2029a219013fa640588a4a69(model38b0b31c2029a219013fa640588a4a69Request);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/questions"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/questions");
-
-                    httpRequestMessageLocalVar.Content = (model38b0b31c2029a219013fa640588a4a69Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model38b0b31c2029a219013fa640588a4a69Request, _jsonSerializerOptions));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Post;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call38b0b31c2029a219013fa640588a4a69ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/questions", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall38b0b31c2029a219013fa640588a4a69DefaultImplementation(apiResponseLocalVar, model38b0b31c2029a219013fa640588a4a69Request);
-
-                        Events.ExecuteOnCall38b0b31c2029a219013fa640588a4a69(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall38b0b31c2029a219013fa640588a4a69DefaultImplementation(e, "/api/v1/questions", uriBuilderLocalVar.Path, model38b0b31c2029a219013fa640588a4a69Request);
-                Events.ExecuteOnErrorCall38b0b31c2029a219013fa640588a4a69(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call38b0b31c2029a219013fa640588a4a69ApiResponse"/>
-        /// </summary>
-        public partial class Call38b0b31c2029a219013fa640588a4a69ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall38b0b31c2029a219013fa640588a4a69ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<QuestionBankApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call38b0b31c2029a219013fa640588a4a69ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call38b0b31c2029a219013fa640588a4a69ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call38b0b31c2029a219013fa640588a4a69ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call38b0b31c2029a219013fa640588a4a69ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall64d6f1d6c88cbcfccd3e511b29c394d6(ref int id, Model64d6f1d6c88cbcfccd3e511b29c394d6Request model64d6f1d6c88cbcfccd3e511b29c394d6Request);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="model64d6f1d6c88cbcfccd3e511b29c394d6Request"></param>
-        /// <returns></returns>
-        private void ValidateCall64d6f1d6c88cbcfccd3e511b29c394d6(Model64d6f1d6c88cbcfccd3e511b29c394d6Request model64d6f1d6c88cbcfccd3e511b29c394d6Request)
-        {
-            if (model64d6f1d6c88cbcfccd3e511b29c394d6Request == null)
-                throw new ArgumentNullException(nameof(model64d6f1d6c88cbcfccd3e511b29c394d6Request));
+            if (editQuestionBankQuestionRequest == null)
+                throw new ArgumentNullException(nameof(editQuestionBankQuestionRequest));
         }
 
         /// <summary>
@@ -2598,11 +1866,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model64d6f1d6c88cbcfccd3e511b29c394d6Request"></param>
-        private void AfterCall64d6f1d6c88cbcfccd3e511b29c394d6DefaultImplementation(ICall64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse apiResponseLocalVar, int id, Model64d6f1d6c88cbcfccd3e511b29c394d6Request model64d6f1d6c88cbcfccd3e511b29c394d6Request)
+        /// <param name="editQuestionBankQuestionRequest"></param>
+        private void AfterEditQuestionBankQuestionDefaultImplementation(IEditQuestionBankQuestionApiResponse apiResponseLocalVar, int id, EditQuestionBankQuestionRequest editQuestionBankQuestionRequest)
         {
             bool suppressDefaultLog = false;
-            AfterCall64d6f1d6c88cbcfccd3e511b29c394d6(ref suppressDefaultLog, apiResponseLocalVar, id, model64d6f1d6c88cbcfccd3e511b29c394d6Request);
+            AfterEditQuestionBankQuestion(ref suppressDefaultLog, apiResponseLocalVar, id, editQuestionBankQuestionRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -2613,8 +1881,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model64d6f1d6c88cbcfccd3e511b29c394d6Request"></param>
-        partial void AfterCall64d6f1d6c88cbcfccd3e511b29c394d6(ref bool suppressDefaultLog, ICall64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse apiResponseLocalVar, int id, Model64d6f1d6c88cbcfccd3e511b29c394d6Request model64d6f1d6c88cbcfccd3e511b29c394d6Request);
+        /// <param name="editQuestionBankQuestionRequest"></param>
+        partial void AfterEditQuestionBankQuestion(ref bool suppressDefaultLog, IEditQuestionBankQuestionApiResponse apiResponseLocalVar, int id, EditQuestionBankQuestionRequest editQuestionBankQuestionRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -2623,11 +1891,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model64d6f1d6c88cbcfccd3e511b29c394d6Request"></param>
-        private void OnErrorCall64d6f1d6c88cbcfccd3e511b29c394d6DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model64d6f1d6c88cbcfccd3e511b29c394d6Request model64d6f1d6c88cbcfccd3e511b29c394d6Request)
+        /// <param name="editQuestionBankQuestionRequest"></param>
+        private void OnErrorEditQuestionBankQuestionDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditQuestionBankQuestionRequest editQuestionBankQuestionRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall64d6f1d6c88cbcfccd3e511b29c394d6(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, model64d6f1d6c88cbcfccd3e511b29c394d6Request);
+            OnErrorEditQuestionBankQuestion(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, editQuestionBankQuestionRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -2640,368 +1908,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model64d6f1d6c88cbcfccd3e511b29c394d6Request"></param>
-        partial void OnErrorCall64d6f1d6c88cbcfccd3e511b29c394d6(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model64d6f1d6c88cbcfccd3e511b29c394d6Request model64d6f1d6c88cbcfccd3e511b29c394d6Request);
-
-        /// <summary>
-        /// QuestionBank@update Update a system question bank question - children and their versions are updated through parents
-        /// </summary>
-        /// <param name="id">question bank question id</param>
-        /// <param name="model64d6f1d6c88cbcfccd3e511b29c394d6Request">QuestionBank definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse"/>&gt;</returns>
-        public async Task<ICall64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse?> Call64d6f1d6c88cbcfccd3e511b29c394d6OrDefaultAsync(int id, Model64d6f1d6c88cbcfccd3e511b29c394d6Request model64d6f1d6c88cbcfccd3e511b29c394d6Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call64d6f1d6c88cbcfccd3e511b29c394d6Async(id, model64d6f1d6c88cbcfccd3e511b29c394d6Request, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// QuestionBank@update Update a system question bank question - children and their versions are updated through parents
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">question bank question id</param>
-        /// <param name="model64d6f1d6c88cbcfccd3e511b29c394d6Request">QuestionBank definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse"/>&gt;</returns>
-        public async Task<ICall64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse> Call64d6f1d6c88cbcfccd3e511b29c394d6Async(int id, Model64d6f1d6c88cbcfccd3e511b29c394d6Request model64d6f1d6c88cbcfccd3e511b29c394d6Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateCall64d6f1d6c88cbcfccd3e511b29c394d6(model64d6f1d6c88cbcfccd3e511b29c394d6Request);
-
-                FormatCall64d6f1d6c88cbcfccd3e511b29c394d6(ref id, model64d6f1d6c88cbcfccd3e511b29c394d6Request);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/questions/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/questions/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    httpRequestMessageLocalVar.Content = (model64d6f1d6c88cbcfccd3e511b29c394d6Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model64d6f1d6c88cbcfccd3e511b29c394d6Request, _jsonSerializerOptions));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/questions/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall64d6f1d6c88cbcfccd3e511b29c394d6DefaultImplementation(apiResponseLocalVar, id, model64d6f1d6c88cbcfccd3e511b29c394d6Request);
-
-                        Events.ExecuteOnCall64d6f1d6c88cbcfccd3e511b29c394d6(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall64d6f1d6c88cbcfccd3e511b29c394d6DefaultImplementation(e, "/api/v1/questions/{id}", uriBuilderLocalVar.Path, id, model64d6f1d6c88cbcfccd3e511b29c394d6Request);
-                Events.ExecuteOnErrorCall64d6f1d6c88cbcfccd3e511b29c394d6(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse"/>
-        /// </summary>
-        public partial class Call64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<QuestionBankApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call64d6f1d6c88cbcfccd3e511b29c394d6ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model64d6f1d6c88cbcfccd3e511b29c394d6200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model64d6f1d6c88cbcfccd3e511b29c394d6200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model64d6f1d6c88cbcfccd3e511b29c394d6200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatD38b27b30f91d05932ca855e021c8ffd(ref int id, D38b27b30f91d05932ca855e021c8ffdRequest d38b27b30f91d05932ca855e021c8ffdRequest);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="d38b27b30f91d05932ca855e021c8ffdRequest"></param>
-        /// <returns></returns>
-        private void ValidateD38b27b30f91d05932ca855e021c8ffd(D38b27b30f91d05932ca855e021c8ffdRequest d38b27b30f91d05932ca855e021c8ffdRequest)
-        {
-            if (d38b27b30f91d05932ca855e021c8ffdRequest == null)
-                throw new ArgumentNullException(nameof(d38b27b30f91d05932ca855e021c8ffdRequest));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="d38b27b30f91d05932ca855e021c8ffdRequest"></param>
-        private void AfterD38b27b30f91d05932ca855e021c8ffdDefaultImplementation(ID38b27b30f91d05932ca855e021c8ffdApiResponse apiResponseLocalVar, int id, D38b27b30f91d05932ca855e021c8ffdRequest d38b27b30f91d05932ca855e021c8ffdRequest)
-        {
-            bool suppressDefaultLog = false;
-            AfterD38b27b30f91d05932ca855e021c8ffd(ref suppressDefaultLog, apiResponseLocalVar, id, d38b27b30f91d05932ca855e021c8ffdRequest);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="d38b27b30f91d05932ca855e021c8ffdRequest"></param>
-        partial void AfterD38b27b30f91d05932ca855e021c8ffd(ref bool suppressDefaultLog, ID38b27b30f91d05932ca855e021c8ffdApiResponse apiResponseLocalVar, int id, D38b27b30f91d05932ca855e021c8ffdRequest d38b27b30f91d05932ca855e021c8ffdRequest);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="d38b27b30f91d05932ca855e021c8ffdRequest"></param>
-        private void OnErrorD38b27b30f91d05932ca855e021c8ffdDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, D38b27b30f91d05932ca855e021c8ffdRequest d38b27b30f91d05932ca855e021c8ffdRequest)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorD38b27b30f91d05932ca855e021c8ffd(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, d38b27b30f91d05932ca855e021c8ffdRequest);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="d38b27b30f91d05932ca855e021c8ffdRequest"></param>
-        partial void OnErrorD38b27b30f91d05932ca855e021c8ffd(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, D38b27b30f91d05932ca855e021c8ffdRequest d38b27b30f91d05932ca855e021c8ffdRequest);
+        /// <param name="editQuestionBankQuestionRequest"></param>
+        partial void OnErrorEditQuestionBankQuestion(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditQuestionBankQuestionRequest editQuestionBankQuestionRequest);
 
         /// <summary>
         /// QuestionBank@update Edit a system question bank question - use this for parents and children separately
         /// </summary>
         /// <param name="id">question bank question id</param>
-        /// <param name="d38b27b30f91d05932ca855e021c8ffdRequest">QuestionBank definition</param>
+        /// <param name="editQuestionBankQuestionRequest">QuestionBank definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID38b27b30f91d05932ca855e021c8ffdApiResponse"/>&gt;</returns>
-        public async Task<ID38b27b30f91d05932ca855e021c8ffdApiResponse?> D38b27b30f91d05932ca855e021c8ffdOrDefaultAsync(int id, D38b27b30f91d05932ca855e021c8ffdRequest d38b27b30f91d05932ca855e021c8ffdRequest, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditQuestionBankQuestionApiResponse"/>&gt;</returns>
+        public async Task<IEditQuestionBankQuestionApiResponse?> EditQuestionBankQuestionOrDefaultAsync(int id, EditQuestionBankQuestionRequest editQuestionBankQuestionRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await D38b27b30f91d05932ca855e021c8ffdAsync(id, d38b27b30f91d05932ca855e021c8ffdRequest, cancellationToken).ConfigureAwait(false);
+                return await EditQuestionBankQuestionAsync(id, editQuestionBankQuestionRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -3014,18 +1935,18 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">question bank question id</param>
-        /// <param name="d38b27b30f91d05932ca855e021c8ffdRequest">QuestionBank definition</param>
+        /// <param name="editQuestionBankQuestionRequest">QuestionBank definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID38b27b30f91d05932ca855e021c8ffdApiResponse"/>&gt;</returns>
-        public async Task<ID38b27b30f91d05932ca855e021c8ffdApiResponse> D38b27b30f91d05932ca855e021c8ffdAsync(int id, D38b27b30f91d05932ca855e021c8ffdRequest d38b27b30f91d05932ca855e021c8ffdRequest, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditQuestionBankQuestionApiResponse"/>&gt;</returns>
+        public async Task<IEditQuestionBankQuestionApiResponse> EditQuestionBankQuestionAsync(int id, EditQuestionBankQuestionRequest editQuestionBankQuestionRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateD38b27b30f91d05932ca855e021c8ffd(d38b27b30f91d05932ca855e021c8ffdRequest);
+                ValidateEditQuestionBankQuestion(editQuestionBankQuestionRequest);
 
-                FormatD38b27b30f91d05932ca855e021c8ffd(ref id, d38b27b30f91d05932ca855e021c8ffdRequest);
+                FormatEditQuestionBankQuestion(ref id, editQuestionBankQuestionRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -3037,9 +1958,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/questions/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (d38b27b30f91d05932ca855e021c8ffdRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (editQuestionBankQuestionRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(d38b27b30f91d05932ca855e021c8ffdRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(editQuestionBankQuestionRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -3074,7 +1995,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        D38b27b30f91d05932ca855e021c8ffdApiResponse apiResponseLocalVar;
+                        EditQuestionBankQuestionApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -3085,9 +2006,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterD38b27b30f91d05932ca855e021c8ffdDefaultImplementation(apiResponseLocalVar, id, d38b27b30f91d05932ca855e021c8ffdRequest);
+                        AfterEditQuestionBankQuestionDefaultImplementation(apiResponseLocalVar, id, editQuestionBankQuestionRequest);
 
-                        Events.ExecuteOnD38b27b30f91d05932ca855e021c8ffd(apiResponseLocalVar);
+                        Events.ExecuteOnEditQuestionBankQuestion(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -3099,16 +2020,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorD38b27b30f91d05932ca855e021c8ffdDefaultImplementation(e, "/api/v1/questions/{id}", uriBuilderLocalVar.Path, id, d38b27b30f91d05932ca855e021c8ffdRequest);
-                Events.ExecuteOnErrorD38b27b30f91d05932ca855e021c8ffd(e);
+                OnErrorEditQuestionBankQuestionDefaultImplementation(e, "/api/v1/questions/{id}", uriBuilderLocalVar.Path, id, editQuestionBankQuestionRequest);
+                Events.ExecuteOnErrorEditQuestionBankQuestion(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="D38b27b30f91d05932ca855e021c8ffdApiResponse"/>
+        /// The <see cref="EditQuestionBankQuestionApiResponse"/>
         /// </summary>
-        public partial class D38b27b30f91d05932ca855e021c8ffdApiResponse : GatewayApiSdk.Client.ApiResponse, ID38b27b30f91d05932ca855e021c8ffdApiResponse
+        public partial class EditQuestionBankQuestionApiResponse : GatewayApiSdk.Client.ApiResponse, IEditQuestionBankQuestionApiResponse
         {
             /// <summary>
             /// The logger
@@ -3116,7 +2037,7 @@ namespace GatewayApiSdk.Api
             public ILogger<QuestionBankApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="D38b27b30f91d05932ca855e021c8ffdApiResponse"/>
+            /// The <see cref="EditQuestionBankQuestionApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -3125,14 +2046,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public D38b27b30f91d05932ca855e021c8ffdApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public EditQuestionBankQuestionApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="D38b27b30f91d05932ca855e021c8ffdApiResponse"/>
+            /// The <see cref="EditQuestionBankQuestionApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -3141,7 +2062,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public D38b27b30f91d05932ca855e021c8ffdApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public EditQuestionBankQuestionApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -3159,11 +2080,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -3172,7 +2093,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -3197,11 +2118,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model64d6f1d6c88cbcfccd3e511b29c394d6200Response? Ok()
+            public GatewayApiSdk.Model.UpdateQuestionBankQuestion200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model64d6f1d6c88cbcfccd3e511b29c394d6200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateQuestionBankQuestion200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -3210,7 +2131,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model64d6f1d6c88cbcfccd3e511b29c394d6200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateQuestionBankQuestion200Response? result)
             {
                 result = null;
 
@@ -3235,11 +2156,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -3248,7 +2169,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -3274,342 +2195,7 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatDa82f7ce4870bd37af28a192877b22a7(ref int id, ref string status);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="status"></param>
-        /// <returns></returns>
-        private void ValidateDa82f7ce4870bd37af28a192877b22a7(string status)
-        {
-            if (status == null)
-                throw new ArgumentNullException(nameof(status));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="status"></param>
-        private void AfterDa82f7ce4870bd37af28a192877b22a7DefaultImplementation(IDa82f7ce4870bd37af28a192877b22a7ApiResponse apiResponseLocalVar, int id, string status)
-        {
-            bool suppressDefaultLog = false;
-            AfterDa82f7ce4870bd37af28a192877b22a7(ref suppressDefaultLog, apiResponseLocalVar, id, status);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="status"></param>
-        partial void AfterDa82f7ce4870bd37af28a192877b22a7(ref bool suppressDefaultLog, IDa82f7ce4870bd37af28a192877b22a7ApiResponse apiResponseLocalVar, int id, string status);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="status"></param>
-        private void OnErrorDa82f7ce4870bd37af28a192877b22a7DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, string status)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorDa82f7ce4870bd37af28a192877b22a7(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, status);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="status"></param>
-        partial void OnErrorDa82f7ce4870bd37af28a192877b22a7(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, string status);
-
-        /// <summary>
-        /// QuestionBank@updateStatus Lock, unlock, archive or unarchive a question bank question
-        /// </summary>
-        /// <param name="id">question bank question id</param>
-        /// <param name="status">lock or unlock</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDa82f7ce4870bd37af28a192877b22a7ApiResponse"/>&gt;</returns>
-        public async Task<IDa82f7ce4870bd37af28a192877b22a7ApiResponse?> Da82f7ce4870bd37af28a192877b22a7OrDefaultAsync(int id, string status, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Da82f7ce4870bd37af28a192877b22a7Async(id, status, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// QuestionBank@updateStatus Lock, unlock, archive or unarchive a question bank question
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">question bank question id</param>
-        /// <param name="status">lock or unlock</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDa82f7ce4870bd37af28a192877b22a7ApiResponse"/>&gt;</returns>
-        public async Task<IDa82f7ce4870bd37af28a192877b22a7ApiResponse> Da82f7ce4870bd37af28a192877b22a7Async(int id, string status, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateDa82f7ce4870bd37af28a192877b22a7(status);
-
-                FormatDa82f7ce4870bd37af28a192877b22a7(ref id, ref status);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/questions/{id}/{status}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/questions/{id}/{status}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bstatus%7D", Uri.EscapeDataString(status.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Patch;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Da82f7ce4870bd37af28a192877b22a7ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/questions/{id}/{status}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterDa82f7ce4870bd37af28a192877b22a7DefaultImplementation(apiResponseLocalVar, id, status);
-
-                        Events.ExecuteOnDa82f7ce4870bd37af28a192877b22a7(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorDa82f7ce4870bd37af28a192877b22a7DefaultImplementation(e, "/api/v1/questions/{id}/{status}", uriBuilderLocalVar.Path, id, status);
-                Events.ExecuteOnErrorDa82f7ce4870bd37af28a192877b22a7(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Da82f7ce4870bd37af28a192877b22a7ApiResponse"/>
-        /// </summary>
-        public partial class Da82f7ce4870bd37af28a192877b22a7ApiResponse : GatewayApiSdk.Client.ApiResponse, IDa82f7ce4870bd37af28a192877b22a7ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<QuestionBankApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Da82f7ce4870bd37af28a192877b22a7ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Da82f7ce4870bd37af28a192877b22a7ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Da82f7ce4870bd37af28a192877b22a7ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Da82f7ce4870bd37af28a192877b22a7ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Da82f7ce4870bd37af28a192877b22a7200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Da82f7ce4870bd37af28a192877b22a7200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Da82f7ce4870bd37af28a192877b22a7200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatDbaa6922ceaa314314605cba51dbb9df(ref Option<int> sectionId, ref Option<int> isChild, ref Option<int> perPage, ref Option<int> page);
+        partial void FormatFetchArchivedQuestionBankQuestions(ref Option<int> sectionId, ref Option<int> isChild, ref Option<int> perPage, ref Option<int> page);
 
         /// <summary>
         /// Processes the server response
@@ -3619,10 +2205,10 @@ namespace GatewayApiSdk.Api
         /// <param name="isChild"></param>
         /// <param name="perPage"></param>
         /// <param name="page"></param>
-        private void AfterDbaa6922ceaa314314605cba51dbb9dfDefaultImplementation(IDbaa6922ceaa314314605cba51dbb9dfApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
+        private void AfterFetchArchivedQuestionBankQuestionsDefaultImplementation(IFetchArchivedQuestionBankQuestionsApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
         {
             bool suppressDefaultLog = false;
-            AfterDbaa6922ceaa314314605cba51dbb9df(ref suppressDefaultLog, apiResponseLocalVar, sectionId, isChild, perPage, page);
+            AfterFetchArchivedQuestionBankQuestions(ref suppressDefaultLog, apiResponseLocalVar, sectionId, isChild, perPage, page);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -3636,7 +2222,7 @@ namespace GatewayApiSdk.Api
         /// <param name="isChild"></param>
         /// <param name="perPage"></param>
         /// <param name="page"></param>
-        partial void AfterDbaa6922ceaa314314605cba51dbb9df(ref bool suppressDefaultLog, IDbaa6922ceaa314314605cba51dbb9dfApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
+        partial void AfterFetchArchivedQuestionBankQuestions(ref bool suppressDefaultLog, IFetchArchivedQuestionBankQuestionsApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -3648,10 +2234,10 @@ namespace GatewayApiSdk.Api
         /// <param name="isChild"></param>
         /// <param name="perPage"></param>
         /// <param name="page"></param>
-        private void OnErrorDbaa6922ceaa314314605cba51dbb9dfDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
+        private void OnErrorFetchArchivedQuestionBankQuestionsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorDbaa6922ceaa314314605cba51dbb9df(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, sectionId, isChild, perPage, page);
+            OnErrorFetchArchivedQuestionBankQuestions(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, sectionId, isChild, perPage, page);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -3667,7 +2253,7 @@ namespace GatewayApiSdk.Api
         /// <param name="isChild"></param>
         /// <param name="perPage"></param>
         /// <param name="page"></param>
-        partial void OnErrorDbaa6922ceaa314314605cba51dbb9df(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
+        partial void OnErrorFetchArchivedQuestionBankQuestions(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
 
         /// <summary>
         /// QuestionBank@indexArchived List of archived question bank questions
@@ -3677,12 +2263,12 @@ namespace GatewayApiSdk.Api
         /// <param name="perPage">per page (optional)</param>
         /// <param name="page">page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDbaa6922ceaa314314605cba51dbb9dfApiResponse"/>&gt;</returns>
-        public async Task<IDbaa6922ceaa314314605cba51dbb9dfApiResponse?> Dbaa6922ceaa314314605cba51dbb9dfOrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchArchivedQuestionBankQuestionsApiResponse"/>&gt;</returns>
+        public async Task<IFetchArchivedQuestionBankQuestionsApiResponse?> FetchArchivedQuestionBankQuestionsOrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Dbaa6922ceaa314314605cba51dbb9dfAsync(sectionId, isChild, perPage, page, cancellationToken).ConfigureAwait(false);
+                return await FetchArchivedQuestionBankQuestionsAsync(sectionId, isChild, perPage, page, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -3699,14 +2285,14 @@ namespace GatewayApiSdk.Api
         /// <param name="perPage">per page (optional)</param>
         /// <param name="page">page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDbaa6922ceaa314314605cba51dbb9dfApiResponse"/>&gt;</returns>
-        public async Task<IDbaa6922ceaa314314605cba51dbb9dfApiResponse> Dbaa6922ceaa314314605cba51dbb9dfAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchArchivedQuestionBankQuestionsApiResponse"/>&gt;</returns>
+        public async Task<IFetchArchivedQuestionBankQuestionsApiResponse> FetchArchivedQuestionBankQuestionsAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatDbaa6922ceaa314314605cba51dbb9df(ref sectionId, ref isChild, ref perPage, ref page);
+                FormatFetchArchivedQuestionBankQuestions(ref sectionId, ref isChild, ref perPage, ref page);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -3757,7 +2343,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Dbaa6922ceaa314314605cba51dbb9dfApiResponse apiResponseLocalVar;
+                        FetchArchivedQuestionBankQuestionsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -3768,9 +2354,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterDbaa6922ceaa314314605cba51dbb9dfDefaultImplementation(apiResponseLocalVar, sectionId, isChild, perPage, page);
+                        AfterFetchArchivedQuestionBankQuestionsDefaultImplementation(apiResponseLocalVar, sectionId, isChild, perPage, page);
 
-                        Events.ExecuteOnDbaa6922ceaa314314605cba51dbb9df(apiResponseLocalVar);
+                        Events.ExecuteOnFetchArchivedQuestionBankQuestions(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -3782,16 +2368,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorDbaa6922ceaa314314605cba51dbb9dfDefaultImplementation(e, "/api/v1/questions/archived", uriBuilderLocalVar.Path, sectionId, isChild, perPage, page);
-                Events.ExecuteOnErrorDbaa6922ceaa314314605cba51dbb9df(e);
+                OnErrorFetchArchivedQuestionBankQuestionsDefaultImplementation(e, "/api/v1/questions/archived", uriBuilderLocalVar.Path, sectionId, isChild, perPage, page);
+                Events.ExecuteOnErrorFetchArchivedQuestionBankQuestions(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Dbaa6922ceaa314314605cba51dbb9dfApiResponse"/>
+        /// The <see cref="FetchArchivedQuestionBankQuestionsApiResponse"/>
         /// </summary>
-        public partial class Dbaa6922ceaa314314605cba51dbb9dfApiResponse : GatewayApiSdk.Client.ApiResponse, IDbaa6922ceaa314314605cba51dbb9dfApiResponse
+        public partial class FetchArchivedQuestionBankQuestionsApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchArchivedQuestionBankQuestionsApiResponse
         {
             /// <summary>
             /// The logger
@@ -3799,7 +2385,7 @@ namespace GatewayApiSdk.Api
             public ILogger<QuestionBankApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Dbaa6922ceaa314314605cba51dbb9dfApiResponse"/>
+            /// The <see cref="FetchArchivedQuestionBankQuestionsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -3808,14 +2394,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Dbaa6922ceaa314314605cba51dbb9dfApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchArchivedQuestionBankQuestionsApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Dbaa6922ceaa314314605cba51dbb9dfApiResponse"/>
+            /// The <see cref="FetchArchivedQuestionBankQuestionsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -3824,7 +2410,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Dbaa6922ceaa314314605cba51dbb9dfApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchArchivedQuestionBankQuestionsApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -3842,11 +2428,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model35856fcdf6980ae4da3303ec5a8d90b7200Response? Ok()
+            public GatewayApiSdk.Model.FetchQuestionBankQuestions200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model35856fcdf6980ae4da3303ec5a8d90b7200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchQuestionBankQuestions200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -3855,7 +2441,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model35856fcdf6980ae4da3303ec5a8d90b7200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchQuestionBankQuestions200Response? result)
             {
                 result = null;
 
@@ -3881,322 +2467,7 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatE7408526aeb9ed9cc633d4a9f25cfa14(ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterE7408526aeb9ed9cc633d4a9f25cfa14DefaultImplementation(IE7408526aeb9ed9cc633d4a9f25cfa14ApiResponse apiResponseLocalVar, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterE7408526aeb9ed9cc633d4a9f25cfa14(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterE7408526aeb9ed9cc633d4a9f25cfa14(ref bool suppressDefaultLog, IE7408526aeb9ed9cc633d4a9f25cfa14ApiResponse apiResponseLocalVar, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorE7408526aeb9ed9cc633d4a9f25cfa14DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorE7408526aeb9ed9cc633d4a9f25cfa14(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorE7408526aeb9ed9cc633d4a9f25cfa14(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
-
-        /// <summary>
-        /// QuestionBank@destroy Delete a system question bank question
-        /// </summary>
-        /// <param name="id">question bank question id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IE7408526aeb9ed9cc633d4a9f25cfa14ApiResponse"/>&gt;</returns>
-        public async Task<IE7408526aeb9ed9cc633d4a9f25cfa14ApiResponse?> E7408526aeb9ed9cc633d4a9f25cfa14OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await E7408526aeb9ed9cc633d4a9f25cfa14Async(id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// QuestionBank@destroy Delete a system question bank question
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">question bank question id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IE7408526aeb9ed9cc633d4a9f25cfa14ApiResponse"/>&gt;</returns>
-        public async Task<IE7408526aeb9ed9cc633d4a9f25cfa14ApiResponse> E7408526aeb9ed9cc633d4a9f25cfa14Async(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatE7408526aeb9ed9cc633d4a9f25cfa14(ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/questions/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/questions/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Delete;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        E7408526aeb9ed9cc633d4a9f25cfa14ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/questions/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterE7408526aeb9ed9cc633d4a9f25cfa14DefaultImplementation(apiResponseLocalVar, id);
-
-                        Events.ExecuteOnE7408526aeb9ed9cc633d4a9f25cfa14(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorE7408526aeb9ed9cc633d4a9f25cfa14DefaultImplementation(e, "/api/v1/questions/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorE7408526aeb9ed9cc633d4a9f25cfa14(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="E7408526aeb9ed9cc633d4a9f25cfa14ApiResponse"/>
-        /// </summary>
-        public partial class E7408526aeb9ed9cc633d4a9f25cfa14ApiResponse : GatewayApiSdk.Client.ApiResponse, IE7408526aeb9ed9cc633d4a9f25cfa14ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<QuestionBankApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="E7408526aeb9ed9cc633d4a9f25cfa14ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public E7408526aeb9ed9cc633d4a9f25cfa14ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="E7408526aeb9ed9cc633d4a9f25cfa14ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public E7408526aeb9ed9cc633d4a9f25cfa14ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatEa6f671b0436fa57891fe098994556a1(ref Option<int> sectionId, ref Option<int> isChild, ref Option<int> perPage, ref Option<int> page);
+        partial void FormatFetchCustomQuestionBankQuestions(ref Option<int> sectionId, ref Option<int> isChild, ref Option<int> perPage, ref Option<int> page);
 
         /// <summary>
         /// Processes the server response
@@ -4206,10 +2477,10 @@ namespace GatewayApiSdk.Api
         /// <param name="isChild"></param>
         /// <param name="perPage"></param>
         /// <param name="page"></param>
-        private void AfterEa6f671b0436fa57891fe098994556a1DefaultImplementation(IEa6f671b0436fa57891fe098994556a1ApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
+        private void AfterFetchCustomQuestionBankQuestionsDefaultImplementation(IFetchCustomQuestionBankQuestionsApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
         {
             bool suppressDefaultLog = false;
-            AfterEa6f671b0436fa57891fe098994556a1(ref suppressDefaultLog, apiResponseLocalVar, sectionId, isChild, perPage, page);
+            AfterFetchCustomQuestionBankQuestions(ref suppressDefaultLog, apiResponseLocalVar, sectionId, isChild, perPage, page);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -4223,7 +2494,7 @@ namespace GatewayApiSdk.Api
         /// <param name="isChild"></param>
         /// <param name="perPage"></param>
         /// <param name="page"></param>
-        partial void AfterEa6f671b0436fa57891fe098994556a1(ref bool suppressDefaultLog, IEa6f671b0436fa57891fe098994556a1ApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
+        partial void AfterFetchCustomQuestionBankQuestions(ref bool suppressDefaultLog, IFetchCustomQuestionBankQuestionsApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -4235,10 +2506,10 @@ namespace GatewayApiSdk.Api
         /// <param name="isChild"></param>
         /// <param name="perPage"></param>
         /// <param name="page"></param>
-        private void OnErrorEa6f671b0436fa57891fe098994556a1DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
+        private void OnErrorFetchCustomQuestionBankQuestionsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorEa6f671b0436fa57891fe098994556a1(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, sectionId, isChild, perPage, page);
+            OnErrorFetchCustomQuestionBankQuestions(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, sectionId, isChild, perPage, page);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -4254,279 +2525,7 @@ namespace GatewayApiSdk.Api
         /// <param name="isChild"></param>
         /// <param name="perPage"></param>
         /// <param name="page"></param>
-        partial void OnErrorEa6f671b0436fa57891fe098994556a1(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
-
-        /// <summary>
-        /// QuestionBank@indexStandard List of standard question bank questions
-        /// </summary>
-        /// <param name="sectionId">section id (optional)</param>
-        /// <param name="isChild">filter on is_child field (optional)</param>
-        /// <param name="perPage">per page (optional)</param>
-        /// <param name="page">page (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IEa6f671b0436fa57891fe098994556a1ApiResponse"/>&gt;</returns>
-        public async Task<IEa6f671b0436fa57891fe098994556a1ApiResponse?> Ea6f671b0436fa57891fe098994556a1OrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Ea6f671b0436fa57891fe098994556a1Async(sectionId, isChild, perPage, page, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// QuestionBank@indexStandard List of standard question bank questions
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sectionId">section id (optional)</param>
-        /// <param name="isChild">filter on is_child field (optional)</param>
-        /// <param name="perPage">per page (optional)</param>
-        /// <param name="page">page (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IEa6f671b0436fa57891fe098994556a1ApiResponse"/>&gt;</returns>
-        public async Task<IEa6f671b0436fa57891fe098994556a1ApiResponse> Ea6f671b0436fa57891fe098994556a1Async(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatEa6f671b0436fa57891fe098994556a1(ref sectionId, ref isChild, ref perPage, ref page);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/questions/standard"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/questions/standard");
-
-                    System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
-
-                    if (sectionId.IsSet)
-                        parseQueryStringLocalVar["section_id"] = ClientUtils.ParameterToString(sectionId.Value);
-
-                    if (isChild.IsSet)
-                        parseQueryStringLocalVar["is_child"] = ClientUtils.ParameterToString(isChild.Value);
-
-                    if (perPage.IsSet)
-                        parseQueryStringLocalVar["per_page"] = ClientUtils.ParameterToString(perPage.Value);
-
-                    if (page.IsSet)
-                        parseQueryStringLocalVar["page"] = ClientUtils.ParameterToString(page.Value);
-
-                    uriBuilderLocalVar.Query = parseQueryStringLocalVar.ToString();
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Ea6f671b0436fa57891fe098994556a1ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/questions/standard", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterEa6f671b0436fa57891fe098994556a1DefaultImplementation(apiResponseLocalVar, sectionId, isChild, perPage, page);
-
-                        Events.ExecuteOnEa6f671b0436fa57891fe098994556a1(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorEa6f671b0436fa57891fe098994556a1DefaultImplementation(e, "/api/v1/questions/standard", uriBuilderLocalVar.Path, sectionId, isChild, perPage, page);
-                Events.ExecuteOnErrorEa6f671b0436fa57891fe098994556a1(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Ea6f671b0436fa57891fe098994556a1ApiResponse"/>
-        /// </summary>
-        public partial class Ea6f671b0436fa57891fe098994556a1ApiResponse : GatewayApiSdk.Client.ApiResponse, IEa6f671b0436fa57891fe098994556a1ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<QuestionBankApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Ea6f671b0436fa57891fe098994556a1ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Ea6f671b0436fa57891fe098994556a1ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Ea6f671b0436fa57891fe098994556a1ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Ea6f671b0436fa57891fe098994556a1ApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Ea6f671b0436fa57891fe098994556a1200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Ea6f671b0436fa57891fe098994556a1200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Ea6f671b0436fa57891fe098994556a1200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatFa7079be66c6e1f5a236ecac24b63e2b(ref Option<int> sectionId, ref Option<int> isChild, ref Option<int> perPage, ref Option<int> page);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="sectionId"></param>
-        /// <param name="isChild"></param>
-        /// <param name="perPage"></param>
-        /// <param name="page"></param>
-        private void AfterFa7079be66c6e1f5a236ecac24b63e2bDefaultImplementation(IFa7079be66c6e1f5a236ecac24b63e2bApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
-        {
-            bool suppressDefaultLog = false;
-            AfterFa7079be66c6e1f5a236ecac24b63e2b(ref suppressDefaultLog, apiResponseLocalVar, sectionId, isChild, perPage, page);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="sectionId"></param>
-        /// <param name="isChild"></param>
-        /// <param name="perPage"></param>
-        /// <param name="page"></param>
-        partial void AfterFa7079be66c6e1f5a236ecac24b63e2b(ref bool suppressDefaultLog, IFa7079be66c6e1f5a236ecac24b63e2bApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="sectionId"></param>
-        /// <param name="isChild"></param>
-        /// <param name="perPage"></param>
-        /// <param name="page"></param>
-        private void OnErrorFa7079be66c6e1f5a236ecac24b63e2bDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorFa7079be66c6e1f5a236ecac24b63e2b(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, sectionId, isChild, perPage, page);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="sectionId"></param>
-        /// <param name="isChild"></param>
-        /// <param name="perPage"></param>
-        /// <param name="page"></param>
-        partial void OnErrorFa7079be66c6e1f5a236ecac24b63e2b(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
+        partial void OnErrorFetchCustomQuestionBankQuestions(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
 
         /// <summary>
         /// QuestionBank@indexCustom List of custom question bank questions
@@ -4536,12 +2535,12 @@ namespace GatewayApiSdk.Api
         /// <param name="perPage">per page (optional)</param>
         /// <param name="page">page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFa7079be66c6e1f5a236ecac24b63e2bApiResponse"/>&gt;</returns>
-        public async Task<IFa7079be66c6e1f5a236ecac24b63e2bApiResponse?> Fa7079be66c6e1f5a236ecac24b63e2bOrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchCustomQuestionBankQuestionsApiResponse"/>&gt;</returns>
+        public async Task<IFetchCustomQuestionBankQuestionsApiResponse?> FetchCustomQuestionBankQuestionsOrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Fa7079be66c6e1f5a236ecac24b63e2bAsync(sectionId, isChild, perPage, page, cancellationToken).ConfigureAwait(false);
+                return await FetchCustomQuestionBankQuestionsAsync(sectionId, isChild, perPage, page, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -4558,14 +2557,14 @@ namespace GatewayApiSdk.Api
         /// <param name="perPage">per page (optional)</param>
         /// <param name="page">page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFa7079be66c6e1f5a236ecac24b63e2bApiResponse"/>&gt;</returns>
-        public async Task<IFa7079be66c6e1f5a236ecac24b63e2bApiResponse> Fa7079be66c6e1f5a236ecac24b63e2bAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchCustomQuestionBankQuestionsApiResponse"/>&gt;</returns>
+        public async Task<IFetchCustomQuestionBankQuestionsApiResponse> FetchCustomQuestionBankQuestionsAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatFa7079be66c6e1f5a236ecac24b63e2b(ref sectionId, ref isChild, ref perPage, ref page);
+                FormatFetchCustomQuestionBankQuestions(ref sectionId, ref isChild, ref perPage, ref page);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -4616,7 +2615,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Fa7079be66c6e1f5a236ecac24b63e2bApiResponse apiResponseLocalVar;
+                        FetchCustomQuestionBankQuestionsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -4627,9 +2626,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterFa7079be66c6e1f5a236ecac24b63e2bDefaultImplementation(apiResponseLocalVar, sectionId, isChild, perPage, page);
+                        AfterFetchCustomQuestionBankQuestionsDefaultImplementation(apiResponseLocalVar, sectionId, isChild, perPage, page);
 
-                        Events.ExecuteOnFa7079be66c6e1f5a236ecac24b63e2b(apiResponseLocalVar);
+                        Events.ExecuteOnFetchCustomQuestionBankQuestions(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -4641,16 +2640,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorFa7079be66c6e1f5a236ecac24b63e2bDefaultImplementation(e, "/api/v1/questions/custom", uriBuilderLocalVar.Path, sectionId, isChild, perPage, page);
-                Events.ExecuteOnErrorFa7079be66c6e1f5a236ecac24b63e2b(e);
+                OnErrorFetchCustomQuestionBankQuestionsDefaultImplementation(e, "/api/v1/questions/custom", uriBuilderLocalVar.Path, sectionId, isChild, perPage, page);
+                Events.ExecuteOnErrorFetchCustomQuestionBankQuestions(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Fa7079be66c6e1f5a236ecac24b63e2bApiResponse"/>
+        /// The <see cref="FetchCustomQuestionBankQuestionsApiResponse"/>
         /// </summary>
-        public partial class Fa7079be66c6e1f5a236ecac24b63e2bApiResponse : GatewayApiSdk.Client.ApiResponse, IFa7079be66c6e1f5a236ecac24b63e2bApiResponse
+        public partial class FetchCustomQuestionBankQuestionsApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchCustomQuestionBankQuestionsApiResponse
         {
             /// <summary>
             /// The logger
@@ -4658,7 +2657,7 @@ namespace GatewayApiSdk.Api
             public ILogger<QuestionBankApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Fa7079be66c6e1f5a236ecac24b63e2bApiResponse"/>
+            /// The <see cref="FetchCustomQuestionBankQuestionsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -4667,14 +2666,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Fa7079be66c6e1f5a236ecac24b63e2bApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchCustomQuestionBankQuestionsApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Fa7079be66c6e1f5a236ecac24b63e2bApiResponse"/>
+            /// The <see cref="FetchCustomQuestionBankQuestionsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -4683,7 +2682,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Fa7079be66c6e1f5a236ecac24b63e2bApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchCustomQuestionBankQuestionsApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -4701,11 +2700,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Fa7079be66c6e1f5a236ecac24b63e2b200Response? Ok()
+            public GatewayApiSdk.Model.FetchCustomQuestionBankQuestions200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Fa7079be66c6e1f5a236ecac24b63e2b200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchCustomQuestionBankQuestions200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -4714,7 +2713,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Fa7079be66c6e1f5a236ecac24b63e2b200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchCustomQuestionBankQuestions200Response? result)
             {
                 result = null;
 
@@ -4724,6 +2723,2007 @@ namespace GatewayApiSdk.Api
                 } catch (Exception e)
                 {
                     OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchQuestionBankQuestion(ref int id);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        private void AfterFetchQuestionBankQuestionDefaultImplementation(IFetchQuestionBankQuestionApiResponse apiResponseLocalVar, int id)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchQuestionBankQuestion(ref suppressDefaultLog, apiResponseLocalVar, id);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        partial void AfterFetchQuestionBankQuestion(ref bool suppressDefaultLog, IFetchQuestionBankQuestionApiResponse apiResponseLocalVar, int id);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        private void OnErrorFetchQuestionBankQuestionDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchQuestionBankQuestion(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        partial void OnErrorFetchQuestionBankQuestion(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+
+        /// <summary>
+        /// QuestionBank@show Return the latest question bank question version for the supplied question id, in an FE-friendly format
+        /// </summary>
+        /// <param name="id">question bank question id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchQuestionBankQuestionApiResponse"/>&gt;</returns>
+        public async Task<IFetchQuestionBankQuestionApiResponse?> FetchQuestionBankQuestionOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchQuestionBankQuestionAsync(id, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// QuestionBank@show Return the latest question bank question version for the supplied question id, in an FE-friendly format
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">question bank question id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchQuestionBankQuestionApiResponse"/>&gt;</returns>
+        public async Task<IFetchQuestionBankQuestionApiResponse> FetchQuestionBankQuestionAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchQuestionBankQuestion(ref id);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/questions/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/questions/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchQuestionBankQuestionApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/questions/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchQuestionBankQuestionDefaultImplementation(apiResponseLocalVar, id);
+
+                        Events.ExecuteOnFetchQuestionBankQuestion(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchQuestionBankQuestionDefaultImplementation(e, "/api/v1/questions/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorFetchQuestionBankQuestion(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchQuestionBankQuestionApiResponse"/>
+        /// </summary>
+        public partial class FetchQuestionBankQuestionApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchQuestionBankQuestionApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<QuestionBankApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchQuestionBankQuestionApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchQuestionBankQuestionApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchQuestionBankQuestionApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchQuestionBankQuestionApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchQuestionBankQuestion200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchQuestionBankQuestion200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchQuestionBankQuestion200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchQuestionBankQuestionVersion(ref int id);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        private void AfterFetchQuestionBankQuestionVersionDefaultImplementation(IFetchQuestionBankQuestionVersionApiResponse apiResponseLocalVar, int id)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchQuestionBankQuestionVersion(ref suppressDefaultLog, apiResponseLocalVar, id);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        partial void AfterFetchQuestionBankQuestionVersion(ref bool suppressDefaultLog, IFetchQuestionBankQuestionVersionApiResponse apiResponseLocalVar, int id);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        private void OnErrorFetchQuestionBankQuestionVersionDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchQuestionBankQuestionVersion(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        partial void OnErrorFetchQuestionBankQuestionVersion(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+
+        /// <summary>
+        /// QuestionBank@showVersion Return a single system question bank question version
+        /// </summary>
+        /// <param name="id">question bank question version id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchQuestionBankQuestionVersionApiResponse"/>&gt;</returns>
+        public async Task<IFetchQuestionBankQuestionVersionApiResponse?> FetchQuestionBankQuestionVersionOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchQuestionBankQuestionVersionAsync(id, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// QuestionBank@showVersion Return a single system question bank question version
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">question bank question version id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchQuestionBankQuestionVersionApiResponse"/>&gt;</returns>
+        public async Task<IFetchQuestionBankQuestionVersionApiResponse> FetchQuestionBankQuestionVersionAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchQuestionBankQuestionVersion(ref id);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/questions/version/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/questions/version/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchQuestionBankQuestionVersionApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/questions/version/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchQuestionBankQuestionVersionDefaultImplementation(apiResponseLocalVar, id);
+
+                        Events.ExecuteOnFetchQuestionBankQuestionVersion(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchQuestionBankQuestionVersionDefaultImplementation(e, "/api/v1/questions/version/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorFetchQuestionBankQuestionVersion(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchQuestionBankQuestionVersionApiResponse"/>
+        /// </summary>
+        public partial class FetchQuestionBankQuestionVersionApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchQuestionBankQuestionVersionApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<QuestionBankApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchQuestionBankQuestionVersionApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchQuestionBankQuestionVersionApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchQuestionBankQuestionVersionApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchQuestionBankQuestionVersionApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchQuestionBankQuestionVersion200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchQuestionBankQuestionVersion200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchQuestionBankQuestionVersion200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchQuestionBankQuestions(ref Option<int> sectionId, ref Option<int> isChild, ref Option<int> perPage, ref Option<int> page);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="sectionId"></param>
+        /// <param name="isChild"></param>
+        /// <param name="perPage"></param>
+        /// <param name="page"></param>
+        private void AfterFetchQuestionBankQuestionsDefaultImplementation(IFetchQuestionBankQuestionsApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchQuestionBankQuestions(ref suppressDefaultLog, apiResponseLocalVar, sectionId, isChild, perPage, page);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="sectionId"></param>
+        /// <param name="isChild"></param>
+        /// <param name="perPage"></param>
+        /// <param name="page"></param>
+        partial void AfterFetchQuestionBankQuestions(ref bool suppressDefaultLog, IFetchQuestionBankQuestionsApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="sectionId"></param>
+        /// <param name="isChild"></param>
+        /// <param name="perPage"></param>
+        /// <param name="page"></param>
+        private void OnErrorFetchQuestionBankQuestionsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchQuestionBankQuestions(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, sectionId, isChild, perPage, page);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="sectionId"></param>
+        /// <param name="isChild"></param>
+        /// <param name="perPage"></param>
+        /// <param name="page"></param>
+        partial void OnErrorFetchQuestionBankQuestions(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
+
+        /// <summary>
+        /// QuestionBank@index List of question bank questions
+        /// </summary>
+        /// <param name="sectionId">section id (optional)</param>
+        /// <param name="isChild">filter on is_child field (optional)</param>
+        /// <param name="perPage">per page (optional)</param>
+        /// <param name="page">page (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchQuestionBankQuestionsApiResponse"/>&gt;</returns>
+        public async Task<IFetchQuestionBankQuestionsApiResponse?> FetchQuestionBankQuestionsOrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchQuestionBankQuestionsAsync(sectionId, isChild, perPage, page, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// QuestionBank@index List of question bank questions
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sectionId">section id (optional)</param>
+        /// <param name="isChild">filter on is_child field (optional)</param>
+        /// <param name="perPage">per page (optional)</param>
+        /// <param name="page">page (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchQuestionBankQuestionsApiResponse"/>&gt;</returns>
+        public async Task<IFetchQuestionBankQuestionsApiResponse> FetchQuestionBankQuestionsAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchQuestionBankQuestions(ref sectionId, ref isChild, ref perPage, ref page);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/questions"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/questions");
+
+                    System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
+
+                    if (sectionId.IsSet)
+                        parseQueryStringLocalVar["section_id"] = ClientUtils.ParameterToString(sectionId.Value);
+
+                    if (isChild.IsSet)
+                        parseQueryStringLocalVar["is_child"] = ClientUtils.ParameterToString(isChild.Value);
+
+                    if (perPage.IsSet)
+                        parseQueryStringLocalVar["per_page"] = ClientUtils.ParameterToString(perPage.Value);
+
+                    if (page.IsSet)
+                        parseQueryStringLocalVar["page"] = ClientUtils.ParameterToString(page.Value);
+
+                    uriBuilderLocalVar.Query = parseQueryStringLocalVar.ToString();
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchQuestionBankQuestionsApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/questions", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchQuestionBankQuestionsDefaultImplementation(apiResponseLocalVar, sectionId, isChild, perPage, page);
+
+                        Events.ExecuteOnFetchQuestionBankQuestions(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchQuestionBankQuestionsDefaultImplementation(e, "/api/v1/questions", uriBuilderLocalVar.Path, sectionId, isChild, perPage, page);
+                Events.ExecuteOnErrorFetchQuestionBankQuestions(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchQuestionBankQuestionsApiResponse"/>
+        /// </summary>
+        public partial class FetchQuestionBankQuestionsApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchQuestionBankQuestionsApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<QuestionBankApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchQuestionBankQuestionsApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchQuestionBankQuestionsApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchQuestionBankQuestionsApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchQuestionBankQuestionsApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchQuestionBankQuestions200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchQuestionBankQuestions200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchQuestionBankQuestions200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchStandardQuestionBankQuestions(ref Option<int> sectionId, ref Option<int> isChild, ref Option<int> perPage, ref Option<int> page);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="sectionId"></param>
+        /// <param name="isChild"></param>
+        /// <param name="perPage"></param>
+        /// <param name="page"></param>
+        private void AfterFetchStandardQuestionBankQuestionsDefaultImplementation(IFetchStandardQuestionBankQuestionsApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchStandardQuestionBankQuestions(ref suppressDefaultLog, apiResponseLocalVar, sectionId, isChild, perPage, page);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="sectionId"></param>
+        /// <param name="isChild"></param>
+        /// <param name="perPage"></param>
+        /// <param name="page"></param>
+        partial void AfterFetchStandardQuestionBankQuestions(ref bool suppressDefaultLog, IFetchStandardQuestionBankQuestionsApiResponse apiResponseLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="sectionId"></param>
+        /// <param name="isChild"></param>
+        /// <param name="perPage"></param>
+        /// <param name="page"></param>
+        private void OnErrorFetchStandardQuestionBankQuestionsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchStandardQuestionBankQuestions(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, sectionId, isChild, perPage, page);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="sectionId"></param>
+        /// <param name="isChild"></param>
+        /// <param name="perPage"></param>
+        /// <param name="page"></param>
+        partial void OnErrorFetchStandardQuestionBankQuestions(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> sectionId, Option<int> isChild, Option<int> perPage, Option<int> page);
+
+        /// <summary>
+        /// QuestionBank@indexStandard List of standard question bank questions
+        /// </summary>
+        /// <param name="sectionId">section id (optional)</param>
+        /// <param name="isChild">filter on is_child field (optional)</param>
+        /// <param name="perPage">per page (optional)</param>
+        /// <param name="page">page (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchStandardQuestionBankQuestionsApiResponse"/>&gt;</returns>
+        public async Task<IFetchStandardQuestionBankQuestionsApiResponse?> FetchStandardQuestionBankQuestionsOrDefaultAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchStandardQuestionBankQuestionsAsync(sectionId, isChild, perPage, page, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// QuestionBank@indexStandard List of standard question bank questions
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sectionId">section id (optional)</param>
+        /// <param name="isChild">filter on is_child field (optional)</param>
+        /// <param name="perPage">per page (optional)</param>
+        /// <param name="page">page (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchStandardQuestionBankQuestionsApiResponse"/>&gt;</returns>
+        public async Task<IFetchStandardQuestionBankQuestionsApiResponse> FetchStandardQuestionBankQuestionsAsync(Option<int> sectionId = default, Option<int> isChild = default, Option<int> perPage = default, Option<int> page = default, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchStandardQuestionBankQuestions(ref sectionId, ref isChild, ref perPage, ref page);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/questions/standard"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/questions/standard");
+
+                    System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
+
+                    if (sectionId.IsSet)
+                        parseQueryStringLocalVar["section_id"] = ClientUtils.ParameterToString(sectionId.Value);
+
+                    if (isChild.IsSet)
+                        parseQueryStringLocalVar["is_child"] = ClientUtils.ParameterToString(isChild.Value);
+
+                    if (perPage.IsSet)
+                        parseQueryStringLocalVar["per_page"] = ClientUtils.ParameterToString(perPage.Value);
+
+                    if (page.IsSet)
+                        parseQueryStringLocalVar["page"] = ClientUtils.ParameterToString(page.Value);
+
+                    uriBuilderLocalVar.Query = parseQueryStringLocalVar.ToString();
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchStandardQuestionBankQuestionsApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/questions/standard", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchStandardQuestionBankQuestionsDefaultImplementation(apiResponseLocalVar, sectionId, isChild, perPage, page);
+
+                        Events.ExecuteOnFetchStandardQuestionBankQuestions(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchStandardQuestionBankQuestionsDefaultImplementation(e, "/api/v1/questions/standard", uriBuilderLocalVar.Path, sectionId, isChild, perPage, page);
+                Events.ExecuteOnErrorFetchStandardQuestionBankQuestions(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchStandardQuestionBankQuestionsApiResponse"/>
+        /// </summary>
+        public partial class FetchStandardQuestionBankQuestionsApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchStandardQuestionBankQuestionsApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<QuestionBankApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchStandardQuestionBankQuestionsApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchStandardQuestionBankQuestionsApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchStandardQuestionBankQuestionsApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchStandardQuestionBankQuestionsApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchStandardQuestionBankQuestions200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchStandardQuestionBankQuestions200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchStandardQuestionBankQuestions200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchTeamQuestionBankQuestionsBySection(ref int teamId, ref int sectionId, ref Option<int> isChild);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="sectionId"></param>
+        /// <param name="isChild"></param>
+        private void AfterFetchTeamQuestionBankQuestionsBySectionDefaultImplementation(IFetchTeamQuestionBankQuestionsBySectionApiResponse apiResponseLocalVar, int teamId, int sectionId, Option<int> isChild)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchTeamQuestionBankQuestionsBySection(ref suppressDefaultLog, apiResponseLocalVar, teamId, sectionId, isChild);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="sectionId"></param>
+        /// <param name="isChild"></param>
+        partial void AfterFetchTeamQuestionBankQuestionsBySection(ref bool suppressDefaultLog, IFetchTeamQuestionBankQuestionsBySectionApiResponse apiResponseLocalVar, int teamId, int sectionId, Option<int> isChild);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="sectionId"></param>
+        /// <param name="isChild"></param>
+        private void OnErrorFetchTeamQuestionBankQuestionsBySectionDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int sectionId, Option<int> isChild)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchTeamQuestionBankQuestionsBySection(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, sectionId, isChild);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="sectionId"></param>
+        /// <param name="isChild"></param>
+        partial void OnErrorFetchTeamQuestionBankQuestionsBySection(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int sectionId, Option<int> isChild);
+
+        /// <summary>
+        /// TeamQuestionBank@indexBySection List of question bank questions by section
+        /// </summary>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="sectionId">section id</param>
+        /// <param name="isChild">filter on is_child field (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamQuestionBankQuestionsBySectionApiResponse"/>&gt;</returns>
+        public async Task<IFetchTeamQuestionBankQuestionsBySectionApiResponse?> FetchTeamQuestionBankQuestionsBySectionOrDefaultAsync(int teamId, int sectionId, Option<int> isChild = default, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchTeamQuestionBankQuestionsBySectionAsync(teamId, sectionId, isChild, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// TeamQuestionBank@indexBySection List of question bank questions by section
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="sectionId">section id</param>
+        /// <param name="isChild">filter on is_child field (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamQuestionBankQuestionsBySectionApiResponse"/>&gt;</returns>
+        public async Task<IFetchTeamQuestionBankQuestionsBySectionApiResponse> FetchTeamQuestionBankQuestionsBySectionAsync(int teamId, int sectionId, Option<int> isChild = default, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchTeamQuestionBankQuestionsBySection(ref teamId, ref sectionId, ref isChild);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/teams/{teamId}/questions/section/{sectionId}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/teams/{teamId}/questions/section/{sectionId}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BsectionId%7D", Uri.EscapeDataString(sectionId.ToString()));
+
+                    System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
+
+                    if (isChild.IsSet)
+                        parseQueryStringLocalVar["is_child"] = ClientUtils.ParameterToString(isChild.Value);
+
+                    uriBuilderLocalVar.Query = parseQueryStringLocalVar.ToString();
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchTeamQuestionBankQuestionsBySectionApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/teams/{teamId}/questions/section/{sectionId}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchTeamQuestionBankQuestionsBySectionDefaultImplementation(apiResponseLocalVar, teamId, sectionId, isChild);
+
+                        Events.ExecuteOnFetchTeamQuestionBankQuestionsBySection(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchTeamQuestionBankQuestionsBySectionDefaultImplementation(e, "/api/v1/teams/{teamId}/questions/section/{sectionId}", uriBuilderLocalVar.Path, teamId, sectionId, isChild);
+                Events.ExecuteOnErrorFetchTeamQuestionBankQuestionsBySection(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchTeamQuestionBankQuestionsBySectionApiResponse"/>
+        /// </summary>
+        public partial class FetchTeamQuestionBankQuestionsBySectionApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchTeamQuestionBankQuestionsBySectionApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<QuestionBankApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchTeamQuestionBankQuestionsBySectionApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchTeamQuestionBankQuestionsBySectionApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchTeamQuestionBankQuestionsBySectionApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchTeamQuestionBankQuestionsBySectionApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchTeamQuestionBankQuestionsBySection200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchTeamQuestionBankQuestionsBySection200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchTeamQuestionBankQuestionsBySection200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatUpdateQuestionBankQuestion(ref int id, UpdateQuestionBankQuestionRequest updateQuestionBankQuestionRequest);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="updateQuestionBankQuestionRequest"></param>
+        /// <returns></returns>
+        private void ValidateUpdateQuestionBankQuestion(UpdateQuestionBankQuestionRequest updateQuestionBankQuestionRequest)
+        {
+            if (updateQuestionBankQuestionRequest == null)
+                throw new ArgumentNullException(nameof(updateQuestionBankQuestionRequest));
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="updateQuestionBankQuestionRequest"></param>
+        private void AfterUpdateQuestionBankQuestionDefaultImplementation(IUpdateQuestionBankQuestionApiResponse apiResponseLocalVar, int id, UpdateQuestionBankQuestionRequest updateQuestionBankQuestionRequest)
+        {
+            bool suppressDefaultLog = false;
+            AfterUpdateQuestionBankQuestion(ref suppressDefaultLog, apiResponseLocalVar, id, updateQuestionBankQuestionRequest);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="updateQuestionBankQuestionRequest"></param>
+        partial void AfterUpdateQuestionBankQuestion(ref bool suppressDefaultLog, IUpdateQuestionBankQuestionApiResponse apiResponseLocalVar, int id, UpdateQuestionBankQuestionRequest updateQuestionBankQuestionRequest);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="updateQuestionBankQuestionRequest"></param>
+        private void OnErrorUpdateQuestionBankQuestionDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateQuestionBankQuestionRequest updateQuestionBankQuestionRequest)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorUpdateQuestionBankQuestion(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, updateQuestionBankQuestionRequest);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="updateQuestionBankQuestionRequest"></param>
+        partial void OnErrorUpdateQuestionBankQuestion(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateQuestionBankQuestionRequest updateQuestionBankQuestionRequest);
+
+        /// <summary>
+        /// QuestionBank@update Update a system question bank question - children and their versions are updated through parents
+        /// </summary>
+        /// <param name="id">question bank question id</param>
+        /// <param name="updateQuestionBankQuestionRequest">QuestionBank definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateQuestionBankQuestionApiResponse"/>&gt;</returns>
+        public async Task<IUpdateQuestionBankQuestionApiResponse?> UpdateQuestionBankQuestionOrDefaultAsync(int id, UpdateQuestionBankQuestionRequest updateQuestionBankQuestionRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await UpdateQuestionBankQuestionAsync(id, updateQuestionBankQuestionRequest, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// QuestionBank@update Update a system question bank question - children and their versions are updated through parents
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">question bank question id</param>
+        /// <param name="updateQuestionBankQuestionRequest">QuestionBank definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateQuestionBankQuestionApiResponse"/>&gt;</returns>
+        public async Task<IUpdateQuestionBankQuestionApiResponse> UpdateQuestionBankQuestionAsync(int id, UpdateQuestionBankQuestionRequest updateQuestionBankQuestionRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                ValidateUpdateQuestionBankQuestion(updateQuestionBankQuestionRequest);
+
+                FormatUpdateQuestionBankQuestion(ref id, updateQuestionBankQuestionRequest);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/questions/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/questions/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    httpRequestMessageLocalVar.Content = (updateQuestionBankQuestionRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateQuestionBankQuestionRequest, _jsonSerializerOptions));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] contentTypes = new string[] {
+                        "application/json"
+                    };
+
+                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
+
+                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
+                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        UpdateQuestionBankQuestionApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/questions/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterUpdateQuestionBankQuestionDefaultImplementation(apiResponseLocalVar, id, updateQuestionBankQuestionRequest);
+
+                        Events.ExecuteOnUpdateQuestionBankQuestion(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorUpdateQuestionBankQuestionDefaultImplementation(e, "/api/v1/questions/{id}", uriBuilderLocalVar.Path, id, updateQuestionBankQuestionRequest);
+                Events.ExecuteOnErrorUpdateQuestionBankQuestion(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="UpdateQuestionBankQuestionApiResponse"/>
+        /// </summary>
+        public partial class UpdateQuestionBankQuestionApiResponse : GatewayApiSdk.Client.ApiResponse, IUpdateQuestionBankQuestionApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<QuestionBankApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="UpdateQuestionBankQuestionApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public UpdateQuestionBankQuestionApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="UpdateQuestionBankQuestionApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public UpdateQuestionBankQuestionApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.UpdateQuestionBankQuestion200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateQuestionBankQuestion200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateQuestionBankQuestion200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public bool IsInternalServerError => 500 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsInternalServerError
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = InternalServerError();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatUpdateQuestionBankQuestionStatus(ref int id, ref string status);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="status"></param>
+        /// <returns></returns>
+        private void ValidateUpdateQuestionBankQuestionStatus(string status)
+        {
+            if (status == null)
+                throw new ArgumentNullException(nameof(status));
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="status"></param>
+        private void AfterUpdateQuestionBankQuestionStatusDefaultImplementation(IUpdateQuestionBankQuestionStatusApiResponse apiResponseLocalVar, int id, string status)
+        {
+            bool suppressDefaultLog = false;
+            AfterUpdateQuestionBankQuestionStatus(ref suppressDefaultLog, apiResponseLocalVar, id, status);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="status"></param>
+        partial void AfterUpdateQuestionBankQuestionStatus(ref bool suppressDefaultLog, IUpdateQuestionBankQuestionStatusApiResponse apiResponseLocalVar, int id, string status);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="status"></param>
+        private void OnErrorUpdateQuestionBankQuestionStatusDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, string status)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorUpdateQuestionBankQuestionStatus(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, status);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="status"></param>
+        partial void OnErrorUpdateQuestionBankQuestionStatus(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, string status);
+
+        /// <summary>
+        /// QuestionBank@updateStatus Lock, unlock, archive or unarchive a question bank question
+        /// </summary>
+        /// <param name="id">question bank question id</param>
+        /// <param name="status">lock or unlock</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateQuestionBankQuestionStatusApiResponse"/>&gt;</returns>
+        public async Task<IUpdateQuestionBankQuestionStatusApiResponse?> UpdateQuestionBankQuestionStatusOrDefaultAsync(int id, string status, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await UpdateQuestionBankQuestionStatusAsync(id, status, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// QuestionBank@updateStatus Lock, unlock, archive or unarchive a question bank question
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">question bank question id</param>
+        /// <param name="status">lock or unlock</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateQuestionBankQuestionStatusApiResponse"/>&gt;</returns>
+        public async Task<IUpdateQuestionBankQuestionStatusApiResponse> UpdateQuestionBankQuestionStatusAsync(int id, string status, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                ValidateUpdateQuestionBankQuestionStatus(status);
+
+                FormatUpdateQuestionBankQuestionStatus(ref id, ref status);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/questions/{id}/{status}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/questions/{id}/{status}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bstatus%7D", Uri.EscapeDataString(status.ToString()));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Patch;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        UpdateQuestionBankQuestionStatusApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/questions/{id}/{status}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterUpdateQuestionBankQuestionStatusDefaultImplementation(apiResponseLocalVar, id, status);
+
+                        Events.ExecuteOnUpdateQuestionBankQuestionStatus(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorUpdateQuestionBankQuestionStatusDefaultImplementation(e, "/api/v1/questions/{id}/{status}", uriBuilderLocalVar.Path, id, status);
+                Events.ExecuteOnErrorUpdateQuestionBankQuestionStatus(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="UpdateQuestionBankQuestionStatusApiResponse"/>
+        /// </summary>
+        public partial class UpdateQuestionBankQuestionStatusApiResponse : GatewayApiSdk.Client.ApiResponse, IUpdateQuestionBankQuestionStatusApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<QuestionBankApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="UpdateQuestionBankQuestionStatusApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public UpdateQuestionBankQuestionStatusApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="UpdateQuestionBankQuestionStatusApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public UpdateQuestionBankQuestionStatusApiResponse(ILogger<QuestionBankApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.UpdateQuestionBankQuestionStatus200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateQuestionBankQuestionStatus200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateQuestionBankQuestionStatus200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public bool IsInternalServerError => 500 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsInternalServerError
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = InternalServerError();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
                 }
 
                 return result != null;

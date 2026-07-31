@@ -51,76 +51,76 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test B34ab4eadc1eaed469678151e6e71b9f
+        /// Test CreateLicenses
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task B34ab4eadc1eaed469678151e6e71b9fAsyncTest()
+        public async Task CreateLicensesAsyncTest()
         {
-            var response = await _instance.B34ab4eadc1eaed469678151e6e71b9fAsync();
+            CreateLicensesRequest createLicensesRequest = default!;
+            var response = await _instance.CreateLicensesAsync(createLicensesRequest);
             var model = response.Ok();
-            Assert.IsType<B34ab4eadc1eaed469678151e6e71b9f200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
-        /// Test Call2721b23c1df3b4e71706e4ab04f9b0a8
+        /// Test DeleteLicenses
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call2721b23c1df3b4e71706e4ab04f9b0a8AsyncTest()
+        public async Task DeleteLicensesAsyncTest()
         {
-            Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request = default!;
-            var response = await _instance.Call2721b23c1df3b4e71706e4ab04f9b0a8Async(model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+            int id = default!;
+            var response = await _instance.DeleteLicensesAsync(id);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test EditLicenses
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task EditLicensesAsyncTest()
+        {
+            int id = default!;
+            CreateLicensesRequest createLicensesRequest = default!;
+            var response = await _instance.EditLicensesAsync(id, createLicensesRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchAllLicenses
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchAllLicensesAsyncTest()
+        {
+            var response = await _instance.FetchAllLicensesAsync();
             var model = response.Ok();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<FetchAllLicenses200Response>(model);
         }
 
         /// <summary>
-        /// Test Call50c6be78401c528ffdf4ed00414e7678
+        /// Test FetchLicenses
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call50c6be78401c528ffdf4ed00414e7678AsyncTest()
+        public async Task FetchLicensesAsyncTest()
         {
             int id = default!;
-            var response = await _instance.Call50c6be78401c528ffdf4ed00414e7678Async(id);
+            var response = await _instance.FetchLicensesAsync(id);
             var model = response.Ok();
-            Assert.IsType<Model50c6be78401c528ffdf4ed00414e7678200Response>(model);
+            Assert.IsType<FetchLicenses200Response>(model);
         }
 
         /// <summary>
-        /// Test Call98a20646cb4164cddd79725baf3dcf61
+        /// Test UpdateLicenses
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call98a20646cb4164cddd79725baf3dcf61AsyncTest()
+        public async Task UpdateLicensesAsyncTest()
         {
             int id = default!;
-            Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request = default!;
-            var response = await _instance.Call98a20646cb4164cddd79725baf3dcf61Async(id, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+            CreateLicensesRequest createLicensesRequest = default!;
+            var response = await _instance.UpdateLicensesAsync(id, createLicensesRequest);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call991d716a8c83b7e3c4747583eeffc0ee
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call991d716a8c83b7e3c4747583eeffc0eeAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.Call991d716a8c83b7e3c4747583eeffc0eeAsync(id);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Fc8a99b7173f11228400fac2754185fa
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Fc8a99b7173f11228400fac2754185faAsyncTest()
-        {
-            int id = default!;
-            Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request = default!;
-            var response = await _instance.Fc8a99b7173f11228400fac2754185faAsync(id, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
     }
 }

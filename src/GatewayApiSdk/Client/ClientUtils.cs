@@ -112,8 +112,6 @@ namespace GatewayApiSdk.Client
                 return boolean
                     ? "true"
                     : "false";
-            if (obj is C9939b681f1c7deb438e5d7a25ea9509Request.UnitEnum c9939b681f1c7deb438e5d7a25ea9509RequestUnitEnum)
-                return C9939b681f1c7deb438e5d7a25ea9509Request.UnitEnumToJsonValue(c9939b681f1c7deb438e5d7a25ea9509RequestUnitEnum);
             if (obj is Collection.StatusEnum collectionStatusEnum)
                 return Collection.StatusEnumToJsonValue(collectionStatusEnum);
             if (obj is CreateDurIntegrationsRequest.StatusEnum createDurIntegrationsRequestStatusEnum)
@@ -124,8 +122,6 @@ namespace GatewayApiSdk.Client
                 return CreateToolsRequest.StatusEnumToJsonValue(createToolsRequestStatusEnum);
             if (obj is CreateWidgetRequest.UnitEnum createWidgetRequestUnitEnum)
                 return CreateWidgetRequest.UnitEnumToJsonValue(createWidgetRequestUnitEnum);
-            if (obj is D183a285f65bdc0e6341ed79b3a63670Request.StatusEnum d183a285f65bdc0e6341ed79b3a63670RequestStatusEnum)
-                return D183a285f65bdc0e6341ed79b3a63670Request.StatusEnumToJsonValue(d183a285f65bdc0e6341ed79b3a63670RequestStatusEnum);
             if (obj is DataAccessApplication.SubmissionStatusEnum dataAccessApplicationSubmissionStatusEnum)
                 return DataAccessApplication.SubmissionStatusEnumToJsonValue(dataAccessApplicationSubmissionStatusEnum);
             if (obj is DataAccessApplication.ApprovalStatusEnum dataAccessApplicationApprovalStatusEnum)
@@ -138,16 +134,16 @@ namespace GatewayApiSdk.Client
                 return Dataset.CreateOriginEnumToJsonValue(datasetCreateOriginEnum);
             if (obj is Dur.StatusEnum durStatusEnum)
                 return Dur.StatusEnumToJsonValue(durStatusEnum);
+            if (obj is EditCollectionsV2Request.StatusEnum editCollectionsV2RequestStatusEnum)
+                return EditCollectionsV2Request.StatusEnumToJsonValue(editCollectionsV2RequestStatusEnum);
+            if (obj is EditTeamCollectionsRequest.StatusEnum editTeamCollectionsRequestStatusEnum)
+                return EditTeamCollectionsRequest.StatusEnumToJsonValue(editTeamCollectionsRequestStatusEnum);
             if (obj is FetchAllDurIntegrations200ResponseDataInner.StatusEnum fetchAllDurIntegrations200ResponseDataInnerStatusEnum)
                 return FetchAllDurIntegrations200ResponseDataInner.StatusEnumToJsonValue(fetchAllDurIntegrations200ResponseDataInnerStatusEnum);
             if (obj is FetchDurByIdIntegrations200ResponseDataInner.StatusEnum fetchDurByIdIntegrations200ResponseDataInnerStatusEnum)
                 return FetchDurByIdIntegrations200ResponseDataInner.StatusEnumToJsonValue(fetchDurByIdIntegrations200ResponseDataInnerStatusEnum);
             if (obj is GetFederationHistory200ResponseDataInner.StatusEnum getFederationHistory200ResponseDataInnerStatusEnum)
                 return GetFederationHistory200ResponseDataInner.StatusEnumToJsonValue(getFederationHistory200ResponseDataInnerStatusEnum);
-            if (obj is Model3c79eaaecaae1de1b86c443337841895200ResponseData.StatusEnum model3c79eaaecaae1de1b86c443337841895200ResponseDataStatusEnum)
-                return Model3c79eaaecaae1de1b86c443337841895200ResponseData.StatusEnumToJsonValue(model3c79eaaecaae1de1b86c443337841895200ResponseDataStatusEnum);
-            if (obj is Model75c378b5764d9d73e14fe2d65c654910Request.StatusEnum model75c378b5764d9d73e14fe2d65c654910RequestStatusEnum)
-                return Model75c378b5764d9d73e14fe2d65c654910Request.StatusEnumToJsonValue(model75c378b5764d9d73e14fe2d65c654910RequestStatusEnum);
             if (obj is Publication.StatusEnum publicationStatusEnum)
                 return Publication.StatusEnumToJsonValue(publicationStatusEnum);
             if (obj is QuestionBank.QuestionTypeEnum questionBankQuestionTypeEnum)
@@ -160,10 +156,14 @@ namespace GatewayApiSdk.Client
                 return TrackWidgetEventRequest.EventTypeEnumToJsonValue(trackWidgetEventRequestEventTypeEnum);
             if (obj is TrackWidgetEventRequest.EntityTypeEnum trackWidgetEventRequestEntityTypeEnum)
                 return TrackWidgetEventRequest.EntityTypeEnumToJsonValue(trackWidgetEventRequestEntityTypeEnum);
+            if (obj is UpdateDurIntegrations200ResponseData.StatusEnum updateDurIntegrations200ResponseDataStatusEnum)
+                return UpdateDurIntegrations200ResponseData.StatusEnumToJsonValue(updateDurIntegrations200ResponseDataStatusEnum);
             if (obj is UpdatePublicationsRequest.StatusEnum updatePublicationsRequestStatusEnum)
                 return UpdatePublicationsRequest.StatusEnumToJsonValue(updatePublicationsRequestStatusEnum);
             if (obj is UpdateToolsRequest.StatusEnum updateToolsRequestStatusEnum)
                 return UpdateToolsRequest.StatusEnumToJsonValue(updateToolsRequestStatusEnum);
+            if (obj is UpdateWidgetRequest.UnitEnum updateWidgetRequestUnitEnum)
+                return UpdateWidgetRequest.UnitEnumToJsonValue(updateWidgetRequestUnitEnum);
             if (obj is User.PreferredEmailEnum userPreferredEmailEnum)
                 return User.PreferredEmailEnumToJsonValue(userPreferredEmailEnum);
             if (obj is Widget.UnitEnum widgetUnitEnum)

@@ -39,29 +39,16 @@ namespace GatewayApiSdk.Api
         LibraryApiEvents Events { get; }
 
         /// <summary>
-        /// Library@update
+        /// Library@store
         /// </summary>
         /// <remarks>
-        /// Update a library
+        /// Creates a new library
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">library id</param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request">library definition</param>
+        /// <param name="createLibrariesRequest">library definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall077bba41c87bc61e6c290b3fea2a5848ApiResponse"/>&gt;</returns>
-        Task<ICall077bba41c87bc61e6c290b3fea2a5848ApiResponse> Call077bba41c87bc61e6c290b3fea2a5848Async(int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Library@update
-        /// </summary>
-        /// <remarks>
-        /// Update a library
-        /// </remarks>
-        /// <param name="id">library id</param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request">library definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall077bba41c87bc61e6c290b3fea2a5848ApiResponse"/>?&gt;</returns>
-        Task<ICall077bba41c87bc61e6c290b3fea2a5848ApiResponse?> Call077bba41c87bc61e6c290b3fea2a5848OrDefaultAsync(int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateLibrariesApiResponse"/>&gt;</returns>
+        Task<ICreateLibrariesApiResponse> CreateLibrariesAsync(CreateLibrariesRequest createLibrariesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Library@store
@@ -69,22 +56,10 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Creates a new library
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request">library definition</param>
+        /// <param name="createLibrariesRequest">library definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3b22aa4bb101550915e675702f8f3174ApiResponse"/>&gt;</returns>
-        Task<ICall3b22aa4bb101550915e675702f8f3174ApiResponse> Call3b22aa4bb101550915e675702f8f3174Async(Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Library@store
-        /// </summary>
-        /// <remarks>
-        /// Creates a new library
-        /// </remarks>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request">library definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3b22aa4bb101550915e675702f8f3174ApiResponse"/>?&gt;</returns>
-        Task<ICall3b22aa4bb101550915e675702f8f3174ApiResponse?> Call3b22aa4bb101550915e675702f8f3174OrDefaultAsync(Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateLibrariesApiResponse"/>?&gt;</returns>
+        Task<ICreateLibrariesApiResponse?> CreateLibrariesOrDefaultAsync(CreateLibrariesRequest createLibrariesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Library@destroy
@@ -95,8 +70,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">library id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall416921483907d62b39163e3c4188d10cApiResponse"/>&gt;</returns>
-        Task<ICall416921483907d62b39163e3c4188d10cApiResponse> Call416921483907d62b39163e3c4188d10cAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteLibrariesApiResponse"/>&gt;</returns>
+        Task<IDeleteLibrariesApiResponse> DeleteLibrariesAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Library@destroy
@@ -106,8 +81,8 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="id">library id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall416921483907d62b39163e3c4188d10cApiResponse"/>?&gt;</returns>
-        Task<ICall416921483907d62b39163e3c4188d10cApiResponse?> Call416921483907d62b39163e3c4188d10cOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteLibrariesApiResponse"/>?&gt;</returns>
+        Task<IDeleteLibrariesApiResponse?> DeleteLibrariesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Library@update
@@ -117,10 +92,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">library id</param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request">library definition</param>
+        /// <param name="createLibrariesRequest">library definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall771bea7be0a7f7d2e0056f8c192100adApiResponse"/>&gt;</returns>
-        Task<ICall771bea7be0a7f7d2e0056f8c192100adApiResponse> Call771bea7be0a7f7d2e0056f8c192100adAsync(int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditLibrariesApiResponse"/>&gt;</returns>
+        Task<IEditLibrariesApiResponse> EditLibrariesAsync(int id, CreateLibrariesRequest createLibrariesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Library@update
@@ -129,10 +104,10 @@ namespace GatewayApiSdk.Api
         /// Edit a library
         /// </remarks>
         /// <param name="id">library id</param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request">library definition</param>
+        /// <param name="createLibrariesRequest">library definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall771bea7be0a7f7d2e0056f8c192100adApiResponse"/>?&gt;</returns>
-        Task<ICall771bea7be0a7f7d2e0056f8c192100adApiResponse?> Call771bea7be0a7f7d2e0056f8c192100adOrDefaultAsync(int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditLibrariesApiResponse"/>?&gt;</returns>
+        Task<IEditLibrariesApiResponse?> EditLibrariesOrDefaultAsync(int id, CreateLibrariesRequest createLibrariesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Return a single library
@@ -143,8 +118,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">library id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID736d637e675097aaf709dfd755864c7ApiResponse"/>&gt;</returns>
-        Task<ID736d637e675097aaf709dfd755864c7ApiResponse> D736d637e675097aaf709dfd755864c7Async(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchLibrariesApiResponse"/>&gt;</returns>
+        Task<IFetchLibrariesApiResponse> FetchLibrariesAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Return a single library
@@ -154,8 +129,8 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="id">library id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID736d637e675097aaf709dfd755864c7ApiResponse"/>?&gt;</returns>
-        Task<ID736d637e675097aaf709dfd755864c7ApiResponse?> D736d637e675097aaf709dfd755864c7OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchLibrariesApiResponse"/>?&gt;</returns>
+        Task<IFetchLibrariesApiResponse?> FetchLibrariesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Retrieve a list of libraries
@@ -179,12 +154,55 @@ namespace GatewayApiSdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IListLibrariesApiResponse"/>?&gt;</returns>
         Task<IListLibrariesApiResponse?> ListLibrariesOrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Library@update
+        /// </summary>
+        /// <remarks>
+        /// Update a library
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">library id</param>
+        /// <param name="createLibrariesRequest">library definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateLibrariesApiResponse"/>&gt;</returns>
+        Task<IUpdateLibrariesApiResponse> UpdateLibrariesAsync(int id, CreateLibrariesRequest createLibrariesRequest, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Library@update
+        /// </summary>
+        /// <remarks>
+        /// Update a library
+        /// </remarks>
+        /// <param name="id">library id</param>
+        /// <param name="createLibrariesRequest">library definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateLibrariesApiResponse"/>?&gt;</returns>
+        Task<IUpdateLibrariesApiResponse?> UpdateLibrariesOrDefaultAsync(int id, CreateLibrariesRequest createLibrariesRequest, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="ICall077bba41c87bc61e6c290b3fea2a5848ApiResponse"/>
+    /// The <see cref="ICreateLibrariesApiResponse"/>
     /// </summary>
-    public interface ICall077bba41c87bc61e6c290b3fea2a5848ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.Model077bba41c87bc61e6c290b3fea2a5848200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface ICreateLibrariesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CreateCategories200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 500 InternalServerError
+        /// </summary>
+        /// <returns></returns>
+        bool IsInternalServerError { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IDeleteLibrariesApiResponse"/>
+    /// </summary>
+    public interface IDeleteLibrariesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -206,27 +224,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall3b22aa4bb101550915e675702f8f3174ApiResponse"/>
+    /// The <see cref="IEditLibrariesApiResponse"/>
     /// </summary>
-    public interface ICall3b22aa4bb101550915e675702f8f3174ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 500 InternalServerError
-        /// </summary>
-        /// <returns></returns>
-        bool IsInternalServerError { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ICall416921483907d62b39163e3c4188d10cApiResponse"/>
-    /// </summary>
-    public interface ICall416921483907d62b39163e3c4188d10cApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IEditLibrariesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateLibraries200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -248,33 +248,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall771bea7be0a7f7d2e0056f8c192100adApiResponse"/>
+    /// The <see cref="IFetchLibrariesApiResponse"/>
     /// </summary>
-    public interface ICall771bea7be0a7f7d2e0056f8c192100adApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.Model077bba41c87bc61e6c290b3fea2a5848200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 500 InternalServerError
-        /// </summary>
-        /// <returns></returns>
-        bool IsInternalServerError { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ID736d637e675097aaf709dfd755864c7ApiResponse"/>
-    /// </summary>
-    public interface ID736d637e675097aaf709dfd755864c7ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.D736d637e675097aaf709dfd755864c7200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
+    public interface IFetchLibrariesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchLibraries200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -302,6 +278,30 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
+    /// The <see cref="IUpdateLibrariesApiResponse"/>
+    /// </summary>
+    public interface IUpdateLibrariesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateLibraries200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 404 NotFound
+        /// </summary>
+        /// <returns></returns>
+        bool IsNotFound { get; }
+
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 500 InternalServerError
+        /// </summary>
+        /// <returns></returns>
+        bool IsInternalServerError { get; }
+    }
+
+    /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public class LibraryApiEvents
@@ -309,101 +309,81 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall077bba41c87bc61e6c290b3fea2a5848;
+        public event EventHandler<ApiResponseEventArgs>? OnCreateLibraries;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall077bba41c87bc61e6c290b3fea2a5848;
+        public event EventHandler<ExceptionEventArgs>? OnErrorCreateLibraries;
 
-        internal void ExecuteOnCall077bba41c87bc61e6c290b3fea2a5848(LibraryApi.Call077bba41c87bc61e6c290b3fea2a5848ApiResponse apiResponse)
+        internal void ExecuteOnCreateLibraries(LibraryApi.CreateLibrariesApiResponse apiResponse)
         {
-            OnCall077bba41c87bc61e6c290b3fea2a5848?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnCreateLibraries?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall077bba41c87bc61e6c290b3fea2a5848(Exception exception)
+        internal void ExecuteOnErrorCreateLibraries(Exception exception)
         {
-            OnErrorCall077bba41c87bc61e6c290b3fea2a5848?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorCreateLibraries?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall3b22aa4bb101550915e675702f8f3174;
+        public event EventHandler<ApiResponseEventArgs>? OnDeleteLibraries;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall3b22aa4bb101550915e675702f8f3174;
+        public event EventHandler<ExceptionEventArgs>? OnErrorDeleteLibraries;
 
-        internal void ExecuteOnCall3b22aa4bb101550915e675702f8f3174(LibraryApi.Call3b22aa4bb101550915e675702f8f3174ApiResponse apiResponse)
+        internal void ExecuteOnDeleteLibraries(LibraryApi.DeleteLibrariesApiResponse apiResponse)
         {
-            OnCall3b22aa4bb101550915e675702f8f3174?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnDeleteLibraries?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall3b22aa4bb101550915e675702f8f3174(Exception exception)
+        internal void ExecuteOnErrorDeleteLibraries(Exception exception)
         {
-            OnErrorCall3b22aa4bb101550915e675702f8f3174?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorDeleteLibraries?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall416921483907d62b39163e3c4188d10c;
+        public event EventHandler<ApiResponseEventArgs>? OnEditLibraries;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall416921483907d62b39163e3c4188d10c;
+        public event EventHandler<ExceptionEventArgs>? OnErrorEditLibraries;
 
-        internal void ExecuteOnCall416921483907d62b39163e3c4188d10c(LibraryApi.Call416921483907d62b39163e3c4188d10cApiResponse apiResponse)
+        internal void ExecuteOnEditLibraries(LibraryApi.EditLibrariesApiResponse apiResponse)
         {
-            OnCall416921483907d62b39163e3c4188d10c?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnEditLibraries?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall416921483907d62b39163e3c4188d10c(Exception exception)
+        internal void ExecuteOnErrorEditLibraries(Exception exception)
         {
-            OnErrorCall416921483907d62b39163e3c4188d10c?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorEditLibraries?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall771bea7be0a7f7d2e0056f8c192100ad;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchLibraries;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall771bea7be0a7f7d2e0056f8c192100ad;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchLibraries;
 
-        internal void ExecuteOnCall771bea7be0a7f7d2e0056f8c192100ad(LibraryApi.Call771bea7be0a7f7d2e0056f8c192100adApiResponse apiResponse)
+        internal void ExecuteOnFetchLibraries(LibraryApi.FetchLibrariesApiResponse apiResponse)
         {
-            OnCall771bea7be0a7f7d2e0056f8c192100ad?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchLibraries?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall771bea7be0a7f7d2e0056f8c192100ad(Exception exception)
+        internal void ExecuteOnErrorFetchLibraries(Exception exception)
         {
-            OnErrorCall771bea7be0a7f7d2e0056f8c192100ad?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnD736d637e675097aaf709dfd755864c7;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorD736d637e675097aaf709dfd755864c7;
-
-        internal void ExecuteOnD736d637e675097aaf709dfd755864c7(LibraryApi.D736d637e675097aaf709dfd755864c7ApiResponse apiResponse)
-        {
-            OnD736d637e675097aaf709dfd755864c7?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorD736d637e675097aaf709dfd755864c7(Exception exception)
-        {
-            OnErrorD736d637e675097aaf709dfd755864c7?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchLibraries?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
@@ -424,6 +404,26 @@ namespace GatewayApiSdk.Api
         internal void ExecuteOnErrorListLibraries(Exception exception)
         {
             OnErrorListLibraries?.Invoke(this, new ExceptionEventArgs(exception));
+        }
+
+        /// <summary>
+        /// The event raised after the server response
+        /// </summary>
+        public event EventHandler<ApiResponseEventArgs>? OnUpdateLibraries;
+
+        /// <summary>
+        /// The event raised after an error querying the server
+        /// </summary>
+        public event EventHandler<ExceptionEventArgs>? OnErrorUpdateLibraries;
+
+        internal void ExecuteOnUpdateLibraries(LibraryApi.UpdateLibrariesApiResponse apiResponse)
+        {
+            OnUpdateLibraries?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+        }
+
+        internal void ExecuteOnErrorUpdateLibraries(Exception exception)
+        {
+            OnErrorUpdateLibraries?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -468,29 +468,28 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatCall077bba41c87bc61e6c290b3fea2a5848(ref int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request);
+        partial void FormatCreateLibraries(CreateLibrariesRequest createLibrariesRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request"></param>
+        /// <param name="createLibrariesRequest"></param>
         /// <returns></returns>
-        private void ValidateCall077bba41c87bc61e6c290b3fea2a5848(Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request)
+        private void ValidateCreateLibraries(CreateLibrariesRequest createLibrariesRequest)
         {
-            if (model3b22aa4bb101550915e675702f8f3174Request == null)
-                throw new ArgumentNullException(nameof(model3b22aa4bb101550915e675702f8f3174Request));
+            if (createLibrariesRequest == null)
+                throw new ArgumentNullException(nameof(createLibrariesRequest));
         }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request"></param>
-        private void AfterCall077bba41c87bc61e6c290b3fea2a5848DefaultImplementation(ICall077bba41c87bc61e6c290b3fea2a5848ApiResponse apiResponseLocalVar, int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request)
+        /// <param name="createLibrariesRequest"></param>
+        private void AfterCreateLibrariesDefaultImplementation(ICreateLibrariesApiResponse apiResponseLocalVar, CreateLibrariesRequest createLibrariesRequest)
         {
             bool suppressDefaultLog = false;
-            AfterCall077bba41c87bc61e6c290b3fea2a5848(ref suppressDefaultLog, apiResponseLocalVar, id, model3b22aa4bb101550915e675702f8f3174Request);
+            AfterCreateLibraries(ref suppressDefaultLog, apiResponseLocalVar, createLibrariesRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -500,9 +499,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request"></param>
-        partial void AfterCall077bba41c87bc61e6c290b3fea2a5848(ref bool suppressDefaultLog, ICall077bba41c87bc61e6c290b3fea2a5848ApiResponse apiResponseLocalVar, int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request);
+        /// <param name="createLibrariesRequest"></param>
+        partial void AfterCreateLibraries(ref bool suppressDefaultLog, ICreateLibrariesApiResponse apiResponseLocalVar, CreateLibrariesRequest createLibrariesRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -510,12 +508,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request"></param>
-        private void OnErrorCall077bba41c87bc61e6c290b3fea2a5848DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request)
+        /// <param name="createLibrariesRequest"></param>
+        private void OnErrorCreateLibrariesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateLibrariesRequest createLibrariesRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall077bba41c87bc61e6c290b3fea2a5848(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, model3b22aa4bb101550915e675702f8f3174Request);
+            OnErrorCreateLibraries(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createLibrariesRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -527,364 +524,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request"></param>
-        partial void OnErrorCall077bba41c87bc61e6c290b3fea2a5848(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request);
-
-        /// <summary>
-        /// Library@update Update a library
-        /// </summary>
-        /// <param name="id">library id</param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request">library definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall077bba41c87bc61e6c290b3fea2a5848ApiResponse"/>&gt;</returns>
-        public async Task<ICall077bba41c87bc61e6c290b3fea2a5848ApiResponse?> Call077bba41c87bc61e6c290b3fea2a5848OrDefaultAsync(int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call077bba41c87bc61e6c290b3fea2a5848Async(id, model3b22aa4bb101550915e675702f8f3174Request, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Library@update Update a library
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">library id</param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request">library definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall077bba41c87bc61e6c290b3fea2a5848ApiResponse"/>&gt;</returns>
-        public async Task<ICall077bba41c87bc61e6c290b3fea2a5848ApiResponse> Call077bba41c87bc61e6c290b3fea2a5848Async(int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateCall077bba41c87bc61e6c290b3fea2a5848(model3b22aa4bb101550915e675702f8f3174Request);
-
-                FormatCall077bba41c87bc61e6c290b3fea2a5848(ref id, model3b22aa4bb101550915e675702f8f3174Request);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/libraries/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/libraries/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    httpRequestMessageLocalVar.Content = (model3b22aa4bb101550915e675702f8f3174Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model3b22aa4bb101550915e675702f8f3174Request, _jsonSerializerOptions));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call077bba41c87bc61e6c290b3fea2a5848ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/libraries/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall077bba41c87bc61e6c290b3fea2a5848DefaultImplementation(apiResponseLocalVar, id, model3b22aa4bb101550915e675702f8f3174Request);
-
-                        Events.ExecuteOnCall077bba41c87bc61e6c290b3fea2a5848(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall077bba41c87bc61e6c290b3fea2a5848DefaultImplementation(e, "/api/v1/libraries/{id}", uriBuilderLocalVar.Path, id, model3b22aa4bb101550915e675702f8f3174Request);
-                Events.ExecuteOnErrorCall077bba41c87bc61e6c290b3fea2a5848(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call077bba41c87bc61e6c290b3fea2a5848ApiResponse"/>
-        /// </summary>
-        public partial class Call077bba41c87bc61e6c290b3fea2a5848ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall077bba41c87bc61e6c290b3fea2a5848ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<LibraryApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call077bba41c87bc61e6c290b3fea2a5848ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call077bba41c87bc61e6c290b3fea2a5848ApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call077bba41c87bc61e6c290b3fea2a5848ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call077bba41c87bc61e6c290b3fea2a5848ApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model077bba41c87bc61e6c290b3fea2a5848200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model077bba41c87bc61e6c290b3fea2a5848200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model077bba41c87bc61e6c290b3fea2a5848200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall3b22aa4bb101550915e675702f8f3174(Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request"></param>
-        /// <returns></returns>
-        private void ValidateCall3b22aa4bb101550915e675702f8f3174(Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request)
-        {
-            if (model3b22aa4bb101550915e675702f8f3174Request == null)
-                throw new ArgumentNullException(nameof(model3b22aa4bb101550915e675702f8f3174Request));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request"></param>
-        private void AfterCall3b22aa4bb101550915e675702f8f3174DefaultImplementation(ICall3b22aa4bb101550915e675702f8f3174ApiResponse apiResponseLocalVar, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall3b22aa4bb101550915e675702f8f3174(ref suppressDefaultLog, apiResponseLocalVar, model3b22aa4bb101550915e675702f8f3174Request);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request"></param>
-        partial void AfterCall3b22aa4bb101550915e675702f8f3174(ref bool suppressDefaultLog, ICall3b22aa4bb101550915e675702f8f3174ApiResponse apiResponseLocalVar, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request"></param>
-        private void OnErrorCall3b22aa4bb101550915e675702f8f3174DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall3b22aa4bb101550915e675702f8f3174(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, model3b22aa4bb101550915e675702f8f3174Request);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request"></param>
-        partial void OnErrorCall3b22aa4bb101550915e675702f8f3174(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request);
+        /// <param name="createLibrariesRequest"></param>
+        partial void OnErrorCreateLibraries(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateLibrariesRequest createLibrariesRequest);
 
         /// <summary>
         /// Library@store Creates a new library
         /// </summary>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request">library definition</param>
+        /// <param name="createLibrariesRequest">library definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3b22aa4bb101550915e675702f8f3174ApiResponse"/>&gt;</returns>
-        public async Task<ICall3b22aa4bb101550915e675702f8f3174ApiResponse?> Call3b22aa4bb101550915e675702f8f3174OrDefaultAsync(Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateLibrariesApiResponse"/>&gt;</returns>
+        public async Task<ICreateLibrariesApiResponse?> CreateLibrariesOrDefaultAsync(CreateLibrariesRequest createLibrariesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call3b22aa4bb101550915e675702f8f3174Async(model3b22aa4bb101550915e675702f8f3174Request, cancellationToken).ConfigureAwait(false);
+                return await CreateLibrariesAsync(createLibrariesRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -896,18 +549,18 @@ namespace GatewayApiSdk.Api
         /// Library@store Creates a new library
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request">library definition</param>
+        /// <param name="createLibrariesRequest">library definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3b22aa4bb101550915e675702f8f3174ApiResponse"/>&gt;</returns>
-        public async Task<ICall3b22aa4bb101550915e675702f8f3174ApiResponse> Call3b22aa4bb101550915e675702f8f3174Async(Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateLibrariesApiResponse"/>&gt;</returns>
+        public async Task<ICreateLibrariesApiResponse> CreateLibrariesAsync(CreateLibrariesRequest createLibrariesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall3b22aa4bb101550915e675702f8f3174(model3b22aa4bb101550915e675702f8f3174Request);
+                ValidateCreateLibraries(createLibrariesRequest);
 
-                FormatCall3b22aa4bb101550915e675702f8f3174(model3b22aa4bb101550915e675702f8f3174Request);
+                FormatCreateLibraries(createLibrariesRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -918,9 +571,9 @@ namespace GatewayApiSdk.Api
                         ? "/api/v1/libraries"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/libraries");
 
-                    httpRequestMessageLocalVar.Content = (model3b22aa4bb101550915e675702f8f3174Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (createLibrariesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model3b22aa4bb101550915e675702f8f3174Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createLibrariesRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -955,7 +608,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call3b22aa4bb101550915e675702f8f3174ApiResponse apiResponseLocalVar;
+                        CreateLibrariesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -966,9 +619,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall3b22aa4bb101550915e675702f8f3174DefaultImplementation(apiResponseLocalVar, model3b22aa4bb101550915e675702f8f3174Request);
+                        AfterCreateLibrariesDefaultImplementation(apiResponseLocalVar, createLibrariesRequest);
 
-                        Events.ExecuteOnCall3b22aa4bb101550915e675702f8f3174(apiResponseLocalVar);
+                        Events.ExecuteOnCreateLibraries(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -980,16 +633,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall3b22aa4bb101550915e675702f8f3174DefaultImplementation(e, "/api/v1/libraries", uriBuilderLocalVar.Path, model3b22aa4bb101550915e675702f8f3174Request);
-                Events.ExecuteOnErrorCall3b22aa4bb101550915e675702f8f3174(e);
+                OnErrorCreateLibrariesDefaultImplementation(e, "/api/v1/libraries", uriBuilderLocalVar.Path, createLibrariesRequest);
+                Events.ExecuteOnErrorCreateLibraries(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call3b22aa4bb101550915e675702f8f3174ApiResponse"/>
+        /// The <see cref="CreateLibrariesApiResponse"/>
         /// </summary>
-        public partial class Call3b22aa4bb101550915e675702f8f3174ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall3b22aa4bb101550915e675702f8f3174ApiResponse
+        public partial class CreateLibrariesApiResponse : GatewayApiSdk.Client.ApiResponse, ICreateLibrariesApiResponse
         {
             /// <summary>
             /// The logger
@@ -997,7 +650,7 @@ namespace GatewayApiSdk.Api
             public ILogger<LibraryApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call3b22aa4bb101550915e675702f8f3174ApiResponse"/>
+            /// The <see cref="CreateLibrariesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1006,14 +659,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call3b22aa4bb101550915e675702f8f3174ApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public CreateLibrariesApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call3b22aa4bb101550915e675702f8f3174ApiResponse"/>
+            /// The <see cref="CreateLibrariesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1022,7 +675,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call3b22aa4bb101550915e675702f8f3174ApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public CreateLibrariesApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1040,11 +693,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? Ok()
+            public GatewayApiSdk.Model.CreateCategories200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1053,7 +706,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
             {
                 result = null;
 
@@ -1078,11 +731,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1091,7 +744,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -1117,17 +770,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall416921483907d62b39163e3c4188d10c(ref int id);
+        partial void FormatDeleteLibraries(ref int id);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        private void AfterCall416921483907d62b39163e3c4188d10cDefaultImplementation(ICall416921483907d62b39163e3c4188d10cApiResponse apiResponseLocalVar, int id)
+        private void AfterDeleteLibrariesDefaultImplementation(IDeleteLibrariesApiResponse apiResponseLocalVar, int id)
         {
             bool suppressDefaultLog = false;
-            AfterCall416921483907d62b39163e3c4188d10c(ref suppressDefaultLog, apiResponseLocalVar, id);
+            AfterDeleteLibraries(ref suppressDefaultLog, apiResponseLocalVar, id);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1138,7 +791,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        partial void AfterCall416921483907d62b39163e3c4188d10c(ref bool suppressDefaultLog, ICall416921483907d62b39163e3c4188d10cApiResponse apiResponseLocalVar, int id);
+        partial void AfterDeleteLibraries(ref bool suppressDefaultLog, IDeleteLibrariesApiResponse apiResponseLocalVar, int id);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1147,10 +800,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        private void OnErrorCall416921483907d62b39163e3c4188d10cDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        private void OnErrorDeleteLibrariesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall416921483907d62b39163e3c4188d10c(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            OnErrorDeleteLibraries(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1163,19 +816,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        partial void OnErrorCall416921483907d62b39163e3c4188d10c(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+        partial void OnErrorDeleteLibraries(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
 
         /// <summary>
         /// Library@destroy Delete a library
         /// </summary>
         /// <param name="id">library id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall416921483907d62b39163e3c4188d10cApiResponse"/>&gt;</returns>
-        public async Task<ICall416921483907d62b39163e3c4188d10cApiResponse?> Call416921483907d62b39163e3c4188d10cOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteLibrariesApiResponse"/>&gt;</returns>
+        public async Task<IDeleteLibrariesApiResponse?> DeleteLibrariesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call416921483907d62b39163e3c4188d10cAsync(id, cancellationToken).ConfigureAwait(false);
+                return await DeleteLibrariesAsync(id, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1189,14 +842,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">library id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall416921483907d62b39163e3c4188d10cApiResponse"/>&gt;</returns>
-        public async Task<ICall416921483907d62b39163e3c4188d10cApiResponse> Call416921483907d62b39163e3c4188d10cAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteLibrariesApiResponse"/>&gt;</returns>
+        public async Task<IDeleteLibrariesApiResponse> DeleteLibrariesAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatCall416921483907d62b39163e3c4188d10c(ref id);
+                FormatDeleteLibraries(ref id);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1232,7 +885,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call416921483907d62b39163e3c4188d10cApiResponse apiResponseLocalVar;
+                        DeleteLibrariesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -1243,9 +896,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall416921483907d62b39163e3c4188d10cDefaultImplementation(apiResponseLocalVar, id);
+                        AfterDeleteLibrariesDefaultImplementation(apiResponseLocalVar, id);
 
-                        Events.ExecuteOnCall416921483907d62b39163e3c4188d10c(apiResponseLocalVar);
+                        Events.ExecuteOnDeleteLibraries(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -1257,16 +910,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall416921483907d62b39163e3c4188d10cDefaultImplementation(e, "/api/v1/libraries/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorCall416921483907d62b39163e3c4188d10c(e);
+                OnErrorDeleteLibrariesDefaultImplementation(e, "/api/v1/libraries/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorDeleteLibraries(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call416921483907d62b39163e3c4188d10cApiResponse"/>
+        /// The <see cref="DeleteLibrariesApiResponse"/>
         /// </summary>
-        public partial class Call416921483907d62b39163e3c4188d10cApiResponse : GatewayApiSdk.Client.ApiResponse, ICall416921483907d62b39163e3c4188d10cApiResponse
+        public partial class DeleteLibrariesApiResponse : GatewayApiSdk.Client.ApiResponse, IDeleteLibrariesApiResponse
         {
             /// <summary>
             /// The logger
@@ -1274,7 +927,7 @@ namespace GatewayApiSdk.Api
             public ILogger<LibraryApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call416921483907d62b39163e3c4188d10cApiResponse"/>
+            /// The <see cref="DeleteLibrariesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1283,14 +936,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call416921483907d62b39163e3c4188d10cApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public DeleteLibrariesApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call416921483907d62b39163e3c4188d10cApiResponse"/>
+            /// The <see cref="DeleteLibrariesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1299,7 +952,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call416921483907d62b39163e3c4188d10cApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public DeleteLibrariesApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1317,11 +970,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1330,7 +983,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -1355,11 +1008,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? Ok()
+            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1368,7 +1021,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
             {
                 result = null;
 
@@ -1393,11 +1046,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1406,7 +1059,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -1432,17 +1085,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall771bea7be0a7f7d2e0056f8c192100ad(ref int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request);
+        partial void FormatEditLibraries(ref int id, CreateLibrariesRequest createLibrariesRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request"></param>
+        /// <param name="createLibrariesRequest"></param>
         /// <returns></returns>
-        private void ValidateCall771bea7be0a7f7d2e0056f8c192100ad(Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request)
+        private void ValidateEditLibraries(CreateLibrariesRequest createLibrariesRequest)
         {
-            if (model3b22aa4bb101550915e675702f8f3174Request == null)
-                throw new ArgumentNullException(nameof(model3b22aa4bb101550915e675702f8f3174Request));
+            if (createLibrariesRequest == null)
+                throw new ArgumentNullException(nameof(createLibrariesRequest));
         }
 
         /// <summary>
@@ -1450,11 +1103,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request"></param>
-        private void AfterCall771bea7be0a7f7d2e0056f8c192100adDefaultImplementation(ICall771bea7be0a7f7d2e0056f8c192100adApiResponse apiResponseLocalVar, int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request)
+        /// <param name="createLibrariesRequest"></param>
+        private void AfterEditLibrariesDefaultImplementation(IEditLibrariesApiResponse apiResponseLocalVar, int id, CreateLibrariesRequest createLibrariesRequest)
         {
             bool suppressDefaultLog = false;
-            AfterCall771bea7be0a7f7d2e0056f8c192100ad(ref suppressDefaultLog, apiResponseLocalVar, id, model3b22aa4bb101550915e675702f8f3174Request);
+            AfterEditLibraries(ref suppressDefaultLog, apiResponseLocalVar, id, createLibrariesRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1465,8 +1118,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request"></param>
-        partial void AfterCall771bea7be0a7f7d2e0056f8c192100ad(ref bool suppressDefaultLog, ICall771bea7be0a7f7d2e0056f8c192100adApiResponse apiResponseLocalVar, int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request);
+        /// <param name="createLibrariesRequest"></param>
+        partial void AfterEditLibraries(ref bool suppressDefaultLog, IEditLibrariesApiResponse apiResponseLocalVar, int id, CreateLibrariesRequest createLibrariesRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1475,11 +1128,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request"></param>
-        private void OnErrorCall771bea7be0a7f7d2e0056f8c192100adDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request)
+        /// <param name="createLibrariesRequest"></param>
+        private void OnErrorEditLibrariesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateLibrariesRequest createLibrariesRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall771bea7be0a7f7d2e0056f8c192100ad(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, model3b22aa4bb101550915e675702f8f3174Request);
+            OnErrorEditLibraries(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, createLibrariesRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1492,21 +1145,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request"></param>
-        partial void OnErrorCall771bea7be0a7f7d2e0056f8c192100ad(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request);
+        /// <param name="createLibrariesRequest"></param>
+        partial void OnErrorEditLibraries(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateLibrariesRequest createLibrariesRequest);
 
         /// <summary>
         /// Library@update Edit a library
         /// </summary>
         /// <param name="id">library id</param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request">library definition</param>
+        /// <param name="createLibrariesRequest">library definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall771bea7be0a7f7d2e0056f8c192100adApiResponse"/>&gt;</returns>
-        public async Task<ICall771bea7be0a7f7d2e0056f8c192100adApiResponse?> Call771bea7be0a7f7d2e0056f8c192100adOrDefaultAsync(int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditLibrariesApiResponse"/>&gt;</returns>
+        public async Task<IEditLibrariesApiResponse?> EditLibrariesOrDefaultAsync(int id, CreateLibrariesRequest createLibrariesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call771bea7be0a7f7d2e0056f8c192100adAsync(id, model3b22aa4bb101550915e675702f8f3174Request, cancellationToken).ConfigureAwait(false);
+                return await EditLibrariesAsync(id, createLibrariesRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1519,18 +1172,18 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">library id</param>
-        /// <param name="model3b22aa4bb101550915e675702f8f3174Request">library definition</param>
+        /// <param name="createLibrariesRequest">library definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall771bea7be0a7f7d2e0056f8c192100adApiResponse"/>&gt;</returns>
-        public async Task<ICall771bea7be0a7f7d2e0056f8c192100adApiResponse> Call771bea7be0a7f7d2e0056f8c192100adAsync(int id, Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditLibrariesApiResponse"/>&gt;</returns>
+        public async Task<IEditLibrariesApiResponse> EditLibrariesAsync(int id, CreateLibrariesRequest createLibrariesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall771bea7be0a7f7d2e0056f8c192100ad(model3b22aa4bb101550915e675702f8f3174Request);
+                ValidateEditLibraries(createLibrariesRequest);
 
-                FormatCall771bea7be0a7f7d2e0056f8c192100ad(ref id, model3b22aa4bb101550915e675702f8f3174Request);
+                FormatEditLibraries(ref id, createLibrariesRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1542,9 +1195,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/libraries/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (model3b22aa4bb101550915e675702f8f3174Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (createLibrariesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model3b22aa4bb101550915e675702f8f3174Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createLibrariesRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -1579,7 +1232,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call771bea7be0a7f7d2e0056f8c192100adApiResponse apiResponseLocalVar;
+                        EditLibrariesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -1590,9 +1243,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall771bea7be0a7f7d2e0056f8c192100adDefaultImplementation(apiResponseLocalVar, id, model3b22aa4bb101550915e675702f8f3174Request);
+                        AfterEditLibrariesDefaultImplementation(apiResponseLocalVar, id, createLibrariesRequest);
 
-                        Events.ExecuteOnCall771bea7be0a7f7d2e0056f8c192100ad(apiResponseLocalVar);
+                        Events.ExecuteOnEditLibraries(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -1604,16 +1257,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall771bea7be0a7f7d2e0056f8c192100adDefaultImplementation(e, "/api/v1/libraries/{id}", uriBuilderLocalVar.Path, id, model3b22aa4bb101550915e675702f8f3174Request);
-                Events.ExecuteOnErrorCall771bea7be0a7f7d2e0056f8c192100ad(e);
+                OnErrorEditLibrariesDefaultImplementation(e, "/api/v1/libraries/{id}", uriBuilderLocalVar.Path, id, createLibrariesRequest);
+                Events.ExecuteOnErrorEditLibraries(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call771bea7be0a7f7d2e0056f8c192100adApiResponse"/>
+        /// The <see cref="EditLibrariesApiResponse"/>
         /// </summary>
-        public partial class Call771bea7be0a7f7d2e0056f8c192100adApiResponse : GatewayApiSdk.Client.ApiResponse, ICall771bea7be0a7f7d2e0056f8c192100adApiResponse
+        public partial class EditLibrariesApiResponse : GatewayApiSdk.Client.ApiResponse, IEditLibrariesApiResponse
         {
             /// <summary>
             /// The logger
@@ -1621,7 +1274,7 @@ namespace GatewayApiSdk.Api
             public ILogger<LibraryApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call771bea7be0a7f7d2e0056f8c192100adApiResponse"/>
+            /// The <see cref="EditLibrariesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1630,14 +1283,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call771bea7be0a7f7d2e0056f8c192100adApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public EditLibrariesApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call771bea7be0a7f7d2e0056f8c192100adApiResponse"/>
+            /// The <see cref="EditLibrariesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1646,7 +1299,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call771bea7be0a7f7d2e0056f8c192100adApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public EditLibrariesApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1664,11 +1317,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1677,7 +1330,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -1702,11 +1355,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model077bba41c87bc61e6c290b3fea2a5848200Response? Ok()
+            public GatewayApiSdk.Model.UpdateLibraries200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model077bba41c87bc61e6c290b3fea2a5848200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateLibraries200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1715,7 +1368,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model077bba41c87bc61e6c290b3fea2a5848200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateLibraries200Response? result)
             {
                 result = null;
 
@@ -1740,11 +1393,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1753,7 +1406,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -1779,17 +1432,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatD736d637e675097aaf709dfd755864c7(ref int id);
+        partial void FormatFetchLibraries(ref int id);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        private void AfterD736d637e675097aaf709dfd755864c7DefaultImplementation(ID736d637e675097aaf709dfd755864c7ApiResponse apiResponseLocalVar, int id)
+        private void AfterFetchLibrariesDefaultImplementation(IFetchLibrariesApiResponse apiResponseLocalVar, int id)
         {
             bool suppressDefaultLog = false;
-            AfterD736d637e675097aaf709dfd755864c7(ref suppressDefaultLog, apiResponseLocalVar, id);
+            AfterFetchLibraries(ref suppressDefaultLog, apiResponseLocalVar, id);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1800,7 +1453,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        partial void AfterD736d637e675097aaf709dfd755864c7(ref bool suppressDefaultLog, ID736d637e675097aaf709dfd755864c7ApiResponse apiResponseLocalVar, int id);
+        partial void AfterFetchLibraries(ref bool suppressDefaultLog, IFetchLibrariesApiResponse apiResponseLocalVar, int id);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1809,10 +1462,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        private void OnErrorD736d637e675097aaf709dfd755864c7DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        private void OnErrorFetchLibrariesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorD736d637e675097aaf709dfd755864c7(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            OnErrorFetchLibraries(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1825,19 +1478,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        partial void OnErrorD736d637e675097aaf709dfd755864c7(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+        partial void OnErrorFetchLibraries(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
 
         /// <summary>
         /// Return a single library Return a single library
         /// </summary>
         /// <param name="id">library id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID736d637e675097aaf709dfd755864c7ApiResponse"/>&gt;</returns>
-        public async Task<ID736d637e675097aaf709dfd755864c7ApiResponse?> D736d637e675097aaf709dfd755864c7OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchLibrariesApiResponse"/>&gt;</returns>
+        public async Task<IFetchLibrariesApiResponse?> FetchLibrariesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await D736d637e675097aaf709dfd755864c7Async(id, cancellationToken).ConfigureAwait(false);
+                return await FetchLibrariesAsync(id, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1851,14 +1504,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">library id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID736d637e675097aaf709dfd755864c7ApiResponse"/>&gt;</returns>
-        public async Task<ID736d637e675097aaf709dfd755864c7ApiResponse> D736d637e675097aaf709dfd755864c7Async(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchLibrariesApiResponse"/>&gt;</returns>
+        public async Task<IFetchLibrariesApiResponse> FetchLibrariesAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatD736d637e675097aaf709dfd755864c7(ref id);
+                FormatFetchLibraries(ref id);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1894,7 +1547,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        D736d637e675097aaf709dfd755864c7ApiResponse apiResponseLocalVar;
+                        FetchLibrariesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -1905,9 +1558,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterD736d637e675097aaf709dfd755864c7DefaultImplementation(apiResponseLocalVar, id);
+                        AfterFetchLibrariesDefaultImplementation(apiResponseLocalVar, id);
 
-                        Events.ExecuteOnD736d637e675097aaf709dfd755864c7(apiResponseLocalVar);
+                        Events.ExecuteOnFetchLibraries(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -1919,16 +1572,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorD736d637e675097aaf709dfd755864c7DefaultImplementation(e, "/api/v1/libraries/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorD736d637e675097aaf709dfd755864c7(e);
+                OnErrorFetchLibrariesDefaultImplementation(e, "/api/v1/libraries/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorFetchLibraries(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="D736d637e675097aaf709dfd755864c7ApiResponse"/>
+        /// The <see cref="FetchLibrariesApiResponse"/>
         /// </summary>
-        public partial class D736d637e675097aaf709dfd755864c7ApiResponse : GatewayApiSdk.Client.ApiResponse, ID736d637e675097aaf709dfd755864c7ApiResponse
+        public partial class FetchLibrariesApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchLibrariesApiResponse
         {
             /// <summary>
             /// The logger
@@ -1936,7 +1589,7 @@ namespace GatewayApiSdk.Api
             public ILogger<LibraryApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="D736d637e675097aaf709dfd755864c7ApiResponse"/>
+            /// The <see cref="FetchLibrariesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1945,14 +1598,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public D736d637e675097aaf709dfd755864c7ApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchLibrariesApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="D736d637e675097aaf709dfd755864c7ApiResponse"/>
+            /// The <see cref="FetchLibrariesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1961,7 +1614,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public D736d637e675097aaf709dfd755864c7ApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchLibrariesApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1979,11 +1632,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.D736d637e675097aaf709dfd755864c7200Response? Ok()
+            public GatewayApiSdk.Model.FetchLibraries200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.D736d637e675097aaf709dfd755864c7200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchLibraries200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1992,7 +1645,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.D736d637e675097aaf709dfd755864c7200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchLibraries200Response? result)
             {
                 result = null;
 
@@ -2017,11 +1670,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2030,7 +1683,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -2285,6 +1938,353 @@ namespace GatewayApiSdk.Api
                 } catch (Exception e)
                 {
                     OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatUpdateLibraries(ref int id, CreateLibrariesRequest createLibrariesRequest);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="createLibrariesRequest"></param>
+        /// <returns></returns>
+        private void ValidateUpdateLibraries(CreateLibrariesRequest createLibrariesRequest)
+        {
+            if (createLibrariesRequest == null)
+                throw new ArgumentNullException(nameof(createLibrariesRequest));
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="createLibrariesRequest"></param>
+        private void AfterUpdateLibrariesDefaultImplementation(IUpdateLibrariesApiResponse apiResponseLocalVar, int id, CreateLibrariesRequest createLibrariesRequest)
+        {
+            bool suppressDefaultLog = false;
+            AfterUpdateLibraries(ref suppressDefaultLog, apiResponseLocalVar, id, createLibrariesRequest);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="createLibrariesRequest"></param>
+        partial void AfterUpdateLibraries(ref bool suppressDefaultLog, IUpdateLibrariesApiResponse apiResponseLocalVar, int id, CreateLibrariesRequest createLibrariesRequest);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="createLibrariesRequest"></param>
+        private void OnErrorUpdateLibrariesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateLibrariesRequest createLibrariesRequest)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorUpdateLibraries(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, createLibrariesRequest);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="createLibrariesRequest"></param>
+        partial void OnErrorUpdateLibraries(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateLibrariesRequest createLibrariesRequest);
+
+        /// <summary>
+        /// Library@update Update a library
+        /// </summary>
+        /// <param name="id">library id</param>
+        /// <param name="createLibrariesRequest">library definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateLibrariesApiResponse"/>&gt;</returns>
+        public async Task<IUpdateLibrariesApiResponse?> UpdateLibrariesOrDefaultAsync(int id, CreateLibrariesRequest createLibrariesRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await UpdateLibrariesAsync(id, createLibrariesRequest, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Library@update Update a library
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">library id</param>
+        /// <param name="createLibrariesRequest">library definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateLibrariesApiResponse"/>&gt;</returns>
+        public async Task<IUpdateLibrariesApiResponse> UpdateLibrariesAsync(int id, CreateLibrariesRequest createLibrariesRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                ValidateUpdateLibraries(createLibrariesRequest);
+
+                FormatUpdateLibraries(ref id, createLibrariesRequest);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/libraries/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/libraries/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    httpRequestMessageLocalVar.Content = (createLibrariesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createLibrariesRequest, _jsonSerializerOptions));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] contentTypes = new string[] {
+                        "application/json"
+                    };
+
+                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
+
+                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
+                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        UpdateLibrariesApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/libraries/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterUpdateLibrariesDefaultImplementation(apiResponseLocalVar, id, createLibrariesRequest);
+
+                        Events.ExecuteOnUpdateLibraries(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorUpdateLibrariesDefaultImplementation(e, "/api/v1/libraries/{id}", uriBuilderLocalVar.Path, id, createLibrariesRequest);
+                Events.ExecuteOnErrorUpdateLibraries(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="UpdateLibrariesApiResponse"/>
+        /// </summary>
+        public partial class UpdateLibrariesApiResponse : GatewayApiSdk.Client.ApiResponse, IUpdateLibrariesApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<LibraryApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="UpdateLibrariesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public UpdateLibrariesApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="UpdateLibrariesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public UpdateLibrariesApiResponse(ILogger<LibraryApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.UpdateLibraries200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateLibraries200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateLibraries200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public bool IsInternalServerError => 500 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsInternalServerError
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = InternalServerError();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
                 }
 
                 return result != null;

@@ -4,72 +4,33 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**C724575805bbca0f084a3001d71abd53**](ApplicationApi.md#c724575805bbca0f084a3001d71abd53) | **PATCH** /api/v1/applications/{id}/clientid | ApplicationController@generateClientIdById |
-| [**Call3c8adeb001330f5198ca1072be78e299**](ApplicationApi.md#call3c8adeb001330f5198ca1072be78e299) | **PUT** /api/v1/applications/{id} | ApplicationController@update |
-| [**Call45ae3b415211ef0712a8ea070e66449f**](ApplicationApi.md#call45ae3b415211ef0712a8ea070e66449f) | **PATCH** /api/v1/applications/{id} | ApplicationController@edit |
-| [**Ddca747ae792e5b6837b97c6ad510fd3**](ApplicationApi.md#ddca747ae792e5b6837b97c6ad510fd3) | **DELETE** /api/v1/applications/{id} | ApplicationController@delete |
-| [**E210052adcf6fdcfc472998b430081aa**](ApplicationApi.md#e210052adcf6fdcfc472998b430081aa) | **POST** /api/v1/applications | ApplicationController@store |
+| [**CreateApplications**](ApplicationApi.md#createapplications) | **POST** /api/v1/applications | ApplicationController@store |
+| [**DeleteApplications**](ApplicationApi.md#deleteapplications) | **DELETE** /api/v1/applications/{id} | ApplicationController@delete |
+| [**EditApplications**](ApplicationApi.md#editapplications) | **PATCH** /api/v1/applications/{id} | ApplicationController@edit |
 | [**FetchAllApplications**](ApplicationApi.md#fetchallapplications) | **GET** /api/v1/applications | ApplicationController@index |
 | [**FetchAllSitemap**](ApplicationApi.md#fetchallsitemap) | **GET** /api/v1/sitemap | SiteMapController@index |
 | [**FetchApplications**](ApplicationApi.md#fetchapplications) | **GET** /api/v1/applications/{id} | ApplicationController@show |
+| [**PatchApplicationsClientId**](ApplicationApi.md#patchapplicationsclientid) | **PATCH** /api/v1/applications/{id}/clientid | ApplicationController@generateClientIdById |
+| [**UpdateApplications**](ApplicationApi.md#updateapplications) | **PUT** /api/v1/applications/{id} | ApplicationController@update |
 
-<a id="c724575805bbca0f084a3001d71abd53"></a>
-# **C724575805bbca0f084a3001d71abd53**
-> Model3c8adeb001330f5198ca1072be78e299200Response C724575805bbca0f084a3001d71abd53 (int id)
+<a id="createapplications"></a>
+# **CreateApplications**
+> CreateApplications200Response CreateApplications (CreateApplicationsRequest createApplicationsRequest)
 
-ApplicationController@generateClientIdById
+ApplicationController@store
 
-Generate Client ID application
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | application id |  |
-
-### Return type
-
-[**Model3c8adeb001330f5198ca1072be78e299200Response**](Model3c8adeb001330f5198ca1072be78e299200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call3c8adeb001330f5198ca1072be78e299"></a>
-# **Call3c8adeb001330f5198ca1072be78e299**
-> Model3c8adeb001330f5198ca1072be78e299200Response Call3c8adeb001330f5198ca1072be78e299 (int id, Model3c8adeb001330f5198ca1072be78e299Request model3c8adeb001330f5198ca1072be78e299Request)
-
-ApplicationController@update
-
-Update application
+Creates application
 
 
 ### Parameters
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **id** | **int** | application id |  |
-| **model3c8adeb001330f5198ca1072be78e299Request** | [**Model3c8adeb001330f5198ca1072be78e299Request**](Model3c8adeb001330f5198ca1072be78e299Request.md) | ActivityLog definition |  |
+| **createApplicationsRequest** | [**CreateApplicationsRequest**](CreateApplicationsRequest.md) | Application definition |  |
 
 ### Return type
 
-[**Model3c8adeb001330f5198ca1072be78e299200Response**](Model3c8adeb001330f5198ca1072be78e299200Response.md)
+[**CreateApplications200Response**](CreateApplications200Response.md)
 
 ### Authorization
 
@@ -84,54 +45,14 @@ Update application
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **404** | Not found response |  -  |
 | **200** | Success |  -  |
 | **500** | Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="call45ae3b415211ef0712a8ea070e66449f"></a>
-# **Call45ae3b415211ef0712a8ea070e66449f**
-> Model3c8adeb001330f5198ca1072be78e299200Response Call45ae3b415211ef0712a8ea070e66449f (int id, Model45ae3b415211ef0712a8ea070e66449fRequest model45ae3b415211ef0712a8ea070e66449fRequest)
-
-ApplicationController@edit
-
-Edit application
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | application id |  |
-| **model45ae3b415211ef0712a8ea070e66449fRequest** | [**Model45ae3b415211ef0712a8ea070e66449fRequest**](Model45ae3b415211ef0712a8ea070e66449fRequest.md) | ActivityLog definition |  |
-
-### Return type
-
-[**Model3c8adeb001330f5198ca1072be78e299200Response**](Model3c8adeb001330f5198ca1072be78e299200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="ddca747ae792e5b6837b97c6ad510fd3"></a>
-# **Ddca747ae792e5b6837b97c6ad510fd3**
-> C29b5b3424f7317b69b4bda048ccfafb200Response Ddca747ae792e5b6837b97c6ad510fd3 (int id)
+<a id="deleteapplications"></a>
+# **DeleteApplications**
+> DeleteAliases200Response DeleteApplications (int id)
 
 ApplicationController@delete
 
@@ -146,7 +67,7 @@ Delete application
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 
@@ -167,24 +88,25 @@ Delete application
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="e210052adcf6fdcfc472998b430081aa"></a>
-# **E210052adcf6fdcfc472998b430081aa**
-> E210052adcf6fdcfc472998b430081aa200Response E210052adcf6fdcfc472998b430081aa (E210052adcf6fdcfc472998b430081aaRequest e210052adcf6fdcfc472998b430081aaRequest)
+<a id="editapplications"></a>
+# **EditApplications**
+> UpdateApplications200Response EditApplications (int id, EditApplicationsRequest editApplicationsRequest)
 
-ApplicationController@store
+ApplicationController@edit
 
-Creates application
+Edit application
 
 
 ### Parameters
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **e210052adcf6fdcfc472998b430081aaRequest** | [**E210052adcf6fdcfc472998b430081aaRequest**](E210052adcf6fdcfc472998b430081aaRequest.md) | Application definition |  |
+| **id** | **int** | application id |  |
+| **editApplicationsRequest** | [**EditApplicationsRequest**](EditApplicationsRequest.md) | ActivityLog definition |  |
 
 ### Return type
 
-[**E210052adcf6fdcfc472998b430081aa200Response**](E210052adcf6fdcfc472998b430081aa200Response.md)
+[**UpdateApplications200Response**](UpdateApplications200Response.md)
 
 ### Authorization
 
@@ -199,6 +121,7 @@ Creates application
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **404** | Not found response |  -  |
 | **200** | Success |  -  |
 | **500** | Error |  -  |
 
@@ -307,6 +230,83 @@ Get application by id
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="patchapplicationsclientid"></a>
+# **PatchApplicationsClientId**
+> UpdateApplications200Response PatchApplicationsClientId (int id)
+
+ApplicationController@generateClientIdById
+
+Generate Client ID application
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **int** | application id |  |
+
+### Return type
+
+[**UpdateApplications200Response**](UpdateApplications200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="updateapplications"></a>
+# **UpdateApplications**
+> UpdateApplications200Response UpdateApplications (int id, UpdateApplicationsRequest updateApplicationsRequest)
+
+ApplicationController@update
+
+Update application
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **int** | application id |  |
+| **updateApplicationsRequest** | [**UpdateApplicationsRequest**](UpdateApplicationsRequest.md) | ActivityLog definition |  |
+
+### Return type
+
+[**UpdateApplications200Response**](UpdateApplications200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

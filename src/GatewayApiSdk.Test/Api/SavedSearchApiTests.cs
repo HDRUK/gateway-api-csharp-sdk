@@ -51,77 +51,77 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call39500344ecf1a14150bbe26c4a138c56
+        /// Test CreateSavedSearches
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call39500344ecf1a14150bbe26c4a138c56AsyncTest()
+        public async Task CreateSavedSearchesAsyncTest()
         {
-            Model39500344ecf1a14150bbe26c4a138c56Request model39500344ecf1a14150bbe26c4a138c56Request = default!;
-            var response = await _instance.Call39500344ecf1a14150bbe26c4a138c56Async(model39500344ecf1a14150bbe26c4a138c56Request);
+            CreateSavedSearchesRequest createSavedSearchesRequest = default!;
+            var response = await _instance.CreateSavedSearchesAsync(createSavedSearchesRequest);
             var model = response.Ok();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
-        /// Test Call3b59d921ea47286a669054ef67350b03
+        /// Test DeleteSavedSearches
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call3b59d921ea47286a669054ef67350b03AsyncTest()
+        public async Task DeleteSavedSearchesAsyncTest()
         {
             int id = default!;
-            Model3b59d921ea47286a669054ef67350b03Request model3b59d921ea47286a669054ef67350b03Request = default!;
-            var response = await _instance.Call3b59d921ea47286a669054ef67350b03Async(id, model3b59d921ea47286a669054ef67350b03Request);
+            var response = await _instance.DeleteSavedSearchesAsync(id);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
-        /// Test Call4f2a3c56631a5fccb45a9e7972df02b0
+        /// Test EditSavedSearches
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call4f2a3c56631a5fccb45a9e7972df02b0AsyncTest()
+        public async Task EditSavedSearchesAsyncTest()
+        {
+            int id = default!;
+            EditSavedSearchesRequest editSavedSearchesRequest = default!;
+            var response = await _instance.EditSavedSearchesAsync(id, editSavedSearchesRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchAllSavedSearches
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchAllSavedSearchesAsyncTest()
         {
             Client.Option<int> perPage = default!;
-            var response = await _instance.Call4f2a3c56631a5fccb45a9e7972df02b0Async(perPage);
+            var response = await _instance.FetchAllSavedSearchesAsync(perPage);
             var model = response.Ok();
-            Assert.IsType<Model4f2a3c56631a5fccb45a9e7972df02b0200Response>(model);
+            Assert.IsType<FetchAllSavedSearches200Response>(model);
         }
 
         /// <summary>
-        /// Test Call8d6878e4937dd67c5e2480c6f4e9149f
+        /// Test FetchSavedSearches
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call8d6878e4937dd67c5e2480c6f4e9149fAsyncTest()
+        public async Task FetchSavedSearchesAsyncTest()
         {
             int id = default!;
-            var response = await _instance.Call8d6878e4937dd67c5e2480c6f4e9149fAsync(id);
+            var response = await _instance.FetchSavedSearchesAsync(id);
             var model = response.Ok();
-            Assert.IsType<Model4f2a3c56631a5fccb45a9e7972df02b0200Response>(model);
+            Assert.IsType<FetchAllSavedSearches200Response>(model);
         }
 
         /// <summary>
-        /// Test Cdcdceead49fe1554534af83c50c8af5
+        /// Test UpdateSavedSearches
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Cdcdceead49fe1554534af83c50c8af5AsyncTest()
+        public async Task UpdateSavedSearchesAsyncTest()
         {
             int id = default!;
-            var response = await _instance.Cdcdceead49fe1554534af83c50c8af5Async(id);
+            UpdateSavedSearchesRequest updateSavedSearchesRequest = default!;
+            var response = await _instance.UpdateSavedSearchesAsync(id, updateSavedSearchesRequest);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Fa314398c7a73002fee4ffc7e62e9fb6
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Fa314398c7a73002fee4ffc7e62e9fb6AsyncTest()
-        {
-            int id = default!;
-            Fa314398c7a73002fee4ffc7e62e9fb6Request fa314398c7a73002fee4ffc7e62e9fb6Request = default!;
-            var response = await _instance.Fa314398c7a73002fee4ffc7e62e9fb6Async(id, fa314398c7a73002fee4ffc7e62e9fb6Request);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
     }
 }

@@ -51,15 +51,15 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Cd41e1bd1b9f9918da2bb53a240b8bfe
+        /// Test SearchSimilarDatasets
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Cd41e1bd1b9f9918da2bb53a240b8bfeAsyncTest()
+        public async Task SearchSimilarDatasetsAsyncTest()
         {
-            Cd41e1bd1b9f9918da2bb53a240b8bfeRequest cd41e1bd1b9f9918da2bb53a240b8bfeRequest = default!;
-            var response = await _instance.Cd41e1bd1b9f9918da2bb53a240b8bfeAsync(cd41e1bd1b9f9918da2bb53a240b8bfeRequest);
+            SearchSimilarDatasetsRequest searchSimilarDatasetsRequest = default!;
+            var response = await _instance.SearchSimilarDatasetsAsync(searchSimilarDatasetsRequest);
             var model = response.Ok();
-            Assert.IsType<Cd41e1bd1b9f9918da2bb53a240b8bfe200Response>(model);
+            Assert.IsType<SearchSimilarDatasets200Response>(model);
         }
     }
 }

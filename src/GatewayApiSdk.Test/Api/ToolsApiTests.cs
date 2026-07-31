@@ -98,7 +98,7 @@ namespace GatewayApiSdk.Test.Api
             CreateToolsRequest createToolsRequest = default!;
             var response = await _instance.CreateToolsAsync(createToolsRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace GatewayApiSdk.Test.Api
             CreateToolsRequest createToolsRequest = default!;
             var response = await _instance.CreateToolsByTeamV2Async(teamId, createToolsRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace GatewayApiSdk.Test.Api
             CreateToolsRequest createToolsRequest = default!;
             var response = await _instance.CreateToolsByUserV2Async(userId, createToolsRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace GatewayApiSdk.Test.Api
             CreateToolsIntegrationsRequest createToolsIntegrationsRequest = default!;
             var response = await _instance.CreateToolsIntegrationsAsync(createToolsIntegrationsRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>

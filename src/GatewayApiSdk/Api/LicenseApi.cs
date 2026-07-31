@@ -39,25 +39,16 @@ namespace GatewayApiSdk.Api
         LicenseApiEvents Events { get; }
 
         /// <summary>
-        /// License@index
+        /// License@store
         /// </summary>
         /// <remarks>
-        /// Returns a list of licenses available
+        /// Creates a new license
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createLicensesRequest">License definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB34ab4eadc1eaed469678151e6e71b9fApiResponse"/>&gt;</returns>
-        Task<IB34ab4eadc1eaed469678151e6e71b9fApiResponse> B34ab4eadc1eaed469678151e6e71b9fAsync(System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// License@index
-        /// </summary>
-        /// <remarks>
-        /// Returns a list of licenses available
-        /// </remarks>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB34ab4eadc1eaed469678151e6e71b9fApiResponse"/>?&gt;</returns>
-        Task<IB34ab4eadc1eaed469678151e6e71b9fApiResponse?> B34ab4eadc1eaed469678151e6e71b9fOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateLicensesApiResponse"/>&gt;</returns>
+        Task<ICreateLicensesApiResponse> CreateLicensesAsync(CreateLicensesRequest createLicensesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// License@store
@@ -65,70 +56,10 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Creates a new license
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request">License definition</param>
+        /// <param name="createLicensesRequest">License definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse"/>&gt;</returns>
-        Task<ICall2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse> Call2721b23c1df3b4e71706e4ab04f9b0a8Async(Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// License@store
-        /// </summary>
-        /// <remarks>
-        /// Creates a new license
-        /// </remarks>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request">License definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse"/>?&gt;</returns>
-        Task<ICall2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse?> Call2721b23c1df3b4e71706e4ab04f9b0a8OrDefaultAsync(Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// License@show
-        /// </summary>
-        /// <remarks>
-        /// Return a single license
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">License ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall50c6be78401c528ffdf4ed00414e7678ApiResponse"/>&gt;</returns>
-        Task<ICall50c6be78401c528ffdf4ed00414e7678ApiResponse> Call50c6be78401c528ffdf4ed00414e7678Async(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// License@show
-        /// </summary>
-        /// <remarks>
-        /// Return a single license
-        /// </remarks>
-        /// <param name="id">License ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall50c6be78401c528ffdf4ed00414e7678ApiResponse"/>?&gt;</returns>
-        Task<ICall50c6be78401c528ffdf4ed00414e7678ApiResponse?> Call50c6be78401c528ffdf4ed00414e7678OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// License@update
-        /// </summary>
-        /// <remarks>
-        /// Update a tool license
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">license id</param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request">Category definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall98a20646cb4164cddd79725baf3dcf61ApiResponse"/>&gt;</returns>
-        Task<ICall98a20646cb4164cddd79725baf3dcf61ApiResponse> Call98a20646cb4164cddd79725baf3dcf61Async(int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// License@update
-        /// </summary>
-        /// <remarks>
-        /// Update a tool license
-        /// </remarks>
-        /// <param name="id">license id</param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request">Category definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall98a20646cb4164cddd79725baf3dcf61ApiResponse"/>?&gt;</returns>
-        Task<ICall98a20646cb4164cddd79725baf3dcf61ApiResponse?> Call98a20646cb4164cddd79725baf3dcf61OrDefaultAsync(int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateLicensesApiResponse"/>?&gt;</returns>
+        Task<ICreateLicensesApiResponse?> CreateLicensesOrDefaultAsync(CreateLicensesRequest createLicensesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// License@destroy
@@ -139,8 +70,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">License id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall991d716a8c83b7e3c4747583eeffc0eeApiResponse"/>&gt;</returns>
-        Task<ICall991d716a8c83b7e3c4747583eeffc0eeApiResponse> Call991d716a8c83b7e3c4747583eeffc0eeAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteLicensesApiResponse"/>&gt;</returns>
+        Task<IDeleteLicensesApiResponse> DeleteLicensesAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// License@destroy
@@ -150,8 +81,8 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="id">License id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall991d716a8c83b7e3c4747583eeffc0eeApiResponse"/>?&gt;</returns>
-        Task<ICall991d716a8c83b7e3c4747583eeffc0eeApiResponse?> Call991d716a8c83b7e3c4747583eeffc0eeOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteLicensesApiResponse"/>?&gt;</returns>
+        Task<IDeleteLicensesApiResponse?> DeleteLicensesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// License@edit
@@ -161,10 +92,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">license id</param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request">Category definition</param>
+        /// <param name="createLicensesRequest">Category definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFc8a99b7173f11228400fac2754185faApiResponse"/>&gt;</returns>
-        Task<IFc8a99b7173f11228400fac2754185faApiResponse> Fc8a99b7173f11228400fac2754185faAsync(int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditLicensesApiResponse"/>&gt;</returns>
+        Task<IEditLicensesApiResponse> EditLicensesAsync(int id, CreateLicensesRequest createLicensesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// License@edit
@@ -173,28 +104,85 @@ namespace GatewayApiSdk.Api
         /// Edit a tool license
         /// </remarks>
         /// <param name="id">license id</param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request">Category definition</param>
+        /// <param name="createLicensesRequest">Category definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFc8a99b7173f11228400fac2754185faApiResponse"/>?&gt;</returns>
-        Task<IFc8a99b7173f11228400fac2754185faApiResponse?> Fc8a99b7173f11228400fac2754185faOrDefaultAsync(int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request, System.Threading.CancellationToken cancellationToken = default);
-    }
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditLicensesApiResponse"/>?&gt;</returns>
+        Task<IEditLicensesApiResponse?> EditLicensesOrDefaultAsync(int id, CreateLicensesRequest createLicensesRequest, System.Threading.CancellationToken cancellationToken = default);
 
-    /// <summary>
-    /// The <see cref="IB34ab4eadc1eaed469678151e6e71b9fApiResponse"/>
-    /// </summary>
-    public interface IB34ab4eadc1eaed469678151e6e71b9fApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.B34ab4eadc1eaed469678151e6e71b9f200Response?>
-    {
         /// <summary>
-        /// Returns true if the response is 200 Ok
+        /// License@index
         /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
+        /// <remarks>
+        /// Returns a list of licenses available
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllLicensesApiResponse"/>&gt;</returns>
+        Task<IFetchAllLicensesApiResponse> FetchAllLicensesAsync(System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// License@index
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of licenses available
+        /// </remarks>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllLicensesApiResponse"/>?&gt;</returns>
+        Task<IFetchAllLicensesApiResponse?> FetchAllLicensesOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// License@show
+        /// </summary>
+        /// <remarks>
+        /// Return a single license
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">License ID</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchLicensesApiResponse"/>&gt;</returns>
+        Task<IFetchLicensesApiResponse> FetchLicensesAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// License@show
+        /// </summary>
+        /// <remarks>
+        /// Return a single license
+        /// </remarks>
+        /// <param name="id">License ID</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchLicensesApiResponse"/>?&gt;</returns>
+        Task<IFetchLicensesApiResponse?> FetchLicensesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// License@update
+        /// </summary>
+        /// <remarks>
+        /// Update a tool license
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">license id</param>
+        /// <param name="createLicensesRequest">Category definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateLicensesApiResponse"/>&gt;</returns>
+        Task<IUpdateLicensesApiResponse> UpdateLicensesAsync(int id, CreateLicensesRequest createLicensesRequest, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// License@update
+        /// </summary>
+        /// <remarks>
+        /// Update a tool license
+        /// </remarks>
+        /// <param name="id">license id</param>
+        /// <param name="createLicensesRequest">Category definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateLicensesApiResponse"/>?&gt;</returns>
+        Task<IUpdateLicensesApiResponse?> UpdateLicensesOrDefaultAsync(int id, CreateLicensesRequest createLicensesRequest, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="ICall2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse"/>
+    /// The <see cref="ICreateLicensesApiResponse"/>
     /// </summary>
-    public interface ICall2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface ICreateLicensesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CreateCategories200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -210,27 +198,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall50c6be78401c528ffdf4ed00414e7678ApiResponse"/>
+    /// The <see cref="IDeleteLicensesApiResponse"/>
     /// </summary>
-    public interface ICall50c6be78401c528ffdf4ed00414e7678ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model50c6be78401c528ffdf4ed00414e7678200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ICall98a20646cb4164cddd79725baf3dcf61ApiResponse"/>
-    /// </summary>
-    public interface ICall98a20646cb4164cddd79725baf3dcf61ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.Model98a20646cb4164cddd79725baf3dcf61200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IDeleteLicensesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -252,9 +222,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall991d716a8c83b7e3c4747583eeffc0eeApiResponse"/>
+    /// The <see cref="IEditLicensesApiResponse"/>
     /// </summary>
-    public interface ICall991d716a8c83b7e3c4747583eeffc0eeApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IEditLicensesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateLicenses200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -276,9 +246,39 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IFc8a99b7173f11228400fac2754185faApiResponse"/>
+    /// The <see cref="IFetchAllLicensesApiResponse"/>
     /// </summary>
-    public interface IFc8a99b7173f11228400fac2754185faApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.Model98a20646cb4164cddd79725baf3dcf61200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IFetchAllLicensesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchAllLicenses200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchLicensesApiResponse"/>
+    /// </summary>
+    public interface IFetchLicensesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchLicenses200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 404 NotFound
+        /// </summary>
+        /// <returns></returns>
+        bool IsNotFound { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IUpdateLicensesApiResponse"/>
+    /// </summary>
+    public interface IUpdateLicensesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateLicenses200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -307,121 +307,121 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnB34ab4eadc1eaed469678151e6e71b9f;
+        public event EventHandler<ApiResponseEventArgs>? OnCreateLicenses;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorB34ab4eadc1eaed469678151e6e71b9f;
+        public event EventHandler<ExceptionEventArgs>? OnErrorCreateLicenses;
 
-        internal void ExecuteOnB34ab4eadc1eaed469678151e6e71b9f(LicenseApi.B34ab4eadc1eaed469678151e6e71b9fApiResponse apiResponse)
+        internal void ExecuteOnCreateLicenses(LicenseApi.CreateLicensesApiResponse apiResponse)
         {
-            OnB34ab4eadc1eaed469678151e6e71b9f?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnCreateLicenses?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorB34ab4eadc1eaed469678151e6e71b9f(Exception exception)
+        internal void ExecuteOnErrorCreateLicenses(Exception exception)
         {
-            OnErrorB34ab4eadc1eaed469678151e6e71b9f?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorCreateLicenses?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall2721b23c1df3b4e71706e4ab04f9b0a8;
+        public event EventHandler<ApiResponseEventArgs>? OnDeleteLicenses;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall2721b23c1df3b4e71706e4ab04f9b0a8;
+        public event EventHandler<ExceptionEventArgs>? OnErrorDeleteLicenses;
 
-        internal void ExecuteOnCall2721b23c1df3b4e71706e4ab04f9b0a8(LicenseApi.Call2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse apiResponse)
+        internal void ExecuteOnDeleteLicenses(LicenseApi.DeleteLicensesApiResponse apiResponse)
         {
-            OnCall2721b23c1df3b4e71706e4ab04f9b0a8?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnDeleteLicenses?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall2721b23c1df3b4e71706e4ab04f9b0a8(Exception exception)
+        internal void ExecuteOnErrorDeleteLicenses(Exception exception)
         {
-            OnErrorCall2721b23c1df3b4e71706e4ab04f9b0a8?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorDeleteLicenses?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall50c6be78401c528ffdf4ed00414e7678;
+        public event EventHandler<ApiResponseEventArgs>? OnEditLicenses;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall50c6be78401c528ffdf4ed00414e7678;
+        public event EventHandler<ExceptionEventArgs>? OnErrorEditLicenses;
 
-        internal void ExecuteOnCall50c6be78401c528ffdf4ed00414e7678(LicenseApi.Call50c6be78401c528ffdf4ed00414e7678ApiResponse apiResponse)
+        internal void ExecuteOnEditLicenses(LicenseApi.EditLicensesApiResponse apiResponse)
         {
-            OnCall50c6be78401c528ffdf4ed00414e7678?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnEditLicenses?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall50c6be78401c528ffdf4ed00414e7678(Exception exception)
+        internal void ExecuteOnErrorEditLicenses(Exception exception)
         {
-            OnErrorCall50c6be78401c528ffdf4ed00414e7678?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorEditLicenses?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall98a20646cb4164cddd79725baf3dcf61;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchAllLicenses;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall98a20646cb4164cddd79725baf3dcf61;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchAllLicenses;
 
-        internal void ExecuteOnCall98a20646cb4164cddd79725baf3dcf61(LicenseApi.Call98a20646cb4164cddd79725baf3dcf61ApiResponse apiResponse)
+        internal void ExecuteOnFetchAllLicenses(LicenseApi.FetchAllLicensesApiResponse apiResponse)
         {
-            OnCall98a20646cb4164cddd79725baf3dcf61?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchAllLicenses?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall98a20646cb4164cddd79725baf3dcf61(Exception exception)
+        internal void ExecuteOnErrorFetchAllLicenses(Exception exception)
         {
-            OnErrorCall98a20646cb4164cddd79725baf3dcf61?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchAllLicenses?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall991d716a8c83b7e3c4747583eeffc0ee;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchLicenses;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall991d716a8c83b7e3c4747583eeffc0ee;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchLicenses;
 
-        internal void ExecuteOnCall991d716a8c83b7e3c4747583eeffc0ee(LicenseApi.Call991d716a8c83b7e3c4747583eeffc0eeApiResponse apiResponse)
+        internal void ExecuteOnFetchLicenses(LicenseApi.FetchLicensesApiResponse apiResponse)
         {
-            OnCall991d716a8c83b7e3c4747583eeffc0ee?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchLicenses?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall991d716a8c83b7e3c4747583eeffc0ee(Exception exception)
+        internal void ExecuteOnErrorFetchLicenses(Exception exception)
         {
-            OnErrorCall991d716a8c83b7e3c4747583eeffc0ee?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchLicenses?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFc8a99b7173f11228400fac2754185fa;
+        public event EventHandler<ApiResponseEventArgs>? OnUpdateLicenses;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFc8a99b7173f11228400fac2754185fa;
+        public event EventHandler<ExceptionEventArgs>? OnErrorUpdateLicenses;
 
-        internal void ExecuteOnFc8a99b7173f11228400fac2754185fa(LicenseApi.Fc8a99b7173f11228400fac2754185faApiResponse apiResponse)
+        internal void ExecuteOnUpdateLicenses(LicenseApi.UpdateLicensesApiResponse apiResponse)
         {
-            OnFc8a99b7173f11228400fac2754185fa?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnUpdateLicenses?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorFc8a99b7173f11228400fac2754185fa(Exception exception)
+        internal void ExecuteOnErrorUpdateLicenses(Exception exception)
         {
-            OnErrorFc8a99b7173f11228400fac2754185fa?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorUpdateLicenses?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -466,245 +466,28 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        private void AfterB34ab4eadc1eaed469678151e6e71b9fDefaultImplementation(IB34ab4eadc1eaed469678151e6e71b9fApiResponse apiResponseLocalVar)
-        {
-            bool suppressDefaultLog = false;
-            AfterB34ab4eadc1eaed469678151e6e71b9f(ref suppressDefaultLog, apiResponseLocalVar);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        partial void AfterB34ab4eadc1eaed469678151e6e71b9f(ref bool suppressDefaultLog, IB34ab4eadc1eaed469678151e6e71b9fApiResponse apiResponseLocalVar);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        private void OnErrorB34ab4eadc1eaed469678151e6e71b9fDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorB34ab4eadc1eaed469678151e6e71b9f(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        partial void OnErrorB34ab4eadc1eaed469678151e6e71b9f(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar);
-
-        /// <summary>
-        /// License@index Returns a list of licenses available
-        /// </summary>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB34ab4eadc1eaed469678151e6e71b9fApiResponse"/>&gt;</returns>
-        public async Task<IB34ab4eadc1eaed469678151e6e71b9fApiResponse?> B34ab4eadc1eaed469678151e6e71b9fOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await B34ab4eadc1eaed469678151e6e71b9fAsync(cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// License@index Returns a list of licenses available
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB34ab4eadc1eaed469678151e6e71b9fApiResponse"/>&gt;</returns>
-        public async Task<IB34ab4eadc1eaed469678151e6e71b9fApiResponse> B34ab4eadc1eaed469678151e6e71b9fAsync(System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/licenses"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/licenses");
-
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        B34ab4eadc1eaed469678151e6e71b9fApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/licenses", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterB34ab4eadc1eaed469678151e6e71b9fDefaultImplementation(apiResponseLocalVar);
-
-                        Events.ExecuteOnB34ab4eadc1eaed469678151e6e71b9f(apiResponseLocalVar);
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorB34ab4eadc1eaed469678151e6e71b9fDefaultImplementation(e, "/api/v1/licenses", uriBuilderLocalVar.Path);
-                Events.ExecuteOnErrorB34ab4eadc1eaed469678151e6e71b9f(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="B34ab4eadc1eaed469678151e6e71b9fApiResponse"/>
-        /// </summary>
-        public partial class B34ab4eadc1eaed469678151e6e71b9fApiResponse : GatewayApiSdk.Client.ApiResponse, IB34ab4eadc1eaed469678151e6e71b9fApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<LicenseApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="B34ab4eadc1eaed469678151e6e71b9fApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public B34ab4eadc1eaed469678151e6e71b9fApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="B34ab4eadc1eaed469678151e6e71b9fApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public B34ab4eadc1eaed469678151e6e71b9fApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.B34ab4eadc1eaed469678151e6e71b9f200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.B34ab4eadc1eaed469678151e6e71b9f200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.B34ab4eadc1eaed469678151e6e71b9f200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall2721b23c1df3b4e71706e4ab04f9b0a8(Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+        partial void FormatCreateLicenses(CreateLicensesRequest createLicensesRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request"></param>
+        /// <param name="createLicensesRequest"></param>
         /// <returns></returns>
-        private void ValidateCall2721b23c1df3b4e71706e4ab04f9b0a8(Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request)
+        private void ValidateCreateLicenses(CreateLicensesRequest createLicensesRequest)
         {
-            if (model2721b23c1df3b4e71706e4ab04f9b0a8Request == null)
-                throw new ArgumentNullException(nameof(model2721b23c1df3b4e71706e4ab04f9b0a8Request));
+            if (createLicensesRequest == null)
+                throw new ArgumentNullException(nameof(createLicensesRequest));
         }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request"></param>
-        private void AfterCall2721b23c1df3b4e71706e4ab04f9b0a8DefaultImplementation(ICall2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse apiResponseLocalVar, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request)
+        /// <param name="createLicensesRequest"></param>
+        private void AfterCreateLicensesDefaultImplementation(ICreateLicensesApiResponse apiResponseLocalVar, CreateLicensesRequest createLicensesRequest)
         {
             bool suppressDefaultLog = false;
-            AfterCall2721b23c1df3b4e71706e4ab04f9b0a8(ref suppressDefaultLog, apiResponseLocalVar, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+            AfterCreateLicenses(ref suppressDefaultLog, apiResponseLocalVar, createLicensesRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -714,8 +497,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request"></param>
-        partial void AfterCall2721b23c1df3b4e71706e4ab04f9b0a8(ref bool suppressDefaultLog, ICall2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse apiResponseLocalVar, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+        /// <param name="createLicensesRequest"></param>
+        partial void AfterCreateLicenses(ref bool suppressDefaultLog, ICreateLicensesApiResponse apiResponseLocalVar, CreateLicensesRequest createLicensesRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -723,11 +506,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request"></param>
-        private void OnErrorCall2721b23c1df3b4e71706e4ab04f9b0a8DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request)
+        /// <param name="createLicensesRequest"></param>
+        private void OnErrorCreateLicensesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateLicensesRequest createLicensesRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall2721b23c1df3b4e71706e4ab04f9b0a8(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+            OnErrorCreateLicenses(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createLicensesRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -739,20 +522,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request"></param>
-        partial void OnErrorCall2721b23c1df3b4e71706e4ab04f9b0a8(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+        /// <param name="createLicensesRequest"></param>
+        partial void OnErrorCreateLicenses(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateLicensesRequest createLicensesRequest);
 
         /// <summary>
         /// License@store Creates a new license
         /// </summary>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request">License definition</param>
+        /// <param name="createLicensesRequest">License definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse"/>&gt;</returns>
-        public async Task<ICall2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse?> Call2721b23c1df3b4e71706e4ab04f9b0a8OrDefaultAsync(Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateLicensesApiResponse"/>&gt;</returns>
+        public async Task<ICreateLicensesApiResponse?> CreateLicensesOrDefaultAsync(CreateLicensesRequest createLicensesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call2721b23c1df3b4e71706e4ab04f9b0a8Async(model2721b23c1df3b4e71706e4ab04f9b0a8Request, cancellationToken).ConfigureAwait(false);
+                return await CreateLicensesAsync(createLicensesRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -764,18 +547,18 @@ namespace GatewayApiSdk.Api
         /// License@store Creates a new license
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request">License definition</param>
+        /// <param name="createLicensesRequest">License definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse"/>&gt;</returns>
-        public async Task<ICall2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse> Call2721b23c1df3b4e71706e4ab04f9b0a8Async(Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateLicensesApiResponse"/>&gt;</returns>
+        public async Task<ICreateLicensesApiResponse> CreateLicensesAsync(CreateLicensesRequest createLicensesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall2721b23c1df3b4e71706e4ab04f9b0a8(model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+                ValidateCreateLicenses(createLicensesRequest);
 
-                FormatCall2721b23c1df3b4e71706e4ab04f9b0a8(model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+                FormatCreateLicenses(createLicensesRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -786,9 +569,9 @@ namespace GatewayApiSdk.Api
                         ? "/api/v1/licenses"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/licenses");
 
-                    httpRequestMessageLocalVar.Content = (model2721b23c1df3b4e71706e4ab04f9b0a8Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (createLicensesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model2721b23c1df3b4e71706e4ab04f9b0a8Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createLicensesRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -823,7 +606,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse apiResponseLocalVar;
+                        CreateLicensesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -834,9 +617,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall2721b23c1df3b4e71706e4ab04f9b0a8DefaultImplementation(apiResponseLocalVar, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+                        AfterCreateLicensesDefaultImplementation(apiResponseLocalVar, createLicensesRequest);
 
-                        Events.ExecuteOnCall2721b23c1df3b4e71706e4ab04f9b0a8(apiResponseLocalVar);
+                        Events.ExecuteOnCreateLicenses(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -848,16 +631,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall2721b23c1df3b4e71706e4ab04f9b0a8DefaultImplementation(e, "/api/v1/licenses", uriBuilderLocalVar.Path, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
-                Events.ExecuteOnErrorCall2721b23c1df3b4e71706e4ab04f9b0a8(e);
+                OnErrorCreateLicensesDefaultImplementation(e, "/api/v1/licenses", uriBuilderLocalVar.Path, createLicensesRequest);
+                Events.ExecuteOnErrorCreateLicenses(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse"/>
+        /// The <see cref="CreateLicensesApiResponse"/>
         /// </summary>
-        public partial class Call2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse
+        public partial class CreateLicensesApiResponse : GatewayApiSdk.Client.ApiResponse, ICreateLicensesApiResponse
         {
             /// <summary>
             /// The logger
@@ -865,7 +648,7 @@ namespace GatewayApiSdk.Api
             public ILogger<LicenseApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse"/>
+            /// The <see cref="CreateLicensesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -874,14 +657,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public CreateLicensesApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse"/>
+            /// The <see cref="CreateLicensesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -890,7 +673,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call2721b23c1df3b4e71706e4ab04f9b0a8ApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public CreateLicensesApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -908,11 +691,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? Ok()
+            public GatewayApiSdk.Model.CreateCategories200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -921,7 +704,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
             {
                 result = null;
 
@@ -946,11 +729,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -959,7 +742,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -985,17 +768,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall50c6be78401c528ffdf4ed00414e7678(ref int id);
+        partial void FormatDeleteLicenses(ref int id);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        private void AfterCall50c6be78401c528ffdf4ed00414e7678DefaultImplementation(ICall50c6be78401c528ffdf4ed00414e7678ApiResponse apiResponseLocalVar, int id)
+        private void AfterDeleteLicensesDefaultImplementation(IDeleteLicensesApiResponse apiResponseLocalVar, int id)
         {
             bool suppressDefaultLog = false;
-            AfterCall50c6be78401c528ffdf4ed00414e7678(ref suppressDefaultLog, apiResponseLocalVar, id);
+            AfterDeleteLicenses(ref suppressDefaultLog, apiResponseLocalVar, id);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1006,7 +789,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        partial void AfterCall50c6be78401c528ffdf4ed00414e7678(ref bool suppressDefaultLog, ICall50c6be78401c528ffdf4ed00414e7678ApiResponse apiResponseLocalVar, int id);
+        partial void AfterDeleteLicenses(ref bool suppressDefaultLog, IDeleteLicensesApiResponse apiResponseLocalVar, int id);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1015,10 +798,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        private void OnErrorCall50c6be78401c528ffdf4ed00414e7678DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        private void OnErrorDeleteLicensesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall50c6be78401c528ffdf4ed00414e7678(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            OnErrorDeleteLicenses(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1031,632 +814,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        partial void OnErrorCall50c6be78401c528ffdf4ed00414e7678(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
-
-        /// <summary>
-        /// License@show Return a single license
-        /// </summary>
-        /// <param name="id">License ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall50c6be78401c528ffdf4ed00414e7678ApiResponse"/>&gt;</returns>
-        public async Task<ICall50c6be78401c528ffdf4ed00414e7678ApiResponse?> Call50c6be78401c528ffdf4ed00414e7678OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call50c6be78401c528ffdf4ed00414e7678Async(id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// License@show Return a single license
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">License ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall50c6be78401c528ffdf4ed00414e7678ApiResponse"/>&gt;</returns>
-        public async Task<ICall50c6be78401c528ffdf4ed00414e7678ApiResponse> Call50c6be78401c528ffdf4ed00414e7678Async(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatCall50c6be78401c528ffdf4ed00414e7678(ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/licenses/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/licenses/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call50c6be78401c528ffdf4ed00414e7678ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/licenses/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall50c6be78401c528ffdf4ed00414e7678DefaultImplementation(apiResponseLocalVar, id);
-
-                        Events.ExecuteOnCall50c6be78401c528ffdf4ed00414e7678(apiResponseLocalVar);
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall50c6be78401c528ffdf4ed00414e7678DefaultImplementation(e, "/api/v1/licenses/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorCall50c6be78401c528ffdf4ed00414e7678(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call50c6be78401c528ffdf4ed00414e7678ApiResponse"/>
-        /// </summary>
-        public partial class Call50c6be78401c528ffdf4ed00414e7678ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall50c6be78401c528ffdf4ed00414e7678ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<LicenseApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call50c6be78401c528ffdf4ed00414e7678ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call50c6be78401c528ffdf4ed00414e7678ApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call50c6be78401c528ffdf4ed00414e7678ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call50c6be78401c528ffdf4ed00414e7678ApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model50c6be78401c528ffdf4ed00414e7678200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model50c6be78401c528ffdf4ed00414e7678200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model50c6be78401c528ffdf4ed00414e7678200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall98a20646cb4164cddd79725baf3dcf61(ref int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request"></param>
-        /// <returns></returns>
-        private void ValidateCall98a20646cb4164cddd79725baf3dcf61(Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request)
-        {
-            if (model2721b23c1df3b4e71706e4ab04f9b0a8Request == null)
-                throw new ArgumentNullException(nameof(model2721b23c1df3b4e71706e4ab04f9b0a8Request));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request"></param>
-        private void AfterCall98a20646cb4164cddd79725baf3dcf61DefaultImplementation(ICall98a20646cb4164cddd79725baf3dcf61ApiResponse apiResponseLocalVar, int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall98a20646cb4164cddd79725baf3dcf61(ref suppressDefaultLog, apiResponseLocalVar, id, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request"></param>
-        partial void AfterCall98a20646cb4164cddd79725baf3dcf61(ref bool suppressDefaultLog, ICall98a20646cb4164cddd79725baf3dcf61ApiResponse apiResponseLocalVar, int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request"></param>
-        private void OnErrorCall98a20646cb4164cddd79725baf3dcf61DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall98a20646cb4164cddd79725baf3dcf61(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request"></param>
-        partial void OnErrorCall98a20646cb4164cddd79725baf3dcf61(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request);
-
-        /// <summary>
-        /// License@update Update a tool license
-        /// </summary>
-        /// <param name="id">license id</param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request">Category definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall98a20646cb4164cddd79725baf3dcf61ApiResponse"/>&gt;</returns>
-        public async Task<ICall98a20646cb4164cddd79725baf3dcf61ApiResponse?> Call98a20646cb4164cddd79725baf3dcf61OrDefaultAsync(int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call98a20646cb4164cddd79725baf3dcf61Async(id, model2721b23c1df3b4e71706e4ab04f9b0a8Request, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// License@update Update a tool license
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">license id</param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request">Category definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall98a20646cb4164cddd79725baf3dcf61ApiResponse"/>&gt;</returns>
-        public async Task<ICall98a20646cb4164cddd79725baf3dcf61ApiResponse> Call98a20646cb4164cddd79725baf3dcf61Async(int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateCall98a20646cb4164cddd79725baf3dcf61(model2721b23c1df3b4e71706e4ab04f9b0a8Request);
-
-                FormatCall98a20646cb4164cddd79725baf3dcf61(ref id, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/licenses/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/licenses/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    httpRequestMessageLocalVar.Content = (model2721b23c1df3b4e71706e4ab04f9b0a8Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model2721b23c1df3b4e71706e4ab04f9b0a8Request, _jsonSerializerOptions));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call98a20646cb4164cddd79725baf3dcf61ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/licenses/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall98a20646cb4164cddd79725baf3dcf61DefaultImplementation(apiResponseLocalVar, id, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
-
-                        Events.ExecuteOnCall98a20646cb4164cddd79725baf3dcf61(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall98a20646cb4164cddd79725baf3dcf61DefaultImplementation(e, "/api/v1/licenses/{id}", uriBuilderLocalVar.Path, id, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
-                Events.ExecuteOnErrorCall98a20646cb4164cddd79725baf3dcf61(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call98a20646cb4164cddd79725baf3dcf61ApiResponse"/>
-        /// </summary>
-        public partial class Call98a20646cb4164cddd79725baf3dcf61ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall98a20646cb4164cddd79725baf3dcf61ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<LicenseApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call98a20646cb4164cddd79725baf3dcf61ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call98a20646cb4164cddd79725baf3dcf61ApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call98a20646cb4164cddd79725baf3dcf61ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call98a20646cb4164cddd79725baf3dcf61ApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model98a20646cb4164cddd79725baf3dcf61200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model98a20646cb4164cddd79725baf3dcf61200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model98a20646cb4164cddd79725baf3dcf61200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall991d716a8c83b7e3c4747583eeffc0ee(ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterCall991d716a8c83b7e3c4747583eeffc0eeDefaultImplementation(ICall991d716a8c83b7e3c4747583eeffc0eeApiResponse apiResponseLocalVar, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall991d716a8c83b7e3c4747583eeffc0ee(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterCall991d716a8c83b7e3c4747583eeffc0ee(ref bool suppressDefaultLog, ICall991d716a8c83b7e3c4747583eeffc0eeApiResponse apiResponseLocalVar, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorCall991d716a8c83b7e3c4747583eeffc0eeDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall991d716a8c83b7e3c4747583eeffc0ee(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorCall991d716a8c83b7e3c4747583eeffc0ee(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+        partial void OnErrorDeleteLicenses(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
 
         /// <summary>
         /// License@destroy Delete a License
         /// </summary>
         /// <param name="id">License id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall991d716a8c83b7e3c4747583eeffc0eeApiResponse"/>&gt;</returns>
-        public async Task<ICall991d716a8c83b7e3c4747583eeffc0eeApiResponse?> Call991d716a8c83b7e3c4747583eeffc0eeOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteLicensesApiResponse"/>&gt;</returns>
+        public async Task<IDeleteLicensesApiResponse?> DeleteLicensesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call991d716a8c83b7e3c4747583eeffc0eeAsync(id, cancellationToken).ConfigureAwait(false);
+                return await DeleteLicensesAsync(id, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1670,14 +840,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">License id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall991d716a8c83b7e3c4747583eeffc0eeApiResponse"/>&gt;</returns>
-        public async Task<ICall991d716a8c83b7e3c4747583eeffc0eeApiResponse> Call991d716a8c83b7e3c4747583eeffc0eeAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteLicensesApiResponse"/>&gt;</returns>
+        public async Task<IDeleteLicensesApiResponse> DeleteLicensesAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatCall991d716a8c83b7e3c4747583eeffc0ee(ref id);
+                FormatDeleteLicenses(ref id);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1713,7 +883,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call991d716a8c83b7e3c4747583eeffc0eeApiResponse apiResponseLocalVar;
+                        DeleteLicensesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -1724,9 +894,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall991d716a8c83b7e3c4747583eeffc0eeDefaultImplementation(apiResponseLocalVar, id);
+                        AfterDeleteLicensesDefaultImplementation(apiResponseLocalVar, id);
 
-                        Events.ExecuteOnCall991d716a8c83b7e3c4747583eeffc0ee(apiResponseLocalVar);
+                        Events.ExecuteOnDeleteLicenses(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -1738,16 +908,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall991d716a8c83b7e3c4747583eeffc0eeDefaultImplementation(e, "/api/v1/licenses/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorCall991d716a8c83b7e3c4747583eeffc0ee(e);
+                OnErrorDeleteLicensesDefaultImplementation(e, "/api/v1/licenses/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorDeleteLicenses(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call991d716a8c83b7e3c4747583eeffc0eeApiResponse"/>
+        /// The <see cref="DeleteLicensesApiResponse"/>
         /// </summary>
-        public partial class Call991d716a8c83b7e3c4747583eeffc0eeApiResponse : GatewayApiSdk.Client.ApiResponse, ICall991d716a8c83b7e3c4747583eeffc0eeApiResponse
+        public partial class DeleteLicensesApiResponse : GatewayApiSdk.Client.ApiResponse, IDeleteLicensesApiResponse
         {
             /// <summary>
             /// The logger
@@ -1755,7 +925,7 @@ namespace GatewayApiSdk.Api
             public ILogger<LicenseApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call991d716a8c83b7e3c4747583eeffc0eeApiResponse"/>
+            /// The <see cref="DeleteLicensesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1764,14 +934,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call991d716a8c83b7e3c4747583eeffc0eeApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public DeleteLicensesApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call991d716a8c83b7e3c4747583eeffc0eeApiResponse"/>
+            /// The <see cref="DeleteLicensesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1780,7 +950,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call991d716a8c83b7e3c4747583eeffc0eeApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public DeleteLicensesApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1798,11 +968,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1811,7 +981,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -1836,11 +1006,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? Ok()
+            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1849,7 +1019,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
             {
                 result = null;
 
@@ -1874,11 +1044,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1887,7 +1057,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -1913,17 +1083,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatFc8a99b7173f11228400fac2754185fa(ref int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+        partial void FormatEditLicenses(ref int id, CreateLicensesRequest createLicensesRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request"></param>
+        /// <param name="createLicensesRequest"></param>
         /// <returns></returns>
-        private void ValidateFc8a99b7173f11228400fac2754185fa(Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request)
+        private void ValidateEditLicenses(CreateLicensesRequest createLicensesRequest)
         {
-            if (model2721b23c1df3b4e71706e4ab04f9b0a8Request == null)
-                throw new ArgumentNullException(nameof(model2721b23c1df3b4e71706e4ab04f9b0a8Request));
+            if (createLicensesRequest == null)
+                throw new ArgumentNullException(nameof(createLicensesRequest));
         }
 
         /// <summary>
@@ -1931,11 +1101,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request"></param>
-        private void AfterFc8a99b7173f11228400fac2754185faDefaultImplementation(IFc8a99b7173f11228400fac2754185faApiResponse apiResponseLocalVar, int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request)
+        /// <param name="createLicensesRequest"></param>
+        private void AfterEditLicensesDefaultImplementation(IEditLicensesApiResponse apiResponseLocalVar, int id, CreateLicensesRequest createLicensesRequest)
         {
             bool suppressDefaultLog = false;
-            AfterFc8a99b7173f11228400fac2754185fa(ref suppressDefaultLog, apiResponseLocalVar, id, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+            AfterEditLicenses(ref suppressDefaultLog, apiResponseLocalVar, id, createLicensesRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1946,8 +1116,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request"></param>
-        partial void AfterFc8a99b7173f11228400fac2754185fa(ref bool suppressDefaultLog, IFc8a99b7173f11228400fac2754185faApiResponse apiResponseLocalVar, int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+        /// <param name="createLicensesRequest"></param>
+        partial void AfterEditLicenses(ref bool suppressDefaultLog, IEditLicensesApiResponse apiResponseLocalVar, int id, CreateLicensesRequest createLicensesRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1956,11 +1126,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request"></param>
-        private void OnErrorFc8a99b7173f11228400fac2754185faDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request)
+        /// <param name="createLicensesRequest"></param>
+        private void OnErrorEditLicensesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateLicensesRequest createLicensesRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorFc8a99b7173f11228400fac2754185fa(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+            OnErrorEditLicenses(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, createLicensesRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1973,21 +1143,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request"></param>
-        partial void OnErrorFc8a99b7173f11228400fac2754185fa(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+        /// <param name="createLicensesRequest"></param>
+        partial void OnErrorEditLicenses(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateLicensesRequest createLicensesRequest);
 
         /// <summary>
         /// License@edit Edit a tool license
         /// </summary>
         /// <param name="id">license id</param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request">Category definition</param>
+        /// <param name="createLicensesRequest">Category definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFc8a99b7173f11228400fac2754185faApiResponse"/>&gt;</returns>
-        public async Task<IFc8a99b7173f11228400fac2754185faApiResponse?> Fc8a99b7173f11228400fac2754185faOrDefaultAsync(int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditLicensesApiResponse"/>&gt;</returns>
+        public async Task<IEditLicensesApiResponse?> EditLicensesOrDefaultAsync(int id, CreateLicensesRequest createLicensesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Fc8a99b7173f11228400fac2754185faAsync(id, model2721b23c1df3b4e71706e4ab04f9b0a8Request, cancellationToken).ConfigureAwait(false);
+                return await EditLicensesAsync(id, createLicensesRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -2000,18 +1170,18 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">license id</param>
-        /// <param name="model2721b23c1df3b4e71706e4ab04f9b0a8Request">Category definition</param>
+        /// <param name="createLicensesRequest">Category definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFc8a99b7173f11228400fac2754185faApiResponse"/>&gt;</returns>
-        public async Task<IFc8a99b7173f11228400fac2754185faApiResponse> Fc8a99b7173f11228400fac2754185faAsync(int id, Model2721b23c1df3b4e71706e4ab04f9b0a8Request model2721b23c1df3b4e71706e4ab04f9b0a8Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditLicensesApiResponse"/>&gt;</returns>
+        public async Task<IEditLicensesApiResponse> EditLicensesAsync(int id, CreateLicensesRequest createLicensesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateFc8a99b7173f11228400fac2754185fa(model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+                ValidateEditLicenses(createLicensesRequest);
 
-                FormatFc8a99b7173f11228400fac2754185fa(ref id, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+                FormatEditLicenses(ref id, createLicensesRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -2023,9 +1193,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/licenses/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (model2721b23c1df3b4e71706e4ab04f9b0a8Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (createLicensesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model2721b23c1df3b4e71706e4ab04f9b0a8Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createLicensesRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -2060,7 +1230,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Fc8a99b7173f11228400fac2754185faApiResponse apiResponseLocalVar;
+                        EditLicensesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -2071,9 +1241,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterFc8a99b7173f11228400fac2754185faDefaultImplementation(apiResponseLocalVar, id, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
+                        AfterEditLicensesDefaultImplementation(apiResponseLocalVar, id, createLicensesRequest);
 
-                        Events.ExecuteOnFc8a99b7173f11228400fac2754185fa(apiResponseLocalVar);
+                        Events.ExecuteOnEditLicenses(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -2085,16 +1255,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorFc8a99b7173f11228400fac2754185faDefaultImplementation(e, "/api/v1/licenses/{id}", uriBuilderLocalVar.Path, id, model2721b23c1df3b4e71706e4ab04f9b0a8Request);
-                Events.ExecuteOnErrorFc8a99b7173f11228400fac2754185fa(e);
+                OnErrorEditLicensesDefaultImplementation(e, "/api/v1/licenses/{id}", uriBuilderLocalVar.Path, id, createLicensesRequest);
+                Events.ExecuteOnErrorEditLicenses(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Fc8a99b7173f11228400fac2754185faApiResponse"/>
+        /// The <see cref="EditLicensesApiResponse"/>
         /// </summary>
-        public partial class Fc8a99b7173f11228400fac2754185faApiResponse : GatewayApiSdk.Client.ApiResponse, IFc8a99b7173f11228400fac2754185faApiResponse
+        public partial class EditLicensesApiResponse : GatewayApiSdk.Client.ApiResponse, IEditLicensesApiResponse
         {
             /// <summary>
             /// The logger
@@ -2102,7 +1272,7 @@ namespace GatewayApiSdk.Api
             public ILogger<LicenseApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Fc8a99b7173f11228400fac2754185faApiResponse"/>
+            /// The <see cref="EditLicensesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2111,14 +1281,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Fc8a99b7173f11228400fac2754185faApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public EditLicensesApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Fc8a99b7173f11228400fac2754185faApiResponse"/>
+            /// The <see cref="EditLicensesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2127,7 +1297,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Fc8a99b7173f11228400fac2754185faApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public EditLicensesApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -2145,11 +1315,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2158,7 +1328,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -2183,11 +1353,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model98a20646cb4164cddd79725baf3dcf61200Response? Ok()
+            public GatewayApiSdk.Model.UpdateLicenses200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model98a20646cb4164cddd79725baf3dcf61200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateLicenses200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2196,7 +1366,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model98a20646cb4164cddd79725baf3dcf61200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateLicenses200Response? result)
             {
                 result = null;
 
@@ -2221,11 +1391,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2234,7 +1404,837 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = InternalServerError();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        private void AfterFetchAllLicensesDefaultImplementation(IFetchAllLicensesApiResponse apiResponseLocalVar)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchAllLicenses(ref suppressDefaultLog, apiResponseLocalVar);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        partial void AfterFetchAllLicenses(ref bool suppressDefaultLog, IFetchAllLicensesApiResponse apiResponseLocalVar);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        private void OnErrorFetchAllLicensesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchAllLicenses(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        partial void OnErrorFetchAllLicenses(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar);
+
+        /// <summary>
+        /// License@index Returns a list of licenses available
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllLicensesApiResponse"/>&gt;</returns>
+        public async Task<IFetchAllLicensesApiResponse?> FetchAllLicensesOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchAllLicensesAsync(cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// License@index Returns a list of licenses available
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllLicensesApiResponse"/>&gt;</returns>
+        public async Task<IFetchAllLicensesApiResponse> FetchAllLicensesAsync(System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/licenses"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/licenses");
+
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchAllLicensesApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/licenses", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchAllLicensesDefaultImplementation(apiResponseLocalVar);
+
+                        Events.ExecuteOnFetchAllLicenses(apiResponseLocalVar);
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchAllLicensesDefaultImplementation(e, "/api/v1/licenses", uriBuilderLocalVar.Path);
+                Events.ExecuteOnErrorFetchAllLicenses(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchAllLicensesApiResponse"/>
+        /// </summary>
+        public partial class FetchAllLicensesApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchAllLicensesApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<LicenseApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchAllLicensesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchAllLicensesApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchAllLicensesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchAllLicensesApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAllLicenses200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllLicenses200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllLicenses200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchLicenses(ref int id);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        private void AfterFetchLicensesDefaultImplementation(IFetchLicensesApiResponse apiResponseLocalVar, int id)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchLicenses(ref suppressDefaultLog, apiResponseLocalVar, id);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        partial void AfterFetchLicenses(ref bool suppressDefaultLog, IFetchLicensesApiResponse apiResponseLocalVar, int id);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        private void OnErrorFetchLicensesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchLicenses(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        partial void OnErrorFetchLicenses(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+
+        /// <summary>
+        /// License@show Return a single license
+        /// </summary>
+        /// <param name="id">License ID</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchLicensesApiResponse"/>&gt;</returns>
+        public async Task<IFetchLicensesApiResponse?> FetchLicensesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchLicensesAsync(id, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// License@show Return a single license
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">License ID</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchLicensesApiResponse"/>&gt;</returns>
+        public async Task<IFetchLicensesApiResponse> FetchLicensesAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchLicenses(ref id);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/licenses/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/licenses/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchLicensesApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/licenses/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchLicensesDefaultImplementation(apiResponseLocalVar, id);
+
+                        Events.ExecuteOnFetchLicenses(apiResponseLocalVar);
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchLicensesDefaultImplementation(e, "/api/v1/licenses/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorFetchLicenses(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchLicensesApiResponse"/>
+        /// </summary>
+        public partial class FetchLicensesApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchLicensesApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<LicenseApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchLicensesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchLicensesApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchLicensesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchLicensesApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchLicenses200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchLicenses200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchLicenses200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatUpdateLicenses(ref int id, CreateLicensesRequest createLicensesRequest);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="createLicensesRequest"></param>
+        /// <returns></returns>
+        private void ValidateUpdateLicenses(CreateLicensesRequest createLicensesRequest)
+        {
+            if (createLicensesRequest == null)
+                throw new ArgumentNullException(nameof(createLicensesRequest));
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="createLicensesRequest"></param>
+        private void AfterUpdateLicensesDefaultImplementation(IUpdateLicensesApiResponse apiResponseLocalVar, int id, CreateLicensesRequest createLicensesRequest)
+        {
+            bool suppressDefaultLog = false;
+            AfterUpdateLicenses(ref suppressDefaultLog, apiResponseLocalVar, id, createLicensesRequest);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="createLicensesRequest"></param>
+        partial void AfterUpdateLicenses(ref bool suppressDefaultLog, IUpdateLicensesApiResponse apiResponseLocalVar, int id, CreateLicensesRequest createLicensesRequest);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="createLicensesRequest"></param>
+        private void OnErrorUpdateLicensesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateLicensesRequest createLicensesRequest)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorUpdateLicenses(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, createLicensesRequest);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="createLicensesRequest"></param>
+        partial void OnErrorUpdateLicenses(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateLicensesRequest createLicensesRequest);
+
+        /// <summary>
+        /// License@update Update a tool license
+        /// </summary>
+        /// <param name="id">license id</param>
+        /// <param name="createLicensesRequest">Category definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateLicensesApiResponse"/>&gt;</returns>
+        public async Task<IUpdateLicensesApiResponse?> UpdateLicensesOrDefaultAsync(int id, CreateLicensesRequest createLicensesRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await UpdateLicensesAsync(id, createLicensesRequest, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// License@update Update a tool license
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">license id</param>
+        /// <param name="createLicensesRequest">Category definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateLicensesApiResponse"/>&gt;</returns>
+        public async Task<IUpdateLicensesApiResponse> UpdateLicensesAsync(int id, CreateLicensesRequest createLicensesRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                ValidateUpdateLicenses(createLicensesRequest);
+
+                FormatUpdateLicenses(ref id, createLicensesRequest);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/licenses/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/licenses/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    httpRequestMessageLocalVar.Content = (createLicensesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createLicensesRequest, _jsonSerializerOptions));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] contentTypes = new string[] {
+                        "application/json"
+                    };
+
+                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
+
+                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
+                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        UpdateLicensesApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/licenses/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterUpdateLicensesDefaultImplementation(apiResponseLocalVar, id, createLicensesRequest);
+
+                        Events.ExecuteOnUpdateLicenses(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorUpdateLicensesDefaultImplementation(e, "/api/v1/licenses/{id}", uriBuilderLocalVar.Path, id, createLicensesRequest);
+                Events.ExecuteOnErrorUpdateLicenses(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="UpdateLicensesApiResponse"/>
+        /// </summary>
+        public partial class UpdateLicensesApiResponse : GatewayApiSdk.Client.ApiResponse, IUpdateLicensesApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<LicenseApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="UpdateLicensesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public UpdateLicensesApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="UpdateLicensesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public UpdateLicensesApiResponse(ILogger<LicenseApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.UpdateLicenses200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateLicenses200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateLicenses200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public bool IsInternalServerError => 500 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsInternalServerError
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 

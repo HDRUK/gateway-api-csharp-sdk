@@ -51,65 +51,52 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call077bba41c87bc61e6c290b3fea2a5848
+        /// Test CreateLibraries
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call077bba41c87bc61e6c290b3fea2a5848AsyncTest()
+        public async Task CreateLibrariesAsyncTest()
         {
-            int id = default!;
-            Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request = default!;
-            var response = await _instance.Call077bba41c87bc61e6c290b3fea2a5848Async(id, model3b22aa4bb101550915e675702f8f3174Request);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call3b22aa4bb101550915e675702f8f3174
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call3b22aa4bb101550915e675702f8f3174AsyncTest()
-        {
-            Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request = default!;
-            var response = await _instance.Call3b22aa4bb101550915e675702f8f3174Async(model3b22aa4bb101550915e675702f8f3174Request);
+            CreateLibrariesRequest createLibrariesRequest = default!;
+            var response = await _instance.CreateLibrariesAsync(createLibrariesRequest);
             var model = response.Ok();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
-        /// Test Call416921483907d62b39163e3c4188d10c
+        /// Test DeleteLibraries
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call416921483907d62b39163e3c4188d10cAsyncTest()
+        public async Task DeleteLibrariesAsyncTest()
         {
             int id = default!;
-            var response = await _instance.Call416921483907d62b39163e3c4188d10cAsync(id);
+            var response = await _instance.DeleteLibrariesAsync(id);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
-        /// Test Call771bea7be0a7f7d2e0056f8c192100ad
+        /// Test EditLibraries
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call771bea7be0a7f7d2e0056f8c192100adAsyncTest()
+        public async Task EditLibrariesAsyncTest()
         {
             int id = default!;
-            Model3b22aa4bb101550915e675702f8f3174Request model3b22aa4bb101550915e675702f8f3174Request = default!;
-            var response = await _instance.Call771bea7be0a7f7d2e0056f8c192100adAsync(id, model3b22aa4bb101550915e675702f8f3174Request);
+            CreateLibrariesRequest createLibrariesRequest = default!;
+            var response = await _instance.EditLibrariesAsync(id, createLibrariesRequest);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
-        /// Test D736d637e675097aaf709dfd755864c7
+        /// Test FetchLibraries
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task D736d637e675097aaf709dfd755864c7AsyncTest()
+        public async Task FetchLibrariesAsyncTest()
         {
             int id = default!;
-            var response = await _instance.D736d637e675097aaf709dfd755864c7Async(id);
+            var response = await _instance.FetchLibrariesAsync(id);
             var model = response.Ok();
-            Assert.IsType<D736d637e675097aaf709dfd755864c7200Response>(model);
+            Assert.IsType<FetchLibraries200Response>(model);
         }
 
         /// <summary>
@@ -122,6 +109,19 @@ namespace GatewayApiSdk.Test.Api
             var response = await _instance.ListLibrariesAsync(perPage);
             var model = response.Ok();
             Assert.IsType<ListLibraries200Response>(model);
+        }
+
+        /// <summary>
+        /// Test UpdateLibraries
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task UpdateLibrariesAsyncTest()
+        {
+            int id = default!;
+            CreateLibrariesRequest createLibrariesRequest = default!;
+            var response = await _instance.UpdateLibrariesAsync(id, createLibrariesRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
         }
     }
 }

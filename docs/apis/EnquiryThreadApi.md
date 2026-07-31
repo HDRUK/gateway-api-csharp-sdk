@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**A961db529080eb3a29e4b7cc13dabaaa**](EnquiryThreadApi.md#a961db529080eb3a29e4b7cc13dabaaa) | **POST** /api/v1/enquiry_threads | EnquiryThread@store |
-| [**Call4321ab5e45636e3e917c94fd21edac28**](EnquiryThreadApi.md#call4321ab5e45636e3e917c94fd21edac28) | **GET** /api/v1/enquiry_threads | EnquiryThread@index |
-| [**Fd828cd8df74859b18600bb6b36edf83**](EnquiryThreadApi.md#fd828cd8df74859b18600bb6b36edf83) | **GET** /api/v1/enquiry_threads/{id} | EnquiryThread@show |
+| [**CreateEnquiryThreads**](EnquiryThreadApi.md#createenquirythreads) | **POST** /api/v1/enquiry_threads | EnquiryThread@store |
+| [**FetchAllEnquiryThreads**](EnquiryThreadApi.md#fetchallenquirythreads) | **GET** /api/v1/enquiry_threads | EnquiryThread@index |
+| [**FetchEnquiryThreads**](EnquiryThreadApi.md#fetchenquirythreads) | **GET** /api/v1/enquiry_threads/{id} | EnquiryThread@show |
 
-<a id="a961db529080eb3a29e4b7cc13dabaaa"></a>
-# **A961db529080eb3a29e4b7cc13dabaaa**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response A961db529080eb3a29e4b7cc13dabaaa (A961db529080eb3a29e4b7cc13dabaaaRequest a961db529080eb3a29e4b7cc13dabaaaRequest)
+<a id="createenquirythreads"></a>
+# **CreateEnquiryThreads**
+> CreateCategories200Response CreateEnquiryThreads (CreateEnquiryThreadsRequest createEnquiryThreadsRequest)
 
 EnquiryThread@store
 
@@ -21,11 +21,11 @@ Creates one or more new EnquiryThreads
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **a961db529080eb3a29e4b7cc13dabaaaRequest** | [**A961db529080eb3a29e4b7cc13dabaaaRequest**](A961db529080eb3a29e4b7cc13dabaaaRequest.md) | EnquiryThread definition |  |
+| **createEnquiryThreadsRequest** | [**CreateEnquiryThreadsRequest**](CreateEnquiryThreadsRequest.md) | EnquiryThread definition |  |
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -45,9 +45,9 @@ Creates one or more new EnquiryThreads
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="call4321ab5e45636e3e917c94fd21edac28"></a>
-# **Call4321ab5e45636e3e917c94fd21edac28**
-> Model4321ab5e45636e3e917c94fd21edac28200Response Call4321ab5e45636e3e917c94fd21edac28 (int perPage = null)
+<a id="fetchallenquirythreads"></a>
+# **FetchAllEnquiryThreads**
+> FetchAllEnquiryThreads200Response FetchAllEnquiryThreads (int perPage = null)
 
 EnquiryThread@index
 
@@ -62,7 +62,7 @@ Returns a list of EnquiryThreads from the system
 
 ### Return type
 
-[**Model4321ab5e45636e3e917c94fd21edac28200Response**](Model4321ab5e45636e3e917c94fd21edac28200Response.md)
+[**FetchAllEnquiryThreads200Response**](FetchAllEnquiryThreads200Response.md)
 
 ### Authorization
 
@@ -81,9 +81,9 @@ Returns a list of EnquiryThreads from the system
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="fd828cd8df74859b18600bb6b36edf83"></a>
-# **Fd828cd8df74859b18600bb6b36edf83**
-> Model4321ab5e45636e3e917c94fd21edac28200Response Fd828cd8df74859b18600bb6b36edf83 (int id)
+<a id="fetchenquirythreads"></a>
+# **FetchEnquiryThreads**
+> FetchAllEnquiryThreads200Response FetchEnquiryThreads (int id)
 
 EnquiryThread@show
 
@@ -98,7 +98,7 @@ Return a single EnquiryThread
 
 ### Return type
 
-[**Model4321ab5e45636e3e917c94fd21edac28200Response**](Model4321ab5e45636e3e917c94fd21edac28200Response.md)
+[**FetchAllEnquiryThreads200Response**](FetchAllEnquiryThreads200Response.md)
 
 ### Authorization
 

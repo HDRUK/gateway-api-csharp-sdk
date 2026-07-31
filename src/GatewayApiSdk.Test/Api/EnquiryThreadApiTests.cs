@@ -51,39 +51,39 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test A961db529080eb3a29e4b7cc13dabaaa
+        /// Test CreateEnquiryThreads
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task A961db529080eb3a29e4b7cc13dabaaaAsyncTest()
+        public async Task CreateEnquiryThreadsAsyncTest()
         {
-            A961db529080eb3a29e4b7cc13dabaaaRequest a961db529080eb3a29e4b7cc13dabaaaRequest = default!;
-            var response = await _instance.A961db529080eb3a29e4b7cc13dabaaaAsync(a961db529080eb3a29e4b7cc13dabaaaRequest);
+            CreateEnquiryThreadsRequest createEnquiryThreadsRequest = default!;
+            var response = await _instance.CreateEnquiryThreadsAsync(createEnquiryThreadsRequest);
             var model = response.Ok();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
-        /// Test Call4321ab5e45636e3e917c94fd21edac28
+        /// Test FetchAllEnquiryThreads
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call4321ab5e45636e3e917c94fd21edac28AsyncTest()
+        public async Task FetchAllEnquiryThreadsAsyncTest()
         {
             Client.Option<int> perPage = default!;
-            var response = await _instance.Call4321ab5e45636e3e917c94fd21edac28Async(perPage);
+            var response = await _instance.FetchAllEnquiryThreadsAsync(perPage);
             var model = response.Ok();
-            Assert.IsType<Model4321ab5e45636e3e917c94fd21edac28200Response>(model);
+            Assert.IsType<FetchAllEnquiryThreads200Response>(model);
         }
 
         /// <summary>
-        /// Test Fd828cd8df74859b18600bb6b36edf83
+        /// Test FetchEnquiryThreads
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Fd828cd8df74859b18600bb6b36edf83AsyncTest()
+        public async Task FetchEnquiryThreadsAsyncTest()
         {
             int id = default!;
-            var response = await _instance.Fd828cd8df74859b18600bb6b36edf83Async(id);
+            var response = await _instance.FetchEnquiryThreadsAsync(id);
             var model = response.Ok();
-            Assert.IsType<Model4321ab5e45636e3e917c94fd21edac28200Response>(model);
+            Assert.IsType<FetchAllEnquiryThreads200Response>(model);
         }
     }
 }

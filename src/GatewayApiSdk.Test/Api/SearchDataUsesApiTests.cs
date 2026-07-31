@@ -51,18 +51,18 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call8db417727e7fe7c2e99206b060a3b882
+        /// Test SearchDataUses
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call8db417727e7fe7c2e99206b060a3b882AsyncTest()
+        public async Task SearchDataUsesAsyncTest()
         {
-            Model8db417727e7fe7c2e99206b060a3b882Request model8db417727e7fe7c2e99206b060a3b882Request = default!;
+            SearchDataUsesRequest searchDataUsesRequest = default!;
             Client.Option<string> sort = default!;
             Client.Option<string> direction = default!;
             Client.Option<bool> download = default!;
-            var response = await _instance.Call8db417727e7fe7c2e99206b060a3b882Async(model8db417727e7fe7c2e99206b060a3b882Request, sort, direction, download);
+            var response = await _instance.SearchDataUsesAsync(searchDataUsesRequest, sort, direction, download);
             var model = response.Ok();
-            Assert.IsType<Model8db417727e7fe7c2e99206b060a3b882200Response>(model);
+            Assert.IsType<SearchDataUses200Response>(model);
         }
     }
 }

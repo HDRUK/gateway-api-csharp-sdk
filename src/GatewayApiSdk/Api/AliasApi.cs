@@ -39,73 +39,27 @@ namespace GatewayApiSdk.Api
         AliasApiEvents Events { get; }
 
         /// <summary>
-        /// List of aliases
+        /// AliasController@store
         /// </summary>
         /// <remarks>
-        /// Returns a list of aliases
+        /// Creates a new alias
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createAliasesRequest">Alias definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAliasControllerindexApiResponse"/>&gt;</returns>
-        Task<IAliasControllerindexApiResponse> AliasControllerindexAsync(System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateAliasesApiResponse"/>&gt;</returns>
+        Task<ICreateAliasesApiResponse> CreateAliasesAsync(CreateAliasesRequest createAliasesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// List of aliases
+        /// AliasController@store
         /// </summary>
         /// <remarks>
-        /// Returns a list of aliases
+        /// Creates a new alias
         /// </remarks>
+        /// <param name="createAliasesRequest">Alias definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAliasControllerindexApiResponse"/>?&gt;</returns>
-        Task<IAliasControllerindexApiResponse?> AliasControllerindexOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Return a single alias
-        /// </summary>
-        /// <remarks>
-        /// Return a single alias
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">alias id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAliasControllershowApiResponse"/>&gt;</returns>
-        Task<IAliasControllershowApiResponse> AliasControllershowAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Return a single alias
-        /// </summary>
-        /// <remarks>
-        /// Return a single alias
-        /// </remarks>
-        /// <param name="id">alias id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAliasControllershowApiResponse"/>?&gt;</returns>
-        Task<IAliasControllershowApiResponse?> AliasControllershowOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// AliasController@update
-        /// </summary>
-        /// <remarks>
-        /// Update a alias
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">alias id</param>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request">Alias definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB801ec1af9f360216286166894719a1eApiResponse"/>&gt;</returns>
-        Task<IB801ec1af9f360216286166894719a1eApiResponse> B801ec1af9f360216286166894719a1eAsync(int id, Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// AliasController@update
-        /// </summary>
-        /// <remarks>
-        /// Update a alias
-        /// </remarks>
-        /// <param name="id">alias id</param>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request">Alias definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB801ec1af9f360216286166894719a1eApiResponse"/>?&gt;</returns>
-        Task<IB801ec1af9f360216286166894719a1eApiResponse?> B801ec1af9f360216286166894719a1eOrDefaultAsync(int id, Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateAliasesApiResponse"/>?&gt;</returns>
+        Task<ICreateAliasesApiResponse?> CreateAliasesOrDefaultAsync(CreateAliasesRequest createAliasesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// AliasController@destroy
@@ -116,8 +70,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">alias id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC29b5b3424f7317b69b4bda048ccfafbApiResponse"/>&gt;</returns>
-        Task<IC29b5b3424f7317b69b4bda048ccfafbApiResponse> C29b5b3424f7317b69b4bda048ccfafbAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteAliasesApiResponse"/>&gt;</returns>
+        Task<IDeleteAliasesApiResponse> DeleteAliasesAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// AliasController@destroy
@@ -127,31 +81,8 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="id">alias id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC29b5b3424f7317b69b4bda048ccfafbApiResponse"/>?&gt;</returns>
-        Task<IC29b5b3424f7317b69b4bda048ccfafbApiResponse?> C29b5b3424f7317b69b4bda048ccfafbOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// AliasController@store
-        /// </summary>
-        /// <remarks>
-        /// Creates a new alias
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request">Alias definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall079b2d545c7f4705016912f5de1bf444ApiResponse"/>&gt;</returns>
-        Task<ICall079b2d545c7f4705016912f5de1bf444ApiResponse> Call079b2d545c7f4705016912f5de1bf444Async(Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// AliasController@store
-        /// </summary>
-        /// <remarks>
-        /// Creates a new alias
-        /// </remarks>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request">Alias definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall079b2d545c7f4705016912f5de1bf444ApiResponse"/>?&gt;</returns>
-        Task<ICall079b2d545c7f4705016912f5de1bf444ApiResponse?> Call079b2d545c7f4705016912f5de1bf444OrDefaultAsync(Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteAliasesApiResponse"/>?&gt;</returns>
+        Task<IDeleteAliasesApiResponse?> DeleteAliasesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// AliasController@edit
@@ -161,10 +92,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">alias id</param>
-        /// <param name="e93f53867884432d9a6b592066431af3Request">Alias definition</param>
+        /// <param name="editAliasesRequest">Alias definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IE93f53867884432d9a6b592066431af3ApiResponse"/>&gt;</returns>
-        Task<IE93f53867884432d9a6b592066431af3ApiResponse> E93f53867884432d9a6b592066431af3Async(int id, E93f53867884432d9a6b592066431af3Request e93f53867884432d9a6b592066431af3Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditAliasesApiResponse"/>&gt;</returns>
+        Task<IEditAliasesApiResponse> EditAliasesAsync(int id, EditAliasesRequest editAliasesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// AliasController@edit
@@ -173,46 +104,103 @@ namespace GatewayApiSdk.Api
         /// Edit a alias
         /// </remarks>
         /// <param name="id">alias id</param>
-        /// <param name="e93f53867884432d9a6b592066431af3Request">Alias definition</param>
+        /// <param name="editAliasesRequest">Alias definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IE93f53867884432d9a6b592066431af3ApiResponse"/>?&gt;</returns>
-        Task<IE93f53867884432d9a6b592066431af3ApiResponse?> E93f53867884432d9a6b592066431af3OrDefaultAsync(int id, E93f53867884432d9a6b592066431af3Request e93f53867884432d9a6b592066431af3Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditAliasesApiResponse"/>?&gt;</returns>
+        Task<IEditAliasesApiResponse?> EditAliasesOrDefaultAsync(int id, EditAliasesRequest editAliasesRequest, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Return a single alias
+        /// </summary>
+        /// <remarks>
+        /// Return a single alias
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">alias id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAliasesApiResponse"/>&gt;</returns>
+        Task<IFetchAliasesApiResponse> FetchAliasesAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Return a single alias
+        /// </summary>
+        /// <remarks>
+        /// Return a single alias
+        /// </remarks>
+        /// <param name="id">alias id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAliasesApiResponse"/>?&gt;</returns>
+        Task<IFetchAliasesApiResponse?> FetchAliasesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// List of aliases
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of aliases
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllAliasesApiResponse"/>&gt;</returns>
+        Task<IFetchAllAliasesApiResponse> FetchAllAliasesAsync(System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// List of aliases
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of aliases
+        /// </remarks>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllAliasesApiResponse"/>?&gt;</returns>
+        Task<IFetchAllAliasesApiResponse?> FetchAllAliasesOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// AliasController@update
+        /// </summary>
+        /// <remarks>
+        /// Update a alias
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">alias id</param>
+        /// <param name="createAliasesRequest">Alias definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateAliasesApiResponse"/>&gt;</returns>
+        Task<IUpdateAliasesApiResponse> UpdateAliasesAsync(int id, CreateAliasesRequest createAliasesRequest, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// AliasController@update
+        /// </summary>
+        /// <remarks>
+        /// Update a alias
+        /// </remarks>
+        /// <param name="id">alias id</param>
+        /// <param name="createAliasesRequest">Alias definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateAliasesApiResponse"/>?&gt;</returns>
+        Task<IUpdateAliasesApiResponse?> UpdateAliasesOrDefaultAsync(int id, CreateAliasesRequest createAliasesRequest, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="IAliasControllerindexApiResponse"/>
+    /// The <see cref="ICreateAliasesApiResponse"/>
     /// </summary>
-    public interface IAliasControllerindexApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.AliasControllerIndex200Response?>
+    public interface ICreateAliasesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CreateAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
         /// </summary>
         /// <returns></returns>
         bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 500 InternalServerError
+        /// </summary>
+        /// <returns></returns>
+        bool IsInternalServerError { get; }
     }
 
     /// <summary>
-    /// The <see cref="IAliasControllershowApiResponse"/>
+    /// The <see cref="IDeleteAliasesApiResponse"/>
     /// </summary>
-    public interface IAliasControllershowApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.AliasControllerShow200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IB801ec1af9f360216286166894719a1eApiResponse"/>
-    /// </summary>
-    public interface IB801ec1af9f360216286166894719a1eApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.B801ec1af9f360216286166894719a1e200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IDeleteAliasesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -234,9 +222,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IC29b5b3424f7317b69b4bda048ccfafbApiResponse"/>
+    /// The <see cref="IEditAliasesApiResponse"/>
     /// </summary>
-    public interface IC29b5b3424f7317b69b4bda048ccfafbApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IEditAliasesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -258,9 +246,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall079b2d545c7f4705016912f5de1bf444ApiResponse"/>
+    /// The <see cref="IFetchAliasesApiResponse"/>
     /// </summary>
-    public interface ICall079b2d545c7f4705016912f5de1bf444ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IFetchAliasesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchAliases200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -269,16 +257,28 @@ namespace GatewayApiSdk.Api
         bool IsOk { get; }
 
         /// <summary>
-        /// Returns true if the response is 500 InternalServerError
+        /// Returns true if the response is 404 NotFound
         /// </summary>
         /// <returns></returns>
-        bool IsInternalServerError { get; }
+        bool IsNotFound { get; }
     }
 
     /// <summary>
-    /// The <see cref="IE93f53867884432d9a6b592066431af3ApiResponse"/>
+    /// The <see cref="IFetchAllAliasesApiResponse"/>
     /// </summary>
-    public interface IE93f53867884432d9a6b592066431af3ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.B801ec1af9f360216286166894719a1e200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IFetchAllAliasesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchAllAliases200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IUpdateAliasesApiResponse"/>
+    /// </summary>
+    public interface IUpdateAliasesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -307,121 +307,121 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnAliasControllerindex;
+        public event EventHandler<ApiResponseEventArgs>? OnCreateAliases;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorAliasControllerindex;
+        public event EventHandler<ExceptionEventArgs>? OnErrorCreateAliases;
 
-        internal void ExecuteOnAliasControllerindex(AliasApi.AliasControllerindexApiResponse apiResponse)
+        internal void ExecuteOnCreateAliases(AliasApi.CreateAliasesApiResponse apiResponse)
         {
-            OnAliasControllerindex?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnCreateAliases?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorAliasControllerindex(Exception exception)
+        internal void ExecuteOnErrorCreateAliases(Exception exception)
         {
-            OnErrorAliasControllerindex?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorCreateAliases?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnAliasControllershow;
+        public event EventHandler<ApiResponseEventArgs>? OnDeleteAliases;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorAliasControllershow;
+        public event EventHandler<ExceptionEventArgs>? OnErrorDeleteAliases;
 
-        internal void ExecuteOnAliasControllershow(AliasApi.AliasControllershowApiResponse apiResponse)
+        internal void ExecuteOnDeleteAliases(AliasApi.DeleteAliasesApiResponse apiResponse)
         {
-            OnAliasControllershow?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnDeleteAliases?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorAliasControllershow(Exception exception)
+        internal void ExecuteOnErrorDeleteAliases(Exception exception)
         {
-            OnErrorAliasControllershow?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorDeleteAliases?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnB801ec1af9f360216286166894719a1e;
+        public event EventHandler<ApiResponseEventArgs>? OnEditAliases;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorB801ec1af9f360216286166894719a1e;
+        public event EventHandler<ExceptionEventArgs>? OnErrorEditAliases;
 
-        internal void ExecuteOnB801ec1af9f360216286166894719a1e(AliasApi.B801ec1af9f360216286166894719a1eApiResponse apiResponse)
+        internal void ExecuteOnEditAliases(AliasApi.EditAliasesApiResponse apiResponse)
         {
-            OnB801ec1af9f360216286166894719a1e?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnEditAliases?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorB801ec1af9f360216286166894719a1e(Exception exception)
+        internal void ExecuteOnErrorEditAliases(Exception exception)
         {
-            OnErrorB801ec1af9f360216286166894719a1e?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorEditAliases?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnC29b5b3424f7317b69b4bda048ccfafb;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchAliases;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorC29b5b3424f7317b69b4bda048ccfafb;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchAliases;
 
-        internal void ExecuteOnC29b5b3424f7317b69b4bda048ccfafb(AliasApi.C29b5b3424f7317b69b4bda048ccfafbApiResponse apiResponse)
+        internal void ExecuteOnFetchAliases(AliasApi.FetchAliasesApiResponse apiResponse)
         {
-            OnC29b5b3424f7317b69b4bda048ccfafb?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchAliases?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorC29b5b3424f7317b69b4bda048ccfafb(Exception exception)
+        internal void ExecuteOnErrorFetchAliases(Exception exception)
         {
-            OnErrorC29b5b3424f7317b69b4bda048ccfafb?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchAliases?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall079b2d545c7f4705016912f5de1bf444;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchAllAliases;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall079b2d545c7f4705016912f5de1bf444;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchAllAliases;
 
-        internal void ExecuteOnCall079b2d545c7f4705016912f5de1bf444(AliasApi.Call079b2d545c7f4705016912f5de1bf444ApiResponse apiResponse)
+        internal void ExecuteOnFetchAllAliases(AliasApi.FetchAllAliasesApiResponse apiResponse)
         {
-            OnCall079b2d545c7f4705016912f5de1bf444?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchAllAliases?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall079b2d545c7f4705016912f5de1bf444(Exception exception)
+        internal void ExecuteOnErrorFetchAllAliases(Exception exception)
         {
-            OnErrorCall079b2d545c7f4705016912f5de1bf444?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchAllAliases?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnE93f53867884432d9a6b592066431af3;
+        public event EventHandler<ApiResponseEventArgs>? OnUpdateAliases;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorE93f53867884432d9a6b592066431af3;
+        public event EventHandler<ExceptionEventArgs>? OnErrorUpdateAliases;
 
-        internal void ExecuteOnE93f53867884432d9a6b592066431af3(AliasApi.E93f53867884432d9a6b592066431af3ApiResponse apiResponse)
+        internal void ExecuteOnUpdateAliases(AliasApi.UpdateAliasesApiResponse apiResponse)
         {
-            OnE93f53867884432d9a6b592066431af3?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnUpdateAliases?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorE93f53867884432d9a6b592066431af3(Exception exception)
+        internal void ExecuteOnErrorUpdateAliases(Exception exception)
         {
-            OnErrorE93f53867884432d9a6b592066431af3?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorUpdateAliases?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -466,14 +466,28 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
+        partial void FormatCreateAliases(CreateAliasesRequest createAliasesRequest);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="createAliasesRequest"></param>
+        /// <returns></returns>
+        private void ValidateCreateAliases(CreateAliasesRequest createAliasesRequest)
+        {
+            if (createAliasesRequest == null)
+                throw new ArgumentNullException(nameof(createAliasesRequest));
+        }
+
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        private void AfterAliasControllerindexDefaultImplementation(IAliasControllerindexApiResponse apiResponseLocalVar)
+        /// <param name="createAliasesRequest"></param>
+        private void AfterCreateAliasesDefaultImplementation(ICreateAliasesApiResponse apiResponseLocalVar, CreateAliasesRequest createAliasesRequest)
         {
             bool suppressDefaultLog = false;
-            AfterAliasControllerindex(ref suppressDefaultLog, apiResponseLocalVar);
+            AfterCreateAliases(ref suppressDefaultLog, apiResponseLocalVar, createAliasesRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -483,7 +497,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        partial void AfterAliasControllerindex(ref bool suppressDefaultLog, IAliasControllerindexApiResponse apiResponseLocalVar);
+        /// <param name="createAliasesRequest"></param>
+        partial void AfterCreateAliases(ref bool suppressDefaultLog, ICreateAliasesApiResponse apiResponseLocalVar, CreateAliasesRequest createAliasesRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -491,10 +506,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        private void OnErrorAliasControllerindexDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar)
+        /// <param name="createAliasesRequest"></param>
+        private void OnErrorCreateAliasesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateAliasesRequest createAliasesRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorAliasControllerindex(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar);
+            OnErrorCreateAliases(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createAliasesRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -506,18 +522,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        partial void OnErrorAliasControllerindex(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar);
+        /// <param name="createAliasesRequest"></param>
+        partial void OnErrorCreateAliases(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateAliasesRequest createAliasesRequest);
 
         /// <summary>
-        /// List of aliases Returns a list of aliases
+        /// AliasController@store Creates a new alias
         /// </summary>
+        /// <param name="createAliasesRequest">Alias definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAliasControllerindexApiResponse"/>&gt;</returns>
-        public async Task<IAliasControllerindexApiResponse?> AliasControllerindexOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateAliasesApiResponse"/>&gt;</returns>
+        public async Task<ICreateAliasesApiResponse?> CreateAliasesOrDefaultAsync(CreateAliasesRequest createAliasesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await AliasControllerindexAsync(cancellationToken).ConfigureAwait(false);
+                return await CreateAliasesAsync(createAliasesRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -526,17 +544,22 @@ namespace GatewayApiSdk.Api
         }
 
         /// <summary>
-        /// List of aliases Returns a list of aliases
+        /// AliasController@store Creates a new alias
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createAliasesRequest">Alias definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAliasControllerindexApiResponse"/>&gt;</returns>
-        public async Task<IAliasControllerindexApiResponse> AliasControllerindexAsync(System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateAliasesApiResponse"/>&gt;</returns>
+        public async Task<ICreateAliasesApiResponse> CreateAliasesAsync(CreateAliasesRequest createAliasesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
+                ValidateCreateAliases(createAliasesRequest);
+
+                FormatCreateAliases(createAliasesRequest);
+
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
                     uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
@@ -546,544 +569,9 @@ namespace GatewayApiSdk.Api
                         ? "/api/v1/aliases"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/aliases");
 
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        AliasControllerindexApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/aliases", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterAliasControllerindexDefaultImplementation(apiResponseLocalVar);
-
-                        Events.ExecuteOnAliasControllerindex(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorAliasControllerindexDefaultImplementation(e, "/api/v1/aliases", uriBuilderLocalVar.Path);
-                Events.ExecuteOnErrorAliasControllerindex(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="AliasControllerindexApiResponse"/>
-        /// </summary>
-        public partial class AliasControllerindexApiResponse : GatewayApiSdk.Client.ApiResponse, IAliasControllerindexApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<AliasApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="AliasControllerindexApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public AliasControllerindexApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="AliasControllerindexApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public AliasControllerindexApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerIndex200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerIndex200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerIndex200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatAliasControllershow(ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterAliasControllershowDefaultImplementation(IAliasControllershowApiResponse apiResponseLocalVar, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterAliasControllershow(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterAliasControllershow(ref bool suppressDefaultLog, IAliasControllershowApiResponse apiResponseLocalVar, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorAliasControllershowDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorAliasControllershow(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorAliasControllershow(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
-
-        /// <summary>
-        /// Return a single alias Return a single alias
-        /// </summary>
-        /// <param name="id">alias id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAliasControllershowApiResponse"/>&gt;</returns>
-        public async Task<IAliasControllershowApiResponse?> AliasControllershowOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await AliasControllershowAsync(id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Return a single alias Return a single alias
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">alias id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAliasControllershowApiResponse"/>&gt;</returns>
-        public async Task<IAliasControllershowApiResponse> AliasControllershowAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatAliasControllershow(ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/aliases/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/aliases/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        AliasControllershowApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/aliases/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterAliasControllershowDefaultImplementation(apiResponseLocalVar, id);
-
-                        Events.ExecuteOnAliasControllershow(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorAliasControllershowDefaultImplementation(e, "/api/v1/aliases/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorAliasControllershow(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="AliasControllershowApiResponse"/>
-        /// </summary>
-        public partial class AliasControllershowApiResponse : GatewayApiSdk.Client.ApiResponse, IAliasControllershowApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<AliasApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="AliasControllershowApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public AliasControllershowApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="AliasControllershowApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public AliasControllershowApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatB801ec1af9f360216286166894719a1e(ref int id, Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request"></param>
-        /// <returns></returns>
-        private void ValidateB801ec1af9f360216286166894719a1e(Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request)
-        {
-            if (model079b2d545c7f4705016912f5de1bf444Request == null)
-                throw new ArgumentNullException(nameof(model079b2d545c7f4705016912f5de1bf444Request));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request"></param>
-        private void AfterB801ec1af9f360216286166894719a1eDefaultImplementation(IB801ec1af9f360216286166894719a1eApiResponse apiResponseLocalVar, int id, Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request)
-        {
-            bool suppressDefaultLog = false;
-            AfterB801ec1af9f360216286166894719a1e(ref suppressDefaultLog, apiResponseLocalVar, id, model079b2d545c7f4705016912f5de1bf444Request);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request"></param>
-        partial void AfterB801ec1af9f360216286166894719a1e(ref bool suppressDefaultLog, IB801ec1af9f360216286166894719a1eApiResponse apiResponseLocalVar, int id, Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request"></param>
-        private void OnErrorB801ec1af9f360216286166894719a1eDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorB801ec1af9f360216286166894719a1e(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, model079b2d545c7f4705016912f5de1bf444Request);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request"></param>
-        partial void OnErrorB801ec1af9f360216286166894719a1e(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request);
-
-        /// <summary>
-        /// AliasController@update Update a alias
-        /// </summary>
-        /// <param name="id">alias id</param>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request">Alias definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB801ec1af9f360216286166894719a1eApiResponse"/>&gt;</returns>
-        public async Task<IB801ec1af9f360216286166894719a1eApiResponse?> B801ec1af9f360216286166894719a1eOrDefaultAsync(int id, Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await B801ec1af9f360216286166894719a1eAsync(id, model079b2d545c7f4705016912f5de1bf444Request, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// AliasController@update Update a alias
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">alias id</param>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request">Alias definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB801ec1af9f360216286166894719a1eApiResponse"/>&gt;</returns>
-        public async Task<IB801ec1af9f360216286166894719a1eApiResponse> B801ec1af9f360216286166894719a1eAsync(int id, Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateB801ec1af9f360216286166894719a1e(model079b2d545c7f4705016912f5de1bf444Request);
-
-                FormatB801ec1af9f360216286166894719a1e(ref id, model079b2d545c7f4705016912f5de1bf444Request);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/aliases/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/aliases/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    httpRequestMessageLocalVar.Content = (model079b2d545c7f4705016912f5de1bf444Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (createAliasesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model079b2d545c7f4705016912f5de1bf444Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createAliasesRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -1112,26 +600,26 @@ namespace GatewayApiSdk.Api
                     foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
                         httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
 
-                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
+                    httpRequestMessageLocalVar.Method = HttpMethod.Post;
 
                     DateTime requestedAtLocalVar = DateTime.UtcNow;
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        B801ec1af9f360216286166894719a1eApiResponse apiResponseLocalVar;
+                        CreateAliasesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
                                 string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/aliases/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/aliases", requestedAtLocalVar, _jsonSerializerOptions);
 
                                 break;
                             }
                         }
 
-                        AfterB801ec1af9f360216286166894719a1eDefaultImplementation(apiResponseLocalVar, id, model079b2d545c7f4705016912f5de1bf444Request);
+                        AfterCreateAliasesDefaultImplementation(apiResponseLocalVar, createAliasesRequest);
 
-                        Events.ExecuteOnB801ec1af9f360216286166894719a1e(apiResponseLocalVar);
+                        Events.ExecuteOnCreateAliases(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -1143,16 +631,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorB801ec1af9f360216286166894719a1eDefaultImplementation(e, "/api/v1/aliases/{id}", uriBuilderLocalVar.Path, id, model079b2d545c7f4705016912f5de1bf444Request);
-                Events.ExecuteOnErrorB801ec1af9f360216286166894719a1e(e);
+                OnErrorCreateAliasesDefaultImplementation(e, "/api/v1/aliases", uriBuilderLocalVar.Path, createAliasesRequest);
+                Events.ExecuteOnErrorCreateAliases(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="B801ec1af9f360216286166894719a1eApiResponse"/>
+        /// The <see cref="CreateAliasesApiResponse"/>
         /// </summary>
-        public partial class B801ec1af9f360216286166894719a1eApiResponse : GatewayApiSdk.Client.ApiResponse, IB801ec1af9f360216286166894719a1eApiResponse
+        public partial class CreateAliasesApiResponse : GatewayApiSdk.Client.ApiResponse, ICreateAliasesApiResponse
         {
             /// <summary>
             /// The logger
@@ -1160,7 +648,7 @@ namespace GatewayApiSdk.Api
             public ILogger<AliasApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="B801ec1af9f360216286166894719a1eApiResponse"/>
+            /// The <see cref="CreateAliasesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1169,14 +657,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public B801ec1af9f360216286166894719a1eApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public CreateAliasesApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="B801ec1af9f360216286166894719a1eApiResponse"/>
+            /// The <see cref="CreateAliasesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1185,51 +673,13 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public B801ec1af9f360216286166894719a1eApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public CreateAliasesApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
 
             /// <summary>
             /// Returns true if the response is 200 Ok
@@ -1241,11 +691,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.B801ec1af9f360216286166894719a1e200Response? Ok()
+            public GatewayApiSdk.Model.CreateAliases200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.B801ec1af9f360216286166894719a1e200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1254,7 +704,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.B801ec1af9f360216286166894719a1e200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases200Response? result)
             {
                 result = null;
 
@@ -1279,11 +729,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1292,7 +742,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -1318,17 +768,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatC29b5b3424f7317b69b4bda048ccfafb(ref int id);
+        partial void FormatDeleteAliases(ref int id);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        private void AfterC29b5b3424f7317b69b4bda048ccfafbDefaultImplementation(IC29b5b3424f7317b69b4bda048ccfafbApiResponse apiResponseLocalVar, int id)
+        private void AfterDeleteAliasesDefaultImplementation(IDeleteAliasesApiResponse apiResponseLocalVar, int id)
         {
             bool suppressDefaultLog = false;
-            AfterC29b5b3424f7317b69b4bda048ccfafb(ref suppressDefaultLog, apiResponseLocalVar, id);
+            AfterDeleteAliases(ref suppressDefaultLog, apiResponseLocalVar, id);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1339,7 +789,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        partial void AfterC29b5b3424f7317b69b4bda048ccfafb(ref bool suppressDefaultLog, IC29b5b3424f7317b69b4bda048ccfafbApiResponse apiResponseLocalVar, int id);
+        partial void AfterDeleteAliases(ref bool suppressDefaultLog, IDeleteAliasesApiResponse apiResponseLocalVar, int id);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1348,10 +798,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        private void OnErrorC29b5b3424f7317b69b4bda048ccfafbDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        private void OnErrorDeleteAliasesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorC29b5b3424f7317b69b4bda048ccfafb(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            OnErrorDeleteAliases(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1364,19 +814,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        partial void OnErrorC29b5b3424f7317b69b4bda048ccfafb(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+        partial void OnErrorDeleteAliases(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
 
         /// <summary>
         /// AliasController@destroy Delete an alias
         /// </summary>
         /// <param name="id">alias id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC29b5b3424f7317b69b4bda048ccfafbApiResponse"/>&gt;</returns>
-        public async Task<IC29b5b3424f7317b69b4bda048ccfafbApiResponse?> C29b5b3424f7317b69b4bda048ccfafbOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteAliasesApiResponse"/>&gt;</returns>
+        public async Task<IDeleteAliasesApiResponse?> DeleteAliasesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await C29b5b3424f7317b69b4bda048ccfafbAsync(id, cancellationToken).ConfigureAwait(false);
+                return await DeleteAliasesAsync(id, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1390,14 +840,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">alias id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC29b5b3424f7317b69b4bda048ccfafbApiResponse"/>&gt;</returns>
-        public async Task<IC29b5b3424f7317b69b4bda048ccfafbApiResponse> C29b5b3424f7317b69b4bda048ccfafbAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteAliasesApiResponse"/>&gt;</returns>
+        public async Task<IDeleteAliasesApiResponse> DeleteAliasesAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatC29b5b3424f7317b69b4bda048ccfafb(ref id);
+                FormatDeleteAliases(ref id);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1433,7 +883,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        C29b5b3424f7317b69b4bda048ccfafbApiResponse apiResponseLocalVar;
+                        DeleteAliasesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -1444,9 +894,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterC29b5b3424f7317b69b4bda048ccfafbDefaultImplementation(apiResponseLocalVar, id);
+                        AfterDeleteAliasesDefaultImplementation(apiResponseLocalVar, id);
 
-                        Events.ExecuteOnC29b5b3424f7317b69b4bda048ccfafb(apiResponseLocalVar);
+                        Events.ExecuteOnDeleteAliases(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -1458,16 +908,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorC29b5b3424f7317b69b4bda048ccfafbDefaultImplementation(e, "/api/v1/aliases/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorC29b5b3424f7317b69b4bda048ccfafb(e);
+                OnErrorDeleteAliasesDefaultImplementation(e, "/api/v1/aliases/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorDeleteAliases(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="C29b5b3424f7317b69b4bda048ccfafbApiResponse"/>
+        /// The <see cref="DeleteAliasesApiResponse"/>
         /// </summary>
-        public partial class C29b5b3424f7317b69b4bda048ccfafbApiResponse : GatewayApiSdk.Client.ApiResponse, IC29b5b3424f7317b69b4bda048ccfafbApiResponse
+        public partial class DeleteAliasesApiResponse : GatewayApiSdk.Client.ApiResponse, IDeleteAliasesApiResponse
         {
             /// <summary>
             /// The logger
@@ -1475,7 +925,7 @@ namespace GatewayApiSdk.Api
             public ILogger<AliasApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="C29b5b3424f7317b69b4bda048ccfafbApiResponse"/>
+            /// The <see cref="DeleteAliasesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1484,14 +934,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public C29b5b3424f7317b69b4bda048ccfafbApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public DeleteAliasesApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="C29b5b3424f7317b69b4bda048ccfafbApiResponse"/>
+            /// The <see cref="DeleteAliasesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1500,7 +950,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public C29b5b3424f7317b69b4bda048ccfafbApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public DeleteAliasesApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1518,11 +968,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1531,7 +981,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -1556,11 +1006,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? Ok()
+            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1569,7 +1019,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
             {
                 result = null;
 
@@ -1594,11 +1044,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1607,7 +1057,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -1633,319 +1083,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall079b2d545c7f4705016912f5de1bf444(Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request);
+        partial void FormatEditAliases(ref int id, EditAliasesRequest editAliasesRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request"></param>
+        /// <param name="editAliasesRequest"></param>
         /// <returns></returns>
-        private void ValidateCall079b2d545c7f4705016912f5de1bf444(Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request)
+        private void ValidateEditAliases(EditAliasesRequest editAliasesRequest)
         {
-            if (model079b2d545c7f4705016912f5de1bf444Request == null)
-                throw new ArgumentNullException(nameof(model079b2d545c7f4705016912f5de1bf444Request));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request"></param>
-        private void AfterCall079b2d545c7f4705016912f5de1bf444DefaultImplementation(ICall079b2d545c7f4705016912f5de1bf444ApiResponse apiResponseLocalVar, Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall079b2d545c7f4705016912f5de1bf444(ref suppressDefaultLog, apiResponseLocalVar, model079b2d545c7f4705016912f5de1bf444Request);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request"></param>
-        partial void AfterCall079b2d545c7f4705016912f5de1bf444(ref bool suppressDefaultLog, ICall079b2d545c7f4705016912f5de1bf444ApiResponse apiResponseLocalVar, Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request"></param>
-        private void OnErrorCall079b2d545c7f4705016912f5de1bf444DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall079b2d545c7f4705016912f5de1bf444(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, model079b2d545c7f4705016912f5de1bf444Request);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request"></param>
-        partial void OnErrorCall079b2d545c7f4705016912f5de1bf444(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request);
-
-        /// <summary>
-        /// AliasController@store Creates a new alias
-        /// </summary>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request">Alias definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall079b2d545c7f4705016912f5de1bf444ApiResponse"/>&gt;</returns>
-        public async Task<ICall079b2d545c7f4705016912f5de1bf444ApiResponse?> Call079b2d545c7f4705016912f5de1bf444OrDefaultAsync(Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call079b2d545c7f4705016912f5de1bf444Async(model079b2d545c7f4705016912f5de1bf444Request, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// AliasController@store Creates a new alias
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model079b2d545c7f4705016912f5de1bf444Request">Alias definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall079b2d545c7f4705016912f5de1bf444ApiResponse"/>&gt;</returns>
-        public async Task<ICall079b2d545c7f4705016912f5de1bf444ApiResponse> Call079b2d545c7f4705016912f5de1bf444Async(Model079b2d545c7f4705016912f5de1bf444Request model079b2d545c7f4705016912f5de1bf444Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateCall079b2d545c7f4705016912f5de1bf444(model079b2d545c7f4705016912f5de1bf444Request);
-
-                FormatCall079b2d545c7f4705016912f5de1bf444(model079b2d545c7f4705016912f5de1bf444Request);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/aliases"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/aliases");
-
-                    httpRequestMessageLocalVar.Content = (model079b2d545c7f4705016912f5de1bf444Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model079b2d545c7f4705016912f5de1bf444Request, _jsonSerializerOptions));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Post;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call079b2d545c7f4705016912f5de1bf444ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/aliases", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall079b2d545c7f4705016912f5de1bf444DefaultImplementation(apiResponseLocalVar, model079b2d545c7f4705016912f5de1bf444Request);
-
-                        Events.ExecuteOnCall079b2d545c7f4705016912f5de1bf444(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall079b2d545c7f4705016912f5de1bf444DefaultImplementation(e, "/api/v1/aliases", uriBuilderLocalVar.Path, model079b2d545c7f4705016912f5de1bf444Request);
-                Events.ExecuteOnErrorCall079b2d545c7f4705016912f5de1bf444(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call079b2d545c7f4705016912f5de1bf444ApiResponse"/>
-        /// </summary>
-        public partial class Call079b2d545c7f4705016912f5de1bf444ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall079b2d545c7f4705016912f5de1bf444ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<AliasApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call079b2d545c7f4705016912f5de1bf444ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call079b2d545c7f4705016912f5de1bf444ApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call079b2d545c7f4705016912f5de1bf444ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call079b2d545c7f4705016912f5de1bf444ApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatE93f53867884432d9a6b592066431af3(ref int id, E93f53867884432d9a6b592066431af3Request e93f53867884432d9a6b592066431af3Request);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="e93f53867884432d9a6b592066431af3Request"></param>
-        /// <returns></returns>
-        private void ValidateE93f53867884432d9a6b592066431af3(E93f53867884432d9a6b592066431af3Request e93f53867884432d9a6b592066431af3Request)
-        {
-            if (e93f53867884432d9a6b592066431af3Request == null)
-                throw new ArgumentNullException(nameof(e93f53867884432d9a6b592066431af3Request));
+            if (editAliasesRequest == null)
+                throw new ArgumentNullException(nameof(editAliasesRequest));
         }
 
         /// <summary>
@@ -1953,11 +1101,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="e93f53867884432d9a6b592066431af3Request"></param>
-        private void AfterE93f53867884432d9a6b592066431af3DefaultImplementation(IE93f53867884432d9a6b592066431af3ApiResponse apiResponseLocalVar, int id, E93f53867884432d9a6b592066431af3Request e93f53867884432d9a6b592066431af3Request)
+        /// <param name="editAliasesRequest"></param>
+        private void AfterEditAliasesDefaultImplementation(IEditAliasesApiResponse apiResponseLocalVar, int id, EditAliasesRequest editAliasesRequest)
         {
             bool suppressDefaultLog = false;
-            AfterE93f53867884432d9a6b592066431af3(ref suppressDefaultLog, apiResponseLocalVar, id, e93f53867884432d9a6b592066431af3Request);
+            AfterEditAliases(ref suppressDefaultLog, apiResponseLocalVar, id, editAliasesRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1968,8 +1116,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="e93f53867884432d9a6b592066431af3Request"></param>
-        partial void AfterE93f53867884432d9a6b592066431af3(ref bool suppressDefaultLog, IE93f53867884432d9a6b592066431af3ApiResponse apiResponseLocalVar, int id, E93f53867884432d9a6b592066431af3Request e93f53867884432d9a6b592066431af3Request);
+        /// <param name="editAliasesRequest"></param>
+        partial void AfterEditAliases(ref bool suppressDefaultLog, IEditAliasesApiResponse apiResponseLocalVar, int id, EditAliasesRequest editAliasesRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1978,11 +1126,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="e93f53867884432d9a6b592066431af3Request"></param>
-        private void OnErrorE93f53867884432d9a6b592066431af3DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, E93f53867884432d9a6b592066431af3Request e93f53867884432d9a6b592066431af3Request)
+        /// <param name="editAliasesRequest"></param>
+        private void OnErrorEditAliasesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditAliasesRequest editAliasesRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorE93f53867884432d9a6b592066431af3(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, e93f53867884432d9a6b592066431af3Request);
+            OnErrorEditAliases(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, editAliasesRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1995,21 +1143,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="e93f53867884432d9a6b592066431af3Request"></param>
-        partial void OnErrorE93f53867884432d9a6b592066431af3(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, E93f53867884432d9a6b592066431af3Request e93f53867884432d9a6b592066431af3Request);
+        /// <param name="editAliasesRequest"></param>
+        partial void OnErrorEditAliases(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditAliasesRequest editAliasesRequest);
 
         /// <summary>
         /// AliasController@edit Edit a alias
         /// </summary>
         /// <param name="id">alias id</param>
-        /// <param name="e93f53867884432d9a6b592066431af3Request">Alias definition</param>
+        /// <param name="editAliasesRequest">Alias definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IE93f53867884432d9a6b592066431af3ApiResponse"/>&gt;</returns>
-        public async Task<IE93f53867884432d9a6b592066431af3ApiResponse?> E93f53867884432d9a6b592066431af3OrDefaultAsync(int id, E93f53867884432d9a6b592066431af3Request e93f53867884432d9a6b592066431af3Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditAliasesApiResponse"/>&gt;</returns>
+        public async Task<IEditAliasesApiResponse?> EditAliasesOrDefaultAsync(int id, EditAliasesRequest editAliasesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await E93f53867884432d9a6b592066431af3Async(id, e93f53867884432d9a6b592066431af3Request, cancellationToken).ConfigureAwait(false);
+                return await EditAliasesAsync(id, editAliasesRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -2022,18 +1170,18 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">alias id</param>
-        /// <param name="e93f53867884432d9a6b592066431af3Request">Alias definition</param>
+        /// <param name="editAliasesRequest">Alias definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IE93f53867884432d9a6b592066431af3ApiResponse"/>&gt;</returns>
-        public async Task<IE93f53867884432d9a6b592066431af3ApiResponse> E93f53867884432d9a6b592066431af3Async(int id, E93f53867884432d9a6b592066431af3Request e93f53867884432d9a6b592066431af3Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditAliasesApiResponse"/>&gt;</returns>
+        public async Task<IEditAliasesApiResponse> EditAliasesAsync(int id, EditAliasesRequest editAliasesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateE93f53867884432d9a6b592066431af3(e93f53867884432d9a6b592066431af3Request);
+                ValidateEditAliases(editAliasesRequest);
 
-                FormatE93f53867884432d9a6b592066431af3(ref id, e93f53867884432d9a6b592066431af3Request);
+                FormatEditAliases(ref id, editAliasesRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -2045,9 +1193,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/aliases/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (e93f53867884432d9a6b592066431af3Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (editAliasesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(e93f53867884432d9a6b592066431af3Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(editAliasesRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -2082,7 +1230,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        E93f53867884432d9a6b592066431af3ApiResponse apiResponseLocalVar;
+                        EditAliasesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -2093,9 +1241,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterE93f53867884432d9a6b592066431af3DefaultImplementation(apiResponseLocalVar, id, e93f53867884432d9a6b592066431af3Request);
+                        AfterEditAliasesDefaultImplementation(apiResponseLocalVar, id, editAliasesRequest);
 
-                        Events.ExecuteOnE93f53867884432d9a6b592066431af3(apiResponseLocalVar);
+                        Events.ExecuteOnEditAliases(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -2107,16 +1255,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorE93f53867884432d9a6b592066431af3DefaultImplementation(e, "/api/v1/aliases/{id}", uriBuilderLocalVar.Path, id, e93f53867884432d9a6b592066431af3Request);
-                Events.ExecuteOnErrorE93f53867884432d9a6b592066431af3(e);
+                OnErrorEditAliasesDefaultImplementation(e, "/api/v1/aliases/{id}", uriBuilderLocalVar.Path, id, editAliasesRequest);
+                Events.ExecuteOnErrorEditAliases(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="E93f53867884432d9a6b592066431af3ApiResponse"/>
+        /// The <see cref="EditAliasesApiResponse"/>
         /// </summary>
-        public partial class E93f53867884432d9a6b592066431af3ApiResponse : GatewayApiSdk.Client.ApiResponse, IE93f53867884432d9a6b592066431af3ApiResponse
+        public partial class EditAliasesApiResponse : GatewayApiSdk.Client.ApiResponse, IEditAliasesApiResponse
         {
             /// <summary>
             /// The logger
@@ -2124,7 +1272,7 @@ namespace GatewayApiSdk.Api
             public ILogger<AliasApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="E93f53867884432d9a6b592066431af3ApiResponse"/>
+            /// The <see cref="EditAliasesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2133,14 +1281,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public E93f53867884432d9a6b592066431af3ApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public EditAliasesApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="E93f53867884432d9a6b592066431af3ApiResponse"/>
+            /// The <see cref="EditAliasesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2149,7 +1297,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public E93f53867884432d9a6b592066431af3ApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public EditAliasesApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -2167,11 +1315,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2180,7 +1328,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -2205,11 +1353,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.B801ec1af9f360216286166894719a1e200Response? Ok()
+            public GatewayApiSdk.Model.UpdateAliases200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.B801ec1af9f360216286166894719a1e200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateAliases200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2218,7 +1366,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.B801ec1af9f360216286166894719a1e200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateAliases200Response? result)
             {
                 result = null;
 
@@ -2243,11 +1391,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2256,7 +1404,859 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = InternalServerError();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchAliases(ref int id);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        private void AfterFetchAliasesDefaultImplementation(IFetchAliasesApiResponse apiResponseLocalVar, int id)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchAliases(ref suppressDefaultLog, apiResponseLocalVar, id);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        partial void AfterFetchAliases(ref bool suppressDefaultLog, IFetchAliasesApiResponse apiResponseLocalVar, int id);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        private void OnErrorFetchAliasesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchAliases(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        partial void OnErrorFetchAliases(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+
+        /// <summary>
+        /// Return a single alias Return a single alias
+        /// </summary>
+        /// <param name="id">alias id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAliasesApiResponse"/>&gt;</returns>
+        public async Task<IFetchAliasesApiResponse?> FetchAliasesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchAliasesAsync(id, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Return a single alias Return a single alias
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">alias id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAliasesApiResponse"/>&gt;</returns>
+        public async Task<IFetchAliasesApiResponse> FetchAliasesAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchAliases(ref id);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/aliases/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/aliases/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchAliasesApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/aliases/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchAliasesDefaultImplementation(apiResponseLocalVar, id);
+
+                        Events.ExecuteOnFetchAliases(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchAliasesDefaultImplementation(e, "/api/v1/aliases/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorFetchAliases(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchAliasesApiResponse"/>
+        /// </summary>
+        public partial class FetchAliasesApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchAliasesApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<AliasApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchAliasesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchAliasesApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchAliasesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchAliasesApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        private void AfterFetchAllAliasesDefaultImplementation(IFetchAllAliasesApiResponse apiResponseLocalVar)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchAllAliases(ref suppressDefaultLog, apiResponseLocalVar);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        partial void AfterFetchAllAliases(ref bool suppressDefaultLog, IFetchAllAliasesApiResponse apiResponseLocalVar);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        private void OnErrorFetchAllAliasesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchAllAliases(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        partial void OnErrorFetchAllAliases(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar);
+
+        /// <summary>
+        /// List of aliases Returns a list of aliases
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllAliasesApiResponse"/>&gt;</returns>
+        public async Task<IFetchAllAliasesApiResponse?> FetchAllAliasesOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchAllAliasesAsync(cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// List of aliases Returns a list of aliases
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllAliasesApiResponse"/>&gt;</returns>
+        public async Task<IFetchAllAliasesApiResponse> FetchAllAliasesAsync(System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/aliases"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/aliases");
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchAllAliasesApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/aliases", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchAllAliasesDefaultImplementation(apiResponseLocalVar);
+
+                        Events.ExecuteOnFetchAllAliases(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchAllAliasesDefaultImplementation(e, "/api/v1/aliases", uriBuilderLocalVar.Path);
+                Events.ExecuteOnErrorFetchAllAliases(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchAllAliasesApiResponse"/>
+        /// </summary>
+        public partial class FetchAllAliasesApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchAllAliasesApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<AliasApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchAllAliasesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchAllAliasesApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchAllAliasesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchAllAliasesApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAllAliases200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllAliases200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllAliases200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatUpdateAliases(ref int id, CreateAliasesRequest createAliasesRequest);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="createAliasesRequest"></param>
+        /// <returns></returns>
+        private void ValidateUpdateAliases(CreateAliasesRequest createAliasesRequest)
+        {
+            if (createAliasesRequest == null)
+                throw new ArgumentNullException(nameof(createAliasesRequest));
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="createAliasesRequest"></param>
+        private void AfterUpdateAliasesDefaultImplementation(IUpdateAliasesApiResponse apiResponseLocalVar, int id, CreateAliasesRequest createAliasesRequest)
+        {
+            bool suppressDefaultLog = false;
+            AfterUpdateAliases(ref suppressDefaultLog, apiResponseLocalVar, id, createAliasesRequest);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="createAliasesRequest"></param>
+        partial void AfterUpdateAliases(ref bool suppressDefaultLog, IUpdateAliasesApiResponse apiResponseLocalVar, int id, CreateAliasesRequest createAliasesRequest);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="createAliasesRequest"></param>
+        private void OnErrorUpdateAliasesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateAliasesRequest createAliasesRequest)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorUpdateAliases(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, createAliasesRequest);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="createAliasesRequest"></param>
+        partial void OnErrorUpdateAliases(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateAliasesRequest createAliasesRequest);
+
+        /// <summary>
+        /// AliasController@update Update a alias
+        /// </summary>
+        /// <param name="id">alias id</param>
+        /// <param name="createAliasesRequest">Alias definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateAliasesApiResponse"/>&gt;</returns>
+        public async Task<IUpdateAliasesApiResponse?> UpdateAliasesOrDefaultAsync(int id, CreateAliasesRequest createAliasesRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await UpdateAliasesAsync(id, createAliasesRequest, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// AliasController@update Update a alias
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">alias id</param>
+        /// <param name="createAliasesRequest">Alias definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateAliasesApiResponse"/>&gt;</returns>
+        public async Task<IUpdateAliasesApiResponse> UpdateAliasesAsync(int id, CreateAliasesRequest createAliasesRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                ValidateUpdateAliases(createAliasesRequest);
+
+                FormatUpdateAliases(ref id, createAliasesRequest);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/aliases/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/aliases/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    httpRequestMessageLocalVar.Content = (createAliasesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createAliasesRequest, _jsonSerializerOptions));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] contentTypes = new string[] {
+                        "application/json"
+                    };
+
+                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
+
+                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
+                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        UpdateAliasesApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/aliases/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterUpdateAliasesDefaultImplementation(apiResponseLocalVar, id, createAliasesRequest);
+
+                        Events.ExecuteOnUpdateAliases(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorUpdateAliasesDefaultImplementation(e, "/api/v1/aliases/{id}", uriBuilderLocalVar.Path, id, createAliasesRequest);
+                Events.ExecuteOnErrorUpdateAliases(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="UpdateAliasesApiResponse"/>
+        /// </summary>
+        public partial class UpdateAliasesApiResponse : GatewayApiSdk.Client.ApiResponse, IUpdateAliasesApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<AliasApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="UpdateAliasesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public UpdateAliasesApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="UpdateAliasesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public UpdateAliasesApiResponse(ILogger<AliasApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.UpdateAliases200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateAliases200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateAliases200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public bool IsInternalServerError => 500 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsInternalServerError
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 

@@ -4,17 +4,6 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**A18eed83ffe8ac895df3e1efa5ffb421**](CollectionsApi.md#a18eed83ffe8ac895df3e1efa5ffb421) | **PUT** /api/v1/teams/{teamId}/collections/{id} | Update a collection |
-| [**B2e32406fe513dd0c0747a0864b5ed28**](CollectionsApi.md#b2e32406fe513dd0c0747a0864b5ed28) | **DELETE** /api/v2/collections/{id} | Delete a collection |
-| [**Call22bf9932e93726b8338c13e489c7d96e**](CollectionsApi.md#call22bf9932e93726b8338c13e489c7d96e) | **PUT** /api/v2/users/{userId}/collections/{id} | Update a collection |
-| [**Call2e589ea17282e3818437328b1a6d2c45**](CollectionsApi.md#call2e589ea17282e3818437328b1a6d2c45) | **PATCH** /api/v2/teams/{teamId}/collections/{id} | Edit a collection |
-| [**Call63175dd3a255646e0428a630af683e21**](CollectionsApi.md#call63175dd3a255646e0428a630af683e21) | **PATCH** /api/v2/users/{userId}/collections/{id} | Edit a collection |
-| [**Call6907582348e596c660cc65263dc3a4fc**](CollectionsApi.md#call6907582348e596c660cc65263dc3a4fc) | **DELETE** /api/v1/teams/{teamId}/collections/{id} | Delete a collection |
-| [**Call75c378b5764d9d73e14fe2d65c654910**](CollectionsApi.md#call75c378b5764d9d73e14fe2d65c654910) | **PATCH** /api/v1/teams/{teamId}/collections/{id} | Edit a collection |
-| [**Call78c554f5fb0f01c8d788a5789fd0c35b**](CollectionsApi.md#call78c554f5fb0f01c8d788a5789fd0c35b) | **DELETE** /api/v2/users/{userId}/collections/{id} | Delete a collection |
-| [**Call8abb5928cecc676521f3e3d8eea0c49c**](CollectionsApi.md#call8abb5928cecc676521f3e3d8eea0c49c) | **PUT** /api/v2/collections/{id} | Update a collection |
-| [**Call94ae4ab159160f6240a4bc00d2e6fe5f**](CollectionsApi.md#call94ae4ab159160f6240a4bc00d2e6fe5f) | **PUT** /api/v2/teams/{teamId}/collections/{id} | Update a collection |
-| [**Call9c525a2aaf8e8a81cbcdf1a3033bb1bb**](CollectionsApi.md#call9c525a2aaf8e8a81cbcdf1a3033bb1bb) | **DELETE** /api/v2/teams/{teamId}/collections/{id} | Delete a collection |
 | [**CountTeamUniqueFieldsCollectionV2**](CollectionsApi.md#countteamuniquefieldscollectionv2) | **GET** /api/v2/teams/{teamId}/collections/count/{field} | TeamCollectionController@count |
 | [**CountUniqueFieldsCollections**](CollectionsApi.md#countuniquefieldscollections) | **GET** /api/v1/collections/count/{field} | CollectionController@count |
 | [**CountUniqueFieldsCollectionsV2**](CollectionsApi.md#countuniquefieldscollectionsv2) | **GET** /api/v2/collections/count/{field} | CollectionController@count |
@@ -23,7 +12,14 @@ All URIs are relative to *http://localhost*
 | [**CreateTeamCollections**](CollectionsApi.md#createteamcollections) | **POST** /api/v1/teams/{teamId}/collections | CollectionController@store |
 | [**CreateTeamCollectionsV2**](CollectionsApi.md#createteamcollectionsv2) | **POST** /api/v2/teams/{teamId}/collections | TeamCollectionController@store |
 | [**CreateUserCollections**](CollectionsApi.md#createusercollections) | **POST** /api/v2/users/collections | UserCollectionController@store |
-| [**D183a285f65bdc0e6341ed79b3a63670**](CollectionsApi.md#d183a285f65bdc0e6341ed79b3a63670) | **PATCH** /api/v2/collections/{id} | Edit a collection |
+| [**DeleteCollectionsV2**](CollectionsApi.md#deletecollectionsv2) | **DELETE** /api/v2/collections/{id} | Delete a collection |
+| [**DeleteTeamCollections**](CollectionsApi.md#deleteteamcollections) | **DELETE** /api/v1/teams/{teamId}/collections/{id} | Delete a collection |
+| [**DeleteTeamCollectionsV2**](CollectionsApi.md#deleteteamcollectionsv2) | **DELETE** /api/v2/teams/{teamId}/collections/{id} | Delete a collection |
+| [**DeleteUserCollectionsV2**](CollectionsApi.md#deleteusercollectionsv2) | **DELETE** /api/v2/users/{userId}/collections/{id} | Delete a collection |
+| [**EditCollectionsV2**](CollectionsApi.md#editcollectionsv2) | **PATCH** /api/v2/collections/{id} | Edit a collection |
+| [**EditTeamCollections**](CollectionsApi.md#editteamcollections) | **PATCH** /api/v1/teams/{teamId}/collections/{id} | Edit a collection |
+| [**EditTeamCollectionsV2**](CollectionsApi.md#editteamcollectionsv2) | **PATCH** /api/v2/teams/{teamId}/collections/{id} | Edit a collection |
+| [**EditUserCollectionsV2**](CollectionsApi.md#editusercollectionsv2) | **PATCH** /api/v2/users/{userId}/collections/{id} | Edit a collection |
 | [**FetchAllCollections**](CollectionsApi.md#fetchallcollections) | **GET** /api/v1/collections | CollectionController@index |
 | [**FetchAllCollectionsV2**](CollectionsApi.md#fetchallcollectionsv2) | **GET** /api/v2/collections | CollectionController@index |
 | [**FetchCollections**](CollectionsApi.md#fetchcollections) | **GET** /api/v1/collections/{id} | CollectionController@show |
@@ -36,441 +32,10 @@ All URIs are relative to *http://localhost*
 | [**FetchUserCollectionV2**](CollectionsApi.md#fetchusercollectionv2) | **GET** /api/v2/users/{userId}/collections/{id} | CollectionController@show |
 | [**FetchUserCollectionsV2**](CollectionsApi.md#fetchusercollectionsv2) | **GET** /api/v2/users/{userId}/collections/status/active | UserCollectionController@indexActive |
 | [**FetchUserDraftCollectionsV2**](CollectionsApi.md#fetchuserdraftcollectionsv2) | **GET** /api/v2/users/{userId}/collections/status/draft | UserCollectionController@indexDraft |
-
-<a id="a18eed83ffe8ac895df3e1efa5ffb421"></a>
-# **A18eed83ffe8ac895df3e1efa5ffb421**
-> FetchCollections200Response A18eed83ffe8ac895df3e1efa5ffb421 (int teamId, int id, A18eed83ffe8ac895df3e1efa5ffb421Request a18eed83ffe8ac895df3e1efa5ffb421Request)
-
-Update a collection
-
-Update a collection owned by a team
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | team id |  |
-| **id** | **int** | collection id |  |
-| **a18eed83ffe8ac895df3e1efa5ffb421Request** | [**A18eed83ffe8ac895df3e1efa5ffb421Request**](A18eed83ffe8ac895df3e1efa5ffb421Request.md) | Pass user credentials |  |
-
-### Return type
-
-[**FetchCollections200Response**](FetchCollections200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="b2e32406fe513dd0c0747a0864b5ed28"></a>
-# **B2e32406fe513dd0c0747a0864b5ed28**
-> C29b5b3424f7317b69b4bda048ccfafb200Response B2e32406fe513dd0c0747a0864b5ed28 (int id)
-
-Delete a collection
-
-Delete a collection
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | collection id |  |
-
-### Return type
-
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call22bf9932e93726b8338c13e489c7d96e"></a>
-# **Call22bf9932e93726b8338c13e489c7d96e**
-> FetchCollections200Response Call22bf9932e93726b8338c13e489c7d96e (int userId, int id, Model8abb5928cecc676521f3e3d8eea0c49cRequest model8abb5928cecc676521f3e3d8eea0c49cRequest)
-
-Update a collection
-
-Update a collection owned by an individual
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **userId** | **int** | user id |  |
-| **id** | **int** | collection id |  |
-| **model8abb5928cecc676521f3e3d8eea0c49cRequest** | [**Model8abb5928cecc676521f3e3d8eea0c49cRequest**](Model8abb5928cecc676521f3e3d8eea0c49cRequest.md) | Pass user credentials |  |
-
-### Return type
-
-[**FetchCollections200Response**](FetchCollections200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call2e589ea17282e3818437328b1a6d2c45"></a>
-# **Call2e589ea17282e3818437328b1a6d2c45**
-> FetchCollections200Response Call2e589ea17282e3818437328b1a6d2c45 (int teamId, int id, Model75c378b5764d9d73e14fe2d65c654910Request model75c378b5764d9d73e14fe2d65c654910Request)
-
-Edit a collection
-
-Edit a collection owned by a team
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | team id |  |
-| **id** | **int** | collection id |  |
-| **model75c378b5764d9d73e14fe2d65c654910Request** | [**Model75c378b5764d9d73e14fe2d65c654910Request**](Model75c378b5764d9d73e14fe2d65c654910Request.md) | Pass user credentials |  |
-
-### Return type
-
-[**FetchCollections200Response**](FetchCollections200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call63175dd3a255646e0428a630af683e21"></a>
-# **Call63175dd3a255646e0428a630af683e21**
-> FetchCollections200Response Call63175dd3a255646e0428a630af683e21 (int userId, int id, D183a285f65bdc0e6341ed79b3a63670Request d183a285f65bdc0e6341ed79b3a63670Request)
-
-Edit a collection
-
-Edit a collection
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **userId** | **int** | user id |  |
-| **id** | **int** | collection id |  |
-| **d183a285f65bdc0e6341ed79b3a63670Request** | [**D183a285f65bdc0e6341ed79b3a63670Request**](D183a285f65bdc0e6341ed79b3a63670Request.md) | Pass user credentials |  |
-
-### Return type
-
-[**FetchCollections200Response**](FetchCollections200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call6907582348e596c660cc65263dc3a4fc"></a>
-# **Call6907582348e596c660cc65263dc3a4fc**
-> C29b5b3424f7317b69b4bda048ccfafb200Response Call6907582348e596c660cc65263dc3a4fc (int teamId, int id)
-
-Delete a collection
-
-Delete a collection owned by a team
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | team id |  |
-| **id** | **int** | collection id |  |
-
-### Return type
-
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call75c378b5764d9d73e14fe2d65c654910"></a>
-# **Call75c378b5764d9d73e14fe2d65c654910**
-> FetchCollections200Response Call75c378b5764d9d73e14fe2d65c654910 (int teamId, int id, Model75c378b5764d9d73e14fe2d65c654910Request model75c378b5764d9d73e14fe2d65c654910Request, string unarchive = null)
-
-Edit a collection
-
-Edit a collection owned by a team
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | team id |  |
-| **id** | **int** | collection id |  |
-| **model75c378b5764d9d73e14fe2d65c654910Request** | [**Model75c378b5764d9d73e14fe2d65c654910Request**](Model75c378b5764d9d73e14fe2d65c654910Request.md) | Pass user credentials |  |
-| **unarchive** | **string** | Unarchive a collection | [optional]  |
-
-### Return type
-
-[**FetchCollections200Response**](FetchCollections200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call78c554f5fb0f01c8d788a5789fd0c35b"></a>
-# **Call78c554f5fb0f01c8d788a5789fd0c35b**
-> C29b5b3424f7317b69b4bda048ccfafb200Response Call78c554f5fb0f01c8d788a5789fd0c35b (int userId, int id)
-
-Delete a collection
-
-Delete a collection
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **userId** | **int** | user id |  |
-| **id** | **int** | collection id |  |
-
-### Return type
-
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call8abb5928cecc676521f3e3d8eea0c49c"></a>
-# **Call8abb5928cecc676521f3e3d8eea0c49c**
-> FetchCollections200Response Call8abb5928cecc676521f3e3d8eea0c49c (int id, Model8abb5928cecc676521f3e3d8eea0c49cRequest model8abb5928cecc676521f3e3d8eea0c49cRequest)
-
-Update a collection
-
-Update a collection owned by an individual
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | collection id |  |
-| **model8abb5928cecc676521f3e3d8eea0c49cRequest** | [**Model8abb5928cecc676521f3e3d8eea0c49cRequest**](Model8abb5928cecc676521f3e3d8eea0c49cRequest.md) | Pass user credentials |  |
-
-### Return type
-
-[**FetchCollections200Response**](FetchCollections200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call94ae4ab159160f6240a4bc00d2e6fe5f"></a>
-# **Call94ae4ab159160f6240a4bc00d2e6fe5f**
-> FetchCollections200Response Call94ae4ab159160f6240a4bc00d2e6fe5f (int teamId, int id, A18eed83ffe8ac895df3e1efa5ffb421Request a18eed83ffe8ac895df3e1efa5ffb421Request)
-
-Update a collection
-
-Update a collection owned by a team
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | team id |  |
-| **id** | **int** | collection id |  |
-| **a18eed83ffe8ac895df3e1efa5ffb421Request** | [**A18eed83ffe8ac895df3e1efa5ffb421Request**](A18eed83ffe8ac895df3e1efa5ffb421Request.md) | Pass user credentials |  |
-
-### Return type
-
-[**FetchCollections200Response**](FetchCollections200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call9c525a2aaf8e8a81cbcdf1a3033bb1bb"></a>
-# **Call9c525a2aaf8e8a81cbcdf1a3033bb1bb**
-> C29b5b3424f7317b69b4bda048ccfafb200Response Call9c525a2aaf8e8a81cbcdf1a3033bb1bb (int teamId, int id)
-
-Delete a collection
-
-Delete a collection owned by a team
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | team id |  |
-| **id** | **int** | collection id |  |
-
-### Return type
-
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+| [**UpdateCollectionsV2**](CollectionsApi.md#updatecollectionsv2) | **PUT** /api/v2/collections/{id} | Update a collection |
+| [**UpdateTeamCollections**](CollectionsApi.md#updateteamcollections) | **PUT** /api/v1/teams/{teamId}/collections/{id} | Update a collection |
+| [**UpdateTeamCollectionsV2**](CollectionsApi.md#updateteamcollectionsv2) | **PUT** /api/v2/teams/{teamId}/collections/{id} | Update a collection |
+| [**UpdateUserCollectionsV2**](CollectionsApi.md#updateusercollectionsv2) | **PUT** /api/v2/users/{userId}/collections/{id} | Update a collection |
 
 <a id="countteamuniquefieldscollectionv2"></a>
 # **CountTeamUniqueFieldsCollectionV2**
@@ -622,7 +187,7 @@ Get user counts for distinct entries of a field in the model
 
 <a id="createcollections"></a>
 # **CreateCollections**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreateCollections (CreateCollectionsRequest createCollectionsRequest)
+> CreateCategories200Response CreateCollections (CreateCollectionsRequest createCollectionsRequest)
 
 CollectionController@store
 
@@ -637,7 +202,7 @@ Create a new collection owned by an individual
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -660,7 +225,7 @@ Create a new collection owned by an individual
 
 <a id="createteamcollections"></a>
 # **CreateTeamCollections**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreateTeamCollections (int teamId, CreateTeamCollectionsRequest createTeamCollectionsRequest)
+> CreateCategories200Response CreateTeamCollections (int teamId, CreateTeamCollectionsRequest createTeamCollectionsRequest)
 
 CollectionController@store
 
@@ -676,7 +241,7 @@ Create a new collection for a team
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -699,7 +264,7 @@ Create a new collection for a team
 
 <a id="createteamcollectionsv2"></a>
 # **CreateTeamCollectionsV2**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreateTeamCollectionsV2 (int teamId, CreateTeamCollectionsRequest createTeamCollectionsRequest)
+> CreateCategories200Response CreateTeamCollectionsV2 (int teamId, CreateTeamCollectionsRequest createTeamCollectionsRequest)
 
 TeamCollectionController@store
 
@@ -715,7 +280,7 @@ Create a new collection for a team
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -738,7 +303,7 @@ Create a new collection for a team
 
 <a id="createusercollections"></a>
 # **CreateUserCollections**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreateUserCollections (CreateCollectionsRequest createCollectionsRequest)
+> CreateCategories200Response CreateUserCollections (CreateCollectionsRequest createCollectionsRequest)
 
 UserCollectionController@store
 
@@ -753,7 +318,7 @@ Create a new collection owned by an individual
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -774,9 +339,164 @@ Create a new collection owned by an individual
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="d183a285f65bdc0e6341ed79b3a63670"></a>
-# **D183a285f65bdc0e6341ed79b3a63670**
-> FetchCollections200Response D183a285f65bdc0e6341ed79b3a63670 (int id, D183a285f65bdc0e6341ed79b3a63670Request d183a285f65bdc0e6341ed79b3a63670Request, string unarchive = null)
+<a id="deletecollectionsv2"></a>
+# **DeleteCollectionsV2**
+> DeleteAliases200Response DeleteCollectionsV2 (int id)
+
+Delete a collection
+
+Delete a collection
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **int** | collection id |  |
+
+### Return type
+
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="deleteteamcollections"></a>
+# **DeleteTeamCollections**
+> DeleteAliases200Response DeleteTeamCollections (int teamId, int id)
+
+Delete a collection
+
+Delete a collection owned by a team
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **teamId** | **int** | team id |  |
+| **id** | **int** | collection id |  |
+
+### Return type
+
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="deleteteamcollectionsv2"></a>
+# **DeleteTeamCollectionsV2**
+> DeleteAliases200Response DeleteTeamCollectionsV2 (int teamId, int id)
+
+Delete a collection
+
+Delete a collection owned by a team
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **teamId** | **int** | team id |  |
+| **id** | **int** | collection id |  |
+
+### Return type
+
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="deleteusercollectionsv2"></a>
+# **DeleteUserCollectionsV2**
+> DeleteAliases200Response DeleteUserCollectionsV2 (int userId, int id)
+
+Delete a collection
+
+Delete a collection
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userId** | **int** | user id |  |
+| **id** | **int** | collection id |  |
+
+### Return type
+
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="editcollectionsv2"></a>
+# **EditCollectionsV2**
+> FetchCollections200Response EditCollectionsV2 (int id, EditCollectionsV2Request editCollectionsV2Request, string unarchive = null)
 
 Edit a collection
 
@@ -788,8 +508,129 @@ Edit a collection
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **int** | collection id |  |
-| **d183a285f65bdc0e6341ed79b3a63670Request** | [**D183a285f65bdc0e6341ed79b3a63670Request**](D183a285f65bdc0e6341ed79b3a63670Request.md) | Pass user credentials |  |
+| **editCollectionsV2Request** | [**EditCollectionsV2Request**](EditCollectionsV2Request.md) | Pass user credentials |  |
 | **unarchive** | **string** | Unarchive a collection | [optional]  |
+
+### Return type
+
+[**FetchCollections200Response**](FetchCollections200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="editteamcollections"></a>
+# **EditTeamCollections**
+> FetchCollections200Response EditTeamCollections (int teamId, int id, EditTeamCollectionsRequest editTeamCollectionsRequest, string unarchive = null)
+
+Edit a collection
+
+Edit a collection owned by a team
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **teamId** | **int** | team id |  |
+| **id** | **int** | collection id |  |
+| **editTeamCollectionsRequest** | [**EditTeamCollectionsRequest**](EditTeamCollectionsRequest.md) | Pass user credentials |  |
+| **unarchive** | **string** | Unarchive a collection | [optional]  |
+
+### Return type
+
+[**FetchCollections200Response**](FetchCollections200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="editteamcollectionsv2"></a>
+# **EditTeamCollectionsV2**
+> FetchCollections200Response EditTeamCollectionsV2 (int teamId, int id, EditTeamCollectionsRequest editTeamCollectionsRequest)
+
+Edit a collection
+
+Edit a collection owned by a team
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **teamId** | **int** | team id |  |
+| **id** | **int** | collection id |  |
+| **editTeamCollectionsRequest** | [**EditTeamCollectionsRequest**](EditTeamCollectionsRequest.md) | Pass user credentials |  |
+
+### Return type
+
+[**FetchCollections200Response**](FetchCollections200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="editusercollectionsv2"></a>
+# **EditUserCollectionsV2**
+> FetchCollections200Response EditUserCollectionsV2 (int userId, int id, EditCollectionsV2Request editCollectionsV2Request)
+
+Edit a collection
+
+Edit a collection
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userId** | **int** | user id |  |
+| **id** | **int** | collection id |  |
+| **editCollectionsV2Request** | [**EditCollectionsV2Request**](EditCollectionsV2Request.md) | Pass user credentials |  |
 
 ### Return type
 
@@ -1248,6 +1089,165 @@ Returns a list of a users draft collections
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="updatecollectionsv2"></a>
+# **UpdateCollectionsV2**
+> FetchCollections200Response UpdateCollectionsV2 (int id, UpdateCollectionsV2Request updateCollectionsV2Request)
+
+Update a collection
+
+Update a collection owned by an individual
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **int** | collection id |  |
+| **updateCollectionsV2Request** | [**UpdateCollectionsV2Request**](UpdateCollectionsV2Request.md) | Pass user credentials |  |
+
+### Return type
+
+[**FetchCollections200Response**](FetchCollections200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="updateteamcollections"></a>
+# **UpdateTeamCollections**
+> FetchCollections200Response UpdateTeamCollections (int teamId, int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest)
+
+Update a collection
+
+Update a collection owned by a team
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **teamId** | **int** | team id |  |
+| **id** | **int** | collection id |  |
+| **updateTeamCollectionsRequest** | [**UpdateTeamCollectionsRequest**](UpdateTeamCollectionsRequest.md) | Pass user credentials |  |
+
+### Return type
+
+[**FetchCollections200Response**](FetchCollections200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="updateteamcollectionsv2"></a>
+# **UpdateTeamCollectionsV2**
+> FetchCollections200Response UpdateTeamCollectionsV2 (int teamId, int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest)
+
+Update a collection
+
+Update a collection owned by a team
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **teamId** | **int** | team id |  |
+| **id** | **int** | collection id |  |
+| **updateTeamCollectionsRequest** | [**UpdateTeamCollectionsRequest**](UpdateTeamCollectionsRequest.md) | Pass user credentials |  |
+
+### Return type
+
+[**FetchCollections200Response**](FetchCollections200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="updateusercollectionsv2"></a>
+# **UpdateUserCollectionsV2**
+> FetchCollections200Response UpdateUserCollectionsV2 (int userId, int id, UpdateCollectionsV2Request updateCollectionsV2Request)
+
+Update a collection
+
+Update a collection owned by an individual
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userId** | **int** | user id |  |
+| **id** | **int** | collection id |  |
+| **updateCollectionsV2Request** | [**UpdateCollectionsV2Request**](UpdateCollectionsV2Request.md) | Pass user credentials |  |
+
+### Return type
+
+[**FetchCollections200Response**](FetchCollections200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

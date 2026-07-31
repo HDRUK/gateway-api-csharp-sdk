@@ -45,12 +45,12 @@ namespace GatewayApiSdk.Api
         /// Returns gateway collections related to the provided query term(s)
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="aa33edfdace17b70600d964e0db4d44bRequest">Submit search query</param>
+        /// <param name="searchCollectionsRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAa33edfdace17b70600d964e0db4d44bApiResponse"/>&gt;</returns>
-        Task<IAa33edfdace17b70600d964e0db4d44bApiResponse> Aa33edfdace17b70600d964e0db4d44bAsync(Aa33edfdace17b70600d964e0db4d44bRequest aa33edfdace17b70600d964e0db4d44bRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchCollectionsApiResponse"/>&gt;</returns>
+        Task<ISearchCollectionsApiResponse> SearchCollectionsAsync(SearchCollectionsRequest searchCollectionsRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Search@collections
@@ -58,18 +58,18 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Returns gateway collections related to the provided query term(s)
         /// </remarks>
-        /// <param name="aa33edfdace17b70600d964e0db4d44bRequest">Submit search query</param>
+        /// <param name="searchCollectionsRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAa33edfdace17b70600d964e0db4d44bApiResponse"/>?&gt;</returns>
-        Task<IAa33edfdace17b70600d964e0db4d44bApiResponse?> Aa33edfdace17b70600d964e0db4d44bOrDefaultAsync(Aa33edfdace17b70600d964e0db4d44bRequest aa33edfdace17b70600d964e0db4d44bRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchCollectionsApiResponse"/>?&gt;</returns>
+        Task<ISearchCollectionsApiResponse?> SearchCollectionsOrDefaultAsync(SearchCollectionsRequest searchCollectionsRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="IAa33edfdace17b70600d964e0db4d44bApiResponse"/>
+    /// The <see cref="ISearchCollectionsApiResponse"/>
     /// </summary>
-    public interface IAa33edfdace17b70600d964e0db4d44bApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Aa33edfdace17b70600d964e0db4d44b200Response?>
+    public interface ISearchCollectionsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.SearchCollections200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -86,21 +86,21 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnAa33edfdace17b70600d964e0db4d44b;
+        public event EventHandler<ApiResponseEventArgs>? OnSearchCollections;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorAa33edfdace17b70600d964e0db4d44b;
+        public event EventHandler<ExceptionEventArgs>? OnErrorSearchCollections;
 
-        internal void ExecuteOnAa33edfdace17b70600d964e0db4d44b(SearchCollectionsApi.Aa33edfdace17b70600d964e0db4d44bApiResponse apiResponse)
+        internal void ExecuteOnSearchCollections(SearchCollectionsApi.SearchCollectionsApiResponse apiResponse)
         {
-            OnAa33edfdace17b70600d964e0db4d44b?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnSearchCollections?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorAa33edfdace17b70600d964e0db4d44b(Exception exception)
+        internal void ExecuteOnErrorSearchCollections(Exception exception)
         {
-            OnErrorAa33edfdace17b70600d964e0db4d44b?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorSearchCollections?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -145,19 +145,19 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatAa33edfdace17b70600d964e0db4d44b(Aa33edfdace17b70600d964e0db4d44bRequest aa33edfdace17b70600d964e0db4d44bRequest, ref Option<string> sort, ref Option<string> direction);
+        partial void FormatSearchCollections(SearchCollectionsRequest searchCollectionsRequest, ref Option<string> sort, ref Option<string> direction);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="aa33edfdace17b70600d964e0db4d44bRequest"></param>
+        /// <param name="searchCollectionsRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
         /// <returns></returns>
-        private void ValidateAa33edfdace17b70600d964e0db4d44b(Aa33edfdace17b70600d964e0db4d44bRequest aa33edfdace17b70600d964e0db4d44bRequest, Option<string> sort, Option<string> direction)
+        private void ValidateSearchCollections(SearchCollectionsRequest searchCollectionsRequest, Option<string> sort, Option<string> direction)
         {
-            if (aa33edfdace17b70600d964e0db4d44bRequest == null)
-                throw new ArgumentNullException(nameof(aa33edfdace17b70600d964e0db4d44bRequest));
+            if (searchCollectionsRequest == null)
+                throw new ArgumentNullException(nameof(searchCollectionsRequest));
 
             if (sort.IsSet && sort.Value == null)
                 throw new ArgumentNullException(nameof(sort));
@@ -170,13 +170,13 @@ namespace GatewayApiSdk.Api
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="aa33edfdace17b70600d964e0db4d44bRequest"></param>
+        /// <param name="searchCollectionsRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
-        private void AfterAa33edfdace17b70600d964e0db4d44bDefaultImplementation(IAa33edfdace17b70600d964e0db4d44bApiResponse apiResponseLocalVar, Aa33edfdace17b70600d964e0db4d44bRequest aa33edfdace17b70600d964e0db4d44bRequest, Option<string> sort, Option<string> direction)
+        private void AfterSearchCollectionsDefaultImplementation(ISearchCollectionsApiResponse apiResponseLocalVar, SearchCollectionsRequest searchCollectionsRequest, Option<string> sort, Option<string> direction)
         {
             bool suppressDefaultLog = false;
-            AfterAa33edfdace17b70600d964e0db4d44b(ref suppressDefaultLog, apiResponseLocalVar, aa33edfdace17b70600d964e0db4d44bRequest, sort, direction);
+            AfterSearchCollections(ref suppressDefaultLog, apiResponseLocalVar, searchCollectionsRequest, sort, direction);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -186,10 +186,10 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="aa33edfdace17b70600d964e0db4d44bRequest"></param>
+        /// <param name="searchCollectionsRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
-        partial void AfterAa33edfdace17b70600d964e0db4d44b(ref bool suppressDefaultLog, IAa33edfdace17b70600d964e0db4d44bApiResponse apiResponseLocalVar, Aa33edfdace17b70600d964e0db4d44bRequest aa33edfdace17b70600d964e0db4d44bRequest, Option<string> sort, Option<string> direction);
+        partial void AfterSearchCollections(ref bool suppressDefaultLog, ISearchCollectionsApiResponse apiResponseLocalVar, SearchCollectionsRequest searchCollectionsRequest, Option<string> sort, Option<string> direction);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -197,13 +197,13 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="aa33edfdace17b70600d964e0db4d44bRequest"></param>
+        /// <param name="searchCollectionsRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
-        private void OnErrorAa33edfdace17b70600d964e0db4d44bDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Aa33edfdace17b70600d964e0db4d44bRequest aa33edfdace17b70600d964e0db4d44bRequest, Option<string> sort, Option<string> direction)
+        private void OnErrorSearchCollectionsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, SearchCollectionsRequest searchCollectionsRequest, Option<string> sort, Option<string> direction)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorAa33edfdace17b70600d964e0db4d44b(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, aa33edfdace17b70600d964e0db4d44bRequest, sort, direction);
+            OnErrorSearchCollections(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, searchCollectionsRequest, sort, direction);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -215,24 +215,24 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="aa33edfdace17b70600d964e0db4d44bRequest"></param>
+        /// <param name="searchCollectionsRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
-        partial void OnErrorAa33edfdace17b70600d964e0db4d44b(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Aa33edfdace17b70600d964e0db4d44bRequest aa33edfdace17b70600d964e0db4d44bRequest, Option<string> sort, Option<string> direction);
+        partial void OnErrorSearchCollections(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, SearchCollectionsRequest searchCollectionsRequest, Option<string> sort, Option<string> direction);
 
         /// <summary>
         /// Search@collections Returns gateway collections related to the provided query term(s)
         /// </summary>
-        /// <param name="aa33edfdace17b70600d964e0db4d44bRequest">Submit search query</param>
+        /// <param name="searchCollectionsRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAa33edfdace17b70600d964e0db4d44bApiResponse"/>&gt;</returns>
-        public async Task<IAa33edfdace17b70600d964e0db4d44bApiResponse?> Aa33edfdace17b70600d964e0db4d44bOrDefaultAsync(Aa33edfdace17b70600d964e0db4d44bRequest aa33edfdace17b70600d964e0db4d44bRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchCollectionsApiResponse"/>&gt;</returns>
+        public async Task<ISearchCollectionsApiResponse?> SearchCollectionsOrDefaultAsync(SearchCollectionsRequest searchCollectionsRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Aa33edfdace17b70600d964e0db4d44bAsync(aa33edfdace17b70600d964e0db4d44bRequest, sort, direction, cancellationToken).ConfigureAwait(false);
+                return await SearchCollectionsAsync(searchCollectionsRequest, sort, direction, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -244,20 +244,20 @@ namespace GatewayApiSdk.Api
         /// Search@collections Returns gateway collections related to the provided query term(s)
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="aa33edfdace17b70600d964e0db4d44bRequest">Submit search query</param>
+        /// <param name="searchCollectionsRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAa33edfdace17b70600d964e0db4d44bApiResponse"/>&gt;</returns>
-        public async Task<IAa33edfdace17b70600d964e0db4d44bApiResponse> Aa33edfdace17b70600d964e0db4d44bAsync(Aa33edfdace17b70600d964e0db4d44bRequest aa33edfdace17b70600d964e0db4d44bRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchCollectionsApiResponse"/>&gt;</returns>
+        public async Task<ISearchCollectionsApiResponse> SearchCollectionsAsync(SearchCollectionsRequest searchCollectionsRequest, Option<string> sort = default, Option<string> direction = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateAa33edfdace17b70600d964e0db4d44b(aa33edfdace17b70600d964e0db4d44bRequest, sort, direction);
+                ValidateSearchCollections(searchCollectionsRequest, sort, direction);
 
-                FormatAa33edfdace17b70600d964e0db4d44b(aa33edfdace17b70600d964e0db4d44bRequest, ref sort, ref direction);
+                FormatSearchCollections(searchCollectionsRequest, ref sort, ref direction);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -278,9 +278,9 @@ namespace GatewayApiSdk.Api
 
                     uriBuilderLocalVar.Query = parseQueryStringLocalVar.ToString();
 
-                    httpRequestMessageLocalVar.Content = (aa33edfdace17b70600d964e0db4d44bRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (searchCollectionsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(aa33edfdace17b70600d964e0db4d44bRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(searchCollectionsRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -315,7 +315,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Aa33edfdace17b70600d964e0db4d44bApiResponse apiResponseLocalVar;
+                        SearchCollectionsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -326,9 +326,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterAa33edfdace17b70600d964e0db4d44bDefaultImplementation(apiResponseLocalVar, aa33edfdace17b70600d964e0db4d44bRequest, sort, direction);
+                        AfterSearchCollectionsDefaultImplementation(apiResponseLocalVar, searchCollectionsRequest, sort, direction);
 
-                        Events.ExecuteOnAa33edfdace17b70600d964e0db4d44b(apiResponseLocalVar);
+                        Events.ExecuteOnSearchCollections(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -340,16 +340,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorAa33edfdace17b70600d964e0db4d44bDefaultImplementation(e, "/api/v1/search/collections", uriBuilderLocalVar.Path, aa33edfdace17b70600d964e0db4d44bRequest, sort, direction);
-                Events.ExecuteOnErrorAa33edfdace17b70600d964e0db4d44b(e);
+                OnErrorSearchCollectionsDefaultImplementation(e, "/api/v1/search/collections", uriBuilderLocalVar.Path, searchCollectionsRequest, sort, direction);
+                Events.ExecuteOnErrorSearchCollections(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Aa33edfdace17b70600d964e0db4d44bApiResponse"/>
+        /// The <see cref="SearchCollectionsApiResponse"/>
         /// </summary>
-        public partial class Aa33edfdace17b70600d964e0db4d44bApiResponse : GatewayApiSdk.Client.ApiResponse, IAa33edfdace17b70600d964e0db4d44bApiResponse
+        public partial class SearchCollectionsApiResponse : GatewayApiSdk.Client.ApiResponse, ISearchCollectionsApiResponse
         {
             /// <summary>
             /// The logger
@@ -357,7 +357,7 @@ namespace GatewayApiSdk.Api
             public ILogger<SearchCollectionsApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Aa33edfdace17b70600d964e0db4d44bApiResponse"/>
+            /// The <see cref="SearchCollectionsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -366,14 +366,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Aa33edfdace17b70600d964e0db4d44bApiResponse(ILogger<SearchCollectionsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public SearchCollectionsApiResponse(ILogger<SearchCollectionsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Aa33edfdace17b70600d964e0db4d44bApiResponse"/>
+            /// The <see cref="SearchCollectionsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -382,7 +382,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Aa33edfdace17b70600d964e0db4d44bApiResponse(ILogger<SearchCollectionsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public SearchCollectionsApiResponse(ILogger<SearchCollectionsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -400,11 +400,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Aa33edfdace17b70600d964e0db4d44b200Response? Ok()
+            public GatewayApiSdk.Model.SearchCollections200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Aa33edfdace17b70600d964e0db4d44b200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.SearchCollections200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -413,7 +413,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Aa33edfdace17b70600d964e0db4d44b200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.SearchCollections200Response? result)
             {
                 result = null;
 

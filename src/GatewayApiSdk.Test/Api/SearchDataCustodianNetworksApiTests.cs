@@ -51,17 +51,17 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call9b95892cc29cee3ccd11e3f92223224c
+        /// Test SearchDataCustodianNetworks
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call9b95892cc29cee3ccd11e3f92223224cAsyncTest()
+        public async Task SearchDataCustodianNetworksAsyncTest()
         {
-            Model9b95892cc29cee3ccd11e3f92223224cRequest model9b95892cc29cee3ccd11e3f92223224cRequest = default!;
+            SearchDataCustodianNetworksRequest searchDataCustodianNetworksRequest = default!;
             Client.Option<string> sort = default!;
             Client.Option<string> direction = default!;
-            var response = await _instance.Call9b95892cc29cee3ccd11e3f92223224cAsync(model9b95892cc29cee3ccd11e3f92223224cRequest, sort, direction);
+            var response = await _instance.SearchDataCustodianNetworksAsync(searchDataCustodianNetworksRequest, sort, direction);
             var model = response.Ok();
-            Assert.IsType<Model9b95892cc29cee3ccd11e3f92223224c200Response>(model);
+            Assert.IsType<SearchDataCustodianNetworks200Response>(model);
         }
     }
 }

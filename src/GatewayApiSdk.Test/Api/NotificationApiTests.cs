@@ -51,76 +51,76 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test A5ca86d5f19ecac396cb830333f307da
+        /// Test CreateNotifications
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task A5ca86d5f19ecac396cb830333f307daAsyncTest()
+        public async Task CreateNotificationsAsyncTest()
         {
-            int id = default!;
-            A5ca86d5f19ecac396cb830333f307daRequest a5ca86d5f19ecac396cb830333f307daRequest = default!;
-            var response = await _instance.A5ca86d5f19ecac396cb830333f307daAsync(id, a5ca86d5f19ecac396cb830333f307daRequest);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test B4f86f6c4f52e080b246d560038cdc9b
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task B4f86f6c4f52e080b246d560038cdc9bAsyncTest()
-        {
-            int id = default!;
-            Model1fd84d2c66035574da4902f416cbd96aRequest model1fd84d2c66035574da4902f416cbd96aRequest = default!;
-            var response = await _instance.B4f86f6c4f52e080b246d560038cdc9bAsync(id, model1fd84d2c66035574da4902f416cbd96aRequest);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Cac3bdde44f0be0512f7d05c0a6064e4
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Cac3bdde44f0be0512f7d05c0a6064e4AsyncTest()
-        {
-            var response = await _instance.Cac3bdde44f0be0512f7d05c0a6064e4Async();
+            CreateNotificationsRequest createNotificationsRequest = default!;
+            var response = await _instance.CreateNotificationsAsync(createNotificationsRequest);
             var model = response.Ok();
-            Assert.IsType<Cac3bdde44f0be0512f7d05c0a6064e4200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
-        /// Test Call1fd84d2c66035574da4902f416cbd96a
+        /// Test DeleteNotifications
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call1fd84d2c66035574da4902f416cbd96aAsyncTest()
-        {
-            Model1fd84d2c66035574da4902f416cbd96aRequest model1fd84d2c66035574da4902f416cbd96aRequest = default!;
-            var response = await _instance.Call1fd84d2c66035574da4902f416cbd96aAsync(model1fd84d2c66035574da4902f416cbd96aRequest);
-            var model = response.Ok();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call22581e4d73af25a9036c6610c7e8fc72
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call22581e4d73af25a9036c6610c7e8fc72AsyncTest()
+        public async Task DeleteNotificationsAsyncTest()
         {
             int id = default!;
-            var response = await _instance.Call22581e4d73af25a9036c6610c7e8fc72Async(id);
-            var model = response.Ok();
-            Assert.IsType<Model22581e4d73af25a9036c6610c7e8fc72200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call3f8fe68ea04e79015d8aad5912cadbc1
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call3f8fe68ea04e79015d8aad5912cadbc1AsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.Call3f8fe68ea04e79015d8aad5912cadbc1Async(id);
+            var response = await _instance.DeleteNotificationsAsync(id);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test EditNotifications
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task EditNotificationsAsyncTest()
+        {
+            int id = default!;
+            EditNotificationsRequest editNotificationsRequest = default!;
+            var response = await _instance.EditNotificationsAsync(id, editNotificationsRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchAllNotifications
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchAllNotificationsAsyncTest()
+        {
+            var response = await _instance.FetchAllNotificationsAsync();
+            var model = response.Ok();
+            Assert.IsType<FetchAllNotifications200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchNotifications
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchNotificationsAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.FetchNotificationsAsync(id);
+            var model = response.Ok();
+            Assert.IsType<FetchNotifications200Response>(model);
+        }
+
+        /// <summary>
+        /// Test UpdateNotifications
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task UpdateNotificationsAsyncTest()
+        {
+            int id = default!;
+            CreateNotificationsRequest createNotificationsRequest = default!;
+            var response = await _instance.UpdateNotificationsAsync(id, createNotificationsRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
         }
     }
 }

@@ -51,18 +51,18 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Ada26698c9cdc86c01aaf53b0677a48d
+        /// Test SearchDataCustodians
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Ada26698c9cdc86c01aaf53b0677a48dAsyncTest()
+        public async Task SearchDataCustodiansAsyncTest()
         {
-            Ada26698c9cdc86c01aaf53b0677a48dRequest ada26698c9cdc86c01aaf53b0677a48dRequest = default!;
+            SearchDataCustodiansRequest searchDataCustodiansRequest = default!;
             Client.Option<string> sort = default!;
             Client.Option<string> direction = default!;
             Client.Option<int> perPage = default!;
-            var response = await _instance.Ada26698c9cdc86c01aaf53b0677a48dAsync(ada26698c9cdc86c01aaf53b0677a48dRequest, sort, direction, perPage);
+            var response = await _instance.SearchDataCustodiansAsync(searchDataCustodiansRequest, sort, direction, perPage);
             var model = response.Ok();
-            Assert.IsType<Ada26698c9cdc86c01aaf53b0677a48d200Response>(model);
+            Assert.IsType<SearchDataCustodians200Response>(model);
         }
     }
 }

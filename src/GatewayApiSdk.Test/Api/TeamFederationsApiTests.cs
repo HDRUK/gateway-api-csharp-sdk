@@ -60,7 +60,7 @@ namespace GatewayApiSdk.Test.Api
             CreateFederationTeamRequest createFederationTeamRequest = default!;
             var response = await _instance.CreateFederationTeamAsync(teamId, createFederationTeamRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace GatewayApiSdk.Test.Api
             CreateFederationTeamRequest createFederationTeamRequest = default!;
             var response = await _instance.EditFederationTeamAsync(teamId, federationId, createFederationTeamRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace GatewayApiSdk.Test.Api
             UpdateFederationTeamRequest updateFederationTeamRequest = default!;
             var response = await _instance.UpdateFederationTeamAsync(teamId, federationId, updateFederationTeamRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
     }
 }

@@ -50,13 +50,13 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call805e0e12862cf992698405bf5795b042
+        /// Test FetchAdminDataCustodianNetworks
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call805e0e12862cf992698405bf5795b042AsyncTest()
+        public async Task FetchAdminDataCustodianNetworksAsyncTest()
         {
             Client.Option<int> perPage = default!;
-            await _instance.Call805e0e12862cf992698405bf5795b042Async(perPage);
+            await _instance.FetchAdminDataCustodianNetworksAsync(perPage);
         }
     }
 }

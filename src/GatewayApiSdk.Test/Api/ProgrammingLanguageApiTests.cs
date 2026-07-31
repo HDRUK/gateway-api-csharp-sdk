@@ -51,76 +51,76 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Ac545f07640e752592440f34e55b1ed3
+        /// Test CreateProgrammingLanguages
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Ac545f07640e752592440f34e55b1ed3AsyncTest()
+        public async Task CreateProgrammingLanguagesAsyncTest()
         {
-            Dd76b8d73b7ea8b4951f03d7c0904c92Request dd76b8d73b7ea8b4951f03d7c0904c92Request = default!;
-            var response = await _instance.Ac545f07640e752592440f34e55b1ed3Async(dd76b8d73b7ea8b4951f03d7c0904c92Request);
+            CreateCategoriesRequest createCategoriesRequest = default!;
+            var response = await _instance.CreateProgrammingLanguagesAsync(createCategoriesRequest);
             var model = response.Ok();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
-        /// Test Ac75502b12db43904eeea0400eb245d8
+        /// Test DeleteProgrammingLanguages
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Ac75502b12db43904eeea0400eb245d8AsyncTest()
+        public async Task DeleteProgrammingLanguagesAsyncTest()
         {
-            var response = await _instance.Ac75502b12db43904eeea0400eb245d8Async();
+            int id = default!;
+            var response = await _instance.DeleteProgrammingLanguagesAsync(id);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test EditProgrammingLanguages
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task EditProgrammingLanguagesAsyncTest()
+        {
+            int id = default!;
+            EditCategoriesRequest editCategoriesRequest = default!;
+            var response = await _instance.EditProgrammingLanguagesAsync(id, editCategoriesRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchAllProgrammingLanguages
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchAllProgrammingLanguagesAsyncTest()
+        {
+            var response = await _instance.FetchAllProgrammingLanguagesAsync();
             var model = response.Ok();
-            Assert.IsType<Ac75502b12db43904eeea0400eb245d8200Response>(model);
+            Assert.IsType<FetchAllProgrammingLanguages200Response>(model);
         }
 
         /// <summary>
-        /// Test B50ca1696491e4e1ff3cc267fa7e71ee
+        /// Test FetchProgrammingLanguages
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task B50ca1696491e4e1ff3cc267fa7e71eeAsyncTest()
+        public async Task FetchProgrammingLanguagesAsyncTest()
         {
             int id = default!;
-            var response = await _instance.B50ca1696491e4e1ff3cc267fa7e71eeAsync(id);
+            var response = await _instance.FetchProgrammingLanguagesAsync(id);
             var model = response.Ok();
-            Assert.IsType<B50ca1696491e4e1ff3cc267fa7e71ee200Response>(model);
+            Assert.IsType<FetchProgrammingLanguages200Response>(model);
         }
 
         /// <summary>
-        /// Test Call00f9ccd45119f11eb3044b4d61f9e79d
+        /// Test UpdateProgrammingLanguages
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call00f9ccd45119f11eb3044b4d61f9e79dAsyncTest()
+        public async Task UpdateProgrammingLanguagesAsyncTest()
         {
             int id = default!;
-            var response = await _instance.Call00f9ccd45119f11eb3044b4d61f9e79dAsync(id);
+            UpdateCategoriesRequest updateCategoriesRequest = default!;
+            var response = await _instance.UpdateProgrammingLanguagesAsync(id, updateCategoriesRequest);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call9a975e45459cd2614334b378875d3108
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call9a975e45459cd2614334b378875d3108AsyncTest()
-        {
-            int id = default!;
-            A5f6e0a9550d3c58c50dda55412cd051Request a5f6e0a9550d3c58c50dda55412cd051Request = default!;
-            var response = await _instance.Call9a975e45459cd2614334b378875d3108Async(id, a5f6e0a9550d3c58c50dda55412cd051Request);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test F65686cb0c089366a7c7f67bf528c957
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task F65686cb0c089366a7c7f67bf528c957AsyncTest()
-        {
-            int id = default!;
-            Model988e8695bc991d7f8e40131db5ba7a76Request model988e8695bc991d7f8e40131db5ba7a76Request = default!;
-            var response = await _instance.F65686cb0c089366a7c7f67bf528c957Async(id, model988e8695bc991d7f8e40131db5ba7a76Request);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
     }
 }

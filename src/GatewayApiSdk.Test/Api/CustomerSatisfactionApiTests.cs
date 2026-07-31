@@ -51,28 +51,28 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call2e155418e5f0de41829414447919439e
+        /// Test CreateCsat
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call2e155418e5f0de41829414447919439eAsyncTest()
+        public async Task CreateCsatAsyncTest()
         {
-            int id = default!;
-            Model2e155418e5f0de41829414447919439eRequest model2e155418e5f0de41829414447919439eRequest = default!;
-            var response = await _instance.Call2e155418e5f0de41829414447919439eAsync(id, model2e155418e5f0de41829414447919439eRequest);
-            var model = response.Ok();
-            Assert.IsType<Model2e155418e5f0de41829414447919439e200Response>(model);
+            CreateCsatRequest createCsatRequest = default!;
+            var response = await _instance.CreateCsatAsync(createCsatRequest);
+            var model = response.Created();
+            Assert.IsType<DeleteAliases200Response>(model);
         }
 
         /// <summary>
-        /// Test Call3604171bd1ea2588906fe1cf65353366
+        /// Test EditCsat
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call3604171bd1ea2588906fe1cf65353366AsyncTest()
+        public async Task EditCsatAsyncTest()
         {
-            Model3604171bd1ea2588906fe1cf65353366Request model3604171bd1ea2588906fe1cf65353366Request = default!;
-            var response = await _instance.Call3604171bd1ea2588906fe1cf65353366Async(model3604171bd1ea2588906fe1cf65353366Request);
-            var model = response.Created();
-            Assert.IsType<C29b5b3424f7317b69b4bda048ccfafb200Response>(model);
+            int id = default!;
+            EditCsatRequest editCsatRequest = default!;
+            var response = await _instance.EditCsatAsync(id, editCsatRequest);
+            var model = response.Ok();
+            Assert.IsType<EditCsat200Response>(model);
         }
     }
 }

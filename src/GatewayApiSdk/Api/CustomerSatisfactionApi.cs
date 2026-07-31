@@ -39,29 +39,16 @@ namespace GatewayApiSdk.Api
         CustomerSatisfactionApiEvents Events { get; }
 
         /// <summary>
-        /// Update Customer Satisfaction Description
+        /// Create Customer Satisfaction Score
         /// </summary>
         /// <remarks>
-        /// Update a description for a satisfaction score entry
+        /// Creates a customer satisfaction score between 0 and 5
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the CSAT entry</param>
-        /// <param name="model2e155418e5f0de41829414447919439eRequest">Reason to update</param>
+        /// <param name="createCsatRequest">Customer Satisfaction score</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall2e155418e5f0de41829414447919439eApiResponse"/>&gt;</returns>
-        Task<ICall2e155418e5f0de41829414447919439eApiResponse> Call2e155418e5f0de41829414447919439eAsync(int id, Model2e155418e5f0de41829414447919439eRequest model2e155418e5f0de41829414447919439eRequest, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Update Customer Satisfaction Description
-        /// </summary>
-        /// <remarks>
-        /// Update a description for a satisfaction score entry
-        /// </remarks>
-        /// <param name="id">ID of the CSAT entry</param>
-        /// <param name="model2e155418e5f0de41829414447919439eRequest">Reason to update</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall2e155418e5f0de41829414447919439eApiResponse"/>?&gt;</returns>
-        Task<ICall2e155418e5f0de41829414447919439eApiResponse?> Call2e155418e5f0de41829414447919439eOrDefaultAsync(int id, Model2e155418e5f0de41829414447919439eRequest model2e155418e5f0de41829414447919439eRequest, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateCsatApiResponse"/>&gt;</returns>
+        Task<ICreateCsatApiResponse> CreateCsatAsync(CreateCsatRequest createCsatRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Create Customer Satisfaction Score
@@ -69,40 +56,41 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Creates a customer satisfaction score between 0 and 5
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model3604171bd1ea2588906fe1cf65353366Request">Customer Satisfaction score</param>
+        /// <param name="createCsatRequest">Customer Satisfaction score</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3604171bd1ea2588906fe1cf65353366ApiResponse"/>&gt;</returns>
-        Task<ICall3604171bd1ea2588906fe1cf65353366ApiResponse> Call3604171bd1ea2588906fe1cf65353366Async(Model3604171bd1ea2588906fe1cf65353366Request model3604171bd1ea2588906fe1cf65353366Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateCsatApiResponse"/>?&gt;</returns>
+        Task<ICreateCsatApiResponse?> CreateCsatOrDefaultAsync(CreateCsatRequest createCsatRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Create Customer Satisfaction Score
+        /// Update Customer Satisfaction Description
         /// </summary>
         /// <remarks>
-        /// Creates a customer satisfaction score between 0 and 5
+        /// Update a description for a satisfaction score entry
         /// </remarks>
-        /// <param name="model3604171bd1ea2588906fe1cf65353366Request">Customer Satisfaction score</param>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the CSAT entry</param>
+        /// <param name="editCsatRequest">Reason to update</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3604171bd1ea2588906fe1cf65353366ApiResponse"/>?&gt;</returns>
-        Task<ICall3604171bd1ea2588906fe1cf65353366ApiResponse?> Call3604171bd1ea2588906fe1cf65353366OrDefaultAsync(Model3604171bd1ea2588906fe1cf65353366Request model3604171bd1ea2588906fe1cf65353366Request, System.Threading.CancellationToken cancellationToken = default);
-    }
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditCsatApiResponse"/>&gt;</returns>
+        Task<IEditCsatApiResponse> EditCsatAsync(int id, EditCsatRequest editCsatRequest, System.Threading.CancellationToken cancellationToken = default);
 
-    /// <summary>
-    /// The <see cref="ICall2e155418e5f0de41829414447919439eApiResponse"/>
-    /// </summary>
-    public interface ICall2e155418e5f0de41829414447919439eApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model2e155418e5f0de41829414447919439e200Response?>
-    {
         /// <summary>
-        /// Returns true if the response is 200 Ok
+        /// Update Customer Satisfaction Description
         /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
+        /// <remarks>
+        /// Update a description for a satisfaction score entry
+        /// </remarks>
+        /// <param name="id">ID of the CSAT entry</param>
+        /// <param name="editCsatRequest">Reason to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditCsatApiResponse"/>?&gt;</returns>
+        Task<IEditCsatApiResponse?> EditCsatOrDefaultAsync(int id, EditCsatRequest editCsatRequest, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="ICall3604171bd1ea2588906fe1cf65353366ApiResponse"/>
+    /// The <see cref="ICreateCsatApiResponse"/>
     /// </summary>
-    public interface ICall3604171bd1ea2588906fe1cf65353366ApiResponse : GatewayApiSdk.Client.IApiResponse, ICreated<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response?>, IUnprocessableContent<GatewayApiSdk.Model.Model3604171bd1ea2588906fe1cf65353366422Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface ICreateCsatApiResponse : GatewayApiSdk.Client.IApiResponse, ICreated<GatewayApiSdk.Model.DeleteAliases200Response?>, IUnprocessableContent<GatewayApiSdk.Model.CreateCsat422Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -124,6 +112,18 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
+    /// The <see cref="IEditCsatApiResponse"/>
+    /// </summary>
+    public interface IEditCsatApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.EditCsat200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+    }
+
+    /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public class CustomerSatisfactionApiEvents
@@ -131,41 +131,41 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall2e155418e5f0de41829414447919439e;
+        public event EventHandler<ApiResponseEventArgs>? OnCreateCsat;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall2e155418e5f0de41829414447919439e;
+        public event EventHandler<ExceptionEventArgs>? OnErrorCreateCsat;
 
-        internal void ExecuteOnCall2e155418e5f0de41829414447919439e(CustomerSatisfactionApi.Call2e155418e5f0de41829414447919439eApiResponse apiResponse)
+        internal void ExecuteOnCreateCsat(CustomerSatisfactionApi.CreateCsatApiResponse apiResponse)
         {
-            OnCall2e155418e5f0de41829414447919439e?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnCreateCsat?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall2e155418e5f0de41829414447919439e(Exception exception)
+        internal void ExecuteOnErrorCreateCsat(Exception exception)
         {
-            OnErrorCall2e155418e5f0de41829414447919439e?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorCreateCsat?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall3604171bd1ea2588906fe1cf65353366;
+        public event EventHandler<ApiResponseEventArgs>? OnEditCsat;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall3604171bd1ea2588906fe1cf65353366;
+        public event EventHandler<ExceptionEventArgs>? OnErrorEditCsat;
 
-        internal void ExecuteOnCall3604171bd1ea2588906fe1cf65353366(CustomerSatisfactionApi.Call3604171bd1ea2588906fe1cf65353366ApiResponse apiResponse)
+        internal void ExecuteOnEditCsat(CustomerSatisfactionApi.EditCsatApiResponse apiResponse)
         {
-            OnCall3604171bd1ea2588906fe1cf65353366?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnEditCsat?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall3604171bd1ea2588906fe1cf65353366(Exception exception)
+        internal void ExecuteOnErrorEditCsat(Exception exception)
         {
-            OnErrorCall3604171bd1ea2588906fe1cf65353366?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorEditCsat?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -210,29 +210,28 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatCall2e155418e5f0de41829414447919439e(ref int id, Model2e155418e5f0de41829414447919439eRequest model2e155418e5f0de41829414447919439eRequest);
+        partial void FormatCreateCsat(CreateCsatRequest createCsatRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="model2e155418e5f0de41829414447919439eRequest"></param>
+        /// <param name="createCsatRequest"></param>
         /// <returns></returns>
-        private void ValidateCall2e155418e5f0de41829414447919439e(Model2e155418e5f0de41829414447919439eRequest model2e155418e5f0de41829414447919439eRequest)
+        private void ValidateCreateCsat(CreateCsatRequest createCsatRequest)
         {
-            if (model2e155418e5f0de41829414447919439eRequest == null)
-                throw new ArgumentNullException(nameof(model2e155418e5f0de41829414447919439eRequest));
+            if (createCsatRequest == null)
+                throw new ArgumentNullException(nameof(createCsatRequest));
         }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model2e155418e5f0de41829414447919439eRequest"></param>
-        private void AfterCall2e155418e5f0de41829414447919439eDefaultImplementation(ICall2e155418e5f0de41829414447919439eApiResponse apiResponseLocalVar, int id, Model2e155418e5f0de41829414447919439eRequest model2e155418e5f0de41829414447919439eRequest)
+        /// <param name="createCsatRequest"></param>
+        private void AfterCreateCsatDefaultImplementation(ICreateCsatApiResponse apiResponseLocalVar, CreateCsatRequest createCsatRequest)
         {
             bool suppressDefaultLog = false;
-            AfterCall2e155418e5f0de41829414447919439e(ref suppressDefaultLog, apiResponseLocalVar, id, model2e155418e5f0de41829414447919439eRequest);
+            AfterCreateCsat(ref suppressDefaultLog, apiResponseLocalVar, createCsatRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -242,9 +241,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model2e155418e5f0de41829414447919439eRequest"></param>
-        partial void AfterCall2e155418e5f0de41829414447919439e(ref bool suppressDefaultLog, ICall2e155418e5f0de41829414447919439eApiResponse apiResponseLocalVar, int id, Model2e155418e5f0de41829414447919439eRequest model2e155418e5f0de41829414447919439eRequest);
+        /// <param name="createCsatRequest"></param>
+        partial void AfterCreateCsat(ref bool suppressDefaultLog, ICreateCsatApiResponse apiResponseLocalVar, CreateCsatRequest createCsatRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -252,12 +250,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model2e155418e5f0de41829414447919439eRequest"></param>
-        private void OnErrorCall2e155418e5f0de41829414447919439eDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model2e155418e5f0de41829414447919439eRequest model2e155418e5f0de41829414447919439eRequest)
+        /// <param name="createCsatRequest"></param>
+        private void OnErrorCreateCsatDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateCsatRequest createCsatRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall2e155418e5f0de41829414447919439e(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, model2e155418e5f0de41829414447919439eRequest);
+            OnErrorCreateCsat(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createCsatRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -269,288 +266,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model2e155418e5f0de41829414447919439eRequest"></param>
-        partial void OnErrorCall2e155418e5f0de41829414447919439e(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model2e155418e5f0de41829414447919439eRequest model2e155418e5f0de41829414447919439eRequest);
-
-        /// <summary>
-        /// Update Customer Satisfaction Description Update a description for a satisfaction score entry
-        /// </summary>
-        /// <param name="id">ID of the CSAT entry</param>
-        /// <param name="model2e155418e5f0de41829414447919439eRequest">Reason to update</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall2e155418e5f0de41829414447919439eApiResponse"/>&gt;</returns>
-        public async Task<ICall2e155418e5f0de41829414447919439eApiResponse?> Call2e155418e5f0de41829414447919439eOrDefaultAsync(int id, Model2e155418e5f0de41829414447919439eRequest model2e155418e5f0de41829414447919439eRequest, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call2e155418e5f0de41829414447919439eAsync(id, model2e155418e5f0de41829414447919439eRequest, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Update Customer Satisfaction Description Update a description for a satisfaction score entry
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the CSAT entry</param>
-        /// <param name="model2e155418e5f0de41829414447919439eRequest">Reason to update</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall2e155418e5f0de41829414447919439eApiResponse"/>&gt;</returns>
-        public async Task<ICall2e155418e5f0de41829414447919439eApiResponse> Call2e155418e5f0de41829414447919439eAsync(int id, Model2e155418e5f0de41829414447919439eRequest model2e155418e5f0de41829414447919439eRequest, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateCall2e155418e5f0de41829414447919439e(model2e155418e5f0de41829414447919439eRequest);
-
-                FormatCall2e155418e5f0de41829414447919439e(ref id, model2e155418e5f0de41829414447919439eRequest);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/csat/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/csat/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    httpRequestMessageLocalVar.Content = (model2e155418e5f0de41829414447919439eRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model2e155418e5f0de41829414447919439eRequest, _jsonSerializerOptions));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Patch;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call2e155418e5f0de41829414447919439eApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/csat/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall2e155418e5f0de41829414447919439eDefaultImplementation(apiResponseLocalVar, id, model2e155418e5f0de41829414447919439eRequest);
-
-                        Events.ExecuteOnCall2e155418e5f0de41829414447919439e(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall2e155418e5f0de41829414447919439eDefaultImplementation(e, "/api/v1/csat/{id}", uriBuilderLocalVar.Path, id, model2e155418e5f0de41829414447919439eRequest);
-                Events.ExecuteOnErrorCall2e155418e5f0de41829414447919439e(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call2e155418e5f0de41829414447919439eApiResponse"/>
-        /// </summary>
-        public partial class Call2e155418e5f0de41829414447919439eApiResponse : GatewayApiSdk.Client.ApiResponse, ICall2e155418e5f0de41829414447919439eApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<CustomerSatisfactionApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call2e155418e5f0de41829414447919439eApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call2e155418e5f0de41829414447919439eApiResponse(ILogger<CustomerSatisfactionApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call2e155418e5f0de41829414447919439eApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call2e155418e5f0de41829414447919439eApiResponse(ILogger<CustomerSatisfactionApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model2e155418e5f0de41829414447919439e200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model2e155418e5f0de41829414447919439e200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model2e155418e5f0de41829414447919439e200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall3604171bd1ea2588906fe1cf65353366(Model3604171bd1ea2588906fe1cf65353366Request model3604171bd1ea2588906fe1cf65353366Request);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="model3604171bd1ea2588906fe1cf65353366Request"></param>
-        /// <returns></returns>
-        private void ValidateCall3604171bd1ea2588906fe1cf65353366(Model3604171bd1ea2588906fe1cf65353366Request model3604171bd1ea2588906fe1cf65353366Request)
-        {
-            if (model3604171bd1ea2588906fe1cf65353366Request == null)
-                throw new ArgumentNullException(nameof(model3604171bd1ea2588906fe1cf65353366Request));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model3604171bd1ea2588906fe1cf65353366Request"></param>
-        private void AfterCall3604171bd1ea2588906fe1cf65353366DefaultImplementation(ICall3604171bd1ea2588906fe1cf65353366ApiResponse apiResponseLocalVar, Model3604171bd1ea2588906fe1cf65353366Request model3604171bd1ea2588906fe1cf65353366Request)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall3604171bd1ea2588906fe1cf65353366(ref suppressDefaultLog, apiResponseLocalVar, model3604171bd1ea2588906fe1cf65353366Request);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model3604171bd1ea2588906fe1cf65353366Request"></param>
-        partial void AfterCall3604171bd1ea2588906fe1cf65353366(ref bool suppressDefaultLog, ICall3604171bd1ea2588906fe1cf65353366ApiResponse apiResponseLocalVar, Model3604171bd1ea2588906fe1cf65353366Request model3604171bd1ea2588906fe1cf65353366Request);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="model3604171bd1ea2588906fe1cf65353366Request"></param>
-        private void OnErrorCall3604171bd1ea2588906fe1cf65353366DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model3604171bd1ea2588906fe1cf65353366Request model3604171bd1ea2588906fe1cf65353366Request)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall3604171bd1ea2588906fe1cf65353366(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, model3604171bd1ea2588906fe1cf65353366Request);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="model3604171bd1ea2588906fe1cf65353366Request"></param>
-        partial void OnErrorCall3604171bd1ea2588906fe1cf65353366(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model3604171bd1ea2588906fe1cf65353366Request model3604171bd1ea2588906fe1cf65353366Request);
+        /// <param name="createCsatRequest"></param>
+        partial void OnErrorCreateCsat(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateCsatRequest createCsatRequest);
 
         /// <summary>
         /// Create Customer Satisfaction Score Creates a customer satisfaction score between 0 and 5
         /// </summary>
-        /// <param name="model3604171bd1ea2588906fe1cf65353366Request">Customer Satisfaction score</param>
+        /// <param name="createCsatRequest">Customer Satisfaction score</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3604171bd1ea2588906fe1cf65353366ApiResponse"/>&gt;</returns>
-        public async Task<ICall3604171bd1ea2588906fe1cf65353366ApiResponse?> Call3604171bd1ea2588906fe1cf65353366OrDefaultAsync(Model3604171bd1ea2588906fe1cf65353366Request model3604171bd1ea2588906fe1cf65353366Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateCsatApiResponse"/>&gt;</returns>
+        public async Task<ICreateCsatApiResponse?> CreateCsatOrDefaultAsync(CreateCsatRequest createCsatRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call3604171bd1ea2588906fe1cf65353366Async(model3604171bd1ea2588906fe1cf65353366Request, cancellationToken).ConfigureAwait(false);
+                return await CreateCsatAsync(createCsatRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -562,18 +291,18 @@ namespace GatewayApiSdk.Api
         /// Create Customer Satisfaction Score Creates a customer satisfaction score between 0 and 5
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model3604171bd1ea2588906fe1cf65353366Request">Customer Satisfaction score</param>
+        /// <param name="createCsatRequest">Customer Satisfaction score</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3604171bd1ea2588906fe1cf65353366ApiResponse"/>&gt;</returns>
-        public async Task<ICall3604171bd1ea2588906fe1cf65353366ApiResponse> Call3604171bd1ea2588906fe1cf65353366Async(Model3604171bd1ea2588906fe1cf65353366Request model3604171bd1ea2588906fe1cf65353366Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateCsatApiResponse"/>&gt;</returns>
+        public async Task<ICreateCsatApiResponse> CreateCsatAsync(CreateCsatRequest createCsatRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall3604171bd1ea2588906fe1cf65353366(model3604171bd1ea2588906fe1cf65353366Request);
+                ValidateCreateCsat(createCsatRequest);
 
-                FormatCall3604171bd1ea2588906fe1cf65353366(model3604171bd1ea2588906fe1cf65353366Request);
+                FormatCreateCsat(createCsatRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -584,9 +313,9 @@ namespace GatewayApiSdk.Api
                         ? "/api/v1/csat"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/csat");
 
-                    httpRequestMessageLocalVar.Content = (model3604171bd1ea2588906fe1cf65353366Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (createCsatRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model3604171bd1ea2588906fe1cf65353366Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createCsatRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -621,7 +350,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call3604171bd1ea2588906fe1cf65353366ApiResponse apiResponseLocalVar;
+                        CreateCsatApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -632,9 +361,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall3604171bd1ea2588906fe1cf65353366DefaultImplementation(apiResponseLocalVar, model3604171bd1ea2588906fe1cf65353366Request);
+                        AfterCreateCsatDefaultImplementation(apiResponseLocalVar, createCsatRequest);
 
-                        Events.ExecuteOnCall3604171bd1ea2588906fe1cf65353366(apiResponseLocalVar);
+                        Events.ExecuteOnCreateCsat(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -646,16 +375,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall3604171bd1ea2588906fe1cf65353366DefaultImplementation(e, "/api/v1/csat", uriBuilderLocalVar.Path, model3604171bd1ea2588906fe1cf65353366Request);
-                Events.ExecuteOnErrorCall3604171bd1ea2588906fe1cf65353366(e);
+                OnErrorCreateCsatDefaultImplementation(e, "/api/v1/csat", uriBuilderLocalVar.Path, createCsatRequest);
+                Events.ExecuteOnErrorCreateCsat(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call3604171bd1ea2588906fe1cf65353366ApiResponse"/>
+        /// The <see cref="CreateCsatApiResponse"/>
         /// </summary>
-        public partial class Call3604171bd1ea2588906fe1cf65353366ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall3604171bd1ea2588906fe1cf65353366ApiResponse
+        public partial class CreateCsatApiResponse : GatewayApiSdk.Client.ApiResponse, ICreateCsatApiResponse
         {
             /// <summary>
             /// The logger
@@ -663,7 +392,7 @@ namespace GatewayApiSdk.Api
             public ILogger<CustomerSatisfactionApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call3604171bd1ea2588906fe1cf65353366ApiResponse"/>
+            /// The <see cref="CreateCsatApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -672,14 +401,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call3604171bd1ea2588906fe1cf65353366ApiResponse(ILogger<CustomerSatisfactionApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public CreateCsatApiResponse(ILogger<CustomerSatisfactionApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call3604171bd1ea2588906fe1cf65353366ApiResponse"/>
+            /// The <see cref="CreateCsatApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -688,7 +417,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call3604171bd1ea2588906fe1cf65353366ApiResponse(ILogger<CustomerSatisfactionApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public CreateCsatApiResponse(ILogger<CustomerSatisfactionApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -706,11 +435,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 201 Created
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? Created()
+            public GatewayApiSdk.Model.DeleteAliases200Response? Created()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsCreated
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -719,7 +448,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryCreated([NotNullWhen(true)]out GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? result)
+            public bool TryCreated([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
             {
                 result = null;
 
@@ -744,11 +473,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 422 UnprocessableContent
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model3604171bd1ea2588906fe1cf65353366422Response? UnprocessableContent()
+            public GatewayApiSdk.Model.CreateCsat422Response? UnprocessableContent()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsUnprocessableContent
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model3604171bd1ea2588906fe1cf65353366422Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCsat422Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -757,7 +486,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryUnprocessableContent([NotNullWhen(true)]out GatewayApiSdk.Model.Model3604171bd1ea2588906fe1cf65353366422Response? result)
+            public bool TryUnprocessableContent([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCsat422Response? result)
             {
                 result = null;
 
@@ -782,11 +511,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -795,7 +524,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -805,6 +534,277 @@ namespace GatewayApiSdk.Api
                 } catch (Exception e)
                 {
                     OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatEditCsat(ref int id, EditCsatRequest editCsatRequest);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="editCsatRequest"></param>
+        /// <returns></returns>
+        private void ValidateEditCsat(EditCsatRequest editCsatRequest)
+        {
+            if (editCsatRequest == null)
+                throw new ArgumentNullException(nameof(editCsatRequest));
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="editCsatRequest"></param>
+        private void AfterEditCsatDefaultImplementation(IEditCsatApiResponse apiResponseLocalVar, int id, EditCsatRequest editCsatRequest)
+        {
+            bool suppressDefaultLog = false;
+            AfterEditCsat(ref suppressDefaultLog, apiResponseLocalVar, id, editCsatRequest);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="editCsatRequest"></param>
+        partial void AfterEditCsat(ref bool suppressDefaultLog, IEditCsatApiResponse apiResponseLocalVar, int id, EditCsatRequest editCsatRequest);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="editCsatRequest"></param>
+        private void OnErrorEditCsatDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditCsatRequest editCsatRequest)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorEditCsat(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, editCsatRequest);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="editCsatRequest"></param>
+        partial void OnErrorEditCsat(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditCsatRequest editCsatRequest);
+
+        /// <summary>
+        /// Update Customer Satisfaction Description Update a description for a satisfaction score entry
+        /// </summary>
+        /// <param name="id">ID of the CSAT entry</param>
+        /// <param name="editCsatRequest">Reason to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditCsatApiResponse"/>&gt;</returns>
+        public async Task<IEditCsatApiResponse?> EditCsatOrDefaultAsync(int id, EditCsatRequest editCsatRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await EditCsatAsync(id, editCsatRequest, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Update Customer Satisfaction Description Update a description for a satisfaction score entry
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the CSAT entry</param>
+        /// <param name="editCsatRequest">Reason to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditCsatApiResponse"/>&gt;</returns>
+        public async Task<IEditCsatApiResponse> EditCsatAsync(int id, EditCsatRequest editCsatRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                ValidateEditCsat(editCsatRequest);
+
+                FormatEditCsat(ref id, editCsatRequest);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/csat/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/csat/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    httpRequestMessageLocalVar.Content = (editCsatRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(editCsatRequest, _jsonSerializerOptions));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] contentTypes = new string[] {
+                        "application/json"
+                    };
+
+                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
+
+                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
+                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Patch;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        EditCsatApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/csat/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterEditCsatDefaultImplementation(apiResponseLocalVar, id, editCsatRequest);
+
+                        Events.ExecuteOnEditCsat(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorEditCsatDefaultImplementation(e, "/api/v1/csat/{id}", uriBuilderLocalVar.Path, id, editCsatRequest);
+                Events.ExecuteOnErrorEditCsat(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="EditCsatApiResponse"/>
+        /// </summary>
+        public partial class EditCsatApiResponse : GatewayApiSdk.Client.ApiResponse, IEditCsatApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<CustomerSatisfactionApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="EditCsatApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public EditCsatApiResponse(ILogger<CustomerSatisfactionApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="EditCsatApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public EditCsatApiResponse(ILogger<CustomerSatisfactionApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.EditCsat200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.EditCsat200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.EditCsat200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
                 }
 
                 return result != null;

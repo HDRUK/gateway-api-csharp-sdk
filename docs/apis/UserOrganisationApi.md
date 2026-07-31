@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**Call58e41162a49b5b1bf92231b359ea70cb**](UserOrganisationApi.md#call58e41162a49b5b1bf92231b359ea70cb) | **GET** /api/v1/users/organisations | UserOrganisation@index |
+| [**FetchUserOrganisations**](UserOrganisationApi.md#fetchuserorganisations) | **GET** /api/v1/users/organisations | UserOrganisation@index |
 
-<a id="call58e41162a49b5b1bf92231b359ea70cb"></a>
-# **Call58e41162a49b5b1bf92231b359ea70cb**
-> Model58e41162a49b5b1bf92231b359ea70cb200Response Call58e41162a49b5b1bf92231b359ea70cb ()
+<a id="fetchuserorganisations"></a>
+# **FetchUserOrganisations**
+> FetchUserOrganisations200Response FetchUserOrganisations ()
 
 UserOrganisation@index
 
@@ -19,7 +19,7 @@ Return a distinct list of all organisations which users belong to
 This endpoint does not need any parameter.
 ### Return type
 
-[**Model58e41162a49b5b1bf92231b359ea70cb200Response**](Model58e41162a49b5b1bf92231b359ea70cb200Response.md)
+[**FetchUserOrganisations200Response**](FetchUserOrganisations200Response.md)
 
 ### Authorization
 

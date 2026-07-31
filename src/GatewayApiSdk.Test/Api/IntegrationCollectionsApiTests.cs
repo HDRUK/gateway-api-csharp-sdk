@@ -51,53 +51,40 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call03c4b87e83a5e290cee5b9bfd43f9b0d
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call03c4b87e83a5e290cee5b9bfd43f9b0dAsyncTest()
-        {
-            int id = default!;
-            A18eed83ffe8ac895df3e1efa5ffb421Request a18eed83ffe8ac895df3e1efa5ffb421Request = default!;
-            var response = await _instance.Call03c4b87e83a5e290cee5b9bfd43f9b0dAsync(id, a18eed83ffe8ac895df3e1efa5ffb421Request);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call9909f9e058a98d63144b44938dbb0939
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call9909f9e058a98d63144b44938dbb0939AsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.Call9909f9e058a98d63144b44938dbb0939Async(id);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
         /// Test CreateCollectionsIntegrations
         /// </summary>
         [Fact (Skip = "not implemented")]
         public async Task CreateCollectionsIntegrationsAsyncTest()
         {
-            A18eed83ffe8ac895df3e1efa5ffb421Request a18eed83ffe8ac895df3e1efa5ffb421Request = default!;
-            var response = await _instance.CreateCollectionsIntegrationsAsync(a18eed83ffe8ac895df3e1efa5ffb421Request);
+            UpdateTeamCollectionsRequest updateTeamCollectionsRequest = default!;
+            var response = await _instance.CreateCollectionsIntegrationsAsync(updateTeamCollectionsRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
-        /// Test E935d442a0adfe7fa4fffabbfd45512c
+        /// Test DeleteCollectionsIntegrations
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task E935d442a0adfe7fa4fffabbfd45512cAsyncTest()
+        public async Task DeleteCollectionsIntegrationsAsyncTest()
         {
             int id = default!;
-            A18eed83ffe8ac895df3e1efa5ffb421Request a18eed83ffe8ac895df3e1efa5ffb421Request = default!;
-            var response = await _instance.E935d442a0adfe7fa4fffabbfd45512cAsync(id, a18eed83ffe8ac895df3e1efa5ffb421Request);
+            var response = await _instance.DeleteCollectionsIntegrationsAsync(id);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test EditCollectionsIntegrations
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task EditCollectionsIntegrationsAsyncTest()
+        {
+            int id = default!;
+            UpdateTeamCollectionsRequest updateTeamCollectionsRequest = default!;
+            var response = await _instance.EditCollectionsIntegrationsAsync(id, updateTeamCollectionsRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
@@ -123,6 +110,19 @@ namespace GatewayApiSdk.Test.Api
             var response = await _instance.FetchCollectionsIntegrationsAsync(id);
             var model = response.Ok();
             Assert.IsType<FetchCollections200Response>(model);
+        }
+
+        /// <summary>
+        /// Test UpdateCollectionsIntegrations
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task UpdateCollectionsIntegrationsAsyncTest()
+        {
+            int id = default!;
+            UpdateTeamCollectionsRequest updateTeamCollectionsRequest = default!;
+            var response = await _instance.UpdateCollectionsIntegrationsAsync(id, updateTeamCollectionsRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
         }
     }
 }

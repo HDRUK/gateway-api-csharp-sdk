@@ -39,58 +39,6 @@ namespace GatewayApiSdk.Api
         WidgetsApiEvents Events { get; }
 
         /// <summary>
-        /// WidgetController@getWidgetData
-        /// </summary>
-        /// <remarks>
-        /// Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, and DURS
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">Team ID</param>
-        /// <param name="teamIds">Comma-separated list of team IDs to filter data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IA439b274e045e4ae8ab3006c33290affApiResponse"/>&gt;</returns>
-        Task<IA439b274e045e4ae8ab3006c33290affApiResponse> A439b274e045e4ae8ab3006c33290affAsync(int teamId, string teamIds, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// WidgetController@getWidgetData
-        /// </summary>
-        /// <remarks>
-        /// Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, and DURS
-        /// </remarks>
-        /// <param name="teamId">Team ID</param>
-        /// <param name="teamIds">Comma-separated list of team IDs to filter data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IA439b274e045e4ae8ab3006c33290affApiResponse"/>?&gt;</returns>
-        Task<IA439b274e045e4ae8ab3006c33290affApiResponse?> A439b274e045e4ae8ab3006c33290affOrDefaultAsync(int teamId, string teamIds, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Update an existing widget
-        /// </summary>
-        /// <remarks>
-        /// Updates an existing widget for a given team ID
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">Team ID</param>
-        /// <param name="id">Widget ID</param>
-        /// <param name="c9939b681f1c7deb438e5d7a25ea9509Request"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC9939b681f1c7deb438e5d7a25ea9509ApiResponse"/>&gt;</returns>
-        Task<IC9939b681f1c7deb438e5d7a25ea9509ApiResponse> C9939b681f1c7deb438e5d7a25ea9509Async(int teamId, int id, Option<C9939b681f1c7deb438e5d7a25ea9509Request> c9939b681f1c7deb438e5d7a25ea9509Request = default, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Update an existing widget
-        /// </summary>
-        /// <remarks>
-        /// Updates an existing widget for a given team ID
-        /// </remarks>
-        /// <param name="teamId">Team ID</param>
-        /// <param name="id">Widget ID</param>
-        /// <param name="c9939b681f1c7deb438e5d7a25ea9509Request"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC9939b681f1c7deb438e5d7a25ea9509ApiResponse"/>?&gt;</returns>
-        Task<IC9939b681f1c7deb438e5d7a25ea9509ApiResponse?> C9939b681f1c7deb438e5d7a25ea9509OrDefaultAsync(int teamId, int id, Option<C9939b681f1c7deb438e5d7a25ea9509Request> c9939b681f1c7deb438e5d7a25ea9509Request = default, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
         /// Create a new widget
         /// </summary>
         /// <remarks>
@@ -189,6 +137,31 @@ namespace GatewayApiSdk.Api
         Task<IFetchWidgetApiResponse?> FetchWidgetOrDefaultAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
+        /// WidgetController@getWidgetData
+        /// </summary>
+        /// <remarks>
+        /// Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, and DURS
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="teamIds">Comma-separated list of team IDs to filter data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchWidgetDataSourcesApiResponse"/>&gt;</returns>
+        Task<IFetchWidgetDataSourcesApiResponse> FetchWidgetDataSourcesAsync(int teamId, string teamIds, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// WidgetController@getWidgetData
+        /// </summary>
+        /// <remarks>
+        /// Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, and DURS
+        /// </remarks>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="teamIds">Comma-separated list of team IDs to filter data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchWidgetDataSourcesApiResponse"/>?&gt;</returns>
+        Task<IFetchWidgetDataSourcesApiResponse?> FetchWidgetDataSourcesOrDefaultAsync(int teamId, string teamIds, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
         /// Retrieve data related to a widget
         /// </summary>
         /// <remarks>
@@ -243,6 +216,33 @@ namespace GatewayApiSdk.Api
         Task<ITrackWidgetEventApiResponse?> TrackWidgetEventOrDefaultAsync(int teamId, int id, TrackWidgetEventRequest trackWidgetEventRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
+        /// Update an existing widget
+        /// </summary>
+        /// <remarks>
+        /// Updates an existing widget for a given team ID
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="id">Widget ID</param>
+        /// <param name="updateWidgetRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateWidgetApiResponse"/>&gt;</returns>
+        Task<IUpdateWidgetApiResponse> UpdateWidgetAsync(int teamId, int id, Option<UpdateWidgetRequest> updateWidgetRequest = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Update an existing widget
+        /// </summary>
+        /// <remarks>
+        /// Updates an existing widget for a given team ID
+        /// </remarks>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="id">Widget ID</param>
+        /// <param name="updateWidgetRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateWidgetApiResponse"/>?&gt;</returns>
+        Task<IUpdateWidgetApiResponse?> UpdateWidgetOrDefaultAsync(int teamId, int id, Option<UpdateWidgetRequest> updateWidgetRequest = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
         /// Get widget analytics for a team
         /// </summary>
         /// <remarks>
@@ -273,51 +273,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IA439b274e045e4ae8ab3006c33290affApiResponse"/>
-    /// </summary>
-    public interface IA439b274e045e4ae8ab3006c33290affApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.A439b274e045e4ae8ab3006c33290aff200Response?>, IBadRequest<GatewayApiSdk.Model.A439b274e045e4ae8ab3006c33290aff400Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 400 BadRequest
-        /// </summary>
-        /// <returns></returns>
-        bool IsBadRequest { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IC9939b681f1c7deb438e5d7a25ea9509ApiResponse"/>
-    /// </summary>
-    public interface IC9939b681f1c7deb438e5d7a25ea9509ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.C9939b681f1c7deb438e5d7a25ea9509200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-
-        /// <summary>
-        /// Returns true if the response is 500 InternalServerError
-        /// </summary>
-        /// <returns></returns>
-        bool IsInternalServerError { get; }
-    }
-
-    /// <summary>
     /// The <see cref="ICreateWidgetApiResponse"/>
     /// </summary>
-    public interface ICreateWidgetApiResponse : GatewayApiSdk.Client.IApiResponse, ICreated<GatewayApiSdk.Model.CreateWidget201Response?>, IBadRequest<GatewayApiSdk.Model.CreateWidget400Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface ICreateWidgetApiResponse : GatewayApiSdk.Client.IApiResponse, ICreated<GatewayApiSdk.Model.CreateWidget201Response?>, IBadRequest<GatewayApiSdk.Model.CreateWidget400Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -341,7 +299,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IDeleteWidgetApiResponse"/>
     /// </summary>
-    public interface IDeleteWidgetApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IDeleteWidgetApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -377,7 +335,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IFetchWidgetApiResponse"/>
     /// </summary>
-    public interface IFetchWidgetApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchWidget200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
+    public interface IFetchWidgetApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchWidget200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -390,6 +348,24 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <returns></returns>
         bool IsNotFound { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchWidgetDataSourcesApiResponse"/>
+    /// </summary>
+    public interface IFetchWidgetDataSourcesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchWidgetDataSources200Response?>, IBadRequest<GatewayApiSdk.Model.FetchWidgetDataSources400Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 400 BadRequest
+        /// </summary>
+        /// <returns></returns>
+        bool IsBadRequest { get; }
     }
 
     /// <summary>
@@ -441,6 +417,30 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
+    /// The <see cref="IUpdateWidgetApiResponse"/>
+    /// </summary>
+    public interface IUpdateWidgetApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.UpdateWidget200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 404 NotFound
+        /// </summary>
+        /// <returns></returns>
+        bool IsNotFound { get; }
+
+        /// <summary>
+        /// Returns true if the response is 500 InternalServerError
+        /// </summary>
+        /// <returns></returns>
+        bool IsInternalServerError { get; }
+    }
+
+    /// <summary>
     /// The <see cref="IWidgetAnalyticsApiResponse"/>
     /// </summary>
     public interface IWidgetAnalyticsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.WidgetAnalytics200Response?>
@@ -457,46 +457,6 @@ namespace GatewayApiSdk.Api
     /// </summary>
     public class WidgetsApiEvents
     {
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnA439b274e045e4ae8ab3006c33290aff;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorA439b274e045e4ae8ab3006c33290aff;
-
-        internal void ExecuteOnA439b274e045e4ae8ab3006c33290aff(WidgetsApi.A439b274e045e4ae8ab3006c33290affApiResponse apiResponse)
-        {
-            OnA439b274e045e4ae8ab3006c33290aff?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorA439b274e045e4ae8ab3006c33290aff(Exception exception)
-        {
-            OnErrorA439b274e045e4ae8ab3006c33290aff?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnC9939b681f1c7deb438e5d7a25ea9509;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorC9939b681f1c7deb438e5d7a25ea9509;
-
-        internal void ExecuteOnC9939b681f1c7deb438e5d7a25ea9509(WidgetsApi.C9939b681f1c7deb438e5d7a25ea9509ApiResponse apiResponse)
-        {
-            OnC9939b681f1c7deb438e5d7a25ea9509?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorC9939b681f1c7deb438e5d7a25ea9509(Exception exception)
-        {
-            OnErrorC9939b681f1c7deb438e5d7a25ea9509?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
         /// <summary>
         /// The event raised after the server response
         /// </summary>
@@ -580,6 +540,26 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
+        public event EventHandler<ApiResponseEventArgs>? OnFetchWidgetDataSources;
+
+        /// <summary>
+        /// The event raised after an error querying the server
+        /// </summary>
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchWidgetDataSources;
+
+        internal void ExecuteOnFetchWidgetDataSources(WidgetsApi.FetchWidgetDataSourcesApiResponse apiResponse)
+        {
+            OnFetchWidgetDataSources?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+        }
+
+        internal void ExecuteOnErrorFetchWidgetDataSources(Exception exception)
+        {
+            OnErrorFetchWidgetDataSources?.Invoke(this, new ExceptionEventArgs(exception));
+        }
+
+        /// <summary>
+        /// The event raised after the server response
+        /// </summary>
         public event EventHandler<ApiResponseEventArgs>? OnRetrieveWidgetData;
 
         /// <summary>
@@ -615,6 +595,26 @@ namespace GatewayApiSdk.Api
         internal void ExecuteOnErrorTrackWidgetEvent(Exception exception)
         {
             OnErrorTrackWidgetEvent?.Invoke(this, new ExceptionEventArgs(exception));
+        }
+
+        /// <summary>
+        /// The event raised after the server response
+        /// </summary>
+        public event EventHandler<ApiResponseEventArgs>? OnUpdateWidget;
+
+        /// <summary>
+        /// The event raised after an error querying the server
+        /// </summary>
+        public event EventHandler<ExceptionEventArgs>? OnErrorUpdateWidget;
+
+        internal void ExecuteOnUpdateWidget(WidgetsApi.UpdateWidgetApiResponse apiResponse)
+        {
+            OnUpdateWidget?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+        }
+
+        internal void ExecuteOnErrorUpdateWidget(Exception exception)
+        {
+            OnErrorUpdateWidget?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
@@ -677,601 +677,6 @@ namespace GatewayApiSdk.Api
             HttpClient = httpClient;
             Events = widgetsApiEvents;
             BearerTokenProvider = bearerTokenProvider;
-        }
-
-        partial void FormatA439b274e045e4ae8ab3006c33290aff(ref int teamId, ref string teamIds);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="teamIds"></param>
-        /// <returns></returns>
-        private void ValidateA439b274e045e4ae8ab3006c33290aff(string teamIds)
-        {
-            if (teamIds == null)
-                throw new ArgumentNullException(nameof(teamIds));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="teamIds"></param>
-        private void AfterA439b274e045e4ae8ab3006c33290affDefaultImplementation(IA439b274e045e4ae8ab3006c33290affApiResponse apiResponseLocalVar, int teamId, string teamIds)
-        {
-            bool suppressDefaultLog = false;
-            AfterA439b274e045e4ae8ab3006c33290aff(ref suppressDefaultLog, apiResponseLocalVar, teamId, teamIds);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="teamIds"></param>
-        partial void AfterA439b274e045e4ae8ab3006c33290aff(ref bool suppressDefaultLog, IA439b274e045e4ae8ab3006c33290affApiResponse apiResponseLocalVar, int teamId, string teamIds);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="teamIds"></param>
-        private void OnErrorA439b274e045e4ae8ab3006c33290affDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, string teamIds)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorA439b274e045e4ae8ab3006c33290aff(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, teamIds);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="teamIds"></param>
-        partial void OnErrorA439b274e045e4ae8ab3006c33290aff(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, string teamIds);
-
-        /// <summary>
-        /// WidgetController@getWidgetData Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, and DURS
-        /// </summary>
-        /// <param name="teamId">Team ID</param>
-        /// <param name="teamIds">Comma-separated list of team IDs to filter data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IA439b274e045e4ae8ab3006c33290affApiResponse"/>&gt;</returns>
-        public async Task<IA439b274e045e4ae8ab3006c33290affApiResponse?> A439b274e045e4ae8ab3006c33290affOrDefaultAsync(int teamId, string teamIds, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await A439b274e045e4ae8ab3006c33290affAsync(teamId, teamIds, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// WidgetController@getWidgetData Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, and DURS
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">Team ID</param>
-        /// <param name="teamIds">Comma-separated list of team IDs to filter data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IA439b274e045e4ae8ab3006c33290affApiResponse"/>&gt;</returns>
-        public async Task<IA439b274e045e4ae8ab3006c33290affApiResponse> A439b274e045e4ae8ab3006c33290affAsync(int teamId, string teamIds, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateA439b274e045e4ae8ab3006c33290aff(teamIds);
-
-                FormatA439b274e045e4ae8ab3006c33290aff(ref teamId, ref teamIds);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/teams/{teamId}/widgets/data"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/teams/{teamId}/widgets/data");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
-
-                    System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
-
-                    parseQueryStringLocalVar["team_ids"] = ClientUtils.ParameterToString(teamIds);
-
-                    uriBuilderLocalVar.Query = parseQueryStringLocalVar.ToString();
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        A439b274e045e4ae8ab3006c33290affApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/teams/{teamId}/widgets/data", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterA439b274e045e4ae8ab3006c33290affDefaultImplementation(apiResponseLocalVar, teamId, teamIds);
-
-                        Events.ExecuteOnA439b274e045e4ae8ab3006c33290aff(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorA439b274e045e4ae8ab3006c33290affDefaultImplementation(e, "/api/v1/teams/{teamId}/widgets/data", uriBuilderLocalVar.Path, teamId, teamIds);
-                Events.ExecuteOnErrorA439b274e045e4ae8ab3006c33290aff(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="A439b274e045e4ae8ab3006c33290affApiResponse"/>
-        /// </summary>
-        public partial class A439b274e045e4ae8ab3006c33290affApiResponse : GatewayApiSdk.Client.ApiResponse, IA439b274e045e4ae8ab3006c33290affApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<WidgetsApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="A439b274e045e4ae8ab3006c33290affApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public A439b274e045e4ae8ab3006c33290affApiResponse(ILogger<WidgetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="A439b274e045e4ae8ab3006c33290affApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public A439b274e045e4ae8ab3006c33290affApiResponse(ILogger<WidgetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.A439b274e045e4ae8ab3006c33290aff200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.A439b274e045e4ae8ab3006c33290aff200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.A439b274e045e4ae8ab3006c33290aff200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 400 BadRequest
-            /// </summary>
-            /// <returns></returns>
-            public bool IsBadRequest => 400 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 400 BadRequest
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.A439b274e045e4ae8ab3006c33290aff400Response? BadRequest()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsBadRequest
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.A439b274e045e4ae8ab3006c33290aff400Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 400 BadRequest and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryBadRequest([NotNullWhen(true)]out GatewayApiSdk.Model.A439b274e045e4ae8ab3006c33290aff400Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = BadRequest();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)400);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatC9939b681f1c7deb438e5d7a25ea9509(ref int teamId, ref int id, Option<C9939b681f1c7deb438e5d7a25ea9509Request> c9939b681f1c7deb438e5d7a25ea9509Request);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="c9939b681f1c7deb438e5d7a25ea9509Request"></param>
-        /// <returns></returns>
-        private void ValidateC9939b681f1c7deb438e5d7a25ea9509(Option<C9939b681f1c7deb438e5d7a25ea9509Request> c9939b681f1c7deb438e5d7a25ea9509Request)
-        {
-            if (c9939b681f1c7deb438e5d7a25ea9509Request.IsSet && c9939b681f1c7deb438e5d7a25ea9509Request.Value == null)
-                throw new ArgumentNullException(nameof(c9939b681f1c7deb438e5d7a25ea9509Request));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        /// <param name="c9939b681f1c7deb438e5d7a25ea9509Request"></param>
-        private void AfterC9939b681f1c7deb438e5d7a25ea9509DefaultImplementation(IC9939b681f1c7deb438e5d7a25ea9509ApiResponse apiResponseLocalVar, int teamId, int id, Option<C9939b681f1c7deb438e5d7a25ea9509Request> c9939b681f1c7deb438e5d7a25ea9509Request)
-        {
-            bool suppressDefaultLog = false;
-            AfterC9939b681f1c7deb438e5d7a25ea9509(ref suppressDefaultLog, apiResponseLocalVar, teamId, id, c9939b681f1c7deb438e5d7a25ea9509Request);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        /// <param name="c9939b681f1c7deb438e5d7a25ea9509Request"></param>
-        partial void AfterC9939b681f1c7deb438e5d7a25ea9509(ref bool suppressDefaultLog, IC9939b681f1c7deb438e5d7a25ea9509ApiResponse apiResponseLocalVar, int teamId, int id, Option<C9939b681f1c7deb438e5d7a25ea9509Request> c9939b681f1c7deb438e5d7a25ea9509Request);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        /// <param name="c9939b681f1c7deb438e5d7a25ea9509Request"></param>
-        private void OnErrorC9939b681f1c7deb438e5d7a25ea9509DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id, Option<C9939b681f1c7deb438e5d7a25ea9509Request> c9939b681f1c7deb438e5d7a25ea9509Request)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorC9939b681f1c7deb438e5d7a25ea9509(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, id, c9939b681f1c7deb438e5d7a25ea9509Request);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        /// <param name="c9939b681f1c7deb438e5d7a25ea9509Request"></param>
-        partial void OnErrorC9939b681f1c7deb438e5d7a25ea9509(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id, Option<C9939b681f1c7deb438e5d7a25ea9509Request> c9939b681f1c7deb438e5d7a25ea9509Request);
-
-        /// <summary>
-        /// Update an existing widget Updates an existing widget for a given team ID
-        /// </summary>
-        /// <param name="teamId">Team ID</param>
-        /// <param name="id">Widget ID</param>
-        /// <param name="c9939b681f1c7deb438e5d7a25ea9509Request"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC9939b681f1c7deb438e5d7a25ea9509ApiResponse"/>&gt;</returns>
-        public async Task<IC9939b681f1c7deb438e5d7a25ea9509ApiResponse?> C9939b681f1c7deb438e5d7a25ea9509OrDefaultAsync(int teamId, int id, Option<C9939b681f1c7deb438e5d7a25ea9509Request> c9939b681f1c7deb438e5d7a25ea9509Request = default, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await C9939b681f1c7deb438e5d7a25ea9509Async(teamId, id, c9939b681f1c7deb438e5d7a25ea9509Request, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Update an existing widget Updates an existing widget for a given team ID
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">Team ID</param>
-        /// <param name="id">Widget ID</param>
-        /// <param name="c9939b681f1c7deb438e5d7a25ea9509Request"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC9939b681f1c7deb438e5d7a25ea9509ApiResponse"/>&gt;</returns>
-        public async Task<IC9939b681f1c7deb438e5d7a25ea9509ApiResponse> C9939b681f1c7deb438e5d7a25ea9509Async(int teamId, int id, Option<C9939b681f1c7deb438e5d7a25ea9509Request> c9939b681f1c7deb438e5d7a25ea9509Request = default, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateC9939b681f1c7deb438e5d7a25ea9509(c9939b681f1c7deb438e5d7a25ea9509Request);
-
-                FormatC9939b681f1c7deb438e5d7a25ea9509(ref teamId, ref id, c9939b681f1c7deb438e5d7a25ea9509Request);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/teams/{teamId}/widgets/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/teams/{teamId}/widgets/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    if (c9939b681f1c7deb438e5d7a25ea9509Request.IsSet)
-                    {
-                      httpRequestMessageLocalVar.Content = (c9939b681f1c7deb438e5d7a25ea9509Request.Value as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(c9939b681f1c7deb438e5d7a25ea9509Request.Value, _jsonSerializerOptions));
-                    }
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Patch;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        C9939b681f1c7deb438e5d7a25ea9509ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/teams/{teamId}/widgets/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterC9939b681f1c7deb438e5d7a25ea9509DefaultImplementation(apiResponseLocalVar, teamId, id, c9939b681f1c7deb438e5d7a25ea9509Request);
-
-                        Events.ExecuteOnC9939b681f1c7deb438e5d7a25ea9509(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorC9939b681f1c7deb438e5d7a25ea9509DefaultImplementation(e, "/api/v1/teams/{teamId}/widgets/{id}", uriBuilderLocalVar.Path, teamId, id, c9939b681f1c7deb438e5d7a25ea9509Request);
-                Events.ExecuteOnErrorC9939b681f1c7deb438e5d7a25ea9509(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="C9939b681f1c7deb438e5d7a25ea9509ApiResponse"/>
-        /// </summary>
-        public partial class C9939b681f1c7deb438e5d7a25ea9509ApiResponse : GatewayApiSdk.Client.ApiResponse, IC9939b681f1c7deb438e5d7a25ea9509ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<WidgetsApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="C9939b681f1c7deb438e5d7a25ea9509ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public C9939b681f1c7deb438e5d7a25ea9509ApiResponse(ILogger<WidgetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="C9939b681f1c7deb438e5d7a25ea9509ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public C9939b681f1c7deb438e5d7a25ea9509ApiResponse(ILogger<WidgetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.C9939b681f1c7deb438e5d7a25ea9509200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C9939b681f1c7deb438e5d7a25ea9509200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C9939b681f1c7deb438e5d7a25ea9509200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
         partial void FormatCreateWidget(ref int teamId, CreateWidgetRequest createWidgetRequest);
@@ -1582,11 +987,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1595,7 +1000,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -1828,11 +1233,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1841,7 +1246,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -1866,11 +1271,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? Ok()
+            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1879,7 +1284,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
             {
                 result = null;
 
@@ -1904,11 +1309,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1917,7 +1322,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -2427,11 +1832,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2440,7 +1845,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -2450,6 +1855,308 @@ namespace GatewayApiSdk.Api
                 } catch (Exception e)
                 {
                     OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchWidgetDataSources(ref int teamId, ref string teamIds);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="teamIds"></param>
+        /// <returns></returns>
+        private void ValidateFetchWidgetDataSources(string teamIds)
+        {
+            if (teamIds == null)
+                throw new ArgumentNullException(nameof(teamIds));
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="teamIds"></param>
+        private void AfterFetchWidgetDataSourcesDefaultImplementation(IFetchWidgetDataSourcesApiResponse apiResponseLocalVar, int teamId, string teamIds)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchWidgetDataSources(ref suppressDefaultLog, apiResponseLocalVar, teamId, teamIds);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="teamIds"></param>
+        partial void AfterFetchWidgetDataSources(ref bool suppressDefaultLog, IFetchWidgetDataSourcesApiResponse apiResponseLocalVar, int teamId, string teamIds);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="teamIds"></param>
+        private void OnErrorFetchWidgetDataSourcesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, string teamIds)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchWidgetDataSources(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, teamIds);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="teamIds"></param>
+        partial void OnErrorFetchWidgetDataSources(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, string teamIds);
+
+        /// <summary>
+        /// WidgetController@getWidgetData Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, and DURS
+        /// </summary>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="teamIds">Comma-separated list of team IDs to filter data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchWidgetDataSourcesApiResponse"/>&gt;</returns>
+        public async Task<IFetchWidgetDataSourcesApiResponse?> FetchWidgetDataSourcesOrDefaultAsync(int teamId, string teamIds, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchWidgetDataSourcesAsync(teamId, teamIds, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// WidgetController@getWidgetData Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, and DURS
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="teamIds">Comma-separated list of team IDs to filter data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchWidgetDataSourcesApiResponse"/>&gt;</returns>
+        public async Task<IFetchWidgetDataSourcesApiResponse> FetchWidgetDataSourcesAsync(int teamId, string teamIds, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                ValidateFetchWidgetDataSources(teamIds);
+
+                FormatFetchWidgetDataSources(ref teamId, ref teamIds);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/teams/{teamId}/widgets/data"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/teams/{teamId}/widgets/data");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
+
+                    System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
+
+                    parseQueryStringLocalVar["team_ids"] = ClientUtils.ParameterToString(teamIds);
+
+                    uriBuilderLocalVar.Query = parseQueryStringLocalVar.ToString();
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchWidgetDataSourcesApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/teams/{teamId}/widgets/data", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchWidgetDataSourcesDefaultImplementation(apiResponseLocalVar, teamId, teamIds);
+
+                        Events.ExecuteOnFetchWidgetDataSources(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchWidgetDataSourcesDefaultImplementation(e, "/api/v1/teams/{teamId}/widgets/data", uriBuilderLocalVar.Path, teamId, teamIds);
+                Events.ExecuteOnErrorFetchWidgetDataSources(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchWidgetDataSourcesApiResponse"/>
+        /// </summary>
+        public partial class FetchWidgetDataSourcesApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchWidgetDataSourcesApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<WidgetsApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchWidgetDataSourcesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchWidgetDataSourcesApiResponse(ILogger<WidgetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchWidgetDataSourcesApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchWidgetDataSourcesApiResponse(ILogger<WidgetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchWidgetDataSources200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchWidgetDataSources200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchWidgetDataSources200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 400 BadRequest
+            /// </summary>
+            /// <returns></returns>
+            public bool IsBadRequest => 400 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 400 BadRequest
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchWidgetDataSources400Response? BadRequest()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsBadRequest
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchWidgetDataSources400Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 400 BadRequest and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryBadRequest([NotNullWhen(true)]out GatewayApiSdk.Model.FetchWidgetDataSources400Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = BadRequest();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)400);
                 }
 
                 return result != null;
@@ -3007,6 +2714,299 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <returns></returns>
             public bool IsUnprocessableContent => 422 == (int)StatusCode;
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatUpdateWidget(ref int teamId, ref int id, Option<UpdateWidgetRequest> updateWidgetRequest);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="updateWidgetRequest"></param>
+        /// <returns></returns>
+        private void ValidateUpdateWidget(Option<UpdateWidgetRequest> updateWidgetRequest)
+        {
+            if (updateWidgetRequest.IsSet && updateWidgetRequest.Value == null)
+                throw new ArgumentNullException(nameof(updateWidgetRequest));
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="id"></param>
+        /// <param name="updateWidgetRequest"></param>
+        private void AfterUpdateWidgetDefaultImplementation(IUpdateWidgetApiResponse apiResponseLocalVar, int teamId, int id, Option<UpdateWidgetRequest> updateWidgetRequest)
+        {
+            bool suppressDefaultLog = false;
+            AfterUpdateWidget(ref suppressDefaultLog, apiResponseLocalVar, teamId, id, updateWidgetRequest);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="id"></param>
+        /// <param name="updateWidgetRequest"></param>
+        partial void AfterUpdateWidget(ref bool suppressDefaultLog, IUpdateWidgetApiResponse apiResponseLocalVar, int teamId, int id, Option<UpdateWidgetRequest> updateWidgetRequest);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="id"></param>
+        /// <param name="updateWidgetRequest"></param>
+        private void OnErrorUpdateWidgetDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id, Option<UpdateWidgetRequest> updateWidgetRequest)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorUpdateWidget(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, id, updateWidgetRequest);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="id"></param>
+        /// <param name="updateWidgetRequest"></param>
+        partial void OnErrorUpdateWidget(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id, Option<UpdateWidgetRequest> updateWidgetRequest);
+
+        /// <summary>
+        /// Update an existing widget Updates an existing widget for a given team ID
+        /// </summary>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="id">Widget ID</param>
+        /// <param name="updateWidgetRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateWidgetApiResponse"/>&gt;</returns>
+        public async Task<IUpdateWidgetApiResponse?> UpdateWidgetOrDefaultAsync(int teamId, int id, Option<UpdateWidgetRequest> updateWidgetRequest = default, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await UpdateWidgetAsync(teamId, id, updateWidgetRequest, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Update an existing widget Updates an existing widget for a given team ID
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="id">Widget ID</param>
+        /// <param name="updateWidgetRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateWidgetApiResponse"/>&gt;</returns>
+        public async Task<IUpdateWidgetApiResponse> UpdateWidgetAsync(int teamId, int id, Option<UpdateWidgetRequest> updateWidgetRequest = default, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                ValidateUpdateWidget(updateWidgetRequest);
+
+                FormatUpdateWidget(ref teamId, ref id, updateWidgetRequest);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/teams/{teamId}/widgets/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/teams/{teamId}/widgets/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    if (updateWidgetRequest.IsSet)
+                    {
+                      httpRequestMessageLocalVar.Content = (updateWidgetRequest.Value as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateWidgetRequest.Value, _jsonSerializerOptions));
+                    }
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] contentTypes = new string[] {
+                        "application/json"
+                    };
+
+                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
+
+                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
+                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Patch;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        UpdateWidgetApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/teams/{teamId}/widgets/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterUpdateWidgetDefaultImplementation(apiResponseLocalVar, teamId, id, updateWidgetRequest);
+
+                        Events.ExecuteOnUpdateWidget(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorUpdateWidgetDefaultImplementation(e, "/api/v1/teams/{teamId}/widgets/{id}", uriBuilderLocalVar.Path, teamId, id, updateWidgetRequest);
+                Events.ExecuteOnErrorUpdateWidget(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="UpdateWidgetApiResponse"/>
+        /// </summary>
+        public partial class UpdateWidgetApiResponse : GatewayApiSdk.Client.ApiResponse, IUpdateWidgetApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<WidgetsApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="UpdateWidgetApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public UpdateWidgetApiResponse(ILogger<WidgetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="UpdateWidgetApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public UpdateWidgetApiResponse(ILogger<WidgetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.UpdateWidget200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateWidget200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateWidget200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public bool IsInternalServerError => 500 == (int)StatusCode;
 
             private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
             {

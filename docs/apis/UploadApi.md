@@ -4,14 +4,53 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**Ba8ab1a2710efebacb7909736d7d2d52**](UploadApi.md#ba8ab1a2710efebacb7909736d7d2d52) | **DELETE** /api/v1/files/processed/{id} | Upload@destroy |
-| [**Call21a780f609f0b91c198ab5de91dc27c6**](UploadApi.md#call21a780f609f0b91c198ab5de91dc27c6) | **GET** /api/v1/files/processed/{uuid}/download | Upload@content |
-| [**E72aa4b4f0a80caa9fe872bdff983455**](UploadApi.md#e72aa4b4f0a80caa9fe872bdff983455) | **GET** /api/v1/files/{uuid} | Upload@show |
-| [**Fceeda218a8998a137b9d7692e7947b6**](UploadApi.md#fceeda218a8998a137b9d7692e7947b6) | **POST** /api/v1/files | Upload@upload |
+| [**CreateFiles**](UploadApi.md#createfiles) | **POST** /api/v1/files | Upload@upload |
+| [**DeleteFilesProcessed**](UploadApi.md#deletefilesprocessed) | **DELETE** /api/v1/files/processed/{id} | Upload@destroy |
+| [**FetchFiles**](UploadApi.md#fetchfiles) | **GET** /api/v1/files/{uuid} | Upload@show |
+| [**FetchFilesProcessedContent**](UploadApi.md#fetchfilesprocessedcontent) | **GET** /api/v1/files/processed/{uuid}/download | Upload@content |
 
-<a id="ba8ab1a2710efebacb7909736d7d2d52"></a>
-# **Ba8ab1a2710efebacb7909736d7d2d52**
-> C29b5b3424f7317b69b4bda048ccfafb200Response Ba8ab1a2710efebacb7909736d7d2d52 (string id)
+<a id="createfiles"></a>
+# **CreateFiles**
+> CreateFiles200Response CreateFiles (string entityFlag = null, int teamId = null, int applicationId = null, int questionId = null)
+
+Upload@upload
+
+Upload a file to the gateway-api via scanning sub-service
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **entityFlag** | **string** | Flag to indicate the purpose of the file upload e.g. dur-from-upload | [optional]  |
+| **teamId** | **int** | Id of team associated with the file upload | [optional]  |
+| **applicationId** | **int** | Id of dar application associated with the file upload | [optional]  |
+| **questionId** | **int** | Id of the question in the dar application associated with the file upload | [optional]  |
+
+### Return type
+
+[**CreateFiles200Response**](CreateFiles200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Upload complete |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="deletefilesprocessed"></a>
+# **DeleteFilesProcessed**
+> DeleteAliases200Response DeleteFilesProcessed (string id)
 
 Upload@destroy
 
@@ -26,7 +65,7 @@ Delete a processed file
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 
@@ -47,45 +86,9 @@ Delete a processed file
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="call21a780f609f0b91c198ab5de91dc27c6"></a>
-# **Call21a780f609f0b91c198ab5de91dc27c6**
-> Model21a780f609f0b91c198ab5de91dc27c6200Response Call21a780f609f0b91c198ab5de91dc27c6 (string uuid)
-
-Upload@content
-
-Get the content of a processed file
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **uuid** | **string** | upload id |  |
-
-### Return type
-
-[**Model21a780f609f0b91c198ab5de91dc27c6200Response**](Model21a780f609f0b91c198ab5de91dc27c6200Response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="e72aa4b4f0a80caa9fe872bdff983455"></a>
-# **E72aa4b4f0a80caa9fe872bdff983455**
-> E72aa4b4f0a80caa9fe872bdff983455200Response E72aa4b4f0a80caa9fe872bdff983455 (string uuid)
+<a id="fetchfiles"></a>
+# **FetchFiles**
+> FetchFiles200Response FetchFiles (string uuid)
 
 Upload@show
 
@@ -100,7 +103,7 @@ Get the scanning status of an upload
 
 ### Return type
 
-[**E72aa4b4f0a80caa9fe872bdff983455200Response**](E72aa4b4f0a80caa9fe872bdff983455200Response.md)
+[**FetchFiles200Response**](FetchFiles200Response.md)
 
 ### Authorization
 
@@ -119,27 +122,24 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="fceeda218a8998a137b9d7692e7947b6"></a>
-# **Fceeda218a8998a137b9d7692e7947b6**
-> Fceeda218a8998a137b9d7692e7947b6200Response Fceeda218a8998a137b9d7692e7947b6 (string entityFlag = null, int teamId = null, int applicationId = null, int questionId = null)
+<a id="fetchfilesprocessedcontent"></a>
+# **FetchFilesProcessedContent**
+> FetchFilesProcessedContent200Response FetchFilesProcessedContent (string uuid)
 
-Upload@upload
+Upload@content
 
-Upload a file to the gateway-api via scanning sub-service
+Get the content of a processed file
 
 
 ### Parameters
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **entityFlag** | **string** | Flag to indicate the purpose of the file upload e.g. dur-from-upload | [optional]  |
-| **teamId** | **int** | Id of team associated with the file upload | [optional]  |
-| **applicationId** | **int** | Id of dar application associated with the file upload | [optional]  |
-| **questionId** | **int** | Id of the question in the dar application associated with the file upload | [optional]  |
+| **uuid** | **string** | upload id |  |
 
 ### Return type
 
-[**Fceeda218a8998a137b9d7692e7947b6200Response**](Fceeda218a8998a137b9d7692e7947b6200Response.md)
+[**FetchFilesProcessedContent200Response**](FetchFilesProcessedContent200Response.md)
 
 ### Authorization
 
@@ -154,7 +154,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Upload complete |  -  |
+| **200** | Success |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

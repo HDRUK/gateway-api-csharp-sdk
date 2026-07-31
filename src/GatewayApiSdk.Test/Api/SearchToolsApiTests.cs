@@ -51,17 +51,17 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test A3e02b5a05b56708998c4bd96935d5f5
+        /// Test SearchTools
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task A3e02b5a05b56708998c4bd96935d5f5AsyncTest()
+        public async Task SearchToolsAsyncTest()
         {
-            A3e02b5a05b56708998c4bd96935d5f5Request a3e02b5a05b56708998c4bd96935d5f5Request = default!;
+            SearchToolsRequest searchToolsRequest = default!;
             Client.Option<string> sort = default!;
             Client.Option<string> direction = default!;
-            var response = await _instance.A3e02b5a05b56708998c4bd96935d5f5Async(a3e02b5a05b56708998c4bd96935d5f5Request, sort, direction);
+            var response = await _instance.SearchToolsAsync(searchToolsRequest, sort, direction);
             var model = response.Ok();
-            Assert.IsType<A3e02b5a05b56708998c4bd96935d5f5200Response>(model);
+            Assert.IsType<SearchTools200Response>(model);
         }
     }
 }

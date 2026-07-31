@@ -4,32 +4,31 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**Call3c0f53b5284c481bc135c2035d40c017**](IntegrationDataUseRegistersApi.md#call3c0f53b5284c481bc135c2035d40c017) | **PATCH** /api/v1/integrations/dur/{id} | Edit a dur |
-| [**Call3c79eaaecaae1de1b86c443337841895**](IntegrationDataUseRegistersApi.md#call3c79eaaecaae1de1b86c443337841895) | **PUT** /api/v1/integrations/dur/{id} | Update a dur by id |
-| [**Call7170e7dc71293d3b5042d6cb03298eb4**](IntegrationDataUseRegistersApi.md#call7170e7dc71293d3b5042d6cb03298eb4) | **DELETE** /api/v1/integrations/dur/{id} | Delete a dur |
 | [**CreateDurIntegrations**](IntegrationDataUseRegistersApi.md#createdurintegrations) | **POST** /api/v1/integrations/dur | IntegrationDurController@store |
+| [**DeleteDurIntegrations**](IntegrationDataUseRegistersApi.md#deletedurintegrations) | **DELETE** /api/v1/integrations/dur/{id} | Delete a dur |
+| [**EditDurIntegrations**](IntegrationDataUseRegistersApi.md#editdurintegrations) | **PATCH** /api/v1/integrations/dur/{id} | Edit a dur |
 | [**FetchAllDurIntegrations**](IntegrationDataUseRegistersApi.md#fetchalldurintegrations) | **GET** /api/v1/integrations/dur | IntegrationDurController@index |
 | [**FetchDurByIdIntegrations**](IntegrationDataUseRegistersApi.md#fetchdurbyidintegrations) | **GET** /api/v1/integrations/dur/{id} | IntegrationDurController@show |
+| [**UpdateDurIntegrations**](IntegrationDataUseRegistersApi.md#updatedurintegrations) | **PUT** /api/v1/integrations/dur/{id} | Update a dur by id |
 
-<a id="call3c0f53b5284c481bc135c2035d40c017"></a>
-# **Call3c0f53b5284c481bc135c2035d40c017**
-> Model3c79eaaecaae1de1b86c443337841895200Response Call3c0f53b5284c481bc135c2035d40c017 (int id, CreateDurIntegrationsRequest createDurIntegrationsRequest)
+<a id="createdurintegrations"></a>
+# **CreateDurIntegrations**
+> CreateCategories200Response CreateDurIntegrations (CreateDurIntegrationsRequest createDurIntegrationsRequest)
 
-Edit a dur
+IntegrationDurController@store
 
-Edit a dur
+Create a new dur
 
 
 ### Parameters
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **id** | **int** | dur id |  |
 | **createDurIntegrationsRequest** | [**CreateDurIntegrationsRequest**](CreateDurIntegrationsRequest.md) | Pass user credentials |  |
 
 ### Return type
 
-[**Model3c79eaaecaae1de1b86c443337841895200Response**](Model3c79eaaecaae1de1b86c443337841895200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -44,54 +43,15 @@ Edit a dur
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
 | **500** | Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="call3c79eaaecaae1de1b86c443337841895"></a>
-# **Call3c79eaaecaae1de1b86c443337841895**
-> Model3c79eaaecaae1de1b86c443337841895200Response Call3c79eaaecaae1de1b86c443337841895 (int id, CreateDurIntegrationsRequest createDurIntegrationsRequest)
-
-Update a dur by id
-
-Update a dur
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | dur id |  |
-| **createDurIntegrationsRequest** | [**CreateDurIntegrationsRequest**](CreateDurIntegrationsRequest.md) | Pass user credentials |  |
-
-### Return type
-
-[**Model3c79eaaecaae1de1b86c443337841895200Response**](Model3c79eaaecaae1de1b86c443337841895200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call7170e7dc71293d3b5042d6cb03298eb4"></a>
-# **Call7170e7dc71293d3b5042d6cb03298eb4**
-> C29b5b3424f7317b69b4bda048ccfafb200Response Call7170e7dc71293d3b5042d6cb03298eb4 (int id)
+<a id="deletedurintegrations"></a>
+# **DeleteDurIntegrations**
+> DeleteAliases200Response DeleteDurIntegrations (int id)
 
 Delete a dur
 
@@ -106,7 +66,7 @@ Delete a dur
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 
@@ -127,24 +87,25 @@ Delete a dur
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="createdurintegrations"></a>
-# **CreateDurIntegrations**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreateDurIntegrations (CreateDurIntegrationsRequest createDurIntegrationsRequest)
+<a id="editdurintegrations"></a>
+# **EditDurIntegrations**
+> UpdateDurIntegrations200Response EditDurIntegrations (int id, CreateDurIntegrationsRequest createDurIntegrationsRequest)
 
-IntegrationDurController@store
+Edit a dur
 
-Create a new dur
+Edit a dur
 
 
 ### Parameters
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
+| **id** | **int** | dur id |  |
 | **createDurIntegrationsRequest** | [**CreateDurIntegrationsRequest**](CreateDurIntegrationsRequest.md) | Pass user credentials |  |
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**UpdateDurIntegrations200Response**](UpdateDurIntegrations200Response.md)
 
 ### Authorization
 
@@ -159,8 +120,8 @@ Create a new dur
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | Created |  -  |
-| **401** | Unauthorized |  -  |
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
 | **500** | Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -235,6 +196,45 @@ Get dur by id
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="updatedurintegrations"></a>
+# **UpdateDurIntegrations**
+> UpdateDurIntegrations200Response UpdateDurIntegrations (int id, CreateDurIntegrationsRequest createDurIntegrationsRequest)
+
+Update a dur by id
+
+Update a dur
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **int** | dur id |  |
+| **createDurIntegrationsRequest** | [**CreateDurIntegrationsRequest**](CreateDurIntegrationsRequest.md) | Pass user credentials |  |
+
+### Return type
+
+[**UpdateDurIntegrations200Response**](UpdateDurIntegrations200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

@@ -51,33 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test A439b274e045e4ae8ab3006c33290aff
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task A439b274e045e4ae8ab3006c33290affAsyncTest()
-        {
-            int teamId = default!;
-            string teamIds = default!;
-            var response = await _instance.A439b274e045e4ae8ab3006c33290affAsync(teamId, teamIds);
-            var model = response.Ok();
-            Assert.IsType<A439b274e045e4ae8ab3006c33290aff200Response>(model);
-        }
-
-        /// <summary>
-        /// Test C9939b681f1c7deb438e5d7a25ea9509
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task C9939b681f1c7deb438e5d7a25ea9509AsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            Client.Option<C9939b681f1c7deb438e5d7a25ea9509Request> c9939b681f1c7deb438e5d7a25ea9509Request = default!;
-            var response = await _instance.C9939b681f1c7deb438e5d7a25ea9509Async(teamId, id, c9939b681f1c7deb438e5d7a25ea9509Request);
-            var model = response.Ok();
-            Assert.IsType<C9939b681f1c7deb438e5d7a25ea9509200Response>(model);
-        }
-
-        /// <summary>
         /// Test CreateWidget
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -100,7 +73,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteWidgetAsync(teamId, id);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
@@ -129,6 +102,19 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
+        /// Test FetchWidgetDataSources
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchWidgetDataSourcesAsyncTest()
+        {
+            int teamId = default!;
+            string teamIds = default!;
+            var response = await _instance.FetchWidgetDataSourcesAsync(teamId, teamIds);
+            var model = response.Ok();
+            Assert.IsType<FetchWidgetDataSources200Response>(model);
+        }
+
+        /// <summary>
         /// Test RetrieveWidgetData
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -152,6 +138,20 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             TrackWidgetEventRequest trackWidgetEventRequest = default!;
             await _instance.TrackWidgetEventAsync(teamId, id, trackWidgetEventRequest);
+        }
+
+        /// <summary>
+        /// Test UpdateWidget
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task UpdateWidgetAsyncTest()
+        {
+            int teamId = default!;
+            int id = default!;
+            Client.Option<UpdateWidgetRequest> updateWidgetRequest = default!;
+            var response = await _instance.UpdateWidgetAsync(teamId, id, updateWidgetRequest);
+            var model = response.Ok();
+            Assert.IsType<UpdateWidget200Response>(model);
         }
 
         /// <summary>

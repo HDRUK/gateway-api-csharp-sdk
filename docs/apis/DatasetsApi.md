@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**Call1c45c3c6908e92d680ce50910d6d4061**](DatasetsApi.md#call1c45c3c6908e92d680ce50910d6d4061) | **POST** /api/v1/datasets/admin_ctrl/trigger/term_extraction | Trigger Term Extraction for Datasets |
-| [**Call7f39b24417648f048a9457326619439c**](DatasetsApi.md#call7f39b24417648f048a9457326619439c) | **POST** /api/v1/datasets/admin_ctrl/trigger/linkage_extraction | Trigger Term Extraction for Datasets |
 | [**CountTeamUniqueFieldsDatasetsV2**](DatasetsApi.md#countteamuniquefieldsdatasetsv2) | **GET** /api/v2/teams/{teamId}/datasets/count/{field} | TeamDatasetController@count |
 | [**CountUniqueFields**](DatasetsApi.md#countuniquefields) | **GET** /api/v1/datasets/count/{field} | DatasetController@count |
 | [**CreateDatasets**](DatasetsApi.md#createdatasets) | **POST** /api/v1/datasets | DatasetController@store |
 | [**CreateDatasetsIntegrations**](DatasetsApi.md#createdatasetsintegrations) | **POST** /api/v1/integrations/datasets | IntegrationDatasetController@store |
+| [**CreateDatasetsLinkageExtraction**](DatasetsApi.md#createdatasetslinkageextraction) | **POST** /api/v1/datasets/admin_ctrl/trigger/linkage_extraction | Trigger Term Extraction for Datasets |
+| [**CreateDatasetsTermExtraction**](DatasetsApi.md#createdatasetstermextraction) | **POST** /api/v1/datasets/admin_ctrl/trigger/term_extraction | Trigger Term Extraction for Datasets |
 | [**CreateDatasetsV2**](DatasetsApi.md#createdatasetsv2) | **POST** /api/v2/datasets | DatasetController@store |
 | [**CreateTeamDatasetsV2**](DatasetsApi.md#createteamdatasetsv2) | **POST** /api/v2/teams/{teamId}/datasets | TeamDatasetController@store |
 | [**DeleteDatasets**](DatasetsApi.md#deletedatasets) | **DELETE** /api/v1/datasets/{id} | DatasetController@destroy |
@@ -37,83 +37,6 @@ All URIs are relative to *http://localhost*
 | [**UpdateDatasetsIntegrations**](DatasetsApi.md#updatedatasetsintegrations) | **PUT** /api/v1/integrations/datasets/{id} | IntegrationDatasetController@update |
 | [**UpdateDatasetsV2**](DatasetsApi.md#updatedatasetsv2) | **PUT** /api/v2/datasets/{id} | DatasetController@update |
 | [**UpdateTeamDatasetsV2**](DatasetsApi.md#updateteamdatasetsv2) | **PUT** /api/v2/teams/{teamId}/datasets/{id} | TeamDatasetController@update |
-
-<a id="call1c45c3c6908e92d680ce50910d6d4061"></a>
-# **Call1c45c3c6908e92d680ce50910d6d4061**
-> Model1c45c3c6908e92d680ce50910d6d4061200Response Call1c45c3c6908e92d680ce50910d6d4061 (string authorization, string role, Model1c45c3c6908e92d680ce50910d6d4061Request model1c45c3c6908e92d680ce50910d6d4061Request)
-
-Trigger Term Extraction for Datasets
-
-Triggers the term extraction job for datasets within a specified range and controls whether data is partially indexed in Elasticsearch.
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **authorization** | **string** | JWT token for authorization in the format &#39;Bearer {token}&#39; |  |
-| **role** | **string** | Role required to access this endpoint, e.g., &#39;hdruk.superadmin&#39; |  |
-| **model1c45c3c6908e92d680ce50910d6d4061Request** | [**Model1c45c3c6908e92d680ce50910d6d4061Request**](Model1c45c3c6908e92d680ce50910d6d4061Request.md) |  |  |
-
-### Return type
-
-[**Model1c45c3c6908e92d680ce50910d6d4061200Response**](Model1c45c3c6908e92d680ce50910d6d4061200Response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Term extraction triggered successfully |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call7f39b24417648f048a9457326619439c"></a>
-# **Call7f39b24417648f048a9457326619439c**
-> Model7f39b24417648f048a9457326619439c200Response Call7f39b24417648f048a9457326619439c (string authorization, Model7f39b24417648f048a9457326619439cRequest model7f39b24417648f048a9457326619439cRequest)
-
-Trigger Term Extraction for Datasets
-
-Triggers the term extraction job for datasets within a specified range and controls whether data is partially indexed in Elasticsearch.
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **authorization** | **string** | JWT token for authorization in the format &#39;Bearer {token}&#39; |  |
-| **model7f39b24417648f048a9457326619439cRequest** | [**Model7f39b24417648f048a9457326619439cRequest**](Model7f39b24417648f048a9457326619439cRequest.md) |  |  |
-
-### Return type
-
-[**Model7f39b24417648f048a9457326619439c200Response**](Model7f39b24417648f048a9457326619439c200Response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Linkage extraction triggered successfully |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 <a id="countteamuniquefieldsdatasetsv2"></a>
 # **CountTeamUniqueFieldsDatasetsV2**
@@ -191,7 +114,7 @@ Get Counts for distinct entries of a field in the model
 
 <a id="createdatasets"></a>
 # **CreateDatasets**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreateDatasets (CreateDatasetsRequest createDatasetsRequest)
+> CreateCategories200Response CreateDatasets (CreateDatasetsRequest createDatasetsRequest)
 
 DatasetController@store
 
@@ -206,7 +129,7 @@ Create a new dataset
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -229,7 +152,7 @@ Create a new dataset
 
 <a id="createdatasetsintegrations"></a>
 # **CreateDatasetsIntegrations**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreateDatasetsIntegrations (DatasetsTestRequest datasetsTestRequest, string inputSchema = null, string inputVersion = null)
+> CreateCategories200Response CreateDatasetsIntegrations (DatasetsTestRequest datasetsTestRequest, string inputSchema = null, string inputVersion = null)
 
 IntegrationDatasetController@store
 
@@ -246,7 +169,7 @@ Create a new dataset
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -267,9 +190,86 @@ Create a new dataset
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+<a id="createdatasetslinkageextraction"></a>
+# **CreateDatasetsLinkageExtraction**
+> CreateDatasetsLinkageExtraction200Response CreateDatasetsLinkageExtraction (string authorization, CreateDatasetsLinkageExtractionRequest createDatasetsLinkageExtractionRequest)
+
+Trigger Term Extraction for Datasets
+
+Triggers the term extraction job for datasets within a specified range and controls whether data is partially indexed in Elasticsearch.
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **authorization** | **string** | JWT token for authorization in the format &#39;Bearer {token}&#39; |  |
+| **createDatasetsLinkageExtractionRequest** | [**CreateDatasetsLinkageExtractionRequest**](CreateDatasetsLinkageExtractionRequest.md) |  |  |
+
+### Return type
+
+[**CreateDatasetsLinkageExtraction200Response**](CreateDatasetsLinkageExtraction200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Linkage extraction triggered successfully |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="createdatasetstermextraction"></a>
+# **CreateDatasetsTermExtraction**
+> CreateDatasetsTermExtraction200Response CreateDatasetsTermExtraction (string authorization, string role, CreateDatasetsTermExtractionRequest createDatasetsTermExtractionRequest)
+
+Trigger Term Extraction for Datasets
+
+Triggers the term extraction job for datasets within a specified range and controls whether data is partially indexed in Elasticsearch.
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **authorization** | **string** | JWT token for authorization in the format &#39;Bearer {token}&#39; |  |
+| **role** | **string** | Role required to access this endpoint, e.g., &#39;hdruk.superadmin&#39; |  |
+| **createDatasetsTermExtractionRequest** | [**CreateDatasetsTermExtractionRequest**](CreateDatasetsTermExtractionRequest.md) |  |  |
+
+### Return type
+
+[**CreateDatasetsTermExtraction200Response**](CreateDatasetsTermExtraction200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Term extraction triggered successfully |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 <a id="createdatasetsv2"></a>
 # **CreateDatasetsV2**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreateDatasetsV2 (CreateDatasetsV2Request createDatasetsV2Request)
+> CreateCategories200Response CreateDatasetsV2 (CreateDatasetsV2Request createDatasetsV2Request)
 
 DatasetController@store
 
@@ -284,7 +284,7 @@ Create a new dataset
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -307,7 +307,7 @@ Create a new dataset
 
 <a id="createteamdatasetsv2"></a>
 # **CreateTeamDatasetsV2**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreateTeamDatasetsV2 (int teamId, CreateTeamDatasetsV2Request createTeamDatasetsV2Request)
+> CreateCategories200Response CreateTeamDatasetsV2 (int teamId, CreateTeamDatasetsV2Request createTeamDatasetsV2Request)
 
 TeamDatasetController@store
 
@@ -323,7 +323,7 @@ Create a new dataset for a team
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -346,7 +346,7 @@ Create a new dataset for a team
 
 <a id="deletedatasets"></a>
 # **DeleteDatasets**
-> C29b5b3424f7317b69b4bda048ccfafb200Response DeleteDatasets (int id)
+> DeleteAliases200Response DeleteDatasets (int id)
 
 DatasetController@destroy
 
@@ -361,7 +361,7 @@ Delete a dataset
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 
@@ -384,7 +384,7 @@ Delete a dataset
 
 <a id="deletedatasetsintegrations"></a>
 # **DeleteDatasetsIntegrations**
-> C29b5b3424f7317b69b4bda048ccfafb200Response DeleteDatasetsIntegrations (int id)
+> DeleteAliases200Response DeleteDatasetsIntegrations (int id)
 
 IntegrationDatasetController@destroy
 
@@ -399,7 +399,7 @@ Delete a dataset
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 
@@ -422,7 +422,7 @@ Delete a dataset
 
 <a id="deletedatasetsv2"></a>
 # **DeleteDatasetsV2**
-> C29b5b3424f7317b69b4bda048ccfafb200Response DeleteDatasetsV2 (int id)
+> DeleteAliases200Response DeleteDatasetsV2 (int id)
 
 Delete a dataset
 
@@ -437,7 +437,7 @@ Delete a dataset
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 
@@ -460,7 +460,7 @@ Delete a dataset
 
 <a id="deleteteamdatasetsv2"></a>
 # **DeleteTeamDatasetsV2**
-> C29b5b3424f7317b69b4bda048ccfafb200Response DeleteTeamDatasetsV2 (int teamId, int id)
+> DeleteAliases200Response DeleteTeamDatasetsV2 (int teamId, int id)
 
 TeamDatasetController@destroy
 
@@ -476,7 +476,7 @@ Delete a team's dataset
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 
@@ -1011,7 +1011,7 @@ Get dataset by id
 
 <a id="patchdatasets"></a>
 # **PatchDatasets**
-> C29b5b3424f7317b69b4bda048ccfafb200Response PatchDatasets (int id, string unarchive = null)
+> DeleteAliases200Response PatchDatasets (int id, string unarchive = null)
 
 DatasetController@edit
 
@@ -1027,7 +1027,7 @@ Patch dataset by id
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 
@@ -1049,7 +1049,7 @@ Patch dataset by id
 
 <a id="patchdatasetsintegrations"></a>
 # **PatchDatasetsIntegrations**
-> C29b5b3424f7317b69b4bda048ccfafb200Response PatchDatasetsIntegrations (int id, string unarchive = null)
+> DeleteAliases200Response PatchDatasetsIntegrations (int id, string unarchive = null)
 
 IntegrationDatasetController@edit
 
@@ -1065,7 +1065,7 @@ Patch dataset by id
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 
@@ -1087,7 +1087,7 @@ Patch dataset by id
 
 <a id="patchdatasetsv2"></a>
 # **PatchDatasetsV2**
-> C29b5b3424f7317b69b4bda048ccfafb200Response PatchDatasetsV2 (int id, PatchDatasetsV2Request patchDatasetsV2Request)
+> DeleteAliases200Response PatchDatasetsV2 (int id, PatchDatasetsV2Request patchDatasetsV2Request)
 
 DatasetController@edit
 
@@ -1103,7 +1103,7 @@ Patch dataset by id
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 
@@ -1125,7 +1125,7 @@ Patch dataset by id
 
 <a id="patchteamdatasetsv2"></a>
 # **PatchTeamDatasetsV2**
-> C29b5b3424f7317b69b4bda048ccfafb200Response PatchTeamDatasetsV2 (int teamId, int id, PatchDatasetsV2Request patchDatasetsV2Request)
+> DeleteAliases200Response PatchTeamDatasetsV2 (int teamId, int id, PatchDatasetsV2Request patchDatasetsV2Request)
 
 TeamDatasetController@edit
 
@@ -1142,7 +1142,7 @@ Edit a dataset owned by a team
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 
@@ -1164,7 +1164,7 @@ Edit a dataset owned by a team
 
 <a id="updatedatasets"></a>
 # **UpdateDatasets**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response UpdateDatasets (int id, UpdateDatasetsRequest updateDatasetsRequest)
+> CreateCategories200Response UpdateDatasets (int id, UpdateDatasetsRequest updateDatasetsRequest)
 
 DatasetController@update
 
@@ -1180,7 +1180,7 @@ Update a dataset with a new dataset version
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -1244,7 +1244,7 @@ Update a dataset with a new dataset version
 
 <a id="updatedatasetsv2"></a>
 # **UpdateDatasetsV2**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response UpdateDatasetsV2 (int id, UpdateDatasetsRequest updateDatasetsRequest)
+> CreateCategories200Response UpdateDatasetsV2 (int id, UpdateDatasetsRequest updateDatasetsRequest)
 
 DatasetController@update
 
@@ -1260,7 +1260,7 @@ Update a dataset with a new dataset version
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -1283,7 +1283,7 @@ Update a dataset with a new dataset version
 
 <a id="updateteamdatasetsv2"></a>
 # **UpdateTeamDatasetsV2**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response UpdateTeamDatasetsV2 (int teamId, int id, PatchDatasetsV2Request patchDatasetsV2Request)
+> CreateCategories200Response UpdateTeamDatasetsV2 (int teamId, int id, PatchDatasetsV2Request patchDatasetsV2Request)
 
 TeamDatasetController@update
 
@@ -1300,7 +1300,7 @@ Update a team dataset with a new dataset version
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 

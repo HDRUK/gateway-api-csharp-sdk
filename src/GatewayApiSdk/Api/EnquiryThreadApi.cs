@@ -45,10 +45,10 @@ namespace GatewayApiSdk.Api
         /// Creates one or more new EnquiryThreads
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="a961db529080eb3a29e4b7cc13dabaaaRequest">EnquiryThread definition</param>
+        /// <param name="createEnquiryThreadsRequest">EnquiryThread definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IA961db529080eb3a29e4b7cc13dabaaaApiResponse"/>&gt;</returns>
-        Task<IA961db529080eb3a29e4b7cc13dabaaaApiResponse> A961db529080eb3a29e4b7cc13dabaaaAsync(A961db529080eb3a29e4b7cc13dabaaaRequest a961db529080eb3a29e4b7cc13dabaaaRequest, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateEnquiryThreadsApiResponse"/>&gt;</returns>
+        Task<ICreateEnquiryThreadsApiResponse> CreateEnquiryThreadsAsync(CreateEnquiryThreadsRequest createEnquiryThreadsRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// EnquiryThread@store
@@ -56,10 +56,10 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Creates one or more new EnquiryThreads
         /// </remarks>
-        /// <param name="a961db529080eb3a29e4b7cc13dabaaaRequest">EnquiryThread definition</param>
+        /// <param name="createEnquiryThreadsRequest">EnquiryThread definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IA961db529080eb3a29e4b7cc13dabaaaApiResponse"/>?&gt;</returns>
-        Task<IA961db529080eb3a29e4b7cc13dabaaaApiResponse?> A961db529080eb3a29e4b7cc13dabaaaOrDefaultAsync(A961db529080eb3a29e4b7cc13dabaaaRequest a961db529080eb3a29e4b7cc13dabaaaRequest, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateEnquiryThreadsApiResponse"/>?&gt;</returns>
+        Task<ICreateEnquiryThreadsApiResponse?> CreateEnquiryThreadsOrDefaultAsync(CreateEnquiryThreadsRequest createEnquiryThreadsRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// EnquiryThread@index
@@ -70,8 +70,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4321ab5e45636e3e917c94fd21edac28ApiResponse"/>&gt;</returns>
-        Task<ICall4321ab5e45636e3e917c94fd21edac28ApiResponse> Call4321ab5e45636e3e917c94fd21edac28Async(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllEnquiryThreadsApiResponse"/>&gt;</returns>
+        Task<IFetchAllEnquiryThreadsApiResponse> FetchAllEnquiryThreadsAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// EnquiryThread@index
@@ -81,8 +81,8 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="perPage">per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4321ab5e45636e3e917c94fd21edac28ApiResponse"/>?&gt;</returns>
-        Task<ICall4321ab5e45636e3e917c94fd21edac28ApiResponse?> Call4321ab5e45636e3e917c94fd21edac28OrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllEnquiryThreadsApiResponse"/>?&gt;</returns>
+        Task<IFetchAllEnquiryThreadsApiResponse?> FetchAllEnquiryThreadsOrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// EnquiryThread@show
@@ -93,8 +93,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">EnquiryThread id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFd828cd8df74859b18600bb6b36edf83ApiResponse"/>&gt;</returns>
-        Task<IFd828cd8df74859b18600bb6b36edf83ApiResponse> Fd828cd8df74859b18600bb6b36edf83Async(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchEnquiryThreadsApiResponse"/>&gt;</returns>
+        Task<IFetchEnquiryThreadsApiResponse> FetchEnquiryThreadsAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// EnquiryThread@show
@@ -104,14 +104,14 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="id">EnquiryThread id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFd828cd8df74859b18600bb6b36edf83ApiResponse"/>?&gt;</returns>
-        Task<IFd828cd8df74859b18600bb6b36edf83ApiResponse?> Fd828cd8df74859b18600bb6b36edf83OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchEnquiryThreadsApiResponse"/>?&gt;</returns>
+        Task<IFetchEnquiryThreadsApiResponse?> FetchEnquiryThreadsOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="IA961db529080eb3a29e4b7cc13dabaaaApiResponse"/>
+    /// The <see cref="ICreateEnquiryThreadsApiResponse"/>
     /// </summary>
-    public interface IA961db529080eb3a29e4b7cc13dabaaaApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface ICreateEnquiryThreadsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CreateCategories200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -127,9 +127,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall4321ab5e45636e3e917c94fd21edac28ApiResponse"/>
+    /// The <see cref="IFetchAllEnquiryThreadsApiResponse"/>
     /// </summary>
-    public interface ICall4321ab5e45636e3e917c94fd21edac28ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model4321ab5e45636e3e917c94fd21edac28200Response?>
+    public interface IFetchAllEnquiryThreadsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchAllEnquiryThreads200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -139,9 +139,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IFd828cd8df74859b18600bb6b36edf83ApiResponse"/>
+    /// The <see cref="IFetchEnquiryThreadsApiResponse"/>
     /// </summary>
-    public interface IFd828cd8df74859b18600bb6b36edf83ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model4321ab5e45636e3e917c94fd21edac28200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
+    public interface IFetchEnquiryThreadsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchAllEnquiryThreads200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -164,61 +164,61 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnA961db529080eb3a29e4b7cc13dabaaa;
+        public event EventHandler<ApiResponseEventArgs>? OnCreateEnquiryThreads;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorA961db529080eb3a29e4b7cc13dabaaa;
+        public event EventHandler<ExceptionEventArgs>? OnErrorCreateEnquiryThreads;
 
-        internal void ExecuteOnA961db529080eb3a29e4b7cc13dabaaa(EnquiryThreadApi.A961db529080eb3a29e4b7cc13dabaaaApiResponse apiResponse)
+        internal void ExecuteOnCreateEnquiryThreads(EnquiryThreadApi.CreateEnquiryThreadsApiResponse apiResponse)
         {
-            OnA961db529080eb3a29e4b7cc13dabaaa?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnCreateEnquiryThreads?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorA961db529080eb3a29e4b7cc13dabaaa(Exception exception)
+        internal void ExecuteOnErrorCreateEnquiryThreads(Exception exception)
         {
-            OnErrorA961db529080eb3a29e4b7cc13dabaaa?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorCreateEnquiryThreads?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall4321ab5e45636e3e917c94fd21edac28;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchAllEnquiryThreads;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall4321ab5e45636e3e917c94fd21edac28;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchAllEnquiryThreads;
 
-        internal void ExecuteOnCall4321ab5e45636e3e917c94fd21edac28(EnquiryThreadApi.Call4321ab5e45636e3e917c94fd21edac28ApiResponse apiResponse)
+        internal void ExecuteOnFetchAllEnquiryThreads(EnquiryThreadApi.FetchAllEnquiryThreadsApiResponse apiResponse)
         {
-            OnCall4321ab5e45636e3e917c94fd21edac28?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchAllEnquiryThreads?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall4321ab5e45636e3e917c94fd21edac28(Exception exception)
+        internal void ExecuteOnErrorFetchAllEnquiryThreads(Exception exception)
         {
-            OnErrorCall4321ab5e45636e3e917c94fd21edac28?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchAllEnquiryThreads?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFd828cd8df74859b18600bb6b36edf83;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchEnquiryThreads;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFd828cd8df74859b18600bb6b36edf83;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchEnquiryThreads;
 
-        internal void ExecuteOnFd828cd8df74859b18600bb6b36edf83(EnquiryThreadApi.Fd828cd8df74859b18600bb6b36edf83ApiResponse apiResponse)
+        internal void ExecuteOnFetchEnquiryThreads(EnquiryThreadApi.FetchEnquiryThreadsApiResponse apiResponse)
         {
-            OnFd828cd8df74859b18600bb6b36edf83?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchEnquiryThreads?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorFd828cd8df74859b18600bb6b36edf83(Exception exception)
+        internal void ExecuteOnErrorFetchEnquiryThreads(Exception exception)
         {
-            OnErrorFd828cd8df74859b18600bb6b36edf83?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchEnquiryThreads?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -263,28 +263,28 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatA961db529080eb3a29e4b7cc13dabaaa(A961db529080eb3a29e4b7cc13dabaaaRequest a961db529080eb3a29e4b7cc13dabaaaRequest);
+        partial void FormatCreateEnquiryThreads(CreateEnquiryThreadsRequest createEnquiryThreadsRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="a961db529080eb3a29e4b7cc13dabaaaRequest"></param>
+        /// <param name="createEnquiryThreadsRequest"></param>
         /// <returns></returns>
-        private void ValidateA961db529080eb3a29e4b7cc13dabaaa(A961db529080eb3a29e4b7cc13dabaaaRequest a961db529080eb3a29e4b7cc13dabaaaRequest)
+        private void ValidateCreateEnquiryThreads(CreateEnquiryThreadsRequest createEnquiryThreadsRequest)
         {
-            if (a961db529080eb3a29e4b7cc13dabaaaRequest == null)
-                throw new ArgumentNullException(nameof(a961db529080eb3a29e4b7cc13dabaaaRequest));
+            if (createEnquiryThreadsRequest == null)
+                throw new ArgumentNullException(nameof(createEnquiryThreadsRequest));
         }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="a961db529080eb3a29e4b7cc13dabaaaRequest"></param>
-        private void AfterA961db529080eb3a29e4b7cc13dabaaaDefaultImplementation(IA961db529080eb3a29e4b7cc13dabaaaApiResponse apiResponseLocalVar, A961db529080eb3a29e4b7cc13dabaaaRequest a961db529080eb3a29e4b7cc13dabaaaRequest)
+        /// <param name="createEnquiryThreadsRequest"></param>
+        private void AfterCreateEnquiryThreadsDefaultImplementation(ICreateEnquiryThreadsApiResponse apiResponseLocalVar, CreateEnquiryThreadsRequest createEnquiryThreadsRequest)
         {
             bool suppressDefaultLog = false;
-            AfterA961db529080eb3a29e4b7cc13dabaaa(ref suppressDefaultLog, apiResponseLocalVar, a961db529080eb3a29e4b7cc13dabaaaRequest);
+            AfterCreateEnquiryThreads(ref suppressDefaultLog, apiResponseLocalVar, createEnquiryThreadsRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -294,8 +294,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="a961db529080eb3a29e4b7cc13dabaaaRequest"></param>
-        partial void AfterA961db529080eb3a29e4b7cc13dabaaa(ref bool suppressDefaultLog, IA961db529080eb3a29e4b7cc13dabaaaApiResponse apiResponseLocalVar, A961db529080eb3a29e4b7cc13dabaaaRequest a961db529080eb3a29e4b7cc13dabaaaRequest);
+        /// <param name="createEnquiryThreadsRequest"></param>
+        partial void AfterCreateEnquiryThreads(ref bool suppressDefaultLog, ICreateEnquiryThreadsApiResponse apiResponseLocalVar, CreateEnquiryThreadsRequest createEnquiryThreadsRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -303,11 +303,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="a961db529080eb3a29e4b7cc13dabaaaRequest"></param>
-        private void OnErrorA961db529080eb3a29e4b7cc13dabaaaDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, A961db529080eb3a29e4b7cc13dabaaaRequest a961db529080eb3a29e4b7cc13dabaaaRequest)
+        /// <param name="createEnquiryThreadsRequest"></param>
+        private void OnErrorCreateEnquiryThreadsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateEnquiryThreadsRequest createEnquiryThreadsRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorA961db529080eb3a29e4b7cc13dabaaa(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, a961db529080eb3a29e4b7cc13dabaaaRequest);
+            OnErrorCreateEnquiryThreads(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createEnquiryThreadsRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -319,20 +319,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="a961db529080eb3a29e4b7cc13dabaaaRequest"></param>
-        partial void OnErrorA961db529080eb3a29e4b7cc13dabaaa(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, A961db529080eb3a29e4b7cc13dabaaaRequest a961db529080eb3a29e4b7cc13dabaaaRequest);
+        /// <param name="createEnquiryThreadsRequest"></param>
+        partial void OnErrorCreateEnquiryThreads(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateEnquiryThreadsRequest createEnquiryThreadsRequest);
 
         /// <summary>
         /// EnquiryThread@store Creates one or more new EnquiryThreads
         /// </summary>
-        /// <param name="a961db529080eb3a29e4b7cc13dabaaaRequest">EnquiryThread definition</param>
+        /// <param name="createEnquiryThreadsRequest">EnquiryThread definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IA961db529080eb3a29e4b7cc13dabaaaApiResponse"/>&gt;</returns>
-        public async Task<IA961db529080eb3a29e4b7cc13dabaaaApiResponse?> A961db529080eb3a29e4b7cc13dabaaaOrDefaultAsync(A961db529080eb3a29e4b7cc13dabaaaRequest a961db529080eb3a29e4b7cc13dabaaaRequest, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateEnquiryThreadsApiResponse"/>&gt;</returns>
+        public async Task<ICreateEnquiryThreadsApiResponse?> CreateEnquiryThreadsOrDefaultAsync(CreateEnquiryThreadsRequest createEnquiryThreadsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await A961db529080eb3a29e4b7cc13dabaaaAsync(a961db529080eb3a29e4b7cc13dabaaaRequest, cancellationToken).ConfigureAwait(false);
+                return await CreateEnquiryThreadsAsync(createEnquiryThreadsRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -344,18 +344,18 @@ namespace GatewayApiSdk.Api
         /// EnquiryThread@store Creates one or more new EnquiryThreads
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="a961db529080eb3a29e4b7cc13dabaaaRequest">EnquiryThread definition</param>
+        /// <param name="createEnquiryThreadsRequest">EnquiryThread definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IA961db529080eb3a29e4b7cc13dabaaaApiResponse"/>&gt;</returns>
-        public async Task<IA961db529080eb3a29e4b7cc13dabaaaApiResponse> A961db529080eb3a29e4b7cc13dabaaaAsync(A961db529080eb3a29e4b7cc13dabaaaRequest a961db529080eb3a29e4b7cc13dabaaaRequest, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateEnquiryThreadsApiResponse"/>&gt;</returns>
+        public async Task<ICreateEnquiryThreadsApiResponse> CreateEnquiryThreadsAsync(CreateEnquiryThreadsRequest createEnquiryThreadsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateA961db529080eb3a29e4b7cc13dabaaa(a961db529080eb3a29e4b7cc13dabaaaRequest);
+                ValidateCreateEnquiryThreads(createEnquiryThreadsRequest);
 
-                FormatA961db529080eb3a29e4b7cc13dabaaa(a961db529080eb3a29e4b7cc13dabaaaRequest);
+                FormatCreateEnquiryThreads(createEnquiryThreadsRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -366,9 +366,9 @@ namespace GatewayApiSdk.Api
                         ? "/api/v1/enquiry_threads"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/enquiry_threads");
 
-                    httpRequestMessageLocalVar.Content = (a961db529080eb3a29e4b7cc13dabaaaRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (createEnquiryThreadsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(a961db529080eb3a29e4b7cc13dabaaaRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createEnquiryThreadsRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -403,7 +403,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        A961db529080eb3a29e4b7cc13dabaaaApiResponse apiResponseLocalVar;
+                        CreateEnquiryThreadsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -414,9 +414,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterA961db529080eb3a29e4b7cc13dabaaaDefaultImplementation(apiResponseLocalVar, a961db529080eb3a29e4b7cc13dabaaaRequest);
+                        AfterCreateEnquiryThreadsDefaultImplementation(apiResponseLocalVar, createEnquiryThreadsRequest);
 
-                        Events.ExecuteOnA961db529080eb3a29e4b7cc13dabaaa(apiResponseLocalVar);
+                        Events.ExecuteOnCreateEnquiryThreads(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -428,16 +428,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorA961db529080eb3a29e4b7cc13dabaaaDefaultImplementation(e, "/api/v1/enquiry_threads", uriBuilderLocalVar.Path, a961db529080eb3a29e4b7cc13dabaaaRequest);
-                Events.ExecuteOnErrorA961db529080eb3a29e4b7cc13dabaaa(e);
+                OnErrorCreateEnquiryThreadsDefaultImplementation(e, "/api/v1/enquiry_threads", uriBuilderLocalVar.Path, createEnquiryThreadsRequest);
+                Events.ExecuteOnErrorCreateEnquiryThreads(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="A961db529080eb3a29e4b7cc13dabaaaApiResponse"/>
+        /// The <see cref="CreateEnquiryThreadsApiResponse"/>
         /// </summary>
-        public partial class A961db529080eb3a29e4b7cc13dabaaaApiResponse : GatewayApiSdk.Client.ApiResponse, IA961db529080eb3a29e4b7cc13dabaaaApiResponse
+        public partial class CreateEnquiryThreadsApiResponse : GatewayApiSdk.Client.ApiResponse, ICreateEnquiryThreadsApiResponse
         {
             /// <summary>
             /// The logger
@@ -445,7 +445,7 @@ namespace GatewayApiSdk.Api
             public ILogger<EnquiryThreadApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="A961db529080eb3a29e4b7cc13dabaaaApiResponse"/>
+            /// The <see cref="CreateEnquiryThreadsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -454,14 +454,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public A961db529080eb3a29e4b7cc13dabaaaApiResponse(ILogger<EnquiryThreadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public CreateEnquiryThreadsApiResponse(ILogger<EnquiryThreadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="A961db529080eb3a29e4b7cc13dabaaaApiResponse"/>
+            /// The <see cref="CreateEnquiryThreadsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -470,7 +470,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public A961db529080eb3a29e4b7cc13dabaaaApiResponse(ILogger<EnquiryThreadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public CreateEnquiryThreadsApiResponse(ILogger<EnquiryThreadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -488,11 +488,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? Ok()
+            public GatewayApiSdk.Model.CreateCategories200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -501,7 +501,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
             {
                 result = null;
 
@@ -526,11 +526,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -539,7 +539,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -565,17 +565,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall4321ab5e45636e3e917c94fd21edac28(ref Option<int> perPage);
+        partial void FormatFetchAllEnquiryThreads(ref Option<int> perPage);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="perPage"></param>
-        private void AfterCall4321ab5e45636e3e917c94fd21edac28DefaultImplementation(ICall4321ab5e45636e3e917c94fd21edac28ApiResponse apiResponseLocalVar, Option<int> perPage)
+        private void AfterFetchAllEnquiryThreadsDefaultImplementation(IFetchAllEnquiryThreadsApiResponse apiResponseLocalVar, Option<int> perPage)
         {
             bool suppressDefaultLog = false;
-            AfterCall4321ab5e45636e3e917c94fd21edac28(ref suppressDefaultLog, apiResponseLocalVar, perPage);
+            AfterFetchAllEnquiryThreads(ref suppressDefaultLog, apiResponseLocalVar, perPage);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -586,7 +586,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="perPage"></param>
-        partial void AfterCall4321ab5e45636e3e917c94fd21edac28(ref bool suppressDefaultLog, ICall4321ab5e45636e3e917c94fd21edac28ApiResponse apiResponseLocalVar, Option<int> perPage);
+        partial void AfterFetchAllEnquiryThreads(ref bool suppressDefaultLog, IFetchAllEnquiryThreadsApiResponse apiResponseLocalVar, Option<int> perPage);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -595,10 +595,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="perPage"></param>
-        private void OnErrorCall4321ab5e45636e3e917c94fd21edac28DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage)
+        private void OnErrorFetchAllEnquiryThreadsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall4321ab5e45636e3e917c94fd21edac28(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, perPage);
+            OnErrorFetchAllEnquiryThreads(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, perPage);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -611,19 +611,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="perPage"></param>
-        partial void OnErrorCall4321ab5e45636e3e917c94fd21edac28(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage);
+        partial void OnErrorFetchAllEnquiryThreads(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage);
 
         /// <summary>
         /// EnquiryThread@index Returns a list of EnquiryThreads from the system
         /// </summary>
         /// <param name="perPage">per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4321ab5e45636e3e917c94fd21edac28ApiResponse"/>&gt;</returns>
-        public async Task<ICall4321ab5e45636e3e917c94fd21edac28ApiResponse?> Call4321ab5e45636e3e917c94fd21edac28OrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllEnquiryThreadsApiResponse"/>&gt;</returns>
+        public async Task<IFetchAllEnquiryThreadsApiResponse?> FetchAllEnquiryThreadsOrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call4321ab5e45636e3e917c94fd21edac28Async(perPage, cancellationToken).ConfigureAwait(false);
+                return await FetchAllEnquiryThreadsAsync(perPage, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -637,14 +637,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4321ab5e45636e3e917c94fd21edac28ApiResponse"/>&gt;</returns>
-        public async Task<ICall4321ab5e45636e3e917c94fd21edac28ApiResponse> Call4321ab5e45636e3e917c94fd21edac28Async(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllEnquiryThreadsApiResponse"/>&gt;</returns>
+        public async Task<IFetchAllEnquiryThreadsApiResponse> FetchAllEnquiryThreadsAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatCall4321ab5e45636e3e917c94fd21edac28(ref perPage);
+                FormatFetchAllEnquiryThreads(ref perPage);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -686,7 +686,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call4321ab5e45636e3e917c94fd21edac28ApiResponse apiResponseLocalVar;
+                        FetchAllEnquiryThreadsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -697,9 +697,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall4321ab5e45636e3e917c94fd21edac28DefaultImplementation(apiResponseLocalVar, perPage);
+                        AfterFetchAllEnquiryThreadsDefaultImplementation(apiResponseLocalVar, perPage);
 
-                        Events.ExecuteOnCall4321ab5e45636e3e917c94fd21edac28(apiResponseLocalVar);
+                        Events.ExecuteOnFetchAllEnquiryThreads(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -711,16 +711,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall4321ab5e45636e3e917c94fd21edac28DefaultImplementation(e, "/api/v1/enquiry_threads", uriBuilderLocalVar.Path, perPage);
-                Events.ExecuteOnErrorCall4321ab5e45636e3e917c94fd21edac28(e);
+                OnErrorFetchAllEnquiryThreadsDefaultImplementation(e, "/api/v1/enquiry_threads", uriBuilderLocalVar.Path, perPage);
+                Events.ExecuteOnErrorFetchAllEnquiryThreads(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call4321ab5e45636e3e917c94fd21edac28ApiResponse"/>
+        /// The <see cref="FetchAllEnquiryThreadsApiResponse"/>
         /// </summary>
-        public partial class Call4321ab5e45636e3e917c94fd21edac28ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall4321ab5e45636e3e917c94fd21edac28ApiResponse
+        public partial class FetchAllEnquiryThreadsApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchAllEnquiryThreadsApiResponse
         {
             /// <summary>
             /// The logger
@@ -728,7 +728,7 @@ namespace GatewayApiSdk.Api
             public ILogger<EnquiryThreadApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call4321ab5e45636e3e917c94fd21edac28ApiResponse"/>
+            /// The <see cref="FetchAllEnquiryThreadsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -737,14 +737,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call4321ab5e45636e3e917c94fd21edac28ApiResponse(ILogger<EnquiryThreadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchAllEnquiryThreadsApiResponse(ILogger<EnquiryThreadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call4321ab5e45636e3e917c94fd21edac28ApiResponse"/>
+            /// The <see cref="FetchAllEnquiryThreadsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -753,7 +753,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call4321ab5e45636e3e917c94fd21edac28ApiResponse(ILogger<EnquiryThreadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchAllEnquiryThreadsApiResponse(ILogger<EnquiryThreadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -771,11 +771,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model4321ab5e45636e3e917c94fd21edac28200Response? Ok()
+            public GatewayApiSdk.Model.FetchAllEnquiryThreads200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model4321ab5e45636e3e917c94fd21edac28200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllEnquiryThreads200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -784,7 +784,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model4321ab5e45636e3e917c94fd21edac28200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllEnquiryThreads200Response? result)
             {
                 result = null;
 
@@ -810,17 +810,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatFd828cd8df74859b18600bb6b36edf83(ref int id);
+        partial void FormatFetchEnquiryThreads(ref int id);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        private void AfterFd828cd8df74859b18600bb6b36edf83DefaultImplementation(IFd828cd8df74859b18600bb6b36edf83ApiResponse apiResponseLocalVar, int id)
+        private void AfterFetchEnquiryThreadsDefaultImplementation(IFetchEnquiryThreadsApiResponse apiResponseLocalVar, int id)
         {
             bool suppressDefaultLog = false;
-            AfterFd828cd8df74859b18600bb6b36edf83(ref suppressDefaultLog, apiResponseLocalVar, id);
+            AfterFetchEnquiryThreads(ref suppressDefaultLog, apiResponseLocalVar, id);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -831,7 +831,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        partial void AfterFd828cd8df74859b18600bb6b36edf83(ref bool suppressDefaultLog, IFd828cd8df74859b18600bb6b36edf83ApiResponse apiResponseLocalVar, int id);
+        partial void AfterFetchEnquiryThreads(ref bool suppressDefaultLog, IFetchEnquiryThreadsApiResponse apiResponseLocalVar, int id);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -840,10 +840,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        private void OnErrorFd828cd8df74859b18600bb6b36edf83DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        private void OnErrorFetchEnquiryThreadsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorFd828cd8df74859b18600bb6b36edf83(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            OnErrorFetchEnquiryThreads(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -856,19 +856,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        partial void OnErrorFd828cd8df74859b18600bb6b36edf83(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+        partial void OnErrorFetchEnquiryThreads(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
 
         /// <summary>
         /// EnquiryThread@show Return a single EnquiryThread
         /// </summary>
         /// <param name="id">EnquiryThread id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFd828cd8df74859b18600bb6b36edf83ApiResponse"/>&gt;</returns>
-        public async Task<IFd828cd8df74859b18600bb6b36edf83ApiResponse?> Fd828cd8df74859b18600bb6b36edf83OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchEnquiryThreadsApiResponse"/>&gt;</returns>
+        public async Task<IFetchEnquiryThreadsApiResponse?> FetchEnquiryThreadsOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Fd828cd8df74859b18600bb6b36edf83Async(id, cancellationToken).ConfigureAwait(false);
+                return await FetchEnquiryThreadsAsync(id, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -882,14 +882,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">EnquiryThread id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFd828cd8df74859b18600bb6b36edf83ApiResponse"/>&gt;</returns>
-        public async Task<IFd828cd8df74859b18600bb6b36edf83ApiResponse> Fd828cd8df74859b18600bb6b36edf83Async(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchEnquiryThreadsApiResponse"/>&gt;</returns>
+        public async Task<IFetchEnquiryThreadsApiResponse> FetchEnquiryThreadsAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatFd828cd8df74859b18600bb6b36edf83(ref id);
+                FormatFetchEnquiryThreads(ref id);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -925,7 +925,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Fd828cd8df74859b18600bb6b36edf83ApiResponse apiResponseLocalVar;
+                        FetchEnquiryThreadsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -936,9 +936,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterFd828cd8df74859b18600bb6b36edf83DefaultImplementation(apiResponseLocalVar, id);
+                        AfterFetchEnquiryThreadsDefaultImplementation(apiResponseLocalVar, id);
 
-                        Events.ExecuteOnFd828cd8df74859b18600bb6b36edf83(apiResponseLocalVar);
+                        Events.ExecuteOnFetchEnquiryThreads(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -950,16 +950,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorFd828cd8df74859b18600bb6b36edf83DefaultImplementation(e, "/api/v1/enquiry_threads/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorFd828cd8df74859b18600bb6b36edf83(e);
+                OnErrorFetchEnquiryThreadsDefaultImplementation(e, "/api/v1/enquiry_threads/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorFetchEnquiryThreads(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Fd828cd8df74859b18600bb6b36edf83ApiResponse"/>
+        /// The <see cref="FetchEnquiryThreadsApiResponse"/>
         /// </summary>
-        public partial class Fd828cd8df74859b18600bb6b36edf83ApiResponse : GatewayApiSdk.Client.ApiResponse, IFd828cd8df74859b18600bb6b36edf83ApiResponse
+        public partial class FetchEnquiryThreadsApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchEnquiryThreadsApiResponse
         {
             /// <summary>
             /// The logger
@@ -967,7 +967,7 @@ namespace GatewayApiSdk.Api
             public ILogger<EnquiryThreadApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Fd828cd8df74859b18600bb6b36edf83ApiResponse"/>
+            /// The <see cref="FetchEnquiryThreadsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -976,14 +976,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Fd828cd8df74859b18600bb6b36edf83ApiResponse(ILogger<EnquiryThreadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchEnquiryThreadsApiResponse(ILogger<EnquiryThreadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Fd828cd8df74859b18600bb6b36edf83ApiResponse"/>
+            /// The <see cref="FetchEnquiryThreadsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -992,7 +992,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Fd828cd8df74859b18600bb6b36edf83ApiResponse(ILogger<EnquiryThreadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchEnquiryThreadsApiResponse(ILogger<EnquiryThreadApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1010,11 +1010,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model4321ab5e45636e3e917c94fd21edac28200Response? Ok()
+            public GatewayApiSdk.Model.FetchAllEnquiryThreads200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model4321ab5e45636e3e917c94fd21edac28200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllEnquiryThreads200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1023,7 +1023,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model4321ab5e45636e3e917c94fd21edac28200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllEnquiryThreads200Response? result)
             {
                 result = null;
 
@@ -1048,11 +1048,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1061,7 +1061,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 

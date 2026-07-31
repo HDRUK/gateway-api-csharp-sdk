@@ -4,16 +4,53 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**Call0df3660c2b63970f84f9beec8a6c334e**](DataAccessSectionApi.md#call0df3660c2b63970f84f9beec8a6c334e) | **DELETE** /api/v1/dar/sections/{id} | DataAccessSection@destroy |
-| [**Call22b4daa2ab6ab3638657b9f6eee22316**](DataAccessSectionApi.md#call22b4daa2ab6ab3638657b9f6eee22316) | **PUT** /api/v1/dar/sections/{id} | DataAccessSection@update |
-| [**Call24bb1d73f780293f012cbc187f5448f3**](DataAccessSectionApi.md#call24bb1d73f780293f012cbc187f5448f3) | **POST** /api/v1/dar/sections | DataAccessSection@store |
-| [**Call2935b32e38ac989b35eab8e0b7552cd3**](DataAccessSectionApi.md#call2935b32e38ac989b35eab8e0b7552cd3) | **PATCH** /api/v1/dar/sections/{id} | DataAccessSection@update |
-| [**Call94f1c18e47daa32c1346be4a0d0449e4**](DataAccessSectionApi.md#call94f1c18e47daa32c1346be4a0d0449e4) | **GET** /api/v1/dar/sections | DataAccessSection@index |
-| [**Fc0e1e343f76b10d80b2332ca24fbfe0**](DataAccessSectionApi.md#fc0e1e343f76b10d80b2332ca24fbfe0) | **GET** /api/v1/dar/sections/{id} | DataAccessSection@show |
+| [**CreateDarSection**](DataAccessSectionApi.md#createdarsection) | **POST** /api/v1/dar/sections | DataAccessSection@store |
+| [**DeleteDarSection**](DataAccessSectionApi.md#deletedarsection) | **DELETE** /api/v1/dar/sections/{id} | DataAccessSection@destroy |
+| [**FetchDarSection**](DataAccessSectionApi.md#fetchdarsection) | **GET** /api/v1/dar/sections/{id} | DataAccessSection@show |
+| [**FetchDarSections**](DataAccessSectionApi.md#fetchdarsections) | **GET** /api/v1/dar/sections | DataAccessSection@index |
+| [**PatchDarSection**](DataAccessSectionApi.md#patchdarsection) | **PATCH** /api/v1/dar/sections/{id} | DataAccessSection@update |
+| [**UpdateDarSection**](DataAccessSectionApi.md#updatedarsection) | **PUT** /api/v1/dar/sections/{id} | DataAccessSection@update |
 
-<a id="call0df3660c2b63970f84f9beec8a6c334e"></a>
-# **Call0df3660c2b63970f84f9beec8a6c334e**
-> C29b5b3424f7317b69b4bda048ccfafb200Response Call0df3660c2b63970f84f9beec8a6c334e (int id)
+<a id="createdarsection"></a>
+# **CreateDarSection**
+> CreateCategories200Response CreateDarSection (CreateDarSectionRequest createDarSectionRequest)
+
+DataAccessSection@store
+
+Creates a new DAR section
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **createDarSectionRequest** | [**CreateDarSectionRequest**](CreateDarSectionRequest.md) | DataAccessSection definition |  |
+
+### Return type
+
+[**CreateCategories200Response**](CreateCategories200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **500** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="deletedarsection"></a>
+# **DeleteDarSection**
+> DeleteAliases200Response DeleteDarSection (int id)
 
 DataAccessSection@destroy
 
@@ -28,7 +65,7 @@ Delete a system DAR section
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 
@@ -49,160 +86,9 @@ Delete a system DAR section
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="call22b4daa2ab6ab3638657b9f6eee22316"></a>
-# **Call22b4daa2ab6ab3638657b9f6eee22316**
-> Fc0e1e343f76b10d80b2332ca24fbfe0200Response Call22b4daa2ab6ab3638657b9f6eee22316 (int id, Model24bb1d73f780293f012cbc187f5448f3Request model24bb1d73f780293f012cbc187f5448f3Request)
-
-DataAccessSection@update
-
-Update a system DAR section
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | DAR section id |  |
-| **model24bb1d73f780293f012cbc187f5448f3Request** | [**Model24bb1d73f780293f012cbc187f5448f3Request**](Model24bb1d73f780293f012cbc187f5448f3Request.md) | DataAccessSection definition |  |
-
-### Return type
-
-[**Fc0e1e343f76b10d80b2332ca24fbfe0200Response**](Fc0e1e343f76b10d80b2332ca24fbfe0200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call24bb1d73f780293f012cbc187f5448f3"></a>
-# **Call24bb1d73f780293f012cbc187f5448f3**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response Call24bb1d73f780293f012cbc187f5448f3 (Model24bb1d73f780293f012cbc187f5448f3Request model24bb1d73f780293f012cbc187f5448f3Request)
-
-DataAccessSection@store
-
-Creates a new DAR section
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **model24bb1d73f780293f012cbc187f5448f3Request** | [**Model24bb1d73f780293f012cbc187f5448f3Request**](Model24bb1d73f780293f012cbc187f5448f3Request.md) | DataAccessSection definition |  |
-
-### Return type
-
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call2935b32e38ac989b35eab8e0b7552cd3"></a>
-# **Call2935b32e38ac989b35eab8e0b7552cd3**
-> Fc0e1e343f76b10d80b2332ca24fbfe0200Response Call2935b32e38ac989b35eab8e0b7552cd3 (int id, Model2935b32e38ac989b35eab8e0b7552cd3Request model2935b32e38ac989b35eab8e0b7552cd3Request)
-
-DataAccessSection@update
-
-Edit a system DAR section
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | DAR section id |  |
-| **model2935b32e38ac989b35eab8e0b7552cd3Request** | [**Model2935b32e38ac989b35eab8e0b7552cd3Request**](Model2935b32e38ac989b35eab8e0b7552cd3Request.md) | DataAccessSection definition |  |
-
-### Return type
-
-[**Fc0e1e343f76b10d80b2332ca24fbfe0200Response**](Fc0e1e343f76b10d80b2332ca24fbfe0200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call94f1c18e47daa32c1346be4a0d0449e4"></a>
-# **Call94f1c18e47daa32c1346be4a0d0449e4**
-> Model94f1c18e47daa32c1346be4a0d0449e4200Response Call94f1c18e47daa32c1346be4a0d0449e4 (int perPage = null)
-
-DataAccessSection@index
-
-List of DAR sections
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **perPage** | **int** | per page | [optional]  |
-
-### Return type
-
-[**Model94f1c18e47daa32c1346be4a0d0449e4200Response**](Model94f1c18e47daa32c1346be4a0d0449e4200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="fc0e1e343f76b10d80b2332ca24fbfe0"></a>
-# **Fc0e1e343f76b10d80b2332ca24fbfe0**
-> Fc0e1e343f76b10d80b2332ca24fbfe0200Response Fc0e1e343f76b10d80b2332ca24fbfe0 (int id)
+<a id="fetchdarsection"></a>
+# **FetchDarSection**
+> FetchDarSection200Response FetchDarSection (int id)
 
 DataAccessSection@show
 
@@ -217,7 +103,7 @@ Return a single DAR section
 
 ### Return type
 
-[**Fc0e1e343f76b10d80b2332ca24fbfe0200Response**](Fc0e1e343f76b10d80b2332ca24fbfe0200Response.md)
+[**FetchDarSection200Response**](FetchDarSection200Response.md)
 
 ### Authorization
 
@@ -234,6 +120,120 @@ Return a single DAR section
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 | **404** | Not found response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="fetchdarsections"></a>
+# **FetchDarSections**
+> FetchDarSections200Response FetchDarSections (int perPage = null)
+
+DataAccessSection@index
+
+List of DAR sections
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **perPage** | **int** | per page | [optional]  |
+
+### Return type
+
+[**FetchDarSections200Response**](FetchDarSections200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="patchdarsection"></a>
+# **PatchDarSection**
+> FetchDarSection200Response PatchDarSection (int id, PatchDarSectionRequest patchDarSectionRequest)
+
+DataAccessSection@update
+
+Edit a system DAR section
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **int** | DAR section id |  |
+| **patchDarSectionRequest** | [**PatchDarSectionRequest**](PatchDarSectionRequest.md) | DataAccessSection definition |  |
+
+### Return type
+
+[**FetchDarSection200Response**](FetchDarSection200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="updatedarsection"></a>
+# **UpdateDarSection**
+> FetchDarSection200Response UpdateDarSection (int id, CreateDarSectionRequest createDarSectionRequest)
+
+DataAccessSection@update
+
+Update a system DAR section
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **int** | DAR section id |  |
+| **createDarSectionRequest** | [**CreateDarSectionRequest**](CreateDarSectionRequest.md) | DataAccessSection definition |  |
+
+### Return type
+
+[**FetchDarSection200Response**](FetchDarSection200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

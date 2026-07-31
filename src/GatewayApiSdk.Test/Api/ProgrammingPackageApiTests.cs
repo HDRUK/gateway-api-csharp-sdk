@@ -51,76 +51,76 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Ad25f9129aefd55435b425747d5a706c
+        /// Test CreateProgrammingPackages
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Ad25f9129aefd55435b425747d5a706cAsyncTest()
+        public async Task CreateProgrammingPackagesAsyncTest()
         {
-            Dd76b8d73b7ea8b4951f03d7c0904c92Request dd76b8d73b7ea8b4951f03d7c0904c92Request = default!;
-            var response = await _instance.Ad25f9129aefd55435b425747d5a706cAsync(dd76b8d73b7ea8b4951f03d7c0904c92Request);
+            CreateCategoriesRequest createCategoriesRequest = default!;
+            var response = await _instance.CreateProgrammingPackagesAsync(createCategoriesRequest);
             var model = response.Ok();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
-        /// Test Call1aeebba947bfb42f364a2d5dd2ad8ef9
+        /// Test DeleteProgrammingPackages
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call1aeebba947bfb42f364a2d5dd2ad8ef9AsyncTest()
+        public async Task DeleteProgrammingPackagesAsyncTest()
         {
             int id = default!;
-            Model988e8695bc991d7f8e40131db5ba7a76Request model988e8695bc991d7f8e40131db5ba7a76Request = default!;
-            var response = await _instance.Call1aeebba947bfb42f364a2d5dd2ad8ef9Async(id, model988e8695bc991d7f8e40131db5ba7a76Request);
+            var response = await _instance.DeleteProgrammingPackagesAsync(id);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
-        /// Test Call47ebee1d2e096dcb033d29f4ff244ad4
+        /// Test EditProgrammingPackages
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call47ebee1d2e096dcb033d29f4ff244ad4AsyncTest()
+        public async Task EditProgrammingPackagesAsyncTest()
         {
             int id = default!;
-            var response = await _instance.Call47ebee1d2e096dcb033d29f4ff244ad4Async(id);
+            EditCategoriesRequest editCategoriesRequest = default!;
+            var response = await _instance.EditProgrammingPackagesAsync(id, editCategoriesRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchAllProgrammingPackages
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchAllProgrammingPackagesAsyncTest()
+        {
+            var response = await _instance.FetchAllProgrammingPackagesAsync();
             var model = response.Ok();
-            Assert.IsType<Model47ebee1d2e096dcb033d29f4ff244ad4200Response>(model);
+            Assert.IsType<FetchAllProgrammingPackages200Response>(model);
         }
 
         /// <summary>
-        /// Test Call6ac98caeb87a37c9286f592834b9c803
+        /// Test FetchProgrammingPackages
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call6ac98caeb87a37c9286f592834b9c803AsyncTest()
+        public async Task FetchProgrammingPackagesAsyncTest()
         {
-            var response = await _instance.Call6ac98caeb87a37c9286f592834b9c803Async();
+            int id = default!;
+            var response = await _instance.FetchProgrammingPackagesAsync(id);
             var model = response.Ok();
-            Assert.IsType<Model6ac98caeb87a37c9286f592834b9c803200Response>(model);
+            Assert.IsType<FetchProgrammingPackages200Response>(model);
         }
 
         /// <summary>
-        /// Test Call879046026ce3997dea0d9bf768f2f8e6
+        /// Test UpdateProgrammingPackages
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call879046026ce3997dea0d9bf768f2f8e6AsyncTest()
+        public async Task UpdateProgrammingPackagesAsyncTest()
         {
             int id = default!;
-            A5f6e0a9550d3c58c50dda55412cd051Request a5f6e0a9550d3c58c50dda55412cd051Request = default!;
-            var response = await _instance.Call879046026ce3997dea0d9bf768f2f8e6Async(id, a5f6e0a9550d3c58c50dda55412cd051Request);
+            UpdateCategoriesRequest updateCategoriesRequest = default!;
+            var response = await _instance.UpdateProgrammingPackagesAsync(id, updateCategoriesRequest);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Fdbe7e1aad9b02084b06c6d647766efd
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Fdbe7e1aad9b02084b06c6d647766efdAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.Fdbe7e1aad9b02084b06c6d647766efdAsync(id);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
     }
 }

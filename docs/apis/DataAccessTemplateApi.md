@@ -4,17 +4,92 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**B1fa0f3b5f03176ce6b96d1d4ee27aa8**](DataAccessTemplateApi.md#b1fa0f3b5f03176ce6b96d1d4ee27aa8) | **GET** /ap1/v1/dar/templates/{id}/download | DataAccessTemplate@downloadFile |
-| [**C0e9ad253ec08e6e03a40ed8759e744d**](DataAccessTemplateApi.md#c0e9ad253ec08e6e03a40ed8759e744d) | **DELETE** /api/v1/dar/templates/{id} | DataAccessTemplate@destroy |
-| [**Call234386e06c6b29d5aaca2ed8f89cb9aa**](DataAccessTemplateApi.md#call234386e06c6b29d5aaca2ed8f89cb9aa) | **GET** /api/v1/dar/templates | DataAccessTemplate@index |
-| [**Call3f2b4dcc3b5e548e62f79a32aa8f0052**](DataAccessTemplateApi.md#call3f2b4dcc3b5e548e62f79a32aa8f0052) | **GET** /api/v1/dar/templates/{id} | DataAccessTemplate@show |
-| [**Call6196987e50c600396a439939cea635a3**](DataAccessTemplateApi.md#call6196987e50c600396a439939cea635a3) | **PATCH** /api/v1/dar/templates/{id} | DataAccessTemplate@update |
-| [**Call6dae0c2af6ca442f90a65e7c65a13252**](DataAccessTemplateApi.md#call6dae0c2af6ca442f90a65e7c65a13252) | **PUT** /api/v1/dar/templates/{id} | DataAccessTemplate@update |
-| [**Call70d4b0fcc281e6491f510f58028762c9**](DataAccessTemplateApi.md#call70d4b0fcc281e6491f510f58028762c9) | **POST** /api/v1/dar/templates | DataAccessTemplate@store |
+| [**CreateDarTemplate**](DataAccessTemplateApi.md#createdartemplate) | **POST** /api/v1/dar/templates | DataAccessTemplate@store |
+| [**DeleteDarTemplate**](DataAccessTemplateApi.md#deletedartemplate) | **DELETE** /api/v1/dar/templates/{id} | DataAccessTemplate@destroy |
+| [**DownloadDarTemplateFile**](DataAccessTemplateApi.md#downloaddartemplatefile) | **GET** /api/v1/dar/templates/{id}/download | DataAccessTemplate@downloadFile |
+| [**FetchDarTemplate**](DataAccessTemplateApi.md#fetchdartemplate) | **GET** /api/v1/dar/templates/{id} | DataAccessTemplate@show |
+| [**FetchDarTemplates**](DataAccessTemplateApi.md#fetchdartemplates) | **GET** /api/v1/dar/templates | DataAccessTemplate@index |
+| [**PatchDarTemplate**](DataAccessTemplateApi.md#patchdartemplate) | **PATCH** /api/v1/dar/templates/{id} | DataAccessTemplate@update |
+| [**UpdateDarTemplate**](DataAccessTemplateApi.md#updatedartemplate) | **PUT** /api/v1/dar/templates/{id} | DataAccessTemplate@update |
 
-<a id="b1fa0f3b5f03176ce6b96d1d4ee27aa8"></a>
-# **B1fa0f3b5f03176ce6b96d1d4ee27aa8**
-> void B1fa0f3b5f03176ce6b96d1d4ee27aa8 (int id)
+<a id="createdartemplate"></a>
+# **CreateDarTemplate**
+> CreateCategories200Response CreateDarTemplate (CreateDarTemplateRequest createDarTemplateRequest)
+
+DataAccessTemplate@store
+
+Creates a new DAR template
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **createDarTemplateRequest** | [**CreateDarTemplateRequest**](CreateDarTemplateRequest.md) | DataAccessTemplate definition |  |
+
+### Return type
+
+[**CreateCategories200Response**](CreateCategories200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **500** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="deletedartemplate"></a>
+# **DeleteDarTemplate**
+> DeleteAliases200Response DeleteDarTemplate (int id)
+
+DataAccessTemplate@destroy
+
+Delete a system DAR template
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **int** | DAR template id |  |
+
+### Return type
+
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **404** | Not found response |  -  |
+| **200** | Success |  -  |
+| **500** | Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="downloaddartemplatefile"></a>
+# **DownloadDarTemplateFile**
+> void DownloadDarTemplateFile (int id)
 
 DataAccessTemplate@downloadFile
 
@@ -49,13 +124,13 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="c0e9ad253ec08e6e03a40ed8759e744d"></a>
-# **C0e9ad253ec08e6e03a40ed8759e744d**
-> C29b5b3424f7317b69b4bda048ccfafb200Response C0e9ad253ec08e6e03a40ed8759e744d (int id)
+<a id="fetchdartemplate"></a>
+# **FetchDarTemplate**
+> FetchDarTemplate200Response FetchDarTemplate (int id)
 
-DataAccessTemplate@destroy
+DataAccessTemplate@show
 
-Delete a system DAR template
+Return a single DAR template
 
 
 ### Parameters
@@ -66,7 +141,7 @@ Delete a system DAR template
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**FetchDarTemplate200Response**](FetchDarTemplate200Response.md)
 
 ### Authorization
 
@@ -81,15 +156,14 @@ Delete a system DAR template
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **404** | Not found response |  -  |
 | **200** | Success |  -  |
-| **500** | Error |  -  |
+| **404** | Not found response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="call234386e06c6b29d5aaca2ed8f89cb9aa"></a>
-# **Call234386e06c6b29d5aaca2ed8f89cb9aa**
-> Model234386e06c6b29d5aaca2ed8f89cb9aa200Response Call234386e06c6b29d5aaca2ed8f89cb9aa (int withQuestions = null, string published = null)
+<a id="fetchdartemplates"></a>
+# **FetchDarTemplates**
+> FetchDarTemplates200Response FetchDarTemplates (int withQuestions = null, string published = null)
 
 DataAccessTemplate@index
 
@@ -105,7 +179,7 @@ List of DAR templates
 
 ### Return type
 
-[**Model234386e06c6b29d5aaca2ed8f89cb9aa200Response**](Model234386e06c6b29d5aaca2ed8f89cb9aa200Response.md)
+[**FetchDarTemplates200Response**](FetchDarTemplates200Response.md)
 
 ### Authorization
 
@@ -124,46 +198,9 @@ List of DAR templates
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="call3f2b4dcc3b5e548e62f79a32aa8f0052"></a>
-# **Call3f2b4dcc3b5e548e62f79a32aa8f0052**
-> Model3f2b4dcc3b5e548e62f79a32aa8f0052200Response Call3f2b4dcc3b5e548e62f79a32aa8f0052 (int id)
-
-DataAccessTemplate@show
-
-Return a single DAR template
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | DAR template id |  |
-
-### Return type
-
-[**Model3f2b4dcc3b5e548e62f79a32aa8f0052200Response**](Model3f2b4dcc3b5e548e62f79a32aa8f0052200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **404** | Not found response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call6196987e50c600396a439939cea635a3"></a>
-# **Call6196987e50c600396a439939cea635a3**
-> Model6196987e50c600396a439939cea635a3200Response Call6196987e50c600396a439939cea635a3 (int id, Model6196987e50c600396a439939cea635a3Request model6196987e50c600396a439939cea635a3Request, int sectionId = null)
+<a id="patchdartemplate"></a>
+# **PatchDarTemplate**
+> PatchDarTemplate200Response PatchDarTemplate (int id, PatchDarTemplateRequest patchDarTemplateRequest, int sectionId = null)
 
 DataAccessTemplate@update
 
@@ -175,12 +212,12 @@ Edit a system DAR template
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **int** | DAR template id |  |
-| **model6196987e50c600396a439939cea635a3Request** | [**Model6196987e50c600396a439939cea635a3Request**](Model6196987e50c600396a439939cea635a3Request.md) | DataAccessTemplate definition |  |
+| **patchDarTemplateRequest** | [**PatchDarTemplateRequest**](PatchDarTemplateRequest.md) | DataAccessTemplate definition |  |
 | **sectionId** | **int** | Section id | [optional]  |
 
 ### Return type
 
-[**Model6196987e50c600396a439939cea635a3200Response**](Model6196987e50c600396a439939cea635a3200Response.md)
+[**PatchDarTemplate200Response**](PatchDarTemplate200Response.md)
 
 ### Authorization
 
@@ -201,9 +238,9 @@ Edit a system DAR template
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="call6dae0c2af6ca442f90a65e7c65a13252"></a>
-# **Call6dae0c2af6ca442f90a65e7c65a13252**
-> Model3f2b4dcc3b5e548e62f79a32aa8f0052200Response Call6dae0c2af6ca442f90a65e7c65a13252 (int id, Model6dae0c2af6ca442f90a65e7c65a13252Request model6dae0c2af6ca442f90a65e7c65a13252Request)
+<a id="updatedartemplate"></a>
+# **UpdateDarTemplate**
+> FetchDarTemplate200Response UpdateDarTemplate (int id, UpdateDarTemplateRequest updateDarTemplateRequest)
 
 DataAccessTemplate@update
 
@@ -215,11 +252,11 @@ Update a system DAR template
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **int** | DAR template id |  |
-| **model6dae0c2af6ca442f90a65e7c65a13252Request** | [**Model6dae0c2af6ca442f90a65e7c65a13252Request**](Model6dae0c2af6ca442f90a65e7c65a13252Request.md) | DataAccessTemplate definition |  |
+| **updateDarTemplateRequest** | [**UpdateDarTemplateRequest**](UpdateDarTemplateRequest.md) | DataAccessTemplate definition |  |
 
 ### Return type
 
-[**Model3f2b4dcc3b5e548e62f79a32aa8f0052200Response**](Model3f2b4dcc3b5e548e62f79a32aa8f0052200Response.md)
+[**FetchDarTemplate200Response**](FetchDarTemplate200Response.md)
 
 ### Authorization
 
@@ -235,43 +272,6 @@ Update a system DAR template
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="call70d4b0fcc281e6491f510f58028762c9"></a>
-# **Call70d4b0fcc281e6491f510f58028762c9**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response Call70d4b0fcc281e6491f510f58028762c9 (Model70d4b0fcc281e6491f510f58028762c9Request model70d4b0fcc281e6491f510f58028762c9Request)
-
-DataAccessTemplate@store
-
-Creates a new DAR template
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **model70d4b0fcc281e6491f510f58028762c9Request** | [**Model70d4b0fcc281e6491f510f58028762c9Request**](Model70d4b0fcc281e6491f510f58028762c9Request.md) | DataAccessTemplate definition |  |
-
-### Return type
-
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
 | **200** | Success |  -  |
 | **500** | Error |  -  |
 

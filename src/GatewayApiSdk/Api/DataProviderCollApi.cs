@@ -39,29 +39,16 @@ namespace GatewayApiSdk.Api
         DataProviderCollApiEvents Events { get; }
 
         /// <summary>
-        /// DataProviderColl@update
+        /// DataProviderColl@store
         /// </summary>
         /// <remarks>
-        /// Update a DataProviderColl
+        /// Creates a new DataProviderColl
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataProviderColl ID</param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request">DataProviderColl definition</param>
+        /// <param name="createDataProviderCollRequest">DataProviderColl definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse"/>&gt;</returns>
-        Task<IC5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse> C5bb5300d6a46cc5b1b6a3bb1c3fa869Async(int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataProviderColl@update
-        /// </summary>
-        /// <remarks>
-        /// Update a DataProviderColl
-        /// </remarks>
-        /// <param name="id">DataProviderColl ID</param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request">DataProviderColl definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse"/>?&gt;</returns>
-        Task<IC5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse?> C5bb5300d6a46cc5b1b6a3bb1c3fa869OrDefaultAsync(int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateDataProviderCollApiResponse"/>&gt;</returns>
+        Task<ICreateDataProviderCollApiResponse> CreateDataProviderCollAsync(CreateDataProviderCollRequest createDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataProviderColl@store
@@ -69,45 +56,10 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Creates a new DataProviderColl
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request">DataProviderColl definition</param>
+        /// <param name="createDataProviderCollRequest">DataProviderColl definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall02ada355a680c816624e98ae028dc8b6ApiResponse"/>&gt;</returns>
-        Task<ICall02ada355a680c816624e98ae028dc8b6ApiResponse> Call02ada355a680c816624e98ae028dc8b6Async(Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataProviderColl@store
-        /// </summary>
-        /// <remarks>
-        /// Creates a new DataProviderColl
-        /// </remarks>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request">DataProviderColl definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall02ada355a680c816624e98ae028dc8b6ApiResponse"/>?&gt;</returns>
-        Task<ICall02ada355a680c816624e98ae028dc8b6ApiResponse?> Call02ada355a680c816624e98ae028dc8b6OrDefaultAsync(Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataProviderColl@show
-        /// </summary>
-        /// <remarks>
-        /// Return a single DataProviderColl
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataProviderColl ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall08f75648c437bdf2ba9f66d0c1371d0cApiResponse"/>&gt;</returns>
-        Task<ICall08f75648c437bdf2ba9f66d0c1371d0cApiResponse> Call08f75648c437bdf2ba9f66d0c1371d0cAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataProviderColl@show
-        /// </summary>
-        /// <remarks>
-        /// Return a single DataProviderColl
-        /// </remarks>
-        /// <param name="id">DataProviderColl ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall08f75648c437bdf2ba9f66d0c1371d0cApiResponse"/>?&gt;</returns>
-        Task<ICall08f75648c437bdf2ba9f66d0c1371d0cApiResponse?> Call08f75648c437bdf2ba9f66d0c1371d0cOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateDataProviderCollApiResponse"/>?&gt;</returns>
+        Task<ICreateDataProviderCollApiResponse?> CreateDataProviderCollOrDefaultAsync(CreateDataProviderCollRequest createDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataProviderColl@destroy
@@ -118,8 +70,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">DataProviderColl ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3351120ae1ae550ab36ee958b1feaf48ApiResponse"/>&gt;</returns>
-        Task<ICall3351120ae1ae550ab36ee958b1feaf48ApiResponse> Call3351120ae1ae550ab36ee958b1feaf48Async(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteDataProviderCollApiResponse"/>&gt;</returns>
+        Task<IDeleteDataProviderCollApiResponse> DeleteDataProviderCollAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataProviderColl@destroy
@@ -129,8 +81,8 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="id">DataProviderColl ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3351120ae1ae550ab36ee958b1feaf48ApiResponse"/>?&gt;</returns>
-        Task<ICall3351120ae1ae550ab36ee958b1feaf48ApiResponse?> Call3351120ae1ae550ab36ee958b1feaf48OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteDataProviderCollApiResponse"/>?&gt;</returns>
+        Task<IDeleteDataProviderCollApiResponse?> DeleteDataProviderCollOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataProviderColl@edit
@@ -140,10 +92,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">DataProviderColl ID</param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request">DataProviderColl definition</param>
+        /// <param name="editDataProviderCollRequest">DataProviderColl definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall81b552b8803870790579d840279ce8a3ApiResponse"/>&gt;</returns>
-        Task<ICall81b552b8803870790579d840279ce8a3ApiResponse> Call81b552b8803870790579d840279ce8a3Async(int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditDataProviderCollApiResponse"/>&gt;</returns>
+        Task<IEditDataProviderCollApiResponse> EditDataProviderCollAsync(int id, EditDataProviderCollRequest editDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataProviderColl@edit
@@ -152,33 +104,33 @@ namespace GatewayApiSdk.Api
         /// Edit a DataProviderColl
         /// </remarks>
         /// <param name="id">DataProviderColl ID</param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request">DataProviderColl definition</param>
+        /// <param name="editDataProviderCollRequest">DataProviderColl definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall81b552b8803870790579d840279ce8a3ApiResponse"/>?&gt;</returns>
-        Task<ICall81b552b8803870790579d840279ce8a3ApiResponse?> Call81b552b8803870790579d840279ce8a3OrDefaultAsync(int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditDataProviderCollApiResponse"/>?&gt;</returns>
+        Task<IEditDataProviderCollApiResponse?> EditDataProviderCollOrDefaultAsync(int id, EditDataProviderCollRequest editDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// DataProviderColl@index
+        /// DataProviderColl@show
         /// </summary>
         /// <remarks>
-        /// Returns a list of DataProviderColls enabled on the system
+        /// Return a single DataProviderColl
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="perPage">per page (optional)</param>
+        /// <param name="id">DataProviderColl ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID0fe0e1c60dd979135440e3e0b440b75ApiResponse"/>&gt;</returns>
-        Task<ID0fe0e1c60dd979135440e3e0b440b75ApiResponse> D0fe0e1c60dd979135440e3e0b440b75Async(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataProviderCollApiResponse"/>&gt;</returns>
+        Task<IFetchDataProviderCollApiResponse> FetchDataProviderCollAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// DataProviderColl@index
+        /// DataProviderColl@show
         /// </summary>
         /// <remarks>
-        /// Returns a list of DataProviderColls enabled on the system
+        /// Return a single DataProviderColl
         /// </remarks>
-        /// <param name="perPage">per page (optional)</param>
+        /// <param name="id">DataProviderColl ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID0fe0e1c60dd979135440e3e0b440b75ApiResponse"/>?&gt;</returns>
-        Task<ID0fe0e1c60dd979135440e3e0b440b75ApiResponse?> D0fe0e1c60dd979135440e3e0b440b75OrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataProviderCollApiResponse"/>?&gt;</returns>
+        Task<IFetchDataProviderCollApiResponse?> FetchDataProviderCollOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataProviderColl@showSummary
@@ -189,8 +141,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">DataProviderColl ID - summary</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IEd769d8210100bbcd0e3a11660d25dc0ApiResponse"/>&gt;</returns>
-        Task<IEd769d8210100bbcd0e3a11660d25dc0ApiResponse> Ed769d8210100bbcd0e3a11660d25dc0Async(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataProviderCollSummaryApiResponse"/>&gt;</returns>
+        Task<IFetchDataProviderCollSummaryApiResponse> FetchDataProviderCollSummaryAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataProviderColl@showSummary
@@ -200,14 +152,80 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="id">DataProviderColl ID - summary</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IEd769d8210100bbcd0e3a11660d25dc0ApiResponse"/>?&gt;</returns>
-        Task<IEd769d8210100bbcd0e3a11660d25dc0ApiResponse?> Ed769d8210100bbcd0e3a11660d25dc0OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataProviderCollSummaryApiResponse"/>?&gt;</returns>
+        Task<IFetchDataProviderCollSummaryApiResponse?> FetchDataProviderCollSummaryOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// DataProviderColl@index
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of DataProviderColls enabled on the system
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="perPage">per page (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataProviderCollsApiResponse"/>&gt;</returns>
+        Task<IFetchDataProviderCollsApiResponse> FetchDataProviderCollsAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// DataProviderColl@index
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of DataProviderColls enabled on the system
+        /// </remarks>
+        /// <param name="perPage">per page (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataProviderCollsApiResponse"/>?&gt;</returns>
+        Task<IFetchDataProviderCollsApiResponse?> FetchDataProviderCollsOrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// DataProviderColl@update
+        /// </summary>
+        /// <remarks>
+        /// Update a DataProviderColl
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">DataProviderColl ID</param>
+        /// <param name="updateDataProviderCollRequest">DataProviderColl definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateDataProviderCollApiResponse"/>&gt;</returns>
+        Task<IUpdateDataProviderCollApiResponse> UpdateDataProviderCollAsync(int id, UpdateDataProviderCollRequest updateDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// DataProviderColl@update
+        /// </summary>
+        /// <remarks>
+        /// Update a DataProviderColl
+        /// </remarks>
+        /// <param name="id">DataProviderColl ID</param>
+        /// <param name="updateDataProviderCollRequest">DataProviderColl definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateDataProviderCollApiResponse"/>?&gt;</returns>
+        Task<IUpdateDataProviderCollApiResponse?> UpdateDataProviderCollOrDefaultAsync(int id, UpdateDataProviderCollRequest updateDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="IC5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse"/>
+    /// The <see cref="ICreateDataProviderCollApiResponse"/>
     /// </summary>
-    public interface IC5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.C5bb5300d6a46cc5b1b6a3bb1c3fa869200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface ICreateDataProviderCollApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CreateCategories200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 500 InternalServerError
+        /// </summary>
+        /// <returns></returns>
+        bool IsInternalServerError { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IDeleteDataProviderCollApiResponse"/>
+    /// </summary>
+    public interface IDeleteDataProviderCollApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -229,45 +247,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall02ada355a680c816624e98ae028dc8b6ApiResponse"/>
+    /// The <see cref="IEditDataProviderCollApiResponse"/>
     /// </summary>
-    public interface ICall02ada355a680c816624e98ae028dc8b6ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 500 InternalServerError
-        /// </summary>
-        /// <returns></returns>
-        bool IsInternalServerError { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ICall08f75648c437bdf2ba9f66d0c1371d0cApiResponse"/>
-    /// </summary>
-    public interface ICall08f75648c437bdf2ba9f66d0c1371d0cApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model08f75648c437bdf2ba9f66d0c1371d0c200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ICall3351120ae1ae550ab36ee958b1feaf48ApiResponse"/>
-    /// </summary>
-    public interface ICall3351120ae1ae550ab36ee958b1feaf48ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IEditDataProviderCollApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateDataProviderColl200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -289,9 +271,57 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall81b552b8803870790579d840279ce8a3ApiResponse"/>
+    /// The <see cref="IFetchDataProviderCollApiResponse"/>
     /// </summary>
-    public interface ICall81b552b8803870790579d840279ce8a3ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.C5bb5300d6a46cc5b1b6a3bb1c3fa869200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IFetchDataProviderCollApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchDataProviderColl200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 404 NotFound
+        /// </summary>
+        /// <returns></returns>
+        bool IsNotFound { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchDataProviderCollSummaryApiResponse"/>
+    /// </summary>
+    public interface IFetchDataProviderCollSummaryApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchDataProviderCollSummary200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 404 NotFound
+        /// </summary>
+        /// <returns></returns>
+        bool IsNotFound { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchDataProviderCollsApiResponse"/>
+    /// </summary>
+    public interface IFetchDataProviderCollsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchDataProviderColls200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IUpdateDataProviderCollApiResponse"/>
+    /// </summary>
+    public interface IUpdateDataProviderCollApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateDataProviderColl200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -310,36 +340,6 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <returns></returns>
         bool IsInternalServerError { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ID0fe0e1c60dd979135440e3e0b440b75ApiResponse"/>
-    /// </summary>
-    public interface ID0fe0e1c60dd979135440e3e0b440b75ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.D0fe0e1c60dd979135440e3e0b440b75200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IEd769d8210100bbcd0e3a11660d25dc0ApiResponse"/>
-    /// </summary>
-    public interface IEd769d8210100bbcd0e3a11660d25dc0ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Ed769d8210100bbcd0e3a11660d25dc0200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
     }
 
     /// <summary>
@@ -350,141 +350,141 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnC5bb5300d6a46cc5b1b6a3bb1c3fa869;
+        public event EventHandler<ApiResponseEventArgs>? OnCreateDataProviderColl;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorC5bb5300d6a46cc5b1b6a3bb1c3fa869;
+        public event EventHandler<ExceptionEventArgs>? OnErrorCreateDataProviderColl;
 
-        internal void ExecuteOnC5bb5300d6a46cc5b1b6a3bb1c3fa869(DataProviderCollApi.C5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse apiResponse)
+        internal void ExecuteOnCreateDataProviderColl(DataProviderCollApi.CreateDataProviderCollApiResponse apiResponse)
         {
-            OnC5bb5300d6a46cc5b1b6a3bb1c3fa869?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnCreateDataProviderColl?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorC5bb5300d6a46cc5b1b6a3bb1c3fa869(Exception exception)
+        internal void ExecuteOnErrorCreateDataProviderColl(Exception exception)
         {
-            OnErrorC5bb5300d6a46cc5b1b6a3bb1c3fa869?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorCreateDataProviderColl?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall02ada355a680c816624e98ae028dc8b6;
+        public event EventHandler<ApiResponseEventArgs>? OnDeleteDataProviderColl;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall02ada355a680c816624e98ae028dc8b6;
+        public event EventHandler<ExceptionEventArgs>? OnErrorDeleteDataProviderColl;
 
-        internal void ExecuteOnCall02ada355a680c816624e98ae028dc8b6(DataProviderCollApi.Call02ada355a680c816624e98ae028dc8b6ApiResponse apiResponse)
+        internal void ExecuteOnDeleteDataProviderColl(DataProviderCollApi.DeleteDataProviderCollApiResponse apiResponse)
         {
-            OnCall02ada355a680c816624e98ae028dc8b6?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnDeleteDataProviderColl?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall02ada355a680c816624e98ae028dc8b6(Exception exception)
+        internal void ExecuteOnErrorDeleteDataProviderColl(Exception exception)
         {
-            OnErrorCall02ada355a680c816624e98ae028dc8b6?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorDeleteDataProviderColl?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall08f75648c437bdf2ba9f66d0c1371d0c;
+        public event EventHandler<ApiResponseEventArgs>? OnEditDataProviderColl;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall08f75648c437bdf2ba9f66d0c1371d0c;
+        public event EventHandler<ExceptionEventArgs>? OnErrorEditDataProviderColl;
 
-        internal void ExecuteOnCall08f75648c437bdf2ba9f66d0c1371d0c(DataProviderCollApi.Call08f75648c437bdf2ba9f66d0c1371d0cApiResponse apiResponse)
+        internal void ExecuteOnEditDataProviderColl(DataProviderCollApi.EditDataProviderCollApiResponse apiResponse)
         {
-            OnCall08f75648c437bdf2ba9f66d0c1371d0c?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnEditDataProviderColl?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall08f75648c437bdf2ba9f66d0c1371d0c(Exception exception)
+        internal void ExecuteOnErrorEditDataProviderColl(Exception exception)
         {
-            OnErrorCall08f75648c437bdf2ba9f66d0c1371d0c?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorEditDataProviderColl?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall3351120ae1ae550ab36ee958b1feaf48;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchDataProviderColl;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall3351120ae1ae550ab36ee958b1feaf48;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchDataProviderColl;
 
-        internal void ExecuteOnCall3351120ae1ae550ab36ee958b1feaf48(DataProviderCollApi.Call3351120ae1ae550ab36ee958b1feaf48ApiResponse apiResponse)
+        internal void ExecuteOnFetchDataProviderColl(DataProviderCollApi.FetchDataProviderCollApiResponse apiResponse)
         {
-            OnCall3351120ae1ae550ab36ee958b1feaf48?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchDataProviderColl?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall3351120ae1ae550ab36ee958b1feaf48(Exception exception)
+        internal void ExecuteOnErrorFetchDataProviderColl(Exception exception)
         {
-            OnErrorCall3351120ae1ae550ab36ee958b1feaf48?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchDataProviderColl?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall81b552b8803870790579d840279ce8a3;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchDataProviderCollSummary;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall81b552b8803870790579d840279ce8a3;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchDataProviderCollSummary;
 
-        internal void ExecuteOnCall81b552b8803870790579d840279ce8a3(DataProviderCollApi.Call81b552b8803870790579d840279ce8a3ApiResponse apiResponse)
+        internal void ExecuteOnFetchDataProviderCollSummary(DataProviderCollApi.FetchDataProviderCollSummaryApiResponse apiResponse)
         {
-            OnCall81b552b8803870790579d840279ce8a3?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchDataProviderCollSummary?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall81b552b8803870790579d840279ce8a3(Exception exception)
+        internal void ExecuteOnErrorFetchDataProviderCollSummary(Exception exception)
         {
-            OnErrorCall81b552b8803870790579d840279ce8a3?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchDataProviderCollSummary?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnD0fe0e1c60dd979135440e3e0b440b75;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchDataProviderColls;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorD0fe0e1c60dd979135440e3e0b440b75;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchDataProviderColls;
 
-        internal void ExecuteOnD0fe0e1c60dd979135440e3e0b440b75(DataProviderCollApi.D0fe0e1c60dd979135440e3e0b440b75ApiResponse apiResponse)
+        internal void ExecuteOnFetchDataProviderColls(DataProviderCollApi.FetchDataProviderCollsApiResponse apiResponse)
         {
-            OnD0fe0e1c60dd979135440e3e0b440b75?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchDataProviderColls?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorD0fe0e1c60dd979135440e3e0b440b75(Exception exception)
+        internal void ExecuteOnErrorFetchDataProviderColls(Exception exception)
         {
-            OnErrorD0fe0e1c60dd979135440e3e0b440b75?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchDataProviderColls?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnEd769d8210100bbcd0e3a11660d25dc0;
+        public event EventHandler<ApiResponseEventArgs>? OnUpdateDataProviderColl;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorEd769d8210100bbcd0e3a11660d25dc0;
+        public event EventHandler<ExceptionEventArgs>? OnErrorUpdateDataProviderColl;
 
-        internal void ExecuteOnEd769d8210100bbcd0e3a11660d25dc0(DataProviderCollApi.Ed769d8210100bbcd0e3a11660d25dc0ApiResponse apiResponse)
+        internal void ExecuteOnUpdateDataProviderColl(DataProviderCollApi.UpdateDataProviderCollApiResponse apiResponse)
         {
-            OnEd769d8210100bbcd0e3a11660d25dc0?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnUpdateDataProviderColl?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorEd769d8210100bbcd0e3a11660d25dc0(Exception exception)
+        internal void ExecuteOnErrorUpdateDataProviderColl(Exception exception)
         {
-            OnErrorEd769d8210100bbcd0e3a11660d25dc0?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorUpdateDataProviderColl?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -529,29 +529,28 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatC5bb5300d6a46cc5b1b6a3bb1c3fa869(ref int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
+        partial void FormatCreateDataProviderColl(CreateDataProviderCollRequest createDataProviderCollRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request"></param>
+        /// <param name="createDataProviderCollRequest"></param>
         /// <returns></returns>
-        private void ValidateC5bb5300d6a46cc5b1b6a3bb1c3fa869(C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request)
+        private void ValidateCreateDataProviderColl(CreateDataProviderCollRequest createDataProviderCollRequest)
         {
-            if (c5bb5300d6a46cc5b1b6a3bb1c3fa869Request == null)
-                throw new ArgumentNullException(nameof(c5bb5300d6a46cc5b1b6a3bb1c3fa869Request));
+            if (createDataProviderCollRequest == null)
+                throw new ArgumentNullException(nameof(createDataProviderCollRequest));
         }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request"></param>
-        private void AfterC5bb5300d6a46cc5b1b6a3bb1c3fa869DefaultImplementation(IC5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse apiResponseLocalVar, int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request)
+        /// <param name="createDataProviderCollRequest"></param>
+        private void AfterCreateDataProviderCollDefaultImplementation(ICreateDataProviderCollApiResponse apiResponseLocalVar, CreateDataProviderCollRequest createDataProviderCollRequest)
         {
             bool suppressDefaultLog = false;
-            AfterC5bb5300d6a46cc5b1b6a3bb1c3fa869(ref suppressDefaultLog, apiResponseLocalVar, id, c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
+            AfterCreateDataProviderColl(ref suppressDefaultLog, apiResponseLocalVar, createDataProviderCollRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -561,9 +560,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request"></param>
-        partial void AfterC5bb5300d6a46cc5b1b6a3bb1c3fa869(ref bool suppressDefaultLog, IC5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse apiResponseLocalVar, int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
+        /// <param name="createDataProviderCollRequest"></param>
+        partial void AfterCreateDataProviderColl(ref bool suppressDefaultLog, ICreateDataProviderCollApiResponse apiResponseLocalVar, CreateDataProviderCollRequest createDataProviderCollRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -571,12 +569,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request"></param>
-        private void OnErrorC5bb5300d6a46cc5b1b6a3bb1c3fa869DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request)
+        /// <param name="createDataProviderCollRequest"></param>
+        private void OnErrorCreateDataProviderCollDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateDataProviderCollRequest createDataProviderCollRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorC5bb5300d6a46cc5b1b6a3bb1c3fa869(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
+            OnErrorCreateDataProviderColl(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createDataProviderCollRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -588,364 +585,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request"></param>
-        partial void OnErrorC5bb5300d6a46cc5b1b6a3bb1c3fa869(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
-
-        /// <summary>
-        /// DataProviderColl@update Update a DataProviderColl
-        /// </summary>
-        /// <param name="id">DataProviderColl ID</param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request">DataProviderColl definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse"/>&gt;</returns>
-        public async Task<IC5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse?> C5bb5300d6a46cc5b1b6a3bb1c3fa869OrDefaultAsync(int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await C5bb5300d6a46cc5b1b6a3bb1c3fa869Async(id, c5bb5300d6a46cc5b1b6a3bb1c3fa869Request, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// DataProviderColl@update Update a DataProviderColl
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataProviderColl ID</param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request">DataProviderColl definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse"/>&gt;</returns>
-        public async Task<IC5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse> C5bb5300d6a46cc5b1b6a3bb1c3fa869Async(int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateC5bb5300d6a46cc5b1b6a3bb1c3fa869(c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
-
-                FormatC5bb5300d6a46cc5b1b6a3bb1c3fa869(ref id, c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/data_provider_colls/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/data_provider_colls/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    httpRequestMessageLocalVar.Content = (c5bb5300d6a46cc5b1b6a3bb1c3fa869Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(c5bb5300d6a46cc5b1b6a3bb1c3fa869Request, _jsonSerializerOptions));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        C5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/data_provider_colls/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterC5bb5300d6a46cc5b1b6a3bb1c3fa869DefaultImplementation(apiResponseLocalVar, id, c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
-
-                        Events.ExecuteOnC5bb5300d6a46cc5b1b6a3bb1c3fa869(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorC5bb5300d6a46cc5b1b6a3bb1c3fa869DefaultImplementation(e, "/api/v1/data_provider_colls/{id}", uriBuilderLocalVar.Path, id, c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
-                Events.ExecuteOnErrorC5bb5300d6a46cc5b1b6a3bb1c3fa869(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="C5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse"/>
-        /// </summary>
-        public partial class C5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse : GatewayApiSdk.Client.ApiResponse, IC5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataProviderCollApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="C5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public C5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="C5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public C5bb5300d6a46cc5b1b6a3bb1c3fa869ApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.C5bb5300d6a46cc5b1b6a3bb1c3fa869200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C5bb5300d6a46cc5b1b6a3bb1c3fa869200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C5bb5300d6a46cc5b1b6a3bb1c3fa869200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall02ada355a680c816624e98ae028dc8b6(Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request"></param>
-        /// <returns></returns>
-        private void ValidateCall02ada355a680c816624e98ae028dc8b6(Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request)
-        {
-            if (model02ada355a680c816624e98ae028dc8b6Request == null)
-                throw new ArgumentNullException(nameof(model02ada355a680c816624e98ae028dc8b6Request));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request"></param>
-        private void AfterCall02ada355a680c816624e98ae028dc8b6DefaultImplementation(ICall02ada355a680c816624e98ae028dc8b6ApiResponse apiResponseLocalVar, Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall02ada355a680c816624e98ae028dc8b6(ref suppressDefaultLog, apiResponseLocalVar, model02ada355a680c816624e98ae028dc8b6Request);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request"></param>
-        partial void AfterCall02ada355a680c816624e98ae028dc8b6(ref bool suppressDefaultLog, ICall02ada355a680c816624e98ae028dc8b6ApiResponse apiResponseLocalVar, Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request"></param>
-        private void OnErrorCall02ada355a680c816624e98ae028dc8b6DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall02ada355a680c816624e98ae028dc8b6(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, model02ada355a680c816624e98ae028dc8b6Request);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request"></param>
-        partial void OnErrorCall02ada355a680c816624e98ae028dc8b6(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request);
+        /// <param name="createDataProviderCollRequest"></param>
+        partial void OnErrorCreateDataProviderColl(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateDataProviderCollRequest createDataProviderCollRequest);
 
         /// <summary>
         /// DataProviderColl@store Creates a new DataProviderColl
         /// </summary>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request">DataProviderColl definition</param>
+        /// <param name="createDataProviderCollRequest">DataProviderColl definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall02ada355a680c816624e98ae028dc8b6ApiResponse"/>&gt;</returns>
-        public async Task<ICall02ada355a680c816624e98ae028dc8b6ApiResponse?> Call02ada355a680c816624e98ae028dc8b6OrDefaultAsync(Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateDataProviderCollApiResponse"/>&gt;</returns>
+        public async Task<ICreateDataProviderCollApiResponse?> CreateDataProviderCollOrDefaultAsync(CreateDataProviderCollRequest createDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call02ada355a680c816624e98ae028dc8b6Async(model02ada355a680c816624e98ae028dc8b6Request, cancellationToken).ConfigureAwait(false);
+                return await CreateDataProviderCollAsync(createDataProviderCollRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -957,18 +610,18 @@ namespace GatewayApiSdk.Api
         /// DataProviderColl@store Creates a new DataProviderColl
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request">DataProviderColl definition</param>
+        /// <param name="createDataProviderCollRequest">DataProviderColl definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall02ada355a680c816624e98ae028dc8b6ApiResponse"/>&gt;</returns>
-        public async Task<ICall02ada355a680c816624e98ae028dc8b6ApiResponse> Call02ada355a680c816624e98ae028dc8b6Async(Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateDataProviderCollApiResponse"/>&gt;</returns>
+        public async Task<ICreateDataProviderCollApiResponse> CreateDataProviderCollAsync(CreateDataProviderCollRequest createDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall02ada355a680c816624e98ae028dc8b6(model02ada355a680c816624e98ae028dc8b6Request);
+                ValidateCreateDataProviderColl(createDataProviderCollRequest);
 
-                FormatCall02ada355a680c816624e98ae028dc8b6(model02ada355a680c816624e98ae028dc8b6Request);
+                FormatCreateDataProviderColl(createDataProviderCollRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -979,9 +632,9 @@ namespace GatewayApiSdk.Api
                         ? "/api/v1/data_provider_colls"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/data_provider_colls");
 
-                    httpRequestMessageLocalVar.Content = (model02ada355a680c816624e98ae028dc8b6Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (createDataProviderCollRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model02ada355a680c816624e98ae028dc8b6Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createDataProviderCollRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -1016,7 +669,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call02ada355a680c816624e98ae028dc8b6ApiResponse apiResponseLocalVar;
+                        CreateDataProviderCollApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -1027,9 +680,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall02ada355a680c816624e98ae028dc8b6DefaultImplementation(apiResponseLocalVar, model02ada355a680c816624e98ae028dc8b6Request);
+                        AfterCreateDataProviderCollDefaultImplementation(apiResponseLocalVar, createDataProviderCollRequest);
 
-                        Events.ExecuteOnCall02ada355a680c816624e98ae028dc8b6(apiResponseLocalVar);
+                        Events.ExecuteOnCreateDataProviderColl(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -1041,16 +694,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall02ada355a680c816624e98ae028dc8b6DefaultImplementation(e, "/api/v1/data_provider_colls", uriBuilderLocalVar.Path, model02ada355a680c816624e98ae028dc8b6Request);
-                Events.ExecuteOnErrorCall02ada355a680c816624e98ae028dc8b6(e);
+                OnErrorCreateDataProviderCollDefaultImplementation(e, "/api/v1/data_provider_colls", uriBuilderLocalVar.Path, createDataProviderCollRequest);
+                Events.ExecuteOnErrorCreateDataProviderColl(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call02ada355a680c816624e98ae028dc8b6ApiResponse"/>
+        /// The <see cref="CreateDataProviderCollApiResponse"/>
         /// </summary>
-        public partial class Call02ada355a680c816624e98ae028dc8b6ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall02ada355a680c816624e98ae028dc8b6ApiResponse
+        public partial class CreateDataProviderCollApiResponse : GatewayApiSdk.Client.ApiResponse, ICreateDataProviderCollApiResponse
         {
             /// <summary>
             /// The logger
@@ -1058,7 +711,7 @@ namespace GatewayApiSdk.Api
             public ILogger<DataProviderCollApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call02ada355a680c816624e98ae028dc8b6ApiResponse"/>
+            /// The <see cref="CreateDataProviderCollApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1067,14 +720,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call02ada355a680c816624e98ae028dc8b6ApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public CreateDataProviderCollApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call02ada355a680c816624e98ae028dc8b6ApiResponse"/>
+            /// The <see cref="CreateDataProviderCollApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1083,7 +736,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call02ada355a680c816624e98ae028dc8b6ApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public CreateDataProviderCollApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1101,11 +754,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? Ok()
+            public GatewayApiSdk.Model.CreateCategories200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1114,7 +767,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
             {
                 result = null;
 
@@ -1139,11 +792,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1152,7 +805,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -1178,17 +831,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall08f75648c437bdf2ba9f66d0c1371d0c(ref int id);
+        partial void FormatDeleteDataProviderColl(ref int id);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        private void AfterCall08f75648c437bdf2ba9f66d0c1371d0cDefaultImplementation(ICall08f75648c437bdf2ba9f66d0c1371d0cApiResponse apiResponseLocalVar, int id)
+        private void AfterDeleteDataProviderCollDefaultImplementation(IDeleteDataProviderCollApiResponse apiResponseLocalVar, int id)
         {
             bool suppressDefaultLog = false;
-            AfterCall08f75648c437bdf2ba9f66d0c1371d0c(ref suppressDefaultLog, apiResponseLocalVar, id);
+            AfterDeleteDataProviderColl(ref suppressDefaultLog, apiResponseLocalVar, id);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1199,7 +852,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        partial void AfterCall08f75648c437bdf2ba9f66d0c1371d0c(ref bool suppressDefaultLog, ICall08f75648c437bdf2ba9f66d0c1371d0cApiResponse apiResponseLocalVar, int id);
+        partial void AfterDeleteDataProviderColl(ref bool suppressDefaultLog, IDeleteDataProviderCollApiResponse apiResponseLocalVar, int id);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1208,10 +861,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        private void OnErrorCall08f75648c437bdf2ba9f66d0c1371d0cDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        private void OnErrorDeleteDataProviderCollDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall08f75648c437bdf2ba9f66d0c1371d0c(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            OnErrorDeleteDataProviderColl(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1224,296 +877,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        partial void OnErrorCall08f75648c437bdf2ba9f66d0c1371d0c(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
-
-        /// <summary>
-        /// DataProviderColl@show Return a single DataProviderColl
-        /// </summary>
-        /// <param name="id">DataProviderColl ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall08f75648c437bdf2ba9f66d0c1371d0cApiResponse"/>&gt;</returns>
-        public async Task<ICall08f75648c437bdf2ba9f66d0c1371d0cApiResponse?> Call08f75648c437bdf2ba9f66d0c1371d0cOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call08f75648c437bdf2ba9f66d0c1371d0cAsync(id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// DataProviderColl@show Return a single DataProviderColl
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataProviderColl ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall08f75648c437bdf2ba9f66d0c1371d0cApiResponse"/>&gt;</returns>
-        public async Task<ICall08f75648c437bdf2ba9f66d0c1371d0cApiResponse> Call08f75648c437bdf2ba9f66d0c1371d0cAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatCall08f75648c437bdf2ba9f66d0c1371d0c(ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/data_provider_colls/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/data_provider_colls/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call08f75648c437bdf2ba9f66d0c1371d0cApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/data_provider_colls/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall08f75648c437bdf2ba9f66d0c1371d0cDefaultImplementation(apiResponseLocalVar, id);
-
-                        Events.ExecuteOnCall08f75648c437bdf2ba9f66d0c1371d0c(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall08f75648c437bdf2ba9f66d0c1371d0cDefaultImplementation(e, "/api/v1/data_provider_colls/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorCall08f75648c437bdf2ba9f66d0c1371d0c(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call08f75648c437bdf2ba9f66d0c1371d0cApiResponse"/>
-        /// </summary>
-        public partial class Call08f75648c437bdf2ba9f66d0c1371d0cApiResponse : GatewayApiSdk.Client.ApiResponse, ICall08f75648c437bdf2ba9f66d0c1371d0cApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataProviderCollApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call08f75648c437bdf2ba9f66d0c1371d0cApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call08f75648c437bdf2ba9f66d0c1371d0cApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call08f75648c437bdf2ba9f66d0c1371d0cApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call08f75648c437bdf2ba9f66d0c1371d0cApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model08f75648c437bdf2ba9f66d0c1371d0c200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model08f75648c437bdf2ba9f66d0c1371d0c200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model08f75648c437bdf2ba9f66d0c1371d0c200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall3351120ae1ae550ab36ee958b1feaf48(ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterCall3351120ae1ae550ab36ee958b1feaf48DefaultImplementation(ICall3351120ae1ae550ab36ee958b1feaf48ApiResponse apiResponseLocalVar, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall3351120ae1ae550ab36ee958b1feaf48(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterCall3351120ae1ae550ab36ee958b1feaf48(ref bool suppressDefaultLog, ICall3351120ae1ae550ab36ee958b1feaf48ApiResponse apiResponseLocalVar, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorCall3351120ae1ae550ab36ee958b1feaf48DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall3351120ae1ae550ab36ee958b1feaf48(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorCall3351120ae1ae550ab36ee958b1feaf48(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+        partial void OnErrorDeleteDataProviderColl(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
 
         /// <summary>
         /// DataProviderColl@destroy Delete a DataProviderColl
         /// </summary>
         /// <param name="id">DataProviderColl ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3351120ae1ae550ab36ee958b1feaf48ApiResponse"/>&gt;</returns>
-        public async Task<ICall3351120ae1ae550ab36ee958b1feaf48ApiResponse?> Call3351120ae1ae550ab36ee958b1feaf48OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteDataProviderCollApiResponse"/>&gt;</returns>
+        public async Task<IDeleteDataProviderCollApiResponse?> DeleteDataProviderCollOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call3351120ae1ae550ab36ee958b1feaf48Async(id, cancellationToken).ConfigureAwait(false);
+                return await DeleteDataProviderCollAsync(id, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1527,14 +903,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">DataProviderColl ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3351120ae1ae550ab36ee958b1feaf48ApiResponse"/>&gt;</returns>
-        public async Task<ICall3351120ae1ae550ab36ee958b1feaf48ApiResponse> Call3351120ae1ae550ab36ee958b1feaf48Async(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteDataProviderCollApiResponse"/>&gt;</returns>
+        public async Task<IDeleteDataProviderCollApiResponse> DeleteDataProviderCollAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatCall3351120ae1ae550ab36ee958b1feaf48(ref id);
+                FormatDeleteDataProviderColl(ref id);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1570,7 +946,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call3351120ae1ae550ab36ee958b1feaf48ApiResponse apiResponseLocalVar;
+                        DeleteDataProviderCollApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -1581,9 +957,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall3351120ae1ae550ab36ee958b1feaf48DefaultImplementation(apiResponseLocalVar, id);
+                        AfterDeleteDataProviderCollDefaultImplementation(apiResponseLocalVar, id);
 
-                        Events.ExecuteOnCall3351120ae1ae550ab36ee958b1feaf48(apiResponseLocalVar);
+                        Events.ExecuteOnDeleteDataProviderColl(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -1595,16 +971,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall3351120ae1ae550ab36ee958b1feaf48DefaultImplementation(e, "/api/v1/data_provider_colls/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorCall3351120ae1ae550ab36ee958b1feaf48(e);
+                OnErrorDeleteDataProviderCollDefaultImplementation(e, "/api/v1/data_provider_colls/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorDeleteDataProviderColl(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call3351120ae1ae550ab36ee958b1feaf48ApiResponse"/>
+        /// The <see cref="DeleteDataProviderCollApiResponse"/>
         /// </summary>
-        public partial class Call3351120ae1ae550ab36ee958b1feaf48ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall3351120ae1ae550ab36ee958b1feaf48ApiResponse
+        public partial class DeleteDataProviderCollApiResponse : GatewayApiSdk.Client.ApiResponse, IDeleteDataProviderCollApiResponse
         {
             /// <summary>
             /// The logger
@@ -1612,7 +988,7 @@ namespace GatewayApiSdk.Api
             public ILogger<DataProviderCollApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call3351120ae1ae550ab36ee958b1feaf48ApiResponse"/>
+            /// The <see cref="DeleteDataProviderCollApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1621,14 +997,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call3351120ae1ae550ab36ee958b1feaf48ApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public DeleteDataProviderCollApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call3351120ae1ae550ab36ee958b1feaf48ApiResponse"/>
+            /// The <see cref="DeleteDataProviderCollApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1637,7 +1013,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call3351120ae1ae550ab36ee958b1feaf48ApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public DeleteDataProviderCollApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1655,11 +1031,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1668,7 +1044,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -1693,11 +1069,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? Ok()
+            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1706,7 +1082,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
             {
                 result = null;
 
@@ -1731,11 +1107,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1744,7 +1120,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -1770,17 +1146,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall81b552b8803870790579d840279ce8a3(ref int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request);
+        partial void FormatEditDataProviderColl(ref int id, EditDataProviderCollRequest editDataProviderCollRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request"></param>
+        /// <param name="editDataProviderCollRequest"></param>
         /// <returns></returns>
-        private void ValidateCall81b552b8803870790579d840279ce8a3(Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request)
+        private void ValidateEditDataProviderColl(EditDataProviderCollRequest editDataProviderCollRequest)
         {
-            if (model81b552b8803870790579d840279ce8a3Request == null)
-                throw new ArgumentNullException(nameof(model81b552b8803870790579d840279ce8a3Request));
+            if (editDataProviderCollRequest == null)
+                throw new ArgumentNullException(nameof(editDataProviderCollRequest));
         }
 
         /// <summary>
@@ -1788,11 +1164,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request"></param>
-        private void AfterCall81b552b8803870790579d840279ce8a3DefaultImplementation(ICall81b552b8803870790579d840279ce8a3ApiResponse apiResponseLocalVar, int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request)
+        /// <param name="editDataProviderCollRequest"></param>
+        private void AfterEditDataProviderCollDefaultImplementation(IEditDataProviderCollApiResponse apiResponseLocalVar, int id, EditDataProviderCollRequest editDataProviderCollRequest)
         {
             bool suppressDefaultLog = false;
-            AfterCall81b552b8803870790579d840279ce8a3(ref suppressDefaultLog, apiResponseLocalVar, id, model81b552b8803870790579d840279ce8a3Request);
+            AfterEditDataProviderColl(ref suppressDefaultLog, apiResponseLocalVar, id, editDataProviderCollRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1803,8 +1179,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request"></param>
-        partial void AfterCall81b552b8803870790579d840279ce8a3(ref bool suppressDefaultLog, ICall81b552b8803870790579d840279ce8a3ApiResponse apiResponseLocalVar, int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request);
+        /// <param name="editDataProviderCollRequest"></param>
+        partial void AfterEditDataProviderColl(ref bool suppressDefaultLog, IEditDataProviderCollApiResponse apiResponseLocalVar, int id, EditDataProviderCollRequest editDataProviderCollRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1813,11 +1189,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request"></param>
-        private void OnErrorCall81b552b8803870790579d840279ce8a3DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request)
+        /// <param name="editDataProviderCollRequest"></param>
+        private void OnErrorEditDataProviderCollDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditDataProviderCollRequest editDataProviderCollRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall81b552b8803870790579d840279ce8a3(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, model81b552b8803870790579d840279ce8a3Request);
+            OnErrorEditDataProviderColl(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, editDataProviderCollRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1830,21 +1206,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request"></param>
-        partial void OnErrorCall81b552b8803870790579d840279ce8a3(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request);
+        /// <param name="editDataProviderCollRequest"></param>
+        partial void OnErrorEditDataProviderColl(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditDataProviderCollRequest editDataProviderCollRequest);
 
         /// <summary>
         /// DataProviderColl@edit Edit a DataProviderColl
         /// </summary>
         /// <param name="id">DataProviderColl ID</param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request">DataProviderColl definition</param>
+        /// <param name="editDataProviderCollRequest">DataProviderColl definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall81b552b8803870790579d840279ce8a3ApiResponse"/>&gt;</returns>
-        public async Task<ICall81b552b8803870790579d840279ce8a3ApiResponse?> Call81b552b8803870790579d840279ce8a3OrDefaultAsync(int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditDataProviderCollApiResponse"/>&gt;</returns>
+        public async Task<IEditDataProviderCollApiResponse?> EditDataProviderCollOrDefaultAsync(int id, EditDataProviderCollRequest editDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call81b552b8803870790579d840279ce8a3Async(id, model81b552b8803870790579d840279ce8a3Request, cancellationToken).ConfigureAwait(false);
+                return await EditDataProviderCollAsync(id, editDataProviderCollRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1857,18 +1233,18 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">DataProviderColl ID</param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request">DataProviderColl definition</param>
+        /// <param name="editDataProviderCollRequest">DataProviderColl definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall81b552b8803870790579d840279ce8a3ApiResponse"/>&gt;</returns>
-        public async Task<ICall81b552b8803870790579d840279ce8a3ApiResponse> Call81b552b8803870790579d840279ce8a3Async(int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditDataProviderCollApiResponse"/>&gt;</returns>
+        public async Task<IEditDataProviderCollApiResponse> EditDataProviderCollAsync(int id, EditDataProviderCollRequest editDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall81b552b8803870790579d840279ce8a3(model81b552b8803870790579d840279ce8a3Request);
+                ValidateEditDataProviderColl(editDataProviderCollRequest);
 
-                FormatCall81b552b8803870790579d840279ce8a3(ref id, model81b552b8803870790579d840279ce8a3Request);
+                FormatEditDataProviderColl(ref id, editDataProviderCollRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1880,9 +1256,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/data_provider_colls/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (model81b552b8803870790579d840279ce8a3Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (editDataProviderCollRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model81b552b8803870790579d840279ce8a3Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(editDataProviderCollRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -1917,7 +1293,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call81b552b8803870790579d840279ce8a3ApiResponse apiResponseLocalVar;
+                        EditDataProviderCollApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -1928,9 +1304,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall81b552b8803870790579d840279ce8a3DefaultImplementation(apiResponseLocalVar, id, model81b552b8803870790579d840279ce8a3Request);
+                        AfterEditDataProviderCollDefaultImplementation(apiResponseLocalVar, id, editDataProviderCollRequest);
 
-                        Events.ExecuteOnCall81b552b8803870790579d840279ce8a3(apiResponseLocalVar);
+                        Events.ExecuteOnEditDataProviderColl(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -1942,16 +1318,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall81b552b8803870790579d840279ce8a3DefaultImplementation(e, "/api/v1/data_provider_colls/{id}", uriBuilderLocalVar.Path, id, model81b552b8803870790579d840279ce8a3Request);
-                Events.ExecuteOnErrorCall81b552b8803870790579d840279ce8a3(e);
+                OnErrorEditDataProviderCollDefaultImplementation(e, "/api/v1/data_provider_colls/{id}", uriBuilderLocalVar.Path, id, editDataProviderCollRequest);
+                Events.ExecuteOnErrorEditDataProviderColl(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call81b552b8803870790579d840279ce8a3ApiResponse"/>
+        /// The <see cref="EditDataProviderCollApiResponse"/>
         /// </summary>
-        public partial class Call81b552b8803870790579d840279ce8a3ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall81b552b8803870790579d840279ce8a3ApiResponse
+        public partial class EditDataProviderCollApiResponse : GatewayApiSdk.Client.ApiResponse, IEditDataProviderCollApiResponse
         {
             /// <summary>
             /// The logger
@@ -1959,7 +1335,7 @@ namespace GatewayApiSdk.Api
             public ILogger<DataProviderCollApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call81b552b8803870790579d840279ce8a3ApiResponse"/>
+            /// The <see cref="EditDataProviderCollApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1968,14 +1344,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call81b552b8803870790579d840279ce8a3ApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public EditDataProviderCollApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call81b552b8803870790579d840279ce8a3ApiResponse"/>
+            /// The <see cref="EditDataProviderCollApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1984,7 +1360,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call81b552b8803870790579d840279ce8a3ApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public EditDataProviderCollApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -2002,11 +1378,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2015,7 +1391,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -2040,11 +1416,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.C5bb5300d6a46cc5b1b6a3bb1c3fa869200Response? Ok()
+            public GatewayApiSdk.Model.UpdateDataProviderColl200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C5bb5300d6a46cc5b1b6a3bb1c3fa869200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateDataProviderColl200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2053,7 +1429,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C5bb5300d6a46cc5b1b6a3bb1c3fa869200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateDataProviderColl200Response? result)
             {
                 result = null;
 
@@ -2078,11 +1454,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2091,7 +1467,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -2117,17 +1493,571 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatD0fe0e1c60dd979135440e3e0b440b75(ref Option<int> perPage);
+        partial void FormatFetchDataProviderColl(ref int id);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        private void AfterFetchDataProviderCollDefaultImplementation(IFetchDataProviderCollApiResponse apiResponseLocalVar, int id)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchDataProviderColl(ref suppressDefaultLog, apiResponseLocalVar, id);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        partial void AfterFetchDataProviderColl(ref bool suppressDefaultLog, IFetchDataProviderCollApiResponse apiResponseLocalVar, int id);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        private void OnErrorFetchDataProviderCollDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchDataProviderColl(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        partial void OnErrorFetchDataProviderColl(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+
+        /// <summary>
+        /// DataProviderColl@show Return a single DataProviderColl
+        /// </summary>
+        /// <param name="id">DataProviderColl ID</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataProviderCollApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataProviderCollApiResponse?> FetchDataProviderCollOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchDataProviderCollAsync(id, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// DataProviderColl@show Return a single DataProviderColl
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">DataProviderColl ID</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataProviderCollApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataProviderCollApiResponse> FetchDataProviderCollAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchDataProviderColl(ref id);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/data_provider_colls/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/data_provider_colls/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchDataProviderCollApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/data_provider_colls/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchDataProviderCollDefaultImplementation(apiResponseLocalVar, id);
+
+                        Events.ExecuteOnFetchDataProviderColl(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchDataProviderCollDefaultImplementation(e, "/api/v1/data_provider_colls/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorFetchDataProviderColl(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchDataProviderCollApiResponse"/>
+        /// </summary>
+        public partial class FetchDataProviderCollApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchDataProviderCollApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<DataProviderCollApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchDataProviderCollApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchDataProviderCollApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchDataProviderCollApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchDataProviderCollApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchDataProviderColl200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchDataProviderColl200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchDataProviderColl200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchDataProviderCollSummary(ref int id);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        private void AfterFetchDataProviderCollSummaryDefaultImplementation(IFetchDataProviderCollSummaryApiResponse apiResponseLocalVar, int id)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchDataProviderCollSummary(ref suppressDefaultLog, apiResponseLocalVar, id);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        partial void AfterFetchDataProviderCollSummary(ref bool suppressDefaultLog, IFetchDataProviderCollSummaryApiResponse apiResponseLocalVar, int id);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        private void OnErrorFetchDataProviderCollSummaryDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchDataProviderCollSummary(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        partial void OnErrorFetchDataProviderCollSummary(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+
+        /// <summary>
+        /// DataProviderColl@showSummary Return a single DataProviderColl - summary
+        /// </summary>
+        /// <param name="id">DataProviderColl ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataProviderCollSummaryApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataProviderCollSummaryApiResponse?> FetchDataProviderCollSummaryOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchDataProviderCollSummaryAsync(id, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// DataProviderColl@showSummary Return a single DataProviderColl - summary
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">DataProviderColl ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataProviderCollSummaryApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataProviderCollSummaryApiResponse> FetchDataProviderCollSummaryAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchDataProviderCollSummary(ref id);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/data_provider_colls/{id}/summary"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/data_provider_colls/{id}/summary");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchDataProviderCollSummaryApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/data_provider_colls/{id}/summary", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchDataProviderCollSummaryDefaultImplementation(apiResponseLocalVar, id);
+
+                        Events.ExecuteOnFetchDataProviderCollSummary(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchDataProviderCollSummaryDefaultImplementation(e, "/api/v1/data_provider_colls/{id}/summary", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorFetchDataProviderCollSummary(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchDataProviderCollSummaryApiResponse"/>
+        /// </summary>
+        public partial class FetchDataProviderCollSummaryApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchDataProviderCollSummaryApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<DataProviderCollApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchDataProviderCollSummaryApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchDataProviderCollSummaryApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchDataProviderCollSummaryApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchDataProviderCollSummaryApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchDataProviderCollSummary200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchDataProviderCollSummary200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchDataProviderCollSummary200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchDataProviderColls(ref Option<int> perPage);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="perPage"></param>
-        private void AfterD0fe0e1c60dd979135440e3e0b440b75DefaultImplementation(ID0fe0e1c60dd979135440e3e0b440b75ApiResponse apiResponseLocalVar, Option<int> perPage)
+        private void AfterFetchDataProviderCollsDefaultImplementation(IFetchDataProviderCollsApiResponse apiResponseLocalVar, Option<int> perPage)
         {
             bool suppressDefaultLog = false;
-            AfterD0fe0e1c60dd979135440e3e0b440b75(ref suppressDefaultLog, apiResponseLocalVar, perPage);
+            AfterFetchDataProviderColls(ref suppressDefaultLog, apiResponseLocalVar, perPage);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -2138,7 +2068,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="perPage"></param>
-        partial void AfterD0fe0e1c60dd979135440e3e0b440b75(ref bool suppressDefaultLog, ID0fe0e1c60dd979135440e3e0b440b75ApiResponse apiResponseLocalVar, Option<int> perPage);
+        partial void AfterFetchDataProviderColls(ref bool suppressDefaultLog, IFetchDataProviderCollsApiResponse apiResponseLocalVar, Option<int> perPage);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -2147,10 +2077,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="perPage"></param>
-        private void OnErrorD0fe0e1c60dd979135440e3e0b440b75DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage)
+        private void OnErrorFetchDataProviderCollsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorD0fe0e1c60dd979135440e3e0b440b75(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, perPage);
+            OnErrorFetchDataProviderColls(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, perPage);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -2163,19 +2093,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="perPage"></param>
-        partial void OnErrorD0fe0e1c60dd979135440e3e0b440b75(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage);
+        partial void OnErrorFetchDataProviderColls(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage);
 
         /// <summary>
         /// DataProviderColl@index Returns a list of DataProviderColls enabled on the system
         /// </summary>
         /// <param name="perPage">per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID0fe0e1c60dd979135440e3e0b440b75ApiResponse"/>&gt;</returns>
-        public async Task<ID0fe0e1c60dd979135440e3e0b440b75ApiResponse?> D0fe0e1c60dd979135440e3e0b440b75OrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataProviderCollsApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataProviderCollsApiResponse?> FetchDataProviderCollsOrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await D0fe0e1c60dd979135440e3e0b440b75Async(perPage, cancellationToken).ConfigureAwait(false);
+                return await FetchDataProviderCollsAsync(perPage, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -2189,14 +2119,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ID0fe0e1c60dd979135440e3e0b440b75ApiResponse"/>&gt;</returns>
-        public async Task<ID0fe0e1c60dd979135440e3e0b440b75ApiResponse> D0fe0e1c60dd979135440e3e0b440b75Async(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataProviderCollsApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataProviderCollsApiResponse> FetchDataProviderCollsAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatD0fe0e1c60dd979135440e3e0b440b75(ref perPage);
+                FormatFetchDataProviderColls(ref perPage);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -2238,7 +2168,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        D0fe0e1c60dd979135440e3e0b440b75ApiResponse apiResponseLocalVar;
+                        FetchDataProviderCollsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -2249,9 +2179,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterD0fe0e1c60dd979135440e3e0b440b75DefaultImplementation(apiResponseLocalVar, perPage);
+                        AfterFetchDataProviderCollsDefaultImplementation(apiResponseLocalVar, perPage);
 
-                        Events.ExecuteOnD0fe0e1c60dd979135440e3e0b440b75(apiResponseLocalVar);
+                        Events.ExecuteOnFetchDataProviderColls(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -2263,16 +2193,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorD0fe0e1c60dd979135440e3e0b440b75DefaultImplementation(e, "/api/v1/data_provider_colls", uriBuilderLocalVar.Path, perPage);
-                Events.ExecuteOnErrorD0fe0e1c60dd979135440e3e0b440b75(e);
+                OnErrorFetchDataProviderCollsDefaultImplementation(e, "/api/v1/data_provider_colls", uriBuilderLocalVar.Path, perPage);
+                Events.ExecuteOnErrorFetchDataProviderColls(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="D0fe0e1c60dd979135440e3e0b440b75ApiResponse"/>
+        /// The <see cref="FetchDataProviderCollsApiResponse"/>
         /// </summary>
-        public partial class D0fe0e1c60dd979135440e3e0b440b75ApiResponse : GatewayApiSdk.Client.ApiResponse, ID0fe0e1c60dd979135440e3e0b440b75ApiResponse
+        public partial class FetchDataProviderCollsApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchDataProviderCollsApiResponse
         {
             /// <summary>
             /// The logger
@@ -2280,7 +2210,7 @@ namespace GatewayApiSdk.Api
             public ILogger<DataProviderCollApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="D0fe0e1c60dd979135440e3e0b440b75ApiResponse"/>
+            /// The <see cref="FetchDataProviderCollsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2289,14 +2219,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public D0fe0e1c60dd979135440e3e0b440b75ApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchDataProviderCollsApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="D0fe0e1c60dd979135440e3e0b440b75ApiResponse"/>
+            /// The <see cref="FetchDataProviderCollsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2305,7 +2235,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public D0fe0e1c60dd979135440e3e0b440b75ApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchDataProviderCollsApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -2323,11 +2253,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.D0fe0e1c60dd979135440e3e0b440b75200Response? Ok()
+            public GatewayApiSdk.Model.FetchDataProviderColls200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.D0fe0e1c60dd979135440e3e0b440b75200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchDataProviderColls200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2336,7 +2266,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.D0fe0e1c60dd979135440e3e0b440b75200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchDataProviderColls200Response? result)
             {
                 result = null;
 
@@ -2362,17 +2292,29 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatEd769d8210100bbcd0e3a11660d25dc0(ref int id);
+        partial void FormatUpdateDataProviderColl(ref int id, UpdateDataProviderCollRequest updateDataProviderCollRequest);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="updateDataProviderCollRequest"></param>
+        /// <returns></returns>
+        private void ValidateUpdateDataProviderColl(UpdateDataProviderCollRequest updateDataProviderCollRequest)
+        {
+            if (updateDataProviderCollRequest == null)
+                throw new ArgumentNullException(nameof(updateDataProviderCollRequest));
+        }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        private void AfterEd769d8210100bbcd0e3a11660d25dc0DefaultImplementation(IEd769d8210100bbcd0e3a11660d25dc0ApiResponse apiResponseLocalVar, int id)
+        /// <param name="updateDataProviderCollRequest"></param>
+        private void AfterUpdateDataProviderCollDefaultImplementation(IUpdateDataProviderCollApiResponse apiResponseLocalVar, int id, UpdateDataProviderCollRequest updateDataProviderCollRequest)
         {
             bool suppressDefaultLog = false;
-            AfterEd769d8210100bbcd0e3a11660d25dc0(ref suppressDefaultLog, apiResponseLocalVar, id);
+            AfterUpdateDataProviderColl(ref suppressDefaultLog, apiResponseLocalVar, id, updateDataProviderCollRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -2383,7 +2325,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        partial void AfterEd769d8210100bbcd0e3a11660d25dc0(ref bool suppressDefaultLog, IEd769d8210100bbcd0e3a11660d25dc0ApiResponse apiResponseLocalVar, int id);
+        /// <param name="updateDataProviderCollRequest"></param>
+        partial void AfterUpdateDataProviderColl(ref bool suppressDefaultLog, IUpdateDataProviderCollApiResponse apiResponseLocalVar, int id, UpdateDataProviderCollRequest updateDataProviderCollRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -2392,10 +2335,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        private void OnErrorEd769d8210100bbcd0e3a11660d25dc0DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        /// <param name="updateDataProviderCollRequest"></param>
+        private void OnErrorUpdateDataProviderCollDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateDataProviderCollRequest updateDataProviderCollRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorEd769d8210100bbcd0e3a11660d25dc0(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            OnErrorUpdateDataProviderColl(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, updateDataProviderCollRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -2408,19 +2352,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        partial void OnErrorEd769d8210100bbcd0e3a11660d25dc0(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+        /// <param name="updateDataProviderCollRequest"></param>
+        partial void OnErrorUpdateDataProviderColl(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateDataProviderCollRequest updateDataProviderCollRequest);
 
         /// <summary>
-        /// DataProviderColl@showSummary Return a single DataProviderColl - summary
+        /// DataProviderColl@update Update a DataProviderColl
         /// </summary>
-        /// <param name="id">DataProviderColl ID - summary</param>
+        /// <param name="id">DataProviderColl ID</param>
+        /// <param name="updateDataProviderCollRequest">DataProviderColl definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IEd769d8210100bbcd0e3a11660d25dc0ApiResponse"/>&gt;</returns>
-        public async Task<IEd769d8210100bbcd0e3a11660d25dc0ApiResponse?> Ed769d8210100bbcd0e3a11660d25dc0OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateDataProviderCollApiResponse"/>&gt;</returns>
+        public async Task<IUpdateDataProviderCollApiResponse?> UpdateDataProviderCollOrDefaultAsync(int id, UpdateDataProviderCollRequest updateDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Ed769d8210100bbcd0e3a11660d25dc0Async(id, cancellationToken).ConfigureAwait(false);
+                return await UpdateDataProviderCollAsync(id, updateDataProviderCollRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -2429,19 +2375,22 @@ namespace GatewayApiSdk.Api
         }
 
         /// <summary>
-        /// DataProviderColl@showSummary Return a single DataProviderColl - summary
+        /// DataProviderColl@update Update a DataProviderColl
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataProviderColl ID - summary</param>
+        /// <param name="id">DataProviderColl ID</param>
+        /// <param name="updateDataProviderCollRequest">DataProviderColl definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IEd769d8210100bbcd0e3a11660d25dc0ApiResponse"/>&gt;</returns>
-        public async Task<IEd769d8210100bbcd0e3a11660d25dc0ApiResponse> Ed769d8210100bbcd0e3a11660d25dc0Async(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateDataProviderCollApiResponse"/>&gt;</returns>
+        public async Task<IUpdateDataProviderCollApiResponse> UpdateDataProviderCollAsync(int id, UpdateDataProviderCollRequest updateDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatEd769d8210100bbcd0e3a11660d25dc0(ref id);
+                ValidateUpdateDataProviderColl(updateDataProviderCollRequest);
+
+                FormatUpdateDataProviderColl(ref id, updateDataProviderCollRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -2449,9 +2398,13 @@ namespace GatewayApiSdk.Api
                     uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
                     uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
                     uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/data_provider_colls/{id}/summary"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/data_provider_colls/{id}/summary");
+                        ? "/api/v1/data_provider_colls/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/data_provider_colls/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    httpRequestMessageLocalVar.Content = (updateDataProviderCollRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateDataProviderCollRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -2462,6 +2415,15 @@ namespace GatewayApiSdk.Api
 
                     bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
 
+                    string[] contentTypes = new string[] {
+                        "application/json"
+                    };
+
+                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
+
+                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
+                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
+
                     string[] acceptLocalVars = new string[] {
                         "application/json"
                     };
@@ -2471,26 +2433,26 @@ namespace GatewayApiSdk.Api
                     foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
                         httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
 
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
 
                     DateTime requestedAtLocalVar = DateTime.UtcNow;
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Ed769d8210100bbcd0e3a11660d25dc0ApiResponse apiResponseLocalVar;
+                        UpdateDataProviderCollApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
                                 string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/data_provider_colls/{id}/summary", requestedAtLocalVar, _jsonSerializerOptions);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/data_provider_colls/{id}", requestedAtLocalVar, _jsonSerializerOptions);
 
                                 break;
                             }
                         }
 
-                        AfterEd769d8210100bbcd0e3a11660d25dc0DefaultImplementation(apiResponseLocalVar, id);
+                        AfterUpdateDataProviderCollDefaultImplementation(apiResponseLocalVar, id, updateDataProviderCollRequest);
 
-                        Events.ExecuteOnEd769d8210100bbcd0e3a11660d25dc0(apiResponseLocalVar);
+                        Events.ExecuteOnUpdateDataProviderColl(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -2502,16 +2464,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorEd769d8210100bbcd0e3a11660d25dc0DefaultImplementation(e, "/api/v1/data_provider_colls/{id}/summary", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorEd769d8210100bbcd0e3a11660d25dc0(e);
+                OnErrorUpdateDataProviderCollDefaultImplementation(e, "/api/v1/data_provider_colls/{id}", uriBuilderLocalVar.Path, id, updateDataProviderCollRequest);
+                Events.ExecuteOnErrorUpdateDataProviderColl(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Ed769d8210100bbcd0e3a11660d25dc0ApiResponse"/>
+        /// The <see cref="UpdateDataProviderCollApiResponse"/>
         /// </summary>
-        public partial class Ed769d8210100bbcd0e3a11660d25dc0ApiResponse : GatewayApiSdk.Client.ApiResponse, IEd769d8210100bbcd0e3a11660d25dc0ApiResponse
+        public partial class UpdateDataProviderCollApiResponse : GatewayApiSdk.Client.ApiResponse, IUpdateDataProviderCollApiResponse
         {
             /// <summary>
             /// The logger
@@ -2519,7 +2481,7 @@ namespace GatewayApiSdk.Api
             public ILogger<DataProviderCollApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Ed769d8210100bbcd0e3a11660d25dc0ApiResponse"/>
+            /// The <see cref="UpdateDataProviderCollApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2528,14 +2490,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Ed769d8210100bbcd0e3a11660d25dc0ApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public UpdateDataProviderCollApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Ed769d8210100bbcd0e3a11660d25dc0ApiResponse"/>
+            /// The <see cref="UpdateDataProviderCollApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2544,13 +2506,51 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Ed769d8210100bbcd0e3a11660d25dc0ApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public UpdateDataProviderCollApiResponse(ILogger<DataProviderCollApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
 
             /// <summary>
             /// Returns true if the response is 200 Ok
@@ -2562,11 +2562,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Ed769d8210100bbcd0e3a11660d25dc0200Response? Ok()
+            public GatewayApiSdk.Model.UpdateDataProviderColl200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Ed769d8210100bbcd0e3a11660d25dc0200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateDataProviderColl200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2575,7 +2575,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Ed769d8210100bbcd0e3a11660d25dc0200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateDataProviderColl200Response? result)
             {
                 result = null;
 
@@ -2591,38 +2591,38 @@ namespace GatewayApiSdk.Api
             }
 
             /// <summary>
-            /// Returns true if the response is 404 NotFound
+            /// Returns true if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
+            public bool IsInternalServerError => 500 == (int)StatusCode;
 
             /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
+            /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                return IsInternalServerError
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
             /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
                 try
                 {
-                    result = NotFound();
+                    result = InternalServerError();
                 } catch (Exception e)
                 {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
                 }
 
                 return result != null;

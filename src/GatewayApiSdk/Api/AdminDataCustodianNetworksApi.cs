@@ -46,8 +46,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall805e0e12862cf992698405bf5795b042ApiResponse"/>&gt;</returns>
-        Task<ICall805e0e12862cf992698405bf5795b042ApiResponse> Call805e0e12862cf992698405bf5795b042Async(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAdminDataCustodianNetworksApiResponse"/>&gt;</returns>
+        Task<IFetchAdminDataCustodianNetworksApiResponse> FetchAdminDataCustodianNetworksAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataCustodianNetworks@adminIndex
@@ -57,14 +57,14 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="perPage">per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall805e0e12862cf992698405bf5795b042ApiResponse"/>?&gt;</returns>
-        Task<ICall805e0e12862cf992698405bf5795b042ApiResponse?> Call805e0e12862cf992698405bf5795b042OrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAdminDataCustodianNetworksApiResponse"/>?&gt;</returns>
+        Task<IFetchAdminDataCustodianNetworksApiResponse?> FetchAdminDataCustodianNetworksOrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="ICall805e0e12862cf992698405bf5795b042ApiResponse"/>
+    /// The <see cref="IFetchAdminDataCustodianNetworksApiResponse"/>
     /// </summary>
-    public interface ICall805e0e12862cf992698405bf5795b042ApiResponse : GatewayApiSdk.Client.IApiResponse
+    public interface IFetchAdminDataCustodianNetworksApiResponse : GatewayApiSdk.Client.IApiResponse
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -81,21 +81,21 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall805e0e12862cf992698405bf5795b042;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchAdminDataCustodianNetworks;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall805e0e12862cf992698405bf5795b042;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchAdminDataCustodianNetworks;
 
-        internal void ExecuteOnCall805e0e12862cf992698405bf5795b042(AdminDataCustodianNetworksApi.Call805e0e12862cf992698405bf5795b042ApiResponse apiResponse)
+        internal void ExecuteOnFetchAdminDataCustodianNetworks(AdminDataCustodianNetworksApi.FetchAdminDataCustodianNetworksApiResponse apiResponse)
         {
-            OnCall805e0e12862cf992698405bf5795b042?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchAdminDataCustodianNetworks?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall805e0e12862cf992698405bf5795b042(Exception exception)
+        internal void ExecuteOnErrorFetchAdminDataCustodianNetworks(Exception exception)
         {
-            OnErrorCall805e0e12862cf992698405bf5795b042?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchAdminDataCustodianNetworks?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -140,17 +140,17 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatCall805e0e12862cf992698405bf5795b042(ref Option<int> perPage);
+        partial void FormatFetchAdminDataCustodianNetworks(ref Option<int> perPage);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="perPage"></param>
-        private void AfterCall805e0e12862cf992698405bf5795b042DefaultImplementation(ICall805e0e12862cf992698405bf5795b042ApiResponse apiResponseLocalVar, Option<int> perPage)
+        private void AfterFetchAdminDataCustodianNetworksDefaultImplementation(IFetchAdminDataCustodianNetworksApiResponse apiResponseLocalVar, Option<int> perPage)
         {
             bool suppressDefaultLog = false;
-            AfterCall805e0e12862cf992698405bf5795b042(ref suppressDefaultLog, apiResponseLocalVar, perPage);
+            AfterFetchAdminDataCustodianNetworks(ref suppressDefaultLog, apiResponseLocalVar, perPage);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -161,7 +161,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="perPage"></param>
-        partial void AfterCall805e0e12862cf992698405bf5795b042(ref bool suppressDefaultLog, ICall805e0e12862cf992698405bf5795b042ApiResponse apiResponseLocalVar, Option<int> perPage);
+        partial void AfterFetchAdminDataCustodianNetworks(ref bool suppressDefaultLog, IFetchAdminDataCustodianNetworksApiResponse apiResponseLocalVar, Option<int> perPage);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -170,10 +170,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="perPage"></param>
-        private void OnErrorCall805e0e12862cf992698405bf5795b042DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage)
+        private void OnErrorFetchAdminDataCustodianNetworksDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall805e0e12862cf992698405bf5795b042(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, perPage);
+            OnErrorFetchAdminDataCustodianNetworks(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, perPage);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -186,19 +186,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="perPage"></param>
-        partial void OnErrorCall805e0e12862cf992698405bf5795b042(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage);
+        partial void OnErrorFetchAdminDataCustodianNetworks(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage);
 
         /// <summary>
         /// DataCustodianNetworks@adminIndex Superadmin-only listing used by the network management admin screen — unlike index(), this is not filtered to enabled&#x3D;1, so disabled networks remain visible/manageable.
         /// </summary>
         /// <param name="perPage">per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall805e0e12862cf992698405bf5795b042ApiResponse"/>&gt;</returns>
-        public async Task<ICall805e0e12862cf992698405bf5795b042ApiResponse?> Call805e0e12862cf992698405bf5795b042OrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAdminDataCustodianNetworksApiResponse"/>&gt;</returns>
+        public async Task<IFetchAdminDataCustodianNetworksApiResponse?> FetchAdminDataCustodianNetworksOrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call805e0e12862cf992698405bf5795b042Async(perPage, cancellationToken).ConfigureAwait(false);
+                return await FetchAdminDataCustodianNetworksAsync(perPage, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -212,14 +212,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall805e0e12862cf992698405bf5795b042ApiResponse"/>&gt;</returns>
-        public async Task<ICall805e0e12862cf992698405bf5795b042ApiResponse> Call805e0e12862cf992698405bf5795b042Async(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAdminDataCustodianNetworksApiResponse"/>&gt;</returns>
+        public async Task<IFetchAdminDataCustodianNetworksApiResponse> FetchAdminDataCustodianNetworksAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatCall805e0e12862cf992698405bf5795b042(ref perPage);
+                FormatFetchAdminDataCustodianNetworks(ref perPage);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -245,7 +245,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call805e0e12862cf992698405bf5795b042ApiResponse apiResponseLocalVar;
+                        FetchAdminDataCustodianNetworksApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -256,9 +256,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall805e0e12862cf992698405bf5795b042DefaultImplementation(apiResponseLocalVar, perPage);
+                        AfterFetchAdminDataCustodianNetworksDefaultImplementation(apiResponseLocalVar, perPage);
 
-                        Events.ExecuteOnCall805e0e12862cf992698405bf5795b042(apiResponseLocalVar);
+                        Events.ExecuteOnFetchAdminDataCustodianNetworks(apiResponseLocalVar);
 
                         return apiResponseLocalVar;
                     }
@@ -266,16 +266,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall805e0e12862cf992698405bf5795b042DefaultImplementation(e, "/api/v2/admin/data_custodian_networks", uriBuilderLocalVar.Path, perPage);
-                Events.ExecuteOnErrorCall805e0e12862cf992698405bf5795b042(e);
+                OnErrorFetchAdminDataCustodianNetworksDefaultImplementation(e, "/api/v2/admin/data_custodian_networks", uriBuilderLocalVar.Path, perPage);
+                Events.ExecuteOnErrorFetchAdminDataCustodianNetworks(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call805e0e12862cf992698405bf5795b042ApiResponse"/>
+        /// The <see cref="FetchAdminDataCustodianNetworksApiResponse"/>
         /// </summary>
-        public partial class Call805e0e12862cf992698405bf5795b042ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall805e0e12862cf992698405bf5795b042ApiResponse
+        public partial class FetchAdminDataCustodianNetworksApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchAdminDataCustodianNetworksApiResponse
         {
             /// <summary>
             /// The logger
@@ -283,7 +283,7 @@ namespace GatewayApiSdk.Api
             public ILogger<AdminDataCustodianNetworksApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call805e0e12862cf992698405bf5795b042ApiResponse"/>
+            /// The <see cref="FetchAdminDataCustodianNetworksApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -292,14 +292,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call805e0e12862cf992698405bf5795b042ApiResponse(ILogger<AdminDataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchAdminDataCustodianNetworksApiResponse(ILogger<AdminDataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call805e0e12862cf992698405bf5795b042ApiResponse"/>
+            /// The <see cref="FetchAdminDataCustodianNetworksApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -308,7 +308,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call805e0e12862cf992698405bf5795b042ApiResponse(ILogger<AdminDataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchAdminDataCustodianNetworksApiResponse(ILogger<AdminDataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);

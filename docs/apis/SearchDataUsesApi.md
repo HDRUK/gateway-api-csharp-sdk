@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**Call8db417727e7fe7c2e99206b060a3b882**](SearchDataUsesApi.md#call8db417727e7fe7c2e99206b060a3b882) | **POST** /api/v1/search/dur | Search@data_uses |
+| [**SearchDataUses**](SearchDataUsesApi.md#searchdatauses) | **POST** /api/v1/search/dur | Search@data_uses |
 
-<a id="call8db417727e7fe7c2e99206b060a3b882"></a>
-# **Call8db417727e7fe7c2e99206b060a3b882**
-> Model8db417727e7fe7c2e99206b060a3b882200Response Call8db417727e7fe7c2e99206b060a3b882 (Model8db417727e7fe7c2e99206b060a3b882Request model8db417727e7fe7c2e99206b060a3b882Request, string sort = null, string direction = null, bool download = null)
+<a id="searchdatauses"></a>
+# **SearchDataUses**
+> SearchDataUses200Response SearchDataUses (SearchDataUsesRequest searchDataUsesRequest, string sort = null, string direction = null, bool download = null)
 
 Search@data_uses
 
@@ -19,14 +19,14 @@ Returns gateway data uses related to the provided query term(s)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **model8db417727e7fe7c2e99206b060a3b882Request** | [**Model8db417727e7fe7c2e99206b060a3b882Request**](Model8db417727e7fe7c2e99206b060a3b882Request.md) | Submit search query |  |
+| **searchDataUsesRequest** | [**SearchDataUsesRequest**](SearchDataUsesRequest.md) | Submit search query |  |
 | **sort** | **string** | Field to sort by (default: &#39;score&#39;) | [optional]  |
 | **direction** | **string** | Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) | [optional]  |
 | **download** | **bool** | Download a csv of the results (default: false) | [optional]  |
 
 ### Return type
 
-[**Model8db417727e7fe7c2e99206b060a3b882200Response**](Model8db417727e7fe7c2e99206b060a3b882200Response.md)
+[**SearchDataUses200Response**](SearchDataUses200Response.md)
 
 ### Authorization
 

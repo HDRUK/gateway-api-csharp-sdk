@@ -49,8 +49,8 @@ namespace GatewayApiSdk.Api
         /// <param name="id">DAR template id</param>
         /// <param name="fileId">File id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall471df4f14ed1f13bf3a66f1a8b70e261ApiResponse"/>&gt;</returns>
-        Task<ICall471df4f14ed1f13bf3a66f1a8b70e261ApiResponse> Call471df4f14ed1f13bf3a66f1a8b70e261Async(int teamId, int id, string fileId, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteTeamDarTemplateFileApiResponse"/>&gt;</returns>
+        Task<IDeleteTeamDarTemplateFileApiResponse> DeleteTeamDarTemplateFileAsync(int teamId, int id, string fileId, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// TeamDataAccessTemplateController@destroyFile
@@ -62,8 +62,8 @@ namespace GatewayApiSdk.Api
         /// <param name="id">DAR template id</param>
         /// <param name="fileId">File id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall471df4f14ed1f13bf3a66f1a8b70e261ApiResponse"/>?&gt;</returns>
-        Task<ICall471df4f14ed1f13bf3a66f1a8b70e261ApiResponse?> Call471df4f14ed1f13bf3a66f1a8b70e261OrDefaultAsync(int teamId, int id, string fileId, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteTeamDarTemplateFileApiResponse"/>?&gt;</returns>
+        Task<IDeleteTeamDarTemplateFileApiResponse?> DeleteTeamDarTemplateFileOrDefaultAsync(int teamId, int id, string fileId, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// TeamDataAccessTemplateController@index
@@ -75,8 +75,8 @@ namespace GatewayApiSdk.Api
         /// <param name="teamId">Team id</param>
         /// <param name="published">Template publication status to filter by (true, false) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall883e72f80ed3577c8e6eca9f9437e554ApiResponse"/>&gt;</returns>
-        Task<ICall883e72f80ed3577c8e6eca9f9437e554ApiResponse> Call883e72f80ed3577c8e6eca9f9437e554Async(int teamId, Option<string> published = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarTemplatesApiResponse"/>&gt;</returns>
+        Task<IFetchTeamDarTemplatesApiResponse> FetchTeamDarTemplatesAsync(int teamId, Option<string> published = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// TeamDataAccessTemplateController@index
@@ -87,8 +87,8 @@ namespace GatewayApiSdk.Api
         /// <param name="teamId">Team id</param>
         /// <param name="published">Template publication status to filter by (true, false) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall883e72f80ed3577c8e6eca9f9437e554ApiResponse"/>?&gt;</returns>
-        Task<ICall883e72f80ed3577c8e6eca9f9437e554ApiResponse?> Call883e72f80ed3577c8e6eca9f9437e554OrDefaultAsync(int teamId, Option<string> published = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarTemplatesApiResponse"/>?&gt;</returns>
+        Task<IFetchTeamDarTemplatesApiResponse?> FetchTeamDarTemplatesOrDefaultAsync(int teamId, Option<string> published = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// TeamDataAccessTemplateController@count
@@ -117,9 +117,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall471df4f14ed1f13bf3a66f1a8b70e261ApiResponse"/>
+    /// The <see cref="IDeleteTeamDarTemplateFileApiResponse"/>
     /// </summary>
-    public interface ICall471df4f14ed1f13bf3a66f1a8b70e261ApiResponse : GatewayApiSdk.Client.IApiResponse, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, IOk<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IDeleteTeamDarTemplateFileApiResponse : GatewayApiSdk.Client.IApiResponse, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 401 Unauthorized
@@ -141,9 +141,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall883e72f80ed3577c8e6eca9f9437e554ApiResponse"/>
+    /// The <see cref="IFetchTeamDarTemplatesApiResponse"/>
     /// </summary>
-    public interface ICall883e72f80ed3577c8e6eca9f9437e554ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model234386e06c6b29d5aaca2ed8f89cb9aa200Response?>
+    public interface IFetchTeamDarTemplatesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchDarTemplates200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -172,41 +172,41 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall471df4f14ed1f13bf3a66f1a8b70e261;
+        public event EventHandler<ApiResponseEventArgs>? OnDeleteTeamDarTemplateFile;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall471df4f14ed1f13bf3a66f1a8b70e261;
+        public event EventHandler<ExceptionEventArgs>? OnErrorDeleteTeamDarTemplateFile;
 
-        internal void ExecuteOnCall471df4f14ed1f13bf3a66f1a8b70e261(TeamDataAccessTemplateApi.Call471df4f14ed1f13bf3a66f1a8b70e261ApiResponse apiResponse)
+        internal void ExecuteOnDeleteTeamDarTemplateFile(TeamDataAccessTemplateApi.DeleteTeamDarTemplateFileApiResponse apiResponse)
         {
-            OnCall471df4f14ed1f13bf3a66f1a8b70e261?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnDeleteTeamDarTemplateFile?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall471df4f14ed1f13bf3a66f1a8b70e261(Exception exception)
+        internal void ExecuteOnErrorDeleteTeamDarTemplateFile(Exception exception)
         {
-            OnErrorCall471df4f14ed1f13bf3a66f1a8b70e261?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorDeleteTeamDarTemplateFile?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall883e72f80ed3577c8e6eca9f9437e554;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchTeamDarTemplates;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall883e72f80ed3577c8e6eca9f9437e554;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchTeamDarTemplates;
 
-        internal void ExecuteOnCall883e72f80ed3577c8e6eca9f9437e554(TeamDataAccessTemplateApi.Call883e72f80ed3577c8e6eca9f9437e554ApiResponse apiResponse)
+        internal void ExecuteOnFetchTeamDarTemplates(TeamDataAccessTemplateApi.FetchTeamDarTemplatesApiResponse apiResponse)
         {
-            OnCall883e72f80ed3577c8e6eca9f9437e554?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchTeamDarTemplates?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall883e72f80ed3577c8e6eca9f9437e554(Exception exception)
+        internal void ExecuteOnErrorFetchTeamDarTemplates(Exception exception)
         {
-            OnErrorCall883e72f80ed3577c8e6eca9f9437e554?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchTeamDarTemplates?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
@@ -271,14 +271,14 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatCall471df4f14ed1f13bf3a66f1a8b70e261(ref int teamId, ref int id, ref string fileId);
+        partial void FormatDeleteTeamDarTemplateFile(ref int teamId, ref int id, ref string fileId);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
         /// <param name="fileId"></param>
         /// <returns></returns>
-        private void ValidateCall471df4f14ed1f13bf3a66f1a8b70e261(string fileId)
+        private void ValidateDeleteTeamDarTemplateFile(string fileId)
         {
             if (fileId == null)
                 throw new ArgumentNullException(nameof(fileId));
@@ -291,10 +291,10 @@ namespace GatewayApiSdk.Api
         /// <param name="teamId"></param>
         /// <param name="id"></param>
         /// <param name="fileId"></param>
-        private void AfterCall471df4f14ed1f13bf3a66f1a8b70e261DefaultImplementation(ICall471df4f14ed1f13bf3a66f1a8b70e261ApiResponse apiResponseLocalVar, int teamId, int id, string fileId)
+        private void AfterDeleteTeamDarTemplateFileDefaultImplementation(IDeleteTeamDarTemplateFileApiResponse apiResponseLocalVar, int teamId, int id, string fileId)
         {
             bool suppressDefaultLog = false;
-            AfterCall471df4f14ed1f13bf3a66f1a8b70e261(ref suppressDefaultLog, apiResponseLocalVar, teamId, id, fileId);
+            AfterDeleteTeamDarTemplateFile(ref suppressDefaultLog, apiResponseLocalVar, teamId, id, fileId);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -307,7 +307,7 @@ namespace GatewayApiSdk.Api
         /// <param name="teamId"></param>
         /// <param name="id"></param>
         /// <param name="fileId"></param>
-        partial void AfterCall471df4f14ed1f13bf3a66f1a8b70e261(ref bool suppressDefaultLog, ICall471df4f14ed1f13bf3a66f1a8b70e261ApiResponse apiResponseLocalVar, int teamId, int id, string fileId);
+        partial void AfterDeleteTeamDarTemplateFile(ref bool suppressDefaultLog, IDeleteTeamDarTemplateFileApiResponse apiResponseLocalVar, int teamId, int id, string fileId);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -318,10 +318,10 @@ namespace GatewayApiSdk.Api
         /// <param name="teamId"></param>
         /// <param name="id"></param>
         /// <param name="fileId"></param>
-        private void OnErrorCall471df4f14ed1f13bf3a66f1a8b70e261DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id, string fileId)
+        private void OnErrorDeleteTeamDarTemplateFileDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id, string fileId)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall471df4f14ed1f13bf3a66f1a8b70e261(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, id, fileId);
+            OnErrorDeleteTeamDarTemplateFile(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, id, fileId);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -336,7 +336,7 @@ namespace GatewayApiSdk.Api
         /// <param name="teamId"></param>
         /// <param name="id"></param>
         /// <param name="fileId"></param>
-        partial void OnErrorCall471df4f14ed1f13bf3a66f1a8b70e261(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id, string fileId);
+        partial void OnErrorDeleteTeamDarTemplateFile(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id, string fileId);
 
         /// <summary>
         /// TeamDataAccessTemplateController@destroyFile Delete a file associated with a DAR template
@@ -345,12 +345,12 @@ namespace GatewayApiSdk.Api
         /// <param name="id">DAR template id</param>
         /// <param name="fileId">File id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall471df4f14ed1f13bf3a66f1a8b70e261ApiResponse"/>&gt;</returns>
-        public async Task<ICall471df4f14ed1f13bf3a66f1a8b70e261ApiResponse?> Call471df4f14ed1f13bf3a66f1a8b70e261OrDefaultAsync(int teamId, int id, string fileId, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteTeamDarTemplateFileApiResponse"/>&gt;</returns>
+        public async Task<IDeleteTeamDarTemplateFileApiResponse?> DeleteTeamDarTemplateFileOrDefaultAsync(int teamId, int id, string fileId, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call471df4f14ed1f13bf3a66f1a8b70e261Async(teamId, id, fileId, cancellationToken).ConfigureAwait(false);
+                return await DeleteTeamDarTemplateFileAsync(teamId, id, fileId, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -366,16 +366,16 @@ namespace GatewayApiSdk.Api
         /// <param name="id">DAR template id</param>
         /// <param name="fileId">File id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall471df4f14ed1f13bf3a66f1a8b70e261ApiResponse"/>&gt;</returns>
-        public async Task<ICall471df4f14ed1f13bf3a66f1a8b70e261ApiResponse> Call471df4f14ed1f13bf3a66f1a8b70e261Async(int teamId, int id, string fileId, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteTeamDarTemplateFileApiResponse"/>&gt;</returns>
+        public async Task<IDeleteTeamDarTemplateFileApiResponse> DeleteTeamDarTemplateFileAsync(int teamId, int id, string fileId, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall471df4f14ed1f13bf3a66f1a8b70e261(fileId);
+                ValidateDeleteTeamDarTemplateFile(fileId);
 
-                FormatCall471df4f14ed1f13bf3a66f1a8b70e261(ref teamId, ref id, ref fileId);
+                FormatDeleteTeamDarTemplateFile(ref teamId, ref id, ref fileId);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -413,7 +413,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call471df4f14ed1f13bf3a66f1a8b70e261ApiResponse apiResponseLocalVar;
+                        DeleteTeamDarTemplateFileApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -424,9 +424,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall471df4f14ed1f13bf3a66f1a8b70e261DefaultImplementation(apiResponseLocalVar, teamId, id, fileId);
+                        AfterDeleteTeamDarTemplateFileDefaultImplementation(apiResponseLocalVar, teamId, id, fileId);
 
-                        Events.ExecuteOnCall471df4f14ed1f13bf3a66f1a8b70e261(apiResponseLocalVar);
+                        Events.ExecuteOnDeleteTeamDarTemplateFile(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -438,16 +438,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall471df4f14ed1f13bf3a66f1a8b70e261DefaultImplementation(e, "/api/v1/teams/{teamId}/dar/templates/{id}/files/{fileId}", uriBuilderLocalVar.Path, teamId, id, fileId);
-                Events.ExecuteOnErrorCall471df4f14ed1f13bf3a66f1a8b70e261(e);
+                OnErrorDeleteTeamDarTemplateFileDefaultImplementation(e, "/api/v1/teams/{teamId}/dar/templates/{id}/files/{fileId}", uriBuilderLocalVar.Path, teamId, id, fileId);
+                Events.ExecuteOnErrorDeleteTeamDarTemplateFile(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call471df4f14ed1f13bf3a66f1a8b70e261ApiResponse"/>
+        /// The <see cref="DeleteTeamDarTemplateFileApiResponse"/>
         /// </summary>
-        public partial class Call471df4f14ed1f13bf3a66f1a8b70e261ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall471df4f14ed1f13bf3a66f1a8b70e261ApiResponse
+        public partial class DeleteTeamDarTemplateFileApiResponse : GatewayApiSdk.Client.ApiResponse, IDeleteTeamDarTemplateFileApiResponse
         {
             /// <summary>
             /// The logger
@@ -455,7 +455,7 @@ namespace GatewayApiSdk.Api
             public ILogger<TeamDataAccessTemplateApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call471df4f14ed1f13bf3a66f1a8b70e261ApiResponse"/>
+            /// The <see cref="DeleteTeamDarTemplateFileApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -464,14 +464,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call471df4f14ed1f13bf3a66f1a8b70e261ApiResponse(ILogger<TeamDataAccessTemplateApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public DeleteTeamDarTemplateFileApiResponse(ILogger<TeamDataAccessTemplateApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call471df4f14ed1f13bf3a66f1a8b70e261ApiResponse"/>
+            /// The <see cref="DeleteTeamDarTemplateFileApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -480,7 +480,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call471df4f14ed1f13bf3a66f1a8b70e261ApiResponse(ILogger<TeamDataAccessTemplateApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public DeleteTeamDarTemplateFileApiResponse(ILogger<TeamDataAccessTemplateApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -536,11 +536,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? Ok()
+            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -549,7 +549,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
             {
                 result = null;
 
@@ -574,11 +574,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -587,7 +587,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -613,14 +613,14 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall883e72f80ed3577c8e6eca9f9437e554(ref int teamId, ref Option<string> published);
+        partial void FormatFetchTeamDarTemplates(ref int teamId, ref Option<string> published);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
         /// <param name="published"></param>
         /// <returns></returns>
-        private void ValidateCall883e72f80ed3577c8e6eca9f9437e554(Option<string> published)
+        private void ValidateFetchTeamDarTemplates(Option<string> published)
         {
             if (published.IsSet && published.Value == null)
                 throw new ArgumentNullException(nameof(published));
@@ -632,10 +632,10 @@ namespace GatewayApiSdk.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="teamId"></param>
         /// <param name="published"></param>
-        private void AfterCall883e72f80ed3577c8e6eca9f9437e554DefaultImplementation(ICall883e72f80ed3577c8e6eca9f9437e554ApiResponse apiResponseLocalVar, int teamId, Option<string> published)
+        private void AfterFetchTeamDarTemplatesDefaultImplementation(IFetchTeamDarTemplatesApiResponse apiResponseLocalVar, int teamId, Option<string> published)
         {
             bool suppressDefaultLog = false;
-            AfterCall883e72f80ed3577c8e6eca9f9437e554(ref suppressDefaultLog, apiResponseLocalVar, teamId, published);
+            AfterFetchTeamDarTemplates(ref suppressDefaultLog, apiResponseLocalVar, teamId, published);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -647,7 +647,7 @@ namespace GatewayApiSdk.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="teamId"></param>
         /// <param name="published"></param>
-        partial void AfterCall883e72f80ed3577c8e6eca9f9437e554(ref bool suppressDefaultLog, ICall883e72f80ed3577c8e6eca9f9437e554ApiResponse apiResponseLocalVar, int teamId, Option<string> published);
+        partial void AfterFetchTeamDarTemplates(ref bool suppressDefaultLog, IFetchTeamDarTemplatesApiResponse apiResponseLocalVar, int teamId, Option<string> published);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -657,10 +657,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="teamId"></param>
         /// <param name="published"></param>
-        private void OnErrorCall883e72f80ed3577c8e6eca9f9437e554DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, Option<string> published)
+        private void OnErrorFetchTeamDarTemplatesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, Option<string> published)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall883e72f80ed3577c8e6eca9f9437e554(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, published);
+            OnErrorFetchTeamDarTemplates(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, published);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -674,7 +674,7 @@ namespace GatewayApiSdk.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="teamId"></param>
         /// <param name="published"></param>
-        partial void OnErrorCall883e72f80ed3577c8e6eca9f9437e554(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, Option<string> published);
+        partial void OnErrorFetchTeamDarTemplates(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, Option<string> published);
 
         /// <summary>
         /// TeamDataAccessTemplateController@index List of dar templates belonging to a team
@@ -682,12 +682,12 @@ namespace GatewayApiSdk.Api
         /// <param name="teamId">Team id</param>
         /// <param name="published">Template publication status to filter by (true, false) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall883e72f80ed3577c8e6eca9f9437e554ApiResponse"/>&gt;</returns>
-        public async Task<ICall883e72f80ed3577c8e6eca9f9437e554ApiResponse?> Call883e72f80ed3577c8e6eca9f9437e554OrDefaultAsync(int teamId, Option<string> published = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarTemplatesApiResponse"/>&gt;</returns>
+        public async Task<IFetchTeamDarTemplatesApiResponse?> FetchTeamDarTemplatesOrDefaultAsync(int teamId, Option<string> published = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call883e72f80ed3577c8e6eca9f9437e554Async(teamId, published, cancellationToken).ConfigureAwait(false);
+                return await FetchTeamDarTemplatesAsync(teamId, published, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -702,16 +702,16 @@ namespace GatewayApiSdk.Api
         /// <param name="teamId">Team id</param>
         /// <param name="published">Template publication status to filter by (true, false) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall883e72f80ed3577c8e6eca9f9437e554ApiResponse"/>&gt;</returns>
-        public async Task<ICall883e72f80ed3577c8e6eca9f9437e554ApiResponse> Call883e72f80ed3577c8e6eca9f9437e554Async(int teamId, Option<string> published = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarTemplatesApiResponse"/>&gt;</returns>
+        public async Task<IFetchTeamDarTemplatesApiResponse> FetchTeamDarTemplatesAsync(int teamId, Option<string> published = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall883e72f80ed3577c8e6eca9f9437e554(published);
+                ValidateFetchTeamDarTemplates(published);
 
-                FormatCall883e72f80ed3577c8e6eca9f9437e554(ref teamId, ref published);
+                FormatFetchTeamDarTemplates(ref teamId, ref published);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -754,7 +754,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call883e72f80ed3577c8e6eca9f9437e554ApiResponse apiResponseLocalVar;
+                        FetchTeamDarTemplatesApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -765,9 +765,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall883e72f80ed3577c8e6eca9f9437e554DefaultImplementation(apiResponseLocalVar, teamId, published);
+                        AfterFetchTeamDarTemplatesDefaultImplementation(apiResponseLocalVar, teamId, published);
 
-                        Events.ExecuteOnCall883e72f80ed3577c8e6eca9f9437e554(apiResponseLocalVar);
+                        Events.ExecuteOnFetchTeamDarTemplates(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -779,16 +779,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall883e72f80ed3577c8e6eca9f9437e554DefaultImplementation(e, "/api/v1/teams/{teamId}/dar/templates", uriBuilderLocalVar.Path, teamId, published);
-                Events.ExecuteOnErrorCall883e72f80ed3577c8e6eca9f9437e554(e);
+                OnErrorFetchTeamDarTemplatesDefaultImplementation(e, "/api/v1/teams/{teamId}/dar/templates", uriBuilderLocalVar.Path, teamId, published);
+                Events.ExecuteOnErrorFetchTeamDarTemplates(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call883e72f80ed3577c8e6eca9f9437e554ApiResponse"/>
+        /// The <see cref="FetchTeamDarTemplatesApiResponse"/>
         /// </summary>
-        public partial class Call883e72f80ed3577c8e6eca9f9437e554ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall883e72f80ed3577c8e6eca9f9437e554ApiResponse
+        public partial class FetchTeamDarTemplatesApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchTeamDarTemplatesApiResponse
         {
             /// <summary>
             /// The logger
@@ -796,7 +796,7 @@ namespace GatewayApiSdk.Api
             public ILogger<TeamDataAccessTemplateApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call883e72f80ed3577c8e6eca9f9437e554ApiResponse"/>
+            /// The <see cref="FetchTeamDarTemplatesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -805,14 +805,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call883e72f80ed3577c8e6eca9f9437e554ApiResponse(ILogger<TeamDataAccessTemplateApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchTeamDarTemplatesApiResponse(ILogger<TeamDataAccessTemplateApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call883e72f80ed3577c8e6eca9f9437e554ApiResponse"/>
+            /// The <see cref="FetchTeamDarTemplatesApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -821,7 +821,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call883e72f80ed3577c8e6eca9f9437e554ApiResponse(ILogger<TeamDataAccessTemplateApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchTeamDarTemplatesApiResponse(ILogger<TeamDataAccessTemplateApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -839,11 +839,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model234386e06c6b29d5aaca2ed8f89cb9aa200Response? Ok()
+            public GatewayApiSdk.Model.FetchDarTemplates200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model234386e06c6b29d5aaca2ed8f89cb9aa200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchDarTemplates200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -852,7 +852,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model234386e06c6b29d5aaca2ed8f89cb9aa200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchDarTemplates200Response? result)
             {
                 result = null;
 

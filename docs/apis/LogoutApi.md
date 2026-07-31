@@ -8,7 +8,7 @@ All URIs are relative to *http://localhost*
 
 <a id="logout"></a>
 # **Logout**
-> C29b5b3424f7317b69b4bda048ccfafb200Response Logout ()
+> DeleteAliases200Response Logout ()
 
 LogoutController@logout
 
@@ -19,7 +19,7 @@ logout
 This endpoint does not need any parameter.
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 

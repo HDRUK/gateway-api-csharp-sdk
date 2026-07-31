@@ -39,54 +39,6 @@ namespace GatewayApiSdk.Api
         TeamDataAccessApplicationApiEvents Events { get; }
 
         /// <summary>
-        /// TeamDataAccessApplicationController@showHeader
-        /// </summary>
-        /// <remarks>
-        /// Get header information about a specific DAR
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">Team id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall0dabe0dfdf4eebd0c76560fd691c6472ApiResponse"/>&gt;</returns>
-        Task<ICall0dabe0dfdf4eebd0c76560fd691c6472ApiResponse> Call0dabe0dfdf4eebd0c76560fd691c6472Async(int teamId, int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// TeamDataAccessApplicationController@showHeader
-        /// </summary>
-        /// <remarks>
-        /// Get header information about a specific DAR
-        /// </remarks>
-        /// <param name="teamId">Team id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall0dabe0dfdf4eebd0c76560fd691c6472ApiResponse"/>?&gt;</returns>
-        Task<ICall0dabe0dfdf4eebd0c76560fd691c6472ApiResponse?> Call0dabe0dfdf4eebd0c76560fd691c6472OrDefaultAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// TeamDataAccessApplicationController@index
-        /// </summary>
-        /// <remarks>
-        /// List of dar applications belonging to a team
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">Team id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall0ff8ad69b213abf8d671b3695d0b69b5ApiResponse"/>&gt;</returns>
-        Task<ICall0ff8ad69b213abf8d671b3695d0b69b5ApiResponse> Call0ff8ad69b213abf8d671b3695d0b69b5Async(int teamId, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// TeamDataAccessApplicationController@index
-        /// </summary>
-        /// <remarks>
-        /// List of dar applications belonging to a team
-        /// </remarks>
-        /// <param name="teamId">Team id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall0ff8ad69b213abf8d671b3695d0b69b5ApiResponse"/>?&gt;</returns>
-        Task<ICall0ff8ad69b213abf8d671b3695d0b69b5ApiResponse?> Call0ff8ad69b213abf8d671b3695d0b69b5OrDefaultAsync(int teamId, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
         /// TeamDataAccessApplicationController@allCounts
         /// </summary>
         /// <remarks>
@@ -95,8 +47,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3f8472e47cdd8aaabb42e1065a7a0afbApiResponse"/>&gt;</returns>
-        Task<ICall3f8472e47cdd8aaabb42e1065a7a0afbApiResponse> Call3f8472e47cdd8aaabb42e1065a7a0afbAsync(int teamId, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICountTeamDarApplicationsApiResponse"/>&gt;</returns>
+        Task<ICountTeamDarApplicationsApiResponse> CountTeamDarApplicationsAsync(int teamId, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// TeamDataAccessApplicationController@allCounts
@@ -106,33 +58,8 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="teamId">Team id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3f8472e47cdd8aaabb42e1065a7a0afbApiResponse"/>?&gt;</returns>
-        Task<ICall3f8472e47cdd8aaabb42e1065a7a0afbApiResponse?> Call3f8472e47cdd8aaabb42e1065a7a0afbOrDefaultAsync(int teamId, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// TeamDataAccessApplicationController@show
-        /// </summary>
-        /// <remarks>
-        /// Return a single DAR application
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">Team id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4e4d590ec8943163168e4fc34bd166a1ApiResponse"/>&gt;</returns>
-        Task<ICall4e4d590ec8943163168e4fc34bd166a1ApiResponse> Call4e4d590ec8943163168e4fc34bd166a1Async(int teamId, int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// TeamDataAccessApplicationController@show
-        /// </summary>
-        /// <remarks>
-        /// Return a single DAR application
-        /// </remarks>
-        /// <param name="teamId">Team id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4e4d590ec8943163168e4fc34bd166a1ApiResponse"/>?&gt;</returns>
-        Task<ICall4e4d590ec8943163168e4fc34bd166a1ApiResponse?> Call4e4d590ec8943163168e4fc34bd166a1OrDefaultAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICountTeamDarApplicationsApiResponse"/>?&gt;</returns>
+        Task<ICountTeamDarApplicationsApiResponse?> CountTeamDarApplicationsOrDefaultAsync(int teamId, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// TeamDataAccessApplicationController@count
@@ -158,12 +85,85 @@ namespace GatewayApiSdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICountUniqueFieldsDarApplicationsApiResponse"/>?&gt;</returns>
         Task<ICountUniqueFieldsDarApplicationsApiResponse?> CountUniqueFieldsDarApplicationsOrDefaultAsync(int teamId, string field, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// TeamDataAccessApplicationController@show
+        /// </summary>
+        /// <remarks>
+        /// Return a single DAR application
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team id</param>
+        /// <param name="id">DAR application id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarApplicationApiResponse"/>&gt;</returns>
+        Task<IFetchTeamDarApplicationApiResponse> FetchTeamDarApplicationAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// TeamDataAccessApplicationController@show
+        /// </summary>
+        /// <remarks>
+        /// Return a single DAR application
+        /// </remarks>
+        /// <param name="teamId">Team id</param>
+        /// <param name="id">DAR application id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarApplicationApiResponse"/>?&gt;</returns>
+        Task<IFetchTeamDarApplicationApiResponse?> FetchTeamDarApplicationOrDefaultAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// TeamDataAccessApplicationController@showHeader
+        /// </summary>
+        /// <remarks>
+        /// Get header information about a specific DAR
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team id</param>
+        /// <param name="id">DAR application id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarApplicationHeaderApiResponse"/>&gt;</returns>
+        Task<IFetchTeamDarApplicationHeaderApiResponse> FetchTeamDarApplicationHeaderAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// TeamDataAccessApplicationController@showHeader
+        /// </summary>
+        /// <remarks>
+        /// Get header information about a specific DAR
+        /// </remarks>
+        /// <param name="teamId">Team id</param>
+        /// <param name="id">DAR application id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarApplicationHeaderApiResponse"/>?&gt;</returns>
+        Task<IFetchTeamDarApplicationHeaderApiResponse?> FetchTeamDarApplicationHeaderOrDefaultAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// TeamDataAccessApplicationController@index
+        /// </summary>
+        /// <remarks>
+        /// List of dar applications belonging to a team
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarApplicationsApiResponse"/>&gt;</returns>
+        Task<IFetchTeamDarApplicationsApiResponse> FetchTeamDarApplicationsAsync(int teamId, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// TeamDataAccessApplicationController@index
+        /// </summary>
+        /// <remarks>
+        /// List of dar applications belonging to a team
+        /// </remarks>
+        /// <param name="teamId">Team id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarApplicationsApiResponse"/>?&gt;</returns>
+        Task<IFetchTeamDarApplicationsApiResponse?> FetchTeamDarApplicationsOrDefaultAsync(int teamId, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="ICall0dabe0dfdf4eebd0c76560fd691c6472ApiResponse"/>
+    /// The <see cref="ICountTeamDarApplicationsApiResponse"/>
     /// </summary>
-    public interface ICall0dabe0dfdf4eebd0c76560fd691c6472ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model0dabe0dfdf4eebd0c76560fd691c6472200Response?>
+    public interface ICountTeamDarApplicationsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CountUniqueFieldsCollections200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -173,9 +173,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall0ff8ad69b213abf8d671b3695d0b69b5ApiResponse"/>
+    /// The <see cref="ICountUniqueFieldsDarApplicationsApiResponse"/>
     /// </summary>
-    public interface ICall0ff8ad69b213abf8d671b3695d0b69b5ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model0ff8ad69b213abf8d671b3695d0b69b5200Response?>
+    public interface ICountUniqueFieldsDarApplicationsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CountUniqueFieldsCollections200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -185,21 +185,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall3f8472e47cdd8aaabb42e1065a7a0afbApiResponse"/>
+    /// The <see cref="IFetchTeamDarApplicationApiResponse"/>
     /// </summary>
-    public interface ICall3f8472e47cdd8aaabb42e1065a7a0afbApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CountUniqueFieldsCollections200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ICall4e4d590ec8943163168e4fc34bd166a1ApiResponse"/>
-    /// </summary>
-    public interface ICall4e4d590ec8943163168e4fc34bd166a1ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model4e4d590ec8943163168e4fc34bd166a1200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
+    public interface IFetchTeamDarApplicationApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchTeamDarApplication200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -215,9 +203,21 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICountUniqueFieldsDarApplicationsApiResponse"/>
+    /// The <see cref="IFetchTeamDarApplicationHeaderApiResponse"/>
     /// </summary>
-    public interface ICountUniqueFieldsDarApplicationsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CountUniqueFieldsCollections200Response?>
+    public interface IFetchTeamDarApplicationHeaderApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchTeamDarApplicationHeader200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchTeamDarApplicationsApiResponse"/>
+    /// </summary>
+    public interface IFetchTeamDarApplicationsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchTeamDarApplications200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -234,81 +234,21 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall0dabe0dfdf4eebd0c76560fd691c6472;
+        public event EventHandler<ApiResponseEventArgs>? OnCountTeamDarApplications;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall0dabe0dfdf4eebd0c76560fd691c6472;
+        public event EventHandler<ExceptionEventArgs>? OnErrorCountTeamDarApplications;
 
-        internal void ExecuteOnCall0dabe0dfdf4eebd0c76560fd691c6472(TeamDataAccessApplicationApi.Call0dabe0dfdf4eebd0c76560fd691c6472ApiResponse apiResponse)
+        internal void ExecuteOnCountTeamDarApplications(TeamDataAccessApplicationApi.CountTeamDarApplicationsApiResponse apiResponse)
         {
-            OnCall0dabe0dfdf4eebd0c76560fd691c6472?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnCountTeamDarApplications?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall0dabe0dfdf4eebd0c76560fd691c6472(Exception exception)
+        internal void ExecuteOnErrorCountTeamDarApplications(Exception exception)
         {
-            OnErrorCall0dabe0dfdf4eebd0c76560fd691c6472?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall0ff8ad69b213abf8d671b3695d0b69b5;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall0ff8ad69b213abf8d671b3695d0b69b5;
-
-        internal void ExecuteOnCall0ff8ad69b213abf8d671b3695d0b69b5(TeamDataAccessApplicationApi.Call0ff8ad69b213abf8d671b3695d0b69b5ApiResponse apiResponse)
-        {
-            OnCall0ff8ad69b213abf8d671b3695d0b69b5?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorCall0ff8ad69b213abf8d671b3695d0b69b5(Exception exception)
-        {
-            OnErrorCall0ff8ad69b213abf8d671b3695d0b69b5?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall3f8472e47cdd8aaabb42e1065a7a0afb;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall3f8472e47cdd8aaabb42e1065a7a0afb;
-
-        internal void ExecuteOnCall3f8472e47cdd8aaabb42e1065a7a0afb(TeamDataAccessApplicationApi.Call3f8472e47cdd8aaabb42e1065a7a0afbApiResponse apiResponse)
-        {
-            OnCall3f8472e47cdd8aaabb42e1065a7a0afb?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorCall3f8472e47cdd8aaabb42e1065a7a0afb(Exception exception)
-        {
-            OnErrorCall3f8472e47cdd8aaabb42e1065a7a0afb?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall4e4d590ec8943163168e4fc34bd166a1;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall4e4d590ec8943163168e4fc34bd166a1;
-
-        internal void ExecuteOnCall4e4d590ec8943163168e4fc34bd166a1(TeamDataAccessApplicationApi.Call4e4d590ec8943163168e4fc34bd166a1ApiResponse apiResponse)
-        {
-            OnCall4e4d590ec8943163168e4fc34bd166a1?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorCall4e4d590ec8943163168e4fc34bd166a1(Exception exception)
-        {
-            OnErrorCall4e4d590ec8943163168e4fc34bd166a1?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorCountTeamDarApplications?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
@@ -329,6 +269,66 @@ namespace GatewayApiSdk.Api
         internal void ExecuteOnErrorCountUniqueFieldsDarApplications(Exception exception)
         {
             OnErrorCountUniqueFieldsDarApplications?.Invoke(this, new ExceptionEventArgs(exception));
+        }
+
+        /// <summary>
+        /// The event raised after the server response
+        /// </summary>
+        public event EventHandler<ApiResponseEventArgs>? OnFetchTeamDarApplication;
+
+        /// <summary>
+        /// The event raised after an error querying the server
+        /// </summary>
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchTeamDarApplication;
+
+        internal void ExecuteOnFetchTeamDarApplication(TeamDataAccessApplicationApi.FetchTeamDarApplicationApiResponse apiResponse)
+        {
+            OnFetchTeamDarApplication?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+        }
+
+        internal void ExecuteOnErrorFetchTeamDarApplication(Exception exception)
+        {
+            OnErrorFetchTeamDarApplication?.Invoke(this, new ExceptionEventArgs(exception));
+        }
+
+        /// <summary>
+        /// The event raised after the server response
+        /// </summary>
+        public event EventHandler<ApiResponseEventArgs>? OnFetchTeamDarApplicationHeader;
+
+        /// <summary>
+        /// The event raised after an error querying the server
+        /// </summary>
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchTeamDarApplicationHeader;
+
+        internal void ExecuteOnFetchTeamDarApplicationHeader(TeamDataAccessApplicationApi.FetchTeamDarApplicationHeaderApiResponse apiResponse)
+        {
+            OnFetchTeamDarApplicationHeader?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+        }
+
+        internal void ExecuteOnErrorFetchTeamDarApplicationHeader(Exception exception)
+        {
+            OnErrorFetchTeamDarApplicationHeader?.Invoke(this, new ExceptionEventArgs(exception));
+        }
+
+        /// <summary>
+        /// The event raised after the server response
+        /// </summary>
+        public event EventHandler<ApiResponseEventArgs>? OnFetchTeamDarApplications;
+
+        /// <summary>
+        /// The event raised after an error querying the server
+        /// </summary>
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchTeamDarApplications;
+
+        internal void ExecuteOnFetchTeamDarApplications(TeamDataAccessApplicationApi.FetchTeamDarApplicationsApiResponse apiResponse)
+        {
+            OnFetchTeamDarApplications?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+        }
+
+        internal void ExecuteOnErrorFetchTeamDarApplications(Exception exception)
+        {
+            OnErrorFetchTeamDarApplications?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -373,18 +373,17 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatCall0dabe0dfdf4eebd0c76560fd691c6472(ref int teamId, ref int id);
+        partial void FormatCountTeamDarApplications(ref int teamId);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        private void AfterCall0dabe0dfdf4eebd0c76560fd691c6472DefaultImplementation(ICall0dabe0dfdf4eebd0c76560fd691c6472ApiResponse apiResponseLocalVar, int teamId, int id)
+        private void AfterCountTeamDarApplicationsDefaultImplementation(ICountTeamDarApplicationsApiResponse apiResponseLocalVar, int teamId)
         {
             bool suppressDefaultLog = false;
-            AfterCall0dabe0dfdf4eebd0c76560fd691c6472(ref suppressDefaultLog, apiResponseLocalVar, teamId, id);
+            AfterCountTeamDarApplications(ref suppressDefaultLog, apiResponseLocalVar, teamId);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -395,8 +394,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        partial void AfterCall0dabe0dfdf4eebd0c76560fd691c6472(ref bool suppressDefaultLog, ICall0dabe0dfdf4eebd0c76560fd691c6472ApiResponse apiResponseLocalVar, int teamId, int id);
+        partial void AfterCountTeamDarApplications(ref bool suppressDefaultLog, ICountTeamDarApplicationsApiResponse apiResponseLocalVar, int teamId);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -405,11 +403,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        private void OnErrorCall0dabe0dfdf4eebd0c76560fd691c6472DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id)
+        private void OnErrorCountTeamDarApplicationsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall0dabe0dfdf4eebd0c76560fd691c6472(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, id);
+            OnErrorCountTeamDarApplications(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -422,501 +419,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        partial void OnErrorCall0dabe0dfdf4eebd0c76560fd691c6472(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id);
-
-        /// <summary>
-        /// TeamDataAccessApplicationController@showHeader Get header information about a specific DAR
-        /// </summary>
-        /// <param name="teamId">Team id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall0dabe0dfdf4eebd0c76560fd691c6472ApiResponse"/>&gt;</returns>
-        public async Task<ICall0dabe0dfdf4eebd0c76560fd691c6472ApiResponse?> Call0dabe0dfdf4eebd0c76560fd691c6472OrDefaultAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call0dabe0dfdf4eebd0c76560fd691c6472Async(teamId, id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// TeamDataAccessApplicationController@showHeader Get header information about a specific DAR
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">Team id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall0dabe0dfdf4eebd0c76560fd691c6472ApiResponse"/>&gt;</returns>
-        public async Task<ICall0dabe0dfdf4eebd0c76560fd691c6472ApiResponse> Call0dabe0dfdf4eebd0c76560fd691c6472Async(int teamId, int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatCall0dabe0dfdf4eebd0c76560fd691c6472(ref teamId, ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/teams/{teamId}/dar/applications/{id}/showHeader"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/teams/{teamId}/dar/applications/{id}/showHeader");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call0dabe0dfdf4eebd0c76560fd691c6472ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/teams/{teamId}/dar/applications/{id}/showHeader", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall0dabe0dfdf4eebd0c76560fd691c6472DefaultImplementation(apiResponseLocalVar, teamId, id);
-
-                        Events.ExecuteOnCall0dabe0dfdf4eebd0c76560fd691c6472(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall0dabe0dfdf4eebd0c76560fd691c6472DefaultImplementation(e, "/api/v1/teams/{teamId}/dar/applications/{id}/showHeader", uriBuilderLocalVar.Path, teamId, id);
-                Events.ExecuteOnErrorCall0dabe0dfdf4eebd0c76560fd691c6472(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call0dabe0dfdf4eebd0c76560fd691c6472ApiResponse"/>
-        /// </summary>
-        public partial class Call0dabe0dfdf4eebd0c76560fd691c6472ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall0dabe0dfdf4eebd0c76560fd691c6472ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<TeamDataAccessApplicationApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call0dabe0dfdf4eebd0c76560fd691c6472ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call0dabe0dfdf4eebd0c76560fd691c6472ApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call0dabe0dfdf4eebd0c76560fd691c6472ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call0dabe0dfdf4eebd0c76560fd691c6472ApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model0dabe0dfdf4eebd0c76560fd691c6472200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model0dabe0dfdf4eebd0c76560fd691c6472200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model0dabe0dfdf4eebd0c76560fd691c6472200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall0ff8ad69b213abf8d671b3695d0b69b5(ref int teamId);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        private void AfterCall0ff8ad69b213abf8d671b3695d0b69b5DefaultImplementation(ICall0ff8ad69b213abf8d671b3695d0b69b5ApiResponse apiResponseLocalVar, int teamId)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall0ff8ad69b213abf8d671b3695d0b69b5(ref suppressDefaultLog, apiResponseLocalVar, teamId);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        partial void AfterCall0ff8ad69b213abf8d671b3695d0b69b5(ref bool suppressDefaultLog, ICall0ff8ad69b213abf8d671b3695d0b69b5ApiResponse apiResponseLocalVar, int teamId);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        private void OnErrorCall0ff8ad69b213abf8d671b3695d0b69b5DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall0ff8ad69b213abf8d671b3695d0b69b5(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        partial void OnErrorCall0ff8ad69b213abf8d671b3695d0b69b5(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId);
-
-        /// <summary>
-        /// TeamDataAccessApplicationController@index List of dar applications belonging to a team
-        /// </summary>
-        /// <param name="teamId">Team id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall0ff8ad69b213abf8d671b3695d0b69b5ApiResponse"/>&gt;</returns>
-        public async Task<ICall0ff8ad69b213abf8d671b3695d0b69b5ApiResponse?> Call0ff8ad69b213abf8d671b3695d0b69b5OrDefaultAsync(int teamId, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call0ff8ad69b213abf8d671b3695d0b69b5Async(teamId, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// TeamDataAccessApplicationController@index List of dar applications belonging to a team
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">Team id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall0ff8ad69b213abf8d671b3695d0b69b5ApiResponse"/>&gt;</returns>
-        public async Task<ICall0ff8ad69b213abf8d671b3695d0b69b5ApiResponse> Call0ff8ad69b213abf8d671b3695d0b69b5Async(int teamId, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatCall0ff8ad69b213abf8d671b3695d0b69b5(ref teamId);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/teams/{teamId}/dar/applications"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/teams/{teamId}/dar/applications");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call0ff8ad69b213abf8d671b3695d0b69b5ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/teams/{teamId}/dar/applications", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall0ff8ad69b213abf8d671b3695d0b69b5DefaultImplementation(apiResponseLocalVar, teamId);
-
-                        Events.ExecuteOnCall0ff8ad69b213abf8d671b3695d0b69b5(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall0ff8ad69b213abf8d671b3695d0b69b5DefaultImplementation(e, "/api/v1/teams/{teamId}/dar/applications", uriBuilderLocalVar.Path, teamId);
-                Events.ExecuteOnErrorCall0ff8ad69b213abf8d671b3695d0b69b5(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call0ff8ad69b213abf8d671b3695d0b69b5ApiResponse"/>
-        /// </summary>
-        public partial class Call0ff8ad69b213abf8d671b3695d0b69b5ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall0ff8ad69b213abf8d671b3695d0b69b5ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<TeamDataAccessApplicationApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call0ff8ad69b213abf8d671b3695d0b69b5ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call0ff8ad69b213abf8d671b3695d0b69b5ApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call0ff8ad69b213abf8d671b3695d0b69b5ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call0ff8ad69b213abf8d671b3695d0b69b5ApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model0ff8ad69b213abf8d671b3695d0b69b5200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model0ff8ad69b213abf8d671b3695d0b69b5200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model0ff8ad69b213abf8d671b3695d0b69b5200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall3f8472e47cdd8aaabb42e1065a7a0afb(ref int teamId);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        private void AfterCall3f8472e47cdd8aaabb42e1065a7a0afbDefaultImplementation(ICall3f8472e47cdd8aaabb42e1065a7a0afbApiResponse apiResponseLocalVar, int teamId)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall3f8472e47cdd8aaabb42e1065a7a0afb(ref suppressDefaultLog, apiResponseLocalVar, teamId);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        partial void AfterCall3f8472e47cdd8aaabb42e1065a7a0afb(ref bool suppressDefaultLog, ICall3f8472e47cdd8aaabb42e1065a7a0afbApiResponse apiResponseLocalVar, int teamId);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        private void OnErrorCall3f8472e47cdd8aaabb42e1065a7a0afbDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall3f8472e47cdd8aaabb42e1065a7a0afb(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        partial void OnErrorCall3f8472e47cdd8aaabb42e1065a7a0afb(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId);
+        partial void OnErrorCountTeamDarApplications(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId);
 
         /// <summary>
         /// TeamDataAccessApplicationController@allCounts Get Counts for all status fields in the model
         /// </summary>
         /// <param name="teamId">Team id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3f8472e47cdd8aaabb42e1065a7a0afbApiResponse"/>&gt;</returns>
-        public async Task<ICall3f8472e47cdd8aaabb42e1065a7a0afbApiResponse?> Call3f8472e47cdd8aaabb42e1065a7a0afbOrDefaultAsync(int teamId, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICountTeamDarApplicationsApiResponse"/>&gt;</returns>
+        public async Task<ICountTeamDarApplicationsApiResponse?> CountTeamDarApplicationsOrDefaultAsync(int teamId, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call3f8472e47cdd8aaabb42e1065a7a0afbAsync(teamId, cancellationToken).ConfigureAwait(false);
+                return await CountTeamDarApplicationsAsync(teamId, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -930,14 +445,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team id</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3f8472e47cdd8aaabb42e1065a7a0afbApiResponse"/>&gt;</returns>
-        public async Task<ICall3f8472e47cdd8aaabb42e1065a7a0afbApiResponse> Call3f8472e47cdd8aaabb42e1065a7a0afbAsync(int teamId, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICountTeamDarApplicationsApiResponse"/>&gt;</returns>
+        public async Task<ICountTeamDarApplicationsApiResponse> CountTeamDarApplicationsAsync(int teamId, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatCall3f8472e47cdd8aaabb42e1065a7a0afb(ref teamId);
+                FormatCountTeamDarApplications(ref teamId);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -973,7 +488,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call3f8472e47cdd8aaabb42e1065a7a0afbApiResponse apiResponseLocalVar;
+                        CountTeamDarApplicationsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -984,9 +499,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall3f8472e47cdd8aaabb42e1065a7a0afbDefaultImplementation(apiResponseLocalVar, teamId);
+                        AfterCountTeamDarApplicationsDefaultImplementation(apiResponseLocalVar, teamId);
 
-                        Events.ExecuteOnCall3f8472e47cdd8aaabb42e1065a7a0afb(apiResponseLocalVar);
+                        Events.ExecuteOnCountTeamDarApplications(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -998,16 +513,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall3f8472e47cdd8aaabb42e1065a7a0afbDefaultImplementation(e, "/api/v1/teams/{teamId}/dar/applications/count", uriBuilderLocalVar.Path, teamId);
-                Events.ExecuteOnErrorCall3f8472e47cdd8aaabb42e1065a7a0afb(e);
+                OnErrorCountTeamDarApplicationsDefaultImplementation(e, "/api/v1/teams/{teamId}/dar/applications/count", uriBuilderLocalVar.Path, teamId);
+                Events.ExecuteOnErrorCountTeamDarApplications(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call3f8472e47cdd8aaabb42e1065a7a0afbApiResponse"/>
+        /// The <see cref="CountTeamDarApplicationsApiResponse"/>
         /// </summary>
-        public partial class Call3f8472e47cdd8aaabb42e1065a7a0afbApiResponse : GatewayApiSdk.Client.ApiResponse, ICall3f8472e47cdd8aaabb42e1065a7a0afbApiResponse
+        public partial class CountTeamDarApplicationsApiResponse : GatewayApiSdk.Client.ApiResponse, ICountTeamDarApplicationsApiResponse
         {
             /// <summary>
             /// The logger
@@ -1015,7 +530,7 @@ namespace GatewayApiSdk.Api
             public ILogger<TeamDataAccessApplicationApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call3f8472e47cdd8aaabb42e1065a7a0afbApiResponse"/>
+            /// The <see cref="CountTeamDarApplicationsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1024,14 +539,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call3f8472e47cdd8aaabb42e1065a7a0afbApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public CountTeamDarApplicationsApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call3f8472e47cdd8aaabb42e1065a7a0afbApiResponse"/>
+            /// The <see cref="CountTeamDarApplicationsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -1040,7 +555,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call3f8472e47cdd8aaabb42e1065a7a0afbApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public CountTeamDarApplicationsApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -1081,290 +596,6 @@ namespace GatewayApiSdk.Api
                 } catch (Exception e)
                 {
                     OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall4e4d590ec8943163168e4fc34bd166a1(ref int teamId, ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        private void AfterCall4e4d590ec8943163168e4fc34bd166a1DefaultImplementation(ICall4e4d590ec8943163168e4fc34bd166a1ApiResponse apiResponseLocalVar, int teamId, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall4e4d590ec8943163168e4fc34bd166a1(ref suppressDefaultLog, apiResponseLocalVar, teamId, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        partial void AfterCall4e4d590ec8943163168e4fc34bd166a1(ref bool suppressDefaultLog, ICall4e4d590ec8943163168e4fc34bd166a1ApiResponse apiResponseLocalVar, int teamId, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        private void OnErrorCall4e4d590ec8943163168e4fc34bd166a1DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall4e4d590ec8943163168e4fc34bd166a1(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        partial void OnErrorCall4e4d590ec8943163168e4fc34bd166a1(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id);
-
-        /// <summary>
-        /// TeamDataAccessApplicationController@show Return a single DAR application
-        /// </summary>
-        /// <param name="teamId">Team id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4e4d590ec8943163168e4fc34bd166a1ApiResponse"/>&gt;</returns>
-        public async Task<ICall4e4d590ec8943163168e4fc34bd166a1ApiResponse?> Call4e4d590ec8943163168e4fc34bd166a1OrDefaultAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call4e4d590ec8943163168e4fc34bd166a1Async(teamId, id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// TeamDataAccessApplicationController@show Return a single DAR application
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">Team id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4e4d590ec8943163168e4fc34bd166a1ApiResponse"/>&gt;</returns>
-        public async Task<ICall4e4d590ec8943163168e4fc34bd166a1ApiResponse> Call4e4d590ec8943163168e4fc34bd166a1Async(int teamId, int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatCall4e4d590ec8943163168e4fc34bd166a1(ref teamId, ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/teams/{teamId}/dar/applications/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/teams/{teamId}/dar/applications/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call4e4d590ec8943163168e4fc34bd166a1ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/teams/{teamId}/dar/applications/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall4e4d590ec8943163168e4fc34bd166a1DefaultImplementation(apiResponseLocalVar, teamId, id);
-
-                        Events.ExecuteOnCall4e4d590ec8943163168e4fc34bd166a1(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall4e4d590ec8943163168e4fc34bd166a1DefaultImplementation(e, "/api/v1/teams/{teamId}/dar/applications/{id}", uriBuilderLocalVar.Path, teamId, id);
-                Events.ExecuteOnErrorCall4e4d590ec8943163168e4fc34bd166a1(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call4e4d590ec8943163168e4fc34bd166a1ApiResponse"/>
-        /// </summary>
-        public partial class Call4e4d590ec8943163168e4fc34bd166a1ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall4e4d590ec8943163168e4fc34bd166a1ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<TeamDataAccessApplicationApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call4e4d590ec8943163168e4fc34bd166a1ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call4e4d590ec8943163168e4fc34bd166a1ApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call4e4d590ec8943163168e4fc34bd166a1ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call4e4d590ec8943163168e4fc34bd166a1ApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model4e4d590ec8943163168e4fc34bd166a1200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model4e4d590ec8943163168e4fc34bd166a1200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model4e4d590ec8943163168e4fc34bd166a1200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
                 }
 
                 return result != null;
@@ -1615,6 +846,775 @@ namespace GatewayApiSdk.Api
             /// <param name="result"></param>
             /// <returns></returns>
             public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.CountUniqueFieldsCollections200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchTeamDarApplication(ref int teamId, ref int id);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="id"></param>
+        private void AfterFetchTeamDarApplicationDefaultImplementation(IFetchTeamDarApplicationApiResponse apiResponseLocalVar, int teamId, int id)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchTeamDarApplication(ref suppressDefaultLog, apiResponseLocalVar, teamId, id);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="id"></param>
+        partial void AfterFetchTeamDarApplication(ref bool suppressDefaultLog, IFetchTeamDarApplicationApiResponse apiResponseLocalVar, int teamId, int id);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="id"></param>
+        private void OnErrorFetchTeamDarApplicationDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchTeamDarApplication(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, id);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="id"></param>
+        partial void OnErrorFetchTeamDarApplication(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id);
+
+        /// <summary>
+        /// TeamDataAccessApplicationController@show Return a single DAR application
+        /// </summary>
+        /// <param name="teamId">Team id</param>
+        /// <param name="id">DAR application id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarApplicationApiResponse"/>&gt;</returns>
+        public async Task<IFetchTeamDarApplicationApiResponse?> FetchTeamDarApplicationOrDefaultAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchTeamDarApplicationAsync(teamId, id, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// TeamDataAccessApplicationController@show Return a single DAR application
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team id</param>
+        /// <param name="id">DAR application id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarApplicationApiResponse"/>&gt;</returns>
+        public async Task<IFetchTeamDarApplicationApiResponse> FetchTeamDarApplicationAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchTeamDarApplication(ref teamId, ref id);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/teams/{teamId}/dar/applications/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/teams/{teamId}/dar/applications/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchTeamDarApplicationApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/teams/{teamId}/dar/applications/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchTeamDarApplicationDefaultImplementation(apiResponseLocalVar, teamId, id);
+
+                        Events.ExecuteOnFetchTeamDarApplication(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchTeamDarApplicationDefaultImplementation(e, "/api/v1/teams/{teamId}/dar/applications/{id}", uriBuilderLocalVar.Path, teamId, id);
+                Events.ExecuteOnErrorFetchTeamDarApplication(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchTeamDarApplicationApiResponse"/>
+        /// </summary>
+        public partial class FetchTeamDarApplicationApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchTeamDarApplicationApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<TeamDataAccessApplicationApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchTeamDarApplicationApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchTeamDarApplicationApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchTeamDarApplicationApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchTeamDarApplicationApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchTeamDarApplication200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchTeamDarApplication200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchTeamDarApplication200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchTeamDarApplicationHeader(ref int teamId, ref int id);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="id"></param>
+        private void AfterFetchTeamDarApplicationHeaderDefaultImplementation(IFetchTeamDarApplicationHeaderApiResponse apiResponseLocalVar, int teamId, int id)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchTeamDarApplicationHeader(ref suppressDefaultLog, apiResponseLocalVar, teamId, id);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="id"></param>
+        partial void AfterFetchTeamDarApplicationHeader(ref bool suppressDefaultLog, IFetchTeamDarApplicationHeaderApiResponse apiResponseLocalVar, int teamId, int id);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="id"></param>
+        private void OnErrorFetchTeamDarApplicationHeaderDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchTeamDarApplicationHeader(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, id);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="teamId"></param>
+        /// <param name="id"></param>
+        partial void OnErrorFetchTeamDarApplicationHeader(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id);
+
+        /// <summary>
+        /// TeamDataAccessApplicationController@showHeader Get header information about a specific DAR
+        /// </summary>
+        /// <param name="teamId">Team id</param>
+        /// <param name="id">DAR application id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarApplicationHeaderApiResponse"/>&gt;</returns>
+        public async Task<IFetchTeamDarApplicationHeaderApiResponse?> FetchTeamDarApplicationHeaderOrDefaultAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchTeamDarApplicationHeaderAsync(teamId, id, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// TeamDataAccessApplicationController@showHeader Get header information about a specific DAR
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team id</param>
+        /// <param name="id">DAR application id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarApplicationHeaderApiResponse"/>&gt;</returns>
+        public async Task<IFetchTeamDarApplicationHeaderApiResponse> FetchTeamDarApplicationHeaderAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchTeamDarApplicationHeader(ref teamId, ref id);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/teams/{teamId}/dar/applications/{id}/showHeader"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/teams/{teamId}/dar/applications/{id}/showHeader");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchTeamDarApplicationHeaderApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/teams/{teamId}/dar/applications/{id}/showHeader", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchTeamDarApplicationHeaderDefaultImplementation(apiResponseLocalVar, teamId, id);
+
+                        Events.ExecuteOnFetchTeamDarApplicationHeader(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchTeamDarApplicationHeaderDefaultImplementation(e, "/api/v1/teams/{teamId}/dar/applications/{id}/showHeader", uriBuilderLocalVar.Path, teamId, id);
+                Events.ExecuteOnErrorFetchTeamDarApplicationHeader(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchTeamDarApplicationHeaderApiResponse"/>
+        /// </summary>
+        public partial class FetchTeamDarApplicationHeaderApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchTeamDarApplicationHeaderApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<TeamDataAccessApplicationApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchTeamDarApplicationHeaderApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchTeamDarApplicationHeaderApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchTeamDarApplicationHeaderApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchTeamDarApplicationHeaderApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchTeamDarApplicationHeader200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchTeamDarApplicationHeader200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchTeamDarApplicationHeader200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchTeamDarApplications(ref int teamId);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="teamId"></param>
+        private void AfterFetchTeamDarApplicationsDefaultImplementation(IFetchTeamDarApplicationsApiResponse apiResponseLocalVar, int teamId)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchTeamDarApplications(ref suppressDefaultLog, apiResponseLocalVar, teamId);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="teamId"></param>
+        partial void AfterFetchTeamDarApplications(ref bool suppressDefaultLog, IFetchTeamDarApplicationsApiResponse apiResponseLocalVar, int teamId);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="teamId"></param>
+        private void OnErrorFetchTeamDarApplicationsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchTeamDarApplications(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="teamId"></param>
+        partial void OnErrorFetchTeamDarApplications(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId);
+
+        /// <summary>
+        /// TeamDataAccessApplicationController@index List of dar applications belonging to a team
+        /// </summary>
+        /// <param name="teamId">Team id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarApplicationsApiResponse"/>&gt;</returns>
+        public async Task<IFetchTeamDarApplicationsApiResponse?> FetchTeamDarApplicationsOrDefaultAsync(int teamId, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchTeamDarApplicationsAsync(teamId, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// TeamDataAccessApplicationController@index List of dar applications belonging to a team
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team id</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchTeamDarApplicationsApiResponse"/>&gt;</returns>
+        public async Task<IFetchTeamDarApplicationsApiResponse> FetchTeamDarApplicationsAsync(int teamId, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchTeamDarApplications(ref teamId);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v1/teams/{teamId}/dar/applications"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/teams/{teamId}/dar/applications");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchTeamDarApplicationsApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/teams/{teamId}/dar/applications", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchTeamDarApplicationsDefaultImplementation(apiResponseLocalVar, teamId);
+
+                        Events.ExecuteOnFetchTeamDarApplications(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchTeamDarApplicationsDefaultImplementation(e, "/api/v1/teams/{teamId}/dar/applications", uriBuilderLocalVar.Path, teamId);
+                Events.ExecuteOnErrorFetchTeamDarApplications(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchTeamDarApplicationsApiResponse"/>
+        /// </summary>
+        public partial class FetchTeamDarApplicationsApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchTeamDarApplicationsApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<TeamDataAccessApplicationApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchTeamDarApplicationsApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchTeamDarApplicationsApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchTeamDarApplicationsApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchTeamDarApplicationsApiResponse(ILogger<TeamDataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchTeamDarApplications200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchTeamDarApplications200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchTeamDarApplications200Response? result)
             {
                 result = null;
 

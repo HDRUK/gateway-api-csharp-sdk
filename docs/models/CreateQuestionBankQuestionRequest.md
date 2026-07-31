@@ -1,0 +1,26 @@
+# GatewayApiSdk.Model.CreateQuestionBankQuestionRequest
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**SectionId** | **int** |  | 
+**ForceRequired** | **bool** |  | 
+**AllowGuidanceOverride** | **bool** |  | 
+**Guidance** | **string** |  | 
+**Title** | **string** |  | 
+**Field** | **List&lt;Object&gt;** |  | 
+**Component** | **string** |  | 
+**Validations** | **List&lt;Object&gt;** |  | 
+**Options** | [**List&lt;CreateQuestionBankQuestionRequestOptionsInner&gt;**](CreateQuestionBankQuestionRequestOptionsInner.md) |  | 
+**UserId** | **int** |  | [optional] 
+**TeamIds** | **List&lt;int&gt;** |  | [optional] 
+**Locked** | **bool** |  | [optional] 
+**Archived** | **bool** |  | [optional] 
+**Required** | **bool** |  | [optional] 
+**Default** | **bool** |  | [optional] 
+**IsChild** | **bool** |  | [optional] 
+**QuestionType** | **string** |  | [optional] 
+
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+

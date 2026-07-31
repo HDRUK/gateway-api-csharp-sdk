@@ -51,93 +51,93 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call02454c833604944c4ab43341c54819b5
+        /// Test CountAllUserDarApplications
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call02454c833604944c4ab43341c54819b5AsyncTest()
+        public async Task CountAllUserDarApplicationsAsyncTest()
         {
             int userId = default!;
-            var response = await _instance.Call02454c833604944c4ab43341c54819b5Async(userId);
+            var response = await _instance.CountAllUserDarApplicationsAsync(userId);
             var model = response.Ok();
             Assert.IsType<CountUniqueFieldsCollections200Response>(model);
         }
 
         /// <summary>
-        /// Test Call34fca475ca3526cfda7bd59f33676ca9
+        /// Test CountUserDarApplicationsByField
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call34fca475ca3526cfda7bd59f33676ca9AsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            var response = await _instance.Call34fca475ca3526cfda7bd59f33676ca9Async(userId, id);
-            var model = response.Ok();
-            Assert.IsType<Model4e4d590ec8943163168e4fc34bd166a1200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call3ed5d58afc4b6c7bb2d955fa4c0f1671
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call3ed5d58afc4b6c7bb2d955fa4c0f1671AsyncTest()
-        {
-            int userId = default!;
-            var response = await _instance.Call3ed5d58afc4b6c7bb2d955fa4c0f1671Async(userId);
-            var model = response.Ok();
-            Assert.IsType<Model0ff8ad69b213abf8d671b3695d0b69b5200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call7090c41ba0c1412e6f1e62c5d9db14ba
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call7090c41ba0c1412e6f1e62c5d9db14baAsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            var response = await _instance.Call7090c41ba0c1412e6f1e62c5d9db14baAsync(userId, id);
-            var model = response.Ok();
-            Assert.IsType<Model473ee45c3962ae2a02abbac5015dce6a200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call7710dee56f16ff46e25d95111beb5ce0
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call7710dee56f16ff46e25d95111beb5ce0AsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            var response = await _instance.Call7710dee56f16ff46e25d95111beb5ce0Async(userId, id);
-            var model = response.Ok();
-            Assert.IsType<Model4e4d590ec8943163168e4fc34bd166a1200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call7753eafda891afa178f7cbff9e66ff10
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call7753eafda891afa178f7cbff9e66ff10AsyncTest()
+        public async Task CountUserDarApplicationsByFieldAsyncTest()
         {
             int userId = default!;
             string field = default!;
-            var response = await _instance.Call7753eafda891afa178f7cbff9e66ff10Async(userId, field);
+            var response = await _instance.CountUserDarApplicationsByFieldAsync(userId, field);
             var model = response.Ok();
             Assert.IsType<CountUniqueFieldsCollections200Response>(model);
         }
 
         /// <summary>
-        /// Test D05df7a52fe05d677aa184236d61de56
+        /// Test CreateUserDarApplicationAnswers
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task D05df7a52fe05d677aa184236d61de56AsyncTest()
+        public async Task CreateUserDarApplicationAnswersAsyncTest()
         {
             int userId = default!;
             int id = default!;
-            D05df7a52fe05d677aa184236d61de56Request d05df7a52fe05d677aa184236d61de56Request = default!;
-            var response = await _instance.D05df7a52fe05d677aa184236d61de56Async(userId, id, d05df7a52fe05d677aa184236d61de56Request);
+            CreateUserDarApplicationAnswersRequest createUserDarApplicationAnswersRequest = default!;
+            var response = await _instance.CreateUserDarApplicationAnswersAsync(userId, id, createUserDarApplicationAnswersRequest);
             var model = response.Ok();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchUserDarApplicationAnswers
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchUserDarApplicationAnswersAsyncTest()
+        {
+            int userId = default!;
+            int id = default!;
+            var response = await _instance.FetchUserDarApplicationAnswersAsync(userId, id);
+            var model = response.Ok();
+            Assert.IsType<FetchTeamDarApplicationAnswers200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchUserDarApplicationDetails
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchUserDarApplicationDetailsAsyncTest()
+        {
+            int userId = default!;
+            int id = default!;
+            var response = await _instance.FetchUserDarApplicationDetailsAsync(userId, id);
+            var model = response.Ok();
+            Assert.IsType<FetchTeamDarApplication200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchUserDarApplicationHeader
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchUserDarApplicationHeaderAsyncTest()
+        {
+            int userId = default!;
+            int id = default!;
+            var response = await _instance.FetchUserDarApplicationHeaderAsync(userId, id);
+            var model = response.Ok();
+            Assert.IsType<FetchTeamDarApplication200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchUserDarApplications
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchUserDarApplicationsAsyncTest()
+        {
+            int userId = default!;
+            var response = await _instance.FetchUserDarApplicationsAsync(userId);
+            var model = response.Ok();
+            Assert.IsType<FetchTeamDarApplications200Response>(model);
         }
     }
 }

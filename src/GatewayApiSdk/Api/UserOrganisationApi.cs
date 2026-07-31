@@ -46,8 +46,8 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall58e41162a49b5b1bf92231b359ea70cbApiResponse"/>&gt;</returns>
-        Task<ICall58e41162a49b5b1bf92231b359ea70cbApiResponse> Call58e41162a49b5b1bf92231b359ea70cbAsync(System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUserOrganisationsApiResponse"/>&gt;</returns>
+        Task<IFetchUserOrganisationsApiResponse> FetchUserOrganisationsAsync(System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// UserOrganisation@index
@@ -56,14 +56,14 @@ namespace GatewayApiSdk.Api
         /// Return a distinct list of all organisations which users belong to
         /// </remarks>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall58e41162a49b5b1bf92231b359ea70cbApiResponse"/>?&gt;</returns>
-        Task<ICall58e41162a49b5b1bf92231b359ea70cbApiResponse?> Call58e41162a49b5b1bf92231b359ea70cbOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUserOrganisationsApiResponse"/>?&gt;</returns>
+        Task<IFetchUserOrganisationsApiResponse?> FetchUserOrganisationsOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="ICall58e41162a49b5b1bf92231b359ea70cbApiResponse"/>
+    /// The <see cref="IFetchUserOrganisationsApiResponse"/>
     /// </summary>
-    public interface ICall58e41162a49b5b1bf92231b359ea70cbApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model58e41162a49b5b1bf92231b359ea70cb200Response?>
+    public interface IFetchUserOrganisationsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchUserOrganisations200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -80,21 +80,21 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall58e41162a49b5b1bf92231b359ea70cb;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchUserOrganisations;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall58e41162a49b5b1bf92231b359ea70cb;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchUserOrganisations;
 
-        internal void ExecuteOnCall58e41162a49b5b1bf92231b359ea70cb(UserOrganisationApi.Call58e41162a49b5b1bf92231b359ea70cbApiResponse apiResponse)
+        internal void ExecuteOnFetchUserOrganisations(UserOrganisationApi.FetchUserOrganisationsApiResponse apiResponse)
         {
-            OnCall58e41162a49b5b1bf92231b359ea70cb?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchUserOrganisations?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall58e41162a49b5b1bf92231b359ea70cb(Exception exception)
+        internal void ExecuteOnErrorFetchUserOrganisations(Exception exception)
         {
-            OnErrorCall58e41162a49b5b1bf92231b359ea70cb?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchUserOrganisations?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -143,10 +143,10 @@ namespace GatewayApiSdk.Api
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        private void AfterCall58e41162a49b5b1bf92231b359ea70cbDefaultImplementation(ICall58e41162a49b5b1bf92231b359ea70cbApiResponse apiResponseLocalVar)
+        private void AfterFetchUserOrganisationsDefaultImplementation(IFetchUserOrganisationsApiResponse apiResponseLocalVar)
         {
             bool suppressDefaultLog = false;
-            AfterCall58e41162a49b5b1bf92231b359ea70cb(ref suppressDefaultLog, apiResponseLocalVar);
+            AfterFetchUserOrganisations(ref suppressDefaultLog, apiResponseLocalVar);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -156,7 +156,7 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        partial void AfterCall58e41162a49b5b1bf92231b359ea70cb(ref bool suppressDefaultLog, ICall58e41162a49b5b1bf92231b359ea70cbApiResponse apiResponseLocalVar);
+        partial void AfterFetchUserOrganisations(ref bool suppressDefaultLog, IFetchUserOrganisationsApiResponse apiResponseLocalVar);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -164,10 +164,10 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        private void OnErrorCall58e41162a49b5b1bf92231b359ea70cbDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar)
+        private void OnErrorFetchUserOrganisationsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall58e41162a49b5b1bf92231b359ea70cb(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar);
+            OnErrorFetchUserOrganisations(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -179,18 +179,18 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        partial void OnErrorCall58e41162a49b5b1bf92231b359ea70cb(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar);
+        partial void OnErrorFetchUserOrganisations(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar);
 
         /// <summary>
         /// UserOrganisation@index Return a distinct list of all organisations which users belong to
         /// </summary>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall58e41162a49b5b1bf92231b359ea70cbApiResponse"/>&gt;</returns>
-        public async Task<ICall58e41162a49b5b1bf92231b359ea70cbApiResponse?> Call58e41162a49b5b1bf92231b359ea70cbOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUserOrganisationsApiResponse"/>&gt;</returns>
+        public async Task<IFetchUserOrganisationsApiResponse?> FetchUserOrganisationsOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call58e41162a49b5b1bf92231b359ea70cbAsync(cancellationToken).ConfigureAwait(false);
+                return await FetchUserOrganisationsAsync(cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -203,8 +203,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall58e41162a49b5b1bf92231b359ea70cbApiResponse"/>&gt;</returns>
-        public async Task<ICall58e41162a49b5b1bf92231b359ea70cbApiResponse> Call58e41162a49b5b1bf92231b359ea70cbAsync(System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUserOrganisationsApiResponse"/>&gt;</returns>
+        public async Task<IFetchUserOrganisationsApiResponse> FetchUserOrganisationsAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
@@ -243,7 +243,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call58e41162a49b5b1bf92231b359ea70cbApiResponse apiResponseLocalVar;
+                        FetchUserOrganisationsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -254,9 +254,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall58e41162a49b5b1bf92231b359ea70cbDefaultImplementation(apiResponseLocalVar);
+                        AfterFetchUserOrganisationsDefaultImplementation(apiResponseLocalVar);
 
-                        Events.ExecuteOnCall58e41162a49b5b1bf92231b359ea70cb(apiResponseLocalVar);
+                        Events.ExecuteOnFetchUserOrganisations(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -268,16 +268,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall58e41162a49b5b1bf92231b359ea70cbDefaultImplementation(e, "/api/v1/users/organisations", uriBuilderLocalVar.Path);
-                Events.ExecuteOnErrorCall58e41162a49b5b1bf92231b359ea70cb(e);
+                OnErrorFetchUserOrganisationsDefaultImplementation(e, "/api/v1/users/organisations", uriBuilderLocalVar.Path);
+                Events.ExecuteOnErrorFetchUserOrganisations(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call58e41162a49b5b1bf92231b359ea70cbApiResponse"/>
+        /// The <see cref="FetchUserOrganisationsApiResponse"/>
         /// </summary>
-        public partial class Call58e41162a49b5b1bf92231b359ea70cbApiResponse : GatewayApiSdk.Client.ApiResponse, ICall58e41162a49b5b1bf92231b359ea70cbApiResponse
+        public partial class FetchUserOrganisationsApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchUserOrganisationsApiResponse
         {
             /// <summary>
             /// The logger
@@ -285,7 +285,7 @@ namespace GatewayApiSdk.Api
             public ILogger<UserOrganisationApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call58e41162a49b5b1bf92231b359ea70cbApiResponse"/>
+            /// The <see cref="FetchUserOrganisationsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -294,14 +294,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call58e41162a49b5b1bf92231b359ea70cbApiResponse(ILogger<UserOrganisationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchUserOrganisationsApiResponse(ILogger<UserOrganisationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call58e41162a49b5b1bf92231b359ea70cbApiResponse"/>
+            /// The <see cref="FetchUserOrganisationsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -310,7 +310,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call58e41162a49b5b1bf92231b359ea70cbApiResponse(ILogger<UserOrganisationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchUserOrganisationsApiResponse(ILogger<UserOrganisationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -328,11 +328,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model58e41162a49b5b1bf92231b359ea70cb200Response? Ok()
+            public GatewayApiSdk.Model.FetchUserOrganisations200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model58e41162a49b5b1bf92231b359ea70cb200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchUserOrganisations200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -341,7 +341,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model58e41162a49b5b1bf92231b359ea70cb200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchUserOrganisations200Response? result)
             {
                 result = null;
 

@@ -51,33 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call1c45c3c6908e92d680ce50910d6d4061
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call1c45c3c6908e92d680ce50910d6d4061AsyncTest()
-        {
-            string authorization = default!;
-            string role = default!;
-            Model1c45c3c6908e92d680ce50910d6d4061Request model1c45c3c6908e92d680ce50910d6d4061Request = default!;
-            var response = await _instance.Call1c45c3c6908e92d680ce50910d6d4061Async(authorization, role, model1c45c3c6908e92d680ce50910d6d4061Request);
-            var model = response.Ok();
-            Assert.IsType<Model1c45c3c6908e92d680ce50910d6d4061200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call7f39b24417648f048a9457326619439c
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call7f39b24417648f048a9457326619439cAsyncTest()
-        {
-            string authorization = default!;
-            Model7f39b24417648f048a9457326619439cRequest model7f39b24417648f048a9457326619439cRequest = default!;
-            var response = await _instance.Call7f39b24417648f048a9457326619439cAsync(authorization, model7f39b24417648f048a9457326619439cRequest);
-            var model = response.Ok();
-            Assert.IsType<Model7f39b24417648f048a9457326619439c200Response>(model);
-        }
-
-        /// <summary>
         /// Test CountTeamUniqueFieldsDatasetsV2
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -112,7 +85,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDatasetsRequest createDatasetsRequest = default!;
             var response = await _instance.CreateDatasetsAsync(createDatasetsRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
@@ -126,7 +99,34 @@ namespace GatewayApiSdk.Test.Api
             Client.Option<string> inputVersion = default!;
             var response = await _instance.CreateDatasetsIntegrationsAsync(datasetsTestRequest, inputSchema, inputVersion);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
+        }
+
+        /// <summary>
+        /// Test CreateDatasetsLinkageExtraction
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task CreateDatasetsLinkageExtractionAsyncTest()
+        {
+            string authorization = default!;
+            CreateDatasetsLinkageExtractionRequest createDatasetsLinkageExtractionRequest = default!;
+            var response = await _instance.CreateDatasetsLinkageExtractionAsync(authorization, createDatasetsLinkageExtractionRequest);
+            var model = response.Ok();
+            Assert.IsType<CreateDatasetsLinkageExtraction200Response>(model);
+        }
+
+        /// <summary>
+        /// Test CreateDatasetsTermExtraction
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task CreateDatasetsTermExtractionAsyncTest()
+        {
+            string authorization = default!;
+            string role = default!;
+            CreateDatasetsTermExtractionRequest createDatasetsTermExtractionRequest = default!;
+            var response = await _instance.CreateDatasetsTermExtractionAsync(authorization, role, createDatasetsTermExtractionRequest);
+            var model = response.Ok();
+            Assert.IsType<CreateDatasetsTermExtraction200Response>(model);
         }
 
         /// <summary>
@@ -138,7 +138,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDatasetsV2Request createDatasetsV2Request = default!;
             var response = await _instance.CreateDatasetsV2Async(createDatasetsV2Request);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
@@ -151,7 +151,7 @@ namespace GatewayApiSdk.Test.Api
             CreateTeamDatasetsV2Request createTeamDatasetsV2Request = default!;
             var response = await _instance.CreateTeamDatasetsV2Async(teamId, createTeamDatasetsV2Request);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteDatasetsAsync(id);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
@@ -175,7 +175,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteDatasetsIntegrationsAsync(id);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
@@ -187,7 +187,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteDatasetsV2Async(id);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
@@ -200,7 +200,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteTeamDatasetsV2Async(teamId, id);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
@@ -398,7 +398,7 @@ namespace GatewayApiSdk.Test.Api
             Client.Option<string> unarchive = default!;
             var response = await _instance.PatchDatasetsAsync(id, unarchive);
             var model = response.Ok();
-            Assert.IsType<C29b5b3424f7317b69b4bda048ccfafb200Response>(model);
+            Assert.IsType<DeleteAliases200Response>(model);
         }
 
         /// <summary>
@@ -411,7 +411,7 @@ namespace GatewayApiSdk.Test.Api
             Client.Option<string> unarchive = default!;
             var response = await _instance.PatchDatasetsIntegrationsAsync(id, unarchive);
             var model = response.Ok();
-            Assert.IsType<C29b5b3424f7317b69b4bda048ccfafb200Response>(model);
+            Assert.IsType<DeleteAliases200Response>(model);
         }
 
         /// <summary>
@@ -424,7 +424,7 @@ namespace GatewayApiSdk.Test.Api
             PatchDatasetsV2Request patchDatasetsV2Request = default!;
             var response = await _instance.PatchDatasetsV2Async(id, patchDatasetsV2Request);
             var model = response.Ok();
-            Assert.IsType<C29b5b3424f7317b69b4bda048ccfafb200Response>(model);
+            Assert.IsType<DeleteAliases200Response>(model);
         }
 
         /// <summary>
@@ -438,7 +438,7 @@ namespace GatewayApiSdk.Test.Api
             PatchDatasetsV2Request patchDatasetsV2Request = default!;
             var response = await _instance.PatchTeamDatasetsV2Async(teamId, id, patchDatasetsV2Request);
             var model = response.Ok();
-            Assert.IsType<C29b5b3424f7317b69b4bda048ccfafb200Response>(model);
+            Assert.IsType<DeleteAliases200Response>(model);
         }
 
         /// <summary>
@@ -451,7 +451,7 @@ namespace GatewayApiSdk.Test.Api
             UpdateDatasetsRequest updateDatasetsRequest = default!;
             var response = await _instance.UpdateDatasetsAsync(id, updateDatasetsRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
@@ -479,7 +479,7 @@ namespace GatewayApiSdk.Test.Api
             UpdateDatasetsRequest updateDatasetsRequest = default!;
             var response = await _instance.UpdateDatasetsV2Async(id, updateDatasetsRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
@@ -493,7 +493,7 @@ namespace GatewayApiSdk.Test.Api
             PatchDatasetsV2Request patchDatasetsV2Request = default!;
             var response = await _instance.UpdateTeamDatasetsV2Async(teamId, id, patchDatasetsV2Request);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
     }
 }

@@ -51,65 +51,40 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test C724575805bbca0f084a3001d71abd53
+        /// Test CreateApplications
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task C724575805bbca0f084a3001d71abd53AsyncTest()
+        public async Task CreateApplicationsAsyncTest()
         {
-            int id = default!;
-            var response = await _instance.C724575805bbca0f084a3001d71abd53Async(id);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call3c8adeb001330f5198ca1072be78e299
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call3c8adeb001330f5198ca1072be78e299AsyncTest()
-        {
-            int id = default!;
-            Model3c8adeb001330f5198ca1072be78e299Request model3c8adeb001330f5198ca1072be78e299Request = default!;
-            var response = await _instance.Call3c8adeb001330f5198ca1072be78e299Async(id, model3c8adeb001330f5198ca1072be78e299Request);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call45ae3b415211ef0712a8ea070e66449f
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call45ae3b415211ef0712a8ea070e66449fAsyncTest()
-        {
-            int id = default!;
-            Model45ae3b415211ef0712a8ea070e66449fRequest model45ae3b415211ef0712a8ea070e66449fRequest = default!;
-            var response = await _instance.Call45ae3b415211ef0712a8ea070e66449fAsync(id, model45ae3b415211ef0712a8ea070e66449fRequest);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Ddca747ae792e5b6837b97c6ad510fd3
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Ddca747ae792e5b6837b97c6ad510fd3AsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.Ddca747ae792e5b6837b97c6ad510fd3Async(id);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test E210052adcf6fdcfc472998b430081aa
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task E210052adcf6fdcfc472998b430081aaAsyncTest()
-        {
-            E210052adcf6fdcfc472998b430081aaRequest e210052adcf6fdcfc472998b430081aaRequest = default!;
-            var response = await _instance.E210052adcf6fdcfc472998b430081aaAsync(e210052adcf6fdcfc472998b430081aaRequest);
+            CreateApplicationsRequest createApplicationsRequest = default!;
+            var response = await _instance.CreateApplicationsAsync(createApplicationsRequest);
             var model = response.Ok();
-            Assert.IsType<E210052adcf6fdcfc472998b430081aa200Response>(model);
+            Assert.IsType<CreateApplications200Response>(model);
+        }
+
+        /// <summary>
+        /// Test DeleteApplications
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task DeleteApplicationsAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.DeleteApplicationsAsync(id);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test EditApplications
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task EditApplicationsAsyncTest()
+        {
+            int id = default!;
+            EditApplicationsRequest editApplicationsRequest = default!;
+            var response = await _instance.EditApplicationsAsync(id, editApplicationsRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
@@ -147,6 +122,31 @@ namespace GatewayApiSdk.Test.Api
             var response = await _instance.FetchApplicationsAsync(id);
             var model = response.Ok();
             Assert.IsType<FetchApplications200Response>(model);
+        }
+
+        /// <summary>
+        /// Test PatchApplicationsClientId
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task PatchApplicationsClientIdAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.PatchApplicationsClientIdAsync(id);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test UpdateApplications
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task UpdateApplicationsAsyncTest()
+        {
+            int id = default!;
+            UpdateApplicationsRequest updateApplicationsRequest = default!;
+            var response = await _instance.UpdateApplicationsAsync(id, updateApplicationsRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
         }
     }
 }

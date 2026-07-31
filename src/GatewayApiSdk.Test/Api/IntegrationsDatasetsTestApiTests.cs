@@ -59,7 +59,7 @@ namespace GatewayApiSdk.Test.Api
             DatasetsTestRequest datasetsTestRequest = default!;
             var response = await _instance.IntegrationsDatasetsTestAsync(datasetsTestRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
     }
 }

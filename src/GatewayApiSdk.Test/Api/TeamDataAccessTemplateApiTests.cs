@@ -51,30 +51,30 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call471df4f14ed1f13bf3a66f1a8b70e261
+        /// Test DeleteTeamDarTemplateFile
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call471df4f14ed1f13bf3a66f1a8b70e261AsyncTest()
+        public async Task DeleteTeamDarTemplateFileAsyncTest()
         {
             int teamId = default!;
             int id = default!;
             string fileId = default!;
-            var response = await _instance.Call471df4f14ed1f13bf3a66f1a8b70e261Async(teamId, id, fileId);
+            var response = await _instance.DeleteTeamDarTemplateFileAsync(teamId, id, fileId);
             var model = response.Unauthorized();
             Assert.IsType<CreateTeamCollections401Response>(model);
         }
 
         /// <summary>
-        /// Test Call883e72f80ed3577c8e6eca9f9437e554
+        /// Test FetchTeamDarTemplates
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call883e72f80ed3577c8e6eca9f9437e554AsyncTest()
+        public async Task FetchTeamDarTemplatesAsyncTest()
         {
             int teamId = default!;
             Client.Option<string> published = default!;
-            var response = await _instance.Call883e72f80ed3577c8e6eca9f9437e554Async(teamId, published);
+            var response = await _instance.FetchTeamDarTemplatesAsync(teamId, published);
             var model = response.Ok();
-            Assert.IsType<Model234386e06c6b29d5aaca2ed8f89cb9aa200Response>(model);
+            Assert.IsType<FetchDarTemplates200Response>(model);
         }
 
         /// <summary>

@@ -51,30 +51,30 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call9946399cbddb0dcadcbd5801e5ee1dd4
+        /// Test SearchPublications
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call9946399cbddb0dcadcbd5801e5ee1dd4AsyncTest()
+        public async Task SearchPublicationsAsyncTest()
         {
-            Model9946399cbddb0dcadcbd5801e5ee1dd4Request model9946399cbddb0dcadcbd5801e5ee1dd4Request = default!;
+            SearchPublicationsRequest searchPublicationsRequest = default!;
             Client.Option<string> sort = default!;
             Client.Option<string> direction = default!;
             Client.Option<string> source = default!;
-            var response = await _instance.Call9946399cbddb0dcadcbd5801e5ee1dd4Async(model9946399cbddb0dcadcbd5801e5ee1dd4Request, sort, direction, source);
+            var response = await _instance.SearchPublicationsAsync(searchPublicationsRequest, sort, direction, source);
             var model = response.Ok();
-            Assert.IsType<Model9946399cbddb0dcadcbd5801e5ee1dd4200Response>(model);
+            Assert.IsType<SearchPublications200Response>(model);
         }
 
         /// <summary>
-        /// Test Call9a0abfa6186327d43c51259d5b524fde
+        /// Test SearchPublicationsByDoi
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call9a0abfa6186327d43c51259d5b524fdeAsyncTest()
+        public async Task SearchPublicationsByDoiAsyncTest()
         {
-            Model9a0abfa6186327d43c51259d5b524fdeRequest model9a0abfa6186327d43c51259d5b524fdeRequest = default!;
-            var response = await _instance.Call9a0abfa6186327d43c51259d5b524fdeAsync(model9a0abfa6186327d43c51259d5b524fdeRequest);
+            SearchPublicationsByDoiRequest searchPublicationsByDoiRequest = default!;
+            var response = await _instance.SearchPublicationsByDoiAsync(searchPublicationsByDoiRequest);
             var model = response.Ok();
-            Assert.IsType<Model9a0abfa6186327d43c51259d5b524fde200Response>(model);
+            Assert.IsType<SearchPublicationsByDoi200Response>(model);
         }
     }
 }

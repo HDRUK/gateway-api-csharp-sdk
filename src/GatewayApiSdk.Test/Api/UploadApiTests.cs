@@ -51,54 +51,54 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Ba8ab1a2710efebacb7909736d7d2d52
+        /// Test CreateFiles
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Ba8ab1a2710efebacb7909736d7d2d52AsyncTest()
-        {
-            string id = default!;
-            var response = await _instance.Ba8ab1a2710efebacb7909736d7d2d52Async(id);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call21a780f609f0b91c198ab5de91dc27c6
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call21a780f609f0b91c198ab5de91dc27c6AsyncTest()
-        {
-            string uuid = default!;
-            var response = await _instance.Call21a780f609f0b91c198ab5de91dc27c6Async(uuid);
-            var model = response.Ok();
-            Assert.IsType<Model21a780f609f0b91c198ab5de91dc27c6200Response>(model);
-        }
-
-        /// <summary>
-        /// Test E72aa4b4f0a80caa9fe872bdff983455
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task E72aa4b4f0a80caa9fe872bdff983455AsyncTest()
-        {
-            string uuid = default!;
-            var response = await _instance.E72aa4b4f0a80caa9fe872bdff983455Async(uuid);
-            var model = response.Ok();
-            Assert.IsType<E72aa4b4f0a80caa9fe872bdff983455200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Fceeda218a8998a137b9d7692e7947b6
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Fceeda218a8998a137b9d7692e7947b6AsyncTest()
+        public async Task CreateFilesAsyncTest()
         {
             Client.Option<string> entityFlag = default!;
             Client.Option<int> teamId = default!;
             Client.Option<int> applicationId = default!;
             Client.Option<int> questionId = default!;
-            var response = await _instance.Fceeda218a8998a137b9d7692e7947b6Async(entityFlag, teamId, applicationId, questionId);
+            var response = await _instance.CreateFilesAsync(entityFlag, teamId, applicationId, questionId);
             var model = response.Ok();
-            Assert.IsType<Fceeda218a8998a137b9d7692e7947b6200Response>(model);
+            Assert.IsType<CreateFiles200Response>(model);
+        }
+
+        /// <summary>
+        /// Test DeleteFilesProcessed
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task DeleteFilesProcessedAsyncTest()
+        {
+            string id = default!;
+            var response = await _instance.DeleteFilesProcessedAsync(id);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchFiles
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchFilesAsyncTest()
+        {
+            string uuid = default!;
+            var response = await _instance.FetchFilesAsync(uuid);
+            var model = response.Ok();
+            Assert.IsType<FetchFiles200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchFilesProcessedContent
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchFilesProcessedContentAsyncTest()
+        {
+            string uuid = default!;
+            var response = await _instance.FetchFilesProcessedContentAsync(uuid);
+            var model = response.Ok();
+            Assert.IsType<FetchFilesProcessedContent200Response>(model);
         }
     }
 }

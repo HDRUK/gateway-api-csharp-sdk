@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 
 <a id="createuserhasroles"></a>
 # **CreateUserHasRoles**
-> C29b5b3424f7317b69b4bda048ccfafb200Response CreateUserHasRoles (int userId, CreateUserHasRolesRequest createUserHasRolesRequest)
+> DeleteAliases200Response CreateUserHasRoles (int userId, CreateUserHasRolesRequest createUserHasRolesRequest)
 
 UserRoleController@store
 
@@ -26,7 +26,7 @@ Create user has roles
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 
@@ -88,7 +88,7 @@ Delete user - roles
 
 <a id="updateuserhasroles"></a>
 # **UpdateUserHasRoles**
-> C29b5b3424f7317b69b4bda048ccfafb200Response UpdateUserHasRoles (int userId, UpdateUserHasRolesRequest updateUserHasRolesRequest)
+> DeleteAliases200Response UpdateUserHasRoles (int userId, UpdateUserHasRolesRequest updateUserHasRolesRequest)
 
 UserRoleController@edit
 
@@ -104,7 +104,7 @@ Update user has roles
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 

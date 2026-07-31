@@ -45,10 +45,10 @@ namespace GatewayApiSdk.Api
         /// Returns gateway datasets related to the provided query term(s)
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="b60e5c6bd58001740003449e91216454Request">Submit search query</param>
+        /// <param name="searchDatasetsRequest">Submit search query</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB60e5c6bd58001740003449e91216454ApiResponse"/>&gt;</returns>
-        Task<IB60e5c6bd58001740003449e91216454ApiResponse> B60e5c6bd58001740003449e91216454Async(B60e5c6bd58001740003449e91216454Request b60e5c6bd58001740003449e91216454Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchDatasetsApiResponse"/>&gt;</returns>
+        Task<ISearchDatasetsApiResponse> SearchDatasetsAsync(SearchDatasetsRequest searchDatasetsRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Search@datasets
@@ -56,16 +56,16 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Returns gateway datasets related to the provided query term(s)
         /// </remarks>
-        /// <param name="b60e5c6bd58001740003449e91216454Request">Submit search query</param>
+        /// <param name="searchDatasetsRequest">Submit search query</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB60e5c6bd58001740003449e91216454ApiResponse"/>?&gt;</returns>
-        Task<IB60e5c6bd58001740003449e91216454ApiResponse?> B60e5c6bd58001740003449e91216454OrDefaultAsync(B60e5c6bd58001740003449e91216454Request b60e5c6bd58001740003449e91216454Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchDatasetsApiResponse"/>?&gt;</returns>
+        Task<ISearchDatasetsApiResponse?> SearchDatasetsOrDefaultAsync(SearchDatasetsRequest searchDatasetsRequest, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="IB60e5c6bd58001740003449e91216454ApiResponse"/>
+    /// The <see cref="ISearchDatasetsApiResponse"/>
     /// </summary>
-    public interface IB60e5c6bd58001740003449e91216454ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.B60e5c6bd58001740003449e91216454200Response?>
+    public interface ISearchDatasetsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.SearchDatasets200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -82,21 +82,21 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnB60e5c6bd58001740003449e91216454;
+        public event EventHandler<ApiResponseEventArgs>? OnSearchDatasets;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorB60e5c6bd58001740003449e91216454;
+        public event EventHandler<ExceptionEventArgs>? OnErrorSearchDatasets;
 
-        internal void ExecuteOnB60e5c6bd58001740003449e91216454(SearchDatasetsApi.B60e5c6bd58001740003449e91216454ApiResponse apiResponse)
+        internal void ExecuteOnSearchDatasets(SearchDatasetsApi.SearchDatasetsApiResponse apiResponse)
         {
-            OnB60e5c6bd58001740003449e91216454?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnSearchDatasets?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorB60e5c6bd58001740003449e91216454(Exception exception)
+        internal void ExecuteOnErrorSearchDatasets(Exception exception)
         {
-            OnErrorB60e5c6bd58001740003449e91216454?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorSearchDatasets?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -141,28 +141,28 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatB60e5c6bd58001740003449e91216454(B60e5c6bd58001740003449e91216454Request b60e5c6bd58001740003449e91216454Request);
+        partial void FormatSearchDatasets(SearchDatasetsRequest searchDatasetsRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="b60e5c6bd58001740003449e91216454Request"></param>
+        /// <param name="searchDatasetsRequest"></param>
         /// <returns></returns>
-        private void ValidateB60e5c6bd58001740003449e91216454(B60e5c6bd58001740003449e91216454Request b60e5c6bd58001740003449e91216454Request)
+        private void ValidateSearchDatasets(SearchDatasetsRequest searchDatasetsRequest)
         {
-            if (b60e5c6bd58001740003449e91216454Request == null)
-                throw new ArgumentNullException(nameof(b60e5c6bd58001740003449e91216454Request));
+            if (searchDatasetsRequest == null)
+                throw new ArgumentNullException(nameof(searchDatasetsRequest));
         }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="b60e5c6bd58001740003449e91216454Request"></param>
-        private void AfterB60e5c6bd58001740003449e91216454DefaultImplementation(IB60e5c6bd58001740003449e91216454ApiResponse apiResponseLocalVar, B60e5c6bd58001740003449e91216454Request b60e5c6bd58001740003449e91216454Request)
+        /// <param name="searchDatasetsRequest"></param>
+        private void AfterSearchDatasetsDefaultImplementation(ISearchDatasetsApiResponse apiResponseLocalVar, SearchDatasetsRequest searchDatasetsRequest)
         {
             bool suppressDefaultLog = false;
-            AfterB60e5c6bd58001740003449e91216454(ref suppressDefaultLog, apiResponseLocalVar, b60e5c6bd58001740003449e91216454Request);
+            AfterSearchDatasets(ref suppressDefaultLog, apiResponseLocalVar, searchDatasetsRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -172,8 +172,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="b60e5c6bd58001740003449e91216454Request"></param>
-        partial void AfterB60e5c6bd58001740003449e91216454(ref bool suppressDefaultLog, IB60e5c6bd58001740003449e91216454ApiResponse apiResponseLocalVar, B60e5c6bd58001740003449e91216454Request b60e5c6bd58001740003449e91216454Request);
+        /// <param name="searchDatasetsRequest"></param>
+        partial void AfterSearchDatasets(ref bool suppressDefaultLog, ISearchDatasetsApiResponse apiResponseLocalVar, SearchDatasetsRequest searchDatasetsRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -181,11 +181,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="b60e5c6bd58001740003449e91216454Request"></param>
-        private void OnErrorB60e5c6bd58001740003449e91216454DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, B60e5c6bd58001740003449e91216454Request b60e5c6bd58001740003449e91216454Request)
+        /// <param name="searchDatasetsRequest"></param>
+        private void OnErrorSearchDatasetsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, SearchDatasetsRequest searchDatasetsRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorB60e5c6bd58001740003449e91216454(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, b60e5c6bd58001740003449e91216454Request);
+            OnErrorSearchDatasets(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, searchDatasetsRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -197,20 +197,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="b60e5c6bd58001740003449e91216454Request"></param>
-        partial void OnErrorB60e5c6bd58001740003449e91216454(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, B60e5c6bd58001740003449e91216454Request b60e5c6bd58001740003449e91216454Request);
+        /// <param name="searchDatasetsRequest"></param>
+        partial void OnErrorSearchDatasets(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, SearchDatasetsRequest searchDatasetsRequest);
 
         /// <summary>
         /// Search@datasets Returns gateway datasets related to the provided query term(s)
         /// </summary>
-        /// <param name="b60e5c6bd58001740003449e91216454Request">Submit search query</param>
+        /// <param name="searchDatasetsRequest">Submit search query</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB60e5c6bd58001740003449e91216454ApiResponse"/>&gt;</returns>
-        public async Task<IB60e5c6bd58001740003449e91216454ApiResponse?> B60e5c6bd58001740003449e91216454OrDefaultAsync(B60e5c6bd58001740003449e91216454Request b60e5c6bd58001740003449e91216454Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchDatasetsApiResponse"/>&gt;</returns>
+        public async Task<ISearchDatasetsApiResponse?> SearchDatasetsOrDefaultAsync(SearchDatasetsRequest searchDatasetsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await B60e5c6bd58001740003449e91216454Async(b60e5c6bd58001740003449e91216454Request, cancellationToken).ConfigureAwait(false);
+                return await SearchDatasetsAsync(searchDatasetsRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -222,18 +222,18 @@ namespace GatewayApiSdk.Api
         /// Search@datasets Returns gateway datasets related to the provided query term(s)
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="b60e5c6bd58001740003449e91216454Request">Submit search query</param>
+        /// <param name="searchDatasetsRequest">Submit search query</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB60e5c6bd58001740003449e91216454ApiResponse"/>&gt;</returns>
-        public async Task<IB60e5c6bd58001740003449e91216454ApiResponse> B60e5c6bd58001740003449e91216454Async(B60e5c6bd58001740003449e91216454Request b60e5c6bd58001740003449e91216454Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchDatasetsApiResponse"/>&gt;</returns>
+        public async Task<ISearchDatasetsApiResponse> SearchDatasetsAsync(SearchDatasetsRequest searchDatasetsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateB60e5c6bd58001740003449e91216454(b60e5c6bd58001740003449e91216454Request);
+                ValidateSearchDatasets(searchDatasetsRequest);
 
-                FormatB60e5c6bd58001740003449e91216454(b60e5c6bd58001740003449e91216454Request);
+                FormatSearchDatasets(searchDatasetsRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -244,9 +244,9 @@ namespace GatewayApiSdk.Api
                         ? "/api/v1/search/datasets"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/search/datasets");
 
-                    httpRequestMessageLocalVar.Content = (b60e5c6bd58001740003449e91216454Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (searchDatasetsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(b60e5c6bd58001740003449e91216454Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(searchDatasetsRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -281,7 +281,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        B60e5c6bd58001740003449e91216454ApiResponse apiResponseLocalVar;
+                        SearchDatasetsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -292,9 +292,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterB60e5c6bd58001740003449e91216454DefaultImplementation(apiResponseLocalVar, b60e5c6bd58001740003449e91216454Request);
+                        AfterSearchDatasetsDefaultImplementation(apiResponseLocalVar, searchDatasetsRequest);
 
-                        Events.ExecuteOnB60e5c6bd58001740003449e91216454(apiResponseLocalVar);
+                        Events.ExecuteOnSearchDatasets(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -306,16 +306,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorB60e5c6bd58001740003449e91216454DefaultImplementation(e, "/api/v1/search/datasets", uriBuilderLocalVar.Path, b60e5c6bd58001740003449e91216454Request);
-                Events.ExecuteOnErrorB60e5c6bd58001740003449e91216454(e);
+                OnErrorSearchDatasetsDefaultImplementation(e, "/api/v1/search/datasets", uriBuilderLocalVar.Path, searchDatasetsRequest);
+                Events.ExecuteOnErrorSearchDatasets(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="B60e5c6bd58001740003449e91216454ApiResponse"/>
+        /// The <see cref="SearchDatasetsApiResponse"/>
         /// </summary>
-        public partial class B60e5c6bd58001740003449e91216454ApiResponse : GatewayApiSdk.Client.ApiResponse, IB60e5c6bd58001740003449e91216454ApiResponse
+        public partial class SearchDatasetsApiResponse : GatewayApiSdk.Client.ApiResponse, ISearchDatasetsApiResponse
         {
             /// <summary>
             /// The logger
@@ -323,7 +323,7 @@ namespace GatewayApiSdk.Api
             public ILogger<SearchDatasetsApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="B60e5c6bd58001740003449e91216454ApiResponse"/>
+            /// The <see cref="SearchDatasetsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -332,14 +332,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public B60e5c6bd58001740003449e91216454ApiResponse(ILogger<SearchDatasetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public SearchDatasetsApiResponse(ILogger<SearchDatasetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="B60e5c6bd58001740003449e91216454ApiResponse"/>
+            /// The <see cref="SearchDatasetsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -348,7 +348,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public B60e5c6bd58001740003449e91216454ApiResponse(ILogger<SearchDatasetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public SearchDatasetsApiResponse(ILogger<SearchDatasetsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -366,11 +366,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.B60e5c6bd58001740003449e91216454200Response? Ok()
+            public GatewayApiSdk.Model.SearchDatasets200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.B60e5c6bd58001740003449e91216454200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.SearchDatasets200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -379,7 +379,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.B60e5c6bd58001740003449e91216454200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.SearchDatasets200Response? result)
             {
                 result = null;
 

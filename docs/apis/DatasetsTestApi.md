@@ -8,7 +8,7 @@ All URIs are relative to *http://localhost*
 
 <a id="datasetstest"></a>
 # **DatasetsTest**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response DatasetsTest (DatasetsTestRequest datasetsTestRequest)
+> CreateCategories200Response DatasetsTest (DatasetsTestRequest datasetsTestRequest)
 
 DatasetController@datasetTest
 
@@ -23,7 +23,7 @@ Datasets test
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 

@@ -45,10 +45,10 @@ namespace GatewayApiSdk.Api
         /// Creates a new DataCustodianNetwork
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request">DataCustodianNetwork definition</param>
+        /// <param name="createDataProviderCollRequest">DataCustodianNetwork definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAbbd5469b6946b3822b4d156b522b03bApiResponse"/>&gt;</returns>
-        Task<IAbbd5469b6946b3822b4d156b522b03bApiResponse> Abbd5469b6946b3822b4d156b522b03bAsync(Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateDataCustodianNetworkApiResponse"/>&gt;</returns>
+        Task<ICreateDataCustodianNetworkApiResponse> CreateDataCustodianNetworkAsync(CreateDataProviderCollRequest createDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataCustodianNetworks@store
@@ -56,104 +56,10 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Creates a new DataCustodianNetwork
         /// </remarks>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request">DataCustodianNetwork definition</param>
+        /// <param name="createDataProviderCollRequest">DataCustodianNetwork definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAbbd5469b6946b3822b4d156b522b03bApiResponse"/>?&gt;</returns>
-        Task<IAbbd5469b6946b3822b4d156b522b03bApiResponse?> Abbd5469b6946b3822b4d156b522b03bOrDefaultAsync(Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataCustodianNetworks@showSummary
-        /// </summary>
-        /// <remarks>
-        /// Return a single DataCustodianNetwork - summary of entities
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataCustodianNetwork ID - summary</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB42015102cb75735f63c91ed0c89aadcApiResponse"/>&gt;</returns>
-        Task<IB42015102cb75735f63c91ed0c89aadcApiResponse> B42015102cb75735f63c91ed0c89aadcAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataCustodianNetworks@showSummary
-        /// </summary>
-        /// <remarks>
-        /// Return a single DataCustodianNetwork - summary of entities
-        /// </remarks>
-        /// <param name="id">DataCustodianNetwork ID - summary</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB42015102cb75735f63c91ed0c89aadcApiResponse"/>?&gt;</returns>
-        Task<IB42015102cb75735f63c91ed0c89aadcApiResponse?> B42015102cb75735f63c91ed0c89aadcOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataCustodianNetworks@show
-        /// </summary>
-        /// <remarks>
-        /// Return a single DataCustodianNetwork
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataCustodianNetwork ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC7827b344f35440af530383c74573c6fApiResponse"/>&gt;</returns>
-        Task<IC7827b344f35440af530383c74573c6fApiResponse> C7827b344f35440af530383c74573c6fAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataCustodianNetworks@show
-        /// </summary>
-        /// <remarks>
-        /// Return a single DataCustodianNetwork
-        /// </remarks>
-        /// <param name="id">DataCustodianNetwork ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC7827b344f35440af530383c74573c6fApiResponse"/>?&gt;</returns>
-        Task<IC7827b344f35440af530383c74573c6fApiResponse?> C7827b344f35440af530383c74573c6fOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataCustodianNetworks@edit
-        /// </summary>
-        /// <remarks>
-        /// Edit a DataCustodianNetwork
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataCustodianNetwork ID</param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request">DataCustodianNetwork definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall0a51cc2388e3015851122c32c548b07eApiResponse"/>&gt;</returns>
-        Task<ICall0a51cc2388e3015851122c32c548b07eApiResponse> Call0a51cc2388e3015851122c32c548b07eAsync(int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataCustodianNetworks@edit
-        /// </summary>
-        /// <remarks>
-        /// Edit a DataCustodianNetwork
-        /// </remarks>
-        /// <param name="id">DataCustodianNetwork ID</param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request">DataCustodianNetwork definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall0a51cc2388e3015851122c32c548b07eApiResponse"/>?&gt;</returns>
-        Task<ICall0a51cc2388e3015851122c32c548b07eApiResponse?> Call0a51cc2388e3015851122c32c548b07eOrDefaultAsync(int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataCustodianNetworks@showDatasetsSummary
-        /// </summary>
-        /// <remarks>
-        /// Return a single DataCustodianNetwork - summary of datasets
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataCustodianNetwork ID - summary</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3b69b09a466561df872e104a19a2ad65ApiResponse"/>&gt;</returns>
-        Task<ICall3b69b09a466561df872e104a19a2ad65ApiResponse> Call3b69b09a466561df872e104a19a2ad65Async(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataCustodianNetworks@showDatasetsSummary
-        /// </summary>
-        /// <remarks>
-        /// Return a single DataCustodianNetwork - summary of datasets
-        /// </remarks>
-        /// <param name="id">DataCustodianNetwork ID - summary</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3b69b09a466561df872e104a19a2ad65ApiResponse"/>?&gt;</returns>
-        Task<ICall3b69b09a466561df872e104a19a2ad65ApiResponse?> Call3b69b09a466561df872e104a19a2ad65OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateDataCustodianNetworkApiResponse"/>?&gt;</returns>
+        Task<ICreateDataCustodianNetworkApiResponse?> CreateDataCustodianNetworkOrDefaultAsync(CreateDataProviderCollRequest createDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataCustodianNetworks@destroy
@@ -164,8 +70,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">DataCustodianNetwork ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall5e9eca031c07d46c2fa4007e916bc5e1ApiResponse"/>&gt;</returns>
-        Task<ICall5e9eca031c07d46c2fa4007e916bc5e1ApiResponse> Call5e9eca031c07d46c2fa4007e916bc5e1Async(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteDataCustodianNetworkApiResponse"/>&gt;</returns>
+        Task<IDeleteDataCustodianNetworkApiResponse> DeleteDataCustodianNetworkAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataCustodianNetworks@destroy
@@ -175,54 +81,56 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="id">DataCustodianNetwork ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall5e9eca031c07d46c2fa4007e916bc5e1ApiResponse"/>?&gt;</returns>
-        Task<ICall5e9eca031c07d46c2fa4007e916bc5e1ApiResponse?> Call5e9eca031c07d46c2fa4007e916bc5e1OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteDataCustodianNetworkApiResponse"/>?&gt;</returns>
+        Task<IDeleteDataCustodianNetworkApiResponse?> DeleteDataCustodianNetworkOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// DataCustodianNetworks@index
+        /// DataCustodianNetworks@edit
         /// </summary>
         /// <remarks>
-        /// Returns a list of DataCustodianNetworks enabled on the system
+        /// Edit a DataCustodianNetwork
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="perPage">per page (optional)</param>
+        /// <param name="id">DataCustodianNetwork ID</param>
+        /// <param name="editDataProviderCollRequest">DataCustodianNetwork definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall71e5fbca2b5aa8a0160d621feb662ecbApiResponse"/>&gt;</returns>
-        Task<ICall71e5fbca2b5aa8a0160d621feb662ecbApiResponse> Call71e5fbca2b5aa8a0160d621feb662ecbAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditDataCustodianNetworkApiResponse"/>&gt;</returns>
+        Task<IEditDataCustodianNetworkApiResponse> EditDataCustodianNetworkAsync(int id, EditDataProviderCollRequest editDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// DataCustodianNetworks@index
+        /// DataCustodianNetworks@edit
         /// </summary>
         /// <remarks>
-        /// Returns a list of DataCustodianNetworks enabled on the system
+        /// Edit a DataCustodianNetwork
         /// </remarks>
-        /// <param name="perPage">per page (optional)</param>
+        /// <param name="id">DataCustodianNetwork ID</param>
+        /// <param name="editDataProviderCollRequest">DataCustodianNetwork definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall71e5fbca2b5aa8a0160d621feb662ecbApiResponse"/>?&gt;</returns>
-        Task<ICall71e5fbca2b5aa8a0160d621feb662ecbApiResponse?> Call71e5fbca2b5aa8a0160d621feb662ecbOrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditDataCustodianNetworkApiResponse"/>?&gt;</returns>
+        Task<IEditDataCustodianNetworkApiResponse?> EditDataCustodianNetworkOrDefaultAsync(int id, EditDataProviderCollRequest editDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// DataCustodianNetworks@showInfoSummary
+        /// DataCustodianNetworks@show
         /// </summary>
         /// <remarks>
-        /// Return a single DataCustodianNetwork - basic information
+        /// Return a single DataCustodianNetwork
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="id">DataCustodianNetwork ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse"/>&gt;</returns>
-        Task<ICall9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse> Call9ce0c491d34067e8cf15eb9e9b5ec147Async(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkApiResponse"/>&gt;</returns>
+        Task<IFetchDataCustodianNetworkApiResponse> FetchDataCustodianNetworkAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// DataCustodianNetworks@showInfoSummary
+        /// DataCustodianNetworks@show
         /// </summary>
         /// <remarks>
-        /// Return a single DataCustodianNetwork - basic information
+        /// Return a single DataCustodianNetwork
         /// </remarks>
-        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="id">DataCustodianNetwork ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse"/>?&gt;</returns>
-        Task<ICall9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse?> Call9ce0c491d34067e8cf15eb9e9b5ec147OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkApiResponse"/>?&gt;</returns>
+        Task<IFetchDataCustodianNetworkApiResponse?> FetchDataCustodianNetworkOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataCustodianNetworks@showCustodiansSummary
@@ -233,8 +141,8 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">DataCustodianNetwork ID - summary</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICed8add57941554cde6a5fc53f6555e5ApiResponse"/>&gt;</returns>
-        Task<ICed8add57941554cde6a5fc53f6555e5ApiResponse> Ced8add57941554cde6a5fc53f6555e5Async(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkCustodiansSummaryApiResponse"/>&gt;</returns>
+        Task<IFetchDataCustodianNetworkCustodiansSummaryApiResponse> FetchDataCustodianNetworkCustodiansSummaryAsync(int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataCustodianNetworks@showCustodiansSummary
@@ -244,8 +152,100 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="id">DataCustodianNetwork ID - summary</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICed8add57941554cde6a5fc53f6555e5ApiResponse"/>?&gt;</returns>
-        Task<ICed8add57941554cde6a5fc53f6555e5ApiResponse?> Ced8add57941554cde6a5fc53f6555e5OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkCustodiansSummaryApiResponse"/>?&gt;</returns>
+        Task<IFetchDataCustodianNetworkCustodiansSummaryApiResponse?> FetchDataCustodianNetworkCustodiansSummaryOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// DataCustodianNetworks@showDatasetsSummary
+        /// </summary>
+        /// <remarks>
+        /// Return a single DataCustodianNetwork - summary of datasets
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkDatasetsSummaryApiResponse"/>&gt;</returns>
+        Task<IFetchDataCustodianNetworkDatasetsSummaryApiResponse> FetchDataCustodianNetworkDatasetsSummaryAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// DataCustodianNetworks@showDatasetsSummary
+        /// </summary>
+        /// <remarks>
+        /// Return a single DataCustodianNetwork - summary of datasets
+        /// </remarks>
+        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkDatasetsSummaryApiResponse"/>?&gt;</returns>
+        Task<IFetchDataCustodianNetworkDatasetsSummaryApiResponse?> FetchDataCustodianNetworkDatasetsSummaryOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// DataCustodianNetworks@showSummary
+        /// </summary>
+        /// <remarks>
+        /// Return a single DataCustodianNetwork - summary of entities
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkEntitiesSummaryApiResponse"/>&gt;</returns>
+        Task<IFetchDataCustodianNetworkEntitiesSummaryApiResponse> FetchDataCustodianNetworkEntitiesSummaryAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// DataCustodianNetworks@showSummary
+        /// </summary>
+        /// <remarks>
+        /// Return a single DataCustodianNetwork - summary of entities
+        /// </remarks>
+        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkEntitiesSummaryApiResponse"/>?&gt;</returns>
+        Task<IFetchDataCustodianNetworkEntitiesSummaryApiResponse?> FetchDataCustodianNetworkEntitiesSummaryOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// DataCustodianNetworks@showInfoSummary
+        /// </summary>
+        /// <remarks>
+        /// Return a single DataCustodianNetwork - basic information
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkInfoApiResponse"/>&gt;</returns>
+        Task<IFetchDataCustodianNetworkInfoApiResponse> FetchDataCustodianNetworkInfoAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// DataCustodianNetworks@showInfoSummary
+        /// </summary>
+        /// <remarks>
+        /// Return a single DataCustodianNetwork - basic information
+        /// </remarks>
+        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkInfoApiResponse"/>?&gt;</returns>
+        Task<IFetchDataCustodianNetworkInfoApiResponse?> FetchDataCustodianNetworkInfoOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// DataCustodianNetworks@index
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of DataCustodianNetworks enabled on the system
+        /// </remarks>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="perPage">per page (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworksApiResponse"/>&gt;</returns>
+        Task<IFetchDataCustodianNetworksApiResponse> FetchDataCustodianNetworksAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// DataCustodianNetworks@index
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of DataCustodianNetworks enabled on the system
+        /// </remarks>
+        /// <param name="perPage">per page (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworksApiResponse"/>?&gt;</returns>
+        Task<IFetchDataCustodianNetworksApiResponse?> FetchDataCustodianNetworksOrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataCustodianNetworks@update
@@ -255,10 +255,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">DataCustodianNetworks ID</param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request">DataCustodianNetwork definition</param>
+        /// <param name="updateDataProviderCollRequest">DataCustodianNetwork definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDdc2f5ebf51037175006c6017e20d358ApiResponse"/>&gt;</returns>
-        Task<IDdc2f5ebf51037175006c6017e20d358ApiResponse> Ddc2f5ebf51037175006c6017e20d358Async(int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateDataCustodianNetworkApiResponse"/>&gt;</returns>
+        Task<IUpdateDataCustodianNetworkApiResponse> UpdateDataCustodianNetworkAsync(int id, UpdateDataProviderCollRequest updateDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataCustodianNetworks@update
@@ -267,16 +267,16 @@ namespace GatewayApiSdk.Api
         /// Update a DataCustodianNetwork
         /// </remarks>
         /// <param name="id">DataCustodianNetworks ID</param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request">DataCustodianNetwork definition</param>
+        /// <param name="updateDataProviderCollRequest">DataCustodianNetwork definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDdc2f5ebf51037175006c6017e20d358ApiResponse"/>?&gt;</returns>
-        Task<IDdc2f5ebf51037175006c6017e20d358ApiResponse?> Ddc2f5ebf51037175006c6017e20d358OrDefaultAsync(int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateDataCustodianNetworkApiResponse"/>?&gt;</returns>
+        Task<IUpdateDataCustodianNetworkApiResponse?> UpdateDataCustodianNetworkOrDefaultAsync(int id, UpdateDataProviderCollRequest updateDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="IAbbd5469b6946b3822b4d156b522b03bApiResponse"/>
+    /// The <see cref="ICreateDataCustodianNetworkApiResponse"/>
     /// </summary>
-    public interface IAbbd5469b6946b3822b4d156b522b03bApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface ICreateDataCustodianNetworkApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CreateCategories200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -292,45 +292,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IB42015102cb75735f63c91ed0c89aadcApiResponse"/>
+    /// The <see cref="IDeleteDataCustodianNetworkApiResponse"/>
     /// </summary>
-    public interface IB42015102cb75735f63c91ed0c89aadcApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.B42015102cb75735f63c91ed0c89aadc200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IC7827b344f35440af530383c74573c6fApiResponse"/>
-    /// </summary>
-    public interface IC7827b344f35440af530383c74573c6fApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.C7827b344f35440af530383c74573c6f200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ICall0a51cc2388e3015851122c32c548b07eApiResponse"/>
-    /// </summary>
-    public interface ICall0a51cc2388e3015851122c32c548b07eApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.Ddc2f5ebf51037175006c6017e20d358200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IDeleteDataCustodianNetworkApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -352,27 +316,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall3b69b09a466561df872e104a19a2ad65ApiResponse"/>
+    /// The <see cref="IEditDataCustodianNetworkApiResponse"/>
     /// </summary>
-    public interface ICall3b69b09a466561df872e104a19a2ad65ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model3b69b09a466561df872e104a19a2ad65200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ICall5e9eca031c07d46c2fa4007e916bc5e1ApiResponse"/>
-    /// </summary>
-    public interface ICall5e9eca031c07d46c2fa4007e916bc5e1ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IEditDataCustodianNetworkApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateDataCustodianNetwork200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -394,21 +340,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall71e5fbca2b5aa8a0160d621feb662ecbApiResponse"/>
+    /// The <see cref="IFetchDataCustodianNetworkApiResponse"/>
     /// </summary>
-    public interface ICall71e5fbca2b5aa8a0160d621feb662ecbApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model71e5fbca2b5aa8a0160d621feb662ecb200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="ICall9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse"/>
-    /// </summary>
-    public interface ICall9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model9ce0c491d34067e8cf15eb9e9b5ec147200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
+    public interface IFetchDataCustodianNetworkApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchDataCustodianNetwork200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -424,9 +358,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICed8add57941554cde6a5fc53f6555e5ApiResponse"/>
+    /// The <see cref="IFetchDataCustodianNetworkCustodiansSummaryApiResponse"/>
     /// </summary>
-    public interface ICed8add57941554cde6a5fc53f6555e5ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Ced8add57941554cde6a5fc53f6555e5200Response?>, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>
+    public interface IFetchDataCustodianNetworkCustodiansSummaryApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchDataCustodianNetworkCustodiansSummary200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -442,9 +376,75 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IDdc2f5ebf51037175006c6017e20d358ApiResponse"/>
+    /// The <see cref="IFetchDataCustodianNetworkDatasetsSummaryApiResponse"/>
     /// </summary>
-    public interface IDdc2f5ebf51037175006c6017e20d358ApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.AliasControllerShow404Response?>, IOk<GatewayApiSdk.Model.Ddc2f5ebf51037175006c6017e20d358200Response?>, IInternalServerError<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response?>
+    public interface IFetchDataCustodianNetworkDatasetsSummaryApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchDataCustodianNetworkDatasetsSummary200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 404 NotFound
+        /// </summary>
+        /// <returns></returns>
+        bool IsNotFound { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchDataCustodianNetworkEntitiesSummaryApiResponse"/>
+    /// </summary>
+    public interface IFetchDataCustodianNetworkEntitiesSummaryApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchDataCustodianNetworkEntitiesSummary200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 404 NotFound
+        /// </summary>
+        /// <returns></returns>
+        bool IsNotFound { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchDataCustodianNetworkInfoApiResponse"/>
+    /// </summary>
+    public interface IFetchDataCustodianNetworkInfoApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchDataCustodianNetworkInfo200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 404 NotFound
+        /// </summary>
+        /// <returns></returns>
+        bool IsNotFound { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IFetchDataCustodianNetworksApiResponse"/>
+    /// </summary>
+    public interface IFetchDataCustodianNetworksApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchDataCustodianNetworks200Response?>
+    {
+        /// <summary>
+        /// Returns true if the response is 200 Ok
+        /// </summary>
+        /// <returns></returns>
+        bool IsOk { get; }
+    }
+
+    /// <summary>
+    /// The <see cref="IUpdateDataCustodianNetworkApiResponse"/>
+    /// </summary>
+    public interface IUpdateDataCustodianNetworkApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateDataCustodianNetwork200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -473,201 +473,201 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnAbbd5469b6946b3822b4d156b522b03b;
+        public event EventHandler<ApiResponseEventArgs>? OnCreateDataCustodianNetwork;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorAbbd5469b6946b3822b4d156b522b03b;
+        public event EventHandler<ExceptionEventArgs>? OnErrorCreateDataCustodianNetwork;
 
-        internal void ExecuteOnAbbd5469b6946b3822b4d156b522b03b(DataCustodianNetworksApi.Abbd5469b6946b3822b4d156b522b03bApiResponse apiResponse)
+        internal void ExecuteOnCreateDataCustodianNetwork(DataCustodianNetworksApi.CreateDataCustodianNetworkApiResponse apiResponse)
         {
-            OnAbbd5469b6946b3822b4d156b522b03b?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnCreateDataCustodianNetwork?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorAbbd5469b6946b3822b4d156b522b03b(Exception exception)
+        internal void ExecuteOnErrorCreateDataCustodianNetwork(Exception exception)
         {
-            OnErrorAbbd5469b6946b3822b4d156b522b03b?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorCreateDataCustodianNetwork?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnB42015102cb75735f63c91ed0c89aadc;
+        public event EventHandler<ApiResponseEventArgs>? OnDeleteDataCustodianNetwork;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorB42015102cb75735f63c91ed0c89aadc;
+        public event EventHandler<ExceptionEventArgs>? OnErrorDeleteDataCustodianNetwork;
 
-        internal void ExecuteOnB42015102cb75735f63c91ed0c89aadc(DataCustodianNetworksApi.B42015102cb75735f63c91ed0c89aadcApiResponse apiResponse)
+        internal void ExecuteOnDeleteDataCustodianNetwork(DataCustodianNetworksApi.DeleteDataCustodianNetworkApiResponse apiResponse)
         {
-            OnB42015102cb75735f63c91ed0c89aadc?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnDeleteDataCustodianNetwork?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorB42015102cb75735f63c91ed0c89aadc(Exception exception)
+        internal void ExecuteOnErrorDeleteDataCustodianNetwork(Exception exception)
         {
-            OnErrorB42015102cb75735f63c91ed0c89aadc?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorDeleteDataCustodianNetwork?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnC7827b344f35440af530383c74573c6f;
+        public event EventHandler<ApiResponseEventArgs>? OnEditDataCustodianNetwork;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorC7827b344f35440af530383c74573c6f;
+        public event EventHandler<ExceptionEventArgs>? OnErrorEditDataCustodianNetwork;
 
-        internal void ExecuteOnC7827b344f35440af530383c74573c6f(DataCustodianNetworksApi.C7827b344f35440af530383c74573c6fApiResponse apiResponse)
+        internal void ExecuteOnEditDataCustodianNetwork(DataCustodianNetworksApi.EditDataCustodianNetworkApiResponse apiResponse)
         {
-            OnC7827b344f35440af530383c74573c6f?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnEditDataCustodianNetwork?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorC7827b344f35440af530383c74573c6f(Exception exception)
+        internal void ExecuteOnErrorEditDataCustodianNetwork(Exception exception)
         {
-            OnErrorC7827b344f35440af530383c74573c6f?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorEditDataCustodianNetwork?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall0a51cc2388e3015851122c32c548b07e;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchDataCustodianNetwork;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall0a51cc2388e3015851122c32c548b07e;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchDataCustodianNetwork;
 
-        internal void ExecuteOnCall0a51cc2388e3015851122c32c548b07e(DataCustodianNetworksApi.Call0a51cc2388e3015851122c32c548b07eApiResponse apiResponse)
+        internal void ExecuteOnFetchDataCustodianNetwork(DataCustodianNetworksApi.FetchDataCustodianNetworkApiResponse apiResponse)
         {
-            OnCall0a51cc2388e3015851122c32c548b07e?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchDataCustodianNetwork?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall0a51cc2388e3015851122c32c548b07e(Exception exception)
+        internal void ExecuteOnErrorFetchDataCustodianNetwork(Exception exception)
         {
-            OnErrorCall0a51cc2388e3015851122c32c548b07e?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchDataCustodianNetwork?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall3b69b09a466561df872e104a19a2ad65;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchDataCustodianNetworkCustodiansSummary;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall3b69b09a466561df872e104a19a2ad65;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchDataCustodianNetworkCustodiansSummary;
 
-        internal void ExecuteOnCall3b69b09a466561df872e104a19a2ad65(DataCustodianNetworksApi.Call3b69b09a466561df872e104a19a2ad65ApiResponse apiResponse)
+        internal void ExecuteOnFetchDataCustodianNetworkCustodiansSummary(DataCustodianNetworksApi.FetchDataCustodianNetworkCustodiansSummaryApiResponse apiResponse)
         {
-            OnCall3b69b09a466561df872e104a19a2ad65?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchDataCustodianNetworkCustodiansSummary?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall3b69b09a466561df872e104a19a2ad65(Exception exception)
+        internal void ExecuteOnErrorFetchDataCustodianNetworkCustodiansSummary(Exception exception)
         {
-            OnErrorCall3b69b09a466561df872e104a19a2ad65?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchDataCustodianNetworkCustodiansSummary?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall5e9eca031c07d46c2fa4007e916bc5e1;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchDataCustodianNetworkDatasetsSummary;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall5e9eca031c07d46c2fa4007e916bc5e1;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchDataCustodianNetworkDatasetsSummary;
 
-        internal void ExecuteOnCall5e9eca031c07d46c2fa4007e916bc5e1(DataCustodianNetworksApi.Call5e9eca031c07d46c2fa4007e916bc5e1ApiResponse apiResponse)
+        internal void ExecuteOnFetchDataCustodianNetworkDatasetsSummary(DataCustodianNetworksApi.FetchDataCustodianNetworkDatasetsSummaryApiResponse apiResponse)
         {
-            OnCall5e9eca031c07d46c2fa4007e916bc5e1?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchDataCustodianNetworkDatasetsSummary?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall5e9eca031c07d46c2fa4007e916bc5e1(Exception exception)
+        internal void ExecuteOnErrorFetchDataCustodianNetworkDatasetsSummary(Exception exception)
         {
-            OnErrorCall5e9eca031c07d46c2fa4007e916bc5e1?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchDataCustodianNetworkDatasetsSummary?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall71e5fbca2b5aa8a0160d621feb662ecb;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchDataCustodianNetworkEntitiesSummary;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall71e5fbca2b5aa8a0160d621feb662ecb;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchDataCustodianNetworkEntitiesSummary;
 
-        internal void ExecuteOnCall71e5fbca2b5aa8a0160d621feb662ecb(DataCustodianNetworksApi.Call71e5fbca2b5aa8a0160d621feb662ecbApiResponse apiResponse)
+        internal void ExecuteOnFetchDataCustodianNetworkEntitiesSummary(DataCustodianNetworksApi.FetchDataCustodianNetworkEntitiesSummaryApiResponse apiResponse)
         {
-            OnCall71e5fbca2b5aa8a0160d621feb662ecb?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchDataCustodianNetworkEntitiesSummary?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall71e5fbca2b5aa8a0160d621feb662ecb(Exception exception)
+        internal void ExecuteOnErrorFetchDataCustodianNetworkEntitiesSummary(Exception exception)
         {
-            OnErrorCall71e5fbca2b5aa8a0160d621feb662ecb?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchDataCustodianNetworkEntitiesSummary?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall9ce0c491d34067e8cf15eb9e9b5ec147;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchDataCustodianNetworkInfo;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall9ce0c491d34067e8cf15eb9e9b5ec147;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchDataCustodianNetworkInfo;
 
-        internal void ExecuteOnCall9ce0c491d34067e8cf15eb9e9b5ec147(DataCustodianNetworksApi.Call9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse apiResponse)
+        internal void ExecuteOnFetchDataCustodianNetworkInfo(DataCustodianNetworksApi.FetchDataCustodianNetworkInfoApiResponse apiResponse)
         {
-            OnCall9ce0c491d34067e8cf15eb9e9b5ec147?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchDataCustodianNetworkInfo?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall9ce0c491d34067e8cf15eb9e9b5ec147(Exception exception)
+        internal void ExecuteOnErrorFetchDataCustodianNetworkInfo(Exception exception)
         {
-            OnErrorCall9ce0c491d34067e8cf15eb9e9b5ec147?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchDataCustodianNetworkInfo?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCed8add57941554cde6a5fc53f6555e5;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchDataCustodianNetworks;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCed8add57941554cde6a5fc53f6555e5;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchDataCustodianNetworks;
 
-        internal void ExecuteOnCed8add57941554cde6a5fc53f6555e5(DataCustodianNetworksApi.Ced8add57941554cde6a5fc53f6555e5ApiResponse apiResponse)
+        internal void ExecuteOnFetchDataCustodianNetworks(DataCustodianNetworksApi.FetchDataCustodianNetworksApiResponse apiResponse)
         {
-            OnCed8add57941554cde6a5fc53f6555e5?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchDataCustodianNetworks?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCed8add57941554cde6a5fc53f6555e5(Exception exception)
+        internal void ExecuteOnErrorFetchDataCustodianNetworks(Exception exception)
         {
-            OnErrorCed8add57941554cde6a5fc53f6555e5?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchDataCustodianNetworks?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnDdc2f5ebf51037175006c6017e20d358;
+        public event EventHandler<ApiResponseEventArgs>? OnUpdateDataCustodianNetwork;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorDdc2f5ebf51037175006c6017e20d358;
+        public event EventHandler<ExceptionEventArgs>? OnErrorUpdateDataCustodianNetwork;
 
-        internal void ExecuteOnDdc2f5ebf51037175006c6017e20d358(DataCustodianNetworksApi.Ddc2f5ebf51037175006c6017e20d358ApiResponse apiResponse)
+        internal void ExecuteOnUpdateDataCustodianNetwork(DataCustodianNetworksApi.UpdateDataCustodianNetworkApiResponse apiResponse)
         {
-            OnDdc2f5ebf51037175006c6017e20d358?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnUpdateDataCustodianNetwork?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorDdc2f5ebf51037175006c6017e20d358(Exception exception)
+        internal void ExecuteOnErrorUpdateDataCustodianNetwork(Exception exception)
         {
-            OnErrorDdc2f5ebf51037175006c6017e20d358?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorUpdateDataCustodianNetwork?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -712,28 +712,28 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatAbbd5469b6946b3822b4d156b522b03b(Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request);
+        partial void FormatCreateDataCustodianNetwork(CreateDataProviderCollRequest createDataProviderCollRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request"></param>
+        /// <param name="createDataProviderCollRequest"></param>
         /// <returns></returns>
-        private void ValidateAbbd5469b6946b3822b4d156b522b03b(Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request)
+        private void ValidateCreateDataCustodianNetwork(CreateDataProviderCollRequest createDataProviderCollRequest)
         {
-            if (model02ada355a680c816624e98ae028dc8b6Request == null)
-                throw new ArgumentNullException(nameof(model02ada355a680c816624e98ae028dc8b6Request));
+            if (createDataProviderCollRequest == null)
+                throw new ArgumentNullException(nameof(createDataProviderCollRequest));
         }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request"></param>
-        private void AfterAbbd5469b6946b3822b4d156b522b03bDefaultImplementation(IAbbd5469b6946b3822b4d156b522b03bApiResponse apiResponseLocalVar, Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request)
+        /// <param name="createDataProviderCollRequest"></param>
+        private void AfterCreateDataCustodianNetworkDefaultImplementation(ICreateDataCustodianNetworkApiResponse apiResponseLocalVar, CreateDataProviderCollRequest createDataProviderCollRequest)
         {
             bool suppressDefaultLog = false;
-            AfterAbbd5469b6946b3822b4d156b522b03b(ref suppressDefaultLog, apiResponseLocalVar, model02ada355a680c816624e98ae028dc8b6Request);
+            AfterCreateDataCustodianNetwork(ref suppressDefaultLog, apiResponseLocalVar, createDataProviderCollRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -743,8 +743,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request"></param>
-        partial void AfterAbbd5469b6946b3822b4d156b522b03b(ref bool suppressDefaultLog, IAbbd5469b6946b3822b4d156b522b03bApiResponse apiResponseLocalVar, Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request);
+        /// <param name="createDataProviderCollRequest"></param>
+        partial void AfterCreateDataCustodianNetwork(ref bool suppressDefaultLog, ICreateDataCustodianNetworkApiResponse apiResponseLocalVar, CreateDataProviderCollRequest createDataProviderCollRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -752,11 +752,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request"></param>
-        private void OnErrorAbbd5469b6946b3822b4d156b522b03bDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request)
+        /// <param name="createDataProviderCollRequest"></param>
+        private void OnErrorCreateDataCustodianNetworkDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateDataProviderCollRequest createDataProviderCollRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorAbbd5469b6946b3822b4d156b522b03b(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, model02ada355a680c816624e98ae028dc8b6Request);
+            OnErrorCreateDataCustodianNetwork(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createDataProviderCollRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -768,20 +768,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request"></param>
-        partial void OnErrorAbbd5469b6946b3822b4d156b522b03b(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request);
+        /// <param name="createDataProviderCollRequest"></param>
+        partial void OnErrorCreateDataCustodianNetwork(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateDataProviderCollRequest createDataProviderCollRequest);
 
         /// <summary>
         /// DataCustodianNetworks@store Creates a new DataCustodianNetwork
         /// </summary>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request">DataCustodianNetwork definition</param>
+        /// <param name="createDataProviderCollRequest">DataCustodianNetwork definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAbbd5469b6946b3822b4d156b522b03bApiResponse"/>&gt;</returns>
-        public async Task<IAbbd5469b6946b3822b4d156b522b03bApiResponse?> Abbd5469b6946b3822b4d156b522b03bOrDefaultAsync(Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateDataCustodianNetworkApiResponse"/>&gt;</returns>
+        public async Task<ICreateDataCustodianNetworkApiResponse?> CreateDataCustodianNetworkOrDefaultAsync(CreateDataProviderCollRequest createDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Abbd5469b6946b3822b4d156b522b03bAsync(model02ada355a680c816624e98ae028dc8b6Request, cancellationToken).ConfigureAwait(false);
+                return await CreateDataCustodianNetworkAsync(createDataProviderCollRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -793,18 +793,18 @@ namespace GatewayApiSdk.Api
         /// DataCustodianNetworks@store Creates a new DataCustodianNetwork
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model02ada355a680c816624e98ae028dc8b6Request">DataCustodianNetwork definition</param>
+        /// <param name="createDataProviderCollRequest">DataCustodianNetwork definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IAbbd5469b6946b3822b4d156b522b03bApiResponse"/>&gt;</returns>
-        public async Task<IAbbd5469b6946b3822b4d156b522b03bApiResponse> Abbd5469b6946b3822b4d156b522b03bAsync(Model02ada355a680c816624e98ae028dc8b6Request model02ada355a680c816624e98ae028dc8b6Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateDataCustodianNetworkApiResponse"/>&gt;</returns>
+        public async Task<ICreateDataCustodianNetworkApiResponse> CreateDataCustodianNetworkAsync(CreateDataProviderCollRequest createDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateAbbd5469b6946b3822b4d156b522b03b(model02ada355a680c816624e98ae028dc8b6Request);
+                ValidateCreateDataCustodianNetwork(createDataProviderCollRequest);
 
-                FormatAbbd5469b6946b3822b4d156b522b03b(model02ada355a680c816624e98ae028dc8b6Request);
+                FormatCreateDataCustodianNetwork(createDataProviderCollRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -815,9 +815,9 @@ namespace GatewayApiSdk.Api
                         ? "/api/v2/data_custodian_networks"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/data_custodian_networks");
 
-                    httpRequestMessageLocalVar.Content = (model02ada355a680c816624e98ae028dc8b6Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (createDataProviderCollRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model02ada355a680c816624e98ae028dc8b6Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createDataProviderCollRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -852,7 +852,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Abbd5469b6946b3822b4d156b522b03bApiResponse apiResponseLocalVar;
+                        CreateDataCustodianNetworkApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -863,9 +863,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterAbbd5469b6946b3822b4d156b522b03bDefaultImplementation(apiResponseLocalVar, model02ada355a680c816624e98ae028dc8b6Request);
+                        AfterCreateDataCustodianNetworkDefaultImplementation(apiResponseLocalVar, createDataProviderCollRequest);
 
-                        Events.ExecuteOnAbbd5469b6946b3822b4d156b522b03b(apiResponseLocalVar);
+                        Events.ExecuteOnCreateDataCustodianNetwork(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -877,16 +877,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorAbbd5469b6946b3822b4d156b522b03bDefaultImplementation(e, "/api/v2/data_custodian_networks", uriBuilderLocalVar.Path, model02ada355a680c816624e98ae028dc8b6Request);
-                Events.ExecuteOnErrorAbbd5469b6946b3822b4d156b522b03b(e);
+                OnErrorCreateDataCustodianNetworkDefaultImplementation(e, "/api/v2/data_custodian_networks", uriBuilderLocalVar.Path, createDataProviderCollRequest);
+                Events.ExecuteOnErrorCreateDataCustodianNetwork(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Abbd5469b6946b3822b4d156b522b03bApiResponse"/>
+        /// The <see cref="CreateDataCustodianNetworkApiResponse"/>
         /// </summary>
-        public partial class Abbd5469b6946b3822b4d156b522b03bApiResponse : GatewayApiSdk.Client.ApiResponse, IAbbd5469b6946b3822b4d156b522b03bApiResponse
+        public partial class CreateDataCustodianNetworkApiResponse : GatewayApiSdk.Client.ApiResponse, ICreateDataCustodianNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -894,7 +894,7 @@ namespace GatewayApiSdk.Api
             public ILogger<DataCustodianNetworksApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Abbd5469b6946b3822b4d156b522b03bApiResponse"/>
+            /// The <see cref="CreateDataCustodianNetworkApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -903,14 +903,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Abbd5469b6946b3822b4d156b522b03bApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public CreateDataCustodianNetworkApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Abbd5469b6946b3822b4d156b522b03bApiResponse"/>
+            /// The <see cref="CreateDataCustodianNetworkApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -919,7 +919,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Abbd5469b6946b3822b4d156b522b03bApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public CreateDataCustodianNetworkApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -937,11 +937,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? Ok()
+            public GatewayApiSdk.Model.CreateCategories200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -950,7 +950,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Dd76b8d73b7ea8b4951f03d7c0904c92200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
             {
                 result = null;
 
@@ -975,11 +975,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -988,7 +988,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -1014,17 +1014,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatB42015102cb75735f63c91ed0c89aadc(ref int id);
+        partial void FormatDeleteDataCustodianNetwork(ref int id);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        private void AfterB42015102cb75735f63c91ed0c89aadcDefaultImplementation(IB42015102cb75735f63c91ed0c89aadcApiResponse apiResponseLocalVar, int id)
+        private void AfterDeleteDataCustodianNetworkDefaultImplementation(IDeleteDataCustodianNetworkApiResponse apiResponseLocalVar, int id)
         {
             bool suppressDefaultLog = false;
-            AfterB42015102cb75735f63c91ed0c89aadc(ref suppressDefaultLog, apiResponseLocalVar, id);
+            AfterDeleteDataCustodianNetwork(ref suppressDefaultLog, apiResponseLocalVar, id);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1035,7 +1035,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        partial void AfterB42015102cb75735f63c91ed0c89aadc(ref bool suppressDefaultLog, IB42015102cb75735f63c91ed0c89aadcApiResponse apiResponseLocalVar, int id);
+        partial void AfterDeleteDataCustodianNetwork(ref bool suppressDefaultLog, IDeleteDataCustodianNetworkApiResponse apiResponseLocalVar, int id);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1044,10 +1044,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        private void OnErrorB42015102cb75735f63c91ed0c89aadcDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        private void OnErrorDeleteDataCustodianNetworkDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorB42015102cb75735f63c91ed0c89aadc(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            OnErrorDeleteDataCustodianNetwork(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1060,1197 +1060,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        partial void OnErrorB42015102cb75735f63c91ed0c89aadc(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
-
-        /// <summary>
-        /// DataCustodianNetworks@showSummary Return a single DataCustodianNetwork - summary of entities
-        /// </summary>
-        /// <param name="id">DataCustodianNetwork ID - summary</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB42015102cb75735f63c91ed0c89aadcApiResponse"/>&gt;</returns>
-        public async Task<IB42015102cb75735f63c91ed0c89aadcApiResponse?> B42015102cb75735f63c91ed0c89aadcOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await B42015102cb75735f63c91ed0c89aadcAsync(id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// DataCustodianNetworks@showSummary Return a single DataCustodianNetwork - summary of entities
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataCustodianNetwork ID - summary</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IB42015102cb75735f63c91ed0c89aadcApiResponse"/>&gt;</returns>
-        public async Task<IB42015102cb75735f63c91ed0c89aadcApiResponse> B42015102cb75735f63c91ed0c89aadcAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatB42015102cb75735f63c91ed0c89aadc(ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v2/data_custodian_networks/{id}/entities_summary"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/data_custodian_networks/{id}/entities_summary");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        B42015102cb75735f63c91ed0c89aadcApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/data_custodian_networks/{id}/entities_summary", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterB42015102cb75735f63c91ed0c89aadcDefaultImplementation(apiResponseLocalVar, id);
-
-                        Events.ExecuteOnB42015102cb75735f63c91ed0c89aadc(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorB42015102cb75735f63c91ed0c89aadcDefaultImplementation(e, "/api/v2/data_custodian_networks/{id}/entities_summary", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorB42015102cb75735f63c91ed0c89aadc(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="B42015102cb75735f63c91ed0c89aadcApiResponse"/>
-        /// </summary>
-        public partial class B42015102cb75735f63c91ed0c89aadcApiResponse : GatewayApiSdk.Client.ApiResponse, IB42015102cb75735f63c91ed0c89aadcApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataCustodianNetworksApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="B42015102cb75735f63c91ed0c89aadcApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public B42015102cb75735f63c91ed0c89aadcApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="B42015102cb75735f63c91ed0c89aadcApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public B42015102cb75735f63c91ed0c89aadcApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.B42015102cb75735f63c91ed0c89aadc200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.B42015102cb75735f63c91ed0c89aadc200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.B42015102cb75735f63c91ed0c89aadc200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatC7827b344f35440af530383c74573c6f(ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterC7827b344f35440af530383c74573c6fDefaultImplementation(IC7827b344f35440af530383c74573c6fApiResponse apiResponseLocalVar, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterC7827b344f35440af530383c74573c6f(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterC7827b344f35440af530383c74573c6f(ref bool suppressDefaultLog, IC7827b344f35440af530383c74573c6fApiResponse apiResponseLocalVar, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorC7827b344f35440af530383c74573c6fDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorC7827b344f35440af530383c74573c6f(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorC7827b344f35440af530383c74573c6f(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
-
-        /// <summary>
-        /// DataCustodianNetworks@show Return a single DataCustodianNetwork
-        /// </summary>
-        /// <param name="id">DataCustodianNetwork ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC7827b344f35440af530383c74573c6fApiResponse"/>&gt;</returns>
-        public async Task<IC7827b344f35440af530383c74573c6fApiResponse?> C7827b344f35440af530383c74573c6fOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await C7827b344f35440af530383c74573c6fAsync(id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// DataCustodianNetworks@show Return a single DataCustodianNetwork
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataCustodianNetwork ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IC7827b344f35440af530383c74573c6fApiResponse"/>&gt;</returns>
-        public async Task<IC7827b344f35440af530383c74573c6fApiResponse> C7827b344f35440af530383c74573c6fAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatC7827b344f35440af530383c74573c6f(ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v2/data_custodian_networks/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/data_custodian_networks/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        C7827b344f35440af530383c74573c6fApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/data_custodian_networks/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterC7827b344f35440af530383c74573c6fDefaultImplementation(apiResponseLocalVar, id);
-
-                        Events.ExecuteOnC7827b344f35440af530383c74573c6f(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorC7827b344f35440af530383c74573c6fDefaultImplementation(e, "/api/v2/data_custodian_networks/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorC7827b344f35440af530383c74573c6f(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="C7827b344f35440af530383c74573c6fApiResponse"/>
-        /// </summary>
-        public partial class C7827b344f35440af530383c74573c6fApiResponse : GatewayApiSdk.Client.ApiResponse, IC7827b344f35440af530383c74573c6fApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataCustodianNetworksApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="C7827b344f35440af530383c74573c6fApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public C7827b344f35440af530383c74573c6fApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="C7827b344f35440af530383c74573c6fApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public C7827b344f35440af530383c74573c6fApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.C7827b344f35440af530383c74573c6f200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C7827b344f35440af530383c74573c6f200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C7827b344f35440af530383c74573c6f200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall0a51cc2388e3015851122c32c548b07e(ref int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request"></param>
-        /// <returns></returns>
-        private void ValidateCall0a51cc2388e3015851122c32c548b07e(Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request)
-        {
-            if (model81b552b8803870790579d840279ce8a3Request == null)
-                throw new ArgumentNullException(nameof(model81b552b8803870790579d840279ce8a3Request));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request"></param>
-        private void AfterCall0a51cc2388e3015851122c32c548b07eDefaultImplementation(ICall0a51cc2388e3015851122c32c548b07eApiResponse apiResponseLocalVar, int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall0a51cc2388e3015851122c32c548b07e(ref suppressDefaultLog, apiResponseLocalVar, id, model81b552b8803870790579d840279ce8a3Request);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request"></param>
-        partial void AfterCall0a51cc2388e3015851122c32c548b07e(ref bool suppressDefaultLog, ICall0a51cc2388e3015851122c32c548b07eApiResponse apiResponseLocalVar, int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request"></param>
-        private void OnErrorCall0a51cc2388e3015851122c32c548b07eDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall0a51cc2388e3015851122c32c548b07e(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, model81b552b8803870790579d840279ce8a3Request);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request"></param>
-        partial void OnErrorCall0a51cc2388e3015851122c32c548b07e(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request);
-
-        /// <summary>
-        /// DataCustodianNetworks@edit Edit a DataCustodianNetwork
-        /// </summary>
-        /// <param name="id">DataCustodianNetwork ID</param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request">DataCustodianNetwork definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall0a51cc2388e3015851122c32c548b07eApiResponse"/>&gt;</returns>
-        public async Task<ICall0a51cc2388e3015851122c32c548b07eApiResponse?> Call0a51cc2388e3015851122c32c548b07eOrDefaultAsync(int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call0a51cc2388e3015851122c32c548b07eAsync(id, model81b552b8803870790579d840279ce8a3Request, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// DataCustodianNetworks@edit Edit a DataCustodianNetwork
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataCustodianNetwork ID</param>
-        /// <param name="model81b552b8803870790579d840279ce8a3Request">DataCustodianNetwork definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall0a51cc2388e3015851122c32c548b07eApiResponse"/>&gt;</returns>
-        public async Task<ICall0a51cc2388e3015851122c32c548b07eApiResponse> Call0a51cc2388e3015851122c32c548b07eAsync(int id, Model81b552b8803870790579d840279ce8a3Request model81b552b8803870790579d840279ce8a3Request, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateCall0a51cc2388e3015851122c32c548b07e(model81b552b8803870790579d840279ce8a3Request);
-
-                FormatCall0a51cc2388e3015851122c32c548b07e(ref id, model81b552b8803870790579d840279ce8a3Request);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v2/data_custodian_networks/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/data_custodian_networks/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    httpRequestMessageLocalVar.Content = (model81b552b8803870790579d840279ce8a3Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model81b552b8803870790579d840279ce8a3Request, _jsonSerializerOptions));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Patch;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call0a51cc2388e3015851122c32c548b07eApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/data_custodian_networks/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall0a51cc2388e3015851122c32c548b07eDefaultImplementation(apiResponseLocalVar, id, model81b552b8803870790579d840279ce8a3Request);
-
-                        Events.ExecuteOnCall0a51cc2388e3015851122c32c548b07e(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall0a51cc2388e3015851122c32c548b07eDefaultImplementation(e, "/api/v2/data_custodian_networks/{id}", uriBuilderLocalVar.Path, id, model81b552b8803870790579d840279ce8a3Request);
-                Events.ExecuteOnErrorCall0a51cc2388e3015851122c32c548b07e(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call0a51cc2388e3015851122c32c548b07eApiResponse"/>
-        /// </summary>
-        public partial class Call0a51cc2388e3015851122c32c548b07eApiResponse : GatewayApiSdk.Client.ApiResponse, ICall0a51cc2388e3015851122c32c548b07eApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataCustodianNetworksApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call0a51cc2388e3015851122c32c548b07eApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call0a51cc2388e3015851122c32c548b07eApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call0a51cc2388e3015851122c32c548b07eApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call0a51cc2388e3015851122c32c548b07eApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Ddc2f5ebf51037175006c6017e20d358200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Ddc2f5ebf51037175006c6017e20d358200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Ddc2f5ebf51037175006c6017e20d358200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall3b69b09a466561df872e104a19a2ad65(ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterCall3b69b09a466561df872e104a19a2ad65DefaultImplementation(ICall3b69b09a466561df872e104a19a2ad65ApiResponse apiResponseLocalVar, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall3b69b09a466561df872e104a19a2ad65(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterCall3b69b09a466561df872e104a19a2ad65(ref bool suppressDefaultLog, ICall3b69b09a466561df872e104a19a2ad65ApiResponse apiResponseLocalVar, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorCall3b69b09a466561df872e104a19a2ad65DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall3b69b09a466561df872e104a19a2ad65(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorCall3b69b09a466561df872e104a19a2ad65(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
-
-        /// <summary>
-        /// DataCustodianNetworks@showDatasetsSummary Return a single DataCustodianNetwork - summary of datasets
-        /// </summary>
-        /// <param name="id">DataCustodianNetwork ID - summary</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3b69b09a466561df872e104a19a2ad65ApiResponse"/>&gt;</returns>
-        public async Task<ICall3b69b09a466561df872e104a19a2ad65ApiResponse?> Call3b69b09a466561df872e104a19a2ad65OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call3b69b09a466561df872e104a19a2ad65Async(id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// DataCustodianNetworks@showDatasetsSummary Return a single DataCustodianNetwork - summary of datasets
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataCustodianNetwork ID - summary</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall3b69b09a466561df872e104a19a2ad65ApiResponse"/>&gt;</returns>
-        public async Task<ICall3b69b09a466561df872e104a19a2ad65ApiResponse> Call3b69b09a466561df872e104a19a2ad65Async(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatCall3b69b09a466561df872e104a19a2ad65(ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v2/data_custodian_networks/{id}/datasets_summary"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/data_custodian_networks/{id}/datasets_summary");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call3b69b09a466561df872e104a19a2ad65ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/data_custodian_networks/{id}/datasets_summary", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall3b69b09a466561df872e104a19a2ad65DefaultImplementation(apiResponseLocalVar, id);
-
-                        Events.ExecuteOnCall3b69b09a466561df872e104a19a2ad65(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall3b69b09a466561df872e104a19a2ad65DefaultImplementation(e, "/api/v2/data_custodian_networks/{id}/datasets_summary", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorCall3b69b09a466561df872e104a19a2ad65(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call3b69b09a466561df872e104a19a2ad65ApiResponse"/>
-        /// </summary>
-        public partial class Call3b69b09a466561df872e104a19a2ad65ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall3b69b09a466561df872e104a19a2ad65ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataCustodianNetworksApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call3b69b09a466561df872e104a19a2ad65ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call3b69b09a466561df872e104a19a2ad65ApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call3b69b09a466561df872e104a19a2ad65ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call3b69b09a466561df872e104a19a2ad65ApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model3b69b09a466561df872e104a19a2ad65200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model3b69b09a466561df872e104a19a2ad65200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model3b69b09a466561df872e104a19a2ad65200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCall5e9eca031c07d46c2fa4007e916bc5e1(ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterCall5e9eca031c07d46c2fa4007e916bc5e1DefaultImplementation(ICall5e9eca031c07d46c2fa4007e916bc5e1ApiResponse apiResponseLocalVar, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall5e9eca031c07d46c2fa4007e916bc5e1(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterCall5e9eca031c07d46c2fa4007e916bc5e1(ref bool suppressDefaultLog, ICall5e9eca031c07d46c2fa4007e916bc5e1ApiResponse apiResponseLocalVar, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorCall5e9eca031c07d46c2fa4007e916bc5e1DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall5e9eca031c07d46c2fa4007e916bc5e1(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorCall5e9eca031c07d46c2fa4007e916bc5e1(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+        partial void OnErrorDeleteDataCustodianNetwork(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
 
         /// <summary>
         /// DataCustodianNetworks@destroy Delete a DataCustodianNetwork
         /// </summary>
         /// <param name="id">DataCustodianNetwork ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall5e9eca031c07d46c2fa4007e916bc5e1ApiResponse"/>&gt;</returns>
-        public async Task<ICall5e9eca031c07d46c2fa4007e916bc5e1ApiResponse?> Call5e9eca031c07d46c2fa4007e916bc5e1OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteDataCustodianNetworkApiResponse"/>&gt;</returns>
+        public async Task<IDeleteDataCustodianNetworkApiResponse?> DeleteDataCustodianNetworkOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call5e9eca031c07d46c2fa4007e916bc5e1Async(id, cancellationToken).ConfigureAwait(false);
+                return await DeleteDataCustodianNetworkAsync(id, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -2264,14 +1086,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">DataCustodianNetwork ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall5e9eca031c07d46c2fa4007e916bc5e1ApiResponse"/>&gt;</returns>
-        public async Task<ICall5e9eca031c07d46c2fa4007e916bc5e1ApiResponse> Call5e9eca031c07d46c2fa4007e916bc5e1Async(int id, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteDataCustodianNetworkApiResponse"/>&gt;</returns>
+        public async Task<IDeleteDataCustodianNetworkApiResponse> DeleteDataCustodianNetworkAsync(int id, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatCall5e9eca031c07d46c2fa4007e916bc5e1(ref id);
+                FormatDeleteDataCustodianNetwork(ref id);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -2307,7 +1129,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call5e9eca031c07d46c2fa4007e916bc5e1ApiResponse apiResponseLocalVar;
+                        DeleteDataCustodianNetworkApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -2318,9 +1140,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall5e9eca031c07d46c2fa4007e916bc5e1DefaultImplementation(apiResponseLocalVar, id);
+                        AfterDeleteDataCustodianNetworkDefaultImplementation(apiResponseLocalVar, id);
 
-                        Events.ExecuteOnCall5e9eca031c07d46c2fa4007e916bc5e1(apiResponseLocalVar);
+                        Events.ExecuteOnDeleteDataCustodianNetwork(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -2332,16 +1154,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall5e9eca031c07d46c2fa4007e916bc5e1DefaultImplementation(e, "/api/v2/data_custodian_networks/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorCall5e9eca031c07d46c2fa4007e916bc5e1(e);
+                OnErrorDeleteDataCustodianNetworkDefaultImplementation(e, "/api/v2/data_custodian_networks/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorDeleteDataCustodianNetwork(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call5e9eca031c07d46c2fa4007e916bc5e1ApiResponse"/>
+        /// The <see cref="DeleteDataCustodianNetworkApiResponse"/>
         /// </summary>
-        public partial class Call5e9eca031c07d46c2fa4007e916bc5e1ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall5e9eca031c07d46c2fa4007e916bc5e1ApiResponse
+        public partial class DeleteDataCustodianNetworkApiResponse : GatewayApiSdk.Client.ApiResponse, IDeleteDataCustodianNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -2349,7 +1171,7 @@ namespace GatewayApiSdk.Api
             public ILogger<DataCustodianNetworksApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call5e9eca031c07d46c2fa4007e916bc5e1ApiResponse"/>
+            /// The <see cref="DeleteDataCustodianNetworkApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2358,14 +1180,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call5e9eca031c07d46c2fa4007e916bc5e1ApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public DeleteDataCustodianNetworkApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call5e9eca031c07d46c2fa4007e916bc5e1ApiResponse"/>
+            /// The <see cref="DeleteDataCustodianNetworkApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2374,7 +1196,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call5e9eca031c07d46c2fa4007e916bc5e1ApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public DeleteDataCustodianNetworkApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -2392,11 +1214,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2405,7 +1227,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -2430,11 +1252,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? Ok()
+            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2443,7 +1265,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.C29b5b3424f7317b69b4bda048ccfafb200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
             {
                 result = null;
 
@@ -2468,11 +1290,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2481,7 +1303,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 
@@ -2507,17 +1329,1749 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall71e5fbca2b5aa8a0160d621feb662ecb(ref Option<int> perPage);
+        partial void FormatEditDataCustodianNetwork(ref int id, EditDataProviderCollRequest editDataProviderCollRequest);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="editDataProviderCollRequest"></param>
+        /// <returns></returns>
+        private void ValidateEditDataCustodianNetwork(EditDataProviderCollRequest editDataProviderCollRequest)
+        {
+            if (editDataProviderCollRequest == null)
+                throw new ArgumentNullException(nameof(editDataProviderCollRequest));
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="editDataProviderCollRequest"></param>
+        private void AfterEditDataCustodianNetworkDefaultImplementation(IEditDataCustodianNetworkApiResponse apiResponseLocalVar, int id, EditDataProviderCollRequest editDataProviderCollRequest)
+        {
+            bool suppressDefaultLog = false;
+            AfterEditDataCustodianNetwork(ref suppressDefaultLog, apiResponseLocalVar, id, editDataProviderCollRequest);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="editDataProviderCollRequest"></param>
+        partial void AfterEditDataCustodianNetwork(ref bool suppressDefaultLog, IEditDataCustodianNetworkApiResponse apiResponseLocalVar, int id, EditDataProviderCollRequest editDataProviderCollRequest);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="editDataProviderCollRequest"></param>
+        private void OnErrorEditDataCustodianNetworkDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditDataProviderCollRequest editDataProviderCollRequest)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorEditDataCustodianNetwork(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, editDataProviderCollRequest);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        /// <param name="editDataProviderCollRequest"></param>
+        partial void OnErrorEditDataCustodianNetwork(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditDataProviderCollRequest editDataProviderCollRequest);
+
+        /// <summary>
+        /// DataCustodianNetworks@edit Edit a DataCustodianNetwork
+        /// </summary>
+        /// <param name="id">DataCustodianNetwork ID</param>
+        /// <param name="editDataProviderCollRequest">DataCustodianNetwork definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditDataCustodianNetworkApiResponse"/>&gt;</returns>
+        public async Task<IEditDataCustodianNetworkApiResponse?> EditDataCustodianNetworkOrDefaultAsync(int id, EditDataProviderCollRequest editDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await EditDataCustodianNetworkAsync(id, editDataProviderCollRequest, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// DataCustodianNetworks@edit Edit a DataCustodianNetwork
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">DataCustodianNetwork ID</param>
+        /// <param name="editDataProviderCollRequest">DataCustodianNetwork definition</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IEditDataCustodianNetworkApiResponse"/>&gt;</returns>
+        public async Task<IEditDataCustodianNetworkApiResponse> EditDataCustodianNetworkAsync(int id, EditDataProviderCollRequest editDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                ValidateEditDataCustodianNetwork(editDataProviderCollRequest);
+
+                FormatEditDataCustodianNetwork(ref id, editDataProviderCollRequest);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v2/data_custodian_networks/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/data_custodian_networks/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    httpRequestMessageLocalVar.Content = (editDataProviderCollRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(editDataProviderCollRequest, _jsonSerializerOptions));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] contentTypes = new string[] {
+                        "application/json"
+                    };
+
+                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
+
+                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
+                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Patch;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        EditDataCustodianNetworkApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/data_custodian_networks/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterEditDataCustodianNetworkDefaultImplementation(apiResponseLocalVar, id, editDataProviderCollRequest);
+
+                        Events.ExecuteOnEditDataCustodianNetwork(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorEditDataCustodianNetworkDefaultImplementation(e, "/api/v2/data_custodian_networks/{id}", uriBuilderLocalVar.Path, id, editDataProviderCollRequest);
+                Events.ExecuteOnErrorEditDataCustodianNetwork(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="EditDataCustodianNetworkApiResponse"/>
+        /// </summary>
+        public partial class EditDataCustodianNetworkApiResponse : GatewayApiSdk.Client.ApiResponse, IEditDataCustodianNetworkApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<DataCustodianNetworksApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="EditDataCustodianNetworkApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public EditDataCustodianNetworkApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="EditDataCustodianNetworkApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public EditDataCustodianNetworkApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.UpdateDataCustodianNetwork200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateDataCustodianNetwork200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateDataCustodianNetwork200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public bool IsInternalServerError => 500 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 500 InternalServerError
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsInternalServerError
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = InternalServerError();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchDataCustodianNetwork(ref int id);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        private void AfterFetchDataCustodianNetworkDefaultImplementation(IFetchDataCustodianNetworkApiResponse apiResponseLocalVar, int id)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchDataCustodianNetwork(ref suppressDefaultLog, apiResponseLocalVar, id);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        partial void AfterFetchDataCustodianNetwork(ref bool suppressDefaultLog, IFetchDataCustodianNetworkApiResponse apiResponseLocalVar, int id);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        private void OnErrorFetchDataCustodianNetworkDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchDataCustodianNetwork(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        partial void OnErrorFetchDataCustodianNetwork(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+
+        /// <summary>
+        /// DataCustodianNetworks@show Return a single DataCustodianNetwork
+        /// </summary>
+        /// <param name="id">DataCustodianNetwork ID</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataCustodianNetworkApiResponse?> FetchDataCustodianNetworkOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchDataCustodianNetworkAsync(id, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// DataCustodianNetworks@show Return a single DataCustodianNetwork
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">DataCustodianNetwork ID</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataCustodianNetworkApiResponse> FetchDataCustodianNetworkAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchDataCustodianNetwork(ref id);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v2/data_custodian_networks/{id}"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/data_custodian_networks/{id}");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchDataCustodianNetworkApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/data_custodian_networks/{id}", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchDataCustodianNetworkDefaultImplementation(apiResponseLocalVar, id);
+
+                        Events.ExecuteOnFetchDataCustodianNetwork(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchDataCustodianNetworkDefaultImplementation(e, "/api/v2/data_custodian_networks/{id}", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorFetchDataCustodianNetwork(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchDataCustodianNetworkApiResponse"/>
+        /// </summary>
+        public partial class FetchDataCustodianNetworkApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchDataCustodianNetworkApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<DataCustodianNetworksApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchDataCustodianNetworkApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchDataCustodianNetworkApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchDataCustodianNetworkApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchDataCustodianNetworkApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchDataCustodianNetwork200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchDataCustodianNetwork200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchDataCustodianNetwork200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchDataCustodianNetworkCustodiansSummary(ref int id);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        private void AfterFetchDataCustodianNetworkCustodiansSummaryDefaultImplementation(IFetchDataCustodianNetworkCustodiansSummaryApiResponse apiResponseLocalVar, int id)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchDataCustodianNetworkCustodiansSummary(ref suppressDefaultLog, apiResponseLocalVar, id);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        partial void AfterFetchDataCustodianNetworkCustodiansSummary(ref bool suppressDefaultLog, IFetchDataCustodianNetworkCustodiansSummaryApiResponse apiResponseLocalVar, int id);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        private void OnErrorFetchDataCustodianNetworkCustodiansSummaryDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchDataCustodianNetworkCustodiansSummary(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        partial void OnErrorFetchDataCustodianNetworkCustodiansSummary(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+
+        /// <summary>
+        /// DataCustodianNetworks@showCustodiansSummary Return a single DataCustodianNetwork - custodians summary
+        /// </summary>
+        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkCustodiansSummaryApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataCustodianNetworkCustodiansSummaryApiResponse?> FetchDataCustodianNetworkCustodiansSummaryOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchDataCustodianNetworkCustodiansSummaryAsync(id, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// DataCustodianNetworks@showCustodiansSummary Return a single DataCustodianNetwork - custodians summary
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkCustodiansSummaryApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataCustodianNetworkCustodiansSummaryApiResponse> FetchDataCustodianNetworkCustodiansSummaryAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchDataCustodianNetworkCustodiansSummary(ref id);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v2/data_custodian_networks/{id}/custodians_summary"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/data_custodian_networks/{id}/custodians_summary");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchDataCustodianNetworkCustodiansSummaryApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/data_custodian_networks/{id}/custodians_summary", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchDataCustodianNetworkCustodiansSummaryDefaultImplementation(apiResponseLocalVar, id);
+
+                        Events.ExecuteOnFetchDataCustodianNetworkCustodiansSummary(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchDataCustodianNetworkCustodiansSummaryDefaultImplementation(e, "/api/v2/data_custodian_networks/{id}/custodians_summary", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorFetchDataCustodianNetworkCustodiansSummary(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchDataCustodianNetworkCustodiansSummaryApiResponse"/>
+        /// </summary>
+        public partial class FetchDataCustodianNetworkCustodiansSummaryApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchDataCustodianNetworkCustodiansSummaryApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<DataCustodianNetworksApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchDataCustodianNetworkCustodiansSummaryApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchDataCustodianNetworkCustodiansSummaryApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchDataCustodianNetworkCustodiansSummaryApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchDataCustodianNetworkCustodiansSummaryApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchDataCustodianNetworkCustodiansSummary200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchDataCustodianNetworkCustodiansSummary200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchDataCustodianNetworkCustodiansSummary200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchDataCustodianNetworkDatasetsSummary(ref int id);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        private void AfterFetchDataCustodianNetworkDatasetsSummaryDefaultImplementation(IFetchDataCustodianNetworkDatasetsSummaryApiResponse apiResponseLocalVar, int id)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchDataCustodianNetworkDatasetsSummary(ref suppressDefaultLog, apiResponseLocalVar, id);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        partial void AfterFetchDataCustodianNetworkDatasetsSummary(ref bool suppressDefaultLog, IFetchDataCustodianNetworkDatasetsSummaryApiResponse apiResponseLocalVar, int id);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        private void OnErrorFetchDataCustodianNetworkDatasetsSummaryDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchDataCustodianNetworkDatasetsSummary(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        partial void OnErrorFetchDataCustodianNetworkDatasetsSummary(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+
+        /// <summary>
+        /// DataCustodianNetworks@showDatasetsSummary Return a single DataCustodianNetwork - summary of datasets
+        /// </summary>
+        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkDatasetsSummaryApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataCustodianNetworkDatasetsSummaryApiResponse?> FetchDataCustodianNetworkDatasetsSummaryOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchDataCustodianNetworkDatasetsSummaryAsync(id, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// DataCustodianNetworks@showDatasetsSummary Return a single DataCustodianNetwork - summary of datasets
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkDatasetsSummaryApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataCustodianNetworkDatasetsSummaryApiResponse> FetchDataCustodianNetworkDatasetsSummaryAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchDataCustodianNetworkDatasetsSummary(ref id);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v2/data_custodian_networks/{id}/datasets_summary"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/data_custodian_networks/{id}/datasets_summary");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchDataCustodianNetworkDatasetsSummaryApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/data_custodian_networks/{id}/datasets_summary", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchDataCustodianNetworkDatasetsSummaryDefaultImplementation(apiResponseLocalVar, id);
+
+                        Events.ExecuteOnFetchDataCustodianNetworkDatasetsSummary(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchDataCustodianNetworkDatasetsSummaryDefaultImplementation(e, "/api/v2/data_custodian_networks/{id}/datasets_summary", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorFetchDataCustodianNetworkDatasetsSummary(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchDataCustodianNetworkDatasetsSummaryApiResponse"/>
+        /// </summary>
+        public partial class FetchDataCustodianNetworkDatasetsSummaryApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchDataCustodianNetworkDatasetsSummaryApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<DataCustodianNetworksApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchDataCustodianNetworkDatasetsSummaryApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchDataCustodianNetworkDatasetsSummaryApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchDataCustodianNetworkDatasetsSummaryApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchDataCustodianNetworkDatasetsSummaryApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchDataCustodianNetworkDatasetsSummary200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchDataCustodianNetworkDatasetsSummary200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchDataCustodianNetworkDatasetsSummary200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchDataCustodianNetworkEntitiesSummary(ref int id);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        private void AfterFetchDataCustodianNetworkEntitiesSummaryDefaultImplementation(IFetchDataCustodianNetworkEntitiesSummaryApiResponse apiResponseLocalVar, int id)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchDataCustodianNetworkEntitiesSummary(ref suppressDefaultLog, apiResponseLocalVar, id);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        partial void AfterFetchDataCustodianNetworkEntitiesSummary(ref bool suppressDefaultLog, IFetchDataCustodianNetworkEntitiesSummaryApiResponse apiResponseLocalVar, int id);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        private void OnErrorFetchDataCustodianNetworkEntitiesSummaryDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchDataCustodianNetworkEntitiesSummary(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        partial void OnErrorFetchDataCustodianNetworkEntitiesSummary(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+
+        /// <summary>
+        /// DataCustodianNetworks@showSummary Return a single DataCustodianNetwork - summary of entities
+        /// </summary>
+        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkEntitiesSummaryApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataCustodianNetworkEntitiesSummaryApiResponse?> FetchDataCustodianNetworkEntitiesSummaryOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchDataCustodianNetworkEntitiesSummaryAsync(id, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// DataCustodianNetworks@showSummary Return a single DataCustodianNetwork - summary of entities
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkEntitiesSummaryApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataCustodianNetworkEntitiesSummaryApiResponse> FetchDataCustodianNetworkEntitiesSummaryAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchDataCustodianNetworkEntitiesSummary(ref id);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v2/data_custodian_networks/{id}/entities_summary"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/data_custodian_networks/{id}/entities_summary");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchDataCustodianNetworkEntitiesSummaryApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/data_custodian_networks/{id}/entities_summary", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchDataCustodianNetworkEntitiesSummaryDefaultImplementation(apiResponseLocalVar, id);
+
+                        Events.ExecuteOnFetchDataCustodianNetworkEntitiesSummary(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchDataCustodianNetworkEntitiesSummaryDefaultImplementation(e, "/api/v2/data_custodian_networks/{id}/entities_summary", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorFetchDataCustodianNetworkEntitiesSummary(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchDataCustodianNetworkEntitiesSummaryApiResponse"/>
+        /// </summary>
+        public partial class FetchDataCustodianNetworkEntitiesSummaryApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchDataCustodianNetworkEntitiesSummaryApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<DataCustodianNetworksApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchDataCustodianNetworkEntitiesSummaryApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchDataCustodianNetworkEntitiesSummaryApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchDataCustodianNetworkEntitiesSummaryApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchDataCustodianNetworkEntitiesSummaryApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchDataCustodianNetworkEntitiesSummary200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchDataCustodianNetworkEntitiesSummary200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchDataCustodianNetworkEntitiesSummary200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchDataCustodianNetworkInfo(ref int id);
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        private void AfterFetchDataCustodianNetworkInfoDefaultImplementation(IFetchDataCustodianNetworkInfoApiResponse apiResponseLocalVar, int id)
+        {
+            bool suppressDefaultLog = false;
+            AfterFetchDataCustodianNetworkInfo(ref suppressDefaultLog, apiResponseLocalVar, id);
+            if (!suppressDefaultLog)
+                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+        }
+
+        /// <summary>
+        /// Processes the server response
+        /// </summary>
+        /// <param name="suppressDefaultLog"></param>
+        /// <param name="apiResponseLocalVar"></param>
+        /// <param name="id"></param>
+        partial void AfterFetchDataCustodianNetworkInfo(ref bool suppressDefaultLog, IFetchDataCustodianNetworkInfoApiResponse apiResponseLocalVar, int id);
+
+        /// <summary>
+        /// Logs exceptions that occur while retrieving the server response
+        /// </summary>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        private void OnErrorFetchDataCustodianNetworkInfoDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
+        {
+            bool suppressDefaultLogLocalVar = false;
+            OnErrorFetchDataCustodianNetworkInfo(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
+            if (!suppressDefaultLogLocalVar)
+                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
+        }
+
+        /// <summary>
+        /// A partial method that gives developers a way to provide customized exception handling
+        /// </summary>
+        /// <param name="suppressDefaultLogLocalVar"></param>
+        /// <param name="exceptionLocalVar"></param>
+        /// <param name="pathFormatLocalVar"></param>
+        /// <param name="pathLocalVar"></param>
+        /// <param name="id"></param>
+        partial void OnErrorFetchDataCustodianNetworkInfo(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
+
+        /// <summary>
+        /// DataCustodianNetworks@showInfoSummary Return a single DataCustodianNetwork - basic information
+        /// </summary>
+        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkInfoApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataCustodianNetworkInfoApiResponse?> FetchDataCustodianNetworkInfoOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return await FetchDataCustodianNetworkInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// DataCustodianNetworks@showInfoSummary Return a single DataCustodianNetwork - basic information
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">DataCustodianNetwork ID - summary</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworkInfoApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataCustodianNetworkInfoApiResponse> FetchDataCustodianNetworkInfoAsync(int id, System.Threading.CancellationToken cancellationToken = default)
+        {
+            UriBuilder uriBuilderLocalVar = new UriBuilder();
+
+            try
+            {
+                FormatFetchDataCustodianNetworkInfo(ref id);
+
+                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
+                {
+                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
+                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
+                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
+                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
+                        ? "/api/v2/data_custodian_networks/{id}/info"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/data_custodian_networks/{id}/info");
+                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
+                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
+
+                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
+
+                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
+
+                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
+
+                    string[] acceptLocalVars = new string[] {
+                        "application/json"
+                    };
+
+                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
+
+                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
+                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
+
+                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
+
+                    DateTime requestedAtLocalVar = DateTime.UtcNow;
+
+                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
+                    {
+                        FetchDataCustodianNetworkInfoApiResponse apiResponseLocalVar;
+
+                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
+                            default: {
+                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/data_custodian_networks/{id}/info", requestedAtLocalVar, _jsonSerializerOptions);
+
+                                break;
+                            }
+                        }
+
+                        AfterFetchDataCustodianNetworkInfoDefaultImplementation(apiResponseLocalVar, id);
+
+                        Events.ExecuteOnFetchDataCustodianNetworkInfo(apiResponseLocalVar);
+
+                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
+                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
+                                tokenBaseLocalVar.BeginRateLimit();
+
+                        return apiResponseLocalVar;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                OnErrorFetchDataCustodianNetworkInfoDefaultImplementation(e, "/api/v2/data_custodian_networks/{id}/info", uriBuilderLocalVar.Path, id);
+                Events.ExecuteOnErrorFetchDataCustodianNetworkInfo(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="FetchDataCustodianNetworkInfoApiResponse"/>
+        /// </summary>
+        public partial class FetchDataCustodianNetworkInfoApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchDataCustodianNetworkInfoApiResponse
+        {
+            /// <summary>
+            /// The logger
+            /// </summary>
+            public ILogger<DataCustodianNetworksApi> Logger { get; }
+
+            /// <summary>
+            /// The <see cref="FetchDataCustodianNetworkInfoApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="rawContent"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchDataCustodianNetworkInfoApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            /// <summary>
+            /// The <see cref="FetchDataCustodianNetworkInfoApiResponse"/>
+            /// </summary>
+            /// <param name="logger"></param>
+            /// <param name="httpRequestMessage"></param>
+            /// <param name="httpResponseMessage"></param>
+            /// <param name="contentStream"></param>
+            /// <param name="path"></param>
+            /// <param name="requestedAt"></param>
+            /// <param name="jsonSerializerOptions"></param>
+            public FetchDataCustodianNetworkInfoApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            {
+                Logger = logger;
+                OnCreated(httpRequestMessage, httpResponseMessage);
+            }
+
+            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public bool IsOk => 200 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 200 Ok
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchDataCustodianNetworkInfo200Response? Ok()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsOk
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchDataCustodianNetworkInfo200Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 200 Ok and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchDataCustodianNetworkInfo200Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = Ok();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public bool IsNotFound => 404 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 404 NotFound
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsNotFound
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 404 NotFound and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = NotFound();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
+                }
+
+                return result != null;
+            }
+
+            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
+            {
+                bool suppressDefaultLog = false;
+                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
+                if (!suppressDefaultLog)
+                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
+            }
+
+            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
+        }
+
+        partial void FormatFetchDataCustodianNetworks(ref Option<int> perPage);
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="perPage"></param>
-        private void AfterCall71e5fbca2b5aa8a0160d621feb662ecbDefaultImplementation(ICall71e5fbca2b5aa8a0160d621feb662ecbApiResponse apiResponseLocalVar, Option<int> perPage)
+        private void AfterFetchDataCustodianNetworksDefaultImplementation(IFetchDataCustodianNetworksApiResponse apiResponseLocalVar, Option<int> perPage)
         {
             bool suppressDefaultLog = false;
-            AfterCall71e5fbca2b5aa8a0160d621feb662ecb(ref suppressDefaultLog, apiResponseLocalVar, perPage);
+            AfterFetchDataCustodianNetworks(ref suppressDefaultLog, apiResponseLocalVar, perPage);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -2528,7 +3082,7 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="perPage"></param>
-        partial void AfterCall71e5fbca2b5aa8a0160d621feb662ecb(ref bool suppressDefaultLog, ICall71e5fbca2b5aa8a0160d621feb662ecbApiResponse apiResponseLocalVar, Option<int> perPage);
+        partial void AfterFetchDataCustodianNetworks(ref bool suppressDefaultLog, IFetchDataCustodianNetworksApiResponse apiResponseLocalVar, Option<int> perPage);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -2537,10 +3091,10 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="perPage"></param>
-        private void OnErrorCall71e5fbca2b5aa8a0160d621feb662ecbDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage)
+        private void OnErrorFetchDataCustodianNetworksDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall71e5fbca2b5aa8a0160d621feb662ecb(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, perPage);
+            OnErrorFetchDataCustodianNetworks(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, perPage);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -2553,19 +3107,19 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="perPage"></param>
-        partial void OnErrorCall71e5fbca2b5aa8a0160d621feb662ecb(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage);
+        partial void OnErrorFetchDataCustodianNetworks(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> perPage);
 
         /// <summary>
         /// DataCustodianNetworks@index Returns a list of DataCustodianNetworks enabled on the system
         /// </summary>
         /// <param name="perPage">per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall71e5fbca2b5aa8a0160d621feb662ecbApiResponse"/>&gt;</returns>
-        public async Task<ICall71e5fbca2b5aa8a0160d621feb662ecbApiResponse?> Call71e5fbca2b5aa8a0160d621feb662ecbOrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworksApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataCustodianNetworksApiResponse?> FetchDataCustodianNetworksOrDefaultAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call71e5fbca2b5aa8a0160d621feb662ecbAsync(perPage, cancellationToken).ConfigureAwait(false);
+                return await FetchDataCustodianNetworksAsync(perPage, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -2579,14 +3133,14 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">per page (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall71e5fbca2b5aa8a0160d621feb662ecbApiResponse"/>&gt;</returns>
-        public async Task<ICall71e5fbca2b5aa8a0160d621feb662ecbApiResponse> Call71e5fbca2b5aa8a0160d621feb662ecbAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDataCustodianNetworksApiResponse"/>&gt;</returns>
+        public async Task<IFetchDataCustodianNetworksApiResponse> FetchDataCustodianNetworksAsync(Option<int> perPage = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatCall71e5fbca2b5aa8a0160d621feb662ecb(ref perPage);
+                FormatFetchDataCustodianNetworks(ref perPage);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -2628,7 +3182,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call71e5fbca2b5aa8a0160d621feb662ecbApiResponse apiResponseLocalVar;
+                        FetchDataCustodianNetworksApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -2639,9 +3193,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall71e5fbca2b5aa8a0160d621feb662ecbDefaultImplementation(apiResponseLocalVar, perPage);
+                        AfterFetchDataCustodianNetworksDefaultImplementation(apiResponseLocalVar, perPage);
 
-                        Events.ExecuteOnCall71e5fbca2b5aa8a0160d621feb662ecb(apiResponseLocalVar);
+                        Events.ExecuteOnFetchDataCustodianNetworks(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -2653,16 +3207,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall71e5fbca2b5aa8a0160d621feb662ecbDefaultImplementation(e, "/api/v2/data_custodian_networks", uriBuilderLocalVar.Path, perPage);
-                Events.ExecuteOnErrorCall71e5fbca2b5aa8a0160d621feb662ecb(e);
+                OnErrorFetchDataCustodianNetworksDefaultImplementation(e, "/api/v2/data_custodian_networks", uriBuilderLocalVar.Path, perPage);
+                Events.ExecuteOnErrorFetchDataCustodianNetworks(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call71e5fbca2b5aa8a0160d621feb662ecbApiResponse"/>
+        /// The <see cref="FetchDataCustodianNetworksApiResponse"/>
         /// </summary>
-        public partial class Call71e5fbca2b5aa8a0160d621feb662ecbApiResponse : GatewayApiSdk.Client.ApiResponse, ICall71e5fbca2b5aa8a0160d621feb662ecbApiResponse
+        public partial class FetchDataCustodianNetworksApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchDataCustodianNetworksApiResponse
         {
             /// <summary>
             /// The logger
@@ -2670,7 +3224,7 @@ namespace GatewayApiSdk.Api
             public ILogger<DataCustodianNetworksApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call71e5fbca2b5aa8a0160d621feb662ecbApiResponse"/>
+            /// The <see cref="FetchDataCustodianNetworksApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2679,14 +3233,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call71e5fbca2b5aa8a0160d621feb662ecbApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchDataCustodianNetworksApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call71e5fbca2b5aa8a0160d621feb662ecbApiResponse"/>
+            /// The <see cref="FetchDataCustodianNetworksApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -2695,7 +3249,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call71e5fbca2b5aa8a0160d621feb662ecbApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchDataCustodianNetworksApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -2713,11 +3267,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model71e5fbca2b5aa8a0160d621feb662ecb200Response? Ok()
+            public GatewayApiSdk.Model.FetchDataCustodianNetworks200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model71e5fbca2b5aa8a0160d621feb662ecb200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchDataCustodianNetworks200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2726,7 +3280,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model71e5fbca2b5aa8a0160d621feb662ecb200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchDataCustodianNetworks200Response? result)
             {
                 result = null;
 
@@ -2752,571 +3306,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall9ce0c491d34067e8cf15eb9e9b5ec147(ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterCall9ce0c491d34067e8cf15eb9e9b5ec147DefaultImplementation(ICall9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse apiResponseLocalVar, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterCall9ce0c491d34067e8cf15eb9e9b5ec147(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterCall9ce0c491d34067e8cf15eb9e9b5ec147(ref bool suppressDefaultLog, ICall9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse apiResponseLocalVar, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorCall9ce0c491d34067e8cf15eb9e9b5ec147DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCall9ce0c491d34067e8cf15eb9e9b5ec147(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorCall9ce0c491d34067e8cf15eb9e9b5ec147(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
-
-        /// <summary>
-        /// DataCustodianNetworks@showInfoSummary Return a single DataCustodianNetwork - basic information
-        /// </summary>
-        /// <param name="id">DataCustodianNetwork ID - summary</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse"/>&gt;</returns>
-        public async Task<ICall9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse?> Call9ce0c491d34067e8cf15eb9e9b5ec147OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Call9ce0c491d34067e8cf15eb9e9b5ec147Async(id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// DataCustodianNetworks@showInfoSummary Return a single DataCustodianNetwork - basic information
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataCustodianNetwork ID - summary</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse"/>&gt;</returns>
-        public async Task<ICall9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse> Call9ce0c491d34067e8cf15eb9e9b5ec147Async(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatCall9ce0c491d34067e8cf15eb9e9b5ec147(ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v2/data_custodian_networks/{id}/info"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/data_custodian_networks/{id}/info");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Call9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/data_custodian_networks/{id}/info", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCall9ce0c491d34067e8cf15eb9e9b5ec147DefaultImplementation(apiResponseLocalVar, id);
-
-                        Events.ExecuteOnCall9ce0c491d34067e8cf15eb9e9b5ec147(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCall9ce0c491d34067e8cf15eb9e9b5ec147DefaultImplementation(e, "/api/v2/data_custodian_networks/{id}/info", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorCall9ce0c491d34067e8cf15eb9e9b5ec147(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Call9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse"/>
-        /// </summary>
-        public partial class Call9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataCustodianNetworksApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Call9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Call9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Call9ce0c491d34067e8cf15eb9e9b5ec147ApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Model9ce0c491d34067e8cf15eb9e9b5ec147200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model9ce0c491d34067e8cf15eb9e9b5ec147200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model9ce0c491d34067e8cf15eb9e9b5ec147200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatCed8add57941554cde6a5fc53f6555e5(ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterCed8add57941554cde6a5fc53f6555e5DefaultImplementation(ICed8add57941554cde6a5fc53f6555e5ApiResponse apiResponseLocalVar, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterCed8add57941554cde6a5fc53f6555e5(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterCed8add57941554cde6a5fc53f6555e5(ref bool suppressDefaultLog, ICed8add57941554cde6a5fc53f6555e5ApiResponse apiResponseLocalVar, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorCed8add57941554cde6a5fc53f6555e5DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCed8add57941554cde6a5fc53f6555e5(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorCed8add57941554cde6a5fc53f6555e5(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
-
-        /// <summary>
-        /// DataCustodianNetworks@showCustodiansSummary Return a single DataCustodianNetwork - custodians summary
-        /// </summary>
-        /// <param name="id">DataCustodianNetwork ID - summary</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICed8add57941554cde6a5fc53f6555e5ApiResponse"/>&gt;</returns>
-        public async Task<ICed8add57941554cde6a5fc53f6555e5ApiResponse?> Ced8add57941554cde6a5fc53f6555e5OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await Ced8add57941554cde6a5fc53f6555e5Async(id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// DataCustodianNetworks@showCustodiansSummary Return a single DataCustodianNetwork - custodians summary
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DataCustodianNetwork ID - summary</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICed8add57941554cde6a5fc53f6555e5ApiResponse"/>&gt;</returns>
-        public async Task<ICed8add57941554cde6a5fc53f6555e5ApiResponse> Ced8add57941554cde6a5fc53f6555e5Async(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatCed8add57941554cde6a5fc53f6555e5(ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v2/data_custodian_networks/{id}/custodians_summary"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/data_custodian_networks/{id}/custodians_summary");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        Ced8add57941554cde6a5fc53f6555e5ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/data_custodian_networks/{id}/custodians_summary", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCed8add57941554cde6a5fc53f6555e5DefaultImplementation(apiResponseLocalVar, id);
-
-                        Events.ExecuteOnCed8add57941554cde6a5fc53f6555e5(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCed8add57941554cde6a5fc53f6555e5DefaultImplementation(e, "/api/v2/data_custodian_networks/{id}/custodians_summary", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorCed8add57941554cde6a5fc53f6555e5(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Ced8add57941554cde6a5fc53f6555e5ApiResponse"/>
-        /// </summary>
-        public partial class Ced8add57941554cde6a5fc53f6555e5ApiResponse : GatewayApiSdk.Client.ApiResponse, ICed8add57941554cde6a5fc53f6555e5ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataCustodianNetworksApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="Ced8add57941554cde6a5fc53f6555e5ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Ced8add57941554cde6a5fc53f6555e5ApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="Ced8add57941554cde6a5fc53f6555e5ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public Ced8add57941554cde6a5fc53f6555e5ApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.Ced8add57941554cde6a5fc53f6555e5200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Ced8add57941554cde6a5fc53f6555e5200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Ced8add57941554cde6a5fc53f6555e5200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatDdc2f5ebf51037175006c6017e20d358(ref int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
+        partial void FormatUpdateDataCustodianNetwork(ref int id, UpdateDataProviderCollRequest updateDataProviderCollRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request"></param>
+        /// <param name="updateDataProviderCollRequest"></param>
         /// <returns></returns>
-        private void ValidateDdc2f5ebf51037175006c6017e20d358(C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request)
+        private void ValidateUpdateDataCustodianNetwork(UpdateDataProviderCollRequest updateDataProviderCollRequest)
         {
-            if (c5bb5300d6a46cc5b1b6a3bb1c3fa869Request == null)
-                throw new ArgumentNullException(nameof(c5bb5300d6a46cc5b1b6a3bb1c3fa869Request));
+            if (updateDataProviderCollRequest == null)
+                throw new ArgumentNullException(nameof(updateDataProviderCollRequest));
         }
 
         /// <summary>
@@ -3324,11 +3324,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request"></param>
-        private void AfterDdc2f5ebf51037175006c6017e20d358DefaultImplementation(IDdc2f5ebf51037175006c6017e20d358ApiResponse apiResponseLocalVar, int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request)
+        /// <param name="updateDataProviderCollRequest"></param>
+        private void AfterUpdateDataCustodianNetworkDefaultImplementation(IUpdateDataCustodianNetworkApiResponse apiResponseLocalVar, int id, UpdateDataProviderCollRequest updateDataProviderCollRequest)
         {
             bool suppressDefaultLog = false;
-            AfterDdc2f5ebf51037175006c6017e20d358(ref suppressDefaultLog, apiResponseLocalVar, id, c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
+            AfterUpdateDataCustodianNetwork(ref suppressDefaultLog, apiResponseLocalVar, id, updateDataProviderCollRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -3339,8 +3339,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request"></param>
-        partial void AfterDdc2f5ebf51037175006c6017e20d358(ref bool suppressDefaultLog, IDdc2f5ebf51037175006c6017e20d358ApiResponse apiResponseLocalVar, int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
+        /// <param name="updateDataProviderCollRequest"></param>
+        partial void AfterUpdateDataCustodianNetwork(ref bool suppressDefaultLog, IUpdateDataCustodianNetworkApiResponse apiResponseLocalVar, int id, UpdateDataProviderCollRequest updateDataProviderCollRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -3349,11 +3349,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request"></param>
-        private void OnErrorDdc2f5ebf51037175006c6017e20d358DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request)
+        /// <param name="updateDataProviderCollRequest"></param>
+        private void OnErrorUpdateDataCustodianNetworkDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateDataProviderCollRequest updateDataProviderCollRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorDdc2f5ebf51037175006c6017e20d358(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
+            OnErrorUpdateDataCustodianNetwork(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, updateDataProviderCollRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -3366,21 +3366,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request"></param>
-        partial void OnErrorDdc2f5ebf51037175006c6017e20d358(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
+        /// <param name="updateDataProviderCollRequest"></param>
+        partial void OnErrorUpdateDataCustodianNetwork(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateDataProviderCollRequest updateDataProviderCollRequest);
 
         /// <summary>
         /// DataCustodianNetworks@update Update a DataCustodianNetwork
         /// </summary>
         /// <param name="id">DataCustodianNetworks ID</param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request">DataCustodianNetwork definition</param>
+        /// <param name="updateDataProviderCollRequest">DataCustodianNetwork definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDdc2f5ebf51037175006c6017e20d358ApiResponse"/>&gt;</returns>
-        public async Task<IDdc2f5ebf51037175006c6017e20d358ApiResponse?> Ddc2f5ebf51037175006c6017e20d358OrDefaultAsync(int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateDataCustodianNetworkApiResponse"/>&gt;</returns>
+        public async Task<IUpdateDataCustodianNetworkApiResponse?> UpdateDataCustodianNetworkOrDefaultAsync(int id, UpdateDataProviderCollRequest updateDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Ddc2f5ebf51037175006c6017e20d358Async(id, c5bb5300d6a46cc5b1b6a3bb1c3fa869Request, cancellationToken).ConfigureAwait(false);
+                return await UpdateDataCustodianNetworkAsync(id, updateDataProviderCollRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -3393,18 +3393,18 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">DataCustodianNetworks ID</param>
-        /// <param name="c5bb5300d6a46cc5b1b6a3bb1c3fa869Request">DataCustodianNetwork definition</param>
+        /// <param name="updateDataProviderCollRequest">DataCustodianNetwork definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDdc2f5ebf51037175006c6017e20d358ApiResponse"/>&gt;</returns>
-        public async Task<IDdc2f5ebf51037175006c6017e20d358ApiResponse> Ddc2f5ebf51037175006c6017e20d358Async(int id, C5bb5300d6a46cc5b1b6a3bb1c3fa869Request c5bb5300d6a46cc5b1b6a3bb1c3fa869Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateDataCustodianNetworkApiResponse"/>&gt;</returns>
+        public async Task<IUpdateDataCustodianNetworkApiResponse> UpdateDataCustodianNetworkAsync(int id, UpdateDataProviderCollRequest updateDataProviderCollRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateDdc2f5ebf51037175006c6017e20d358(c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
+                ValidateUpdateDataCustodianNetwork(updateDataProviderCollRequest);
 
-                FormatDdc2f5ebf51037175006c6017e20d358(ref id, c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
+                FormatUpdateDataCustodianNetwork(ref id, updateDataProviderCollRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -3416,9 +3416,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/data_custodian_networks/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (c5bb5300d6a46cc5b1b6a3bb1c3fa869Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (updateDataProviderCollRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(c5bb5300d6a46cc5b1b6a3bb1c3fa869Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateDataProviderCollRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -3453,7 +3453,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Ddc2f5ebf51037175006c6017e20d358ApiResponse apiResponseLocalVar;
+                        UpdateDataCustodianNetworkApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -3464,9 +3464,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterDdc2f5ebf51037175006c6017e20d358DefaultImplementation(apiResponseLocalVar, id, c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
+                        AfterUpdateDataCustodianNetworkDefaultImplementation(apiResponseLocalVar, id, updateDataProviderCollRequest);
 
-                        Events.ExecuteOnDdc2f5ebf51037175006c6017e20d358(apiResponseLocalVar);
+                        Events.ExecuteOnUpdateDataCustodianNetwork(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -3478,16 +3478,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorDdc2f5ebf51037175006c6017e20d358DefaultImplementation(e, "/api/v2/data_custodian_networks/{id}", uriBuilderLocalVar.Path, id, c5bb5300d6a46cc5b1b6a3bb1c3fa869Request);
-                Events.ExecuteOnErrorDdc2f5ebf51037175006c6017e20d358(e);
+                OnErrorUpdateDataCustodianNetworkDefaultImplementation(e, "/api/v2/data_custodian_networks/{id}", uriBuilderLocalVar.Path, id, updateDataProviderCollRequest);
+                Events.ExecuteOnErrorUpdateDataCustodianNetwork(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Ddc2f5ebf51037175006c6017e20d358ApiResponse"/>
+        /// The <see cref="UpdateDataCustodianNetworkApiResponse"/>
         /// </summary>
-        public partial class Ddc2f5ebf51037175006c6017e20d358ApiResponse : GatewayApiSdk.Client.ApiResponse, IDdc2f5ebf51037175006c6017e20d358ApiResponse
+        public partial class UpdateDataCustodianNetworkApiResponse : GatewayApiSdk.Client.ApiResponse, IUpdateDataCustodianNetworkApiResponse
         {
             /// <summary>
             /// The logger
@@ -3495,7 +3495,7 @@ namespace GatewayApiSdk.Api
             public ILogger<DataCustodianNetworksApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Ddc2f5ebf51037175006c6017e20d358ApiResponse"/>
+            /// The <see cref="UpdateDataCustodianNetworkApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -3504,14 +3504,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Ddc2f5ebf51037175006c6017e20d358ApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public UpdateDataCustodianNetworkApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Ddc2f5ebf51037175006c6017e20d358ApiResponse"/>
+            /// The <see cref="UpdateDataCustodianNetworkApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -3520,7 +3520,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Ddc2f5ebf51037175006c6017e20d358ApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public UpdateDataCustodianNetworkApiResponse(ILogger<DataCustodianNetworksApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -3538,11 +3538,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.AliasControllerShow404Response? NotFound()
+            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.AliasControllerShow404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -3551,7 +3551,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.AliasControllerShow404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
             {
                 result = null;
 
@@ -3576,11 +3576,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Ddc2f5ebf51037175006c6017e20d358200Response? Ok()
+            public GatewayApiSdk.Model.UpdateDataCustodianNetwork200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Ddc2f5ebf51037175006c6017e20d358200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateDataCustodianNetwork200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -3589,7 +3589,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Ddc2f5ebf51037175006c6017e20d358200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateDataCustodianNetwork200Response? result)
             {
                 result = null;
 
@@ -3614,11 +3614,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -3627,7 +3627,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.Model079b2d545c7f4705016912f5de1bf444500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
             {
                 result = null;
 

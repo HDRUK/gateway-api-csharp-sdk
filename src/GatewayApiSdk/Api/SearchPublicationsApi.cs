@@ -45,13 +45,13 @@ namespace GatewayApiSdk.Api
         /// Returns gateway publications related to the provided query term(s)
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model9946399cbddb0dcadcbd5801e5ee1dd4Request">Submit search query</param>
+        /// <param name="searchPublicationsRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="source">Which source to search (&#39;GAT&#39; or &#39;FED&#39;, default: &#39;GAT&#39;) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse"/>&gt;</returns>
-        Task<ICall9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse> Call9946399cbddb0dcadcbd5801e5ee1dd4Async(Model9946399cbddb0dcadcbd5801e5ee1dd4Request model9946399cbddb0dcadcbd5801e5ee1dd4Request, Option<string> sort = default, Option<string> direction = default, Option<string> source = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchPublicationsApiResponse"/>&gt;</returns>
+        Task<ISearchPublicationsApiResponse> SearchPublicationsAsync(SearchPublicationsRequest searchPublicationsRequest, Option<string> sort = default, Option<string> direction = default, Option<string> source = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Search@publications
@@ -59,13 +59,13 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Returns gateway publications related to the provided query term(s)
         /// </remarks>
-        /// <param name="model9946399cbddb0dcadcbd5801e5ee1dd4Request">Submit search query</param>
+        /// <param name="searchPublicationsRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="source">Which source to search (&#39;GAT&#39; or &#39;FED&#39;, default: &#39;GAT&#39;) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse"/>?&gt;</returns>
-        Task<ICall9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse?> Call9946399cbddb0dcadcbd5801e5ee1dd4OrDefaultAsync(Model9946399cbddb0dcadcbd5801e5ee1dd4Request model9946399cbddb0dcadcbd5801e5ee1dd4Request, Option<string> sort = default, Option<string> direction = default, Option<string> source = default, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchPublicationsApiResponse"/>?&gt;</returns>
+        Task<ISearchPublicationsApiResponse?> SearchPublicationsOrDefaultAsync(SearchPublicationsRequest searchPublicationsRequest, Option<string> sort = default, Option<string> direction = default, Option<string> source = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Search@publications
@@ -74,10 +74,10 @@ namespace GatewayApiSdk.Api
         /// Returns publications from EuropePMC matching a give DOI
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model9a0abfa6186327d43c51259d5b524fdeRequest">Submit search query</param>
+        /// <param name="searchPublicationsByDoiRequest">Submit search query</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9a0abfa6186327d43c51259d5b524fdeApiResponse"/>&gt;</returns>
-        Task<ICall9a0abfa6186327d43c51259d5b524fdeApiResponse> Call9a0abfa6186327d43c51259d5b524fdeAsync(Model9a0abfa6186327d43c51259d5b524fdeRequest model9a0abfa6186327d43c51259d5b524fdeRequest, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchPublicationsByDoiApiResponse"/>&gt;</returns>
+        Task<ISearchPublicationsByDoiApiResponse> SearchPublicationsByDoiAsync(SearchPublicationsByDoiRequest searchPublicationsByDoiRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Search@publications
@@ -85,16 +85,16 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Returns publications from EuropePMC matching a give DOI
         /// </remarks>
-        /// <param name="model9a0abfa6186327d43c51259d5b524fdeRequest">Submit search query</param>
+        /// <param name="searchPublicationsByDoiRequest">Submit search query</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9a0abfa6186327d43c51259d5b524fdeApiResponse"/>?&gt;</returns>
-        Task<ICall9a0abfa6186327d43c51259d5b524fdeApiResponse?> Call9a0abfa6186327d43c51259d5b524fdeOrDefaultAsync(Model9a0abfa6186327d43c51259d5b524fdeRequest model9a0abfa6186327d43c51259d5b524fdeRequest, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchPublicationsByDoiApiResponse"/>?&gt;</returns>
+        Task<ISearchPublicationsByDoiApiResponse?> SearchPublicationsByDoiOrDefaultAsync(SearchPublicationsByDoiRequest searchPublicationsByDoiRequest, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="ICall9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse"/>
+    /// The <see cref="ISearchPublicationsApiResponse"/>
     /// </summary>
-    public interface ICall9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model9946399cbddb0dcadcbd5801e5ee1dd4200Response?>
+    public interface ISearchPublicationsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.SearchPublications200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -104,9 +104,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall9a0abfa6186327d43c51259d5b524fdeApiResponse"/>
+    /// The <see cref="ISearchPublicationsByDoiApiResponse"/>
     /// </summary>
-    public interface ICall9a0abfa6186327d43c51259d5b524fdeApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.Model9a0abfa6186327d43c51259d5b524fde200Response?>
+    public interface ISearchPublicationsByDoiApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.SearchPublicationsByDoi200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -129,41 +129,41 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall9946399cbddb0dcadcbd5801e5ee1dd4;
+        public event EventHandler<ApiResponseEventArgs>? OnSearchPublications;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall9946399cbddb0dcadcbd5801e5ee1dd4;
+        public event EventHandler<ExceptionEventArgs>? OnErrorSearchPublications;
 
-        internal void ExecuteOnCall9946399cbddb0dcadcbd5801e5ee1dd4(SearchPublicationsApi.Call9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse apiResponse)
+        internal void ExecuteOnSearchPublications(SearchPublicationsApi.SearchPublicationsApiResponse apiResponse)
         {
-            OnCall9946399cbddb0dcadcbd5801e5ee1dd4?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnSearchPublications?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall9946399cbddb0dcadcbd5801e5ee1dd4(Exception exception)
+        internal void ExecuteOnErrorSearchPublications(Exception exception)
         {
-            OnErrorCall9946399cbddb0dcadcbd5801e5ee1dd4?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorSearchPublications?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall9a0abfa6186327d43c51259d5b524fde;
+        public event EventHandler<ApiResponseEventArgs>? OnSearchPublicationsByDoi;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall9a0abfa6186327d43c51259d5b524fde;
+        public event EventHandler<ExceptionEventArgs>? OnErrorSearchPublicationsByDoi;
 
-        internal void ExecuteOnCall9a0abfa6186327d43c51259d5b524fde(SearchPublicationsApi.Call9a0abfa6186327d43c51259d5b524fdeApiResponse apiResponse)
+        internal void ExecuteOnSearchPublicationsByDoi(SearchPublicationsApi.SearchPublicationsByDoiApiResponse apiResponse)
         {
-            OnCall9a0abfa6186327d43c51259d5b524fde?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnSearchPublicationsByDoi?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall9a0abfa6186327d43c51259d5b524fde(Exception exception)
+        internal void ExecuteOnErrorSearchPublicationsByDoi(Exception exception)
         {
-            OnErrorCall9a0abfa6186327d43c51259d5b524fde?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorSearchPublicationsByDoi?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -208,20 +208,20 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatCall9946399cbddb0dcadcbd5801e5ee1dd4(Model9946399cbddb0dcadcbd5801e5ee1dd4Request model9946399cbddb0dcadcbd5801e5ee1dd4Request, ref Option<string> sort, ref Option<string> direction, ref Option<string> source);
+        partial void FormatSearchPublications(SearchPublicationsRequest searchPublicationsRequest, ref Option<string> sort, ref Option<string> direction, ref Option<string> source);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="model9946399cbddb0dcadcbd5801e5ee1dd4Request"></param>
+        /// <param name="searchPublicationsRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
         /// <param name="source"></param>
         /// <returns></returns>
-        private void ValidateCall9946399cbddb0dcadcbd5801e5ee1dd4(Model9946399cbddb0dcadcbd5801e5ee1dd4Request model9946399cbddb0dcadcbd5801e5ee1dd4Request, Option<string> sort, Option<string> direction, Option<string> source)
+        private void ValidateSearchPublications(SearchPublicationsRequest searchPublicationsRequest, Option<string> sort, Option<string> direction, Option<string> source)
         {
-            if (model9946399cbddb0dcadcbd5801e5ee1dd4Request == null)
-                throw new ArgumentNullException(nameof(model9946399cbddb0dcadcbd5801e5ee1dd4Request));
+            if (searchPublicationsRequest == null)
+                throw new ArgumentNullException(nameof(searchPublicationsRequest));
 
             if (sort.IsSet && sort.Value == null)
                 throw new ArgumentNullException(nameof(sort));
@@ -237,14 +237,14 @@ namespace GatewayApiSdk.Api
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model9946399cbddb0dcadcbd5801e5ee1dd4Request"></param>
+        /// <param name="searchPublicationsRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
         /// <param name="source"></param>
-        private void AfterCall9946399cbddb0dcadcbd5801e5ee1dd4DefaultImplementation(ICall9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse apiResponseLocalVar, Model9946399cbddb0dcadcbd5801e5ee1dd4Request model9946399cbddb0dcadcbd5801e5ee1dd4Request, Option<string> sort, Option<string> direction, Option<string> source)
+        private void AfterSearchPublicationsDefaultImplementation(ISearchPublicationsApiResponse apiResponseLocalVar, SearchPublicationsRequest searchPublicationsRequest, Option<string> sort, Option<string> direction, Option<string> source)
         {
             bool suppressDefaultLog = false;
-            AfterCall9946399cbddb0dcadcbd5801e5ee1dd4(ref suppressDefaultLog, apiResponseLocalVar, model9946399cbddb0dcadcbd5801e5ee1dd4Request, sort, direction, source);
+            AfterSearchPublications(ref suppressDefaultLog, apiResponseLocalVar, searchPublicationsRequest, sort, direction, source);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -254,11 +254,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model9946399cbddb0dcadcbd5801e5ee1dd4Request"></param>
+        /// <param name="searchPublicationsRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
         /// <param name="source"></param>
-        partial void AfterCall9946399cbddb0dcadcbd5801e5ee1dd4(ref bool suppressDefaultLog, ICall9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse apiResponseLocalVar, Model9946399cbddb0dcadcbd5801e5ee1dd4Request model9946399cbddb0dcadcbd5801e5ee1dd4Request, Option<string> sort, Option<string> direction, Option<string> source);
+        partial void AfterSearchPublications(ref bool suppressDefaultLog, ISearchPublicationsApiResponse apiResponseLocalVar, SearchPublicationsRequest searchPublicationsRequest, Option<string> sort, Option<string> direction, Option<string> source);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -266,14 +266,14 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model9946399cbddb0dcadcbd5801e5ee1dd4Request"></param>
+        /// <param name="searchPublicationsRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
         /// <param name="source"></param>
-        private void OnErrorCall9946399cbddb0dcadcbd5801e5ee1dd4DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model9946399cbddb0dcadcbd5801e5ee1dd4Request model9946399cbddb0dcadcbd5801e5ee1dd4Request, Option<string> sort, Option<string> direction, Option<string> source)
+        private void OnErrorSearchPublicationsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, SearchPublicationsRequest searchPublicationsRequest, Option<string> sort, Option<string> direction, Option<string> source)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall9946399cbddb0dcadcbd5801e5ee1dd4(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, model9946399cbddb0dcadcbd5801e5ee1dd4Request, sort, direction, source);
+            OnErrorSearchPublications(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, searchPublicationsRequest, sort, direction, source);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -285,26 +285,26 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model9946399cbddb0dcadcbd5801e5ee1dd4Request"></param>
+        /// <param name="searchPublicationsRequest"></param>
         /// <param name="sort"></param>
         /// <param name="direction"></param>
         /// <param name="source"></param>
-        partial void OnErrorCall9946399cbddb0dcadcbd5801e5ee1dd4(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model9946399cbddb0dcadcbd5801e5ee1dd4Request model9946399cbddb0dcadcbd5801e5ee1dd4Request, Option<string> sort, Option<string> direction, Option<string> source);
+        partial void OnErrorSearchPublications(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, SearchPublicationsRequest searchPublicationsRequest, Option<string> sort, Option<string> direction, Option<string> source);
 
         /// <summary>
         /// Search@publications Returns gateway publications related to the provided query term(s)
         /// </summary>
-        /// <param name="model9946399cbddb0dcadcbd5801e5ee1dd4Request">Submit search query</param>
+        /// <param name="searchPublicationsRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="source">Which source to search (&#39;GAT&#39; or &#39;FED&#39;, default: &#39;GAT&#39;) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse"/>&gt;</returns>
-        public async Task<ICall9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse?> Call9946399cbddb0dcadcbd5801e5ee1dd4OrDefaultAsync(Model9946399cbddb0dcadcbd5801e5ee1dd4Request model9946399cbddb0dcadcbd5801e5ee1dd4Request, Option<string> sort = default, Option<string> direction = default, Option<string> source = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchPublicationsApiResponse"/>&gt;</returns>
+        public async Task<ISearchPublicationsApiResponse?> SearchPublicationsOrDefaultAsync(SearchPublicationsRequest searchPublicationsRequest, Option<string> sort = default, Option<string> direction = default, Option<string> source = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call9946399cbddb0dcadcbd5801e5ee1dd4Async(model9946399cbddb0dcadcbd5801e5ee1dd4Request, sort, direction, source, cancellationToken).ConfigureAwait(false);
+                return await SearchPublicationsAsync(searchPublicationsRequest, sort, direction, source, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -316,21 +316,21 @@ namespace GatewayApiSdk.Api
         /// Search@publications Returns gateway publications related to the provided query term(s)
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model9946399cbddb0dcadcbd5801e5ee1dd4Request">Submit search query</param>
+        /// <param name="searchPublicationsRequest">Submit search query</param>
         /// <param name="sort">Field to sort by (default: &#39;score&#39;) (optional)</param>
         /// <param name="direction">Sort direction (&#39;asc&#39; or &#39;desc&#39;, default: &#39;desc&#39;) (optional)</param>
         /// <param name="source">Which source to search (&#39;GAT&#39; or &#39;FED&#39;, default: &#39;GAT&#39;) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse"/>&gt;</returns>
-        public async Task<ICall9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse> Call9946399cbddb0dcadcbd5801e5ee1dd4Async(Model9946399cbddb0dcadcbd5801e5ee1dd4Request model9946399cbddb0dcadcbd5801e5ee1dd4Request, Option<string> sort = default, Option<string> direction = default, Option<string> source = default, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchPublicationsApiResponse"/>&gt;</returns>
+        public async Task<ISearchPublicationsApiResponse> SearchPublicationsAsync(SearchPublicationsRequest searchPublicationsRequest, Option<string> sort = default, Option<string> direction = default, Option<string> source = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall9946399cbddb0dcadcbd5801e5ee1dd4(model9946399cbddb0dcadcbd5801e5ee1dd4Request, sort, direction, source);
+                ValidateSearchPublications(searchPublicationsRequest, sort, direction, source);
 
-                FormatCall9946399cbddb0dcadcbd5801e5ee1dd4(model9946399cbddb0dcadcbd5801e5ee1dd4Request, ref sort, ref direction, ref source);
+                FormatSearchPublications(searchPublicationsRequest, ref sort, ref direction, ref source);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -354,9 +354,9 @@ namespace GatewayApiSdk.Api
 
                     uriBuilderLocalVar.Query = parseQueryStringLocalVar.ToString();
 
-                    httpRequestMessageLocalVar.Content = (model9946399cbddb0dcadcbd5801e5ee1dd4Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (searchPublicationsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model9946399cbddb0dcadcbd5801e5ee1dd4Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(searchPublicationsRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -391,7 +391,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse apiResponseLocalVar;
+                        SearchPublicationsApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -402,9 +402,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall9946399cbddb0dcadcbd5801e5ee1dd4DefaultImplementation(apiResponseLocalVar, model9946399cbddb0dcadcbd5801e5ee1dd4Request, sort, direction, source);
+                        AfterSearchPublicationsDefaultImplementation(apiResponseLocalVar, searchPublicationsRequest, sort, direction, source);
 
-                        Events.ExecuteOnCall9946399cbddb0dcadcbd5801e5ee1dd4(apiResponseLocalVar);
+                        Events.ExecuteOnSearchPublications(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -416,16 +416,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall9946399cbddb0dcadcbd5801e5ee1dd4DefaultImplementation(e, "/api/v1/search/publications", uriBuilderLocalVar.Path, model9946399cbddb0dcadcbd5801e5ee1dd4Request, sort, direction, source);
-                Events.ExecuteOnErrorCall9946399cbddb0dcadcbd5801e5ee1dd4(e);
+                OnErrorSearchPublicationsDefaultImplementation(e, "/api/v1/search/publications", uriBuilderLocalVar.Path, searchPublicationsRequest, sort, direction, source);
+                Events.ExecuteOnErrorSearchPublications(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse"/>
+        /// The <see cref="SearchPublicationsApiResponse"/>
         /// </summary>
-        public partial class Call9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse
+        public partial class SearchPublicationsApiResponse : GatewayApiSdk.Client.ApiResponse, ISearchPublicationsApiResponse
         {
             /// <summary>
             /// The logger
@@ -433,7 +433,7 @@ namespace GatewayApiSdk.Api
             public ILogger<SearchPublicationsApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse"/>
+            /// The <see cref="SearchPublicationsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -442,14 +442,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse(ILogger<SearchPublicationsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public SearchPublicationsApiResponse(ILogger<SearchPublicationsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse"/>
+            /// The <see cref="SearchPublicationsApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -458,7 +458,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call9946399cbddb0dcadcbd5801e5ee1dd4ApiResponse(ILogger<SearchPublicationsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public SearchPublicationsApiResponse(ILogger<SearchPublicationsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -476,11 +476,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model9946399cbddb0dcadcbd5801e5ee1dd4200Response? Ok()
+            public GatewayApiSdk.Model.SearchPublications200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model9946399cbddb0dcadcbd5801e5ee1dd4200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.SearchPublications200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -489,7 +489,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model9946399cbddb0dcadcbd5801e5ee1dd4200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.SearchPublications200Response? result)
             {
                 result = null;
 
@@ -515,28 +515,28 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall9a0abfa6186327d43c51259d5b524fde(Model9a0abfa6186327d43c51259d5b524fdeRequest model9a0abfa6186327d43c51259d5b524fdeRequest);
+        partial void FormatSearchPublicationsByDoi(SearchPublicationsByDoiRequest searchPublicationsByDoiRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="model9a0abfa6186327d43c51259d5b524fdeRequest"></param>
+        /// <param name="searchPublicationsByDoiRequest"></param>
         /// <returns></returns>
-        private void ValidateCall9a0abfa6186327d43c51259d5b524fde(Model9a0abfa6186327d43c51259d5b524fdeRequest model9a0abfa6186327d43c51259d5b524fdeRequest)
+        private void ValidateSearchPublicationsByDoi(SearchPublicationsByDoiRequest searchPublicationsByDoiRequest)
         {
-            if (model9a0abfa6186327d43c51259d5b524fdeRequest == null)
-                throw new ArgumentNullException(nameof(model9a0abfa6186327d43c51259d5b524fdeRequest));
+            if (searchPublicationsByDoiRequest == null)
+                throw new ArgumentNullException(nameof(searchPublicationsByDoiRequest));
         }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model9a0abfa6186327d43c51259d5b524fdeRequest"></param>
-        private void AfterCall9a0abfa6186327d43c51259d5b524fdeDefaultImplementation(ICall9a0abfa6186327d43c51259d5b524fdeApiResponse apiResponseLocalVar, Model9a0abfa6186327d43c51259d5b524fdeRequest model9a0abfa6186327d43c51259d5b524fdeRequest)
+        /// <param name="searchPublicationsByDoiRequest"></param>
+        private void AfterSearchPublicationsByDoiDefaultImplementation(ISearchPublicationsByDoiApiResponse apiResponseLocalVar, SearchPublicationsByDoiRequest searchPublicationsByDoiRequest)
         {
             bool suppressDefaultLog = false;
-            AfterCall9a0abfa6186327d43c51259d5b524fde(ref suppressDefaultLog, apiResponseLocalVar, model9a0abfa6186327d43c51259d5b524fdeRequest);
+            AfterSearchPublicationsByDoi(ref suppressDefaultLog, apiResponseLocalVar, searchPublicationsByDoiRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -546,8 +546,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model9a0abfa6186327d43c51259d5b524fdeRequest"></param>
-        partial void AfterCall9a0abfa6186327d43c51259d5b524fde(ref bool suppressDefaultLog, ICall9a0abfa6186327d43c51259d5b524fdeApiResponse apiResponseLocalVar, Model9a0abfa6186327d43c51259d5b524fdeRequest model9a0abfa6186327d43c51259d5b524fdeRequest);
+        /// <param name="searchPublicationsByDoiRequest"></param>
+        partial void AfterSearchPublicationsByDoi(ref bool suppressDefaultLog, ISearchPublicationsByDoiApiResponse apiResponseLocalVar, SearchPublicationsByDoiRequest searchPublicationsByDoiRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -555,11 +555,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model9a0abfa6186327d43c51259d5b524fdeRequest"></param>
-        private void OnErrorCall9a0abfa6186327d43c51259d5b524fdeDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model9a0abfa6186327d43c51259d5b524fdeRequest model9a0abfa6186327d43c51259d5b524fdeRequest)
+        /// <param name="searchPublicationsByDoiRequest"></param>
+        private void OnErrorSearchPublicationsByDoiDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, SearchPublicationsByDoiRequest searchPublicationsByDoiRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall9a0abfa6186327d43c51259d5b524fde(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, model9a0abfa6186327d43c51259d5b524fdeRequest);
+            OnErrorSearchPublicationsByDoi(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, searchPublicationsByDoiRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -571,20 +571,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model9a0abfa6186327d43c51259d5b524fdeRequest"></param>
-        partial void OnErrorCall9a0abfa6186327d43c51259d5b524fde(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model9a0abfa6186327d43c51259d5b524fdeRequest model9a0abfa6186327d43c51259d5b524fdeRequest);
+        /// <param name="searchPublicationsByDoiRequest"></param>
+        partial void OnErrorSearchPublicationsByDoi(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, SearchPublicationsByDoiRequest searchPublicationsByDoiRequest);
 
         /// <summary>
         /// Search@publications Returns publications from EuropePMC matching a give DOI
         /// </summary>
-        /// <param name="model9a0abfa6186327d43c51259d5b524fdeRequest">Submit search query</param>
+        /// <param name="searchPublicationsByDoiRequest">Submit search query</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9a0abfa6186327d43c51259d5b524fdeApiResponse"/>&gt;</returns>
-        public async Task<ICall9a0abfa6186327d43c51259d5b524fdeApiResponse?> Call9a0abfa6186327d43c51259d5b524fdeOrDefaultAsync(Model9a0abfa6186327d43c51259d5b524fdeRequest model9a0abfa6186327d43c51259d5b524fdeRequest, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchPublicationsByDoiApiResponse"/>&gt;</returns>
+        public async Task<ISearchPublicationsByDoiApiResponse?> SearchPublicationsByDoiOrDefaultAsync(SearchPublicationsByDoiRequest searchPublicationsByDoiRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call9a0abfa6186327d43c51259d5b524fdeAsync(model9a0abfa6186327d43c51259d5b524fdeRequest, cancellationToken).ConfigureAwait(false);
+                return await SearchPublicationsByDoiAsync(searchPublicationsByDoiRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -596,18 +596,18 @@ namespace GatewayApiSdk.Api
         /// Search@publications Returns publications from EuropePMC matching a give DOI
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model9a0abfa6186327d43c51259d5b524fdeRequest">Submit search query</param>
+        /// <param name="searchPublicationsByDoiRequest">Submit search query</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall9a0abfa6186327d43c51259d5b524fdeApiResponse"/>&gt;</returns>
-        public async Task<ICall9a0abfa6186327d43c51259d5b524fdeApiResponse> Call9a0abfa6186327d43c51259d5b524fdeAsync(Model9a0abfa6186327d43c51259d5b524fdeRequest model9a0abfa6186327d43c51259d5b524fdeRequest, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ISearchPublicationsByDoiApiResponse"/>&gt;</returns>
+        public async Task<ISearchPublicationsByDoiApiResponse> SearchPublicationsByDoiAsync(SearchPublicationsByDoiRequest searchPublicationsByDoiRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall9a0abfa6186327d43c51259d5b524fde(model9a0abfa6186327d43c51259d5b524fdeRequest);
+                ValidateSearchPublicationsByDoi(searchPublicationsByDoiRequest);
 
-                FormatCall9a0abfa6186327d43c51259d5b524fde(model9a0abfa6186327d43c51259d5b524fdeRequest);
+                FormatSearchPublicationsByDoi(searchPublicationsByDoiRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -618,9 +618,9 @@ namespace GatewayApiSdk.Api
                         ? "/api/v1/search/doi"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/search/doi");
 
-                    httpRequestMessageLocalVar.Content = (model9a0abfa6186327d43c51259d5b524fdeRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (searchPublicationsByDoiRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model9a0abfa6186327d43c51259d5b524fdeRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(searchPublicationsByDoiRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -655,7 +655,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call9a0abfa6186327d43c51259d5b524fdeApiResponse apiResponseLocalVar;
+                        SearchPublicationsByDoiApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -666,9 +666,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall9a0abfa6186327d43c51259d5b524fdeDefaultImplementation(apiResponseLocalVar, model9a0abfa6186327d43c51259d5b524fdeRequest);
+                        AfterSearchPublicationsByDoiDefaultImplementation(apiResponseLocalVar, searchPublicationsByDoiRequest);
 
-                        Events.ExecuteOnCall9a0abfa6186327d43c51259d5b524fde(apiResponseLocalVar);
+                        Events.ExecuteOnSearchPublicationsByDoi(apiResponseLocalVar);
 
                         if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
@@ -680,16 +680,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall9a0abfa6186327d43c51259d5b524fdeDefaultImplementation(e, "/api/v1/search/doi", uriBuilderLocalVar.Path, model9a0abfa6186327d43c51259d5b524fdeRequest);
-                Events.ExecuteOnErrorCall9a0abfa6186327d43c51259d5b524fde(e);
+                OnErrorSearchPublicationsByDoiDefaultImplementation(e, "/api/v1/search/doi", uriBuilderLocalVar.Path, searchPublicationsByDoiRequest);
+                Events.ExecuteOnErrorSearchPublicationsByDoi(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call9a0abfa6186327d43c51259d5b524fdeApiResponse"/>
+        /// The <see cref="SearchPublicationsByDoiApiResponse"/>
         /// </summary>
-        public partial class Call9a0abfa6186327d43c51259d5b524fdeApiResponse : GatewayApiSdk.Client.ApiResponse, ICall9a0abfa6186327d43c51259d5b524fdeApiResponse
+        public partial class SearchPublicationsByDoiApiResponse : GatewayApiSdk.Client.ApiResponse, ISearchPublicationsByDoiApiResponse
         {
             /// <summary>
             /// The logger
@@ -697,7 +697,7 @@ namespace GatewayApiSdk.Api
             public ILogger<SearchPublicationsApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call9a0abfa6186327d43c51259d5b524fdeApiResponse"/>
+            /// The <see cref="SearchPublicationsByDoiApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -706,14 +706,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call9a0abfa6186327d43c51259d5b524fdeApiResponse(ILogger<SearchPublicationsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public SearchPublicationsByDoiApiResponse(ILogger<SearchPublicationsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call9a0abfa6186327d43c51259d5b524fdeApiResponse"/>
+            /// The <see cref="SearchPublicationsByDoiApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -722,7 +722,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call9a0abfa6186327d43c51259d5b524fdeApiResponse(ILogger<SearchPublicationsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public SearchPublicationsByDoiApiResponse(ILogger<SearchPublicationsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -740,11 +740,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.Model9a0abfa6186327d43c51259d5b524fde200Response? Ok()
+            public GatewayApiSdk.Model.SearchPublicationsByDoi200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.Model9a0abfa6186327d43c51259d5b524fde200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.SearchPublicationsByDoi200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -753,7 +753,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.Model9a0abfa6186327d43c51259d5b524fde200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.SearchPublicationsByDoi200Response? result)
             {
                 result = null;
 

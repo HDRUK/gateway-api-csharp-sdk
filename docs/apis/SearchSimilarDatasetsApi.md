@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**Cd41e1bd1b9f9918da2bb53a240b8bfe**](SearchSimilarDatasetsApi.md#cd41e1bd1b9f9918da2bb53a240b8bfe) | **POST** /api/v1/search/similar/datasets | Search@similarDatasets |
+| [**SearchSimilarDatasets**](SearchSimilarDatasetsApi.md#searchsimilardatasets) | **POST** /api/v1/search/similar/datasets | Search@similarDatasets |
 
-<a id="cd41e1bd1b9f9918da2bb53a240b8bfe"></a>
-# **Cd41e1bd1b9f9918da2bb53a240b8bfe**
-> Cd41e1bd1b9f9918da2bb53a240b8bfe200Response Cd41e1bd1b9f9918da2bb53a240b8bfe (Cd41e1bd1b9f9918da2bb53a240b8bfeRequest cd41e1bd1b9f9918da2bb53a240b8bfeRequest)
+<a id="searchsimilardatasets"></a>
+# **SearchSimilarDatasets**
+> SearchSimilarDatasets200Response SearchSimilarDatasets (SearchSimilarDatasetsRequest searchSimilarDatasetsRequest)
 
 Search@similarDatasets
 
@@ -19,11 +19,11 @@ Returns top three gateway datasets most similar to the provided dataset
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **cd41e1bd1b9f9918da2bb53a240b8bfeRequest** | [**Cd41e1bd1b9f9918da2bb53a240b8bfeRequest**](Cd41e1bd1b9f9918da2bb53a240b8bfeRequest.md) | Submit dataset id |  |
+| **searchSimilarDatasetsRequest** | [**SearchSimilarDatasetsRequest**](SearchSimilarDatasetsRequest.md) | Submit dataset id |  |
 
 ### Return type
 
-[**Cd41e1bd1b9f9918da2bb53a240b8bfe200Response**](Cd41e1bd1b9f9918da2bb53a240b8bfe200Response.md)
+[**SearchSimilarDatasets200Response**](SearchSimilarDatasets200Response.md)
 
 ### Authorization
 

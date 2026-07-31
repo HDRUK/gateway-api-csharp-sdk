@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**Call805e0e12862cf992698405bf5795b042**](AdminDataCustodianNetworksApi.md#call805e0e12862cf992698405bf5795b042) | **GET** /api/v2/admin/data_custodian_networks | DataCustodianNetworks@adminIndex |
+| [**FetchAdminDataCustodianNetworks**](AdminDataCustodianNetworksApi.md#fetchadmindatacustodiannetworks) | **GET** /api/v2/admin/data_custodian_networks | DataCustodianNetworks@adminIndex |
 
-<a id="call805e0e12862cf992698405bf5795b042"></a>
-# **Call805e0e12862cf992698405bf5795b042**
-> void Call805e0e12862cf992698405bf5795b042 (int perPage = null)
+<a id="fetchadmindatacustodiannetworks"></a>
+# **FetchAdminDataCustodianNetworks**
+> void FetchAdminDataCustodianNetworks (int perPage = null)
 
 DataCustodianNetworks@adminIndex
 

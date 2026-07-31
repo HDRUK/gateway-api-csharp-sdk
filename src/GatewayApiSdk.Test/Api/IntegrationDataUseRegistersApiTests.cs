@@ -51,44 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test Call3c0f53b5284c481bc135c2035d40c017
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call3c0f53b5284c481bc135c2035d40c017AsyncTest()
-        {
-            int id = default!;
-            CreateDurIntegrationsRequest createDurIntegrationsRequest = default!;
-            var response = await _instance.Call3c0f53b5284c481bc135c2035d40c017Async(id, createDurIntegrationsRequest);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call3c79eaaecaae1de1b86c443337841895
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call3c79eaaecaae1de1b86c443337841895AsyncTest()
-        {
-            int id = default!;
-            CreateDurIntegrationsRequest createDurIntegrationsRequest = default!;
-            var response = await _instance.Call3c79eaaecaae1de1b86c443337841895Async(id, createDurIntegrationsRequest);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call7170e7dc71293d3b5042d6cb03298eb4
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call7170e7dc71293d3b5042d6cb03298eb4AsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.Call7170e7dc71293d3b5042d6cb03298eb4Async(id);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
         /// Test CreateDurIntegrations
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -97,7 +59,32 @@ namespace GatewayApiSdk.Test.Api
             CreateDurIntegrationsRequest createDurIntegrationsRequest = default!;
             var response = await _instance.CreateDurIntegrationsAsync(createDurIntegrationsRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
+        }
+
+        /// <summary>
+        /// Test DeleteDurIntegrations
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task DeleteDurIntegrationsAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.DeleteDurIntegrationsAsync(id);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test EditDurIntegrations
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task EditDurIntegrationsAsyncTest()
+        {
+            int id = default!;
+            CreateDurIntegrationsRequest createDurIntegrationsRequest = default!;
+            var response = await _instance.EditDurIntegrationsAsync(id, createDurIntegrationsRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
@@ -123,6 +110,19 @@ namespace GatewayApiSdk.Test.Api
             var response = await _instance.FetchDurByIdIntegrationsAsync(id);
             var model = response.Ok();
             Assert.IsType<FetchDurByIdIntegrations200Response>(model);
+        }
+
+        /// <summary>
+        /// Test UpdateDurIntegrations
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task UpdateDurIntegrationsAsyncTest()
+        {
+            int id = default!;
+            CreateDurIntegrationsRequest createDurIntegrationsRequest = default!;
+            var response = await _instance.UpdateDurIntegrationsAsync(id, createDurIntegrationsRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
         }
     }
 }

@@ -39,27 +39,27 @@ namespace GatewayApiSdk.Api
         AdminSearchApiEvents Events { get; }
 
         /// <summary>
-        /// Activate or deactivate a search-related Pennant feature flag
+        /// Queue a drop+recreate+import of a search entity&#39;s Typesense collection
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model4ff0fc5e7c66284608ce55dc6cb7d846Request"></param>
+        /// <param name="createAdminSearchReindexRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse"/>&gt;</returns>
-        Task<ICall4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse> Call4ff0fc5e7c66284608ce55dc6cb7d846Async(Model4ff0fc5e7c66284608ce55dc6cb7d846Request model4ff0fc5e7c66284608ce55dc6cb7d846Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateAdminSearchReindexApiResponse"/>&gt;</returns>
+        Task<ICreateAdminSearchReindexApiResponse> CreateAdminSearchReindexAsync(CreateAdminSearchReindexRequest createAdminSearchReindexRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Activate or deactivate a search-related Pennant feature flag
+        /// Queue a drop+recreate+import of a search entity&#39;s Typesense collection
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="model4ff0fc5e7c66284608ce55dc6cb7d846Request"></param>
+        /// <param name="createAdminSearchReindexRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse"/>?&gt;</returns>
-        Task<ICall4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse?> Call4ff0fc5e7c66284608ce55dc6cb7d846OrDefaultAsync(Model4ff0fc5e7c66284608ce55dc6cb7d846Request model4ff0fc5e7c66284608ce55dc6cb7d846Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateAdminSearchReindexApiResponse"/>?&gt;</returns>
+        Task<ICreateAdminSearchReindexApiResponse?> CreateAdminSearchReindexOrDefaultAsync(CreateAdminSearchReindexRequest createAdminSearchReindexRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get Typesense collection status for every onboarded search entity
@@ -69,8 +69,8 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall8918bd9dfb8e055a335f3c0695428e73ApiResponse"/>&gt;</returns>
-        Task<ICall8918bd9dfb8e055a335f3c0695428e73ApiResponse> Call8918bd9dfb8e055a335f3c0695428e73Async(System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAdminSearchStatusApiResponse"/>&gt;</returns>
+        Task<IFetchAdminSearchStatusApiResponse> FetchAdminSearchStatusAsync(System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get Typesense collection status for every onboarded search entity
@@ -79,43 +79,43 @@ namespace GatewayApiSdk.Api
         /// 
         /// </remarks>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall8918bd9dfb8e055a335f3c0695428e73ApiResponse"/>?&gt;</returns>
-        Task<ICall8918bd9dfb8e055a335f3c0695428e73ApiResponse?> Call8918bd9dfb8e055a335f3c0695428e73OrDefaultAsync(System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAdminSearchStatusApiResponse"/>?&gt;</returns>
+        Task<IFetchAdminSearchStatusApiResponse?> FetchAdminSearchStatusOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Queue a drop+recreate+import of a search entity&#39;s Typesense collection
+        /// Activate or deactivate a search-related Pennant feature flag
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model92a06ea019f5560b5c9e76e02fe38e31Request"></param>
+        /// <param name="updateAdminSearchFeatureRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall92a06ea019f5560b5c9e76e02fe38e31ApiResponse"/>&gt;</returns>
-        Task<ICall92a06ea019f5560b5c9e76e02fe38e31ApiResponse> Call92a06ea019f5560b5c9e76e02fe38e31Async(Model92a06ea019f5560b5c9e76e02fe38e31Request model92a06ea019f5560b5c9e76e02fe38e31Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateAdminSearchFeatureApiResponse"/>&gt;</returns>
+        Task<IUpdateAdminSearchFeatureApiResponse> UpdateAdminSearchFeatureAsync(UpdateAdminSearchFeatureRequest updateAdminSearchFeatureRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Queue a drop+recreate+import of a search entity&#39;s Typesense collection
+        /// Activate or deactivate a search-related Pennant feature flag
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="model92a06ea019f5560b5c9e76e02fe38e31Request"></param>
+        /// <param name="updateAdminSearchFeatureRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall92a06ea019f5560b5c9e76e02fe38e31ApiResponse"/>?&gt;</returns>
-        Task<ICall92a06ea019f5560b5c9e76e02fe38e31ApiResponse?> Call92a06ea019f5560b5c9e76e02fe38e31OrDefaultAsync(Model92a06ea019f5560b5c9e76e02fe38e31Request model92a06ea019f5560b5c9e76e02fe38e31Request, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateAdminSearchFeatureApiResponse"/>?&gt;</returns>
+        Task<IUpdateAdminSearchFeatureApiResponse?> UpdateAdminSearchFeatureOrDefaultAsync(UpdateAdminSearchFeatureRequest updateAdminSearchFeatureRequest, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="ICall4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse"/>
+    /// The <see cref="ICreateAdminSearchReindexApiResponse"/>
     /// </summary>
-    public interface ICall4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse : GatewayApiSdk.Client.IApiResponse
+    public interface ICreateAdminSearchReindexApiResponse : GatewayApiSdk.Client.IApiResponse
     {
         /// <summary>
-        /// Returns true if the response is 200 Ok
+        /// Returns true if the response is 202 Accepted
         /// </summary>
         /// <returns></returns>
-        bool IsOk { get; }
+        bool IsAccepted { get; }
 
         /// <summary>
         /// Returns true if the response is 422 UnprocessableContent
@@ -125,9 +125,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall8918bd9dfb8e055a335f3c0695428e73ApiResponse"/>
+    /// The <see cref="IFetchAdminSearchStatusApiResponse"/>
     /// </summary>
-    public interface ICall8918bd9dfb8e055a335f3c0695428e73ApiResponse : GatewayApiSdk.Client.IApiResponse
+    public interface IFetchAdminSearchStatusApiResponse : GatewayApiSdk.Client.IApiResponse
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -137,15 +137,15 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICall92a06ea019f5560b5c9e76e02fe38e31ApiResponse"/>
+    /// The <see cref="IUpdateAdminSearchFeatureApiResponse"/>
     /// </summary>
-    public interface ICall92a06ea019f5560b5c9e76e02fe38e31ApiResponse : GatewayApiSdk.Client.IApiResponse
+    public interface IUpdateAdminSearchFeatureApiResponse : GatewayApiSdk.Client.IApiResponse
     {
         /// <summary>
-        /// Returns true if the response is 202 Accepted
+        /// Returns true if the response is 200 Ok
         /// </summary>
         /// <returns></returns>
-        bool IsAccepted { get; }
+        bool IsOk { get; }
 
         /// <summary>
         /// Returns true if the response is 422 UnprocessableContent
@@ -162,61 +162,61 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall4ff0fc5e7c66284608ce55dc6cb7d846;
+        public event EventHandler<ApiResponseEventArgs>? OnCreateAdminSearchReindex;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall4ff0fc5e7c66284608ce55dc6cb7d846;
+        public event EventHandler<ExceptionEventArgs>? OnErrorCreateAdminSearchReindex;
 
-        internal void ExecuteOnCall4ff0fc5e7c66284608ce55dc6cb7d846(AdminSearchApi.Call4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse apiResponse)
+        internal void ExecuteOnCreateAdminSearchReindex(AdminSearchApi.CreateAdminSearchReindexApiResponse apiResponse)
         {
-            OnCall4ff0fc5e7c66284608ce55dc6cb7d846?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnCreateAdminSearchReindex?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall4ff0fc5e7c66284608ce55dc6cb7d846(Exception exception)
+        internal void ExecuteOnErrorCreateAdminSearchReindex(Exception exception)
         {
-            OnErrorCall4ff0fc5e7c66284608ce55dc6cb7d846?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorCreateAdminSearchReindex?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall8918bd9dfb8e055a335f3c0695428e73;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchAdminSearchStatus;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall8918bd9dfb8e055a335f3c0695428e73;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchAdminSearchStatus;
 
-        internal void ExecuteOnCall8918bd9dfb8e055a335f3c0695428e73(AdminSearchApi.Call8918bd9dfb8e055a335f3c0695428e73ApiResponse apiResponse)
+        internal void ExecuteOnFetchAdminSearchStatus(AdminSearchApi.FetchAdminSearchStatusApiResponse apiResponse)
         {
-            OnCall8918bd9dfb8e055a335f3c0695428e73?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchAdminSearchStatus?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall8918bd9dfb8e055a335f3c0695428e73(Exception exception)
+        internal void ExecuteOnErrorFetchAdminSearchStatus(Exception exception)
         {
-            OnErrorCall8918bd9dfb8e055a335f3c0695428e73?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchAdminSearchStatus?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCall92a06ea019f5560b5c9e76e02fe38e31;
+        public event EventHandler<ApiResponseEventArgs>? OnUpdateAdminSearchFeature;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCall92a06ea019f5560b5c9e76e02fe38e31;
+        public event EventHandler<ExceptionEventArgs>? OnErrorUpdateAdminSearchFeature;
 
-        internal void ExecuteOnCall92a06ea019f5560b5c9e76e02fe38e31(AdminSearchApi.Call92a06ea019f5560b5c9e76e02fe38e31ApiResponse apiResponse)
+        internal void ExecuteOnUpdateAdminSearchFeature(AdminSearchApi.UpdateAdminSearchFeatureApiResponse apiResponse)
         {
-            OnCall92a06ea019f5560b5c9e76e02fe38e31?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnUpdateAdminSearchFeature?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorCall92a06ea019f5560b5c9e76e02fe38e31(Exception exception)
+        internal void ExecuteOnErrorUpdateAdminSearchFeature(Exception exception)
         {
-            OnErrorCall92a06ea019f5560b5c9e76e02fe38e31?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorUpdateAdminSearchFeature?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -261,28 +261,28 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatCall4ff0fc5e7c66284608ce55dc6cb7d846(Model4ff0fc5e7c66284608ce55dc6cb7d846Request model4ff0fc5e7c66284608ce55dc6cb7d846Request);
+        partial void FormatCreateAdminSearchReindex(CreateAdminSearchReindexRequest createAdminSearchReindexRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="model4ff0fc5e7c66284608ce55dc6cb7d846Request"></param>
+        /// <param name="createAdminSearchReindexRequest"></param>
         /// <returns></returns>
-        private void ValidateCall4ff0fc5e7c66284608ce55dc6cb7d846(Model4ff0fc5e7c66284608ce55dc6cb7d846Request model4ff0fc5e7c66284608ce55dc6cb7d846Request)
+        private void ValidateCreateAdminSearchReindex(CreateAdminSearchReindexRequest createAdminSearchReindexRequest)
         {
-            if (model4ff0fc5e7c66284608ce55dc6cb7d846Request == null)
-                throw new ArgumentNullException(nameof(model4ff0fc5e7c66284608ce55dc6cb7d846Request));
+            if (createAdminSearchReindexRequest == null)
+                throw new ArgumentNullException(nameof(createAdminSearchReindexRequest));
         }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model4ff0fc5e7c66284608ce55dc6cb7d846Request"></param>
-        private void AfterCall4ff0fc5e7c66284608ce55dc6cb7d846DefaultImplementation(ICall4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse apiResponseLocalVar, Model4ff0fc5e7c66284608ce55dc6cb7d846Request model4ff0fc5e7c66284608ce55dc6cb7d846Request)
+        /// <param name="createAdminSearchReindexRequest"></param>
+        private void AfterCreateAdminSearchReindexDefaultImplementation(ICreateAdminSearchReindexApiResponse apiResponseLocalVar, CreateAdminSearchReindexRequest createAdminSearchReindexRequest)
         {
             bool suppressDefaultLog = false;
-            AfterCall4ff0fc5e7c66284608ce55dc6cb7d846(ref suppressDefaultLog, apiResponseLocalVar, model4ff0fc5e7c66284608ce55dc6cb7d846Request);
+            AfterCreateAdminSearchReindex(ref suppressDefaultLog, apiResponseLocalVar, createAdminSearchReindexRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -292,8 +292,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model4ff0fc5e7c66284608ce55dc6cb7d846Request"></param>
-        partial void AfterCall4ff0fc5e7c66284608ce55dc6cb7d846(ref bool suppressDefaultLog, ICall4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse apiResponseLocalVar, Model4ff0fc5e7c66284608ce55dc6cb7d846Request model4ff0fc5e7c66284608ce55dc6cb7d846Request);
+        /// <param name="createAdminSearchReindexRequest"></param>
+        partial void AfterCreateAdminSearchReindex(ref bool suppressDefaultLog, ICreateAdminSearchReindexApiResponse apiResponseLocalVar, CreateAdminSearchReindexRequest createAdminSearchReindexRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -301,11 +301,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model4ff0fc5e7c66284608ce55dc6cb7d846Request"></param>
-        private void OnErrorCall4ff0fc5e7c66284608ce55dc6cb7d846DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model4ff0fc5e7c66284608ce55dc6cb7d846Request model4ff0fc5e7c66284608ce55dc6cb7d846Request)
+        /// <param name="createAdminSearchReindexRequest"></param>
+        private void OnErrorCreateAdminSearchReindexDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateAdminSearchReindexRequest createAdminSearchReindexRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall4ff0fc5e7c66284608ce55dc6cb7d846(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, model4ff0fc5e7c66284608ce55dc6cb7d846Request);
+            OnErrorCreateAdminSearchReindex(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createAdminSearchReindexRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -317,20 +317,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model4ff0fc5e7c66284608ce55dc6cb7d846Request"></param>
-        partial void OnErrorCall4ff0fc5e7c66284608ce55dc6cb7d846(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model4ff0fc5e7c66284608ce55dc6cb7d846Request model4ff0fc5e7c66284608ce55dc6cb7d846Request);
+        /// <param name="createAdminSearchReindexRequest"></param>
+        partial void OnErrorCreateAdminSearchReindex(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateAdminSearchReindexRequest createAdminSearchReindexRequest);
 
         /// <summary>
-        /// Activate or deactivate a search-related Pennant feature flag 
+        /// Queue a drop+recreate+import of a search entity&#39;s Typesense collection 
         /// </summary>
-        /// <param name="model4ff0fc5e7c66284608ce55dc6cb7d846Request"></param>
+        /// <param name="createAdminSearchReindexRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse"/>&gt;</returns>
-        public async Task<ICall4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse?> Call4ff0fc5e7c66284608ce55dc6cb7d846OrDefaultAsync(Model4ff0fc5e7c66284608ce55dc6cb7d846Request model4ff0fc5e7c66284608ce55dc6cb7d846Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateAdminSearchReindexApiResponse"/>&gt;</returns>
+        public async Task<ICreateAdminSearchReindexApiResponse?> CreateAdminSearchReindexOrDefaultAsync(CreateAdminSearchReindexRequest createAdminSearchReindexRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call4ff0fc5e7c66284608ce55dc6cb7d846Async(model4ff0fc5e7c66284608ce55dc6cb7d846Request, cancellationToken).ConfigureAwait(false);
+                return await CreateAdminSearchReindexAsync(createAdminSearchReindexRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -339,21 +339,21 @@ namespace GatewayApiSdk.Api
         }
 
         /// <summary>
-        /// Activate or deactivate a search-related Pennant feature flag 
+        /// Queue a drop+recreate+import of a search entity&#39;s Typesense collection 
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model4ff0fc5e7c66284608ce55dc6cb7d846Request"></param>
+        /// <param name="createAdminSearchReindexRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse"/>&gt;</returns>
-        public async Task<ICall4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse> Call4ff0fc5e7c66284608ce55dc6cb7d846Async(Model4ff0fc5e7c66284608ce55dc6cb7d846Request model4ff0fc5e7c66284608ce55dc6cb7d846Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ICreateAdminSearchReindexApiResponse"/>&gt;</returns>
+        public async Task<ICreateAdminSearchReindexApiResponse> CreateAdminSearchReindexAsync(CreateAdminSearchReindexRequest createAdminSearchReindexRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall4ff0fc5e7c66284608ce55dc6cb7d846(model4ff0fc5e7c66284608ce55dc6cb7d846Request);
+                ValidateCreateAdminSearchReindex(createAdminSearchReindexRequest);
 
-                FormatCall4ff0fc5e7c66284608ce55dc6cb7d846(model4ff0fc5e7c66284608ce55dc6cb7d846Request);
+                FormatCreateAdminSearchReindex(createAdminSearchReindexRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -361,12 +361,12 @@ namespace GatewayApiSdk.Api
                     uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
                     uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
                     uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/admin/search/feature"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/admin/search/feature");
+                        ? "/api/v1/admin/search/reindex"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/admin/search/reindex");
 
-                    httpRequestMessageLocalVar.Content = (model4ff0fc5e7c66284608ce55dc6cb7d846Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (createAdminSearchReindexRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model4ff0fc5e7c66284608ce55dc6cb7d846Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createAdminSearchReindexRequest, _jsonSerializerOptions));
 
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
 
@@ -385,20 +385,20 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse apiResponseLocalVar;
+                        CreateAdminSearchReindexApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
                                 string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/admin/search/feature", requestedAtLocalVar, _jsonSerializerOptions);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/admin/search/reindex", requestedAtLocalVar, _jsonSerializerOptions);
 
                                 break;
                             }
                         }
 
-                        AfterCall4ff0fc5e7c66284608ce55dc6cb7d846DefaultImplementation(apiResponseLocalVar, model4ff0fc5e7c66284608ce55dc6cb7d846Request);
+                        AfterCreateAdminSearchReindexDefaultImplementation(apiResponseLocalVar, createAdminSearchReindexRequest);
 
-                        Events.ExecuteOnCall4ff0fc5e7c66284608ce55dc6cb7d846(apiResponseLocalVar);
+                        Events.ExecuteOnCreateAdminSearchReindex(apiResponseLocalVar);
 
                         return apiResponseLocalVar;
                     }
@@ -406,16 +406,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall4ff0fc5e7c66284608ce55dc6cb7d846DefaultImplementation(e, "/api/v1/admin/search/feature", uriBuilderLocalVar.Path, model4ff0fc5e7c66284608ce55dc6cb7d846Request);
-                Events.ExecuteOnErrorCall4ff0fc5e7c66284608ce55dc6cb7d846(e);
+                OnErrorCreateAdminSearchReindexDefaultImplementation(e, "/api/v1/admin/search/reindex", uriBuilderLocalVar.Path, createAdminSearchReindexRequest);
+                Events.ExecuteOnErrorCreateAdminSearchReindex(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse"/>
+        /// The <see cref="CreateAdminSearchReindexApiResponse"/>
         /// </summary>
-        public partial class Call4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse
+        public partial class CreateAdminSearchReindexApiResponse : GatewayApiSdk.Client.ApiResponse, ICreateAdminSearchReindexApiResponse
         {
             /// <summary>
             /// The logger
@@ -423,7 +423,7 @@ namespace GatewayApiSdk.Api
             public ILogger<AdminSearchApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse"/>
+            /// The <see cref="CreateAdminSearchReindexApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -432,14 +432,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse(ILogger<AdminSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public CreateAdminSearchReindexApiResponse(ILogger<AdminSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse"/>
+            /// The <see cref="CreateAdminSearchReindexApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -448,7 +448,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call4ff0fc5e7c66284608ce55dc6cb7d846ApiResponse(ILogger<AdminSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public CreateAdminSearchReindexApiResponse(ILogger<AdminSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -457,10 +457,10 @@ namespace GatewayApiSdk.Api
             partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
 
             /// <summary>
-            /// Returns true if the response is 200 Ok
+            /// Returns true if the response is 202 Accepted
             /// </summary>
             /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
+            public bool IsAccepted => 202 == (int)StatusCode;
 
             /// <summary>
             /// Returns true if the response is 422 UnprocessableContent
@@ -483,10 +483,10 @@ namespace GatewayApiSdk.Api
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        private void AfterCall8918bd9dfb8e055a335f3c0695428e73DefaultImplementation(ICall8918bd9dfb8e055a335f3c0695428e73ApiResponse apiResponseLocalVar)
+        private void AfterFetchAdminSearchStatusDefaultImplementation(IFetchAdminSearchStatusApiResponse apiResponseLocalVar)
         {
             bool suppressDefaultLog = false;
-            AfterCall8918bd9dfb8e055a335f3c0695428e73(ref suppressDefaultLog, apiResponseLocalVar);
+            AfterFetchAdminSearchStatus(ref suppressDefaultLog, apiResponseLocalVar);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -496,7 +496,7 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        partial void AfterCall8918bd9dfb8e055a335f3c0695428e73(ref bool suppressDefaultLog, ICall8918bd9dfb8e055a335f3c0695428e73ApiResponse apiResponseLocalVar);
+        partial void AfterFetchAdminSearchStatus(ref bool suppressDefaultLog, IFetchAdminSearchStatusApiResponse apiResponseLocalVar);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -504,10 +504,10 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        private void OnErrorCall8918bd9dfb8e055a335f3c0695428e73DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar)
+        private void OnErrorFetchAdminSearchStatusDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall8918bd9dfb8e055a335f3c0695428e73(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar);
+            OnErrorFetchAdminSearchStatus(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -519,18 +519,18 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        partial void OnErrorCall8918bd9dfb8e055a335f3c0695428e73(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar);
+        partial void OnErrorFetchAdminSearchStatus(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar);
 
         /// <summary>
         /// Get Typesense collection status for every onboarded search entity 
         /// </summary>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall8918bd9dfb8e055a335f3c0695428e73ApiResponse"/>&gt;</returns>
-        public async Task<ICall8918bd9dfb8e055a335f3c0695428e73ApiResponse?> Call8918bd9dfb8e055a335f3c0695428e73OrDefaultAsync(System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAdminSearchStatusApiResponse"/>&gt;</returns>
+        public async Task<IFetchAdminSearchStatusApiResponse?> FetchAdminSearchStatusOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call8918bd9dfb8e055a335f3c0695428e73Async(cancellationToken).ConfigureAwait(false);
+                return await FetchAdminSearchStatusAsync(cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -543,8 +543,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall8918bd9dfb8e055a335f3c0695428e73ApiResponse"/>&gt;</returns>
-        public async Task<ICall8918bd9dfb8e055a335f3c0695428e73ApiResponse> Call8918bd9dfb8e055a335f3c0695428e73Async(System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAdminSearchStatusApiResponse"/>&gt;</returns>
+        public async Task<IFetchAdminSearchStatusApiResponse> FetchAdminSearchStatusAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
@@ -567,7 +567,7 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call8918bd9dfb8e055a335f3c0695428e73ApiResponse apiResponseLocalVar;
+                        FetchAdminSearchStatusApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
@@ -578,9 +578,9 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCall8918bd9dfb8e055a335f3c0695428e73DefaultImplementation(apiResponseLocalVar);
+                        AfterFetchAdminSearchStatusDefaultImplementation(apiResponseLocalVar);
 
-                        Events.ExecuteOnCall8918bd9dfb8e055a335f3c0695428e73(apiResponseLocalVar);
+                        Events.ExecuteOnFetchAdminSearchStatus(apiResponseLocalVar);
 
                         return apiResponseLocalVar;
                     }
@@ -588,16 +588,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall8918bd9dfb8e055a335f3c0695428e73DefaultImplementation(e, "/api/v1/admin/search/status", uriBuilderLocalVar.Path);
-                Events.ExecuteOnErrorCall8918bd9dfb8e055a335f3c0695428e73(e);
+                OnErrorFetchAdminSearchStatusDefaultImplementation(e, "/api/v1/admin/search/status", uriBuilderLocalVar.Path);
+                Events.ExecuteOnErrorFetchAdminSearchStatus(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call8918bd9dfb8e055a335f3c0695428e73ApiResponse"/>
+        /// The <see cref="FetchAdminSearchStatusApiResponse"/>
         /// </summary>
-        public partial class Call8918bd9dfb8e055a335f3c0695428e73ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall8918bd9dfb8e055a335f3c0695428e73ApiResponse
+        public partial class FetchAdminSearchStatusApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchAdminSearchStatusApiResponse
         {
             /// <summary>
             /// The logger
@@ -605,7 +605,7 @@ namespace GatewayApiSdk.Api
             public ILogger<AdminSearchApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call8918bd9dfb8e055a335f3c0695428e73ApiResponse"/>
+            /// The <see cref="FetchAdminSearchStatusApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -614,14 +614,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call8918bd9dfb8e055a335f3c0695428e73ApiResponse(ILogger<AdminSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchAdminSearchStatusApiResponse(ILogger<AdminSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call8918bd9dfb8e055a335f3c0695428e73ApiResponse"/>
+            /// The <see cref="FetchAdminSearchStatusApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -630,7 +630,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call8918bd9dfb8e055a335f3c0695428e73ApiResponse(ILogger<AdminSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchAdminSearchStatusApiResponse(ILogger<AdminSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -655,28 +655,28 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCall92a06ea019f5560b5c9e76e02fe38e31(Model92a06ea019f5560b5c9e76e02fe38e31Request model92a06ea019f5560b5c9e76e02fe38e31Request);
+        partial void FormatUpdateAdminSearchFeature(UpdateAdminSearchFeatureRequest updateAdminSearchFeatureRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="model92a06ea019f5560b5c9e76e02fe38e31Request"></param>
+        /// <param name="updateAdminSearchFeatureRequest"></param>
         /// <returns></returns>
-        private void ValidateCall92a06ea019f5560b5c9e76e02fe38e31(Model92a06ea019f5560b5c9e76e02fe38e31Request model92a06ea019f5560b5c9e76e02fe38e31Request)
+        private void ValidateUpdateAdminSearchFeature(UpdateAdminSearchFeatureRequest updateAdminSearchFeatureRequest)
         {
-            if (model92a06ea019f5560b5c9e76e02fe38e31Request == null)
-                throw new ArgumentNullException(nameof(model92a06ea019f5560b5c9e76e02fe38e31Request));
+            if (updateAdminSearchFeatureRequest == null)
+                throw new ArgumentNullException(nameof(updateAdminSearchFeatureRequest));
         }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model92a06ea019f5560b5c9e76e02fe38e31Request"></param>
-        private void AfterCall92a06ea019f5560b5c9e76e02fe38e31DefaultImplementation(ICall92a06ea019f5560b5c9e76e02fe38e31ApiResponse apiResponseLocalVar, Model92a06ea019f5560b5c9e76e02fe38e31Request model92a06ea019f5560b5c9e76e02fe38e31Request)
+        /// <param name="updateAdminSearchFeatureRequest"></param>
+        private void AfterUpdateAdminSearchFeatureDefaultImplementation(IUpdateAdminSearchFeatureApiResponse apiResponseLocalVar, UpdateAdminSearchFeatureRequest updateAdminSearchFeatureRequest)
         {
             bool suppressDefaultLog = false;
-            AfterCall92a06ea019f5560b5c9e76e02fe38e31(ref suppressDefaultLog, apiResponseLocalVar, model92a06ea019f5560b5c9e76e02fe38e31Request);
+            AfterUpdateAdminSearchFeature(ref suppressDefaultLog, apiResponseLocalVar, updateAdminSearchFeatureRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -686,8 +686,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="model92a06ea019f5560b5c9e76e02fe38e31Request"></param>
-        partial void AfterCall92a06ea019f5560b5c9e76e02fe38e31(ref bool suppressDefaultLog, ICall92a06ea019f5560b5c9e76e02fe38e31ApiResponse apiResponseLocalVar, Model92a06ea019f5560b5c9e76e02fe38e31Request model92a06ea019f5560b5c9e76e02fe38e31Request);
+        /// <param name="updateAdminSearchFeatureRequest"></param>
+        partial void AfterUpdateAdminSearchFeature(ref bool suppressDefaultLog, IUpdateAdminSearchFeatureApiResponse apiResponseLocalVar, UpdateAdminSearchFeatureRequest updateAdminSearchFeatureRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -695,11 +695,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model92a06ea019f5560b5c9e76e02fe38e31Request"></param>
-        private void OnErrorCall92a06ea019f5560b5c9e76e02fe38e31DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model92a06ea019f5560b5c9e76e02fe38e31Request model92a06ea019f5560b5c9e76e02fe38e31Request)
+        /// <param name="updateAdminSearchFeatureRequest"></param>
+        private void OnErrorUpdateAdminSearchFeatureDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, UpdateAdminSearchFeatureRequest updateAdminSearchFeatureRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCall92a06ea019f5560b5c9e76e02fe38e31(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, model92a06ea019f5560b5c9e76e02fe38e31Request);
+            OnErrorUpdateAdminSearchFeature(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, updateAdminSearchFeatureRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -711,20 +711,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="model92a06ea019f5560b5c9e76e02fe38e31Request"></param>
-        partial void OnErrorCall92a06ea019f5560b5c9e76e02fe38e31(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Model92a06ea019f5560b5c9e76e02fe38e31Request model92a06ea019f5560b5c9e76e02fe38e31Request);
+        /// <param name="updateAdminSearchFeatureRequest"></param>
+        partial void OnErrorUpdateAdminSearchFeature(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, UpdateAdminSearchFeatureRequest updateAdminSearchFeatureRequest);
 
         /// <summary>
-        /// Queue a drop+recreate+import of a search entity&#39;s Typesense collection 
+        /// Activate or deactivate a search-related Pennant feature flag 
         /// </summary>
-        /// <param name="model92a06ea019f5560b5c9e76e02fe38e31Request"></param>
+        /// <param name="updateAdminSearchFeatureRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall92a06ea019f5560b5c9e76e02fe38e31ApiResponse"/>&gt;</returns>
-        public async Task<ICall92a06ea019f5560b5c9e76e02fe38e31ApiResponse?> Call92a06ea019f5560b5c9e76e02fe38e31OrDefaultAsync(Model92a06ea019f5560b5c9e76e02fe38e31Request model92a06ea019f5560b5c9e76e02fe38e31Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateAdminSearchFeatureApiResponse"/>&gt;</returns>
+        public async Task<IUpdateAdminSearchFeatureApiResponse?> UpdateAdminSearchFeatureOrDefaultAsync(UpdateAdminSearchFeatureRequest updateAdminSearchFeatureRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await Call92a06ea019f5560b5c9e76e02fe38e31Async(model92a06ea019f5560b5c9e76e02fe38e31Request, cancellationToken).ConfigureAwait(false);
+                return await UpdateAdminSearchFeatureAsync(updateAdminSearchFeatureRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -733,21 +733,21 @@ namespace GatewayApiSdk.Api
         }
 
         /// <summary>
-        /// Queue a drop+recreate+import of a search entity&#39;s Typesense collection 
+        /// Activate or deactivate a search-related Pennant feature flag 
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model92a06ea019f5560b5c9e76e02fe38e31Request"></param>
+        /// <param name="updateAdminSearchFeatureRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICall92a06ea019f5560b5c9e76e02fe38e31ApiResponse"/>&gt;</returns>
-        public async Task<ICall92a06ea019f5560b5c9e76e02fe38e31ApiResponse> Call92a06ea019f5560b5c9e76e02fe38e31Async(Model92a06ea019f5560b5c9e76e02fe38e31Request model92a06ea019f5560b5c9e76e02fe38e31Request, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateAdminSearchFeatureApiResponse"/>&gt;</returns>
+        public async Task<IUpdateAdminSearchFeatureApiResponse> UpdateAdminSearchFeatureAsync(UpdateAdminSearchFeatureRequest updateAdminSearchFeatureRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCall92a06ea019f5560b5c9e76e02fe38e31(model92a06ea019f5560b5c9e76e02fe38e31Request);
+                ValidateUpdateAdminSearchFeature(updateAdminSearchFeatureRequest);
 
-                FormatCall92a06ea019f5560b5c9e76e02fe38e31(model92a06ea019f5560b5c9e76e02fe38e31Request);
+                FormatUpdateAdminSearchFeature(updateAdminSearchFeatureRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -755,12 +755,12 @@ namespace GatewayApiSdk.Api
                     uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
                     uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
                     uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/admin/search/reindex"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/admin/search/reindex");
+                        ? "/api/v1/admin/search/feature"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/admin/search/feature");
 
-                    httpRequestMessageLocalVar.Content = (model92a06ea019f5560b5c9e76e02fe38e31Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (updateAdminSearchFeatureRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(model92a06ea019f5560b5c9e76e02fe38e31Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateAdminSearchFeatureRequest, _jsonSerializerOptions));
 
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
 
@@ -779,20 +779,20 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        Call92a06ea019f5560b5c9e76e02fe38e31ApiResponse apiResponseLocalVar;
+                        UpdateAdminSearchFeatureApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
                                 string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/admin/search/reindex", requestedAtLocalVar, _jsonSerializerOptions);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/admin/search/feature", requestedAtLocalVar, _jsonSerializerOptions);
 
                                 break;
                             }
                         }
 
-                        AfterCall92a06ea019f5560b5c9e76e02fe38e31DefaultImplementation(apiResponseLocalVar, model92a06ea019f5560b5c9e76e02fe38e31Request);
+                        AfterUpdateAdminSearchFeatureDefaultImplementation(apiResponseLocalVar, updateAdminSearchFeatureRequest);
 
-                        Events.ExecuteOnCall92a06ea019f5560b5c9e76e02fe38e31(apiResponseLocalVar);
+                        Events.ExecuteOnUpdateAdminSearchFeature(apiResponseLocalVar);
 
                         return apiResponseLocalVar;
                     }
@@ -800,16 +800,16 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCall92a06ea019f5560b5c9e76e02fe38e31DefaultImplementation(e, "/api/v1/admin/search/reindex", uriBuilderLocalVar.Path, model92a06ea019f5560b5c9e76e02fe38e31Request);
-                Events.ExecuteOnErrorCall92a06ea019f5560b5c9e76e02fe38e31(e);
+                OnErrorUpdateAdminSearchFeatureDefaultImplementation(e, "/api/v1/admin/search/feature", uriBuilderLocalVar.Path, updateAdminSearchFeatureRequest);
+                Events.ExecuteOnErrorUpdateAdminSearchFeature(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="Call92a06ea019f5560b5c9e76e02fe38e31ApiResponse"/>
+        /// The <see cref="UpdateAdminSearchFeatureApiResponse"/>
         /// </summary>
-        public partial class Call92a06ea019f5560b5c9e76e02fe38e31ApiResponse : GatewayApiSdk.Client.ApiResponse, ICall92a06ea019f5560b5c9e76e02fe38e31ApiResponse
+        public partial class UpdateAdminSearchFeatureApiResponse : GatewayApiSdk.Client.ApiResponse, IUpdateAdminSearchFeatureApiResponse
         {
             /// <summary>
             /// The logger
@@ -817,7 +817,7 @@ namespace GatewayApiSdk.Api
             public ILogger<AdminSearchApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="Call92a06ea019f5560b5c9e76e02fe38e31ApiResponse"/>
+            /// The <see cref="UpdateAdminSearchFeatureApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -826,14 +826,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call92a06ea019f5560b5c9e76e02fe38e31ApiResponse(ILogger<AdminSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public UpdateAdminSearchFeatureApiResponse(ILogger<AdminSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="Call92a06ea019f5560b5c9e76e02fe38e31ApiResponse"/>
+            /// The <see cref="UpdateAdminSearchFeatureApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -842,7 +842,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public Call92a06ea019f5560b5c9e76e02fe38e31ApiResponse(ILogger<AdminSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public UpdateAdminSearchFeatureApiResponse(ILogger<AdminSearchApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
@@ -851,10 +851,10 @@ namespace GatewayApiSdk.Api
             partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
 
             /// <summary>
-            /// Returns true if the response is 202 Accepted
+            /// Returns true if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public bool IsAccepted => 202 == (int)StatusCode;
+            public bool IsOk => 200 == (int)StatusCode;
 
             /// <summary>
             /// Returns true if the response is 422 UnprocessableContent

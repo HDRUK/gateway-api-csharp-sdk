@@ -51,77 +51,77 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test C663ccf8b1926d7678370d095b9b358f
+        /// Test CreateDarIntegration
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task C663ccf8b1926d7678370d095b9b358fAsyncTest()
+        public async Task CreateDarIntegrationAsyncTest()
         {
             int id = default!;
-            C663ccf8b1926d7678370d095b9b358fRequest c663ccf8b1926d7678370d095b9b358fRequest = default!;
-            var response = await _instance.C663ccf8b1926d7678370d095b9b358fAsync(id, c663ccf8b1926d7678370d095b9b358fRequest);
-            var model = response.Ok();
-            Assert.IsType<Model09c033f0336380c3d8bb6801e96378bc200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call09c033f0336380c3d8bb6801e96378bc
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call09c033f0336380c3d8bb6801e96378bcAsyncTest()
-        {
-            int id = default!;
-            Model09c033f0336380c3d8bb6801e96378bcRequest model09c033f0336380c3d8bb6801e96378bcRequest = default!;
-            var response = await _instance.Call09c033f0336380c3d8bb6801e96378bcAsync(id, model09c033f0336380c3d8bb6801e96378bcRequest);
-            var model = response.Ok();
-            Assert.IsType<Model09c033f0336380c3d8bb6801e96378bc200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call17fa1074b71d9cefd3e65f2757117b57
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call17fa1074b71d9cefd3e65f2757117b57AsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.Call17fa1074b71d9cefd3e65f2757117b57Async(id);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call406144045c21a19659ee66f6d4a78235
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call406144045c21a19659ee66f6d4a78235AsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.Call406144045c21a19659ee66f6d4a78235Async(id);
-            var model = response.Ok();
-            Assert.IsType<Model7ab50add4fe0a4b7cff7eab0f4b8df18200ResponseDataInner>(model);
-        }
-
-        /// <summary>
-        /// Test Call757fd0f4616caa763b0789d7ad7b3053
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call757fd0f4616caa763b0789d7ad7b3053AsyncTest()
-        {
-            int id = default!;
-            Model09c033f0336380c3d8bb6801e96378bcRequest model09c033f0336380c3d8bb6801e96378bcRequest = default!;
-            var response = await _instance.Call757fd0f4616caa763b0789d7ad7b3053Async(id, model09c033f0336380c3d8bb6801e96378bcRequest);
+            UpdateDarIntegrationRequest updateDarIntegrationRequest = default!;
+            var response = await _instance.CreateDarIntegrationAsync(id, updateDarIntegrationRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
-        /// Test Call7ab50add4fe0a4b7cff7eab0f4b8df18
+        /// Test DeleteDarIntegration
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call7ab50add4fe0a4b7cff7eab0f4b8df18AsyncTest()
+        public async Task DeleteDarIntegrationAsyncTest()
         {
-            var response = await _instance.Call7ab50add4fe0a4b7cff7eab0f4b8df18Async();
+            int id = default!;
+            var response = await _instance.DeleteDarIntegrationAsync(id);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test EditDarIntegration
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task EditDarIntegrationAsyncTest()
+        {
+            int id = default!;
+            EditDarIntegrationRequest editDarIntegrationRequest = default!;
+            var response = await _instance.EditDarIntegrationAsync(id, editDarIntegrationRequest);
             var model = response.Ok();
-            Assert.IsType<Model7ab50add4fe0a4b7cff7eab0f4b8df18200Response>(model);
+            Assert.IsType<UpdateDarIntegration200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchAllDarIntegrations
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchAllDarIntegrationsAsyncTest()
+        {
+            var response = await _instance.FetchAllDarIntegrationsAsync();
+            var model = response.Ok();
+            Assert.IsType<FetchAllDarIntegrations200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchDarIntegration
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchDarIntegrationAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.FetchDarIntegrationAsync(id);
+            var model = response.Ok();
+            Assert.IsType<FetchAllDarIntegrations200ResponseDataInner>(model);
+        }
+
+        /// <summary>
+        /// Test UpdateDarIntegration
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task UpdateDarIntegrationAsyncTest()
+        {
+            int id = default!;
+            UpdateDarIntegrationRequest updateDarIntegrationRequest = default!;
+            var response = await _instance.UpdateDarIntegrationAsync(id, updateDarIntegrationRequest);
+            var model = response.Ok();
+            Assert.IsType<UpdateDarIntegration200Response>(model);
         }
     }
 }

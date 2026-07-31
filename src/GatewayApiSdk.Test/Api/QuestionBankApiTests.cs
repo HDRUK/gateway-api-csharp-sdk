@@ -51,177 +51,177 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test A3f9ce42420fdef136cfc7b0de8e2683
+        /// Test CreateQuestionBankQuestion
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task A3f9ce42420fdef136cfc7b0de8e2683AsyncTest()
+        public async Task CreateQuestionBankQuestionAsyncTest()
         {
-            int id = default!;
-            var response = await _instance.A3f9ce42420fdef136cfc7b0de8e2683Async(id);
+            CreateQuestionBankQuestionRequest createQuestionBankQuestionRequest = default!;
+            var response = await _instance.CreateQuestionBankQuestionAsync(createQuestionBankQuestionRequest);
             var model = response.Ok();
-            Assert.IsType<A3f9ce42420fdef136cfc7b0de8e2683200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
-        /// Test Call04e09f4aada3406dbc08715865880f4f
+        /// Test DeleteQuestionBankQuestion
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call04e09f4aada3406dbc08715865880f4fAsyncTest()
+        public async Task DeleteQuestionBankQuestionAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.DeleteQuestionBankQuestionAsync(id);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test DownloadQuestionBankQuestionFile
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task DownloadQuestionBankQuestionFileAsyncTest()
+        {
+            int id = default!;
+            int fileId = default!;
+            var response = await _instance.DownloadQuestionBankQuestionFileAsync(id, fileId);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test EditQuestionBankQuestion
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task EditQuestionBankQuestionAsyncTest()
+        {
+            int id = default!;
+            EditQuestionBankQuestionRequest editQuestionBankQuestionRequest = default!;
+            var response = await _instance.EditQuestionBankQuestionAsync(id, editQuestionBankQuestionRequest);
+            var model = response.NotFound();
+            Assert.IsType<FetchAliases404Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchArchivedQuestionBankQuestions
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchArchivedQuestionBankQuestionsAsyncTest()
+        {
+            Client.Option<int> sectionId = default!;
+            Client.Option<int> isChild = default!;
+            Client.Option<int> perPage = default!;
+            Client.Option<int> page = default!;
+            var response = await _instance.FetchArchivedQuestionBankQuestionsAsync(sectionId, isChild, perPage, page);
+            var model = response.Ok();
+            Assert.IsType<FetchQuestionBankQuestions200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchCustomQuestionBankQuestions
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchCustomQuestionBankQuestionsAsyncTest()
+        {
+            Client.Option<int> sectionId = default!;
+            Client.Option<int> isChild = default!;
+            Client.Option<int> perPage = default!;
+            Client.Option<int> page = default!;
+            var response = await _instance.FetchCustomQuestionBankQuestionsAsync(sectionId, isChild, perPage, page);
+            var model = response.Ok();
+            Assert.IsType<FetchCustomQuestionBankQuestions200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchQuestionBankQuestion
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchQuestionBankQuestionAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.FetchQuestionBankQuestionAsync(id);
+            var model = response.Ok();
+            Assert.IsType<FetchQuestionBankQuestion200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchQuestionBankQuestionVersion
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchQuestionBankQuestionVersionAsyncTest()
+        {
+            int id = default!;
+            var response = await _instance.FetchQuestionBankQuestionVersionAsync(id);
+            var model = response.Ok();
+            Assert.IsType<FetchQuestionBankQuestionVersion200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchQuestionBankQuestions
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchQuestionBankQuestionsAsyncTest()
+        {
+            Client.Option<int> sectionId = default!;
+            Client.Option<int> isChild = default!;
+            Client.Option<int> perPage = default!;
+            Client.Option<int> page = default!;
+            var response = await _instance.FetchQuestionBankQuestionsAsync(sectionId, isChild, perPage, page);
+            var model = response.Ok();
+            Assert.IsType<FetchQuestionBankQuestions200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchStandardQuestionBankQuestions
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchStandardQuestionBankQuestionsAsyncTest()
+        {
+            Client.Option<int> sectionId = default!;
+            Client.Option<int> isChild = default!;
+            Client.Option<int> perPage = default!;
+            Client.Option<int> page = default!;
+            var response = await _instance.FetchStandardQuestionBankQuestionsAsync(sectionId, isChild, perPage, page);
+            var model = response.Ok();
+            Assert.IsType<FetchStandardQuestionBankQuestions200Response>(model);
+        }
+
+        /// <summary>
+        /// Test FetchTeamQuestionBankQuestionsBySection
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task FetchTeamQuestionBankQuestionsBySectionAsyncTest()
         {
             int teamId = default!;
             int sectionId = default!;
             Client.Option<int> isChild = default!;
-            var response = await _instance.Call04e09f4aada3406dbc08715865880f4fAsync(teamId, sectionId, isChild);
+            var response = await _instance.FetchTeamQuestionBankQuestionsBySectionAsync(teamId, sectionId, isChild);
             var model = response.Ok();
-            Assert.IsType<Model04e09f4aada3406dbc08715865880f4f200Response>(model);
+            Assert.IsType<FetchTeamQuestionBankQuestionsBySection200Response>(model);
         }
 
         /// <summary>
-        /// Test Call17336ba551813e00975d3c2da09211c0
+        /// Test UpdateQuestionBankQuestion
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call17336ba551813e00975d3c2da09211c0AsyncTest()
+        public async Task UpdateQuestionBankQuestionAsyncTest()
         {
             int id = default!;
-            var response = await _instance.Call17336ba551813e00975d3c2da09211c0Async(id);
-            var model = response.Ok();
-            Assert.IsType<Model17336ba551813e00975d3c2da09211c0200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call35856fcdf6980ae4da3303ec5a8d90b7
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call35856fcdf6980ae4da3303ec5a8d90b7AsyncTest()
-        {
-            Client.Option<int> sectionId = default!;
-            Client.Option<int> isChild = default!;
-            Client.Option<int> perPage = default!;
-            Client.Option<int> page = default!;
-            var response = await _instance.Call35856fcdf6980ae4da3303ec5a8d90b7Async(sectionId, isChild, perPage, page);
-            var model = response.Ok();
-            Assert.IsType<Model35856fcdf6980ae4da3303ec5a8d90b7200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call35b36a3a067579d62500b09623dbffb6
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call35b36a3a067579d62500b09623dbffb6AsyncTest()
-        {
-            int id = default!;
-            int fileId = default!;
-            var response = await _instance.Call35b36a3a067579d62500b09623dbffb6Async(id, fileId);
+            UpdateQuestionBankQuestionRequest updateQuestionBankQuestionRequest = default!;
+            var response = await _instance.UpdateQuestionBankQuestionAsync(id, updateQuestionBankQuestionRequest);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
 
         /// <summary>
-        /// Test Call38b0b31c2029a219013fa640588a4a69
+        /// Test UpdateQuestionBankQuestionStatus
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task Call38b0b31c2029a219013fa640588a4a69AsyncTest()
-        {
-            Model38b0b31c2029a219013fa640588a4a69Request model38b0b31c2029a219013fa640588a4a69Request = default!;
-            var response = await _instance.Call38b0b31c2029a219013fa640588a4a69Async(model38b0b31c2029a219013fa640588a4a69Request);
-            var model = response.Ok();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Call64d6f1d6c88cbcfccd3e511b29c394d6
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Call64d6f1d6c88cbcfccd3e511b29c394d6AsyncTest()
-        {
-            int id = default!;
-            Model64d6f1d6c88cbcfccd3e511b29c394d6Request model64d6f1d6c88cbcfccd3e511b29c394d6Request = default!;
-            var response = await _instance.Call64d6f1d6c88cbcfccd3e511b29c394d6Async(id, model64d6f1d6c88cbcfccd3e511b29c394d6Request);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test D38b27b30f91d05932ca855e021c8ffd
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task D38b27b30f91d05932ca855e021c8ffdAsyncTest()
-        {
-            int id = default!;
-            D38b27b30f91d05932ca855e021c8ffdRequest d38b27b30f91d05932ca855e021c8ffdRequest = default!;
-            var response = await _instance.D38b27b30f91d05932ca855e021c8ffdAsync(id, d38b27b30f91d05932ca855e021c8ffdRequest);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Da82f7ce4870bd37af28a192877b22a7
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Da82f7ce4870bd37af28a192877b22a7AsyncTest()
+        public async Task UpdateQuestionBankQuestionStatusAsyncTest()
         {
             int id = default!;
             string status = default!;
-            var response = await _instance.Da82f7ce4870bd37af28a192877b22a7Async(id, status);
+            var response = await _instance.UpdateQuestionBankQuestionStatusAsync(id, status);
             var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Dbaa6922ceaa314314605cba51dbb9df
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Dbaa6922ceaa314314605cba51dbb9dfAsyncTest()
-        {
-            Client.Option<int> sectionId = default!;
-            Client.Option<int> isChild = default!;
-            Client.Option<int> perPage = default!;
-            Client.Option<int> page = default!;
-            var response = await _instance.Dbaa6922ceaa314314605cba51dbb9dfAsync(sectionId, isChild, perPage, page);
-            var model = response.Ok();
-            Assert.IsType<Model35856fcdf6980ae4da3303ec5a8d90b7200Response>(model);
-        }
-
-        /// <summary>
-        /// Test E7408526aeb9ed9cc633d4a9f25cfa14
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task E7408526aeb9ed9cc633d4a9f25cfa14AsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.E7408526aeb9ed9cc633d4a9f25cfa14Async(id);
-            var model = response.NotFound();
-            Assert.IsType<AliasControllerShow404Response>(model);
-        }
-
-        /// <summary>
-        /// Test Ea6f671b0436fa57891fe098994556a1
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Ea6f671b0436fa57891fe098994556a1AsyncTest()
-        {
-            Client.Option<int> sectionId = default!;
-            Client.Option<int> isChild = default!;
-            Client.Option<int> perPage = default!;
-            Client.Option<int> page = default!;
-            var response = await _instance.Ea6f671b0436fa57891fe098994556a1Async(sectionId, isChild, perPage, page);
-            var model = response.Ok();
-            Assert.IsType<Ea6f671b0436fa57891fe098994556a1200Response>(model);
-        }
-
-        /// <summary>
-        /// Test Fa7079be66c6e1f5a236ecac24b63e2b
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task Fa7079be66c6e1f5a236ecac24b63e2bAsyncTest()
-        {
-            Client.Option<int> sectionId = default!;
-            Client.Option<int> isChild = default!;
-            Client.Option<int> perPage = default!;
-            Client.Option<int> page = default!;
-            var response = await _instance.Fa7079be66c6e1f5a236ecac24b63e2bAsync(sectionId, isChild, perPage, page);
-            var model = response.Ok();
-            Assert.IsType<Fa7079be66c6e1f5a236ecac24b63e2b200Response>(model);
+            Assert.IsType<FetchAliases404Response>(model);
         }
     }
 }

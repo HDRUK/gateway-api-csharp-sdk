@@ -99,7 +99,7 @@ namespace GatewayApiSdk.Test.Api
             CreatePublicationsRequest createPublicationsRequest = default!;
             var response = await _instance.CreatePublicationsAsync(createPublicationsRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace GatewayApiSdk.Test.Api
             CreatePublicationsRequest createPublicationsRequest = default!;
             var response = await _instance.CreatePublicationsV2ByTeamIdAsync(teamId, createPublicationsRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace GatewayApiSdk.Test.Api
             CreatePublicationsRequest createPublicationsRequest = default!;
             var response = await _instance.CreatePublicationsV2ByUserIdAsync(userId, createPublicationsRequest);
             var model = response.Created();
-            Assert.IsType<Dd76b8d73b7ea8b4951f03d7c0904c92200Response>(model);
+            Assert.IsType<CreateCategories200Response>(model);
         }
 
         /// <summary>

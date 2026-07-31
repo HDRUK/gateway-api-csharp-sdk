@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**Call471df4f14ed1f13bf3a66f1a8b70e261**](TeamDataAccessTemplateApi.md#call471df4f14ed1f13bf3a66f1a8b70e261) | **DELETE** /api/v1/teams/{teamId}/dar/templates/{id}/files/{fileId} | TeamDataAccessTemplateController@destroyFile |
-| [**Call883e72f80ed3577c8e6eca9f9437e554**](TeamDataAccessTemplateApi.md#call883e72f80ed3577c8e6eca9f9437e554) | **GET** /api/v1/teams/{teamId}/dar/templates | TeamDataAccessTemplateController@index |
+| [**DeleteTeamDarTemplateFile**](TeamDataAccessTemplateApi.md#deleteteamdartemplatefile) | **DELETE** /api/v1/teams/{teamId}/dar/templates/{id}/files/{fileId} | TeamDataAccessTemplateController@destroyFile |
+| [**FetchTeamDarTemplates**](TeamDataAccessTemplateApi.md#fetchteamdartemplates) | **GET** /api/v1/teams/{teamId}/dar/templates | TeamDataAccessTemplateController@index |
 | [**TeamDarTemplateCountUniqueFields**](TeamDataAccessTemplateApi.md#teamdartemplatecountuniquefields) | **GET** /api/v1/teams/{teamId}/dar/templates/count/{field} | TeamDataAccessTemplateController@count |
 
-<a id="call471df4f14ed1f13bf3a66f1a8b70e261"></a>
-# **Call471df4f14ed1f13bf3a66f1a8b70e261**
-> C29b5b3424f7317b69b4bda048ccfafb200Response Call471df4f14ed1f13bf3a66f1a8b70e261 (int teamId, int id, string fileId)
+<a id="deleteteamdartemplatefile"></a>
+# **DeleteTeamDarTemplateFile**
+> DeleteAliases200Response DeleteTeamDarTemplateFile (int teamId, int id, string fileId)
 
 TeamDataAccessTemplateController@destroyFile
 
@@ -27,7 +27,7 @@ Delete a file associated with a DAR template
 
 ### Return type
 
-[**C29b5b3424f7317b69b4bda048ccfafb200Response**](C29b5b3424f7317b69b4bda048ccfafb200Response.md)
+[**DeleteAliases200Response**](DeleteAliases200Response.md)
 
 ### Authorization
 
@@ -48,9 +48,9 @@ Delete a file associated with a DAR template
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="call883e72f80ed3577c8e6eca9f9437e554"></a>
-# **Call883e72f80ed3577c8e6eca9f9437e554**
-> Model234386e06c6b29d5aaca2ed8f89cb9aa200Response Call883e72f80ed3577c8e6eca9f9437e554 (int teamId, string published = null)
+<a id="fetchteamdartemplates"></a>
+# **FetchTeamDarTemplates**
+> FetchDarTemplates200Response FetchTeamDarTemplates (int teamId, string published = null)
 
 TeamDataAccessTemplateController@index
 
@@ -66,7 +66,7 @@ List of dar templates belonging to a team
 
 ### Return type
 
-[**Model234386e06c6b29d5aaca2ed8f89cb9aa200Response**](Model234386e06c6b29d5aaca2ed8f89cb9aa200Response.md)
+[**FetchDarTemplates200Response**](FetchDarTemplates200Response.md)
 
 ### Authorization
 

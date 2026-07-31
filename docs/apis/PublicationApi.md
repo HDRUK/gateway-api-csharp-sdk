@@ -142,7 +142,7 @@ Get user counts for distinct entries of a field in the model
 
 <a id="createpublications"></a>
 # **CreatePublications**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreatePublications (CreatePublicationsRequest createPublicationsRequest)
+> CreateCategories200Response CreatePublications (CreatePublicationsRequest createPublicationsRequest)
 
 PublicationController@store
 
@@ -157,7 +157,7 @@ Create a new publication
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ Create a new publication
 
 <a id="createpublicationsv2byteamid"></a>
 # **CreatePublicationsV2ByTeamId**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreatePublicationsV2ByTeamId (int teamId, CreatePublicationsRequest createPublicationsRequest)
+> CreateCategories200Response CreatePublicationsV2ByTeamId (int teamId, CreatePublicationsRequest createPublicationsRequest)
 
 TeamPublicationController@store
 
@@ -196,7 +196,7 @@ Create a new publication by team id
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ Create a new publication by team id
 
 <a id="createpublicationsv2byuserid"></a>
 # **CreatePublicationsV2ByUserId**
-> Dd76b8d73b7ea8b4951f03d7c0904c92200Response CreatePublicationsV2ByUserId (long userId, CreatePublicationsRequest createPublicationsRequest)
+> CreateCategories200Response CreatePublicationsV2ByUserId (long userId, CreatePublicationsRequest createPublicationsRequest)
 
 UserPublicationController@store
 
@@ -235,7 +235,7 @@ Create a new publication by user id
 
 ### Return type
 
-[**Dd76b8d73b7ea8b4951f03d7c0904c92200Response**](Dd76b8d73b7ea8b4951f03d7c0904c92200Response.md)
+[**CreateCategories200Response**](CreateCategories200Response.md)
 
 ### Authorization
 
