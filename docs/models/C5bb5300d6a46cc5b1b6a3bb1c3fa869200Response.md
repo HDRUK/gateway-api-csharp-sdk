@@ -1,0 +1,11 @@
+# GatewayApiSdk.Model.C5bb5300d6a46cc5b1b6a3bb1c3fa869200Response
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Message** | **string** |  | [optional] 
+**Data** | [**D0fe0e1c60dd979135440e3e0b440b75200ResponseDataInner**](D0fe0e1c60dd979135440e3e0b440b75200ResponseDataInner.md) |  | [optional] 
+
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+

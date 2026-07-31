@@ -1,0 +1,55 @@
+# GatewayApiSdk.Model.Dur
+A Data Use Register (DUR) entry describing an approved use of one or more datasets
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Id** | **int** |  | [optional] 
+**ProjectTitle** | **string** |  | [optional] 
+**ProjectIdText** | **string** |  | [optional] 
+**OrganisationName** | **string** |  | [optional] 
+**OrganisationSector** | **string** |  | [optional] 
+**SectorId** | **int** |  | [optional] 
+**LaySummary** | **string** |  | [optional] 
+**TechnicalSummary** | **string** |  | [optional] 
+**LatestApprovalDate** | **DateOnly** |  | [optional] 
+**ManualUpload** | **bool** |  | [optional] 
+**RejectionReason** | **string** |  | [optional] 
+**SublicenceArrangements** | **string** |  | [optional] 
+**PublicBenefitStatement** | **string** |  | [optional] 
+**DataSensitivityLevel** | **string** |  | [optional] 
+**ProjectStartDate** | **DateOnly** |  | [optional] 
+**ProjectEndDate** | **DateOnly** |  | [optional] 
+**AccessDate** | **DateOnly** |  | [optional] 
+**AccreditedResearcherStatus** | **string** |  | [optional] 
+**ConfidentialDataDescription** | **string** |  | [optional] 
+**DatasetLinkageDescription** | **string** |  | [optional] 
+**DutyOfConfidentiality** | **string** |  | [optional] 
+**LegalBasisForDataArticle6** | **string** |  | [optional] 
+**LegalBasisForDataArticle9** | **string** |  | [optional] 
+**NationalDataOptout** | **string** |  | [optional] 
+**OrganisationId** | **string** |  | [optional] 
+**PrivacyEnhancements** | **string** |  | [optional] 
+**RequestCategoryType** | **string** |  | [optional] 
+**RequestFrequency** | **string** |  | [optional] 
+**AccessType** | **string** |  | [optional] 
+**NonGatewayDatasets** | **List&lt;string&gt;** |  | [optional] 
+**NonGatewayApplicants** | **List&lt;string&gt;** |  | [optional] 
+**FundersAndSponsors** | **List&lt;string&gt;** |  | [optional] 
+**OtherApprovalCommittees** | **List&lt;string&gt;** |  | [optional] 
+**GatewayOutputsTools** | **List&lt;string&gt;** |  | [optional] 
+**GatewayOutputsPapers** | **List&lt;string&gt;** |  | [optional] 
+**NonGatewayOutputs** | **List&lt;string&gt;** |  | [optional] 
+**Enabled** | **bool** |  | [optional] 
+**LastActivity** | **DateTime** |  | [optional] 
+**Counter** | **int** |  | [optional] 
+**UserId** | **int** |  | [optional] 
+**TeamId** | **int** |  | [optional] 
+**ApplicantId** | **int** |  | [optional] 
+**Status** | **string** |  | [optional] 
+**CreatedAt** | **DateTime** |  | [optional] 
+**UpdatedAt** | **DateTime** |  | [optional] 
+
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+
