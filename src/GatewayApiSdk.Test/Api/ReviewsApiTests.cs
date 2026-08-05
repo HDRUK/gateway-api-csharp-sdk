@@ -51,18 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CreateReviews
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreateReviewsAsyncTest()
-        {
-            CreateReviewsRequest createReviewsRequest = default!;
-            var response = await _instance.CreateReviewsAsync(createReviewsRequest);
-            var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
-        }
-
-        /// <summary>
         /// Test DeleteReviews
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -71,7 +59,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteReviewsAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -81,33 +69,10 @@ namespace GatewayApiSdk.Test.Api
         public async Task EditReviewsAsyncTest()
         {
             int id = default!;
-            CreateReviewsRequest createReviewsRequest = default!;
-            var response = await _instance.EditReviewsAsync(id, createReviewsRequest);
+            UpdateReviewsRequest updateReviewsRequest = default!;
+            var response = await _instance.EditReviewsAsync(id, updateReviewsRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchAllReviews
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchAllReviewsAsyncTest()
-        {
-            var response = await _instance.FetchAllReviewsAsync();
-            var model = response.Ok();
-            Assert.IsType<FetchAllReviews200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchReviews
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchReviewsAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.FetchReviewsAsync(id);
-            var model = response.Ok();
-            Assert.IsType<FetchAllReviews200Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -117,10 +82,10 @@ namespace GatewayApiSdk.Test.Api
         public async Task UpdateReviewsAsyncTest()
         {
             int id = default!;
-            CreateReviewsRequest createReviewsRequest = default!;
-            var response = await _instance.UpdateReviewsAsync(id, createReviewsRequest);
+            UpdateReviewsRequest updateReviewsRequest = default!;
+            var response = await _instance.UpdateReviewsAsync(id, updateReviewsRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

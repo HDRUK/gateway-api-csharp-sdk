@@ -51,18 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CreateNotifications
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreateNotificationsAsyncTest()
-        {
-            CreateNotificationsRequest createNotificationsRequest = default!;
-            var response = await _instance.CreateNotificationsAsync(createNotificationsRequest);
-            var model = response.Ok();
-            Assert.IsType<CreateCategories200Response>(model);
-        }
-
-        /// <summary>
         /// Test DeleteNotifications
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -71,56 +59,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteNotificationsAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test EditNotifications
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task EditNotificationsAsyncTest()
-        {
-            int id = default!;
-            EditNotificationsRequest editNotificationsRequest = default!;
-            var response = await _instance.EditNotificationsAsync(id, editNotificationsRequest);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchAllNotifications
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchAllNotificationsAsyncTest()
-        {
-            var response = await _instance.FetchAllNotificationsAsync();
-            var model = response.Ok();
-            Assert.IsType<FetchAllNotifications200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchNotifications
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchNotificationsAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.FetchNotificationsAsync(id);
-            var model = response.Ok();
-            Assert.IsType<FetchNotifications200Response>(model);
-        }
-
-        /// <summary>
-        /// Test UpdateNotifications
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task UpdateNotificationsAsyncTest()
-        {
-            int id = default!;
-            CreateNotificationsRequest createNotificationsRequest = default!;
-            var response = await _instance.UpdateNotificationsAsync(id, createNotificationsRequest);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

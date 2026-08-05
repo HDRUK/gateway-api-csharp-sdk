@@ -56,10 +56,10 @@ namespace GatewayApiSdk.Test.Api
         [Fact (Skip = "not implemented")]
         public async Task CreateProgrammingPackagesAsyncTest()
         {
-            CreateCategoriesRequest createCategoriesRequest = default!;
-            var response = await _instance.CreateProgrammingPackagesAsync(createCategoriesRequest);
+            CreateProgrammingLanguagesRequest createProgrammingLanguagesRequest = default!;
+            var response = await _instance.CreateProgrammingPackagesAsync(createProgrammingLanguagesRequest);
             var model = response.Ok();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteProgrammingPackagesAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -81,33 +81,10 @@ namespace GatewayApiSdk.Test.Api
         public async Task EditProgrammingPackagesAsyncTest()
         {
             int id = default!;
-            EditCategoriesRequest editCategoriesRequest = default!;
-            var response = await _instance.EditProgrammingPackagesAsync(id, editCategoriesRequest);
+            EditProgrammingLanguagesRequest editProgrammingLanguagesRequest = default!;
+            var response = await _instance.EditProgrammingPackagesAsync(id, editProgrammingLanguagesRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchAllProgrammingPackages
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchAllProgrammingPackagesAsyncTest()
-        {
-            var response = await _instance.FetchAllProgrammingPackagesAsync();
-            var model = response.Ok();
-            Assert.IsType<FetchAllProgrammingPackages200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchProgrammingPackages
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchProgrammingPackagesAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.FetchProgrammingPackagesAsync(id);
-            var model = response.Ok();
-            Assert.IsType<FetchProgrammingPackages200Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -117,10 +94,10 @@ namespace GatewayApiSdk.Test.Api
         public async Task UpdateProgrammingPackagesAsyncTest()
         {
             int id = default!;
-            UpdateCategoriesRequest updateCategoriesRequest = default!;
-            var response = await _instance.UpdateProgrammingPackagesAsync(id, updateCategoriesRequest);
+            UpdateProgrammingLanguagesRequest updateProgrammingLanguagesRequest = default!;
+            var response = await _instance.UpdateProgrammingPackagesAsync(id, updateProgrammingLanguagesRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 
 <a id="deleteteamdartemplatefile"></a>
 # **DeleteTeamDarTemplateFile**
-> DeleteAliases200Response DeleteTeamDarTemplateFile (int teamId, int id, string fileId)
+> DeleteApplications200Response DeleteTeamDarTemplateFile (int teamId, int id, string fileId)
 
 TeamDataAccessTemplateController@destroyFile
 
@@ -27,7 +27,7 @@ Delete a file associated with a DAR template
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 

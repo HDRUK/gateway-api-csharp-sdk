@@ -60,7 +60,7 @@ namespace GatewayApiSdk.Test.Api
             CreateUserHasRolesRequest createUserHasRolesRequest = default!;
             var response = await _instance.CreateUserHasRolesAsync(userId, createUserHasRolesRequest);
             var model = response.Created();
-            Assert.IsType<DeleteAliases200Response>(model);
+            Assert.IsType<DeleteApplications200Response>(model);
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace GatewayApiSdk.Test.Api
             UpdateUserHasRolesRequest updateUserHasRolesRequest = default!;
             var response = await _instance.UpdateUserHasRolesAsync(userId, updateUserHasRolesRequest);
             var model = response.Created();
-            Assert.IsType<DeleteAliases200Response>(model);
+            Assert.IsType<DeleteApplications200Response>(model);
         }
     }
 }

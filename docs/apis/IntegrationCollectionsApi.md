@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="createcollectionsintegrations"></a>
 # **CreateCollectionsIntegrations**
-> CreateCategories200Response CreateCollectionsIntegrations (UpdateTeamCollectionsRequest updateTeamCollectionsRequest)
+> CreateDarIntegration201Response CreateCollectionsIntegrations (CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest)
 
 IntegrationCollectionController@store
 
@@ -24,11 +24,11 @@ Create a new collection
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **updateTeamCollectionsRequest** | [**UpdateTeamCollectionsRequest**](UpdateTeamCollectionsRequest.md) | Pass user credentials |  |
+| **createCollectionsIntegrationsRequest** | [**CreateCollectionsIntegrationsRequest**](CreateCollectionsIntegrationsRequest.md) | Pass user credentials |  |
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -51,7 +51,7 @@ Create a new collection
 
 <a id="deletecollectionsintegrations"></a>
 # **DeleteCollectionsIntegrations**
-> DeleteAliases200Response DeleteCollectionsIntegrations (int id)
+> DeleteApplications200Response DeleteCollectionsIntegrations (int id)
 
 Delete a collection
 
@@ -66,7 +66,7 @@ Delete a collection
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ Delete a collection
 
 <a id="editcollectionsintegrations"></a>
 # **EditCollectionsIntegrations**
-> FetchCollections200Response EditCollectionsIntegrations (int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest)
+> FetchCollections200Response EditCollectionsIntegrations (int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest)
 
 Edit a collection
 
@@ -101,7 +101,7 @@ Edit a collection
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **int** | collection id |  |
-| **updateTeamCollectionsRequest** | [**UpdateTeamCollectionsRequest**](UpdateTeamCollectionsRequest.md) | Pass user credentials |  |
+| **createCollectionsIntegrationsRequest** | [**CreateCollectionsIntegrationsRequest**](CreateCollectionsIntegrationsRequest.md) | Pass user credentials |  |
 
 ### Return type
 
@@ -201,7 +201,7 @@ Get collection by id
 
 <a id="updatecollectionsintegrations"></a>
 # **UpdateCollectionsIntegrations**
-> FetchCollections200Response UpdateCollectionsIntegrations (int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest)
+> FetchCollections200Response UpdateCollectionsIntegrations (int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest)
 
 Update a collection
 
@@ -213,7 +213,7 @@ Update a collection
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **int** | collection id |  |
-| **updateTeamCollectionsRequest** | [**UpdateTeamCollectionsRequest**](UpdateTeamCollectionsRequest.md) | Pass user credentials |  |
+| **createCollectionsIntegrationsRequest** | [**CreateCollectionsIntegrationsRequest**](CreateCollectionsIntegrationsRequest.md) | Pass user credentials |  |
 
 ### Return type
 

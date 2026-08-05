@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="createlicenses"></a>
 # **CreateLicenses**
-> CreateCategories200Response CreateLicenses (CreateLicensesRequest createLicensesRequest)
+> CreateDarIntegration201Response CreateLicenses (CreateLicensesRequest createLicensesRequest)
 
 License@store
 
@@ -28,7 +28,7 @@ Creates a new license
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -50,7 +50,7 @@ Creates a new license
 
 <a id="deletelicenses"></a>
 # **DeleteLicenses**
-> DeleteAliases200Response DeleteLicenses (int id)
+> DeleteApplications200Response DeleteLicenses (int id)
 
 License@destroy
 
@@ -65,7 +65,7 @@ Delete a License
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 

@@ -51,19 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CountTeamUniqueFieldsPublicationV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CountTeamUniqueFieldsPublicationV2AsyncTest()
-        {
-            int teamId = default!;
-            string field = default!;
-            var response = await _instance.CountTeamUniqueFieldsPublicationV2Async(teamId, field);
-            var model = response.Ok();
-            Assert.IsType<CountUniqueFieldsCollections200Response>(model);
-        }
-
-        /// <summary>
         /// Test CountUniqueFieldsPublications
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -78,19 +65,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CountUserUniqueFieldsPublicationV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CountUserUniqueFieldsPublicationV2AsyncTest()
-        {
-            int userId = default!;
-            string field = default!;
-            var response = await _instance.CountUserUniqueFieldsPublicationV2Async(userId, field);
-            var model = response.Ok();
-            Assert.IsType<CountUniqueFieldsCollections200Response>(model);
-        }
-
-        /// <summary>
         /// Test CreatePublications
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -99,33 +73,7 @@ namespace GatewayApiSdk.Test.Api
             CreatePublicationsRequest createPublicationsRequest = default!;
             var response = await _instance.CreatePublicationsAsync(createPublicationsRequest);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
-        }
-
-        /// <summary>
-        /// Test CreatePublicationsV2ByTeamId
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreatePublicationsV2ByTeamIdAsyncTest()
-        {
-            int teamId = default!;
-            CreatePublicationsRequest createPublicationsRequest = default!;
-            var response = await _instance.CreatePublicationsV2ByTeamIdAsync(teamId, createPublicationsRequest);
-            var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
-        }
-
-        /// <summary>
-        /// Test CreatePublicationsV2ByUserId
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreatePublicationsV2ByUserIdAsyncTest()
-        {
-            long userId = default!;
-            CreatePublicationsRequest createPublicationsRequest = default!;
-            var response = await _instance.CreatePublicationsV2ByUserIdAsync(userId, createPublicationsRequest);
-            var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -136,32 +84,6 @@ namespace GatewayApiSdk.Test.Api
         {
             int id = default!;
             var response = await _instance.DeletePublicationsAsync(id);
-            var model = response.Ok();
-            Assert.IsType<DeleteFederation200Response>(model);
-        }
-
-        /// <summary>
-        /// Test DeletePublicationsV2ByTeamId
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeletePublicationsV2ByTeamIdAsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            var response = await _instance.DeletePublicationsV2ByTeamIdAsync(teamId, id);
-            var model = response.Ok();
-            Assert.IsType<DeleteFederation200Response>(model);
-        }
-
-        /// <summary>
-        /// Test DeletePublicationsV2ByUserId
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeletePublicationsV2ByUserIdAsyncTest()
-        {
-            long userId = default!;
-            int id = default!;
-            var response = await _instance.DeletePublicationsV2ByUserIdAsync(userId, id);
             var model = response.Ok();
             Assert.IsType<DeleteFederation200Response>(model);
         }
@@ -181,34 +103,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test EditPublicationsV2ByTeamId
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task EditPublicationsV2ByTeamIdAsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            UpdatePublicationsRequest updatePublicationsRequest = default!;
-            var response = await _instance.EditPublicationsV2ByTeamIdAsync(teamId, id, updatePublicationsRequest);
-            var model = response.Ok();
-            Assert.IsType<FetchPublications200Response>(model);
-        }
-
-        /// <summary>
-        /// Test EditPublicationsV2ByUserId
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task EditPublicationsV2ByUserIdAsyncTest()
-        {
-            long userId = default!;
-            int id = default!;
-            UpdatePublicationsRequest updatePublicationsRequest = default!;
-            var response = await _instance.EditPublicationsV2ByUserIdAsync(userId, id, updatePublicationsRequest);
-            var model = response.Ok();
-            Assert.IsType<FetchPublications200Response>(model);
-        }
-
-        /// <summary>
         /// Test FetchAllPublications
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -219,34 +113,6 @@ namespace GatewayApiSdk.Test.Api
             Client.Option<Int> teamId = default!;
             Client.Option<string> status = default!;
             var response = await _instance.FetchAllPublicationsAsync(paperTitle, ownerId, teamId, status);
-            var model = response.Ok();
-            Assert.IsType<FetchAllPublications200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchAllPublicationsByTeamAndStatusV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchAllPublicationsByTeamAndStatusV2AsyncTest()
-        {
-            long teamId = default!;
-            string status = default!;
-            Client.Option<string> paperTitle = default!;
-            var response = await _instance.FetchAllPublicationsByTeamAndStatusV2Async(teamId, status, paperTitle);
-            var model = response.Ok();
-            Assert.IsType<FetchAllPublications200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchAllPublicationsByUserAndStatusV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchAllPublicationsByUserAndStatusV2AsyncTest()
-        {
-            long userId = default!;
-            string status = default!;
-            Client.Option<string> paperTitle = default!;
-            var response = await _instance.FetchAllPublicationsByUserAndStatusV2Async(userId, status, paperTitle);
             var model = response.Ok();
             Assert.IsType<FetchAllPublications200Response>(model);
         }
@@ -278,32 +144,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test FetchPublicationsByTeamAndByIdV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchPublicationsByTeamAndByIdV2AsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            var response = await _instance.FetchPublicationsByTeamAndByIdV2Async(teamId, id);
-            var model = response.Ok();
-            Assert.IsType<FetchPublications200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchPublicationsByUserAndByIdV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchPublicationsByUserAndByIdV2AsyncTest()
-        {
-            long userId = default!;
-            int id = default!;
-            var response = await _instance.FetchPublicationsByUserAndByIdV2Async(userId, id);
-            var model = response.Ok();
-            Assert.IsType<FetchPublications200Response>(model);
-        }
-
-        /// <summary>
         /// Test FetchPublicationsV2
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -324,34 +164,6 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             UpdatePublicationsRequest updatePublicationsRequest = default!;
             var response = await _instance.UpdatePublicationsAsync(id, updatePublicationsRequest);
-            var model = response.Ok();
-            Assert.IsType<FetchPublications200Response>(model);
-        }
-
-        /// <summary>
-        /// Test UpdatePublicationsV2ByTeamId
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task UpdatePublicationsV2ByTeamIdAsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            UpdatePublicationsRequest updatePublicationsRequest = default!;
-            var response = await _instance.UpdatePublicationsV2ByTeamIdAsync(teamId, id, updatePublicationsRequest);
-            var model = response.Ok();
-            Assert.IsType<FetchPublications200Response>(model);
-        }
-
-        /// <summary>
-        /// Test UpdatePublicationsV2ByUserId
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task UpdatePublicationsV2ByUserIdAsyncTest()
-        {
-            long userId = default!;
-            int id = default!;
-            UpdatePublicationsRequest updatePublicationsRequest = default!;
-            var response = await _instance.UpdatePublicationsV2ByUserIdAsync(userId, id, updatePublicationsRequest);
             var model = response.Ok();
             Assert.IsType<FetchPublications200Response>(model);
         }

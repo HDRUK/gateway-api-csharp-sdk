@@ -7,13 +7,11 @@ All URIs are relative to *http://localhost*
 | [**CreateTypeCategories**](TypeCategoryApi.md#createtypecategories) | **POST** /api/v1/type_categories | TypeCategory@store |
 | [**DeleteTypeCategories**](TypeCategoryApi.md#deletetypecategories) | **DELETE** /api/v1/type_categories/{id} | TypeCategory@destroy |
 | [**EditTypeCategories**](TypeCategoryApi.md#edittypecategories) | **PATCH** /api/v1/type_categories/{id} | TypeCategory@update |
-| [**FetchAllTypeCategories**](TypeCategoryApi.md#fetchalltypecategories) | **GET** /api/v1/type_categories | TypeCategory@index |
-| [**FetchTypeCategories**](TypeCategoryApi.md#fetchtypecategories) | **GET** /api/v1/type_categories/{id} | TypeCategory@show |
 | [**UpdateTypeCategories**](TypeCategoryApi.md#updatetypecategories) | **PUT** /api/v1/type_categories/{id} | TypeCategory@update |
 
 <a id="createtypecategories"></a>
 # **CreateTypeCategories**
-> CreateCategories200Response CreateTypeCategories (CreateTypeCategoriesRequest createTypeCategoriesRequest)
+> CreateDarIntegration201Response CreateTypeCategories (CreateTypeCategoriesRequest createTypeCategoriesRequest)
 
 TypeCategory@store
 
@@ -28,7 +26,7 @@ Creates a new system type category
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -50,7 +48,7 @@ Creates a new system type category
 
 <a id="deletetypecategories"></a>
 # **DeleteTypeCategories**
-> DeleteAliases200Response DeleteTypeCategories (int id)
+> DeleteApplications200Response DeleteTypeCategories (int id)
 
 TypeCategory@destroy
 
@@ -65,7 +63,7 @@ Delete a system type category
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 
@@ -88,7 +86,7 @@ Delete a system type category
 
 <a id="edittypecategories"></a>
 # **EditTypeCategories**
-> UpdateTypeCategories200Response EditTypeCategories (int id, EditCategoriesRequest editCategoriesRequest)
+> UpdateTypeCategories200Response EditTypeCategories (int id, EditProgrammingLanguagesRequest editProgrammingLanguagesRequest)
 
 TypeCategory@update
 
@@ -100,7 +98,7 @@ Edit a system type category
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **int** | type category id |  |
-| **editCategoriesRequest** | [**EditCategoriesRequest**](EditCategoriesRequest.md) | TypeCategory definition |  |
+| **editProgrammingLanguagesRequest** | [**EditProgrammingLanguagesRequest**](EditProgrammingLanguagesRequest.md) | TypeCategory definition |  |
 
 ### Return type
 
@@ -122,75 +120,6 @@ Edit a system type category
 | **404** | Not found response |  -  |
 | **200** | Success |  -  |
 | **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="fetchalltypecategories"></a>
-# **FetchAllTypeCategories**
-> FetchAllTypeCategories200Response FetchAllTypeCategories ()
-
-TypeCategory@index
-
-Returns a list of type categories enabled on the system
-
-
-### Parameters
-This endpoint does not need any parameter.
-### Return type
-
-[**FetchAllTypeCategories200Response**](FetchAllTypeCategories200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="fetchtypecategories"></a>
-# **FetchTypeCategories**
-> FetchTypeCategories200Response FetchTypeCategories (int id)
-
-TypeCategory@show
-
-Return a single system type category
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | type category id |  |
-
-### Return type
-
-[**FetchTypeCategories200Response**](FetchTypeCategories200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **404** | Not found response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

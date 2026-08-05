@@ -20,7 +20,7 @@ All URIs are relative to *http://localhost*
 
 <a id="createquestionbankquestion"></a>
 # **CreateQuestionBankQuestion**
-> CreateCategories200Response CreateQuestionBankQuestion (CreateQuestionBankQuestionRequest createQuestionBankQuestionRequest)
+> CreateDarIntegration201Response CreateQuestionBankQuestion (CreateQuestionBankQuestionRequest createQuestionBankQuestionRequest)
 
 QuestionBank@store
 
@@ -35,7 +35,7 @@ Create a new system question bank question with FE-helpful input format
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ Create a new system question bank question with FE-helpful input format
 
 <a id="deletequestionbankquestion"></a>
 # **DeleteQuestionBankQuestion**
-> DeleteAliases200Response DeleteQuestionBankQuestion (int id)
+> DeleteApplications200Response DeleteQuestionBankQuestion (int id)
 
 QuestionBank@destroy
 
@@ -72,7 +72,7 @@ Delete a system question bank question
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 
@@ -95,7 +95,7 @@ Delete a system question bank question
 
 <a id="downloadquestionbankquestionfile"></a>
 # **DownloadQuestionBankQuestionFile**
-> DeleteAliases200Response DownloadQuestionBankQuestionFile (int id, int fileId)
+> DeleteApplications200Response DownloadQuestionBankQuestionFile (int id, int fileId)
 
 QuestionBank@destroyFile
 
@@ -111,7 +111,7 @@ Download a system question bank question
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 

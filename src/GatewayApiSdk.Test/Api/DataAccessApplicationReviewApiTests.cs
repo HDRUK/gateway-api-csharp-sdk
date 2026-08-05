@@ -62,7 +62,7 @@ namespace GatewayApiSdk.Test.Api
             CreateTeamDarApplicationReviewRequest createTeamDarApplicationReviewRequest = default!;
             var response = await _instance.CreateTeamDarApplicationQuestionReviewAsync(teamId, id, questionId, createTeamDarApplicationReviewRequest);
             var model = response.Ok();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace GatewayApiSdk.Test.Api
             CreateTeamDarApplicationReviewRequest createTeamDarApplicationReviewRequest = default!;
             var response = await _instance.CreateTeamDarApplicationReviewAsync(teamId, id, createTeamDarApplicationReviewRequest);
             var model = response.Ok();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace GatewayApiSdk.Test.Api
             int reviewId = default!;
             var response = await _instance.DeleteTeamDarApplicationQuestionReviewAsync(teamId, id, questionId, reviewId);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace GatewayApiSdk.Test.Api
             int reviewId = default!;
             var response = await _instance.DeleteTeamDarApplicationReviewAsync(teamId, id, reviewId);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace GatewayApiSdk.Test.Api
             string fileId = default!;
             var response = await _instance.DeleteTeamDarApplicationReviewFileAsync(teamId, id, reviewId, fileId);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -150,32 +150,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test FetchUserDarApplicationReviewFile
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchUserDarApplicationReviewFileAsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            int reviewId = default!;
-            string fileId = default!;
-            await _instance.FetchUserDarApplicationReviewFileAsync(userId, id, reviewId, fileId);
-        }
-
-        /// <summary>
-        /// Test FetchUserDarApplicationReviews
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchUserDarApplicationReviewsAsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            var response = await _instance.FetchUserDarApplicationReviewsAsync(userId, id);
-            var model = response.Ok();
-            Assert.IsType<FetchTeamDarApplicationReviews200Response>(model);
-        }
-
-        /// <summary>
         /// Test UpdateTeamDarApplicationQuestionReview
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -188,7 +162,7 @@ namespace GatewayApiSdk.Test.Api
             CreateTeamDarApplicationReviewRequest createTeamDarApplicationReviewRequest = default!;
             var response = await _instance.UpdateTeamDarApplicationQuestionReviewAsync(teamId, id, questionId, reviewId, createTeamDarApplicationReviewRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -203,38 +177,7 @@ namespace GatewayApiSdk.Test.Api
             CreateTeamDarApplicationReviewRequest createTeamDarApplicationReviewRequest = default!;
             var response = await _instance.UpdateTeamDarApplicationReviewAsync(teamId, id, reviewId, createTeamDarApplicationReviewRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test UpdateUserDarApplicationQuestionReview
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task UpdateUserDarApplicationQuestionReviewAsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            int questionId = default!;
-            int reviewId = default!;
-            CreateTeamDarApplicationReviewRequest createTeamDarApplicationReviewRequest = default!;
-            var response = await _instance.UpdateUserDarApplicationQuestionReviewAsync(userId, id, questionId, reviewId, createTeamDarApplicationReviewRequest);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test UpdateUserDarApplicationReview
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task UpdateUserDarApplicationReviewAsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            int reviewId = default!;
-            CreateTeamDarApplicationReviewRequest createTeamDarApplicationReviewRequest = default!;
-            var response = await _instance.UpdateUserDarApplicationReviewAsync(userId, id, reviewId, createTeamDarApplicationReviewRequest);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

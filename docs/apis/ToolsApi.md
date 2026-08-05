@@ -4,72 +4,25 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CountTeamUniqueFieldsToolsV2**](ToolsApi.md#countteamuniquefieldstoolsv2) | **GET** /api/v2/teams/{teamId}/tools/count/{field} | TeamToolController@count |
 | [**CountUniqueFieldsTools**](ToolsApi.md#countuniquefieldstools) | **GET** /api/v1/tools/count/{field} | ToolController@count |
-| [**CountUserUniqueFieldsToolsV2**](ToolsApi.md#countuseruniquefieldstoolsv2) | **GET** /api/v2/users/{userId}/tools/count/{field} | UserToolController@count |
 | [**CreateTools**](ToolsApi.md#createtools) | **POST** /api/v1/tools | ToolController@store |
 | [**CreateToolsByTeamV2**](ToolsApi.md#createtoolsbyteamv2) | **POST** /api/v2/teams/{teamId}/tools | ToolController@store |
-| [**CreateToolsByUserV2**](ToolsApi.md#createtoolsbyuserv2) | **POST** /api/v2/users/{userId}/tools | UserToolController@store |
 | [**CreateToolsIntegrations**](ToolsApi.md#createtoolsintegrations) | **POST** /api/v1/integrations/tools | IntegrationToolController@store |
 | [**DeleteTools**](ToolsApi.md#deletetools) | **DELETE** /api/v1/tools/{id} | ToolController@destroy |
 | [**DeleteToolsByTeamidV2**](ToolsApi.md#deletetoolsbyteamidv2) | **DELETE** /api/v2/teams/{teamId}/tools/{id} | TeamToolController@destroy |
-| [**DeleteToolsByUserV2**](ToolsApi.md#deletetoolsbyuserv2) | **DELETE** /api/v2/users/{userId}/tools/{id} | UserToolController@destroy |
 | [**DeleteToolsIntegrations**](ToolsApi.md#deletetoolsintegrations) | **DELETE** /api/v1/integrations/tools/{id} | IntegrationToolController@destroy |
 | [**EditTools**](ToolsApi.md#edittools) | **PATCH** /api/v1/tools/{id} | ToolController@edit |
 | [**EditToolsByTeamidV2**](ToolsApi.md#edittoolsbyteamidv2) | **PATCH** /api/v2/teams/{teamId}/tools/{id} | TeamToolController@edit |
-| [**EditToolsByUserV2**](ToolsApi.md#edittoolsbyuserv2) | **PATCH** /api/v2/users/{userId}/tools/{id} | UserToolController@edit |
 | [**EditToolsIntegrations**](ToolsApi.md#edittoolsintegrations) | **PATCH** /api/v1/integrations/tools/{id} | IntegrationToolController@edit |
-| [**FetchAllToolByTeamAndStatusV2**](ToolsApi.md#fetchalltoolbyteamandstatusv2) | **GET** /api/v2/teams/{teamId}/tools/status/{status} | TeamToolController@indexStatus |
-| [**FetchAllToolByUserAndStatusV2**](ToolsApi.md#fetchalltoolbyuserandstatusv2) | **GET** /api/v2/users/{userId}/tools/status/{status} | UserToolController@indexStatus |
 | [**FetchAllTools**](ToolsApi.md#fetchalltools) | **GET** /api/v1/tools | Fetch all tools |
 | [**FetchAllToolsIntegrations**](ToolsApi.md#fetchalltoolsintegrations) | **GET** /api/v1/integrations/tools | IntegrationToolController@index |
 | [**FetchAllToolsV2**](ToolsApi.md#fetchalltoolsv2) | **GET** /api/v2/tools | ToolController@indexActive |
 | [**FetchTools**](ToolsApi.md#fetchtools) | **GET** /api/v1/tools/{id} | ToolController@show |
-| [**FetchToolsByTeamAndByIdV2**](ToolsApi.md#fetchtoolsbyteamandbyidv2) | **GET** /api/v2/teams/{teamId}/tools/{id} | TeamToolController@show |
-| [**FetchToolsByUserAndByIdV2**](ToolsApi.md#fetchtoolsbyuserandbyidv2) | **GET** /api/v2/users/{userId}/tools/{id} | UserToolController@show |
 | [**FetchToolsIntegrations**](ToolsApi.md#fetchtoolsintegrations) | **GET** /api/v1/integrations/tools/{id} | IntegrationToolController@show |
 | [**FetchToolsV2**](ToolsApi.md#fetchtoolsv2) | **GET** /api/v2/tools/{id} | ToolController@showActive |
 | [**UpdateTools**](ToolsApi.md#updatetools) | **PUT** /api/v1/tools/{id} | ToolController@update |
 | [**UpdateToolsByTeamidV2**](ToolsApi.md#updatetoolsbyteamidv2) | **PUT** /api/v2/teams/{teamId}/tools/{id} | TeamToolController@update |
-| [**UpdateToolsByUserV2**](ToolsApi.md#updatetoolsbyuserv2) | **PUT** /api/v2/users/{userId}/tools/{id} | UserToolController@update |
 | [**UpdateToolsIntegrations**](ToolsApi.md#updatetoolsintegrations) | **PUT** /api/v1/integrations/tools/{id} | IntegrationToolController@update |
-
-<a id="countteamuniquefieldstoolsv2"></a>
-# **CountTeamUniqueFieldsToolsV2**
-> CountUniqueFieldsCollections200Response CountTeamUniqueFieldsToolsV2 (int teamId, string field)
-
-TeamToolController@count
-
-Get team counts for distinct entries of a field in the model
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | team id |  |
-| **field** | **string** | name of the field to perform a count on |  |
-
-### Return type
-
-[**CountUniqueFieldsCollections200Response**](CountUniqueFieldsCollections200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 <a id="countuniquefieldstools"></a>
 # **CountUniqueFieldsTools**
@@ -108,46 +61,9 @@ Get Counts for distinct entries of a field in the model
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="countuseruniquefieldstoolsv2"></a>
-# **CountUserUniqueFieldsToolsV2**
-> CountUniqueFieldsCollections200Response CountUserUniqueFieldsToolsV2 (int userId, string field)
-
-UserToolController@count
-
-Get user counts for distinct entries of a field in the model
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **userId** | **int** | user id |  |
-| **field** | **string** | name of the field to perform a count on |  |
-
-### Return type
-
-[**CountUniqueFieldsCollections200Response**](CountUniqueFieldsCollections200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 <a id="createtools"></a>
 # **CreateTools**
-> CreateCategories200Response CreateTools (CreateToolsRequest createToolsRequest)
+> CreateDarIntegration201Response CreateTools (CreateToolsRequest createToolsRequest)
 
 ToolController@store
 
@@ -162,7 +78,7 @@ Create a new tool
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -186,7 +102,7 @@ Create a new tool
 
 <a id="createtoolsbyteamv2"></a>
 # **CreateToolsByTeamV2**
-> CreateCategories200Response CreateToolsByTeamV2 (int teamId, CreateToolsRequest createToolsRequest)
+> CreateDarIntegration201Response CreateToolsByTeamV2 (int teamId, CreateToolsRequest createToolsRequest)
 
 ToolController@store
 
@@ -202,47 +118,7 @@ Create a new tool by team v2
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **201** | Created |  -  |
-| **400** | bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="createtoolsbyuserv2"></a>
-# **CreateToolsByUserV2**
-> CreateCategories200Response CreateToolsByUserV2 (int userId, CreateToolsRequest createToolsRequest)
-
-UserToolController@store
-
-Create a new tool by user v2
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **userId** | **int** | user id |  |
-| **createToolsRequest** | [**CreateToolsRequest**](CreateToolsRequest.md) | Pass user credentials |  |
-
-### Return type
-
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -266,7 +142,7 @@ Create a new tool by user v2
 
 <a id="createtoolsintegrations"></a>
 # **CreateToolsIntegrations**
-> CreateCategories200Response CreateToolsIntegrations (CreateToolsIntegrationsRequest createToolsIntegrationsRequest)
+> CreateDarIntegration201Response CreateToolsIntegrations (CreateToolsIntegrationsRequest createToolsIntegrationsRequest)
 
 IntegrationToolController@store
 
@@ -281,7 +157,7 @@ Create a new tool
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -356,46 +232,6 @@ Delete tool by id and by team_id
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **teamId** | **int** | team id |  |
-| **id** | **int** | tool id |  |
-
-### Return type
-
-[**DeleteFederation200Response**](DeleteFederation200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success response |  -  |
-| **404** | Error response |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="deletetoolsbyuserv2"></a>
-# **DeleteToolsByUserV2**
-> DeleteFederation200Response DeleteToolsByUserV2 (int userId, int id)
-
-UserToolController@destroy
-
-Delete tool by id and by user
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **userId** | **int** | user id |  |
 | **id** | **int** | tool id |  |
 
 ### Return type
@@ -543,47 +379,6 @@ Edit tool by id and by teamid
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="edittoolsbyuserv2"></a>
-# **EditToolsByUserV2**
-> FetchToolsIntegrations200Response EditToolsByUserV2 (int userId, int id, UpdateToolsRequest updateToolsRequest)
-
-UserToolController@edit
-
-Edit tool by id and by user
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **userId** | **int** | user id |  |
-| **id** | **int** | tool id |  |
-| **updateToolsRequest** | [**UpdateToolsRequest**](UpdateToolsRequest.md) | Pass user credentials |  |
-
-### Return type
-
-[**FetchToolsIntegrations200Response**](FetchToolsIntegrations200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 <a id="edittoolsintegrations"></a>
 # **EditToolsIntegrations**
 > FetchToolsIntegrations200Response EditToolsIntegrations (int id, UpdateToolsIntegrationsRequest updateToolsIntegrationsRequest)
@@ -621,82 +416,6 @@ Edit tool by id
 | **400** | bad request |  -  |
 | **401** | Unauthorized |  -  |
 | **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="fetchalltoolbyteamandstatusv2"></a>
-# **FetchAllToolByTeamAndStatusV2**
-> FetchAllToolsIntegrations200Response FetchAllToolByTeamAndStatusV2 (long teamId, string status)
-
-TeamToolController@indexStatus
-
-Returns a list of a teams tools with given status
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **long** | ID of the team |  |
-| **status** | **string** | Status of the tool (active, draft, or archived). Defaults to active if not provided. | [default to active] |
-
-### Return type
-
-[**FetchAllToolsIntegrations200Response**](FetchAllToolsIntegrations200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success response |  -  |
-| **404** | Not Found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="fetchalltoolbyuserandstatusv2"></a>
-# **FetchAllToolByUserAndStatusV2**
-> FetchAllToolsIntegrations200Response FetchAllToolByUserAndStatusV2 (long userId, string status)
-
-UserToolController@indexStatus
-
-Returns a list of a user tools
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **userId** | **long** | ID of the user |  |
-| **status** | **string** | Status of the tool (active, draft, or archived). Defaults to active if not provided. | [default to active] |
-
-### Return type
-
-[**FetchAllToolsIntegrations200Response**](FetchAllToolsIntegrations200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success response |  -  |
-| **404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -826,86 +545,6 @@ Get tool by id
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **id** | **int** | tool id |  |
-| **viewType** | **string** | Query flag to show full tool data or a trimmed version (defaults to full). | [optional] [default to &quot;full&quot;] |
-
-### Return type
-
-[**FetchToolsIntegrations200Response**](FetchToolsIntegrations200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success response |  -  |
-| **401** | Unauthorized |  -  |
-| **404** | Not found response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="fetchtoolsbyteamandbyidv2"></a>
-# **FetchToolsByTeamAndByIdV2**
-> FetchToolsIntegrations200Response FetchToolsByTeamAndByIdV2 (int teamId, int id, string viewType = null)
-
-TeamToolController@show
-
-Get tool by team id and by id
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | team id |  |
-| **id** | **int** | tool id |  |
-| **viewType** | **string** | Query flag to show full tool data or a trimmed version (defaults to full). | [optional] [default to &quot;full&quot;] |
-
-### Return type
-
-[**FetchToolsIntegrations200Response**](FetchToolsIntegrations200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success response |  -  |
-| **401** | Unauthorized |  -  |
-| **404** | Not found response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="fetchtoolsbyuserandbyidv2"></a>
-# **FetchToolsByUserAndByIdV2**
-> FetchToolsIntegrations200Response FetchToolsByUserAndByIdV2 (int userId, int id, string viewType = null)
-
-UserToolController@show
-
-Get tool by user id and by id
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **userId** | **int** | user id |  |
 | **id** | **int** | tool id |  |
 | **viewType** | **string** | Query flag to show full tool data or a trimmed version (defaults to full). | [optional] [default to &quot;full&quot;] |
 
@@ -1062,47 +701,6 @@ Update tools by team id
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **teamId** | **int** | team id |  |
-| **id** | **int** | tool id |  |
-| **updateToolsRequest** | [**UpdateToolsRequest**](UpdateToolsRequest.md) | Pass user credentials |  |
-
-### Return type
-
-[**FetchToolsIntegrations200Response**](FetchToolsIntegrations200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="updatetoolsbyuserv2"></a>
-# **UpdateToolsByUserV2**
-> FetchToolsIntegrations200Response UpdateToolsByUserV2 (int userId, int id, UpdateToolsRequest updateToolsRequest)
-
-UserToolController@update
-
-Update tools by user id
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **userId** | **int** | user id |  |
 | **id** | **int** | tool id |  |
 | **updateToolsRequest** | [**UpdateToolsRequest**](UpdateToolsRequest.md) | Pass user credentials |  |
 

@@ -45,10 +45,10 @@ namespace GatewayApiSdk.Api
         /// Creates a new system programming package
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createCategoriesRequest">Programming package definition</param>
+        /// <param name="createProgrammingLanguagesRequest">Programming package definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateProgrammingPackagesApiResponse"/>&gt;</returns>
-        Task<ICreateProgrammingPackagesApiResponse> CreateProgrammingPackagesAsync(CreateCategoriesRequest createCategoriesRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<ICreateProgrammingPackagesApiResponse> CreateProgrammingPackagesAsync(CreateProgrammingLanguagesRequest createProgrammingLanguagesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// ProgrammingPackage@store
@@ -56,10 +56,10 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Creates a new system programming package
         /// </remarks>
-        /// <param name="createCategoriesRequest">Programming package definition</param>
+        /// <param name="createProgrammingLanguagesRequest">Programming package definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateProgrammingPackagesApiResponse"/>?&gt;</returns>
-        Task<ICreateProgrammingPackagesApiResponse?> CreateProgrammingPackagesOrDefaultAsync(CreateCategoriesRequest createCategoriesRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<ICreateProgrammingPackagesApiResponse?> CreateProgrammingPackagesOrDefaultAsync(CreateProgrammingLanguagesRequest createProgrammingLanguagesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// ProgrammingPackage@destroy
@@ -92,10 +92,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">programming package id</param>
-        /// <param name="editCategoriesRequest">ProgrammingPackage definition</param>
+        /// <param name="editProgrammingLanguagesRequest">ProgrammingPackage definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditProgrammingPackagesApiResponse"/>&gt;</returns>
-        Task<IEditProgrammingPackagesApiResponse> EditProgrammingPackagesAsync(int id, EditCategoriesRequest editCategoriesRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<IEditProgrammingPackagesApiResponse> EditProgrammingPackagesAsync(int id, EditProgrammingLanguagesRequest editProgrammingLanguagesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// ProgrammingPackage@update
@@ -104,54 +104,10 @@ namespace GatewayApiSdk.Api
         /// Edit a system programming package
         /// </remarks>
         /// <param name="id">programming package id</param>
-        /// <param name="editCategoriesRequest">ProgrammingPackage definition</param>
+        /// <param name="editProgrammingLanguagesRequest">ProgrammingPackage definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditProgrammingPackagesApiResponse"/>?&gt;</returns>
-        Task<IEditProgrammingPackagesApiResponse?> EditProgrammingPackagesOrDefaultAsync(int id, EditCategoriesRequest editCategoriesRequest, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// ProgrammingPackage@index
-        /// </summary>
-        /// <remarks>
-        /// Returns a list of programming packages enabled on the system
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllProgrammingPackagesApiResponse"/>&gt;</returns>
-        Task<IFetchAllProgrammingPackagesApiResponse> FetchAllProgrammingPackagesAsync(System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// ProgrammingPackage@index
-        /// </summary>
-        /// <remarks>
-        /// Returns a list of programming packages enabled on the system
-        /// </remarks>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllProgrammingPackagesApiResponse"/>?&gt;</returns>
-        Task<IFetchAllProgrammingPackagesApiResponse?> FetchAllProgrammingPackagesOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// ProgrammingPackage@show
-        /// </summary>
-        /// <remarks>
-        /// Return a single system programming package
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">programming package id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchProgrammingPackagesApiResponse"/>&gt;</returns>
-        Task<IFetchProgrammingPackagesApiResponse> FetchProgrammingPackagesAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// ProgrammingPackage@show
-        /// </summary>
-        /// <remarks>
-        /// Return a single system programming package
-        /// </remarks>
-        /// <param name="id">programming package id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchProgrammingPackagesApiResponse"/>?&gt;</returns>
-        Task<IFetchProgrammingPackagesApiResponse?> FetchProgrammingPackagesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        Task<IEditProgrammingPackagesApiResponse?> EditProgrammingPackagesOrDefaultAsync(int id, EditProgrammingLanguagesRequest editProgrammingLanguagesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// ProgrammingPackage@update
@@ -161,10 +117,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">programming package id</param>
-        /// <param name="updateCategoriesRequest">ProgrammingPackage definition</param>
+        /// <param name="updateProgrammingLanguagesRequest">ProgrammingPackage definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateProgrammingPackagesApiResponse"/>&gt;</returns>
-        Task<IUpdateProgrammingPackagesApiResponse> UpdateProgrammingPackagesAsync(int id, UpdateCategoriesRequest updateCategoriesRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<IUpdateProgrammingPackagesApiResponse> UpdateProgrammingPackagesAsync(int id, UpdateProgrammingLanguagesRequest updateProgrammingLanguagesRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// ProgrammingPackage@update
@@ -173,16 +129,16 @@ namespace GatewayApiSdk.Api
         /// Update a system programming package
         /// </remarks>
         /// <param name="id">programming package id</param>
-        /// <param name="updateCategoriesRequest">ProgrammingPackage definition</param>
+        /// <param name="updateProgrammingLanguagesRequest">ProgrammingPackage definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateProgrammingPackagesApiResponse"/>?&gt;</returns>
-        Task<IUpdateProgrammingPackagesApiResponse?> UpdateProgrammingPackagesOrDefaultAsync(int id, UpdateCategoriesRequest updateCategoriesRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<IUpdateProgrammingPackagesApiResponse?> UpdateProgrammingPackagesOrDefaultAsync(int id, UpdateProgrammingLanguagesRequest updateProgrammingLanguagesRequest, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
     /// The <see cref="ICreateProgrammingPackagesApiResponse"/>
     /// </summary>
-    public interface ICreateProgrammingPackagesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CreateCategories200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface ICreateProgrammingPackagesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CreateDarIntegration201Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -200,7 +156,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IDeleteProgrammingPackagesApiResponse"/>
     /// </summary>
-    public interface IDeleteProgrammingPackagesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IDeleteProgrammingPackagesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.DeleteApplications200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -224,7 +180,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IEditProgrammingPackagesApiResponse"/>
     /// </summary>
-    public interface IEditProgrammingPackagesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateProgrammingPackages200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IEditProgrammingPackagesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.UpdateProgrammingPackages200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -246,39 +202,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IFetchAllProgrammingPackagesApiResponse"/>
-    /// </summary>
-    public interface IFetchAllProgrammingPackagesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchAllProgrammingPackages200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IFetchProgrammingPackagesApiResponse"/>
-    /// </summary>
-    public interface IFetchProgrammingPackagesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchProgrammingPackages200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-    }
-
-    /// <summary>
     /// The <see cref="IUpdateProgrammingPackagesApiResponse"/>
     /// </summary>
-    public interface IUpdateProgrammingPackagesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateProgrammingPackages200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IUpdateProgrammingPackagesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.UpdateProgrammingPackages200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -367,46 +293,6 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFetchAllProgrammingPackages;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFetchAllProgrammingPackages;
-
-        internal void ExecuteOnFetchAllProgrammingPackages(ProgrammingPackageApi.FetchAllProgrammingPackagesApiResponse apiResponse)
-        {
-            OnFetchAllProgrammingPackages?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorFetchAllProgrammingPackages(Exception exception)
-        {
-            OnErrorFetchAllProgrammingPackages?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFetchProgrammingPackages;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFetchProgrammingPackages;
-
-        internal void ExecuteOnFetchProgrammingPackages(ProgrammingPackageApi.FetchProgrammingPackagesApiResponse apiResponse)
-        {
-            OnFetchProgrammingPackages?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorFetchProgrammingPackages(Exception exception)
-        {
-            OnErrorFetchProgrammingPackages?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
         public event EventHandler<ApiResponseEventArgs>? OnUpdateProgrammingPackages;
 
         /// <summary>
@@ -466,28 +352,28 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatCreateProgrammingPackages(CreateCategoriesRequest createCategoriesRequest);
+        partial void FormatCreateProgrammingPackages(CreateProgrammingLanguagesRequest createProgrammingLanguagesRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="createCategoriesRequest"></param>
+        /// <param name="createProgrammingLanguagesRequest"></param>
         /// <returns></returns>
-        private void ValidateCreateProgrammingPackages(CreateCategoriesRequest createCategoriesRequest)
+        private void ValidateCreateProgrammingPackages(CreateProgrammingLanguagesRequest createProgrammingLanguagesRequest)
         {
-            if (createCategoriesRequest == null)
-                throw new ArgumentNullException(nameof(createCategoriesRequest));
+            if (createProgrammingLanguagesRequest == null)
+                throw new ArgumentNullException(nameof(createProgrammingLanguagesRequest));
         }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="createCategoriesRequest"></param>
-        private void AfterCreateProgrammingPackagesDefaultImplementation(ICreateProgrammingPackagesApiResponse apiResponseLocalVar, CreateCategoriesRequest createCategoriesRequest)
+        /// <param name="createProgrammingLanguagesRequest"></param>
+        private void AfterCreateProgrammingPackagesDefaultImplementation(ICreateProgrammingPackagesApiResponse apiResponseLocalVar, CreateProgrammingLanguagesRequest createProgrammingLanguagesRequest)
         {
             bool suppressDefaultLog = false;
-            AfterCreateProgrammingPackages(ref suppressDefaultLog, apiResponseLocalVar, createCategoriesRequest);
+            AfterCreateProgrammingPackages(ref suppressDefaultLog, apiResponseLocalVar, createProgrammingLanguagesRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -497,8 +383,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="createCategoriesRequest"></param>
-        partial void AfterCreateProgrammingPackages(ref bool suppressDefaultLog, ICreateProgrammingPackagesApiResponse apiResponseLocalVar, CreateCategoriesRequest createCategoriesRequest);
+        /// <param name="createProgrammingLanguagesRequest"></param>
+        partial void AfterCreateProgrammingPackages(ref bool suppressDefaultLog, ICreateProgrammingPackagesApiResponse apiResponseLocalVar, CreateProgrammingLanguagesRequest createProgrammingLanguagesRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -506,11 +392,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="createCategoriesRequest"></param>
-        private void OnErrorCreateProgrammingPackagesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateCategoriesRequest createCategoriesRequest)
+        /// <param name="createProgrammingLanguagesRequest"></param>
+        private void OnErrorCreateProgrammingPackagesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateProgrammingLanguagesRequest createProgrammingLanguagesRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCreateProgrammingPackages(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createCategoriesRequest);
+            OnErrorCreateProgrammingPackages(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createProgrammingLanguagesRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -522,20 +408,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="createCategoriesRequest"></param>
-        partial void OnErrorCreateProgrammingPackages(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateCategoriesRequest createCategoriesRequest);
+        /// <param name="createProgrammingLanguagesRequest"></param>
+        partial void OnErrorCreateProgrammingPackages(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateProgrammingLanguagesRequest createProgrammingLanguagesRequest);
 
         /// <summary>
         /// ProgrammingPackage@store Creates a new system programming package
         /// </summary>
-        /// <param name="createCategoriesRequest">Programming package definition</param>
+        /// <param name="createProgrammingLanguagesRequest">Programming package definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateProgrammingPackagesApiResponse"/>&gt;</returns>
-        public async Task<ICreateProgrammingPackagesApiResponse?> CreateProgrammingPackagesOrDefaultAsync(CreateCategoriesRequest createCategoriesRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<ICreateProgrammingPackagesApiResponse?> CreateProgrammingPackagesOrDefaultAsync(CreateProgrammingLanguagesRequest createProgrammingLanguagesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await CreateProgrammingPackagesAsync(createCategoriesRequest, cancellationToken).ConfigureAwait(false);
+                return await CreateProgrammingPackagesAsync(createProgrammingLanguagesRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -547,18 +433,18 @@ namespace GatewayApiSdk.Api
         /// ProgrammingPackage@store Creates a new system programming package
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createCategoriesRequest">Programming package definition</param>
+        /// <param name="createProgrammingLanguagesRequest">Programming package definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateProgrammingPackagesApiResponse"/>&gt;</returns>
-        public async Task<ICreateProgrammingPackagesApiResponse> CreateProgrammingPackagesAsync(CreateCategoriesRequest createCategoriesRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<ICreateProgrammingPackagesApiResponse> CreateProgrammingPackagesAsync(CreateProgrammingLanguagesRequest createProgrammingLanguagesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCreateProgrammingPackages(createCategoriesRequest);
+                ValidateCreateProgrammingPackages(createProgrammingLanguagesRequest);
 
-                FormatCreateProgrammingPackages(createCategoriesRequest);
+                FormatCreateProgrammingPackages(createProgrammingLanguagesRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -569,9 +455,9 @@ namespace GatewayApiSdk.Api
                         ? "/api/v1/programming_packages"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/programming_packages");
 
-                    httpRequestMessageLocalVar.Content = (createCategoriesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (createProgrammingLanguagesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createCategoriesRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createProgrammingLanguagesRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -617,7 +503,7 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCreateProgrammingPackagesDefaultImplementation(apiResponseLocalVar, createCategoriesRequest);
+                        AfterCreateProgrammingPackagesDefaultImplementation(apiResponseLocalVar, createProgrammingLanguagesRequest);
 
                         Events.ExecuteOnCreateProgrammingPackages(apiResponseLocalVar);
 
@@ -631,7 +517,7 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCreateProgrammingPackagesDefaultImplementation(e, "/api/v1/programming_packages", uriBuilderLocalVar.Path, createCategoriesRequest);
+                OnErrorCreateProgrammingPackagesDefaultImplementation(e, "/api/v1/programming_packages", uriBuilderLocalVar.Path, createProgrammingLanguagesRequest);
                 Events.ExecuteOnErrorCreateProgrammingPackages(e);
                 throw;
             }
@@ -691,11 +577,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateCategories200Response? Ok()
+            public GatewayApiSdk.Model.CreateDarIntegration201Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateDarIntegration201Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -704,7 +590,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.CreateDarIntegration201Response? result)
             {
                 result = null;
 
@@ -729,11 +615,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -742,7 +628,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -968,11 +854,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -981,7 +867,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -1006,11 +892,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
+            public GatewayApiSdk.Model.DeleteApplications200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteApplications200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1019,7 +905,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteApplications200Response? result)
             {
                 result = null;
 
@@ -1044,11 +930,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1057,7 +943,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -1083,17 +969,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatEditProgrammingPackages(ref int id, EditCategoriesRequest editCategoriesRequest);
+        partial void FormatEditProgrammingPackages(ref int id, EditProgrammingLanguagesRequest editProgrammingLanguagesRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="editCategoriesRequest"></param>
+        /// <param name="editProgrammingLanguagesRequest"></param>
         /// <returns></returns>
-        private void ValidateEditProgrammingPackages(EditCategoriesRequest editCategoriesRequest)
+        private void ValidateEditProgrammingPackages(EditProgrammingLanguagesRequest editProgrammingLanguagesRequest)
         {
-            if (editCategoriesRequest == null)
-                throw new ArgumentNullException(nameof(editCategoriesRequest));
+            if (editProgrammingLanguagesRequest == null)
+                throw new ArgumentNullException(nameof(editProgrammingLanguagesRequest));
         }
 
         /// <summary>
@@ -1101,11 +987,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="editCategoriesRequest"></param>
-        private void AfterEditProgrammingPackagesDefaultImplementation(IEditProgrammingPackagesApiResponse apiResponseLocalVar, int id, EditCategoriesRequest editCategoriesRequest)
+        /// <param name="editProgrammingLanguagesRequest"></param>
+        private void AfterEditProgrammingPackagesDefaultImplementation(IEditProgrammingPackagesApiResponse apiResponseLocalVar, int id, EditProgrammingLanguagesRequest editProgrammingLanguagesRequest)
         {
             bool suppressDefaultLog = false;
-            AfterEditProgrammingPackages(ref suppressDefaultLog, apiResponseLocalVar, id, editCategoriesRequest);
+            AfterEditProgrammingPackages(ref suppressDefaultLog, apiResponseLocalVar, id, editProgrammingLanguagesRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1116,8 +1002,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="editCategoriesRequest"></param>
-        partial void AfterEditProgrammingPackages(ref bool suppressDefaultLog, IEditProgrammingPackagesApiResponse apiResponseLocalVar, int id, EditCategoriesRequest editCategoriesRequest);
+        /// <param name="editProgrammingLanguagesRequest"></param>
+        partial void AfterEditProgrammingPackages(ref bool suppressDefaultLog, IEditProgrammingPackagesApiResponse apiResponseLocalVar, int id, EditProgrammingLanguagesRequest editProgrammingLanguagesRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1126,11 +1012,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="editCategoriesRequest"></param>
-        private void OnErrorEditProgrammingPackagesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditCategoriesRequest editCategoriesRequest)
+        /// <param name="editProgrammingLanguagesRequest"></param>
+        private void OnErrorEditProgrammingPackagesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditProgrammingLanguagesRequest editProgrammingLanguagesRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorEditProgrammingPackages(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, editCategoriesRequest);
+            OnErrorEditProgrammingPackages(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, editProgrammingLanguagesRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1143,21 +1029,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="editCategoriesRequest"></param>
-        partial void OnErrorEditProgrammingPackages(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditCategoriesRequest editCategoriesRequest);
+        /// <param name="editProgrammingLanguagesRequest"></param>
+        partial void OnErrorEditProgrammingPackages(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditProgrammingLanguagesRequest editProgrammingLanguagesRequest);
 
         /// <summary>
         /// ProgrammingPackage@update Edit a system programming package
         /// </summary>
         /// <param name="id">programming package id</param>
-        /// <param name="editCategoriesRequest">ProgrammingPackage definition</param>
+        /// <param name="editProgrammingLanguagesRequest">ProgrammingPackage definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditProgrammingPackagesApiResponse"/>&gt;</returns>
-        public async Task<IEditProgrammingPackagesApiResponse?> EditProgrammingPackagesOrDefaultAsync(int id, EditCategoriesRequest editCategoriesRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IEditProgrammingPackagesApiResponse?> EditProgrammingPackagesOrDefaultAsync(int id, EditProgrammingLanguagesRequest editProgrammingLanguagesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await EditProgrammingPackagesAsync(id, editCategoriesRequest, cancellationToken).ConfigureAwait(false);
+                return await EditProgrammingPackagesAsync(id, editProgrammingLanguagesRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1170,18 +1056,18 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">programming package id</param>
-        /// <param name="editCategoriesRequest">ProgrammingPackage definition</param>
+        /// <param name="editProgrammingLanguagesRequest">ProgrammingPackage definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditProgrammingPackagesApiResponse"/>&gt;</returns>
-        public async Task<IEditProgrammingPackagesApiResponse> EditProgrammingPackagesAsync(int id, EditCategoriesRequest editCategoriesRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IEditProgrammingPackagesApiResponse> EditProgrammingPackagesAsync(int id, EditProgrammingLanguagesRequest editProgrammingLanguagesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateEditProgrammingPackages(editCategoriesRequest);
+                ValidateEditProgrammingPackages(editProgrammingLanguagesRequest);
 
-                FormatEditProgrammingPackages(ref id, editCategoriesRequest);
+                FormatEditProgrammingPackages(ref id, editProgrammingLanguagesRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1193,9 +1079,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/programming_packages/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (editCategoriesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (editProgrammingLanguagesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(editCategoriesRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(editProgrammingLanguagesRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -1241,7 +1127,7 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterEditProgrammingPackagesDefaultImplementation(apiResponseLocalVar, id, editCategoriesRequest);
+                        AfterEditProgrammingPackagesDefaultImplementation(apiResponseLocalVar, id, editProgrammingLanguagesRequest);
 
                         Events.ExecuteOnEditProgrammingPackages(apiResponseLocalVar);
 
@@ -1255,7 +1141,7 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorEditProgrammingPackagesDefaultImplementation(e, "/api/v1/programming_packages/{id}", uriBuilderLocalVar.Path, id, editCategoriesRequest);
+                OnErrorEditProgrammingPackagesDefaultImplementation(e, "/api/v1/programming_packages/{id}", uriBuilderLocalVar.Path, id, editProgrammingLanguagesRequest);
                 Events.ExecuteOnErrorEditProgrammingPackages(e);
                 throw;
             }
@@ -1315,11 +1201,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1328,7 +1214,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -1391,11 +1277,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1404,7 +1290,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -1430,522 +1316,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        private void AfterFetchAllProgrammingPackagesDefaultImplementation(IFetchAllProgrammingPackagesApiResponse apiResponseLocalVar)
-        {
-            bool suppressDefaultLog = false;
-            AfterFetchAllProgrammingPackages(ref suppressDefaultLog, apiResponseLocalVar);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        partial void AfterFetchAllProgrammingPackages(ref bool suppressDefaultLog, IFetchAllProgrammingPackagesApiResponse apiResponseLocalVar);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        private void OnErrorFetchAllProgrammingPackagesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorFetchAllProgrammingPackages(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        partial void OnErrorFetchAllProgrammingPackages(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar);
-
-        /// <summary>
-        /// ProgrammingPackage@index Returns a list of programming packages enabled on the system
-        /// </summary>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllProgrammingPackagesApiResponse"/>&gt;</returns>
-        public async Task<IFetchAllProgrammingPackagesApiResponse?> FetchAllProgrammingPackagesOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await FetchAllProgrammingPackagesAsync(cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// ProgrammingPackage@index Returns a list of programming packages enabled on the system
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllProgrammingPackagesApiResponse"/>&gt;</returns>
-        public async Task<IFetchAllProgrammingPackagesApiResponse> FetchAllProgrammingPackagesAsync(System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/programming_packages"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/programming_packages");
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        FetchAllProgrammingPackagesApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/programming_packages", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterFetchAllProgrammingPackagesDefaultImplementation(apiResponseLocalVar);
-
-                        Events.ExecuteOnFetchAllProgrammingPackages(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorFetchAllProgrammingPackagesDefaultImplementation(e, "/api/v1/programming_packages", uriBuilderLocalVar.Path);
-                Events.ExecuteOnErrorFetchAllProgrammingPackages(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="FetchAllProgrammingPackagesApiResponse"/>
-        /// </summary>
-        public partial class FetchAllProgrammingPackagesApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchAllProgrammingPackagesApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<ProgrammingPackageApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="FetchAllProgrammingPackagesApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchAllProgrammingPackagesApiResponse(ILogger<ProgrammingPackageApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="FetchAllProgrammingPackagesApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchAllProgrammingPackagesApiResponse(ILogger<ProgrammingPackageApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAllProgrammingPackages200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllProgrammingPackages200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllProgrammingPackages200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatFetchProgrammingPackages(ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterFetchProgrammingPackagesDefaultImplementation(IFetchProgrammingPackagesApiResponse apiResponseLocalVar, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterFetchProgrammingPackages(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterFetchProgrammingPackages(ref bool suppressDefaultLog, IFetchProgrammingPackagesApiResponse apiResponseLocalVar, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorFetchProgrammingPackagesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorFetchProgrammingPackages(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorFetchProgrammingPackages(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
-
-        /// <summary>
-        /// ProgrammingPackage@show Return a single system programming package
-        /// </summary>
-        /// <param name="id">programming package id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchProgrammingPackagesApiResponse"/>&gt;</returns>
-        public async Task<IFetchProgrammingPackagesApiResponse?> FetchProgrammingPackagesOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await FetchProgrammingPackagesAsync(id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// ProgrammingPackage@show Return a single system programming package
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">programming package id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchProgrammingPackagesApiResponse"/>&gt;</returns>
-        public async Task<IFetchProgrammingPackagesApiResponse> FetchProgrammingPackagesAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatFetchProgrammingPackages(ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/programming_packages/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/programming_packages/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        FetchProgrammingPackagesApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/programming_packages/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterFetchProgrammingPackagesDefaultImplementation(apiResponseLocalVar, id);
-
-                        Events.ExecuteOnFetchProgrammingPackages(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorFetchProgrammingPackagesDefaultImplementation(e, "/api/v1/programming_packages/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorFetchProgrammingPackages(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="FetchProgrammingPackagesApiResponse"/>
-        /// </summary>
-        public partial class FetchProgrammingPackagesApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchProgrammingPackagesApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<ProgrammingPackageApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="FetchProgrammingPackagesApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchProgrammingPackagesApiResponse(ILogger<ProgrammingPackageApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="FetchProgrammingPackagesApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchProgrammingPackagesApiResponse(ILogger<ProgrammingPackageApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchProgrammingPackages200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchProgrammingPackages200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchProgrammingPackages200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatUpdateProgrammingPackages(ref int id, UpdateCategoriesRequest updateCategoriesRequest);
+        partial void FormatUpdateProgrammingPackages(ref int id, UpdateProgrammingLanguagesRequest updateProgrammingLanguagesRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="updateCategoriesRequest"></param>
+        /// <param name="updateProgrammingLanguagesRequest"></param>
         /// <returns></returns>
-        private void ValidateUpdateProgrammingPackages(UpdateCategoriesRequest updateCategoriesRequest)
+        private void ValidateUpdateProgrammingPackages(UpdateProgrammingLanguagesRequest updateProgrammingLanguagesRequest)
         {
-            if (updateCategoriesRequest == null)
-                throw new ArgumentNullException(nameof(updateCategoriesRequest));
+            if (updateProgrammingLanguagesRequest == null)
+                throw new ArgumentNullException(nameof(updateProgrammingLanguagesRequest));
         }
 
         /// <summary>
@@ -1953,11 +1334,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateCategoriesRequest"></param>
-        private void AfterUpdateProgrammingPackagesDefaultImplementation(IUpdateProgrammingPackagesApiResponse apiResponseLocalVar, int id, UpdateCategoriesRequest updateCategoriesRequest)
+        /// <param name="updateProgrammingLanguagesRequest"></param>
+        private void AfterUpdateProgrammingPackagesDefaultImplementation(IUpdateProgrammingPackagesApiResponse apiResponseLocalVar, int id, UpdateProgrammingLanguagesRequest updateProgrammingLanguagesRequest)
         {
             bool suppressDefaultLog = false;
-            AfterUpdateProgrammingPackages(ref suppressDefaultLog, apiResponseLocalVar, id, updateCategoriesRequest);
+            AfterUpdateProgrammingPackages(ref suppressDefaultLog, apiResponseLocalVar, id, updateProgrammingLanguagesRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1968,8 +1349,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateCategoriesRequest"></param>
-        partial void AfterUpdateProgrammingPackages(ref bool suppressDefaultLog, IUpdateProgrammingPackagesApiResponse apiResponseLocalVar, int id, UpdateCategoriesRequest updateCategoriesRequest);
+        /// <param name="updateProgrammingLanguagesRequest"></param>
+        partial void AfterUpdateProgrammingPackages(ref bool suppressDefaultLog, IUpdateProgrammingPackagesApiResponse apiResponseLocalVar, int id, UpdateProgrammingLanguagesRequest updateProgrammingLanguagesRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1978,11 +1359,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateCategoriesRequest"></param>
-        private void OnErrorUpdateProgrammingPackagesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateCategoriesRequest updateCategoriesRequest)
+        /// <param name="updateProgrammingLanguagesRequest"></param>
+        private void OnErrorUpdateProgrammingPackagesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateProgrammingLanguagesRequest updateProgrammingLanguagesRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorUpdateProgrammingPackages(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, updateCategoriesRequest);
+            OnErrorUpdateProgrammingPackages(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, updateProgrammingLanguagesRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1995,21 +1376,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateCategoriesRequest"></param>
-        partial void OnErrorUpdateProgrammingPackages(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateCategoriesRequest updateCategoriesRequest);
+        /// <param name="updateProgrammingLanguagesRequest"></param>
+        partial void OnErrorUpdateProgrammingPackages(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateProgrammingLanguagesRequest updateProgrammingLanguagesRequest);
 
         /// <summary>
         /// ProgrammingPackage@update Update a system programming package
         /// </summary>
         /// <param name="id">programming package id</param>
-        /// <param name="updateCategoriesRequest">ProgrammingPackage definition</param>
+        /// <param name="updateProgrammingLanguagesRequest">ProgrammingPackage definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateProgrammingPackagesApiResponse"/>&gt;</returns>
-        public async Task<IUpdateProgrammingPackagesApiResponse?> UpdateProgrammingPackagesOrDefaultAsync(int id, UpdateCategoriesRequest updateCategoriesRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IUpdateProgrammingPackagesApiResponse?> UpdateProgrammingPackagesOrDefaultAsync(int id, UpdateProgrammingLanguagesRequest updateProgrammingLanguagesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await UpdateProgrammingPackagesAsync(id, updateCategoriesRequest, cancellationToken).ConfigureAwait(false);
+                return await UpdateProgrammingPackagesAsync(id, updateProgrammingLanguagesRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -2022,18 +1403,18 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">programming package id</param>
-        /// <param name="updateCategoriesRequest">ProgrammingPackage definition</param>
+        /// <param name="updateProgrammingLanguagesRequest">ProgrammingPackage definition</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateProgrammingPackagesApiResponse"/>&gt;</returns>
-        public async Task<IUpdateProgrammingPackagesApiResponse> UpdateProgrammingPackagesAsync(int id, UpdateCategoriesRequest updateCategoriesRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IUpdateProgrammingPackagesApiResponse> UpdateProgrammingPackagesAsync(int id, UpdateProgrammingLanguagesRequest updateProgrammingLanguagesRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateUpdateProgrammingPackages(updateCategoriesRequest);
+                ValidateUpdateProgrammingPackages(updateProgrammingLanguagesRequest);
 
-                FormatUpdateProgrammingPackages(ref id, updateCategoriesRequest);
+                FormatUpdateProgrammingPackages(ref id, updateProgrammingLanguagesRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -2045,9 +1426,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/programming_packages/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (updateCategoriesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (updateProgrammingLanguagesRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateCategoriesRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateProgrammingLanguagesRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -2093,7 +1474,7 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterUpdateProgrammingPackagesDefaultImplementation(apiResponseLocalVar, id, updateCategoriesRequest);
+                        AfterUpdateProgrammingPackagesDefaultImplementation(apiResponseLocalVar, id, updateProgrammingLanguagesRequest);
 
                         Events.ExecuteOnUpdateProgrammingPackages(apiResponseLocalVar);
 
@@ -2107,7 +1488,7 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorUpdateProgrammingPackagesDefaultImplementation(e, "/api/v1/programming_packages/{id}", uriBuilderLocalVar.Path, id, updateCategoriesRequest);
+                OnErrorUpdateProgrammingPackagesDefaultImplementation(e, "/api/v1/programming_packages/{id}", uriBuilderLocalVar.Path, id, updateProgrammingLanguagesRequest);
                 Events.ExecuteOnErrorUpdateProgrammingPackages(e);
                 throw;
             }
@@ -2167,11 +1548,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2180,7 +1561,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -2243,11 +1624,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2256,7 +1637,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 

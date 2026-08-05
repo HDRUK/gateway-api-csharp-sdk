@@ -59,7 +59,7 @@ namespace GatewayApiSdk.Test.Api
             CreateUsersRequest createUsersRequest = default!;
             var response = await _instance.CreateUsersAsync(createUsersRequest);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -81,59 +81,10 @@ namespace GatewayApiSdk.Test.Api
         public async Task EditUsersAsyncTest()
         {
             int id = default!;
-            UpdateUsersRequest updateUsersRequest = default!;
-            var response = await _instance.EditUsersAsync(id, updateUsersRequest);
+            EditUsersRequest editUsersRequest = default!;
+            var response = await _instance.EditUsersAsync(id, editUsersRequest);
             var model = response.Ok();
-            Assert.IsType<FetchUsers200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchAllUsers
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchAllUsersAsyncTest()
-        {
-            Client.Option<string> filterNames = default!;
-            var response = await _instance.FetchAllUsersAsync(filterNames);
-            var model = response.Ok();
-            Assert.IsType<FetchAllUsers200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchUsers
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchUsersAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.FetchUsersAsync(id);
-            var model = response.Ok();
-            Assert.IsType<FetchUsers200Response>(model);
-        }
-
-        /// <summary>
-        /// Test ResendSecondaryVerificationEmail
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task ResendSecondaryVerificationEmailAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.ResendSecondaryVerificationEmailAsync(id);
-            var model = response.Ok();
-            Assert.IsType<ResendSecondaryVerificationEmail200Response>(model);
-        }
-
-        /// <summary>
-        /// Test UpdateUsers
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task UpdateUsersAsyncTest()
-        {
-            int id = default!;
-            UpdateUsersRequest updateUsersRequest = default!;
-            var response = await _instance.UpdateUsersAsync(id, updateUsersRequest);
-            var model = response.Ok();
-            Assert.IsType<FetchUsers200Response>(model);
+            Assert.IsType<EditUsers200Response>(model);
         }
 
         /// <summary>

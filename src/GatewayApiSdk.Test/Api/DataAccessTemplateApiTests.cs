@@ -59,7 +59,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDarTemplateRequest createDarTemplateRequest = default!;
             var response = await _instance.CreateDarTemplateAsync(createDarTemplateRequest);
             var model = response.Ok();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -71,17 +71,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteDarTemplateAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test DownloadDarTemplateFile
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DownloadDarTemplateFileAsyncTest()
-        {
-            int id = default!;
-            await _instance.DownloadDarTemplateFileAsync(id);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -120,7 +110,7 @@ namespace GatewayApiSdk.Test.Api
             Client.Option<int> sectionId = default!;
             var response = await _instance.PatchDarTemplateAsync(id, patchDarTemplateRequest, sectionId);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -133,7 +123,7 @@ namespace GatewayApiSdk.Test.Api
             UpdateDarTemplateRequest updateDarTemplateRequest = default!;
             var response = await _instance.UpdateDarTemplateAsync(id, updateDarTemplateRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

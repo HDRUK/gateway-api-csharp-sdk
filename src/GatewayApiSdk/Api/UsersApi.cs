@@ -92,10 +92,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">user id</param>
-        /// <param name="updateUsersRequest">Pass user credentials</param>
+        /// <param name="editUsersRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditUsersApiResponse"/>&gt;</returns>
-        Task<IEditUsersApiResponse> EditUsersAsync(int id, UpdateUsersRequest updateUsersRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<IEditUsersApiResponse> EditUsersAsync(int id, EditUsersRequest editUsersRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// UserController@edit
@@ -104,104 +104,10 @@ namespace GatewayApiSdk.Api
         /// Edit user
         /// </remarks>
         /// <param name="id">user id</param>
-        /// <param name="updateUsersRequest">Pass user credentials</param>
+        /// <param name="editUsersRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditUsersApiResponse"/>?&gt;</returns>
-        Task<IEditUsersApiResponse?> EditUsersOrDefaultAsync(int id, UpdateUsersRequest updateUsersRequest, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// UserController@index
-        /// </summary>
-        /// <remarks>
-        /// Get All Users
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filterNames">Three or more characters to filter users names by (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllUsersApiResponse"/>&gt;</returns>
-        Task<IFetchAllUsersApiResponse> FetchAllUsersAsync(Option<string> filterNames = default, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// UserController@index
-        /// </summary>
-        /// <remarks>
-        /// Get All Users
-        /// </remarks>
-        /// <param name="filterNames">Three or more characters to filter users names by (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllUsersApiResponse"/>?&gt;</returns>
-        Task<IFetchAllUsersApiResponse?> FetchAllUsersOrDefaultAsync(Option<string> filterNames = default, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// UserController@show
-        /// </summary>
-        /// <remarks>
-        /// Get users by id
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">user id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUsersApiResponse"/>&gt;</returns>
-        Task<IFetchUsersApiResponse> FetchUsersAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// UserController@show
-        /// </summary>
-        /// <remarks>
-        /// Get users by id
-        /// </remarks>
-        /// <param name="id">user id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUsersApiResponse"/>?&gt;</returns>
-        Task<IFetchUsersApiResponse?> FetchUsersOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Resend secondary email verification
-        /// </summary>
-        /// <remarks>
-        /// Resends the verification email for the secondary email address. Old tokens are expired.
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IResendSecondaryVerificationEmailApiResponse"/>&gt;</returns>
-        Task<IResendSecondaryVerificationEmailApiResponse> ResendSecondaryVerificationEmailAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Resend secondary email verification
-        /// </summary>
-        /// <remarks>
-        /// Resends the verification email for the secondary email address. Old tokens are expired.
-        /// </remarks>
-        /// <param name="id">User ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IResendSecondaryVerificationEmailApiResponse"/>?&gt;</returns>
-        Task<IResendSecondaryVerificationEmailApiResponse?> ResendSecondaryVerificationEmailOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// UserController@update
-        /// </summary>
-        /// <remarks>
-        /// Update user
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">user id</param>
-        /// <param name="updateUsersRequest">Pass user credentials</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateUsersApiResponse"/>&gt;</returns>
-        Task<IUpdateUsersApiResponse> UpdateUsersAsync(int id, UpdateUsersRequest updateUsersRequest, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// UserController@update
-        /// </summary>
-        /// <remarks>
-        /// Update user
-        /// </remarks>
-        /// <param name="id">user id</param>
-        /// <param name="updateUsersRequest">Pass user credentials</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateUsersApiResponse"/>?&gt;</returns>
-        Task<IUpdateUsersApiResponse?> UpdateUsersOrDefaultAsync(int id, UpdateUsersRequest updateUsersRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<IEditUsersApiResponse?> EditUsersOrDefaultAsync(int id, EditUsersRequest editUsersRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Verify user&#39;s secondary email using a UUID
@@ -230,7 +136,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="ICreateUsersApiResponse"/>
     /// </summary>
-    public interface ICreateUsersApiResponse : GatewayApiSdk.Client.IApiResponse, ICreated<GatewayApiSdk.Model.CreateCategories200Response?>, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface ICreateUsersApiResponse : GatewayApiSdk.Client.IApiResponse, ICreated<GatewayApiSdk.Model.CreateDarIntegration201Response?>, IUnauthorized<GatewayApiSdk.Model.FetchAllDarIntegrations401Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -254,7 +160,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IDeleteUsersApiResponse"/>
     /// </summary>
-    public interface IDeleteUsersApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.DeleteFederation200Response?>, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, INotFound<GatewayApiSdk.Model.DeleteFederation404Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IDeleteUsersApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.DeleteFederation200Response?>, IUnauthorized<GatewayApiSdk.Model.FetchAllDarIntegrations401Response?>, INotFound<GatewayApiSdk.Model.DeleteFederation404Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -284,97 +190,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IEditUsersApiResponse"/>
     /// </summary>
-    public interface IEditUsersApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchUsers200Response?>, IBadRequest<GatewayApiSdk.Model.CreateToolsIntegrations400Response?>, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, INotFound<GatewayApiSdk.Model.DeleteFederation404Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 400 BadRequest
-        /// </summary>
-        /// <returns></returns>
-        bool IsBadRequest { get; }
-
-        /// <summary>
-        /// Returns true if the response is 401 Unauthorized
-        /// </summary>
-        /// <returns></returns>
-        bool IsUnauthorized { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-
-        /// <summary>
-        /// Returns true if the response is 500 InternalServerError
-        /// </summary>
-        /// <returns></returns>
-        bool IsInternalServerError { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IFetchAllUsersApiResponse"/>
-    /// </summary>
-    public interface IFetchAllUsersApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchAllUsers200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IFetchUsersApiResponse"/>
-    /// </summary>
-    public interface IFetchUsersApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchUsers200Response?>, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 401 Unauthorized
-        /// </summary>
-        /// <returns></returns>
-        bool IsUnauthorized { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IResendSecondaryVerificationEmailApiResponse"/>
-    /// </summary>
-    public interface IResendSecondaryVerificationEmailApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.ResendSecondaryVerificationEmail200Response?>, INotFound<GatewayApiSdk.Model.ResendSecondaryVerificationEmail404Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IUpdateUsersApiResponse"/>
-    /// </summary>
-    public interface IUpdateUsersApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchUsers200Response?>, IBadRequest<GatewayApiSdk.Model.CreateToolsIntegrations400Response?>, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, INotFound<GatewayApiSdk.Model.DeleteFederation404Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IEditUsersApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.EditUsers200Response?>, IBadRequest<GatewayApiSdk.Model.CreateToolsIntegrations400Response?>, IUnauthorized<GatewayApiSdk.Model.FetchAllDarIntegrations401Response?>, INotFound<GatewayApiSdk.Model.DeleteFederation404Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -494,86 +310,6 @@ namespace GatewayApiSdk.Api
         internal void ExecuteOnErrorEditUsers(Exception exception)
         {
             OnErrorEditUsers?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFetchAllUsers;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFetchAllUsers;
-
-        internal void ExecuteOnFetchAllUsers(UsersApi.FetchAllUsersApiResponse apiResponse)
-        {
-            OnFetchAllUsers?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorFetchAllUsers(Exception exception)
-        {
-            OnErrorFetchAllUsers?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFetchUsers;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFetchUsers;
-
-        internal void ExecuteOnFetchUsers(UsersApi.FetchUsersApiResponse apiResponse)
-        {
-            OnFetchUsers?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorFetchUsers(Exception exception)
-        {
-            OnErrorFetchUsers?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnResendSecondaryVerificationEmail;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorResendSecondaryVerificationEmail;
-
-        internal void ExecuteOnResendSecondaryVerificationEmail(UsersApi.ResendSecondaryVerificationEmailApiResponse apiResponse)
-        {
-            OnResendSecondaryVerificationEmail?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorResendSecondaryVerificationEmail(Exception exception)
-        {
-            OnErrorResendSecondaryVerificationEmail?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnUpdateUsers;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorUpdateUsers;
-
-        internal void ExecuteOnUpdateUsers(UsersApi.UpdateUsersApiResponse apiResponse)
-        {
-            OnUpdateUsers?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorUpdateUsers(Exception exception)
-        {
-            OnErrorUpdateUsers?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
@@ -863,11 +599,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 201 Created
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateCategories200Response? Created()
+            public GatewayApiSdk.Model.CreateDarIntegration201Response? Created()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsCreated
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateDarIntegration201Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -876,7 +612,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryCreated([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
+            public bool TryCreated([NotNullWhen(true)]out GatewayApiSdk.Model.CreateDarIntegration201Response? result)
             {
                 result = null;
 
@@ -901,11 +637,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 401 Unauthorized
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateTeamCollections401Response? Unauthorized()
+            public GatewayApiSdk.Model.FetchAllDarIntegrations401Response? Unauthorized()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsUnauthorized
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateTeamCollections401Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllDarIntegrations401Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -914,7 +650,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.CreateTeamCollections401Response? result)
+            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllDarIntegrations401Response? result)
             {
                 result = null;
 
@@ -939,11 +675,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -952,7 +688,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -1216,11 +952,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 401 Unauthorized
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateTeamCollections401Response? Unauthorized()
+            public GatewayApiSdk.Model.FetchAllDarIntegrations401Response? Unauthorized()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsUnauthorized
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateTeamCollections401Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllDarIntegrations401Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1229,7 +965,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.CreateTeamCollections401Response? result)
+            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllDarIntegrations401Response? result)
             {
                 result = null;
 
@@ -1292,11 +1028,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1305,7 +1041,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -1331,17 +1067,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatEditUsers(ref int id, UpdateUsersRequest updateUsersRequest);
+        partial void FormatEditUsers(ref int id, EditUsersRequest editUsersRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="updateUsersRequest"></param>
+        /// <param name="editUsersRequest"></param>
         /// <returns></returns>
-        private void ValidateEditUsers(UpdateUsersRequest updateUsersRequest)
+        private void ValidateEditUsers(EditUsersRequest editUsersRequest)
         {
-            if (updateUsersRequest == null)
-                throw new ArgumentNullException(nameof(updateUsersRequest));
+            if (editUsersRequest == null)
+                throw new ArgumentNullException(nameof(editUsersRequest));
         }
 
         /// <summary>
@@ -1349,11 +1085,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateUsersRequest"></param>
-        private void AfterEditUsersDefaultImplementation(IEditUsersApiResponse apiResponseLocalVar, int id, UpdateUsersRequest updateUsersRequest)
+        /// <param name="editUsersRequest"></param>
+        private void AfterEditUsersDefaultImplementation(IEditUsersApiResponse apiResponseLocalVar, int id, EditUsersRequest editUsersRequest)
         {
             bool suppressDefaultLog = false;
-            AfterEditUsers(ref suppressDefaultLog, apiResponseLocalVar, id, updateUsersRequest);
+            AfterEditUsers(ref suppressDefaultLog, apiResponseLocalVar, id, editUsersRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1364,8 +1100,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateUsersRequest"></param>
-        partial void AfterEditUsers(ref bool suppressDefaultLog, IEditUsersApiResponse apiResponseLocalVar, int id, UpdateUsersRequest updateUsersRequest);
+        /// <param name="editUsersRequest"></param>
+        partial void AfterEditUsers(ref bool suppressDefaultLog, IEditUsersApiResponse apiResponseLocalVar, int id, EditUsersRequest editUsersRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1374,11 +1110,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateUsersRequest"></param>
-        private void OnErrorEditUsersDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateUsersRequest updateUsersRequest)
+        /// <param name="editUsersRequest"></param>
+        private void OnErrorEditUsersDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditUsersRequest editUsersRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorEditUsers(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, updateUsersRequest);
+            OnErrorEditUsers(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, editUsersRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1391,21 +1127,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateUsersRequest"></param>
-        partial void OnErrorEditUsers(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateUsersRequest updateUsersRequest);
+        /// <param name="editUsersRequest"></param>
+        partial void OnErrorEditUsers(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, EditUsersRequest editUsersRequest);
 
         /// <summary>
         /// UserController@edit Edit user
         /// </summary>
         /// <param name="id">user id</param>
-        /// <param name="updateUsersRequest">Pass user credentials</param>
+        /// <param name="editUsersRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditUsersApiResponse"/>&gt;</returns>
-        public async Task<IEditUsersApiResponse?> EditUsersOrDefaultAsync(int id, UpdateUsersRequest updateUsersRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IEditUsersApiResponse?> EditUsersOrDefaultAsync(int id, EditUsersRequest editUsersRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await EditUsersAsync(id, updateUsersRequest, cancellationToken).ConfigureAwait(false);
+                return await EditUsersAsync(id, editUsersRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1418,18 +1154,18 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">user id</param>
-        /// <param name="updateUsersRequest">Pass user credentials</param>
+        /// <param name="editUsersRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditUsersApiResponse"/>&gt;</returns>
-        public async Task<IEditUsersApiResponse> EditUsersAsync(int id, UpdateUsersRequest updateUsersRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IEditUsersApiResponse> EditUsersAsync(int id, EditUsersRequest editUsersRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateEditUsers(updateUsersRequest);
+                ValidateEditUsers(editUsersRequest);
 
-                FormatEditUsers(ref id, updateUsersRequest);
+                FormatEditUsers(ref id, editUsersRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1441,9 +1177,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/users/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (updateUsersRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (editUsersRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateUsersRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(editUsersRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -1489,7 +1225,7 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterEditUsersDefaultImplementation(apiResponseLocalVar, id, updateUsersRequest);
+                        AfterEditUsersDefaultImplementation(apiResponseLocalVar, id, editUsersRequest);
 
                         Events.ExecuteOnEditUsers(apiResponseLocalVar);
 
@@ -1503,7 +1239,7 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorEditUsersDefaultImplementation(e, "/api/v1/users/{id}", uriBuilderLocalVar.Path, id, updateUsersRequest);
+                OnErrorEditUsersDefaultImplementation(e, "/api/v1/users/{id}", uriBuilderLocalVar.Path, id, editUsersRequest);
                 Events.ExecuteOnErrorEditUsers(e);
                 throw;
             }
@@ -1563,11 +1299,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchUsers200Response? Ok()
+            public GatewayApiSdk.Model.EditUsers200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchUsers200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.EditUsers200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1576,7 +1312,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchUsers200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.EditUsers200Response? result)
             {
                 result = null;
 
@@ -1639,11 +1375,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 401 Unauthorized
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateTeamCollections401Response? Unauthorized()
+            public GatewayApiSdk.Model.FetchAllDarIntegrations401Response? Unauthorized()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsUnauthorized
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateTeamCollections401Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllDarIntegrations401Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1652,7 +1388,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.CreateTeamCollections401Response? result)
+            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllDarIntegrations401Response? result)
             {
                 result = null;
 
@@ -1715,11 +1451,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1728,1280 +1464,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatFetchAllUsers(ref Option<string> filterNames);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="filterNames"></param>
-        /// <returns></returns>
-        private void ValidateFetchAllUsers(Option<string> filterNames)
-        {
-            if (filterNames.IsSet && filterNames.Value == null)
-                throw new ArgumentNullException(nameof(filterNames));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="filterNames"></param>
-        private void AfterFetchAllUsersDefaultImplementation(IFetchAllUsersApiResponse apiResponseLocalVar, Option<string> filterNames)
-        {
-            bool suppressDefaultLog = false;
-            AfterFetchAllUsers(ref suppressDefaultLog, apiResponseLocalVar, filterNames);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="filterNames"></param>
-        partial void AfterFetchAllUsers(ref bool suppressDefaultLog, IFetchAllUsersApiResponse apiResponseLocalVar, Option<string> filterNames);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="filterNames"></param>
-        private void OnErrorFetchAllUsersDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<string> filterNames)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorFetchAllUsers(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, filterNames);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="filterNames"></param>
-        partial void OnErrorFetchAllUsers(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<string> filterNames);
-
-        /// <summary>
-        /// UserController@index Get All Users
-        /// </summary>
-        /// <param name="filterNames">Three or more characters to filter users names by (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllUsersApiResponse"/>&gt;</returns>
-        public async Task<IFetchAllUsersApiResponse?> FetchAllUsersOrDefaultAsync(Option<string> filterNames = default, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await FetchAllUsersAsync(filterNames, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// UserController@index Get All Users
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filterNames">Three or more characters to filter users names by (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllUsersApiResponse"/>&gt;</returns>
-        public async Task<IFetchAllUsersApiResponse> FetchAllUsersAsync(Option<string> filterNames = default, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateFetchAllUsers(filterNames);
-
-                FormatFetchAllUsers(ref filterNames);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/users"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/users");
-
-                    System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
-
-                    if (filterNames.IsSet)
-                        parseQueryStringLocalVar["filterNames"] = ClientUtils.ParameterToString(filterNames.Value);
-
-                    uriBuilderLocalVar.Query = parseQueryStringLocalVar.ToString();
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        FetchAllUsersApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/users", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterFetchAllUsersDefaultImplementation(apiResponseLocalVar, filterNames);
-
-                        Events.ExecuteOnFetchAllUsers(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorFetchAllUsersDefaultImplementation(e, "/api/v1/users", uriBuilderLocalVar.Path, filterNames);
-                Events.ExecuteOnErrorFetchAllUsers(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="FetchAllUsersApiResponse"/>
-        /// </summary>
-        public partial class FetchAllUsersApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchAllUsersApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<UsersApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="FetchAllUsersApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchAllUsersApiResponse(ILogger<UsersApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="FetchAllUsersApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchAllUsersApiResponse(ILogger<UsersApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAllUsers200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllUsers200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllUsers200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatFetchUsers(ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterFetchUsersDefaultImplementation(IFetchUsersApiResponse apiResponseLocalVar, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterFetchUsers(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterFetchUsers(ref bool suppressDefaultLog, IFetchUsersApiResponse apiResponseLocalVar, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorFetchUsersDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorFetchUsers(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorFetchUsers(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
-
-        /// <summary>
-        /// UserController@show Get users by id
-        /// </summary>
-        /// <param name="id">user id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUsersApiResponse"/>&gt;</returns>
-        public async Task<IFetchUsersApiResponse?> FetchUsersOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await FetchUsersAsync(id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// UserController@show Get users by id
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">user id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUsersApiResponse"/>&gt;</returns>
-        public async Task<IFetchUsersApiResponse> FetchUsersAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatFetchUsers(ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/users/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/users/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        FetchUsersApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/users/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterFetchUsersDefaultImplementation(apiResponseLocalVar, id);
-
-                        Events.ExecuteOnFetchUsers(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorFetchUsersDefaultImplementation(e, "/api/v1/users/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorFetchUsers(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="FetchUsersApiResponse"/>
-        /// </summary>
-        public partial class FetchUsersApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchUsersApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<UsersApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="FetchUsersApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchUsersApiResponse(ILogger<UsersApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="FetchUsersApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchUsersApiResponse(ILogger<UsersApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchUsers200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchUsers200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchUsers200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 401 Unauthorized
-            /// </summary>
-            /// <returns></returns>
-            public bool IsUnauthorized => 401 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 401 Unauthorized
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CreateTeamCollections401Response? Unauthorized()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsUnauthorized
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateTeamCollections401Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 401 Unauthorized and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.CreateTeamCollections401Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Unauthorized();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)401);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatResendSecondaryVerificationEmail(ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterResendSecondaryVerificationEmailDefaultImplementation(IResendSecondaryVerificationEmailApiResponse apiResponseLocalVar, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterResendSecondaryVerificationEmail(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterResendSecondaryVerificationEmail(ref bool suppressDefaultLog, IResendSecondaryVerificationEmailApiResponse apiResponseLocalVar, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorResendSecondaryVerificationEmailDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorResendSecondaryVerificationEmail(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorResendSecondaryVerificationEmail(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
-
-        /// <summary>
-        /// Resend secondary email verification Resends the verification email for the secondary email address. Old tokens are expired.
-        /// </summary>
-        /// <param name="id">User ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IResendSecondaryVerificationEmailApiResponse"/>&gt;</returns>
-        public async Task<IResendSecondaryVerificationEmailApiResponse?> ResendSecondaryVerificationEmailOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await ResendSecondaryVerificationEmailAsync(id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Resend secondary email verification Resends the verification email for the secondary email address. Old tokens are expired.
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User ID</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IResendSecondaryVerificationEmailApiResponse"/>&gt;</returns>
-        public async Task<IResendSecondaryVerificationEmailApiResponse> ResendSecondaryVerificationEmailAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatResendSecondaryVerificationEmail(ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/users/{id}/resend-secondary-verification"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/users/{id}/resend-secondary-verification");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Post;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        ResendSecondaryVerificationEmailApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/users/{id}/resend-secondary-verification", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterResendSecondaryVerificationEmailDefaultImplementation(apiResponseLocalVar, id);
-
-                        Events.ExecuteOnResendSecondaryVerificationEmail(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorResendSecondaryVerificationEmailDefaultImplementation(e, "/api/v1/users/{id}/resend-secondary-verification", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorResendSecondaryVerificationEmail(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="ResendSecondaryVerificationEmailApiResponse"/>
-        /// </summary>
-        public partial class ResendSecondaryVerificationEmailApiResponse : GatewayApiSdk.Client.ApiResponse, IResendSecondaryVerificationEmailApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<UsersApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="ResendSecondaryVerificationEmailApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public ResendSecondaryVerificationEmailApiResponse(ILogger<UsersApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="ResendSecondaryVerificationEmailApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public ResendSecondaryVerificationEmailApiResponse(ILogger<UsersApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.ResendSecondaryVerificationEmail200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.ResendSecondaryVerificationEmail200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.ResendSecondaryVerificationEmail200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.ResendSecondaryVerificationEmail404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.ResendSecondaryVerificationEmail404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.ResendSecondaryVerificationEmail404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatUpdateUsers(ref int id, UpdateUsersRequest updateUsersRequest);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="updateUsersRequest"></param>
-        /// <returns></returns>
-        private void ValidateUpdateUsers(UpdateUsersRequest updateUsersRequest)
-        {
-            if (updateUsersRequest == null)
-                throw new ArgumentNullException(nameof(updateUsersRequest));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="updateUsersRequest"></param>
-        private void AfterUpdateUsersDefaultImplementation(IUpdateUsersApiResponse apiResponseLocalVar, int id, UpdateUsersRequest updateUsersRequest)
-        {
-            bool suppressDefaultLog = false;
-            AfterUpdateUsers(ref suppressDefaultLog, apiResponseLocalVar, id, updateUsersRequest);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="updateUsersRequest"></param>
-        partial void AfterUpdateUsers(ref bool suppressDefaultLog, IUpdateUsersApiResponse apiResponseLocalVar, int id, UpdateUsersRequest updateUsersRequest);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="updateUsersRequest"></param>
-        private void OnErrorUpdateUsersDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateUsersRequest updateUsersRequest)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorUpdateUsers(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, updateUsersRequest);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="updateUsersRequest"></param>
-        partial void OnErrorUpdateUsers(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateUsersRequest updateUsersRequest);
-
-        /// <summary>
-        /// UserController@update Update user
-        /// </summary>
-        /// <param name="id">user id</param>
-        /// <param name="updateUsersRequest">Pass user credentials</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateUsersApiResponse"/>&gt;</returns>
-        public async Task<IUpdateUsersApiResponse?> UpdateUsersOrDefaultAsync(int id, UpdateUsersRequest updateUsersRequest, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await UpdateUsersAsync(id, updateUsersRequest, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// UserController@update Update user
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">user id</param>
-        /// <param name="updateUsersRequest">Pass user credentials</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateUsersApiResponse"/>&gt;</returns>
-        public async Task<IUpdateUsersApiResponse> UpdateUsersAsync(int id, UpdateUsersRequest updateUsersRequest, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateUpdateUsers(updateUsersRequest);
-
-                FormatUpdateUsers(ref id, updateUsersRequest);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/users/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/users/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    httpRequestMessageLocalVar.Content = (updateUsersRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateUsersRequest, _jsonSerializerOptions));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        UpdateUsersApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/users/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterUpdateUsersDefaultImplementation(apiResponseLocalVar, id, updateUsersRequest);
-
-                        Events.ExecuteOnUpdateUsers(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorUpdateUsersDefaultImplementation(e, "/api/v1/users/{id}", uriBuilderLocalVar.Path, id, updateUsersRequest);
-                Events.ExecuteOnErrorUpdateUsers(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="UpdateUsersApiResponse"/>
-        /// </summary>
-        public partial class UpdateUsersApiResponse : GatewayApiSdk.Client.ApiResponse, IUpdateUsersApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<UsersApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="UpdateUsersApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public UpdateUsersApiResponse(ILogger<UsersApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="UpdateUsersApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public UpdateUsersApiResponse(ILogger<UsersApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchUsers200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchUsers200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchUsers200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 400 BadRequest
-            /// </summary>
-            /// <returns></returns>
-            public bool IsBadRequest => 400 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 400 BadRequest
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CreateToolsIntegrations400Response? BadRequest()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsBadRequest
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateToolsIntegrations400Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 400 BadRequest and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryBadRequest([NotNullWhen(true)]out GatewayApiSdk.Model.CreateToolsIntegrations400Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = BadRequest();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)400);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 401 Unauthorized
-            /// </summary>
-            /// <returns></returns>
-            public bool IsUnauthorized => 401 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 401 Unauthorized
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CreateTeamCollections401Response? Unauthorized()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsUnauthorized
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateTeamCollections401Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 401 Unauthorized and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.CreateTeamCollections401Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Unauthorized();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)401);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.DeleteFederation404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteFederation404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteFederation404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 

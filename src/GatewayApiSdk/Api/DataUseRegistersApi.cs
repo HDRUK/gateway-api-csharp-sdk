@@ -39,31 +39,6 @@ namespace GatewayApiSdk.Api
         DataUseRegistersApiEvents Events { get; }
 
         /// <summary>
-        /// TeamDurController@count
-        /// </summary>
-        /// <remarks>
-        /// Get team counts for distinct entries of a field in the model
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">team id</param>
-        /// <param name="field">name of the field to perform a count on</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICountTeamUniqueFieldsDurV2ApiResponse"/>&gt;</returns>
-        Task<ICountTeamUniqueFieldsDurV2ApiResponse> CountTeamUniqueFieldsDurV2Async(int teamId, string field, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// TeamDurController@count
-        /// </summary>
-        /// <remarks>
-        /// Get team counts for distinct entries of a field in the model
-        /// </remarks>
-        /// <param name="teamId">team id</param>
-        /// <param name="field">name of the field to perform a count on</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICountTeamUniqueFieldsDurV2ApiResponse"/>?&gt;</returns>
-        Task<ICountTeamUniqueFieldsDurV2ApiResponse?> CountTeamUniqueFieldsDurV2OrDefaultAsync(int teamId, string field, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
         /// DurController@store
         /// </summary>
         /// <remarks>
@@ -343,39 +318,6 @@ namespace GatewayApiSdk.Api
         Task<IFetchAllDurV2ApiResponse?> FetchAllDurV2OrDefaultAsync(Option<ProjectTitleAscupdatedAtAsc> sort = default, Option<string> projectTitle = default, Option<int> perPage = default, Option<bool> withRelated = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// TeamDurController@indexStatus
-        /// </summary>
-        /// <remarks>
-        /// Returns a list of dur owned by this team with given status
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">team id</param>
-        /// <param name="status">Status of the DUR (active, draft, or archived). Defaults to active if not provided.</param>
-        /// <param name="sort">Sort fields in the format field:direction, e.g., project_title:asc,updated_at:asc (optional)</param>
-        /// <param name="projectTitle">Filter dur by project title (optional)</param>
-        /// <param name="perPage">per page (optional)</param>
-        /// <param name="withRelated">Show related entities (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllTeamDurStatusApiResponse"/>&gt;</returns>
-        Task<IFetchAllTeamDurStatusApiResponse> FetchAllTeamDurStatusAsync(int teamId, string status, Option<ProjectTitleAscupdatedAtAsc> sort = default, Option<string> projectTitle = default, Option<int> perPage = default, Option<bool> withRelated = default, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// TeamDurController@indexStatus
-        /// </summary>
-        /// <remarks>
-        /// Returns a list of dur owned by this team with given status
-        /// </remarks>
-        /// <param name="teamId">team id</param>
-        /// <param name="status">Status of the DUR (active, draft, or archived). Defaults to active if not provided.</param>
-        /// <param name="sort">Sort fields in the format field:direction, e.g., project_title:asc,updated_at:asc (optional)</param>
-        /// <param name="projectTitle">Filter dur by project title (optional)</param>
-        /// <param name="perPage">per page (optional)</param>
-        /// <param name="withRelated">Show related entities (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllTeamDurStatusApiResponse"/>?&gt;</returns>
-        Task<IFetchAllTeamDurStatusApiResponse?> FetchAllTeamDurStatusOrDefaultAsync(int teamId, string status, Option<ProjectTitleAscupdatedAtAsc> sort = default, Option<string> projectTitle = default, Option<int> perPage = default, Option<bool> withRelated = default, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
         /// DurController@show
         /// </summary>
         /// <remarks>
@@ -422,31 +364,6 @@ namespace GatewayApiSdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IFetchDurByIdV2ApiResponse"/>?&gt;</returns>
         Task<IFetchDurByIdV2ApiResponse?> FetchDurByIdV2OrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// TeamDurController@show
-        /// </summary>
-        /// <remarks>
-        /// Get dur by team id and by id
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">team id</param>
-        /// <param name="id">data use register id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDurByTeamAndByIdV2ApiResponse"/>&gt;</returns>
-        Task<IFetchDurByTeamAndByIdV2ApiResponse> FetchDurByTeamAndByIdV2Async(int teamId, int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// TeamDurController@show
-        /// </summary>
-        /// <remarks>
-        /// Get dur by team id and by id
-        /// </remarks>
-        /// <param name="teamId">team id</param>
-        /// <param name="id">data use register id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDurByTeamAndByIdV2ApiResponse"/>?&gt;</returns>
-        Task<IFetchDurByTeamAndByIdV2ApiResponse?> FetchDurByTeamAndByIdV2OrDefaultAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Update a dur by id
@@ -527,21 +444,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="ICountTeamUniqueFieldsDurV2ApiResponse"/>
-    /// </summary>
-    public interface ICountTeamUniqueFieldsDurV2ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CountUniqueFieldsCollections200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
     /// The <see cref="ICreateDurApiResponse"/>
     /// </summary>
-    public interface ICreateDurApiResponse : GatewayApiSdk.Client.IApiResponse, ICreated<GatewayApiSdk.Model.CreateCategories200Response?>, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface ICreateDurApiResponse : GatewayApiSdk.Client.IApiResponse, ICreated<GatewayApiSdk.Model.CreateDarIntegration201Response?>, IUnauthorized<GatewayApiSdk.Model.FetchAllDarIntegrations401Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -565,7 +470,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="ICreateDurByTeamV2ApiResponse"/>
     /// </summary>
-    public interface ICreateDurByTeamV2ApiResponse : GatewayApiSdk.Client.IApiResponse, ICreated<GatewayApiSdk.Model.CreateCategories200Response?>, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface ICreateDurByTeamV2ApiResponse : GatewayApiSdk.Client.IApiResponse, ICreated<GatewayApiSdk.Model.CreateDarIntegration201Response?>, IUnauthorized<GatewayApiSdk.Model.FetchAllDarIntegrations401Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -589,7 +494,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IDeleteDurApiResponse"/>
     /// </summary>
-    public interface IDeleteDurApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IDeleteDurApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.DeleteApplications200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -613,7 +518,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IDeleteDursV2ByTeamIdApiResponse"/>
     /// </summary>
-    public interface IDeleteDursV2ByTeamIdApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IDeleteDursV2ByTeamIdApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.DeleteApplications200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -637,7 +542,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IEditDurApiResponse"/>
     /// </summary>
-    public interface IEditDurApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateDur200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IEditDurApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.UpdateDur200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -661,7 +566,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IEditDursV2ByTeamIdApiResponse"/>
     /// </summary>
-    public interface IEditDursV2ByTeamIdApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateDur200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IEditDursV2ByTeamIdApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.UpdateDur200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -685,7 +590,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IExportDurTemplateApiResponse"/>
     /// </summary>
-    public interface IExportDurTemplateApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<Object?>, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, INotFound<GatewayApiSdk.Model.ExportMockDataset404Response?>
+    public interface IExportDurTemplateApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<Object?>, IUnauthorized<GatewayApiSdk.Model.FetchAllDarIntegrations401Response?>, INotFound<GatewayApiSdk.Model.ExportMockDataset404Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -709,7 +614,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IExportDurTemplateV2ApiResponse"/>
     /// </summary>
-    public interface IExportDurTemplateV2ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<Object?>, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, INotFound<GatewayApiSdk.Model.ExportMockDataset404Response?>
+    public interface IExportDurTemplateV2ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<Object?>, IUnauthorized<GatewayApiSdk.Model.FetchAllDarIntegrations401Response?>, INotFound<GatewayApiSdk.Model.ExportMockDataset404Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -733,7 +638,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IExportDurV2ApiResponse"/>
     /// </summary>
-    public interface IExportDurV2ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<string?>, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>
+    public interface IExportDurV2ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<string?>, IUnauthorized<GatewayApiSdk.Model.FetchAllDarIntegrations401Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -773,24 +678,6 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IFetchAllTeamDurStatusApiResponse"/>
-    /// </summary>
-    public interface IFetchAllTeamDurStatusApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchAllDur200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-    }
-
-    /// <summary>
     /// The <see cref="IFetchDurByIdApiResponse"/>
     /// </summary>
     public interface IFetchDurByIdApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchDurById200Response?>
@@ -815,21 +702,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IFetchDurByTeamAndByIdV2ApiResponse"/>
-    /// </summary>
-    public interface IFetchDurByTeamAndByIdV2ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.UpdateDur200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
     /// The <see cref="IUpdateDurApiResponse"/>
     /// </summary>
-    public interface IUpdateDurApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateDur200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IUpdateDurApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.UpdateDur200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -853,7 +728,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IUpdateDurV2ByTeamIdApiResponse"/>
     /// </summary>
-    public interface IUpdateDurV2ByTeamIdApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateDur200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IUpdateDurV2ByTeamIdApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.UpdateDur200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -877,7 +752,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IUploadDurApiResponse"/>
     /// </summary>
-    public interface IUploadDurApiResponse : GatewayApiSdk.Client.IApiResponse, ICreated<GatewayApiSdk.Model.CreateCategories200Response?>, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IUploadDurApiResponse : GatewayApiSdk.Client.IApiResponse, ICreated<GatewayApiSdk.Model.CreateDarIntegration201Response?>, IUnauthorized<GatewayApiSdk.Model.FetchAllDarIntegrations401Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -903,26 +778,6 @@ namespace GatewayApiSdk.Api
     /// </summary>
     public class DataUseRegistersApiEvents
     {
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCountTeamUniqueFieldsDurV2;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCountTeamUniqueFieldsDurV2;
-
-        internal void ExecuteOnCountTeamUniqueFieldsDurV2(DataUseRegistersApi.CountTeamUniqueFieldsDurV2ApiResponse apiResponse)
-        {
-            OnCountTeamUniqueFieldsDurV2?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorCountTeamUniqueFieldsDurV2(Exception exception)
-        {
-            OnErrorCountTeamUniqueFieldsDurV2?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
         /// <summary>
         /// The event raised after the server response
         /// </summary>
@@ -1146,26 +1001,6 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFetchAllTeamDurStatus;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFetchAllTeamDurStatus;
-
-        internal void ExecuteOnFetchAllTeamDurStatus(DataUseRegistersApi.FetchAllTeamDurStatusApiResponse apiResponse)
-        {
-            OnFetchAllTeamDurStatus?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorFetchAllTeamDurStatus(Exception exception)
-        {
-            OnErrorFetchAllTeamDurStatus?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
         public event EventHandler<ApiResponseEventArgs>? OnFetchDurById;
 
         /// <summary>
@@ -1201,26 +1036,6 @@ namespace GatewayApiSdk.Api
         internal void ExecuteOnErrorFetchDurByIdV2(Exception exception)
         {
             OnErrorFetchDurByIdV2?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFetchDurByTeamAndByIdV2;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFetchDurByTeamAndByIdV2;
-
-        internal void ExecuteOnFetchDurByTeamAndByIdV2(DataUseRegistersApi.FetchDurByTeamAndByIdV2ApiResponse apiResponse)
-        {
-            OnFetchDurByTeamAndByIdV2?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorFetchDurByTeamAndByIdV2(Exception exception)
-        {
-            OnErrorFetchDurByTeamAndByIdV2?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
@@ -1323,265 +1138,6 @@ namespace GatewayApiSdk.Api
             HttpClient = httpClient;
             Events = dataUseRegistersApiEvents;
             BearerTokenProvider = bearerTokenProvider;
-        }
-
-        partial void FormatCountTeamUniqueFieldsDurV2(ref int teamId, ref string field);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="field"></param>
-        /// <returns></returns>
-        private void ValidateCountTeamUniqueFieldsDurV2(string field)
-        {
-            if (field == null)
-                throw new ArgumentNullException(nameof(field));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="field"></param>
-        private void AfterCountTeamUniqueFieldsDurV2DefaultImplementation(ICountTeamUniqueFieldsDurV2ApiResponse apiResponseLocalVar, int teamId, string field)
-        {
-            bool suppressDefaultLog = false;
-            AfterCountTeamUniqueFieldsDurV2(ref suppressDefaultLog, apiResponseLocalVar, teamId, field);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="field"></param>
-        partial void AfterCountTeamUniqueFieldsDurV2(ref bool suppressDefaultLog, ICountTeamUniqueFieldsDurV2ApiResponse apiResponseLocalVar, int teamId, string field);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="field"></param>
-        private void OnErrorCountTeamUniqueFieldsDurV2DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, string field)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCountTeamUniqueFieldsDurV2(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, field);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="field"></param>
-        partial void OnErrorCountTeamUniqueFieldsDurV2(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, string field);
-
-        /// <summary>
-        /// TeamDurController@count Get team counts for distinct entries of a field in the model
-        /// </summary>
-        /// <param name="teamId">team id</param>
-        /// <param name="field">name of the field to perform a count on</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICountTeamUniqueFieldsDurV2ApiResponse"/>&gt;</returns>
-        public async Task<ICountTeamUniqueFieldsDurV2ApiResponse?> CountTeamUniqueFieldsDurV2OrDefaultAsync(int teamId, string field, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await CountTeamUniqueFieldsDurV2Async(teamId, field, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// TeamDurController@count Get team counts for distinct entries of a field in the model
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">team id</param>
-        /// <param name="field">name of the field to perform a count on</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICountTeamUniqueFieldsDurV2ApiResponse"/>&gt;</returns>
-        public async Task<ICountTeamUniqueFieldsDurV2ApiResponse> CountTeamUniqueFieldsDurV2Async(int teamId, string field, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateCountTeamUniqueFieldsDurV2(field);
-
-                FormatCountTeamUniqueFieldsDurV2(ref teamId, ref field);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v2/teams/{teamId}/dur/count/{field}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/teams/{teamId}/dur/count/{field}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bfield%7D", Uri.EscapeDataString(field.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        CountTeamUniqueFieldsDurV2ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/teams/{teamId}/dur/count/{field}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCountTeamUniqueFieldsDurV2DefaultImplementation(apiResponseLocalVar, teamId, field);
-
-                        Events.ExecuteOnCountTeamUniqueFieldsDurV2(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCountTeamUniqueFieldsDurV2DefaultImplementation(e, "/api/v2/teams/{teamId}/dur/count/{field}", uriBuilderLocalVar.Path, teamId, field);
-                Events.ExecuteOnErrorCountTeamUniqueFieldsDurV2(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="CountTeamUniqueFieldsDurV2ApiResponse"/>
-        /// </summary>
-        public partial class CountTeamUniqueFieldsDurV2ApiResponse : GatewayApiSdk.Client.ApiResponse, ICountTeamUniqueFieldsDurV2ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataUseRegistersApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="CountTeamUniqueFieldsDurV2ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public CountTeamUniqueFieldsDurV2ApiResponse(ILogger<DataUseRegistersApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="CountTeamUniqueFieldsDurV2ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public CountTeamUniqueFieldsDurV2ApiResponse(ILogger<DataUseRegistersApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CountUniqueFieldsCollections200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CountUniqueFieldsCollections200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.CountUniqueFieldsCollections200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
         partial void FormatCreateDur(CreateDurRequest createDurRequest);
@@ -1809,11 +1365,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 201 Created
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateCategories200Response? Created()
+            public GatewayApiSdk.Model.CreateDarIntegration201Response? Created()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsCreated
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateDarIntegration201Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1822,7 +1378,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryCreated([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
+            public bool TryCreated([NotNullWhen(true)]out GatewayApiSdk.Model.CreateDarIntegration201Response? result)
             {
                 result = null;
 
@@ -1847,11 +1403,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 401 Unauthorized
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateTeamCollections401Response? Unauthorized()
+            public GatewayApiSdk.Model.FetchAllDarIntegrations401Response? Unauthorized()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsUnauthorized
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateTeamCollections401Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllDarIntegrations401Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1860,7 +1416,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.CreateTeamCollections401Response? result)
+            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllDarIntegrations401Response? result)
             {
                 result = null;
 
@@ -1885,11 +1441,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1898,7 +1454,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -2156,11 +1712,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 201 Created
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateCategories200Response? Created()
+            public GatewayApiSdk.Model.CreateDarIntegration201Response? Created()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsCreated
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateDarIntegration201Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2169,7 +1725,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryCreated([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
+            public bool TryCreated([NotNullWhen(true)]out GatewayApiSdk.Model.CreateDarIntegration201Response? result)
             {
                 result = null;
 
@@ -2194,11 +1750,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 401 Unauthorized
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateTeamCollections401Response? Unauthorized()
+            public GatewayApiSdk.Model.FetchAllDarIntegrations401Response? Unauthorized()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsUnauthorized
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateTeamCollections401Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllDarIntegrations401Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2207,7 +1763,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.CreateTeamCollections401Response? result)
+            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllDarIntegrations401Response? result)
             {
                 result = null;
 
@@ -2232,11 +1788,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2245,7 +1801,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -2471,11 +2027,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2484,7 +2040,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -2509,11 +2065,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
+            public GatewayApiSdk.Model.DeleteApplications200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteApplications200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2522,7 +2078,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteApplications200Response? result)
             {
                 result = null;
 
@@ -2547,11 +2103,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2560,7 +2116,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -2793,11 +2349,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2806,7 +2362,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -2831,11 +2387,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
+            public GatewayApiSdk.Model.DeleteApplications200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteApplications200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2844,7 +2400,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteApplications200Response? result)
             {
                 result = null;
 
@@ -2869,11 +2425,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2882,7 +2438,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -3157,11 +2713,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -3170,7 +2726,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -3233,11 +2789,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -3246,7 +2802,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -3511,11 +3067,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -3524,7 +3080,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -3587,11 +3143,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -3600,7 +3156,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -3854,11 +3410,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 401 Unauthorized
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateTeamCollections401Response? Unauthorized()
+            public GatewayApiSdk.Model.FetchAllDarIntegrations401Response? Unauthorized()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsUnauthorized
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateTeamCollections401Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllDarIntegrations401Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -3867,7 +3423,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.CreateTeamCollections401Response? result)
+            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllDarIntegrations401Response? result)
             {
                 result = null;
 
@@ -4159,11 +3715,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 401 Unauthorized
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateTeamCollections401Response? Unauthorized()
+            public GatewayApiSdk.Model.FetchAllDarIntegrations401Response? Unauthorized()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsUnauthorized
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateTeamCollections401Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllDarIntegrations401Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -4172,7 +3728,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.CreateTeamCollections401Response? result)
+            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllDarIntegrations401Response? result)
             {
                 result = null;
 
@@ -4481,11 +4037,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 401 Unauthorized
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateTeamCollections401Response? Unauthorized()
+            public GatewayApiSdk.Model.FetchAllDarIntegrations401Response? Unauthorized()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsUnauthorized
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateTeamCollections401Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllDarIntegrations401Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -4494,7 +4050,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.CreateTeamCollections401Response? result)
+            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllDarIntegrations401Response? result)
             {
                 result = null;
 
@@ -5067,308 +4623,6 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatFetchAllTeamDurStatus(ref int teamId, ref string status, Option<ProjectTitleAscupdatedAtAsc> sort, ref Option<string> projectTitle, ref Option<int> perPage, ref Option<bool> withRelated);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="status"></param>
-        /// <param name="sort"></param>
-        /// <param name="projectTitle"></param>
-        /// <returns></returns>
-        private void ValidateFetchAllTeamDurStatus(string status, Option<ProjectTitleAscupdatedAtAsc> sort, Option<string> projectTitle)
-        {
-            if (status == null)
-                throw new ArgumentNullException(nameof(status));
-
-            if (sort.IsSet && sort.Value == null)
-                throw new ArgumentNullException(nameof(sort));
-
-            if (projectTitle.IsSet && projectTitle.Value == null)
-                throw new ArgumentNullException(nameof(projectTitle));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="status"></param>
-        /// <param name="sort"></param>
-        /// <param name="projectTitle"></param>
-        /// <param name="perPage"></param>
-        /// <param name="withRelated"></param>
-        private void AfterFetchAllTeamDurStatusDefaultImplementation(IFetchAllTeamDurStatusApiResponse apiResponseLocalVar, int teamId, string status, Option<ProjectTitleAscupdatedAtAsc> sort, Option<string> projectTitle, Option<int> perPage, Option<bool> withRelated)
-        {
-            bool suppressDefaultLog = false;
-            AfterFetchAllTeamDurStatus(ref suppressDefaultLog, apiResponseLocalVar, teamId, status, sort, projectTitle, perPage, withRelated);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="status"></param>
-        /// <param name="sort"></param>
-        /// <param name="projectTitle"></param>
-        /// <param name="perPage"></param>
-        /// <param name="withRelated"></param>
-        partial void AfterFetchAllTeamDurStatus(ref bool suppressDefaultLog, IFetchAllTeamDurStatusApiResponse apiResponseLocalVar, int teamId, string status, Option<ProjectTitleAscupdatedAtAsc> sort, Option<string> projectTitle, Option<int> perPage, Option<bool> withRelated);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="status"></param>
-        /// <param name="sort"></param>
-        /// <param name="projectTitle"></param>
-        /// <param name="perPage"></param>
-        /// <param name="withRelated"></param>
-        private void OnErrorFetchAllTeamDurStatusDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, string status, Option<ProjectTitleAscupdatedAtAsc> sort, Option<string> projectTitle, Option<int> perPage, Option<bool> withRelated)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorFetchAllTeamDurStatus(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, status, sort, projectTitle, perPage, withRelated);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="status"></param>
-        /// <param name="sort"></param>
-        /// <param name="projectTitle"></param>
-        /// <param name="perPage"></param>
-        /// <param name="withRelated"></param>
-        partial void OnErrorFetchAllTeamDurStatus(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, string status, Option<ProjectTitleAscupdatedAtAsc> sort, Option<string> projectTitle, Option<int> perPage, Option<bool> withRelated);
-
-        /// <summary>
-        /// TeamDurController@indexStatus Returns a list of dur owned by this team with given status
-        /// </summary>
-        /// <param name="teamId">team id</param>
-        /// <param name="status">Status of the DUR (active, draft, or archived). Defaults to active if not provided.</param>
-        /// <param name="sort">Sort fields in the format field:direction, e.g., project_title:asc,updated_at:asc (optional)</param>
-        /// <param name="projectTitle">Filter dur by project title (optional)</param>
-        /// <param name="perPage">per page (optional)</param>
-        /// <param name="withRelated">Show related entities (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllTeamDurStatusApiResponse"/>&gt;</returns>
-        public async Task<IFetchAllTeamDurStatusApiResponse?> FetchAllTeamDurStatusOrDefaultAsync(int teamId, string status, Option<ProjectTitleAscupdatedAtAsc> sort = default, Option<string> projectTitle = default, Option<int> perPage = default, Option<bool> withRelated = default, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await FetchAllTeamDurStatusAsync(teamId, status, sort, projectTitle, perPage, withRelated, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// TeamDurController@indexStatus Returns a list of dur owned by this team with given status
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">team id</param>
-        /// <param name="status">Status of the DUR (active, draft, or archived). Defaults to active if not provided.</param>
-        /// <param name="sort">Sort fields in the format field:direction, e.g., project_title:asc,updated_at:asc (optional)</param>
-        /// <param name="projectTitle">Filter dur by project title (optional)</param>
-        /// <param name="perPage">per page (optional)</param>
-        /// <param name="withRelated">Show related entities (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllTeamDurStatusApiResponse"/>&gt;</returns>
-        public async Task<IFetchAllTeamDurStatusApiResponse> FetchAllTeamDurStatusAsync(int teamId, string status, Option<ProjectTitleAscupdatedAtAsc> sort = default, Option<string> projectTitle = default, Option<int> perPage = default, Option<bool> withRelated = default, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateFetchAllTeamDurStatus(status, sort, projectTitle);
-
-                FormatFetchAllTeamDurStatus(ref teamId, ref status, sort, ref projectTitle, ref perPage, ref withRelated);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v2/teams/{teamId}/dur/status/{status}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/teams/{teamId}/dur/status/{status}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bstatus%7D", Uri.EscapeDataString(status.ToString()));
-
-                    System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
-
-                    if (sort.IsSet)
-                        parseQueryStringLocalVar["sort"] = ClientUtils.ParameterToString(sort.Value);
-
-                    if (projectTitle.IsSet)
-                        parseQueryStringLocalVar["project_title"] = ClientUtils.ParameterToString(projectTitle.Value);
-
-                    if (perPage.IsSet)
-                        parseQueryStringLocalVar["per_page"] = ClientUtils.ParameterToString(perPage.Value);
-
-                    if (withRelated.IsSet)
-                        parseQueryStringLocalVar["with_related"] = ClientUtils.ParameterToString(withRelated.Value);
-
-                    uriBuilderLocalVar.Query = parseQueryStringLocalVar.ToString();
-
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        FetchAllTeamDurStatusApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/teams/{teamId}/dur/status/{status}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterFetchAllTeamDurStatusDefaultImplementation(apiResponseLocalVar, teamId, status, sort, projectTitle, perPage, withRelated);
-
-                        Events.ExecuteOnFetchAllTeamDurStatus(apiResponseLocalVar);
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorFetchAllTeamDurStatusDefaultImplementation(e, "/api/v2/teams/{teamId}/dur/status/{status}", uriBuilderLocalVar.Path, teamId, status, sort, projectTitle, perPage, withRelated);
-                Events.ExecuteOnErrorFetchAllTeamDurStatus(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="FetchAllTeamDurStatusApiResponse"/>
-        /// </summary>
-        public partial class FetchAllTeamDurStatusApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchAllTeamDurStatusApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataUseRegistersApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="FetchAllTeamDurStatusApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchAllTeamDurStatusApiResponse(ILogger<DataUseRegistersApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="FetchAllTeamDurStatusApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchAllTeamDurStatusApiResponse(ILogger<DataUseRegistersApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAllDur200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllDur200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllDur200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
         partial void FormatFetchDurById(ref int id);
 
         /// <summary>
@@ -5847,252 +5101,6 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatFetchDurByTeamAndByIdV2(ref int teamId, ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        private void AfterFetchDurByTeamAndByIdV2DefaultImplementation(IFetchDurByTeamAndByIdV2ApiResponse apiResponseLocalVar, int teamId, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterFetchDurByTeamAndByIdV2(ref suppressDefaultLog, apiResponseLocalVar, teamId, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        partial void AfterFetchDurByTeamAndByIdV2(ref bool suppressDefaultLog, IFetchDurByTeamAndByIdV2ApiResponse apiResponseLocalVar, int teamId, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        private void OnErrorFetchDurByTeamAndByIdV2DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorFetchDurByTeamAndByIdV2(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="teamId"></param>
-        /// <param name="id"></param>
-        partial void OnErrorFetchDurByTeamAndByIdV2(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id);
-
-        /// <summary>
-        /// TeamDurController@show Get dur by team id and by id
-        /// </summary>
-        /// <param name="teamId">team id</param>
-        /// <param name="id">data use register id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDurByTeamAndByIdV2ApiResponse"/>&gt;</returns>
-        public async Task<IFetchDurByTeamAndByIdV2ApiResponse?> FetchDurByTeamAndByIdV2OrDefaultAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await FetchDurByTeamAndByIdV2Async(teamId, id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// TeamDurController@show Get dur by team id and by id
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="teamId">team id</param>
-        /// <param name="id">data use register id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDurByTeamAndByIdV2ApiResponse"/>&gt;</returns>
-        public async Task<IFetchDurByTeamAndByIdV2ApiResponse> FetchDurByTeamAndByIdV2Async(int teamId, int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatFetchDurByTeamAndByIdV2(ref teamId, ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/teams/{teamId}/dur/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/teams/{teamId}/dur/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        FetchDurByTeamAndByIdV2ApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/teams/{teamId}/dur/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterFetchDurByTeamAndByIdV2DefaultImplementation(apiResponseLocalVar, teamId, id);
-
-                        Events.ExecuteOnFetchDurByTeamAndByIdV2(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorFetchDurByTeamAndByIdV2DefaultImplementation(e, "/api/v1/teams/{teamId}/dur/{id}", uriBuilderLocalVar.Path, teamId, id);
-                Events.ExecuteOnErrorFetchDurByTeamAndByIdV2(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="FetchDurByTeamAndByIdV2ApiResponse"/>
-        /// </summary>
-        public partial class FetchDurByTeamAndByIdV2ApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchDurByTeamAndByIdV2ApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataUseRegistersApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="FetchDurByTeamAndByIdV2ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchDurByTeamAndByIdV2ApiResponse(ILogger<DataUseRegistersApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="FetchDurByTeamAndByIdV2ApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchDurByTeamAndByIdV2ApiResponse(ILogger<DataUseRegistersApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.UpdateDur200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateDur200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateDur200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
         partial void FormatUpdateDur(ref int id, CreateDurRequest createDurRequest);
 
         /// <summary>
@@ -6325,11 +5333,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -6338,7 +5346,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -6401,11 +5409,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -6414,7 +5422,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -6679,11 +5687,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -6692,7 +5700,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -6755,11 +5763,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -6768,7 +5776,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -7019,11 +6027,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 201 Created
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateCategories200Response? Created()
+            public GatewayApiSdk.Model.CreateDarIntegration201Response? Created()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsCreated
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateDarIntegration201Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -7032,7 +6040,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryCreated([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
+            public bool TryCreated([NotNullWhen(true)]out GatewayApiSdk.Model.CreateDarIntegration201Response? result)
             {
                 result = null;
 
@@ -7057,11 +6065,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 401 Unauthorized
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateTeamCollections401Response? Unauthorized()
+            public GatewayApiSdk.Model.FetchAllDarIntegrations401Response? Unauthorized()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsUnauthorized
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateTeamCollections401Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllDarIntegrations401Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -7070,7 +6078,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.CreateTeamCollections401Response? result)
+            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllDarIntegrations401Response? result)
             {
                 result = null;
 
@@ -7095,11 +6103,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -7108,7 +6116,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 

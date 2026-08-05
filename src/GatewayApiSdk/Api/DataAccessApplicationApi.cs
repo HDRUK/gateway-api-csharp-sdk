@@ -39,29 +39,6 @@ namespace GatewayApiSdk.Api
         DataAccessApplicationApiEvents Events { get; }
 
         /// <summary>
-        /// DataAccessApplication@store
-        /// </summary>
-        /// <remarks>
-        /// Creates a new DAR application
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createDarApplicationsRequest">DataAccessApplication definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICreateDarApplicationsApiResponse"/>&gt;</returns>
-        Task<ICreateDarApplicationsApiResponse> CreateDarApplicationsAsync(CreateDarApplicationsRequest createDarApplicationsRequest, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataAccessApplication@store
-        /// </summary>
-        /// <remarks>
-        /// Creates a new DAR application
-        /// </remarks>
-        /// <param name="createDarApplicationsRequest">DataAccessApplication definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICreateDarApplicationsApiResponse"/>?&gt;</returns>
-        Task<ICreateDarApplicationsApiResponse?> CreateDarApplicationsOrDefaultAsync(CreateDarApplicationsRequest createDarApplicationsRequest, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
         /// DataAccessApplication@destroyFile
         /// </summary>
         /// <remarks>
@@ -135,58 +112,6 @@ namespace GatewayApiSdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IDeleteTeamDarApplicationFileApiResponse"/>?&gt;</returns>
         Task<IDeleteTeamDarApplicationFileApiResponse?> DeleteTeamDarApplicationFileOrDefaultAsync(int teamId, int id, int fileId, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataAccessApplication@destroy
-        /// </summary>
-        /// <remarks>
-        /// Delete a users DAR application
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteUserDarApplicationApiResponse"/>&gt;</returns>
-        Task<IDeleteUserDarApplicationApiResponse> DeleteUserDarApplicationAsync(int userId, int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataAccessApplication@destroy
-        /// </summary>
-        /// <remarks>
-        /// Delete a users DAR application
-        /// </remarks>
-        /// <param name="userId">User id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteUserDarApplicationApiResponse"/>?&gt;</returns>
-        Task<IDeleteUserDarApplicationApiResponse?> DeleteUserDarApplicationOrDefaultAsync(int userId, int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataAccessApplication@destroyFile
-        /// </summary>
-        /// <remarks>
-        /// Delete a file associated with a DAR application
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DAR application id</param>
-        /// <param name="userId">User id</param>
-        /// <param name="fileId">File uuid</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteUserDarApplicationFileApiResponse"/>&gt;</returns>
-        Task<IDeleteUserDarApplicationFileApiResponse> DeleteUserDarApplicationFileAsync(int id, int userId, string fileId, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataAccessApplication@destroyFile
-        /// </summary>
-        /// <remarks>
-        /// Delete a file associated with a DAR application
-        /// </remarks>
-        /// <param name="id">DAR application id</param>
-        /// <param name="userId">User id</param>
-        /// <param name="fileId">File uuid</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteUserDarApplicationFileApiResponse"/>?&gt;</returns>
-        Task<IDeleteUserDarApplicationFileApiResponse?> DeleteUserDarApplicationFileOrDefaultAsync(int id, int userId, string fileId, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DataAccessApplication@showAnswers
@@ -316,85 +241,6 @@ namespace GatewayApiSdk.Api
         Task<IFetchTeamDarApplicationStatusHistoryApiResponse?> FetchTeamDarApplicationStatusHistoryOrDefaultAsync(int teamId, int id, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// DataAccessApplication@downloadFile
-        /// </summary>
-        /// <remarks>
-        /// Download a file associated with a DAR application
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DAR application id</param>
-        /// <param name="userId">User id</param>
-        /// <param name="fileId">File id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUserDarApplicationFileApiResponse"/>&gt;</returns>
-        Task<IFetchUserDarApplicationFileApiResponse> FetchUserDarApplicationFileAsync(int id, int userId, string fileId, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataAccessApplication@downloadFile
-        /// </summary>
-        /// <remarks>
-        /// Download a file associated with a DAR application
-        /// </remarks>
-        /// <param name="id">DAR application id</param>
-        /// <param name="userId">User id</param>
-        /// <param name="fileId">File id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUserDarApplicationFileApiResponse"/>?&gt;</returns>
-        Task<IFetchUserDarApplicationFileApiResponse?> FetchUserDarApplicationFileOrDefaultAsync(int id, int userId, string fileId, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataAccessApplication@showFiles
-        /// </summary>
-        /// <remarks>
-        /// Return a list of files associated with a DAR application
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DAR application id</param>
-        /// <param name="userId">User id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUserDarApplicationFilesApiResponse"/>&gt;</returns>
-        Task<IFetchUserDarApplicationFilesApiResponse> FetchUserDarApplicationFilesAsync(int id, int userId, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataAccessApplication@showFiles
-        /// </summary>
-        /// <remarks>
-        /// Return a list of files associated with a DAR application
-        /// </remarks>
-        /// <param name="id">DAR application id</param>
-        /// <param name="userId">User id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUserDarApplicationFilesApiResponse"/>?&gt;</returns>
-        Task<IFetchUserDarApplicationFilesApiResponse?> FetchUserDarApplicationFilesOrDefaultAsync(int id, int userId, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataAccessApplication@update
-        /// </summary>
-        /// <remarks>
-        /// Edit a system DAR application
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="patchUserDarApplicationRequest">DataAccessApplication definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IPatchUserDarApplicationApiResponse"/>&gt;</returns>
-        Task<IPatchUserDarApplicationApiResponse> PatchUserDarApplicationAsync(int userId, int id, PatchUserDarApplicationRequest patchUserDarApplicationRequest, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataAccessApplication@update
-        /// </summary>
-        /// <remarks>
-        /// Edit a system DAR application
-        /// </remarks>
-        /// <param name="userId">User id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="patchUserDarApplicationRequest">DataAccessApplication definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IPatchUserDarApplicationApiResponse"/>?&gt;</returns>
-        Task<IPatchUserDarApplicationApiResponse?> PatchUserDarApplicationOrDefaultAsync(int userId, int id, PatchUserDarApplicationRequest patchUserDarApplicationRequest, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
         /// DataAccessApplication@update
         /// </summary>
         /// <remarks>
@@ -420,57 +266,12 @@ namespace GatewayApiSdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateTeamDarApplicationApiResponse"/>?&gt;</returns>
         Task<IUpdateTeamDarApplicationApiResponse?> UpdateTeamDarApplicationOrDefaultAsync(int teamId, int id, UpdateTeamDarApplicationRequest updateTeamDarApplicationRequest, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataAccessApplication@update
-        /// </summary>
-        /// <remarks>
-        /// Update a system DAR application
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="updateUserDarApplicationRequest">DataAccessApplication definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateUserDarApplicationApiResponse"/>&gt;</returns>
-        Task<IUpdateUserDarApplicationApiResponse> UpdateUserDarApplicationAsync(int userId, int id, UpdateUserDarApplicationRequest updateUserDarApplicationRequest, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// DataAccessApplication@update
-        /// </summary>
-        /// <remarks>
-        /// Update a system DAR application
-        /// </remarks>
-        /// <param name="userId">User id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="updateUserDarApplicationRequest">DataAccessApplication definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateUserDarApplicationApiResponse"/>?&gt;</returns>
-        Task<IUpdateUserDarApplicationApiResponse?> UpdateUserDarApplicationOrDefaultAsync(int userId, int id, UpdateUserDarApplicationRequest updateUserDarApplicationRequest, System.Threading.CancellationToken cancellationToken = default);
-    }
-
-    /// <summary>
-    /// The <see cref="ICreateDarApplicationsApiResponse"/>
-    /// </summary>
-    public interface ICreateDarApplicationsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.CreateCategories200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 500 InternalServerError
-        /// </summary>
-        /// <returns></returns>
-        bool IsInternalServerError { get; }
     }
 
     /// <summary>
     /// The <see cref="IDeleteDarApplicationFilesApiResponse"/>
     /// </summary>
-    public interface IDeleteDarApplicationFilesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IDeleteDarApplicationFilesApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.DeleteApplications200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -494,7 +295,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IDeleteDarApplicationsApiResponse"/>
     /// </summary>
-    public interface IDeleteDarApplicationsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IDeleteDarApplicationsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.DeleteApplications200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -518,55 +319,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IDeleteTeamDarApplicationFileApiResponse"/>
     /// </summary>
-    public interface IDeleteTeamDarApplicationFileApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 500 InternalServerError
-        /// </summary>
-        /// <returns></returns>
-        bool IsInternalServerError { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IDeleteUserDarApplicationApiResponse"/>
-    /// </summary>
-    public interface IDeleteUserDarApplicationApiResponse : GatewayApiSdk.Client.IApiResponse, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 401 Unauthorized
-        /// </summary>
-        /// <returns></returns>
-        bool IsUnauthorized { get; }
-
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 500 InternalServerError
-        /// </summary>
-        /// <returns></returns>
-        bool IsInternalServerError { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IDeleteUserDarApplicationFileApiResponse"/>
-    /// </summary>
-    public interface IDeleteUserDarApplicationFileApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IDeleteTeamDarApplicationFileApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.DeleteApplications200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -590,7 +343,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IFetchTeamDarApplicationAnswersApiResponse"/>
     /// </summary>
-    public interface IFetchTeamDarApplicationAnswersApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchTeamDarApplicationAnswers200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
+    public interface IFetchTeamDarApplicationAnswersApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchTeamDarApplicationAnswers200Response?>, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -608,7 +361,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IFetchTeamDarApplicationDownloadZipApiResponse"/>
     /// </summary>
-    public interface IFetchTeamDarApplicationDownloadZipApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
+    public interface IFetchTeamDarApplicationDownloadZipApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -626,7 +379,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IFetchTeamDarApplicationFileApiResponse"/>
     /// </summary>
-    public interface IFetchTeamDarApplicationFileApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
+    public interface IFetchTeamDarApplicationFileApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -644,7 +397,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IFetchTeamDarApplicationFilesApiResponse"/>
     /// </summary>
-    public interface IFetchTeamDarApplicationFilesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchTeamDarApplicationFiles200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
+    public interface IFetchTeamDarApplicationFilesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchTeamDarApplicationFiles200Response?>, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -662,7 +415,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IFetchTeamDarApplicationStatusHistoryApiResponse"/>
     /// </summary>
-    public interface IFetchTeamDarApplicationStatusHistoryApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchTeamDarApplicationStatusHistory200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
+    public interface IFetchTeamDarApplicationStatusHistoryApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchTeamDarApplicationStatusHistory200Response?>, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -675,96 +428,12 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <returns></returns>
         bool IsNotFound { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IFetchUserDarApplicationFileApiResponse"/>
-    /// </summary>
-    public interface IFetchUserDarApplicationFileApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IFetchUserDarApplicationFilesApiResponse"/>
-    /// </summary>
-    public interface IFetchUserDarApplicationFilesApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchTeamDarApplicationFiles200Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IPatchUserDarApplicationApiResponse"/>
-    /// </summary>
-    public interface IPatchUserDarApplicationApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.FetchTeamDarApplication200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 500 InternalServerError
-        /// </summary>
-        /// <returns></returns>
-        bool IsInternalServerError { get; }
     }
 
     /// <summary>
     /// The <see cref="IUpdateTeamDarApplicationApiResponse"/>
     /// </summary>
-    public interface IUpdateTeamDarApplicationApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.FetchTeamDarApplication200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 500 InternalServerError
-        /// </summary>
-        /// <returns></returns>
-        bool IsInternalServerError { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IUpdateUserDarApplicationApiResponse"/>
-    /// </summary>
-    public interface IUpdateUserDarApplicationApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.FetchTeamDarApplication200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IUpdateTeamDarApplicationApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.FetchTeamDarApplication200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -790,26 +459,6 @@ namespace GatewayApiSdk.Api
     /// </summary>
     public class DataAccessApplicationApiEvents
     {
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCreateDarApplications;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCreateDarApplications;
-
-        internal void ExecuteOnCreateDarApplications(DataAccessApplicationApi.CreateDarApplicationsApiResponse apiResponse)
-        {
-            OnCreateDarApplications?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorCreateDarApplications(Exception exception)
-        {
-            OnErrorCreateDarApplications?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
         /// <summary>
         /// The event raised after the server response
         /// </summary>
@@ -868,46 +517,6 @@ namespace GatewayApiSdk.Api
         internal void ExecuteOnErrorDeleteTeamDarApplicationFile(Exception exception)
         {
             OnErrorDeleteTeamDarApplicationFile?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnDeleteUserDarApplication;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorDeleteUserDarApplication;
-
-        internal void ExecuteOnDeleteUserDarApplication(DataAccessApplicationApi.DeleteUserDarApplicationApiResponse apiResponse)
-        {
-            OnDeleteUserDarApplication?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorDeleteUserDarApplication(Exception exception)
-        {
-            OnErrorDeleteUserDarApplication?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnDeleteUserDarApplicationFile;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorDeleteUserDarApplicationFile;
-
-        internal void ExecuteOnDeleteUserDarApplicationFile(DataAccessApplicationApi.DeleteUserDarApplicationFileApiResponse apiResponse)
-        {
-            OnDeleteUserDarApplicationFile?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorDeleteUserDarApplicationFile(Exception exception)
-        {
-            OnErrorDeleteUserDarApplicationFile?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
@@ -1013,66 +622,6 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFetchUserDarApplicationFile;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFetchUserDarApplicationFile;
-
-        internal void ExecuteOnFetchUserDarApplicationFile(DataAccessApplicationApi.FetchUserDarApplicationFileApiResponse apiResponse)
-        {
-            OnFetchUserDarApplicationFile?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorFetchUserDarApplicationFile(Exception exception)
-        {
-            OnErrorFetchUserDarApplicationFile?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFetchUserDarApplicationFiles;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFetchUserDarApplicationFiles;
-
-        internal void ExecuteOnFetchUserDarApplicationFiles(DataAccessApplicationApi.FetchUserDarApplicationFilesApiResponse apiResponse)
-        {
-            OnFetchUserDarApplicationFiles?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorFetchUserDarApplicationFiles(Exception exception)
-        {
-            OnErrorFetchUserDarApplicationFiles?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnPatchUserDarApplication;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorPatchUserDarApplication;
-
-        internal void ExecuteOnPatchUserDarApplication(DataAccessApplicationApi.PatchUserDarApplicationApiResponse apiResponse)
-        {
-            OnPatchUserDarApplication?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorPatchUserDarApplication(Exception exception)
-        {
-            OnErrorPatchUserDarApplication?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
         public event EventHandler<ApiResponseEventArgs>? OnUpdateTeamDarApplication;
 
         /// <summary>
@@ -1088,26 +637,6 @@ namespace GatewayApiSdk.Api
         internal void ExecuteOnErrorUpdateTeamDarApplication(Exception exception)
         {
             OnErrorUpdateTeamDarApplication?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnUpdateUserDarApplication;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorUpdateUserDarApplication;
-
-        internal void ExecuteOnUpdateUserDarApplication(DataAccessApplicationApi.UpdateUserDarApplicationApiResponse apiResponse)
-        {
-            OnUpdateUserDarApplication?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorUpdateUserDarApplication(Exception exception)
-        {
-            OnErrorUpdateUserDarApplication?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
@@ -1150,308 +679,6 @@ namespace GatewayApiSdk.Api
             HttpClient = httpClient;
             Events = dataAccessApplicationApiEvents;
             BearerTokenProvider = bearerTokenProvider;
-        }
-
-        partial void FormatCreateDarApplications(CreateDarApplicationsRequest createDarApplicationsRequest);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="createDarApplicationsRequest"></param>
-        /// <returns></returns>
-        private void ValidateCreateDarApplications(CreateDarApplicationsRequest createDarApplicationsRequest)
-        {
-            if (createDarApplicationsRequest == null)
-                throw new ArgumentNullException(nameof(createDarApplicationsRequest));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="createDarApplicationsRequest"></param>
-        private void AfterCreateDarApplicationsDefaultImplementation(ICreateDarApplicationsApiResponse apiResponseLocalVar, CreateDarApplicationsRequest createDarApplicationsRequest)
-        {
-            bool suppressDefaultLog = false;
-            AfterCreateDarApplications(ref suppressDefaultLog, apiResponseLocalVar, createDarApplicationsRequest);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="createDarApplicationsRequest"></param>
-        partial void AfterCreateDarApplications(ref bool suppressDefaultLog, ICreateDarApplicationsApiResponse apiResponseLocalVar, CreateDarApplicationsRequest createDarApplicationsRequest);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="createDarApplicationsRequest"></param>
-        private void OnErrorCreateDarApplicationsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateDarApplicationsRequest createDarApplicationsRequest)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCreateDarApplications(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createDarApplicationsRequest);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="createDarApplicationsRequest"></param>
-        partial void OnErrorCreateDarApplications(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateDarApplicationsRequest createDarApplicationsRequest);
-
-        /// <summary>
-        /// DataAccessApplication@store Creates a new DAR application
-        /// </summary>
-        /// <param name="createDarApplicationsRequest">DataAccessApplication definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICreateDarApplicationsApiResponse"/>&gt;</returns>
-        public async Task<ICreateDarApplicationsApiResponse?> CreateDarApplicationsOrDefaultAsync(CreateDarApplicationsRequest createDarApplicationsRequest, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await CreateDarApplicationsAsync(createDarApplicationsRequest, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// DataAccessApplication@store Creates a new DAR application
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createDarApplicationsRequest">DataAccessApplication definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICreateDarApplicationsApiResponse"/>&gt;</returns>
-        public async Task<ICreateDarApplicationsApiResponse> CreateDarApplicationsAsync(CreateDarApplicationsRequest createDarApplicationsRequest, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateCreateDarApplications(createDarApplicationsRequest);
-
-                FormatCreateDarApplications(createDarApplicationsRequest);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/dar/applications"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/dar/applications");
-
-                    httpRequestMessageLocalVar.Content = (createDarApplicationsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createDarApplicationsRequest, _jsonSerializerOptions));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Post;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        CreateDarApplicationsApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/dar/applications", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCreateDarApplicationsDefaultImplementation(apiResponseLocalVar, createDarApplicationsRequest);
-
-                        Events.ExecuteOnCreateDarApplications(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCreateDarApplicationsDefaultImplementation(e, "/api/v1/dar/applications", uriBuilderLocalVar.Path, createDarApplicationsRequest);
-                Events.ExecuteOnErrorCreateDarApplications(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="CreateDarApplicationsApiResponse"/>
-        /// </summary>
-        public partial class CreateDarApplicationsApiResponse : GatewayApiSdk.Client.ApiResponse, ICreateDarApplicationsApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataAccessApplicationApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="CreateDarApplicationsApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public CreateDarApplicationsApiResponse(ILogger<DataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="CreateDarApplicationsApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public CreateDarApplicationsApiResponse(ILogger<DataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CreateCategories200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
         partial void FormatDeleteDarApplicationFiles(ref int id, ref string fileId);
@@ -1674,11 +901,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1687,7 +914,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -1712,11 +939,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
+            public GatewayApiSdk.Model.DeleteApplications200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteApplications200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1725,7 +952,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteApplications200Response? result)
             {
                 result = null;
 
@@ -1750,11 +977,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1763,7 +990,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -1989,11 +1216,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2002,7 +1229,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -2027,11 +1254,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
+            public GatewayApiSdk.Model.DeleteApplications200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteApplications200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2040,7 +1267,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteApplications200Response? result)
             {
                 result = null;
 
@@ -2065,11 +1292,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2078,7 +1305,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -2318,11 +1545,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2331,7 +1558,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -2356,11 +1583,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
+            public GatewayApiSdk.Model.DeleteApplications200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteApplications200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2369,7 +1596,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteApplications200Response? result)
             {
                 result = null;
 
@@ -2394,11 +1621,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2407,671 +1634,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatDeleteUserDarApplication(ref int userId, ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="userId"></param>
-        /// <param name="id"></param>
-        private void AfterDeleteUserDarApplicationDefaultImplementation(IDeleteUserDarApplicationApiResponse apiResponseLocalVar, int userId, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterDeleteUserDarApplication(ref suppressDefaultLog, apiResponseLocalVar, userId, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="userId"></param>
-        /// <param name="id"></param>
-        partial void AfterDeleteUserDarApplication(ref bool suppressDefaultLog, IDeleteUserDarApplicationApiResponse apiResponseLocalVar, int userId, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="userId"></param>
-        /// <param name="id"></param>
-        private void OnErrorDeleteUserDarApplicationDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int userId, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorDeleteUserDarApplication(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, userId, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="userId"></param>
-        /// <param name="id"></param>
-        partial void OnErrorDeleteUserDarApplication(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int userId, int id);
-
-        /// <summary>
-        /// DataAccessApplication@destroy Delete a users DAR application
-        /// </summary>
-        /// <param name="userId">User id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteUserDarApplicationApiResponse"/>&gt;</returns>
-        public async Task<IDeleteUserDarApplicationApiResponse?> DeleteUserDarApplicationOrDefaultAsync(int userId, int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await DeleteUserDarApplicationAsync(userId, id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// DataAccessApplication@destroy Delete a users DAR application
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteUserDarApplicationApiResponse"/>&gt;</returns>
-        public async Task<IDeleteUserDarApplicationApiResponse> DeleteUserDarApplicationAsync(int userId, int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatDeleteUserDarApplication(ref userId, ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/users/{userId}/dar/applications/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/users/{userId}/dar/applications/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BuserId%7D", Uri.EscapeDataString(userId.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Delete;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        DeleteUserDarApplicationApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/users/{userId}/dar/applications/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterDeleteUserDarApplicationDefaultImplementation(apiResponseLocalVar, userId, id);
-
-                        Events.ExecuteOnDeleteUserDarApplication(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorDeleteUserDarApplicationDefaultImplementation(e, "/api/v1/users/{userId}/dar/applications/{id}", uriBuilderLocalVar.Path, userId, id);
-                Events.ExecuteOnErrorDeleteUserDarApplication(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="DeleteUserDarApplicationApiResponse"/>
-        /// </summary>
-        public partial class DeleteUserDarApplicationApiResponse : GatewayApiSdk.Client.ApiResponse, IDeleteUserDarApplicationApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataAccessApplicationApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="DeleteUserDarApplicationApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public DeleteUserDarApplicationApiResponse(ILogger<DataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="DeleteUserDarApplicationApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public DeleteUserDarApplicationApiResponse(ILogger<DataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 401 Unauthorized
-            /// </summary>
-            /// <returns></returns>
-            public bool IsUnauthorized => 401 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 401 Unauthorized
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CreateTeamCollections401Response? Unauthorized()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsUnauthorized
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateTeamCollections401Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 401 Unauthorized and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.CreateTeamCollections401Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Unauthorized();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)401);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatDeleteUserDarApplicationFile(ref int id, ref int userId, ref string fileId);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="fileId"></param>
-        /// <returns></returns>
-        private void ValidateDeleteUserDarApplicationFile(string fileId)
-        {
-            if (fileId == null)
-                throw new ArgumentNullException(nameof(fileId));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="userId"></param>
-        /// <param name="fileId"></param>
-        private void AfterDeleteUserDarApplicationFileDefaultImplementation(IDeleteUserDarApplicationFileApiResponse apiResponseLocalVar, int id, int userId, string fileId)
-        {
-            bool suppressDefaultLog = false;
-            AfterDeleteUserDarApplicationFile(ref suppressDefaultLog, apiResponseLocalVar, id, userId, fileId);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="userId"></param>
-        /// <param name="fileId"></param>
-        partial void AfterDeleteUserDarApplicationFile(ref bool suppressDefaultLog, IDeleteUserDarApplicationFileApiResponse apiResponseLocalVar, int id, int userId, string fileId);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="userId"></param>
-        /// <param name="fileId"></param>
-        private void OnErrorDeleteUserDarApplicationFileDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, int userId, string fileId)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorDeleteUserDarApplicationFile(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, userId, fileId);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="userId"></param>
-        /// <param name="fileId"></param>
-        partial void OnErrorDeleteUserDarApplicationFile(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, int userId, string fileId);
-
-        /// <summary>
-        /// DataAccessApplication@destroyFile Delete a file associated with a DAR application
-        /// </summary>
-        /// <param name="id">DAR application id</param>
-        /// <param name="userId">User id</param>
-        /// <param name="fileId">File uuid</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteUserDarApplicationFileApiResponse"/>&gt;</returns>
-        public async Task<IDeleteUserDarApplicationFileApiResponse?> DeleteUserDarApplicationFileOrDefaultAsync(int id, int userId, string fileId, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await DeleteUserDarApplicationFileAsync(id, userId, fileId, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// DataAccessApplication@destroyFile Delete a file associated with a DAR application
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DAR application id</param>
-        /// <param name="userId">User id</param>
-        /// <param name="fileId">File uuid</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IDeleteUserDarApplicationFileApiResponse"/>&gt;</returns>
-        public async Task<IDeleteUserDarApplicationFileApiResponse> DeleteUserDarApplicationFileAsync(int id, int userId, string fileId, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateDeleteUserDarApplicationFile(fileId);
-
-                FormatDeleteUserDarApplicationFile(ref id, ref userId, ref fileId);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/users/{userId}/dar/applications/{id}/files/{fileId}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/users/{userId}/dar/applications/{id}/files/{fileId}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BuserId%7D", Uri.EscapeDataString(userId.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BfileId%7D", Uri.EscapeDataString(fileId.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Delete;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        DeleteUserDarApplicationFileApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/users/{userId}/dar/applications/{id}/files/{fileId}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterDeleteUserDarApplicationFileDefaultImplementation(apiResponseLocalVar, id, userId, fileId);
-
-                        Events.ExecuteOnDeleteUserDarApplicationFile(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorDeleteUserDarApplicationFileDefaultImplementation(e, "/api/v1/users/{userId}/dar/applications/{id}/files/{fileId}", uriBuilderLocalVar.Path, id, userId, fileId);
-                Events.ExecuteOnErrorDeleteUserDarApplicationFile(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="DeleteUserDarApplicationFileApiResponse"/>
-        /// </summary>
-        public partial class DeleteUserDarApplicationFileApiResponse : GatewayApiSdk.Client.ApiResponse, IDeleteUserDarApplicationFileApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataAccessApplicationApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="DeleteUserDarApplicationFileApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public DeleteUserDarApplicationFileApiResponse(ILogger<DataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="DeleteUserDarApplicationFileApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public DeleteUserDarApplicationFileApiResponse(ILogger<DataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -3342,11 +1905,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -3355,7 +1918,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -3595,11 +2158,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -3608,7 +2171,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -3868,11 +2431,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -3881,7 +2444,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -4152,11 +2715,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -4165,7 +2728,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -4436,11 +2999,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -4449,7 +3012,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -4459,917 +3022,6 @@ namespace GatewayApiSdk.Api
                 } catch (Exception e)
                 {
                     OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatFetchUserDarApplicationFile(ref int id, ref int userId, ref string fileId);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="fileId"></param>
-        /// <returns></returns>
-        private void ValidateFetchUserDarApplicationFile(string fileId)
-        {
-            if (fileId == null)
-                throw new ArgumentNullException(nameof(fileId));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="userId"></param>
-        /// <param name="fileId"></param>
-        private void AfterFetchUserDarApplicationFileDefaultImplementation(IFetchUserDarApplicationFileApiResponse apiResponseLocalVar, int id, int userId, string fileId)
-        {
-            bool suppressDefaultLog = false;
-            AfterFetchUserDarApplicationFile(ref suppressDefaultLog, apiResponseLocalVar, id, userId, fileId);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="userId"></param>
-        /// <param name="fileId"></param>
-        partial void AfterFetchUserDarApplicationFile(ref bool suppressDefaultLog, IFetchUserDarApplicationFileApiResponse apiResponseLocalVar, int id, int userId, string fileId);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="userId"></param>
-        /// <param name="fileId"></param>
-        private void OnErrorFetchUserDarApplicationFileDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, int userId, string fileId)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorFetchUserDarApplicationFile(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, userId, fileId);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="userId"></param>
-        /// <param name="fileId"></param>
-        partial void OnErrorFetchUserDarApplicationFile(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, int userId, string fileId);
-
-        /// <summary>
-        /// DataAccessApplication@downloadFile Download a file associated with a DAR application
-        /// </summary>
-        /// <param name="id">DAR application id</param>
-        /// <param name="userId">User id</param>
-        /// <param name="fileId">File id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUserDarApplicationFileApiResponse"/>&gt;</returns>
-        public async Task<IFetchUserDarApplicationFileApiResponse?> FetchUserDarApplicationFileOrDefaultAsync(int id, int userId, string fileId, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await FetchUserDarApplicationFileAsync(id, userId, fileId, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// DataAccessApplication@downloadFile Download a file associated with a DAR application
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DAR application id</param>
-        /// <param name="userId">User id</param>
-        /// <param name="fileId">File id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUserDarApplicationFileApiResponse"/>&gt;</returns>
-        public async Task<IFetchUserDarApplicationFileApiResponse> FetchUserDarApplicationFileAsync(int id, int userId, string fileId, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateFetchUserDarApplicationFile(fileId);
-
-                FormatFetchUserDarApplicationFile(ref id, ref userId, ref fileId);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/users/{userId}/dar/applications/{id}/files/{fileId}/download"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/users/{userId}/dar/applications/{id}/files/{fileId}/download");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BuserId%7D", Uri.EscapeDataString(userId.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BfileId%7D", Uri.EscapeDataString(fileId.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "file",
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        FetchUserDarApplicationFileApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/users/{userId}/dar/applications/{id}/files/{fileId}/download", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterFetchUserDarApplicationFileDefaultImplementation(apiResponseLocalVar, id, userId, fileId);
-
-                        Events.ExecuteOnFetchUserDarApplicationFile(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorFetchUserDarApplicationFileDefaultImplementation(e, "/api/v1/users/{userId}/dar/applications/{id}/files/{fileId}/download", uriBuilderLocalVar.Path, id, userId, fileId);
-                Events.ExecuteOnErrorFetchUserDarApplicationFile(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="FetchUserDarApplicationFileApiResponse"/>
-        /// </summary>
-        public partial class FetchUserDarApplicationFileApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchUserDarApplicationFileApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataAccessApplicationApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="FetchUserDarApplicationFileApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchUserDarApplicationFileApiResponse(ILogger<DataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="FetchUserDarApplicationFileApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchUserDarApplicationFileApiResponse(ILogger<DataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatFetchUserDarApplicationFiles(ref int id, ref int userId);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="userId"></param>
-        private void AfterFetchUserDarApplicationFilesDefaultImplementation(IFetchUserDarApplicationFilesApiResponse apiResponseLocalVar, int id, int userId)
-        {
-            bool suppressDefaultLog = false;
-            AfterFetchUserDarApplicationFiles(ref suppressDefaultLog, apiResponseLocalVar, id, userId);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="userId"></param>
-        partial void AfterFetchUserDarApplicationFiles(ref bool suppressDefaultLog, IFetchUserDarApplicationFilesApiResponse apiResponseLocalVar, int id, int userId);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="userId"></param>
-        private void OnErrorFetchUserDarApplicationFilesDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, int userId)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorFetchUserDarApplicationFiles(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, userId);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        /// <param name="userId"></param>
-        partial void OnErrorFetchUserDarApplicationFiles(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, int userId);
-
-        /// <summary>
-        /// DataAccessApplication@showFiles Return a list of files associated with a DAR application
-        /// </summary>
-        /// <param name="id">DAR application id</param>
-        /// <param name="userId">User id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUserDarApplicationFilesApiResponse"/>&gt;</returns>
-        public async Task<IFetchUserDarApplicationFilesApiResponse?> FetchUserDarApplicationFilesOrDefaultAsync(int id, int userId, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await FetchUserDarApplicationFilesAsync(id, userId, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// DataAccessApplication@showFiles Return a list of files associated with a DAR application
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">DAR application id</param>
-        /// <param name="userId">User id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchUserDarApplicationFilesApiResponse"/>&gt;</returns>
-        public async Task<IFetchUserDarApplicationFilesApiResponse> FetchUserDarApplicationFilesAsync(int id, int userId, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatFetchUserDarApplicationFiles(ref id, ref userId);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/users/{userId}/dar/applications/{id}/files"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/users/{userId}/dar/applications/{id}/files");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BuserId%7D", Uri.EscapeDataString(userId.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        FetchUserDarApplicationFilesApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/users/{userId}/dar/applications/{id}/files", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterFetchUserDarApplicationFilesDefaultImplementation(apiResponseLocalVar, id, userId);
-
-                        Events.ExecuteOnFetchUserDarApplicationFiles(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorFetchUserDarApplicationFilesDefaultImplementation(e, "/api/v1/users/{userId}/dar/applications/{id}/files", uriBuilderLocalVar.Path, id, userId);
-                Events.ExecuteOnErrorFetchUserDarApplicationFiles(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="FetchUserDarApplicationFilesApiResponse"/>
-        /// </summary>
-        public partial class FetchUserDarApplicationFilesApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchUserDarApplicationFilesApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataAccessApplicationApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="FetchUserDarApplicationFilesApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchUserDarApplicationFilesApiResponse(ILogger<DataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="FetchUserDarApplicationFilesApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchUserDarApplicationFilesApiResponse(ILogger<DataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchTeamDarApplicationFiles200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchTeamDarApplicationFiles200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchTeamDarApplicationFiles200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatPatchUserDarApplication(ref int userId, ref int id, PatchUserDarApplicationRequest patchUserDarApplicationRequest);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="patchUserDarApplicationRequest"></param>
-        /// <returns></returns>
-        private void ValidatePatchUserDarApplication(PatchUserDarApplicationRequest patchUserDarApplicationRequest)
-        {
-            if (patchUserDarApplicationRequest == null)
-                throw new ArgumentNullException(nameof(patchUserDarApplicationRequest));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="userId"></param>
-        /// <param name="id"></param>
-        /// <param name="patchUserDarApplicationRequest"></param>
-        private void AfterPatchUserDarApplicationDefaultImplementation(IPatchUserDarApplicationApiResponse apiResponseLocalVar, int userId, int id, PatchUserDarApplicationRequest patchUserDarApplicationRequest)
-        {
-            bool suppressDefaultLog = false;
-            AfterPatchUserDarApplication(ref suppressDefaultLog, apiResponseLocalVar, userId, id, patchUserDarApplicationRequest);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="userId"></param>
-        /// <param name="id"></param>
-        /// <param name="patchUserDarApplicationRequest"></param>
-        partial void AfterPatchUserDarApplication(ref bool suppressDefaultLog, IPatchUserDarApplicationApiResponse apiResponseLocalVar, int userId, int id, PatchUserDarApplicationRequest patchUserDarApplicationRequest);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="userId"></param>
-        /// <param name="id"></param>
-        /// <param name="patchUserDarApplicationRequest"></param>
-        private void OnErrorPatchUserDarApplicationDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int userId, int id, PatchUserDarApplicationRequest patchUserDarApplicationRequest)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorPatchUserDarApplication(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, userId, id, patchUserDarApplicationRequest);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="userId"></param>
-        /// <param name="id"></param>
-        /// <param name="patchUserDarApplicationRequest"></param>
-        partial void OnErrorPatchUserDarApplication(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int userId, int id, PatchUserDarApplicationRequest patchUserDarApplicationRequest);
-
-        /// <summary>
-        /// DataAccessApplication@update Edit a system DAR application
-        /// </summary>
-        /// <param name="userId">User id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="patchUserDarApplicationRequest">DataAccessApplication definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IPatchUserDarApplicationApiResponse"/>&gt;</returns>
-        public async Task<IPatchUserDarApplicationApiResponse?> PatchUserDarApplicationOrDefaultAsync(int userId, int id, PatchUserDarApplicationRequest patchUserDarApplicationRequest, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await PatchUserDarApplicationAsync(userId, id, patchUserDarApplicationRequest, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// DataAccessApplication@update Edit a system DAR application
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="patchUserDarApplicationRequest">DataAccessApplication definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IPatchUserDarApplicationApiResponse"/>&gt;</returns>
-        public async Task<IPatchUserDarApplicationApiResponse> PatchUserDarApplicationAsync(int userId, int id, PatchUserDarApplicationRequest patchUserDarApplicationRequest, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidatePatchUserDarApplication(patchUserDarApplicationRequest);
-
-                FormatPatchUserDarApplication(ref userId, ref id, patchUserDarApplicationRequest);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/users/{userId}/dar/applications/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/users/{userId}/dar/applications/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BuserId%7D", Uri.EscapeDataString(userId.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    httpRequestMessageLocalVar.Content = (patchUserDarApplicationRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(patchUserDarApplicationRequest, _jsonSerializerOptions));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Patch;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        PatchUserDarApplicationApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/users/{userId}/dar/applications/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterPatchUserDarApplicationDefaultImplementation(apiResponseLocalVar, userId, id, patchUserDarApplicationRequest);
-
-                        Events.ExecuteOnPatchUserDarApplication(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorPatchUserDarApplicationDefaultImplementation(e, "/api/v1/users/{userId}/dar/applications/{id}", uriBuilderLocalVar.Path, userId, id, patchUserDarApplicationRequest);
-                Events.ExecuteOnErrorPatchUserDarApplication(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="PatchUserDarApplicationApiResponse"/>
-        /// </summary>
-        public partial class PatchUserDarApplicationApiResponse : GatewayApiSdk.Client.ApiResponse, IPatchUserDarApplicationApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataAccessApplicationApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="PatchUserDarApplicationApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public PatchUserDarApplicationApiResponse(ILogger<DataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="PatchUserDarApplicationApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public PatchUserDarApplicationApiResponse(ILogger<DataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchTeamDarApplication200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchTeamDarApplication200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchTeamDarApplication200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
                 }
 
                 return result != null;
@@ -5625,11 +3277,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -5638,7 +3290,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -5701,11 +3353,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -5714,361 +3366,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatUpdateUserDarApplication(ref int userId, ref int id, UpdateUserDarApplicationRequest updateUserDarApplicationRequest);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="updateUserDarApplicationRequest"></param>
-        /// <returns></returns>
-        private void ValidateUpdateUserDarApplication(UpdateUserDarApplicationRequest updateUserDarApplicationRequest)
-        {
-            if (updateUserDarApplicationRequest == null)
-                throw new ArgumentNullException(nameof(updateUserDarApplicationRequest));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="userId"></param>
-        /// <param name="id"></param>
-        /// <param name="updateUserDarApplicationRequest"></param>
-        private void AfterUpdateUserDarApplicationDefaultImplementation(IUpdateUserDarApplicationApiResponse apiResponseLocalVar, int userId, int id, UpdateUserDarApplicationRequest updateUserDarApplicationRequest)
-        {
-            bool suppressDefaultLog = false;
-            AfterUpdateUserDarApplication(ref suppressDefaultLog, apiResponseLocalVar, userId, id, updateUserDarApplicationRequest);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="userId"></param>
-        /// <param name="id"></param>
-        /// <param name="updateUserDarApplicationRequest"></param>
-        partial void AfterUpdateUserDarApplication(ref bool suppressDefaultLog, IUpdateUserDarApplicationApiResponse apiResponseLocalVar, int userId, int id, UpdateUserDarApplicationRequest updateUserDarApplicationRequest);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="userId"></param>
-        /// <param name="id"></param>
-        /// <param name="updateUserDarApplicationRequest"></param>
-        private void OnErrorUpdateUserDarApplicationDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int userId, int id, UpdateUserDarApplicationRequest updateUserDarApplicationRequest)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorUpdateUserDarApplication(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, userId, id, updateUserDarApplicationRequest);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="userId"></param>
-        /// <param name="id"></param>
-        /// <param name="updateUserDarApplicationRequest"></param>
-        partial void OnErrorUpdateUserDarApplication(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int userId, int id, UpdateUserDarApplicationRequest updateUserDarApplicationRequest);
-
-        /// <summary>
-        /// DataAccessApplication@update Update a system DAR application
-        /// </summary>
-        /// <param name="userId">User id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="updateUserDarApplicationRequest">DataAccessApplication definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateUserDarApplicationApiResponse"/>&gt;</returns>
-        public async Task<IUpdateUserDarApplicationApiResponse?> UpdateUserDarApplicationOrDefaultAsync(int userId, int id, UpdateUserDarApplicationRequest updateUserDarApplicationRequest, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await UpdateUserDarApplicationAsync(userId, id, updateUserDarApplicationRequest, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// DataAccessApplication@update Update a system DAR application
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User id</param>
-        /// <param name="id">DAR application id</param>
-        /// <param name="updateUserDarApplicationRequest">DataAccessApplication definition</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IUpdateUserDarApplicationApiResponse"/>&gt;</returns>
-        public async Task<IUpdateUserDarApplicationApiResponse> UpdateUserDarApplicationAsync(int userId, int id, UpdateUserDarApplicationRequest updateUserDarApplicationRequest, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateUpdateUserDarApplication(updateUserDarApplicationRequest);
-
-                FormatUpdateUserDarApplication(ref userId, ref id, updateUserDarApplicationRequest);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/users/{userId}/dar/applications/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/users/{userId}/dar/applications/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BuserId%7D", Uri.EscapeDataString(userId.ToString()));
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    httpRequestMessageLocalVar.Content = (updateUserDarApplicationRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateUserDarApplicationRequest, _jsonSerializerOptions));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Put;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        UpdateUserDarApplicationApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/users/{userId}/dar/applications/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterUpdateUserDarApplicationDefaultImplementation(apiResponseLocalVar, userId, id, updateUserDarApplicationRequest);
-
-                        Events.ExecuteOnUpdateUserDarApplication(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorUpdateUserDarApplicationDefaultImplementation(e, "/api/v1/users/{userId}/dar/applications/{id}", uriBuilderLocalVar.Path, userId, id, updateUserDarApplicationRequest);
-                Events.ExecuteOnErrorUpdateUserDarApplication(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="UpdateUserDarApplicationApiResponse"/>
-        /// </summary>
-        public partial class UpdateUserDarApplicationApiResponse : GatewayApiSdk.Client.ApiResponse, IUpdateUserDarApplicationApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<DataAccessApplicationApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="UpdateUserDarApplicationApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public UpdateUserDarApplicationApiResponse(ILogger<DataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="UpdateUserDarApplicationApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public UpdateUserDarApplicationApiResponse(ILogger<DataAccessApplicationApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchTeamDarApplication200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchTeamDarApplication200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchTeamDarApplication200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 

@@ -4,7 +4,6 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CountTeamUniqueFieldsDatasetsV2**](DatasetsApi.md#countteamuniquefieldsdatasetsv2) | **GET** /api/v2/teams/{teamId}/datasets/count/{field} | TeamDatasetController@count |
 | [**CountUniqueFields**](DatasetsApi.md#countuniquefields) | **GET** /api/v1/datasets/count/{field} | DatasetController@count |
 | [**CreateDatasets**](DatasetsApi.md#createdatasets) | **POST** /api/v1/datasets | DatasetController@store |
 | [**CreateDatasetsIntegrations**](DatasetsApi.md#createdatasetsintegrations) | **POST** /api/v1/integrations/datasets | IntegrationDatasetController@store |
@@ -27,8 +26,6 @@ All URIs are relative to *http://localhost*
 | [**FetchDatasets**](DatasetsApi.md#fetchdatasets) | **GET** /api/v1/datasets/{id} | DatasetController@show |
 | [**FetchDatasetsIntegrations**](DatasetsApi.md#fetchdatasetsintegrations) | **GET** /api/v1/integrations/datasets/{id} | IntegrationDatasetController@show |
 | [**FetchDatasetsV2**](DatasetsApi.md#fetchdatasetsv2) | **GET** /api/v2/datasets/{id} | DatasetController@showActive |
-| [**FetchTeamDatasetsStatus**](DatasetsApi.md#fetchteamdatasetsstatus) | **GET** /api/v2/teams/{teamId}/datasets/status/{status} | TeamDatasetController@indexStatus |
-| [**FetchTeamDatasetsV2**](DatasetsApi.md#fetchteamdatasetsv2) | **GET** /api/v2/teams/{teamId}/datasets/{id} | TeamDatasetController@show |
 | [**PatchDatasets**](DatasetsApi.md#patchdatasets) | **PATCH** /api/v1/datasets/{id} | DatasetController@edit |
 | [**PatchDatasetsIntegrations**](DatasetsApi.md#patchdatasetsintegrations) | **PATCH** /api/v1/integrations/datasets/{id} | IntegrationDatasetController@edit |
 | [**PatchDatasetsV2**](DatasetsApi.md#patchdatasetsv2) | **PATCH** /api/v2/datasets/{id} | DatasetController@edit |
@@ -37,43 +34,6 @@ All URIs are relative to *http://localhost*
 | [**UpdateDatasetsIntegrations**](DatasetsApi.md#updatedatasetsintegrations) | **PUT** /api/v1/integrations/datasets/{id} | IntegrationDatasetController@update |
 | [**UpdateDatasetsV2**](DatasetsApi.md#updatedatasetsv2) | **PUT** /api/v2/datasets/{id} | DatasetController@update |
 | [**UpdateTeamDatasetsV2**](DatasetsApi.md#updateteamdatasetsv2) | **PUT** /api/v2/teams/{teamId}/datasets/{id} | TeamDatasetController@update |
-
-<a id="countteamuniquefieldsdatasetsv2"></a>
-# **CountTeamUniqueFieldsDatasetsV2**
-> CountUniqueFieldsCollections200Response CountTeamUniqueFieldsDatasetsV2 (int teamId, string field)
-
-TeamDatasetController@count
-
-Get team counts for distinct entries of a field in the model
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | team id |  |
-| **field** | **string** | name of the field to perform a count on |  |
-
-### Return type
-
-[**CountUniqueFieldsCollections200Response**](CountUniqueFieldsCollections200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 <a id="countuniquefields"></a>
 # **CountUniqueFields**
@@ -114,7 +74,7 @@ Get Counts for distinct entries of a field in the model
 
 <a id="createdatasets"></a>
 # **CreateDatasets**
-> CreateCategories200Response CreateDatasets (CreateDatasetsRequest createDatasetsRequest)
+> CreateDarIntegration201Response CreateDatasets (CreateDatasetsRequest createDatasetsRequest)
 
 DatasetController@store
 
@@ -129,7 +89,7 @@ Create a new dataset
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -152,7 +112,7 @@ Create a new dataset
 
 <a id="createdatasetsintegrations"></a>
 # **CreateDatasetsIntegrations**
-> CreateCategories200Response CreateDatasetsIntegrations (DatasetsTestRequest datasetsTestRequest, string inputSchema = null, string inputVersion = null)
+> CreateDarIntegration201Response CreateDatasetsIntegrations (DatasetsTestRequest datasetsTestRequest, string inputSchema = null, string inputVersion = null)
 
 IntegrationDatasetController@store
 
@@ -169,7 +129,7 @@ Create a new dataset
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -269,7 +229,7 @@ No authorization required
 
 <a id="createdatasetsv2"></a>
 # **CreateDatasetsV2**
-> CreateCategories200Response CreateDatasetsV2 (CreateDatasetsV2Request createDatasetsV2Request)
+> CreateDarIntegration201Response CreateDatasetsV2 (CreateDatasetsV2Request createDatasetsV2Request)
 
 DatasetController@store
 
@@ -284,7 +244,7 @@ Create a new dataset
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -307,7 +267,7 @@ Create a new dataset
 
 <a id="createteamdatasetsv2"></a>
 # **CreateTeamDatasetsV2**
-> CreateCategories200Response CreateTeamDatasetsV2 (int teamId, CreateTeamDatasetsV2Request createTeamDatasetsV2Request)
+> CreateDarIntegration201Response CreateTeamDatasetsV2 (int teamId, CreateTeamDatasetsV2Request createTeamDatasetsV2Request)
 
 TeamDatasetController@store
 
@@ -323,7 +283,7 @@ Create a new dataset for a team
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -346,7 +306,7 @@ Create a new dataset for a team
 
 <a id="deletedatasets"></a>
 # **DeleteDatasets**
-> DeleteAliases200Response DeleteDatasets (int id)
+> DeleteApplications200Response DeleteDatasets (int id)
 
 DatasetController@destroy
 
@@ -361,7 +321,7 @@ Delete a dataset
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 
@@ -384,7 +344,7 @@ Delete a dataset
 
 <a id="deletedatasetsintegrations"></a>
 # **DeleteDatasetsIntegrations**
-> DeleteAliases200Response DeleteDatasetsIntegrations (int id)
+> DeleteApplications200Response DeleteDatasetsIntegrations (int id)
 
 IntegrationDatasetController@destroy
 
@@ -399,7 +359,7 @@ Delete a dataset
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 
@@ -422,7 +382,7 @@ Delete a dataset
 
 <a id="deletedatasetsv2"></a>
 # **DeleteDatasetsV2**
-> DeleteAliases200Response DeleteDatasetsV2 (int id)
+> DeleteApplications200Response DeleteDatasetsV2 (int id)
 
 Delete a dataset
 
@@ -437,7 +397,7 @@ Delete a dataset
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 
@@ -460,7 +420,7 @@ Delete a dataset
 
 <a id="deleteteamdatasetsv2"></a>
 # **DeleteTeamDatasetsV2**
-> DeleteAliases200Response DeleteTeamDatasetsV2 (int teamId, int id)
+> DeleteApplications200Response DeleteTeamDatasetsV2 (int teamId, int id)
 
 TeamDatasetController@destroy
 
@@ -476,7 +436,7 @@ Delete a team's dataset
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 
@@ -928,90 +888,9 @@ Get publicly visible dataset by id
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="fetchteamdatasetsstatus"></a>
-# **FetchTeamDatasetsStatus**
-> FetchAllDatasets200Response FetchTeamDatasetsStatus (int teamId, string status, string sort = null, string withMetadata = null)
-
-TeamDatasetController@indexStatus
-
-Returns a list of a team's datasets with the given status
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | ID of the team to filter by |  |
-| **status** | **string** | Status of the dataset (active, draft, or archived). Defaults to active if not provided. | [default to active] |
-| **sort** | **string** | Field and direction (colon separated) to sort by (default: &#39;created:desc&#39;) ... &lt;br/&gt; &lt;br/&gt;         - ?sort&#x3D;\\&lt;field\\&gt;:\\&lt;direction\\&gt; &lt;br/&gt;         - \\&lt;direction\\&gt; can only be &#39;asc&#39; or &#39;desc&#39;  &lt;br/&gt;         - \\&lt;field\\&gt; can only be a valid field for the dataset table that can be ordered on  &lt;br/&gt;         - \\&lt;field\\&gt; can start with the prefix &#39;metadata.&#39; so that nested values within the field &#39;metadata&#39;  &lt;br/&gt;             (represented by the GWDM JSON structure) can be used to order on.  &lt;br/&gt;  &lt;br/&gt; | [optional]  |
-| **withMetadata** | **string** | Boolean whether to return dataset metadata | [optional]  |
-
-### Return type
-
-[**FetchAllDatasets200Response**](FetchAllDatasets200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="fetchteamdatasetsv2"></a>
-# **FetchTeamDatasetsV2**
-> FetchDatasets200Response FetchTeamDatasetsV2 (int teamId, int id, string export = null, string schemaModel = null, string schemaVersion = null)
-
-TeamDatasetController@show
-
-Get dataset by id
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | team id |  |
-| **id** | **int** | dataset id |  |
-| **export** | **string** | Alternative output schema model. | [optional]  |
-| **schemaModel** | **string** | Alternative output schema model. | [optional]  |
-| **schemaVersion** | **string** | Alternative output schema version. | [optional]  |
-
-### Return type
-
-[**FetchDatasets200Response**](FetchDatasets200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success response |  -  |
-| **401** | Unauthorized |  -  |
-| **404** | Not found response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 <a id="patchdatasets"></a>
 # **PatchDatasets**
-> DeleteAliases200Response PatchDatasets (int id, string unarchive = null)
+> DeleteApplications200Response PatchDatasets (int id, string unarchive = null)
 
 DatasetController@edit
 
@@ -1027,7 +906,7 @@ Patch dataset by id
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 
@@ -1049,7 +928,7 @@ Patch dataset by id
 
 <a id="patchdatasetsintegrations"></a>
 # **PatchDatasetsIntegrations**
-> DeleteAliases200Response PatchDatasetsIntegrations (int id, string unarchive = null)
+> DeleteApplications200Response PatchDatasetsIntegrations (int id, string unarchive = null)
 
 IntegrationDatasetController@edit
 
@@ -1065,7 +944,7 @@ Patch dataset by id
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 
@@ -1087,7 +966,7 @@ Patch dataset by id
 
 <a id="patchdatasetsv2"></a>
 # **PatchDatasetsV2**
-> DeleteAliases200Response PatchDatasetsV2 (int id, PatchDatasetsV2Request patchDatasetsV2Request)
+> DeleteApplications200Response PatchDatasetsV2 (int id, PatchDatasetsV2Request patchDatasetsV2Request)
 
 DatasetController@edit
 
@@ -1103,7 +982,7 @@ Patch dataset by id
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 
@@ -1125,7 +1004,7 @@ Patch dataset by id
 
 <a id="patchteamdatasetsv2"></a>
 # **PatchTeamDatasetsV2**
-> DeleteAliases200Response PatchTeamDatasetsV2 (int teamId, int id, PatchDatasetsV2Request patchDatasetsV2Request)
+> DeleteApplications200Response PatchTeamDatasetsV2 (int teamId, int id, PatchDatasetsV2Request patchDatasetsV2Request)
 
 TeamDatasetController@edit
 
@@ -1142,7 +1021,7 @@ Edit a dataset owned by a team
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 
@@ -1164,7 +1043,7 @@ Edit a dataset owned by a team
 
 <a id="updatedatasets"></a>
 # **UpdateDatasets**
-> CreateCategories200Response UpdateDatasets (int id, UpdateDatasetsRequest updateDatasetsRequest)
+> CreateDarIntegration201Response UpdateDatasets (int id, UpdateDatasetsRequest updateDatasetsRequest)
 
 DatasetController@update
 
@@ -1180,7 +1059,7 @@ Update a dataset with a new dataset version
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -1244,7 +1123,7 @@ Update a dataset with a new dataset version
 
 <a id="updatedatasetsv2"></a>
 # **UpdateDatasetsV2**
-> CreateCategories200Response UpdateDatasetsV2 (int id, UpdateDatasetsRequest updateDatasetsRequest)
+> CreateDarIntegration201Response UpdateDatasetsV2 (int id, UpdateDatasetsRequest updateDatasetsRequest)
 
 DatasetController@update
 
@@ -1260,7 +1139,7 @@ Update a dataset with a new dataset version
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -1283,7 +1162,7 @@ Update a dataset with a new dataset version
 
 <a id="updateteamdatasetsv2"></a>
 # **UpdateTeamDatasetsV2**
-> CreateCategories200Response UpdateTeamDatasetsV2 (int teamId, int id, PatchDatasetsV2Request patchDatasetsV2Request)
+> CreateDarIntegration201Response UpdateTeamDatasetsV2 (int teamId, int id, PatchDatasetsV2Request patchDatasetsV2Request)
 
 TeamDatasetController@update
 
@@ -1300,7 +1179,7 @@ Update a team dataset with a new dataset version
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 

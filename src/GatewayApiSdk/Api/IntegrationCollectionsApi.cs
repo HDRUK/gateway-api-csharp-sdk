@@ -45,10 +45,10 @@ namespace GatewayApiSdk.Api
         /// Create a new collection
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateTeamCollectionsRequest">Pass user credentials</param>
+        /// <param name="createCollectionsIntegrationsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateCollectionsIntegrationsApiResponse"/>&gt;</returns>
-        Task<ICreateCollectionsIntegrationsApiResponse> CreateCollectionsIntegrationsAsync(UpdateTeamCollectionsRequest updateTeamCollectionsRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<ICreateCollectionsIntegrationsApiResponse> CreateCollectionsIntegrationsAsync(CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// IntegrationCollectionController@store
@@ -56,10 +56,10 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Create a new collection
         /// </remarks>
-        /// <param name="updateTeamCollectionsRequest">Pass user credentials</param>
+        /// <param name="createCollectionsIntegrationsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateCollectionsIntegrationsApiResponse"/>?&gt;</returns>
-        Task<ICreateCollectionsIntegrationsApiResponse?> CreateCollectionsIntegrationsOrDefaultAsync(UpdateTeamCollectionsRequest updateTeamCollectionsRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<ICreateCollectionsIntegrationsApiResponse?> CreateCollectionsIntegrationsOrDefaultAsync(CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Delete a collection
@@ -92,10 +92,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">collection id</param>
-        /// <param name="updateTeamCollectionsRequest">Pass user credentials</param>
+        /// <param name="createCollectionsIntegrationsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditCollectionsIntegrationsApiResponse"/>&gt;</returns>
-        Task<IEditCollectionsIntegrationsApiResponse> EditCollectionsIntegrationsAsync(int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<IEditCollectionsIntegrationsApiResponse> EditCollectionsIntegrationsAsync(int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Edit a collection
@@ -104,10 +104,10 @@ namespace GatewayApiSdk.Api
         /// Edit a collection
         /// </remarks>
         /// <param name="id">collection id</param>
-        /// <param name="updateTeamCollectionsRequest">Pass user credentials</param>
+        /// <param name="createCollectionsIntegrationsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditCollectionsIntegrationsApiResponse"/>?&gt;</returns>
-        Task<IEditCollectionsIntegrationsApiResponse?> EditCollectionsIntegrationsOrDefaultAsync(int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<IEditCollectionsIntegrationsApiResponse?> EditCollectionsIntegrationsOrDefaultAsync(int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// IntegrationCollectionController@index
@@ -165,10 +165,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">collection id</param>
-        /// <param name="updateTeamCollectionsRequest">Pass user credentials</param>
+        /// <param name="createCollectionsIntegrationsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateCollectionsIntegrationsApiResponse"/>&gt;</returns>
-        Task<IUpdateCollectionsIntegrationsApiResponse> UpdateCollectionsIntegrationsAsync(int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<IUpdateCollectionsIntegrationsApiResponse> UpdateCollectionsIntegrationsAsync(int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Update a collection
@@ -177,16 +177,16 @@ namespace GatewayApiSdk.Api
         /// Update a collection
         /// </remarks>
         /// <param name="id">collection id</param>
-        /// <param name="updateTeamCollectionsRequest">Pass user credentials</param>
+        /// <param name="createCollectionsIntegrationsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateCollectionsIntegrationsApiResponse"/>?&gt;</returns>
-        Task<IUpdateCollectionsIntegrationsApiResponse?> UpdateCollectionsIntegrationsOrDefaultAsync(int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<IUpdateCollectionsIntegrationsApiResponse?> UpdateCollectionsIntegrationsOrDefaultAsync(int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
     /// The <see cref="ICreateCollectionsIntegrationsApiResponse"/>
     /// </summary>
-    public interface ICreateCollectionsIntegrationsApiResponse : GatewayApiSdk.Client.IApiResponse, ICreated<GatewayApiSdk.Model.CreateCategories200Response?>, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface ICreateCollectionsIntegrationsApiResponse : GatewayApiSdk.Client.IApiResponse, ICreated<GatewayApiSdk.Model.CreateDarIntegration201Response?>, IUnauthorized<GatewayApiSdk.Model.FetchAllDarIntegrations401Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 201 Created
@@ -210,7 +210,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IDeleteCollectionsIntegrationsApiResponse"/>
     /// </summary>
-    public interface IDeleteCollectionsIntegrationsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IDeleteCollectionsIntegrationsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.DeleteApplications200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -234,7 +234,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IEditCollectionsIntegrationsApiResponse"/>
     /// </summary>
-    public interface IEditCollectionsIntegrationsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.FetchCollections200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IEditCollectionsIntegrationsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.FetchCollections200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -282,7 +282,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IUpdateCollectionsIntegrationsApiResponse"/>
     /// </summary>
-    public interface IUpdateCollectionsIntegrationsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.FetchCollections200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IUpdateCollectionsIntegrationsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.FetchCollections200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -470,28 +470,28 @@ namespace GatewayApiSdk.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatCreateCollectionsIntegrations(UpdateTeamCollectionsRequest updateTeamCollectionsRequest);
+        partial void FormatCreateCollectionsIntegrations(CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="updateTeamCollectionsRequest"></param>
+        /// <param name="createCollectionsIntegrationsRequest"></param>
         /// <returns></returns>
-        private void ValidateCreateCollectionsIntegrations(UpdateTeamCollectionsRequest updateTeamCollectionsRequest)
+        private void ValidateCreateCollectionsIntegrations(CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest)
         {
-            if (updateTeamCollectionsRequest == null)
-                throw new ArgumentNullException(nameof(updateTeamCollectionsRequest));
+            if (createCollectionsIntegrationsRequest == null)
+                throw new ArgumentNullException(nameof(createCollectionsIntegrationsRequest));
         }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="updateTeamCollectionsRequest"></param>
-        private void AfterCreateCollectionsIntegrationsDefaultImplementation(ICreateCollectionsIntegrationsApiResponse apiResponseLocalVar, UpdateTeamCollectionsRequest updateTeamCollectionsRequest)
+        /// <param name="createCollectionsIntegrationsRequest"></param>
+        private void AfterCreateCollectionsIntegrationsDefaultImplementation(ICreateCollectionsIntegrationsApiResponse apiResponseLocalVar, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest)
         {
             bool suppressDefaultLog = false;
-            AfterCreateCollectionsIntegrations(ref suppressDefaultLog, apiResponseLocalVar, updateTeamCollectionsRequest);
+            AfterCreateCollectionsIntegrations(ref suppressDefaultLog, apiResponseLocalVar, createCollectionsIntegrationsRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -501,8 +501,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="updateTeamCollectionsRequest"></param>
-        partial void AfterCreateCollectionsIntegrations(ref bool suppressDefaultLog, ICreateCollectionsIntegrationsApiResponse apiResponseLocalVar, UpdateTeamCollectionsRequest updateTeamCollectionsRequest);
+        /// <param name="createCollectionsIntegrationsRequest"></param>
+        partial void AfterCreateCollectionsIntegrations(ref bool suppressDefaultLog, ICreateCollectionsIntegrationsApiResponse apiResponseLocalVar, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -510,11 +510,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="updateTeamCollectionsRequest"></param>
-        private void OnErrorCreateCollectionsIntegrationsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, UpdateTeamCollectionsRequest updateTeamCollectionsRequest)
+        /// <param name="createCollectionsIntegrationsRequest"></param>
+        private void OnErrorCreateCollectionsIntegrationsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCreateCollectionsIntegrations(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, updateTeamCollectionsRequest);
+            OnErrorCreateCollectionsIntegrations(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createCollectionsIntegrationsRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -526,20 +526,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="updateTeamCollectionsRequest"></param>
-        partial void OnErrorCreateCollectionsIntegrations(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, UpdateTeamCollectionsRequest updateTeamCollectionsRequest);
+        /// <param name="createCollectionsIntegrationsRequest"></param>
+        partial void OnErrorCreateCollectionsIntegrations(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest);
 
         /// <summary>
         /// IntegrationCollectionController@store Create a new collection
         /// </summary>
-        /// <param name="updateTeamCollectionsRequest">Pass user credentials</param>
+        /// <param name="createCollectionsIntegrationsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateCollectionsIntegrationsApiResponse"/>&gt;</returns>
-        public async Task<ICreateCollectionsIntegrationsApiResponse?> CreateCollectionsIntegrationsOrDefaultAsync(UpdateTeamCollectionsRequest updateTeamCollectionsRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<ICreateCollectionsIntegrationsApiResponse?> CreateCollectionsIntegrationsOrDefaultAsync(CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await CreateCollectionsIntegrationsAsync(updateTeamCollectionsRequest, cancellationToken).ConfigureAwait(false);
+                return await CreateCollectionsIntegrationsAsync(createCollectionsIntegrationsRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -551,18 +551,18 @@ namespace GatewayApiSdk.Api
         /// IntegrationCollectionController@store Create a new collection
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="updateTeamCollectionsRequest">Pass user credentials</param>
+        /// <param name="createCollectionsIntegrationsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateCollectionsIntegrationsApiResponse"/>&gt;</returns>
-        public async Task<ICreateCollectionsIntegrationsApiResponse> CreateCollectionsIntegrationsAsync(UpdateTeamCollectionsRequest updateTeamCollectionsRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<ICreateCollectionsIntegrationsApiResponse> CreateCollectionsIntegrationsAsync(CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCreateCollectionsIntegrations(updateTeamCollectionsRequest);
+                ValidateCreateCollectionsIntegrations(createCollectionsIntegrationsRequest);
 
-                FormatCreateCollectionsIntegrations(updateTeamCollectionsRequest);
+                FormatCreateCollectionsIntegrations(createCollectionsIntegrationsRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -573,9 +573,9 @@ namespace GatewayApiSdk.Api
                         ? "/api/v1/integrations/collections"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/integrations/collections");
 
-                    httpRequestMessageLocalVar.Content = (updateTeamCollectionsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (createCollectionsIntegrationsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateTeamCollectionsRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createCollectionsIntegrationsRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -621,7 +621,7 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCreateCollectionsIntegrationsDefaultImplementation(apiResponseLocalVar, updateTeamCollectionsRequest);
+                        AfterCreateCollectionsIntegrationsDefaultImplementation(apiResponseLocalVar, createCollectionsIntegrationsRequest);
 
                         Events.ExecuteOnCreateCollectionsIntegrations(apiResponseLocalVar);
 
@@ -635,7 +635,7 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCreateCollectionsIntegrationsDefaultImplementation(e, "/api/v1/integrations/collections", uriBuilderLocalVar.Path, updateTeamCollectionsRequest);
+                OnErrorCreateCollectionsIntegrationsDefaultImplementation(e, "/api/v1/integrations/collections", uriBuilderLocalVar.Path, createCollectionsIntegrationsRequest);
                 Events.ExecuteOnErrorCreateCollectionsIntegrations(e);
                 throw;
             }
@@ -695,11 +695,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 201 Created
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateCategories200Response? Created()
+            public GatewayApiSdk.Model.CreateDarIntegration201Response? Created()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsCreated
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateDarIntegration201Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -708,7 +708,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryCreated([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
+            public bool TryCreated([NotNullWhen(true)]out GatewayApiSdk.Model.CreateDarIntegration201Response? result)
             {
                 result = null;
 
@@ -733,11 +733,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 401 Unauthorized
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateTeamCollections401Response? Unauthorized()
+            public GatewayApiSdk.Model.FetchAllDarIntegrations401Response? Unauthorized()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsUnauthorized
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateTeamCollections401Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllDarIntegrations401Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -746,7 +746,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.CreateTeamCollections401Response? result)
+            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllDarIntegrations401Response? result)
             {
                 result = null;
 
@@ -771,11 +771,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -784,7 +784,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -1010,11 +1010,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1023,7 +1023,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -1048,11 +1048,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
+            public GatewayApiSdk.Model.DeleteApplications200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteApplications200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1061,7 +1061,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteApplications200Response? result)
             {
                 result = null;
 
@@ -1086,11 +1086,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1099,7 +1099,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -1125,17 +1125,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatEditCollectionsIntegrations(ref int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest);
+        partial void FormatEditCollectionsIntegrations(ref int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="updateTeamCollectionsRequest"></param>
+        /// <param name="createCollectionsIntegrationsRequest"></param>
         /// <returns></returns>
-        private void ValidateEditCollectionsIntegrations(UpdateTeamCollectionsRequest updateTeamCollectionsRequest)
+        private void ValidateEditCollectionsIntegrations(CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest)
         {
-            if (updateTeamCollectionsRequest == null)
-                throw new ArgumentNullException(nameof(updateTeamCollectionsRequest));
+            if (createCollectionsIntegrationsRequest == null)
+                throw new ArgumentNullException(nameof(createCollectionsIntegrationsRequest));
         }
 
         /// <summary>
@@ -1143,11 +1143,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateTeamCollectionsRequest"></param>
-        private void AfterEditCollectionsIntegrationsDefaultImplementation(IEditCollectionsIntegrationsApiResponse apiResponseLocalVar, int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest)
+        /// <param name="createCollectionsIntegrationsRequest"></param>
+        private void AfterEditCollectionsIntegrationsDefaultImplementation(IEditCollectionsIntegrationsApiResponse apiResponseLocalVar, int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest)
         {
             bool suppressDefaultLog = false;
-            AfterEditCollectionsIntegrations(ref suppressDefaultLog, apiResponseLocalVar, id, updateTeamCollectionsRequest);
+            AfterEditCollectionsIntegrations(ref suppressDefaultLog, apiResponseLocalVar, id, createCollectionsIntegrationsRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1158,8 +1158,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateTeamCollectionsRequest"></param>
-        partial void AfterEditCollectionsIntegrations(ref bool suppressDefaultLog, IEditCollectionsIntegrationsApiResponse apiResponseLocalVar, int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest);
+        /// <param name="createCollectionsIntegrationsRequest"></param>
+        partial void AfterEditCollectionsIntegrations(ref bool suppressDefaultLog, IEditCollectionsIntegrationsApiResponse apiResponseLocalVar, int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1168,11 +1168,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateTeamCollectionsRequest"></param>
-        private void OnErrorEditCollectionsIntegrationsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest)
+        /// <param name="createCollectionsIntegrationsRequest"></param>
+        private void OnErrorEditCollectionsIntegrationsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorEditCollectionsIntegrations(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, updateTeamCollectionsRequest);
+            OnErrorEditCollectionsIntegrations(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, createCollectionsIntegrationsRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1185,21 +1185,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateTeamCollectionsRequest"></param>
-        partial void OnErrorEditCollectionsIntegrations(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest);
+        /// <param name="createCollectionsIntegrationsRequest"></param>
+        partial void OnErrorEditCollectionsIntegrations(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest);
 
         /// <summary>
         /// Edit a collection Edit a collection
         /// </summary>
         /// <param name="id">collection id</param>
-        /// <param name="updateTeamCollectionsRequest">Pass user credentials</param>
+        /// <param name="createCollectionsIntegrationsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditCollectionsIntegrationsApiResponse"/>&gt;</returns>
-        public async Task<IEditCollectionsIntegrationsApiResponse?> EditCollectionsIntegrationsOrDefaultAsync(int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IEditCollectionsIntegrationsApiResponse?> EditCollectionsIntegrationsOrDefaultAsync(int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await EditCollectionsIntegrationsAsync(id, updateTeamCollectionsRequest, cancellationToken).ConfigureAwait(false);
+                return await EditCollectionsIntegrationsAsync(id, createCollectionsIntegrationsRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1212,18 +1212,18 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">collection id</param>
-        /// <param name="updateTeamCollectionsRequest">Pass user credentials</param>
+        /// <param name="createCollectionsIntegrationsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditCollectionsIntegrationsApiResponse"/>&gt;</returns>
-        public async Task<IEditCollectionsIntegrationsApiResponse> EditCollectionsIntegrationsAsync(int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IEditCollectionsIntegrationsApiResponse> EditCollectionsIntegrationsAsync(int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateEditCollectionsIntegrations(updateTeamCollectionsRequest);
+                ValidateEditCollectionsIntegrations(createCollectionsIntegrationsRequest);
 
-                FormatEditCollectionsIntegrations(ref id, updateTeamCollectionsRequest);
+                FormatEditCollectionsIntegrations(ref id, createCollectionsIntegrationsRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1235,9 +1235,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/integrations/collections/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (updateTeamCollectionsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (createCollectionsIntegrationsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateTeamCollectionsRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createCollectionsIntegrationsRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -1283,7 +1283,7 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterEditCollectionsIntegrationsDefaultImplementation(apiResponseLocalVar, id, updateTeamCollectionsRequest);
+                        AfterEditCollectionsIntegrationsDefaultImplementation(apiResponseLocalVar, id, createCollectionsIntegrationsRequest);
 
                         Events.ExecuteOnEditCollectionsIntegrations(apiResponseLocalVar);
 
@@ -1297,7 +1297,7 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorEditCollectionsIntegrationsDefaultImplementation(e, "/api/v1/integrations/collections/{id}", uriBuilderLocalVar.Path, id, updateTeamCollectionsRequest);
+                OnErrorEditCollectionsIntegrationsDefaultImplementation(e, "/api/v1/integrations/collections/{id}", uriBuilderLocalVar.Path, id, createCollectionsIntegrationsRequest);
                 Events.ExecuteOnErrorEditCollectionsIntegrations(e);
                 throw;
             }
@@ -1357,11 +1357,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1370,7 +1370,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -1433,11 +1433,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1446,7 +1446,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -1978,17 +1978,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatUpdateCollectionsIntegrations(ref int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest);
+        partial void FormatUpdateCollectionsIntegrations(ref int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="updateTeamCollectionsRequest"></param>
+        /// <param name="createCollectionsIntegrationsRequest"></param>
         /// <returns></returns>
-        private void ValidateUpdateCollectionsIntegrations(UpdateTeamCollectionsRequest updateTeamCollectionsRequest)
+        private void ValidateUpdateCollectionsIntegrations(CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest)
         {
-            if (updateTeamCollectionsRequest == null)
-                throw new ArgumentNullException(nameof(updateTeamCollectionsRequest));
+            if (createCollectionsIntegrationsRequest == null)
+                throw new ArgumentNullException(nameof(createCollectionsIntegrationsRequest));
         }
 
         /// <summary>
@@ -1996,11 +1996,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateTeamCollectionsRequest"></param>
-        private void AfterUpdateCollectionsIntegrationsDefaultImplementation(IUpdateCollectionsIntegrationsApiResponse apiResponseLocalVar, int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest)
+        /// <param name="createCollectionsIntegrationsRequest"></param>
+        private void AfterUpdateCollectionsIntegrationsDefaultImplementation(IUpdateCollectionsIntegrationsApiResponse apiResponseLocalVar, int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest)
         {
             bool suppressDefaultLog = false;
-            AfterUpdateCollectionsIntegrations(ref suppressDefaultLog, apiResponseLocalVar, id, updateTeamCollectionsRequest);
+            AfterUpdateCollectionsIntegrations(ref suppressDefaultLog, apiResponseLocalVar, id, createCollectionsIntegrationsRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -2011,8 +2011,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateTeamCollectionsRequest"></param>
-        partial void AfterUpdateCollectionsIntegrations(ref bool suppressDefaultLog, IUpdateCollectionsIntegrationsApiResponse apiResponseLocalVar, int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest);
+        /// <param name="createCollectionsIntegrationsRequest"></param>
+        partial void AfterUpdateCollectionsIntegrations(ref bool suppressDefaultLog, IUpdateCollectionsIntegrationsApiResponse apiResponseLocalVar, int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -2021,11 +2021,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateTeamCollectionsRequest"></param>
-        private void OnErrorUpdateCollectionsIntegrationsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest)
+        /// <param name="createCollectionsIntegrationsRequest"></param>
+        private void OnErrorUpdateCollectionsIntegrationsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorUpdateCollectionsIntegrations(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, updateTeamCollectionsRequest);
+            OnErrorUpdateCollectionsIntegrations(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, createCollectionsIntegrationsRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -2038,21 +2038,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="updateTeamCollectionsRequest"></param>
-        partial void OnErrorUpdateCollectionsIntegrations(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest);
+        /// <param name="createCollectionsIntegrationsRequest"></param>
+        partial void OnErrorUpdateCollectionsIntegrations(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest);
 
         /// <summary>
         /// Update a collection Update a collection
         /// </summary>
         /// <param name="id">collection id</param>
-        /// <param name="updateTeamCollectionsRequest">Pass user credentials</param>
+        /// <param name="createCollectionsIntegrationsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateCollectionsIntegrationsApiResponse"/>&gt;</returns>
-        public async Task<IUpdateCollectionsIntegrationsApiResponse?> UpdateCollectionsIntegrationsOrDefaultAsync(int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IUpdateCollectionsIntegrationsApiResponse?> UpdateCollectionsIntegrationsOrDefaultAsync(int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await UpdateCollectionsIntegrationsAsync(id, updateTeamCollectionsRequest, cancellationToken).ConfigureAwait(false);
+                return await UpdateCollectionsIntegrationsAsync(id, createCollectionsIntegrationsRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -2065,18 +2065,18 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">collection id</param>
-        /// <param name="updateTeamCollectionsRequest">Pass user credentials</param>
+        /// <param name="createCollectionsIntegrationsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateCollectionsIntegrationsApiResponse"/>&gt;</returns>
-        public async Task<IUpdateCollectionsIntegrationsApiResponse> UpdateCollectionsIntegrationsAsync(int id, UpdateTeamCollectionsRequest updateTeamCollectionsRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IUpdateCollectionsIntegrationsApiResponse> UpdateCollectionsIntegrationsAsync(int id, CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateUpdateCollectionsIntegrations(updateTeamCollectionsRequest);
+                ValidateUpdateCollectionsIntegrations(createCollectionsIntegrationsRequest);
 
-                FormatUpdateCollectionsIntegrations(ref id, updateTeamCollectionsRequest);
+                FormatUpdateCollectionsIntegrations(ref id, createCollectionsIntegrationsRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -2088,9 +2088,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/integrations/collections/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (updateTeamCollectionsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (createCollectionsIntegrationsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateTeamCollectionsRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createCollectionsIntegrationsRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -2136,7 +2136,7 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterUpdateCollectionsIntegrationsDefaultImplementation(apiResponseLocalVar, id, updateTeamCollectionsRequest);
+                        AfterUpdateCollectionsIntegrationsDefaultImplementation(apiResponseLocalVar, id, createCollectionsIntegrationsRequest);
 
                         Events.ExecuteOnUpdateCollectionsIntegrations(apiResponseLocalVar);
 
@@ -2150,7 +2150,7 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorUpdateCollectionsIntegrationsDefaultImplementation(e, "/api/v1/integrations/collections/{id}", uriBuilderLocalVar.Path, id, updateTeamCollectionsRequest);
+                OnErrorUpdateCollectionsIntegrationsDefaultImplementation(e, "/api/v1/integrations/collections/{id}", uriBuilderLocalVar.Path, id, createCollectionsIntegrationsRequest);
                 Events.ExecuteOnErrorUpdateCollectionsIntegrations(e);
                 throw;
             }
@@ -2210,11 +2210,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2223,7 +2223,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -2286,11 +2286,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2299,7 +2299,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 

@@ -73,7 +73,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteWidgetAsync(teamId, id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>

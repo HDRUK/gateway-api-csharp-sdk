@@ -8,7 +8,7 @@ All URIs are relative to *http://localhost*
 
 <a id="integrationsdatasetstest"></a>
 # **IntegrationsDatasetsTest**
-> CreateCategories200Response IntegrationsDatasetsTest (DatasetsTestRequest datasetsTestRequest)
+> CreateDarIntegration201Response IntegrationsDatasetsTest (DatasetsTestRequest datasetsTestRequest)
 
 IntegrationDatasetController@datasetTest
 
@@ -23,7 +23,7 @@ Integrations datasets test
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 

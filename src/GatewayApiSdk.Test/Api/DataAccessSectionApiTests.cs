@@ -59,7 +59,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDarSectionRequest createDarSectionRequest = default!;
             var response = await _instance.CreateDarSectionAsync(createDarSectionRequest);
             var model = response.Ok();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -71,31 +71,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteDarSectionAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchDarSection
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchDarSectionAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.FetchDarSectionAsync(id);
-            var model = response.Ok();
-            Assert.IsType<FetchDarSection200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchDarSections
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchDarSectionsAsyncTest()
-        {
-            Client.Option<int> perPage = default!;
-            var response = await _instance.FetchDarSectionsAsync(perPage);
-            var model = response.Ok();
-            Assert.IsType<FetchDarSections200Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -108,7 +84,7 @@ namespace GatewayApiSdk.Test.Api
             PatchDarSectionRequest patchDarSectionRequest = default!;
             var response = await _instance.PatchDarSectionAsync(id, patchDarSectionRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -121,7 +97,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDarSectionRequest createDarSectionRequest = default!;
             var response = await _instance.UpdateDarSectionAsync(id, createDarSectionRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

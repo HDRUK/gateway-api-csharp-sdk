@@ -51,18 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CreateDarApplications
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreateDarApplicationsAsyncTest()
-        {
-            CreateDarApplicationsRequest createDarApplicationsRequest = default!;
-            var response = await _instance.CreateDarApplicationsAsync(createDarApplicationsRequest);
-            var model = response.Ok();
-            Assert.IsType<CreateCategories200Response>(model);
-        }
-
-        /// <summary>
         /// Test DeleteDarApplicationFiles
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -72,7 +60,7 @@ namespace GatewayApiSdk.Test.Api
             string fileId = default!;
             var response = await _instance.DeleteDarApplicationFilesAsync(id, fileId);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -84,7 +72,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteDarApplicationsAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -98,34 +86,7 @@ namespace GatewayApiSdk.Test.Api
             int fileId = default!;
             var response = await _instance.DeleteTeamDarApplicationFileAsync(teamId, id, fileId);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test DeleteUserDarApplication
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeleteUserDarApplicationAsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            var response = await _instance.DeleteUserDarApplicationAsync(userId, id);
-            var model = response.Unauthorized();
-            Assert.IsType<CreateTeamCollections401Response>(model);
-        }
-
-        /// <summary>
-        /// Test DeleteUserDarApplicationFile
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeleteUserDarApplicationFileAsyncTest()
-        {
-            int id = default!;
-            int userId = default!;
-            string fileId = default!;
-            var response = await _instance.DeleteUserDarApplicationFileAsync(id, userId, fileId);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -191,45 +152,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test FetchUserDarApplicationFile
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchUserDarApplicationFileAsyncTest()
-        {
-            int id = default!;
-            int userId = default!;
-            string fileId = default!;
-            await _instance.FetchUserDarApplicationFileAsync(id, userId, fileId);
-        }
-
-        /// <summary>
-        /// Test FetchUserDarApplicationFiles
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchUserDarApplicationFilesAsyncTest()
-        {
-            int id = default!;
-            int userId = default!;
-            var response = await _instance.FetchUserDarApplicationFilesAsync(id, userId);
-            var model = response.Ok();
-            Assert.IsType<FetchTeamDarApplicationFiles200Response>(model);
-        }
-
-        /// <summary>
-        /// Test PatchUserDarApplication
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task PatchUserDarApplicationAsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            PatchUserDarApplicationRequest patchUserDarApplicationRequest = default!;
-            var response = await _instance.PatchUserDarApplicationAsync(userId, id, patchUserDarApplicationRequest);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
         /// Test UpdateTeamDarApplication
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -240,21 +162,7 @@ namespace GatewayApiSdk.Test.Api
             UpdateTeamDarApplicationRequest updateTeamDarApplicationRequest = default!;
             var response = await _instance.UpdateTeamDarApplicationAsync(teamId, id, updateTeamDarApplicationRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test UpdateUserDarApplication
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task UpdateUserDarApplicationAsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            UpdateUserDarApplicationRequest updateUserDarApplicationRequest = default!;
-            var response = await _instance.UpdateUserDarApplicationAsync(userId, id, updateUserDarApplicationRequest);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

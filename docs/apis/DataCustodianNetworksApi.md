@@ -17,7 +17,7 @@ All URIs are relative to *http://localhost*
 
 <a id="createdatacustodiannetwork"></a>
 # **CreateDataCustodianNetwork**
-> CreateCategories200Response CreateDataCustodianNetwork (CreateDataProviderCollRequest createDataProviderCollRequest)
+> CreateDarIntegration201Response CreateDataCustodianNetwork (CreateDataProviderCollRequest createDataProviderCollRequest)
 
 DataCustodianNetworks@store
 
@@ -32,7 +32,7 @@ Creates a new DataCustodianNetwork
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ Creates a new DataCustodianNetwork
 
 <a id="deletedatacustodiannetwork"></a>
 # **DeleteDataCustodianNetwork**
-> DeleteAliases200Response DeleteDataCustodianNetwork (int id)
+> DeleteApplications200Response DeleteDataCustodianNetwork (int id)
 
 DataCustodianNetworks@destroy
 
@@ -69,7 +69,7 @@ Delete a DataCustodianNetwork
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 

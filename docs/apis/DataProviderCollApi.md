@@ -14,7 +14,7 @@ All URIs are relative to *http://localhost*
 
 <a id="createdataprovidercoll"></a>
 # **CreateDataProviderColl**
-> CreateCategories200Response CreateDataProviderColl (CreateDataProviderCollRequest createDataProviderCollRequest)
+> CreateDarIntegration201Response CreateDataProviderColl (CreateDataProviderCollRequest createDataProviderCollRequest)
 
 DataProviderColl@store
 
@@ -29,7 +29,7 @@ Creates a new DataProviderColl
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -51,7 +51,7 @@ Creates a new DataProviderColl
 
 <a id="deletedataprovidercoll"></a>
 # **DeleteDataProviderColl**
-> DeleteAliases200Response DeleteDataProviderColl (int id)
+> DeleteApplications200Response DeleteDataProviderColl (int id)
 
 DataProviderColl@destroy
 
@@ -66,7 +66,7 @@ Delete a DataProviderColl
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 

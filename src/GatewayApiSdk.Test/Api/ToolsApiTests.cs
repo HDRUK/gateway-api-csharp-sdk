@@ -51,19 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CountTeamUniqueFieldsToolsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CountTeamUniqueFieldsToolsV2AsyncTest()
-        {
-            int teamId = default!;
-            string field = default!;
-            var response = await _instance.CountTeamUniqueFieldsToolsV2Async(teamId, field);
-            var model = response.Ok();
-            Assert.IsType<CountUniqueFieldsCollections200Response>(model);
-        }
-
-        /// <summary>
         /// Test CountUniqueFieldsTools
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -77,19 +64,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CountUserUniqueFieldsToolsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CountUserUniqueFieldsToolsV2AsyncTest()
-        {
-            int userId = default!;
-            string field = default!;
-            var response = await _instance.CountUserUniqueFieldsToolsV2Async(userId, field);
-            var model = response.Ok();
-            Assert.IsType<CountUniqueFieldsCollections200Response>(model);
-        }
-
-        /// <summary>
         /// Test CreateTools
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -98,7 +72,7 @@ namespace GatewayApiSdk.Test.Api
             CreateToolsRequest createToolsRequest = default!;
             var response = await _instance.CreateToolsAsync(createToolsRequest);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -111,20 +85,7 @@ namespace GatewayApiSdk.Test.Api
             CreateToolsRequest createToolsRequest = default!;
             var response = await _instance.CreateToolsByTeamV2Async(teamId, createToolsRequest);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
-        }
-
-        /// <summary>
-        /// Test CreateToolsByUserV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreateToolsByUserV2AsyncTest()
-        {
-            int userId = default!;
-            CreateToolsRequest createToolsRequest = default!;
-            var response = await _instance.CreateToolsByUserV2Async(userId, createToolsRequest);
-            var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -136,7 +97,7 @@ namespace GatewayApiSdk.Test.Api
             CreateToolsIntegrationsRequest createToolsIntegrationsRequest = default!;
             var response = await _instance.CreateToolsIntegrationsAsync(createToolsIntegrationsRequest);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -160,19 +121,6 @@ namespace GatewayApiSdk.Test.Api
             int teamId = default!;
             int id = default!;
             var response = await _instance.DeleteToolsByTeamidV2Async(teamId, id);
-            var model = response.Ok();
-            Assert.IsType<DeleteFederation200Response>(model);
-        }
-
-        /// <summary>
-        /// Test DeleteToolsByUserV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeleteToolsByUserV2AsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            var response = await _instance.DeleteToolsByUserV2Async(userId, id);
             var model = response.Ok();
             Assert.IsType<DeleteFederation200Response>(model);
         }
@@ -218,20 +166,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test EditToolsByUserV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task EditToolsByUserV2AsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            UpdateToolsRequest updateToolsRequest = default!;
-            var response = await _instance.EditToolsByUserV2Async(userId, id, updateToolsRequest);
-            var model = response.Ok();
-            Assert.IsType<FetchToolsIntegrations200Response>(model);
-        }
-
-        /// <summary>
         /// Test EditToolsIntegrations
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -242,32 +176,6 @@ namespace GatewayApiSdk.Test.Api
             var response = await _instance.EditToolsIntegrationsAsync(id, updateToolsIntegrationsRequest);
             var model = response.Created();
             Assert.IsType<FetchToolsIntegrations200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchAllToolByTeamAndStatusV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchAllToolByTeamAndStatusV2AsyncTest()
-        {
-            long teamId = default!;
-            string status = default!;
-            var response = await _instance.FetchAllToolByTeamAndStatusV2Async(teamId, status);
-            var model = response.Ok();
-            Assert.IsType<FetchAllToolsIntegrations200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchAllToolByUserAndStatusV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchAllToolByUserAndStatusV2AsyncTest()
-        {
-            long userId = default!;
-            string status = default!;
-            var response = await _instance.FetchAllToolByUserAndStatusV2Async(userId, status);
-            var model = response.Ok();
-            Assert.IsType<FetchAllToolsIntegrations200Response>(model);
         }
 
         /// <summary>
@@ -324,34 +232,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test FetchToolsByTeamAndByIdV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchToolsByTeamAndByIdV2AsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            Client.Option<string> viewType = default!;
-            var response = await _instance.FetchToolsByTeamAndByIdV2Async(teamId, id, viewType);
-            var model = response.Ok();
-            Assert.IsType<FetchToolsIntegrations200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchToolsByUserAndByIdV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchToolsByUserAndByIdV2AsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            Client.Option<string> viewType = default!;
-            var response = await _instance.FetchToolsByUserAndByIdV2Async(userId, id, viewType);
-            var model = response.Ok();
-            Assert.IsType<FetchToolsIntegrations200Response>(model);
-        }
-
-        /// <summary>
         /// Test FetchToolsIntegrations
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -398,20 +278,6 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             UpdateToolsRequest updateToolsRequest = default!;
             var response = await _instance.UpdateToolsByTeamidV2Async(teamId, id, updateToolsRequest);
-            var model = response.Ok();
-            Assert.IsType<FetchToolsIntegrations200Response>(model);
-        }
-
-        /// <summary>
-        /// Test UpdateToolsByUserV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task UpdateToolsByUserV2AsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            UpdateToolsRequest updateToolsRequest = default!;
-            var response = await _instance.UpdateToolsByUserV2Async(userId, id, updateToolsRequest);
             var model = response.Ok();
             Assert.IsType<FetchToolsIntegrations200Response>(model);
         }

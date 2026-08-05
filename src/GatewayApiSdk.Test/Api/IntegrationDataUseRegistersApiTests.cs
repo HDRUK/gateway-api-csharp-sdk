@@ -59,7 +59,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDurIntegrationsRequest createDurIntegrationsRequest = default!;
             var response = await _instance.CreateDurIntegrationsAsync(createDurIntegrationsRequest);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteDurIntegrationsAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDurIntegrationsRequest createDurIntegrationsRequest = default!;
             var response = await _instance.EditDurIntegrationsAsync(id, createDurIntegrationsRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDurIntegrationsRequest createDurIntegrationsRequest = default!;
             var response = await _instance.UpdateDurIntegrationsAsync(id, createDurIntegrationsRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

@@ -89,19 +89,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test FetchTeamDarApplicationHeader
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchTeamDarApplicationHeaderAsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            var response = await _instance.FetchTeamDarApplicationHeaderAsync(teamId, id);
-            var model = response.Ok();
-            Assert.IsType<FetchTeamDarApplicationHeader200Response>(model);
-        }
-
-        /// <summary>
         /// Test FetchTeamDarApplications
         /// </summary>
         [Fact (Skip = "not implemented")]

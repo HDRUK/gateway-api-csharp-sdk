@@ -59,7 +59,7 @@ namespace GatewayApiSdk.Test.Api
             CreateTypeCategoriesRequest createTypeCategoriesRequest = default!;
             var response = await _instance.CreateTypeCategoriesAsync(createTypeCategoriesRequest);
             var model = response.Ok();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteTypeCategoriesAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -81,33 +81,10 @@ namespace GatewayApiSdk.Test.Api
         public async Task EditTypeCategoriesAsyncTest()
         {
             int id = default!;
-            EditCategoriesRequest editCategoriesRequest = default!;
-            var response = await _instance.EditTypeCategoriesAsync(id, editCategoriesRequest);
+            EditProgrammingLanguagesRequest editProgrammingLanguagesRequest = default!;
+            var response = await _instance.EditTypeCategoriesAsync(id, editProgrammingLanguagesRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchAllTypeCategories
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchAllTypeCategoriesAsyncTest()
-        {
-            var response = await _instance.FetchAllTypeCategoriesAsync();
-            var model = response.Ok();
-            Assert.IsType<FetchAllTypeCategories200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchTypeCategories
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchTypeCategoriesAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.FetchTypeCategoriesAsync(id);
-            var model = response.Ok();
-            Assert.IsType<FetchTypeCategories200Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -120,7 +97,7 @@ namespace GatewayApiSdk.Test.Api
             UpdateTypeCategoriesRequest updateTypeCategoriesRequest = default!;
             var response = await _instance.UpdateTypeCategoriesAsync(id, updateTypeCategoriesRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

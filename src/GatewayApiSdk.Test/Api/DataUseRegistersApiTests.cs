@@ -51,19 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CountTeamUniqueFieldsDurV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CountTeamUniqueFieldsDurV2AsyncTest()
-        {
-            int teamId = default!;
-            string field = default!;
-            var response = await _instance.CountTeamUniqueFieldsDurV2Async(teamId, field);
-            var model = response.Ok();
-            Assert.IsType<CountUniqueFieldsCollections200Response>(model);
-        }
-
-        /// <summary>
         /// Test CreateDur
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -72,7 +59,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDurRequest createDurRequest = default!;
             var response = await _instance.CreateDurAsync(createDurRequest);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -85,7 +72,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDurRequest createDurRequest = default!;
             var response = await _instance.CreateDurByTeamV2Async(teamId, createDurRequest);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -97,7 +84,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteDurAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -110,7 +97,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteDursV2ByTeamIdAsync(teamId, id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -124,7 +111,7 @@ namespace GatewayApiSdk.Test.Api
             Client.Option<string> unarchive = default!;
             var response = await _instance.EditDurAsync(id, createDurRequest, unarchive);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -138,7 +125,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDurRequest createDurRequest = default!;
             var response = await _instance.EditDursV2ByTeamIdAsync(teamId, id, createDurRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -205,23 +192,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test FetchAllTeamDurStatus
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchAllTeamDurStatusAsyncTest()
-        {
-            int teamId = default!;
-            string status = default!;
-            Client.Option<ProjectTitleAscupdatedAtAsc> sort = default!;
-            Client.Option<string> projectTitle = default!;
-            Client.Option<int> perPage = default!;
-            Client.Option<bool> withRelated = default!;
-            var response = await _instance.FetchAllTeamDurStatusAsync(teamId, status, sort, projectTitle, perPage, withRelated);
-            var model = response.Ok();
-            Assert.IsType<FetchAllDur200Response>(model);
-        }
-
-        /// <summary>
         /// Test FetchDurById
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -246,19 +216,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test FetchDurByTeamAndByIdV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchDurByTeamAndByIdV2AsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            var response = await _instance.FetchDurByTeamAndByIdV2Async(teamId, id);
-            var model = response.Ok();
-            Assert.IsType<UpdateDur200Response>(model);
-        }
-
-        /// <summary>
         /// Test UpdateDur
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -268,7 +225,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDurRequest createDurRequest = default!;
             var response = await _instance.UpdateDurAsync(id, createDurRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -282,7 +239,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDurRequest createDurRequest = default!;
             var response = await _instance.UpdateDurV2ByTeamIdAsync(teamId, id, createDurRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -294,7 +251,7 @@ namespace GatewayApiSdk.Test.Api
             UploadDurRequest uploadDurRequest = default!;
             var response = await _instance.UploadDurAsync(uploadDurRequest);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
     }
 }

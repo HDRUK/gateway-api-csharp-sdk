@@ -75,17 +75,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test RefreshToken
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task RefreshTokenAsyncTest()
-        {
-            var response = await _instance.RefreshTokenAsync();
-            var model = response.Ok();
-            Assert.IsType<Authentication200Response>(model);
-        }
-
-        /// <summary>
         /// Test Register
         /// </summary>
         [Fact (Skip = "not implemented")]

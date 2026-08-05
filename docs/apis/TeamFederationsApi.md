@@ -16,7 +16,7 @@ All URIs are relative to *http://localhost*
 
 <a id="createfederationteam"></a>
 # **CreateFederationTeam**
-> CreateCategories200Response CreateFederationTeam (int teamId, CreateFederationTeamRequest createFederationTeamRequest)
+> CreateDarIntegration201Response CreateFederationTeam (int teamId, CreateFederationTeamRequest createFederationTeamRequest)
 
 FederationController@store
 
@@ -32,7 +32,7 @@ Create federation
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -95,7 +95,7 @@ Delete federation for team
 
 <a id="editfederationteam"></a>
 # **EditFederationTeam**
-> CreateCategories200Response EditFederationTeam (int teamId, int federationId, CreateFederationTeamRequest createFederationTeamRequest)
+> CreateDarIntegration201Response EditFederationTeam (int teamId, int federationId, CreateFederationTeamRequest createFederationTeamRequest)
 
 FederationController@edit
 
@@ -112,7 +112,7 @@ Edit federation for team
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -319,7 +319,7 @@ Test federation configuration
 
 <a id="updatefederationteam"></a>
 # **UpdateFederationTeam**
-> CreateCategories200Response UpdateFederationTeam (int teamId, int federationId, UpdateFederationTeamRequest updateFederationTeamRequest)
+> CreateDarIntegration201Response UpdateFederationTeam (int teamId, int federationId, UpdateFederationTeamRequest updateFederationTeamRequest)
 
 FederationController@update
 
@@ -336,7 +336,7 @@ Update federation for team
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 

@@ -6,7 +6,6 @@ All URIs are relative to *http://localhost*
 |--------|--------------|-------------|
 | [**CreateDarTemplate**](DataAccessTemplateApi.md#createdartemplate) | **POST** /api/v1/dar/templates | DataAccessTemplate@store |
 | [**DeleteDarTemplate**](DataAccessTemplateApi.md#deletedartemplate) | **DELETE** /api/v1/dar/templates/{id} | DataAccessTemplate@destroy |
-| [**DownloadDarTemplateFile**](DataAccessTemplateApi.md#downloaddartemplatefile) | **GET** /api/v1/dar/templates/{id}/download | DataAccessTemplate@downloadFile |
 | [**FetchDarTemplate**](DataAccessTemplateApi.md#fetchdartemplate) | **GET** /api/v1/dar/templates/{id} | DataAccessTemplate@show |
 | [**FetchDarTemplates**](DataAccessTemplateApi.md#fetchdartemplates) | **GET** /api/v1/dar/templates | DataAccessTemplate@index |
 | [**PatchDarTemplate**](DataAccessTemplateApi.md#patchdartemplate) | **PATCH** /api/v1/dar/templates/{id} | DataAccessTemplate@update |
@@ -14,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="createdartemplate"></a>
 # **CreateDarTemplate**
-> CreateCategories200Response CreateDarTemplate (CreateDarTemplateRequest createDarTemplateRequest)
+> CreateDarIntegration201Response CreateDarTemplate (CreateDarTemplateRequest createDarTemplateRequest)
 
 DataAccessTemplate@store
 
@@ -29,7 +28,7 @@ Creates a new DAR template
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -51,7 +50,7 @@ Creates a new DAR template
 
 <a id="deletedartemplate"></a>
 # **DeleteDarTemplate**
-> DeleteAliases200Response DeleteDarTemplate (int id)
+> DeleteApplications200Response DeleteDarTemplate (int id)
 
 DataAccessTemplate@destroy
 
@@ -66,7 +65,7 @@ Delete a system DAR template
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 
@@ -84,43 +83,6 @@ Delete a system DAR template
 | **404** | Not found response |  -  |
 | **200** | Success |  -  |
 | **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="downloaddartemplatefile"></a>
-# **DownloadDarTemplateFile**
-> void DownloadDarTemplateFile (int id)
-
-DataAccessTemplate@downloadFile
-
-Download the template for a file based DAR application
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | DAR template id |  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: file, application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **404** | Not found response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

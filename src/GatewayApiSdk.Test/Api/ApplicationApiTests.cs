@@ -71,7 +71,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteApplicationsAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace GatewayApiSdk.Test.Api
             EditApplicationsRequest editApplicationsRequest = default!;
             var response = await _instance.EditApplicationsAsync(id, editApplicationsRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.PatchApplicationsClientIdAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -146,7 +146,7 @@ namespace GatewayApiSdk.Test.Api
             UpdateApplicationsRequest updateApplicationsRequest = default!;
             var response = await _instance.UpdateApplicationsAsync(id, updateApplicationsRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

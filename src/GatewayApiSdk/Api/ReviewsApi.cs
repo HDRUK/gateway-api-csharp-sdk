@@ -39,29 +39,6 @@ namespace GatewayApiSdk.Api
         ReviewsApiEvents Events { get; }
 
         /// <summary>
-        /// ReviewController@store
-        /// </summary>
-        /// <remarks>
-        /// Create a new review
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createReviewsRequest">Pass user credentials</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICreateReviewsApiResponse"/>&gt;</returns>
-        Task<ICreateReviewsApiResponse> CreateReviewsAsync(CreateReviewsRequest createReviewsRequest, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// ReviewController@store
-        /// </summary>
-        /// <remarks>
-        /// Create a new review
-        /// </remarks>
-        /// <param name="createReviewsRequest">Pass user credentials</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICreateReviewsApiResponse"/>?&gt;</returns>
-        Task<ICreateReviewsApiResponse?> CreateReviewsOrDefaultAsync(CreateReviewsRequest createReviewsRequest, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
         /// Delete a review
         /// </summary>
         /// <remarks>
@@ -92,10 +69,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">review id</param>
-        /// <param name="createReviewsRequest">Pass user credentials</param>
+        /// <param name="updateReviewsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditReviewsApiResponse"/>&gt;</returns>
-        Task<IEditReviewsApiResponse> EditReviewsAsync(int id, CreateReviewsRequest createReviewsRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<IEditReviewsApiResponse> EditReviewsAsync(int id, UpdateReviewsRequest updateReviewsRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Edit a review
@@ -104,54 +81,10 @@ namespace GatewayApiSdk.Api
         /// Edit a review
         /// </remarks>
         /// <param name="id">review id</param>
-        /// <param name="createReviewsRequest">Pass user credentials</param>
+        /// <param name="updateReviewsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditReviewsApiResponse"/>?&gt;</returns>
-        Task<IEditReviewsApiResponse?> EditReviewsOrDefaultAsync(int id, CreateReviewsRequest createReviewsRequest, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// ReviewController@index
-        /// </summary>
-        /// <remarks>
-        /// Get All Reviews
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllReviewsApiResponse"/>&gt;</returns>
-        Task<IFetchAllReviewsApiResponse> FetchAllReviewsAsync(System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// ReviewController@index
-        /// </summary>
-        /// <remarks>
-        /// Get All Reviews
-        /// </remarks>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllReviewsApiResponse"/>?&gt;</returns>
-        Task<IFetchAllReviewsApiResponse?> FetchAllReviewsOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// ReviewController@show
-        /// </summary>
-        /// <remarks>
-        /// Get review by id
-        /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">review id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchReviewsApiResponse"/>&gt;</returns>
-        Task<IFetchReviewsApiResponse> FetchReviewsAsync(int id, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// ReviewController@show
-        /// </summary>
-        /// <remarks>
-        /// Get review by id
-        /// </remarks>
-        /// <param name="id">review id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchReviewsApiResponse"/>?&gt;</returns>
-        Task<IFetchReviewsApiResponse?> FetchReviewsOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default);
+        Task<IEditReviewsApiResponse?> EditReviewsOrDefaultAsync(int id, UpdateReviewsRequest updateReviewsRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Update a review
@@ -161,10 +94,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">review id</param>
-        /// <param name="createReviewsRequest">Pass user credentials</param>
+        /// <param name="updateReviewsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateReviewsApiResponse"/>&gt;</returns>
-        Task<IUpdateReviewsApiResponse> UpdateReviewsAsync(int id, CreateReviewsRequest createReviewsRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<IUpdateReviewsApiResponse> UpdateReviewsAsync(int id, UpdateReviewsRequest updateReviewsRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Update a review
@@ -173,40 +106,16 @@ namespace GatewayApiSdk.Api
         /// Update a review
         /// </remarks>
         /// <param name="id">review id</param>
-        /// <param name="createReviewsRequest">Pass user credentials</param>
+        /// <param name="updateReviewsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateReviewsApiResponse"/>?&gt;</returns>
-        Task<IUpdateReviewsApiResponse?> UpdateReviewsOrDefaultAsync(int id, CreateReviewsRequest createReviewsRequest, System.Threading.CancellationToken cancellationToken = default);
-    }
-
-    /// <summary>
-    /// The <see cref="ICreateReviewsApiResponse"/>
-    /// </summary>
-    public interface ICreateReviewsApiResponse : GatewayApiSdk.Client.IApiResponse, ICreated<GatewayApiSdk.Model.CreateCategories200Response?>, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 201 Created
-        /// </summary>
-        /// <returns></returns>
-        bool IsCreated { get; }
-
-        /// <summary>
-        /// Returns true if the response is 401 Unauthorized
-        /// </summary>
-        /// <returns></returns>
-        bool IsUnauthorized { get; }
-
-        /// <summary>
-        /// Returns true if the response is 500 InternalServerError
-        /// </summary>
-        /// <returns></returns>
-        bool IsInternalServerError { get; }
+        Task<IUpdateReviewsApiResponse?> UpdateReviewsOrDefaultAsync(int id, UpdateReviewsRequest updateReviewsRequest, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
     /// The <see cref="IDeleteReviewsApiResponse"/>
     /// </summary>
-    public interface IDeleteReviewsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.DeleteAliases200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IDeleteReviewsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.DeleteApplications200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -230,7 +139,7 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IEditReviewsApiResponse"/>
     /// </summary>
-    public interface IEditReviewsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateReviews200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IEditReviewsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.UpdateReviews200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -252,45 +161,9 @@ namespace GatewayApiSdk.Api
     }
 
     /// <summary>
-    /// The <see cref="IFetchAllReviewsApiResponse"/>
-    /// </summary>
-    public interface IFetchAllReviewsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchAllReviews200Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-    }
-
-    /// <summary>
-    /// The <see cref="IFetchReviewsApiResponse"/>
-    /// </summary>
-    public interface IFetchReviewsApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchAllReviews200Response?>, IUnauthorized<GatewayApiSdk.Model.CreateTeamCollections401Response?>, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>
-    {
-        /// <summary>
-        /// Returns true if the response is 200 Ok
-        /// </summary>
-        /// <returns></returns>
-        bool IsOk { get; }
-
-        /// <summary>
-        /// Returns true if the response is 401 Unauthorized
-        /// </summary>
-        /// <returns></returns>
-        bool IsUnauthorized { get; }
-
-        /// <summary>
-        /// Returns true if the response is 404 NotFound
-        /// </summary>
-        /// <returns></returns>
-        bool IsNotFound { get; }
-    }
-
-    /// <summary>
     /// The <see cref="IUpdateReviewsApiResponse"/>
     /// </summary>
-    public interface IUpdateReviewsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.FetchAliases404Response?>, IOk<GatewayApiSdk.Model.UpdateReviews200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateAliases500Response?>
+    public interface IUpdateReviewsApiResponse : GatewayApiSdk.Client.IApiResponse, INotFound<GatewayApiSdk.Model.UpdateApplications404Response?>, IOk<GatewayApiSdk.Model.UpdateReviews200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 404 NotFound
@@ -316,26 +189,6 @@ namespace GatewayApiSdk.Api
     /// </summary>
     public class ReviewsApiEvents
     {
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnCreateReviews;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorCreateReviews;
-
-        internal void ExecuteOnCreateReviews(ReviewsApi.CreateReviewsApiResponse apiResponse)
-        {
-            OnCreateReviews?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorCreateReviews(Exception exception)
-        {
-            OnErrorCreateReviews?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
         /// <summary>
         /// The event raised after the server response
         /// </summary>
@@ -374,46 +227,6 @@ namespace GatewayApiSdk.Api
         internal void ExecuteOnErrorEditReviews(Exception exception)
         {
             OnErrorEditReviews?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFetchAllReviews;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFetchAllReviews;
-
-        internal void ExecuteOnFetchAllReviews(ReviewsApi.FetchAllReviewsApiResponse apiResponse)
-        {
-            OnFetchAllReviews?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorFetchAllReviews(Exception exception)
-        {
-            OnErrorFetchAllReviews?.Invoke(this, new ExceptionEventArgs(exception));
-        }
-
-        /// <summary>
-        /// The event raised after the server response
-        /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFetchReviews;
-
-        /// <summary>
-        /// The event raised after an error querying the server
-        /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFetchReviews;
-
-        internal void ExecuteOnFetchReviews(ReviewsApi.FetchReviewsApiResponse apiResponse)
-        {
-            OnFetchReviews?.Invoke(this, new ApiResponseEventArgs(apiResponse));
-        }
-
-        internal void ExecuteOnErrorFetchReviews(Exception exception)
-        {
-            OnErrorFetchReviews?.Invoke(this, new ExceptionEventArgs(exception));
         }
 
         /// <summary>
@@ -476,346 +289,6 @@ namespace GatewayApiSdk.Api
             HttpClient = httpClient;
             Events = reviewsApiEvents;
             BearerTokenProvider = bearerTokenProvider;
-        }
-
-        partial void FormatCreateReviews(CreateReviewsRequest createReviewsRequest);
-
-        /// <summary>
-        /// Validates the request parameters
-        /// </summary>
-        /// <param name="createReviewsRequest"></param>
-        /// <returns></returns>
-        private void ValidateCreateReviews(CreateReviewsRequest createReviewsRequest)
-        {
-            if (createReviewsRequest == null)
-                throw new ArgumentNullException(nameof(createReviewsRequest));
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="createReviewsRequest"></param>
-        private void AfterCreateReviewsDefaultImplementation(ICreateReviewsApiResponse apiResponseLocalVar, CreateReviewsRequest createReviewsRequest)
-        {
-            bool suppressDefaultLog = false;
-            AfterCreateReviews(ref suppressDefaultLog, apiResponseLocalVar, createReviewsRequest);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="createReviewsRequest"></param>
-        partial void AfterCreateReviews(ref bool suppressDefaultLog, ICreateReviewsApiResponse apiResponseLocalVar, CreateReviewsRequest createReviewsRequest);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="createReviewsRequest"></param>
-        private void OnErrorCreateReviewsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateReviewsRequest createReviewsRequest)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorCreateReviews(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createReviewsRequest);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="createReviewsRequest"></param>
-        partial void OnErrorCreateReviews(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateReviewsRequest createReviewsRequest);
-
-        /// <summary>
-        /// ReviewController@store Create a new review
-        /// </summary>
-        /// <param name="createReviewsRequest">Pass user credentials</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICreateReviewsApiResponse"/>&gt;</returns>
-        public async Task<ICreateReviewsApiResponse?> CreateReviewsOrDefaultAsync(CreateReviewsRequest createReviewsRequest, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await CreateReviewsAsync(createReviewsRequest, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// ReviewController@store Create a new review
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createReviewsRequest">Pass user credentials</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ICreateReviewsApiResponse"/>&gt;</returns>
-        public async Task<ICreateReviewsApiResponse> CreateReviewsAsync(CreateReviewsRequest createReviewsRequest, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                ValidateCreateReviews(createReviewsRequest);
-
-                FormatCreateReviews(createReviewsRequest);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/reviews"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/reviews");
-
-                    httpRequestMessageLocalVar.Content = (createReviewsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
-                        ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createReviewsRequest, _jsonSerializerOptions));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] contentTypes = new string[] {
-                        "application/json"
-                    };
-
-                    string? contentTypeLocalVar = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentTypeLocalVar != null && httpRequestMessageLocalVar.Content != null)
-                        httpRequestMessageLocalVar.Content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeLocalVar);
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Post;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        CreateReviewsApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/reviews", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterCreateReviewsDefaultImplementation(apiResponseLocalVar, createReviewsRequest);
-
-                        Events.ExecuteOnCreateReviews(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorCreateReviewsDefaultImplementation(e, "/api/v1/reviews", uriBuilderLocalVar.Path, createReviewsRequest);
-                Events.ExecuteOnErrorCreateReviews(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="CreateReviewsApiResponse"/>
-        /// </summary>
-        public partial class CreateReviewsApiResponse : GatewayApiSdk.Client.ApiResponse, ICreateReviewsApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<ReviewsApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="CreateReviewsApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public CreateReviewsApiResponse(ILogger<ReviewsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="CreateReviewsApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public CreateReviewsApiResponse(ILogger<ReviewsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 201 Created
-            /// </summary>
-            /// <returns></returns>
-            public bool IsCreated => 201 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 201 Created
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CreateCategories200Response? Created()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsCreated
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateCategories200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 201 Created and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryCreated([NotNullWhen(true)]out GatewayApiSdk.Model.CreateCategories200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Created();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)201);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 401 Unauthorized
-            /// </summary>
-            /// <returns></returns>
-            public bool IsUnauthorized => 401 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 401 Unauthorized
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CreateTeamCollections401Response? Unauthorized()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsUnauthorized
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateTeamCollections401Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 401 Unauthorized and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.CreateTeamCollections401Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Unauthorized();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)401);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public bool IsInternalServerError => 500 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 500 InternalServerError
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 500 InternalServerError and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = InternalServerError();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)500);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
         partial void FormatDeleteReviews(ref int id);
@@ -1018,11 +491,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1031,7 +504,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -1056,11 +529,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 200 Ok
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.DeleteAliases200Response? Ok()
+            public GatewayApiSdk.Model.DeleteApplications200Response? Ok()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteAliases200Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.DeleteApplications200Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1069,7 +542,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteAliases200Response? result)
+            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.DeleteApplications200Response? result)
             {
                 result = null;
 
@@ -1094,11 +567,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1107,7 +580,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -1133,17 +606,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatEditReviews(ref int id, CreateReviewsRequest createReviewsRequest);
+        partial void FormatEditReviews(ref int id, UpdateReviewsRequest updateReviewsRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="createReviewsRequest"></param>
+        /// <param name="updateReviewsRequest"></param>
         /// <returns></returns>
-        private void ValidateEditReviews(CreateReviewsRequest createReviewsRequest)
+        private void ValidateEditReviews(UpdateReviewsRequest updateReviewsRequest)
         {
-            if (createReviewsRequest == null)
-                throw new ArgumentNullException(nameof(createReviewsRequest));
+            if (updateReviewsRequest == null)
+                throw new ArgumentNullException(nameof(updateReviewsRequest));
         }
 
         /// <summary>
@@ -1151,11 +624,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="createReviewsRequest"></param>
-        private void AfterEditReviewsDefaultImplementation(IEditReviewsApiResponse apiResponseLocalVar, int id, CreateReviewsRequest createReviewsRequest)
+        /// <param name="updateReviewsRequest"></param>
+        private void AfterEditReviewsDefaultImplementation(IEditReviewsApiResponse apiResponseLocalVar, int id, UpdateReviewsRequest updateReviewsRequest)
         {
             bool suppressDefaultLog = false;
-            AfterEditReviews(ref suppressDefaultLog, apiResponseLocalVar, id, createReviewsRequest);
+            AfterEditReviews(ref suppressDefaultLog, apiResponseLocalVar, id, updateReviewsRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1166,8 +639,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="createReviewsRequest"></param>
-        partial void AfterEditReviews(ref bool suppressDefaultLog, IEditReviewsApiResponse apiResponseLocalVar, int id, CreateReviewsRequest createReviewsRequest);
+        /// <param name="updateReviewsRequest"></param>
+        partial void AfterEditReviews(ref bool suppressDefaultLog, IEditReviewsApiResponse apiResponseLocalVar, int id, UpdateReviewsRequest updateReviewsRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1176,11 +649,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="createReviewsRequest"></param>
-        private void OnErrorEditReviewsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateReviewsRequest createReviewsRequest)
+        /// <param name="updateReviewsRequest"></param>
+        private void OnErrorEditReviewsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateReviewsRequest updateReviewsRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorEditReviews(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, createReviewsRequest);
+            OnErrorEditReviews(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, updateReviewsRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1193,21 +666,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="createReviewsRequest"></param>
-        partial void OnErrorEditReviews(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateReviewsRequest createReviewsRequest);
+        /// <param name="updateReviewsRequest"></param>
+        partial void OnErrorEditReviews(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateReviewsRequest updateReviewsRequest);
 
         /// <summary>
         /// Edit a review Edit a review
         /// </summary>
         /// <param name="id">review id</param>
-        /// <param name="createReviewsRequest">Pass user credentials</param>
+        /// <param name="updateReviewsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditReviewsApiResponse"/>&gt;</returns>
-        public async Task<IEditReviewsApiResponse?> EditReviewsOrDefaultAsync(int id, CreateReviewsRequest createReviewsRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IEditReviewsApiResponse?> EditReviewsOrDefaultAsync(int id, UpdateReviewsRequest updateReviewsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await EditReviewsAsync(id, createReviewsRequest, cancellationToken).ConfigureAwait(false);
+                return await EditReviewsAsync(id, updateReviewsRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1220,18 +693,18 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">review id</param>
-        /// <param name="createReviewsRequest">Pass user credentials</param>
+        /// <param name="updateReviewsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEditReviewsApiResponse"/>&gt;</returns>
-        public async Task<IEditReviewsApiResponse> EditReviewsAsync(int id, CreateReviewsRequest createReviewsRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IEditReviewsApiResponse> EditReviewsAsync(int id, UpdateReviewsRequest updateReviewsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateEditReviews(createReviewsRequest);
+                ValidateEditReviews(updateReviewsRequest);
 
-                FormatEditReviews(ref id, createReviewsRequest);
+                FormatEditReviews(ref id, updateReviewsRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1243,9 +716,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/reviews/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (createReviewsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (updateReviewsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createReviewsRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateReviewsRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -1291,7 +764,7 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterEditReviewsDefaultImplementation(apiResponseLocalVar, id, createReviewsRequest);
+                        AfterEditReviewsDefaultImplementation(apiResponseLocalVar, id, updateReviewsRequest);
 
                         Events.ExecuteOnEditReviews(apiResponseLocalVar);
 
@@ -1305,7 +778,7 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorEditReviewsDefaultImplementation(e, "/api/v1/reviews/{id}", uriBuilderLocalVar.Path, id, createReviewsRequest);
+                OnErrorEditReviewsDefaultImplementation(e, "/api/v1/reviews/{id}", uriBuilderLocalVar.Path, id, updateReviewsRequest);
                 Events.ExecuteOnErrorEditReviews(e);
                 throw;
             }
@@ -1365,11 +838,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1378,7 +851,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -1441,11 +914,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -1454,7 +927,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 
@@ -1480,560 +953,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        private void AfterFetchAllReviewsDefaultImplementation(IFetchAllReviewsApiResponse apiResponseLocalVar)
-        {
-            bool suppressDefaultLog = false;
-            AfterFetchAllReviews(ref suppressDefaultLog, apiResponseLocalVar);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        partial void AfterFetchAllReviews(ref bool suppressDefaultLog, IFetchAllReviewsApiResponse apiResponseLocalVar);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        private void OnErrorFetchAllReviewsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorFetchAllReviews(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        partial void OnErrorFetchAllReviews(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar);
-
-        /// <summary>
-        /// ReviewController@index Get All Reviews
-        /// </summary>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllReviewsApiResponse"/>&gt;</returns>
-        public async Task<IFetchAllReviewsApiResponse?> FetchAllReviewsOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await FetchAllReviewsAsync(cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// ReviewController@index Get All Reviews
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllReviewsApiResponse"/>&gt;</returns>
-        public async Task<IFetchAllReviewsApiResponse> FetchAllReviewsAsync(System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/reviews"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/reviews");
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        FetchAllReviewsApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/reviews", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterFetchAllReviewsDefaultImplementation(apiResponseLocalVar);
-
-                        Events.ExecuteOnFetchAllReviews(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorFetchAllReviewsDefaultImplementation(e, "/api/v1/reviews", uriBuilderLocalVar.Path);
-                Events.ExecuteOnErrorFetchAllReviews(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="FetchAllReviewsApiResponse"/>
-        /// </summary>
-        public partial class FetchAllReviewsApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchAllReviewsApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<ReviewsApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="FetchAllReviewsApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchAllReviewsApiResponse(ILogger<ReviewsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="FetchAllReviewsApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchAllReviewsApiResponse(ILogger<ReviewsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAllReviews200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllReviews200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllReviews200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatFetchReviews(ref int id);
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        private void AfterFetchReviewsDefaultImplementation(IFetchReviewsApiResponse apiResponseLocalVar, int id)
-        {
-            bool suppressDefaultLog = false;
-            AfterFetchReviews(ref suppressDefaultLog, apiResponseLocalVar, id);
-            if (!suppressDefaultLog)
-                Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
-        }
-
-        /// <summary>
-        /// Processes the server response
-        /// </summary>
-        /// <param name="suppressDefaultLog"></param>
-        /// <param name="apiResponseLocalVar"></param>
-        /// <param name="id"></param>
-        partial void AfterFetchReviews(ref bool suppressDefaultLog, IFetchReviewsApiResponse apiResponseLocalVar, int id);
-
-        /// <summary>
-        /// Logs exceptions that occur while retrieving the server response
-        /// </summary>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        private void OnErrorFetchReviewsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id)
-        {
-            bool suppressDefaultLogLocalVar = false;
-            OnErrorFetchReviews(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id);
-            if (!suppressDefaultLogLocalVar)
-                Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
-        }
-
-        /// <summary>
-        /// A partial method that gives developers a way to provide customized exception handling
-        /// </summary>
-        /// <param name="suppressDefaultLogLocalVar"></param>
-        /// <param name="exceptionLocalVar"></param>
-        /// <param name="pathFormatLocalVar"></param>
-        /// <param name="pathLocalVar"></param>
-        /// <param name="id"></param>
-        partial void OnErrorFetchReviews(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id);
-
-        /// <summary>
-        /// ReviewController@show Get review by id
-        /// </summary>
-        /// <param name="id">review id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchReviewsApiResponse"/>&gt;</returns>
-        public async Task<IFetchReviewsApiResponse?> FetchReviewsOrDefaultAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            try
-            {
-                return await FetchReviewsAsync(id, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// ReviewController@show Get review by id
-        /// </summary>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">review id</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchReviewsApiResponse"/>&gt;</returns>
-        public async Task<IFetchReviewsApiResponse> FetchReviewsAsync(int id, System.Threading.CancellationToken cancellationToken = default)
-        {
-            UriBuilder uriBuilderLocalVar = new UriBuilder();
-
-            try
-            {
-                FormatFetchReviews(ref id);
-
-                using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
-                {
-                    uriBuilderLocalVar.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
-                    uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
-                    uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v1/reviews/{id}"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/reviews/{id}");
-                    uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
-
-                    List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
-                    httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
-
-                    BearerToken bearerTokenLocalVar1 = (BearerToken) await BearerTokenProvider.GetAsync(cancellation: cancellationToken).ConfigureAwait(false);
-
-                    tokenBaseLocalVars.Add(bearerTokenLocalVar1);
-
-                    bearerTokenLocalVar1.UseInHeader(httpRequestMessageLocalVar, "");
-
-                    string[] acceptLocalVars = new string[] {
-                        "application/json"
-                    };
-
-                    IEnumerable<MediaTypeWithQualityHeaderValue> acceptHeaderValuesLocalVar = ClientUtils.SelectHeaderAcceptArray(acceptLocalVars);
-
-                    foreach (var acceptLocalVar in acceptHeaderValuesLocalVar)
-                        httpRequestMessageLocalVar.Headers.Accept.Add(acceptLocalVar);
-
-                    httpRequestMessageLocalVar.Method = HttpMethod.Get;
-
-                    DateTime requestedAtLocalVar = DateTime.UtcNow;
-
-                    using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
-                    {
-                        FetchReviewsApiResponse apiResponseLocalVar;
-
-                        switch ((int)httpResponseMessageLocalVar.StatusCode) {
-                            default: {
-                                string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v1/reviews/{id}", requestedAtLocalVar, _jsonSerializerOptions);
-
-                                break;
-                            }
-                        }
-
-                        AfterFetchReviewsDefaultImplementation(apiResponseLocalVar, id);
-
-                        Events.ExecuteOnFetchReviews(apiResponseLocalVar);
-
-                        if (apiResponseLocalVar.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase tokenBaseLocalVar in tokenBaseLocalVars)
-                                tokenBaseLocalVar.BeginRateLimit();
-
-                        return apiResponseLocalVar;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                OnErrorFetchReviewsDefaultImplementation(e, "/api/v1/reviews/{id}", uriBuilderLocalVar.Path, id);
-                Events.ExecuteOnErrorFetchReviews(e);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="FetchReviewsApiResponse"/>
-        /// </summary>
-        public partial class FetchReviewsApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchReviewsApiResponse
-        {
-            /// <summary>
-            /// The logger
-            /// </summary>
-            public ILogger<ReviewsApi> Logger { get; }
-
-            /// <summary>
-            /// The <see cref="FetchReviewsApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="rawContent"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchReviewsApiResponse(ILogger<ReviewsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            /// <summary>
-            /// The <see cref="FetchReviewsApiResponse"/>
-            /// </summary>
-            /// <param name="logger"></param>
-            /// <param name="httpRequestMessage"></param>
-            /// <param name="httpResponseMessage"></param>
-            /// <param name="contentStream"></param>
-            /// <param name="path"></param>
-            /// <param name="requestedAt"></param>
-            /// <param name="jsonSerializerOptions"></param>
-            public FetchReviewsApiResponse(ILogger<ReviewsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
-            {
-                Logger = logger;
-                OnCreated(httpRequestMessage, httpResponseMessage);
-            }
-
-            partial void OnCreated(global::System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage);
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public bool IsOk => 200 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 200 Ok
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAllReviews200Response? Ok()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsOk
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAllReviews200Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 200 Ok and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryOk([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAllReviews200Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Ok();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 401 Unauthorized
-            /// </summary>
-            /// <returns></returns>
-            public bool IsUnauthorized => 401 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 401 Unauthorized
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.CreateTeamCollections401Response? Unauthorized()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsUnauthorized
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateTeamCollections401Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 401 Unauthorized and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryUnauthorized([NotNullWhen(true)]out GatewayApiSdk.Model.CreateTeamCollections401Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = Unauthorized();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)401);
-                }
-
-                return result != null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public bool IsNotFound => 404 == (int)StatusCode;
-
-            /// <summary>
-            /// Deserializes the response if the response is 404 NotFound
-            /// </summary>
-            /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
-            {
-                // This logic may be modified with the AsModel.mustache template
-                return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
-                    : null;
-            }
-
-            /// <summary>
-            /// Returns true if the response is 404 NotFound and the deserialized response is not null
-            /// </summary>
-            /// <param name="result"></param>
-            /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
-            {
-                result = null;
-
-                try
-                {
-                    result = NotFound();
-                } catch (Exception e)
-                {
-                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)404);
-                }
-
-                return result != null;
-            }
-
-            private void OnDeserializationErrorDefaultImplementation(Exception exception, HttpStatusCode httpStatusCode)
-            {
-                bool suppressDefaultLog = false;
-                OnDeserializationError(ref suppressDefaultLog, exception, httpStatusCode);
-                if (!suppressDefaultLog)
-                    Logger.LogError(RestLogEvents.ApiDeserializationFailed, exception, "An error occurred while deserializing the {code} response.", httpStatusCode);
-            }
-
-            partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
-        }
-
-        partial void FormatUpdateReviews(ref int id, CreateReviewsRequest createReviewsRequest);
+        partial void FormatUpdateReviews(ref int id, UpdateReviewsRequest updateReviewsRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="createReviewsRequest"></param>
+        /// <param name="updateReviewsRequest"></param>
         /// <returns></returns>
-        private void ValidateUpdateReviews(CreateReviewsRequest createReviewsRequest)
+        private void ValidateUpdateReviews(UpdateReviewsRequest updateReviewsRequest)
         {
-            if (createReviewsRequest == null)
-                throw new ArgumentNullException(nameof(createReviewsRequest));
+            if (updateReviewsRequest == null)
+                throw new ArgumentNullException(nameof(updateReviewsRequest));
         }
 
         /// <summary>
@@ -2041,11 +971,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="createReviewsRequest"></param>
-        private void AfterUpdateReviewsDefaultImplementation(IUpdateReviewsApiResponse apiResponseLocalVar, int id, CreateReviewsRequest createReviewsRequest)
+        /// <param name="updateReviewsRequest"></param>
+        private void AfterUpdateReviewsDefaultImplementation(IUpdateReviewsApiResponse apiResponseLocalVar, int id, UpdateReviewsRequest updateReviewsRequest)
         {
             bool suppressDefaultLog = false;
-            AfterUpdateReviews(ref suppressDefaultLog, apiResponseLocalVar, id, createReviewsRequest);
+            AfterUpdateReviews(ref suppressDefaultLog, apiResponseLocalVar, id, updateReviewsRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -2056,8 +986,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="createReviewsRequest"></param>
-        partial void AfterUpdateReviews(ref bool suppressDefaultLog, IUpdateReviewsApiResponse apiResponseLocalVar, int id, CreateReviewsRequest createReviewsRequest);
+        /// <param name="updateReviewsRequest"></param>
+        partial void AfterUpdateReviews(ref bool suppressDefaultLog, IUpdateReviewsApiResponse apiResponseLocalVar, int id, UpdateReviewsRequest updateReviewsRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -2066,11 +996,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="createReviewsRequest"></param>
-        private void OnErrorUpdateReviewsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateReviewsRequest createReviewsRequest)
+        /// <param name="updateReviewsRequest"></param>
+        private void OnErrorUpdateReviewsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateReviewsRequest updateReviewsRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorUpdateReviews(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, createReviewsRequest);
+            OnErrorUpdateReviews(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, updateReviewsRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -2083,21 +1013,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
-        /// <param name="createReviewsRequest"></param>
-        partial void OnErrorUpdateReviews(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, CreateReviewsRequest createReviewsRequest);
+        /// <param name="updateReviewsRequest"></param>
+        partial void OnErrorUpdateReviews(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateReviewsRequest updateReviewsRequest);
 
         /// <summary>
         /// Update a review Update a review
         /// </summary>
         /// <param name="id">review id</param>
-        /// <param name="createReviewsRequest">Pass user credentials</param>
+        /// <param name="updateReviewsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateReviewsApiResponse"/>&gt;</returns>
-        public async Task<IUpdateReviewsApiResponse?> UpdateReviewsOrDefaultAsync(int id, CreateReviewsRequest createReviewsRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IUpdateReviewsApiResponse?> UpdateReviewsOrDefaultAsync(int id, UpdateReviewsRequest updateReviewsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await UpdateReviewsAsync(id, createReviewsRequest, cancellationToken).ConfigureAwait(false);
+                return await UpdateReviewsAsync(id, updateReviewsRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -2110,18 +1040,18 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">review id</param>
-        /// <param name="createReviewsRequest">Pass user credentials</param>
+        /// <param name="updateReviewsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateReviewsApiResponse"/>&gt;</returns>
-        public async Task<IUpdateReviewsApiResponse> UpdateReviewsAsync(int id, CreateReviewsRequest createReviewsRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IUpdateReviewsApiResponse> UpdateReviewsAsync(int id, UpdateReviewsRequest updateReviewsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateUpdateReviews(createReviewsRequest);
+                ValidateUpdateReviews(updateReviewsRequest);
 
-                FormatUpdateReviews(ref id, createReviewsRequest);
+                FormatUpdateReviews(ref id, updateReviewsRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -2133,9 +1063,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/reviews/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (createReviewsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (updateReviewsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createReviewsRequest, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateReviewsRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -2181,7 +1111,7 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterUpdateReviewsDefaultImplementation(apiResponseLocalVar, id, createReviewsRequest);
+                        AfterUpdateReviewsDefaultImplementation(apiResponseLocalVar, id, updateReviewsRequest);
 
                         Events.ExecuteOnUpdateReviews(apiResponseLocalVar);
 
@@ -2195,7 +1125,7 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorUpdateReviewsDefaultImplementation(e, "/api/v1/reviews/{id}", uriBuilderLocalVar.Path, id, createReviewsRequest);
+                OnErrorUpdateReviewsDefaultImplementation(e, "/api/v1/reviews/{id}", uriBuilderLocalVar.Path, id, updateReviewsRequest);
                 Events.ExecuteOnErrorUpdateReviews(e);
                 throw;
             }
@@ -2255,11 +1185,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 404 NotFound
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.FetchAliases404Response? NotFound()
+            public GatewayApiSdk.Model.UpdateApplications404Response? NotFound()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsNotFound
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.FetchAliases404Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.UpdateApplications404Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2268,7 +1198,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.FetchAliases404Response? result)
+            public bool TryNotFound([NotNullWhen(true)]out GatewayApiSdk.Model.UpdateApplications404Response? result)
             {
                 result = null;
 
@@ -2331,11 +1261,11 @@ namespace GatewayApiSdk.Api
             /// Deserializes the response if the response is 500 InternalServerError
             /// </summary>
             /// <returns></returns>
-            public GatewayApiSdk.Model.CreateAliases500Response? InternalServerError()
+            public GatewayApiSdk.Model.CreateApplications500Response? InternalServerError()
             {
                 // This logic may be modified with the AsModel.mustache template
                 return IsInternalServerError
-                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateAliases500Response>(RawContent, _jsonSerializerOptions)
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.CreateApplications500Response>(RawContent, _jsonSerializerOptions)
                     : null;
             }
 
@@ -2344,7 +1274,7 @@ namespace GatewayApiSdk.Api
             /// </summary>
             /// <param name="result"></param>
             /// <returns></returns>
-            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateAliases500Response? result)
+            public bool TryInternalServerError([NotNullWhen(true)]out GatewayApiSdk.Model.CreateApplications500Response? result)
             {
                 result = null;
 

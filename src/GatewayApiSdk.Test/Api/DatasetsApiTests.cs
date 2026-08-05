@@ -51,19 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CountTeamUniqueFieldsDatasetsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CountTeamUniqueFieldsDatasetsV2AsyncTest()
-        {
-            int teamId = default!;
-            string field = default!;
-            var response = await _instance.CountTeamUniqueFieldsDatasetsV2Async(teamId, field);
-            var model = response.Ok();
-            Assert.IsType<CountUniqueFieldsCollections200Response>(model);
-        }
-
-        /// <summary>
         /// Test CountUniqueFields
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -85,7 +72,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDatasetsRequest createDatasetsRequest = default!;
             var response = await _instance.CreateDatasetsAsync(createDatasetsRequest);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -99,7 +86,7 @@ namespace GatewayApiSdk.Test.Api
             Client.Option<string> inputVersion = default!;
             var response = await _instance.CreateDatasetsIntegrationsAsync(datasetsTestRequest, inputSchema, inputVersion);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -138,7 +125,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDatasetsV2Request createDatasetsV2Request = default!;
             var response = await _instance.CreateDatasetsV2Async(createDatasetsV2Request);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -151,7 +138,7 @@ namespace GatewayApiSdk.Test.Api
             CreateTeamDatasetsV2Request createTeamDatasetsV2Request = default!;
             var response = await _instance.CreateTeamDatasetsV2Async(teamId, createTeamDatasetsV2Request);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -163,7 +150,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteDatasetsAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -175,7 +162,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteDatasetsIntegrationsAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -187,7 +174,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteDatasetsV2Async(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -200,7 +187,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteTeamDatasetsV2Async(teamId, id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -358,37 +345,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test FetchTeamDatasetsStatus
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchTeamDatasetsStatusAsyncTest()
-        {
-            int teamId = default!;
-            string status = default!;
-            Client.Option<string> sort = default!;
-            Client.Option<string> withMetadata = default!;
-            var response = await _instance.FetchTeamDatasetsStatusAsync(teamId, status, sort, withMetadata);
-            var model = response.Ok();
-            Assert.IsType<FetchAllDatasets200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchTeamDatasetsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchTeamDatasetsV2AsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            Client.Option<string> export = default!;
-            Client.Option<string> schemaModel = default!;
-            Client.Option<string> schemaVersion = default!;
-            var response = await _instance.FetchTeamDatasetsV2Async(teamId, id, export, schemaModel, schemaVersion);
-            var model = response.Ok();
-            Assert.IsType<FetchDatasets200Response>(model);
-        }
-
-        /// <summary>
         /// Test PatchDatasets
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -398,7 +354,7 @@ namespace GatewayApiSdk.Test.Api
             Client.Option<string> unarchive = default!;
             var response = await _instance.PatchDatasetsAsync(id, unarchive);
             var model = response.Ok();
-            Assert.IsType<DeleteAliases200Response>(model);
+            Assert.IsType<DeleteApplications200Response>(model);
         }
 
         /// <summary>
@@ -411,7 +367,7 @@ namespace GatewayApiSdk.Test.Api
             Client.Option<string> unarchive = default!;
             var response = await _instance.PatchDatasetsIntegrationsAsync(id, unarchive);
             var model = response.Ok();
-            Assert.IsType<DeleteAliases200Response>(model);
+            Assert.IsType<DeleteApplications200Response>(model);
         }
 
         /// <summary>
@@ -424,7 +380,7 @@ namespace GatewayApiSdk.Test.Api
             PatchDatasetsV2Request patchDatasetsV2Request = default!;
             var response = await _instance.PatchDatasetsV2Async(id, patchDatasetsV2Request);
             var model = response.Ok();
-            Assert.IsType<DeleteAliases200Response>(model);
+            Assert.IsType<DeleteApplications200Response>(model);
         }
 
         /// <summary>
@@ -438,7 +394,7 @@ namespace GatewayApiSdk.Test.Api
             PatchDatasetsV2Request patchDatasetsV2Request = default!;
             var response = await _instance.PatchTeamDatasetsV2Async(teamId, id, patchDatasetsV2Request);
             var model = response.Ok();
-            Assert.IsType<DeleteAliases200Response>(model);
+            Assert.IsType<DeleteApplications200Response>(model);
         }
 
         /// <summary>
@@ -451,7 +407,7 @@ namespace GatewayApiSdk.Test.Api
             UpdateDatasetsRequest updateDatasetsRequest = default!;
             var response = await _instance.UpdateDatasetsAsync(id, updateDatasetsRequest);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -479,7 +435,7 @@ namespace GatewayApiSdk.Test.Api
             UpdateDatasetsRequest updateDatasetsRequest = default!;
             var response = await _instance.UpdateDatasetsV2Async(id, updateDatasetsRequest);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -493,7 +449,7 @@ namespace GatewayApiSdk.Test.Api
             PatchDatasetsV2Request patchDatasetsV2Request = default!;
             var response = await _instance.UpdateTeamDatasetsV2Async(teamId, id, patchDatasetsV2Request);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
     }
 }

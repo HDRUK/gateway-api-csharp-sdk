@@ -60,7 +60,7 @@ namespace GatewayApiSdk.Test.Api
             UpdateDarIntegrationRequest updateDarIntegrationRequest = default!;
             var response = await _instance.CreateDarIntegrationAsync(id, updateDarIntegrationRequest);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteDarIntegrationAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>

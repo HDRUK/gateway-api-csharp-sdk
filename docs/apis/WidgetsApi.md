@@ -55,7 +55,7 @@ Creates a new widget for a given team
 
 <a id="deletewidget"></a>
 # **DeleteWidget**
-> DeleteAliases200Response DeleteWidget (int teamId, int id)
+> DeleteApplications200Response DeleteWidget (int teamId, int id)
 
 Delete a widget
 
@@ -71,7 +71,7 @@ Soft delete a widget belonging to a specific team
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 

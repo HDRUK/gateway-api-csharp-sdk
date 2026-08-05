@@ -59,7 +59,7 @@ namespace GatewayApiSdk.Test.Api
             CreateDataProviderCollRequest createDataProviderCollRequest = default!;
             var response = await _instance.CreateDataProviderCollAsync(createDataProviderCollRequest);
             var model = response.Ok();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteDataProviderCollAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace GatewayApiSdk.Test.Api
             EditDataProviderCollRequest editDataProviderCollRequest = default!;
             var response = await _instance.EditDataProviderCollAsync(id, editDataProviderCollRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace GatewayApiSdk.Test.Api
             UpdateDataProviderCollRequest updateDataProviderCollRequest = default!;
             var response = await _instance.UpdateDataProviderCollAsync(id, updateDataProviderCollRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

@@ -52,7 +52,7 @@ Creates application
 
 <a id="deleteapplications"></a>
 # **DeleteApplications**
-> DeleteAliases200Response DeleteApplications (int id)
+> DeleteApplications200Response DeleteApplications (int id)
 
 ApplicationController@delete
 
@@ -67,7 +67,7 @@ Delete application
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 

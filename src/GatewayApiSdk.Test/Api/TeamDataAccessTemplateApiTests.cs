@@ -61,7 +61,7 @@ namespace GatewayApiSdk.Test.Api
             string fileId = default!;
             var response = await _instance.DeleteTeamDarTemplateFileAsync(teamId, id, fileId);
             var model = response.Unauthorized();
-            Assert.IsType<CreateTeamCollections401Response>(model);
+            Assert.IsType<FetchAllDarIntegrations401Response>(model);
         }
 
         /// <summary>

@@ -51,19 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CountTeamUniqueFieldsCollectionV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CountTeamUniqueFieldsCollectionV2AsyncTest()
-        {
-            int teamId = default!;
-            string field = default!;
-            var response = await _instance.CountTeamUniqueFieldsCollectionV2Async(teamId, field);
-            var model = response.Ok();
-            Assert.IsType<CountUniqueFieldsCollections200Response>(model);
-        }
-
-        /// <summary>
         /// Test CountUniqueFieldsCollections
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -90,19 +77,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CountUserUniqueFieldsCollectionV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CountUserUniqueFieldsCollectionV2AsyncTest()
-        {
-            int userId = default!;
-            string field = default!;
-            var response = await _instance.CountUserUniqueFieldsCollectionV2Async(userId, field);
-            var model = response.Ok();
-            Assert.IsType<CountUniqueFieldsCollections200Response>(model);
-        }
-
-        /// <summary>
         /// Test CreateCollections
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -111,45 +85,7 @@ namespace GatewayApiSdk.Test.Api
             CreateCollectionsRequest createCollectionsRequest = default!;
             var response = await _instance.CreateCollectionsAsync(createCollectionsRequest);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
-        }
-
-        /// <summary>
-        /// Test CreateTeamCollections
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreateTeamCollectionsAsyncTest()
-        {
-            int teamId = default!;
-            CreateTeamCollectionsRequest createTeamCollectionsRequest = default!;
-            var response = await _instance.CreateTeamCollectionsAsync(teamId, createTeamCollectionsRequest);
-            var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
-        }
-
-        /// <summary>
-        /// Test CreateTeamCollectionsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreateTeamCollectionsV2AsyncTest()
-        {
-            int teamId = default!;
-            CreateTeamCollectionsRequest createTeamCollectionsRequest = default!;
-            var response = await _instance.CreateTeamCollectionsV2Async(teamId, createTeamCollectionsRequest);
-            var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
-        }
-
-        /// <summary>
-        /// Test CreateUserCollections
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreateUserCollectionsAsyncTest()
-        {
-            CreateCollectionsRequest createCollectionsRequest = default!;
-            var response = await _instance.CreateUserCollectionsAsync(createCollectionsRequest);
-            var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -161,46 +97,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteCollectionsV2Async(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test DeleteTeamCollections
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeleteTeamCollectionsAsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            var response = await _instance.DeleteTeamCollectionsAsync(teamId, id);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test DeleteTeamCollectionsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeleteTeamCollectionsV2AsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            var response = await _instance.DeleteTeamCollectionsV2Async(teamId, id);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test DeleteUserCollectionsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeleteUserCollectionsV2AsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            var response = await _instance.DeleteUserCollectionsV2Async(userId, id);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -214,50 +111,7 @@ namespace GatewayApiSdk.Test.Api
             Client.Option<string> unarchive = default!;
             var response = await _instance.EditCollectionsV2Async(id, editCollectionsV2Request, unarchive);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test EditTeamCollections
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task EditTeamCollectionsAsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            EditTeamCollectionsRequest editTeamCollectionsRequest = default!;
-            Client.Option<string> unarchive = default!;
-            var response = await _instance.EditTeamCollectionsAsync(teamId, id, editTeamCollectionsRequest, unarchive);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test EditTeamCollectionsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task EditTeamCollectionsV2AsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            EditTeamCollectionsRequest editTeamCollectionsRequest = default!;
-            var response = await _instance.EditTeamCollectionsV2Async(teamId, id, editTeamCollectionsRequest);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test EditUserCollectionsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task EditUserCollectionsV2AsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            EditCollectionsV2Request editCollectionsV2Request = default!;
-            var response = await _instance.EditUserCollectionsV2Async(userId, id, editCollectionsV2Request);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -315,104 +169,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test FetchTeamActiveCollectionsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchTeamActiveCollectionsV2AsyncTest()
-        {
-            int teamId = default!;
-            var response = await _instance.FetchTeamActiveCollectionsV2Async(teamId);
-            var model = response.Ok();
-            Assert.IsType<FetchAllCollections200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchTeamArchivedCollectionsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchTeamArchivedCollectionsV2AsyncTest()
-        {
-            int teamId = default!;
-            var response = await _instance.FetchTeamArchivedCollectionsV2Async(teamId);
-            var model = response.Ok();
-            Assert.IsType<FetchAllCollections200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchTeamCollectionV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchTeamCollectionV2AsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            var response = await _instance.FetchTeamCollectionV2Async(teamId, id);
-            var model = response.Ok();
-            Assert.IsType<FetchCollections200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchTeamDraftCollectionsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchTeamDraftCollectionsV2AsyncTest()
-        {
-            int teamId = default!;
-            var response = await _instance.FetchTeamDraftCollectionsV2Async(teamId);
-            var model = response.Ok();
-            Assert.IsType<FetchAllCollections200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchUserArchivedCollectionsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchUserArchivedCollectionsV2AsyncTest()
-        {
-            int userId = default!;
-            var response = await _instance.FetchUserArchivedCollectionsV2Async(userId);
-            var model = response.Ok();
-            Assert.IsType<FetchAllCollections200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchUserCollectionV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchUserCollectionV2AsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            var response = await _instance.FetchUserCollectionV2Async(userId, id);
-            var model = response.Ok();
-            Assert.IsType<FetchCollections200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchUserCollectionsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchUserCollectionsV2AsyncTest()
-        {
-            int userId = default!;
-            var response = await _instance.FetchUserCollectionsV2Async(userId);
-            var model = response.Ok();
-            Assert.IsType<FetchAllCollections200Response>(model);
-        }
-
-        /// <summary>
-        /// Test FetchUserDraftCollectionsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchUserDraftCollectionsV2AsyncTest()
-        {
-            int userId = default!;
-            var response = await _instance.FetchUserDraftCollectionsV2Async(userId);
-            var model = response.Ok();
-            Assert.IsType<FetchAllCollections200Response>(model);
-        }
-
-        /// <summary>
         /// Test UpdateCollectionsV2
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -422,49 +178,7 @@ namespace GatewayApiSdk.Test.Api
             UpdateCollectionsV2Request updateCollectionsV2Request = default!;
             var response = await _instance.UpdateCollectionsV2Async(id, updateCollectionsV2Request);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test UpdateTeamCollections
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task UpdateTeamCollectionsAsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            UpdateTeamCollectionsRequest updateTeamCollectionsRequest = default!;
-            var response = await _instance.UpdateTeamCollectionsAsync(teamId, id, updateTeamCollectionsRequest);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test UpdateTeamCollectionsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task UpdateTeamCollectionsV2AsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            UpdateTeamCollectionsRequest updateTeamCollectionsRequest = default!;
-            var response = await _instance.UpdateTeamCollectionsV2Async(teamId, id, updateTeamCollectionsRequest);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
-        }
-
-        /// <summary>
-        /// Test UpdateUserCollectionsV2
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task UpdateUserCollectionsV2AsyncTest()
-        {
-            int userId = default!;
-            int id = default!;
-            UpdateCollectionsV2Request updateCollectionsV2Request = default!;
-            var response = await _instance.UpdateUserCollectionsV2Async(userId, id, updateCollectionsV2Request);
-            var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

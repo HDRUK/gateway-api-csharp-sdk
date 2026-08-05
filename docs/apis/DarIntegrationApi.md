@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="createdarintegration"></a>
 # **CreateDarIntegration**
-> CreateCategories200Response CreateDarIntegration (int id, UpdateDarIntegrationRequest updateDarIntegrationRequest)
+> CreateDarIntegration201Response CreateDarIntegration (int id, UpdateDarIntegrationRequest updateDarIntegrationRequest)
 
 DarIntegration@store
 
@@ -29,7 +29,7 @@ Creates a new DAR integration enabled on the system
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -52,7 +52,7 @@ Creates a new DAR integration enabled on the system
 
 <a id="deletedarintegration"></a>
 # **DeleteDarIntegration**
-> DeleteAliases200Response DeleteDarIntegration (int id)
+> DeleteApplications200Response DeleteDarIntegration (int id)
 
 DarIntegration@destroy
 
@@ -67,7 +67,7 @@ Delete a system Dar Integration
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 

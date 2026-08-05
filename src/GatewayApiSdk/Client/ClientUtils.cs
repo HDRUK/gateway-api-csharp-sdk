@@ -136,8 +136,6 @@ namespace GatewayApiSdk.Client
                 return Dur.StatusEnumToJsonValue(durStatusEnum);
             if (obj is EditCollectionsV2Request.StatusEnum editCollectionsV2RequestStatusEnum)
                 return EditCollectionsV2Request.StatusEnumToJsonValue(editCollectionsV2RequestStatusEnum);
-            if (obj is EditTeamCollectionsRequest.StatusEnum editTeamCollectionsRequestStatusEnum)
-                return EditTeamCollectionsRequest.StatusEnumToJsonValue(editTeamCollectionsRequestStatusEnum);
             if (obj is FetchAllDurIntegrations200ResponseDataInner.StatusEnum fetchAllDurIntegrations200ResponseDataInnerStatusEnum)
                 return FetchAllDurIntegrations200ResponseDataInner.StatusEnumToJsonValue(fetchAllDurIntegrations200ResponseDataInnerStatusEnum);
             if (obj is FetchDurByIdIntegrations200ResponseDataInner.StatusEnum fetchDurByIdIntegrations200ResponseDataInnerStatusEnum)

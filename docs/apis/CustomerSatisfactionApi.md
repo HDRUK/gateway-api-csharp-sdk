@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 <a id="createcsat"></a>
 # **CreateCsat**
-> DeleteAliases200Response CreateCsat (CreateCsatRequest createCsatRequest)
+> DeleteApplications200Response CreateCsat (CreateCsatRequest createCsatRequest)
 
 Create Customer Satisfaction Score
 
@@ -24,7 +24,7 @@ Creates a customer satisfaction score between 0 and 5
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 

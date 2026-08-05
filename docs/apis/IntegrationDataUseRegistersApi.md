@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="createdurintegrations"></a>
 # **CreateDurIntegrations**
-> CreateCategories200Response CreateDurIntegrations (CreateDurIntegrationsRequest createDurIntegrationsRequest)
+> CreateDarIntegration201Response CreateDurIntegrations (CreateDurIntegrationsRequest createDurIntegrationsRequest)
 
 IntegrationDurController@store
 
@@ -28,7 +28,7 @@ Create a new dur
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -51,7 +51,7 @@ Create a new dur
 
 <a id="deletedurintegrations"></a>
 # **DeleteDurIntegrations**
-> DeleteAliases200Response DeleteDurIntegrations (int id)
+> DeleteApplications200Response DeleteDurIntegrations (int id)
 
 Delete a dur
 
@@ -66,7 +66,7 @@ Delete a dur
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 

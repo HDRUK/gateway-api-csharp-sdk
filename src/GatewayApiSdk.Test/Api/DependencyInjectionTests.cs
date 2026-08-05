@@ -76,9 +76,6 @@ namespace GatewayApiSdk.Test.Api
             var adminSearchApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IAdminSearchApi>();
             Assert.True(adminSearchApi.HttpClient.BaseAddress != null);
 
-            var aliasApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IAliasApi>();
-            Assert.True(aliasApi.HttpClient.BaseAddress != null);
-
             var applicationApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IApplicationApi>();
             Assert.True(applicationApi.HttpClient.BaseAddress != null);
 
@@ -87,9 +84,6 @@ namespace GatewayApiSdk.Test.Api
 
             var cancerTypeFilterApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<ICancerTypeFilterApi>();
             Assert.True(cancerTypeFilterApi.HttpClient.BaseAddress != null);
-
-            var categoryApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<ICategoryApi>();
-            Assert.True(categoryApi.HttpClient.BaseAddress != null);
 
             var collectionsApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<ICollectionsApi>();
             Assert.True(collectionsApi.HttpClient.BaseAddress != null);
@@ -130,9 +124,6 @@ namespace GatewayApiSdk.Test.Api
             var datasetsTestApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IDatasetsTestApi>();
             Assert.True(datasetsTestApi.HttpClient.BaseAddress != null);
 
-            var enquiryThreadApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IEnquiryThreadApi>();
-            Assert.True(enquiryThreadApi.HttpClient.BaseAddress != null);
-
             var formHydrationApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IFormHydrationApi>();
             Assert.True(formHydrationApi.HttpClient.BaseAddress != null);
 
@@ -145,17 +136,8 @@ namespace GatewayApiSdk.Test.Api
             var integrationsDatasetsTestApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IIntegrationsDatasetsTestApi>();
             Assert.True(integrationsDatasetsTestApi.HttpClient.BaseAddress != null);
 
-            var keywordApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IKeywordApi>();
-            Assert.True(keywordApi.HttpClient.BaseAddress != null);
-
-            var libraryApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<ILibraryApi>();
-            Assert.True(libraryApi.HttpClient.BaseAddress != null);
-
             var licenseApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<ILicenseApi>();
             Assert.True(licenseApi.HttpClient.BaseAddress != null);
-
-            var logoutApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<ILogoutApi>();
-            Assert.True(logoutApi.HttpClient.BaseAddress != null);
 
             var metricsApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IMetricsApi>();
             Assert.True(metricsApi.HttpClient.BaseAddress != null);
@@ -181,9 +163,6 @@ namespace GatewayApiSdk.Test.Api
             var reviewsApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IReviewsApi>();
             Assert.True(reviewsApi.HttpClient.BaseAddress != null);
 
-            var savedSearchApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<ISavedSearchApi>();
-            Assert.True(savedSearchApi.HttpClient.BaseAddress != null);
-
             var searchCollectionsApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<ISearchCollectionsApi>();
             Assert.True(searchCollectionsApi.HttpClient.BaseAddress != null);
 
@@ -208,9 +187,6 @@ namespace GatewayApiSdk.Test.Api
             var searchToolsApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<ISearchToolsApi>();
             Assert.True(searchToolsApi.HttpClient.BaseAddress != null);
 
-            var teamDashboardApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<ITeamDashboardApi>();
-            Assert.True(teamDashboardApi.HttpClient.BaseAddress != null);
-
             var teamDataAccessApplicationApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<ITeamDataAccessApplicationApi>();
             Assert.True(teamDataAccessApplicationApi.HttpClient.BaseAddress != null);
 
@@ -226,15 +202,6 @@ namespace GatewayApiSdk.Test.Api
             var typeCategoryApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<ITypeCategoryApi>();
             Assert.True(typeCategoryApi.HttpClient.BaseAddress != null);
 
-            var uploadApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IUploadApi>();
-            Assert.True(uploadApi.HttpClient.BaseAddress != null);
-
-            var userDataAccessApplicationApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IUserDataAccessApplicationApi>();
-            Assert.True(userDataAccessApplicationApi.HttpClient.BaseAddress != null);
-
-            var userOrganisationApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IUserOrganisationApi>();
-            Assert.True(userOrganisationApi.HttpClient.BaseAddress != null);
-
             var userRolesApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IUserRolesApi>();
             Assert.True(userRolesApi.HttpClient.BaseAddress != null);
 
@@ -243,9 +210,6 @@ namespace GatewayApiSdk.Test.Api
 
             var widgetsApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IWidgetsApi>();
             Assert.True(widgetsApi.HttpClient.BaseAddress != null);
-
-            var workgroupsApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IWorkgroupsApi>();
-            Assert.True(workgroupsApi.HttpClient.BaseAddress != null);
         }
 
         /// <summary>
@@ -260,9 +224,6 @@ namespace GatewayApiSdk.Test.Api
             var adminSearchApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IAdminSearchApi>();
             Assert.True(adminSearchApi.HttpClient.BaseAddress != null);
 
-            var aliasApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IAliasApi>();
-            Assert.True(aliasApi.HttpClient.BaseAddress != null);
-
             var applicationApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IApplicationApi>();
             Assert.True(applicationApi.HttpClient.BaseAddress != null);
 
@@ -271,9 +232,6 @@ namespace GatewayApiSdk.Test.Api
 
             var cancerTypeFilterApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<ICancerTypeFilterApi>();
             Assert.True(cancerTypeFilterApi.HttpClient.BaseAddress != null);
-
-            var categoryApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<ICategoryApi>();
-            Assert.True(categoryApi.HttpClient.BaseAddress != null);
 
             var collectionsApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<ICollectionsApi>();
             Assert.True(collectionsApi.HttpClient.BaseAddress != null);
@@ -314,9 +272,6 @@ namespace GatewayApiSdk.Test.Api
             var datasetsTestApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IDatasetsTestApi>();
             Assert.True(datasetsTestApi.HttpClient.BaseAddress != null);
 
-            var enquiryThreadApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IEnquiryThreadApi>();
-            Assert.True(enquiryThreadApi.HttpClient.BaseAddress != null);
-
             var formHydrationApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IFormHydrationApi>();
             Assert.True(formHydrationApi.HttpClient.BaseAddress != null);
 
@@ -329,17 +284,8 @@ namespace GatewayApiSdk.Test.Api
             var integrationsDatasetsTestApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IIntegrationsDatasetsTestApi>();
             Assert.True(integrationsDatasetsTestApi.HttpClient.BaseAddress != null);
 
-            var keywordApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IKeywordApi>();
-            Assert.True(keywordApi.HttpClient.BaseAddress != null);
-
-            var libraryApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<ILibraryApi>();
-            Assert.True(libraryApi.HttpClient.BaseAddress != null);
-
             var licenseApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<ILicenseApi>();
             Assert.True(licenseApi.HttpClient.BaseAddress != null);
-
-            var logoutApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<ILogoutApi>();
-            Assert.True(logoutApi.HttpClient.BaseAddress != null);
 
             var metricsApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IMetricsApi>();
             Assert.True(metricsApi.HttpClient.BaseAddress != null);
@@ -365,9 +311,6 @@ namespace GatewayApiSdk.Test.Api
             var reviewsApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IReviewsApi>();
             Assert.True(reviewsApi.HttpClient.BaseAddress != null);
 
-            var savedSearchApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<ISavedSearchApi>();
-            Assert.True(savedSearchApi.HttpClient.BaseAddress != null);
-
             var searchCollectionsApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<ISearchCollectionsApi>();
             Assert.True(searchCollectionsApi.HttpClient.BaseAddress != null);
 
@@ -392,9 +335,6 @@ namespace GatewayApiSdk.Test.Api
             var searchToolsApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<ISearchToolsApi>();
             Assert.True(searchToolsApi.HttpClient.BaseAddress != null);
 
-            var teamDashboardApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<ITeamDashboardApi>();
-            Assert.True(teamDashboardApi.HttpClient.BaseAddress != null);
-
             var teamDataAccessApplicationApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<ITeamDataAccessApplicationApi>();
             Assert.True(teamDataAccessApplicationApi.HttpClient.BaseAddress != null);
 
@@ -410,15 +350,6 @@ namespace GatewayApiSdk.Test.Api
             var typeCategoryApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<ITypeCategoryApi>();
             Assert.True(typeCategoryApi.HttpClient.BaseAddress != null);
 
-            var uploadApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IUploadApi>();
-            Assert.True(uploadApi.HttpClient.BaseAddress != null);
-
-            var userDataAccessApplicationApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IUserDataAccessApplicationApi>();
-            Assert.True(userDataAccessApplicationApi.HttpClient.BaseAddress != null);
-
-            var userOrganisationApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IUserOrganisationApi>();
-            Assert.True(userOrganisationApi.HttpClient.BaseAddress != null);
-
             var userRolesApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IUserRolesApi>();
             Assert.True(userRolesApi.HttpClient.BaseAddress != null);
 
@@ -427,9 +358,6 @@ namespace GatewayApiSdk.Test.Api
 
             var widgetsApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IWidgetsApi>();
             Assert.True(widgetsApi.HttpClient.BaseAddress != null);
-
-            var workgroupsApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IWorkgroupsApi>();
-            Assert.True(workgroupsApi.HttpClient.BaseAddress != null);
         }
 
         /// <summary>
@@ -444,9 +372,6 @@ namespace GatewayApiSdk.Test.Api
             var adminSearchApi = _hostUsingAddWithAClient.Services.GetRequiredService<IAdminSearchApi>();
             Assert.True(adminSearchApi.HttpClient.BaseAddress != null);
             
-            var aliasApi = _hostUsingAddWithAClient.Services.GetRequiredService<IAliasApi>();
-            Assert.True(aliasApi.HttpClient.BaseAddress != null);
-            
             var applicationApi = _hostUsingAddWithAClient.Services.GetRequiredService<IApplicationApi>();
             Assert.True(applicationApi.HttpClient.BaseAddress != null);
             
@@ -455,9 +380,6 @@ namespace GatewayApiSdk.Test.Api
             
             var cancerTypeFilterApi = _hostUsingAddWithAClient.Services.GetRequiredService<ICancerTypeFilterApi>();
             Assert.True(cancerTypeFilterApi.HttpClient.BaseAddress != null);
-            
-            var categoryApi = _hostUsingAddWithAClient.Services.GetRequiredService<ICategoryApi>();
-            Assert.True(categoryApi.HttpClient.BaseAddress != null);
             
             var collectionsApi = _hostUsingAddWithAClient.Services.GetRequiredService<ICollectionsApi>();
             Assert.True(collectionsApi.HttpClient.BaseAddress != null);
@@ -498,9 +420,6 @@ namespace GatewayApiSdk.Test.Api
             var datasetsTestApi = _hostUsingAddWithAClient.Services.GetRequiredService<IDatasetsTestApi>();
             Assert.True(datasetsTestApi.HttpClient.BaseAddress != null);
             
-            var enquiryThreadApi = _hostUsingAddWithAClient.Services.GetRequiredService<IEnquiryThreadApi>();
-            Assert.True(enquiryThreadApi.HttpClient.BaseAddress != null);
-            
             var formHydrationApi = _hostUsingAddWithAClient.Services.GetRequiredService<IFormHydrationApi>();
             Assert.True(formHydrationApi.HttpClient.BaseAddress != null);
             
@@ -513,17 +432,8 @@ namespace GatewayApiSdk.Test.Api
             var integrationsDatasetsTestApi = _hostUsingAddWithAClient.Services.GetRequiredService<IIntegrationsDatasetsTestApi>();
             Assert.True(integrationsDatasetsTestApi.HttpClient.BaseAddress != null);
             
-            var keywordApi = _hostUsingAddWithAClient.Services.GetRequiredService<IKeywordApi>();
-            Assert.True(keywordApi.HttpClient.BaseAddress != null);
-            
-            var libraryApi = _hostUsingAddWithAClient.Services.GetRequiredService<ILibraryApi>();
-            Assert.True(libraryApi.HttpClient.BaseAddress != null);
-            
             var licenseApi = _hostUsingAddWithAClient.Services.GetRequiredService<ILicenseApi>();
             Assert.True(licenseApi.HttpClient.BaseAddress != null);
-            
-            var logoutApi = _hostUsingAddWithAClient.Services.GetRequiredService<ILogoutApi>();
-            Assert.True(logoutApi.HttpClient.BaseAddress != null);
             
             var metricsApi = _hostUsingAddWithAClient.Services.GetRequiredService<IMetricsApi>();
             Assert.True(metricsApi.HttpClient.BaseAddress != null);
@@ -549,9 +459,6 @@ namespace GatewayApiSdk.Test.Api
             var reviewsApi = _hostUsingAddWithAClient.Services.GetRequiredService<IReviewsApi>();
             Assert.True(reviewsApi.HttpClient.BaseAddress != null);
             
-            var savedSearchApi = _hostUsingAddWithAClient.Services.GetRequiredService<ISavedSearchApi>();
-            Assert.True(savedSearchApi.HttpClient.BaseAddress != null);
-            
             var searchCollectionsApi = _hostUsingAddWithAClient.Services.GetRequiredService<ISearchCollectionsApi>();
             Assert.True(searchCollectionsApi.HttpClient.BaseAddress != null);
             
@@ -576,9 +483,6 @@ namespace GatewayApiSdk.Test.Api
             var searchToolsApi = _hostUsingAddWithAClient.Services.GetRequiredService<ISearchToolsApi>();
             Assert.True(searchToolsApi.HttpClient.BaseAddress != null);
             
-            var teamDashboardApi = _hostUsingAddWithAClient.Services.GetRequiredService<ITeamDashboardApi>();
-            Assert.True(teamDashboardApi.HttpClient.BaseAddress != null);
-            
             var teamDataAccessApplicationApi = _hostUsingAddWithAClient.Services.GetRequiredService<ITeamDataAccessApplicationApi>();
             Assert.True(teamDataAccessApplicationApi.HttpClient.BaseAddress != null);
             
@@ -594,15 +498,6 @@ namespace GatewayApiSdk.Test.Api
             var typeCategoryApi = _hostUsingAddWithAClient.Services.GetRequiredService<ITypeCategoryApi>();
             Assert.True(typeCategoryApi.HttpClient.BaseAddress != null);
             
-            var uploadApi = _hostUsingAddWithAClient.Services.GetRequiredService<IUploadApi>();
-            Assert.True(uploadApi.HttpClient.BaseAddress != null);
-            
-            var userDataAccessApplicationApi = _hostUsingAddWithAClient.Services.GetRequiredService<IUserDataAccessApplicationApi>();
-            Assert.True(userDataAccessApplicationApi.HttpClient.BaseAddress != null);
-            
-            var userOrganisationApi = _hostUsingAddWithAClient.Services.GetRequiredService<IUserOrganisationApi>();
-            Assert.True(userOrganisationApi.HttpClient.BaseAddress != null);
-            
             var userRolesApi = _hostUsingAddWithAClient.Services.GetRequiredService<IUserRolesApi>();
             Assert.True(userRolesApi.HttpClient.BaseAddress != null);
             
@@ -611,9 +506,6 @@ namespace GatewayApiSdk.Test.Api
             
             var widgetsApi = _hostUsingAddWithAClient.Services.GetRequiredService<IWidgetsApi>();
             Assert.True(widgetsApi.HttpClient.BaseAddress != null);
-            
-            var workgroupsApi = _hostUsingAddWithAClient.Services.GetRequiredService<IWorkgroupsApi>();
-            Assert.True(workgroupsApi.HttpClient.BaseAddress != null);
         }
 
         /// <summary>
@@ -628,9 +520,6 @@ namespace GatewayApiSdk.Test.Api
             var adminSearchApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IAdminSearchApi>();
             Assert.True(adminSearchApi.HttpClient.BaseAddress != null);
 
-            var aliasApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IAliasApi>();
-            Assert.True(aliasApi.HttpClient.BaseAddress != null);
-
             var applicationApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IApplicationApi>();
             Assert.True(applicationApi.HttpClient.BaseAddress != null);
 
@@ -639,9 +528,6 @@ namespace GatewayApiSdk.Test.Api
 
             var cancerTypeFilterApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<ICancerTypeFilterApi>();
             Assert.True(cancerTypeFilterApi.HttpClient.BaseAddress != null);
-
-            var categoryApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<ICategoryApi>();
-            Assert.True(categoryApi.HttpClient.BaseAddress != null);
 
             var collectionsApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<ICollectionsApi>();
             Assert.True(collectionsApi.HttpClient.BaseAddress != null);
@@ -682,9 +568,6 @@ namespace GatewayApiSdk.Test.Api
             var datasetsTestApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IDatasetsTestApi>();
             Assert.True(datasetsTestApi.HttpClient.BaseAddress != null);
 
-            var enquiryThreadApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IEnquiryThreadApi>();
-            Assert.True(enquiryThreadApi.HttpClient.BaseAddress != null);
-
             var formHydrationApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IFormHydrationApi>();
             Assert.True(formHydrationApi.HttpClient.BaseAddress != null);
 
@@ -697,17 +580,8 @@ namespace GatewayApiSdk.Test.Api
             var integrationsDatasetsTestApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IIntegrationsDatasetsTestApi>();
             Assert.True(integrationsDatasetsTestApi.HttpClient.BaseAddress != null);
 
-            var keywordApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IKeywordApi>();
-            Assert.True(keywordApi.HttpClient.BaseAddress != null);
-
-            var libraryApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<ILibraryApi>();
-            Assert.True(libraryApi.HttpClient.BaseAddress != null);
-
             var licenseApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<ILicenseApi>();
             Assert.True(licenseApi.HttpClient.BaseAddress != null);
-
-            var logoutApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<ILogoutApi>();
-            Assert.True(logoutApi.HttpClient.BaseAddress != null);
 
             var metricsApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IMetricsApi>();
             Assert.True(metricsApi.HttpClient.BaseAddress != null);
@@ -733,9 +607,6 @@ namespace GatewayApiSdk.Test.Api
             var reviewsApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IReviewsApi>();
             Assert.True(reviewsApi.HttpClient.BaseAddress != null);
 
-            var savedSearchApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<ISavedSearchApi>();
-            Assert.True(savedSearchApi.HttpClient.BaseAddress != null);
-
             var searchCollectionsApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<ISearchCollectionsApi>();
             Assert.True(searchCollectionsApi.HttpClient.BaseAddress != null);
 
@@ -760,9 +631,6 @@ namespace GatewayApiSdk.Test.Api
             var searchToolsApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<ISearchToolsApi>();
             Assert.True(searchToolsApi.HttpClient.BaseAddress != null);
 
-            var teamDashboardApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<ITeamDashboardApi>();
-            Assert.True(teamDashboardApi.HttpClient.BaseAddress != null);
-
             var teamDataAccessApplicationApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<ITeamDataAccessApplicationApi>();
             Assert.True(teamDataAccessApplicationApi.HttpClient.BaseAddress != null);
 
@@ -778,15 +646,6 @@ namespace GatewayApiSdk.Test.Api
             var typeCategoryApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<ITypeCategoryApi>();
             Assert.True(typeCategoryApi.HttpClient.BaseAddress != null);
 
-            var uploadApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IUploadApi>();
-            Assert.True(uploadApi.HttpClient.BaseAddress != null);
-
-            var userDataAccessApplicationApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IUserDataAccessApplicationApi>();
-            Assert.True(userDataAccessApplicationApi.HttpClient.BaseAddress != null);
-
-            var userOrganisationApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IUserOrganisationApi>();
-            Assert.True(userOrganisationApi.HttpClient.BaseAddress != null);
-
             var userRolesApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IUserRolesApi>();
             Assert.True(userRolesApi.HttpClient.BaseAddress != null);
 
@@ -795,9 +654,6 @@ namespace GatewayApiSdk.Test.Api
 
             var widgetsApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IWidgetsApi>();
             Assert.True(widgetsApi.HttpClient.BaseAddress != null);
-
-            var workgroupsApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IWorkgroupsApi>();
-            Assert.True(workgroupsApi.HttpClient.BaseAddress != null);
         }
     }
 }

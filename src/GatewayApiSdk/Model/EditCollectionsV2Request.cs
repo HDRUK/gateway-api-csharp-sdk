@@ -45,7 +45,7 @@ namespace GatewayApiSdk.Model
         /// <param name="public">public</param>
         /// <param name="status">status</param>
         [JsonConstructor]
-        public EditCollectionsV2Request(Option<string?> name = default, Option<string?> description = default, Option<string?> imageLink = default, Option<bool?> enabled = default, Option<List<string>?> keywords = default, Option<List<CreateTeamCollectionsRequestDatasetsInner>?> datasets = default, Option<List<CreateTeamCollectionsRequestDatasetsInner>?> dur = default, Option<List<CreateTeamCollectionsRequestDatasetsInner>?> publications = default, Option<List<int>?> collaborators = default, Option<bool?> @public = default, Option<StatusEnum?> status = default)
+        public EditCollectionsV2Request(Option<string?> name = default, Option<string?> description = default, Option<string?> imageLink = default, Option<bool?> enabled = default, Option<List<string>?> keywords = default, Option<List<CreateCollectionsIntegrationsRequestDatasetsInner>?> datasets = default, Option<List<CreateCollectionsIntegrationsRequestDatasetsInner>?> dur = default, Option<List<CreateCollectionsIntegrationsRequestDatasetsInner>?> publications = default, Option<List<int>?> collaborators = default, Option<bool?> @public = default, Option<StatusEnum?> status = default)
         {
             NameOption = name;
             DescriptionOption = description;
@@ -231,42 +231,42 @@ namespace GatewayApiSdk.Model
         /// </summary>
         [JsonIgnore]
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Option<List<CreateTeamCollectionsRequestDatasetsInner>?> DatasetsOption { get; private set; }
+        public Option<List<CreateCollectionsIntegrationsRequestDatasetsInner>?> DatasetsOption { get; private set; }
 
         /// <summary>
         /// Gets or Sets Datasets
         /// </summary>
         /* <example>[]</example> */
         [JsonPropertyName("datasets")]
-        public List<CreateTeamCollectionsRequestDatasetsInner>? Datasets { get { return this.DatasetsOption.Value; } set { this.DatasetsOption = new(value); } }
+        public List<CreateCollectionsIntegrationsRequestDatasetsInner>? Datasets { get { return this.DatasetsOption.Value; } set { this.DatasetsOption = new(value); } }
 
         /// <summary>
         /// Used to track the state of Dur
         /// </summary>
         [JsonIgnore]
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Option<List<CreateTeamCollectionsRequestDatasetsInner>?> DurOption { get; private set; }
+        public Option<List<CreateCollectionsIntegrationsRequestDatasetsInner>?> DurOption { get; private set; }
 
         /// <summary>
         /// Gets or Sets Dur
         /// </summary>
         /* <example>[]</example> */
         [JsonPropertyName("dur")]
-        public List<CreateTeamCollectionsRequestDatasetsInner>? Dur { get { return this.DurOption.Value; } set { this.DurOption = new(value); } }
+        public List<CreateCollectionsIntegrationsRequestDatasetsInner>? Dur { get { return this.DurOption.Value; } set { this.DurOption = new(value); } }
 
         /// <summary>
         /// Used to track the state of Publications
         /// </summary>
         [JsonIgnore]
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Option<List<CreateTeamCollectionsRequestDatasetsInner>?> PublicationsOption { get; private set; }
+        public Option<List<CreateCollectionsIntegrationsRequestDatasetsInner>?> PublicationsOption { get; private set; }
 
         /// <summary>
         /// Gets or Sets Publications
         /// </summary>
         /* <example>[]</example> */
         [JsonPropertyName("publications")]
-        public List<CreateTeamCollectionsRequestDatasetsInner>? Publications { get { return this.PublicationsOption.Value; } set { this.PublicationsOption = new(value); } }
+        public List<CreateCollectionsIntegrationsRequestDatasetsInner>? Publications { get { return this.PublicationsOption.Value; } set { this.PublicationsOption = new(value); } }
 
         /// <summary>
         /// Used to track the state of Collaborators
@@ -367,9 +367,9 @@ namespace GatewayApiSdk.Model
             Option<string?> imageLink = default;
             Option<bool?> enabled = default;
             Option<List<string>?> keywords = default;
-            Option<List<CreateTeamCollectionsRequestDatasetsInner>?> datasets = default;
-            Option<List<CreateTeamCollectionsRequestDatasetsInner>?> dur = default;
-            Option<List<CreateTeamCollectionsRequestDatasetsInner>?> publications = default;
+            Option<List<CreateCollectionsIntegrationsRequestDatasetsInner>?> datasets = default;
+            Option<List<CreateCollectionsIntegrationsRequestDatasetsInner>?> dur = default;
+            Option<List<CreateCollectionsIntegrationsRequestDatasetsInner>?> publications = default;
             Option<List<int>?> collaborators = default;
             Option<bool?> varPublic = default;
             Option<EditCollectionsV2Request.StatusEnum?> status = default;
@@ -405,13 +405,13 @@ namespace GatewayApiSdk.Model
                             keywords = new Option<List<string>?>(JsonSerializer.Deserialize<List<string>>(ref utf8JsonReader, jsonSerializerOptions)!);
                             break;
                         case "datasets":
-                            datasets = new Option<List<CreateTeamCollectionsRequestDatasetsInner>?>(JsonSerializer.Deserialize<List<CreateTeamCollectionsRequestDatasetsInner>>(ref utf8JsonReader, jsonSerializerOptions)!);
+                            datasets = new Option<List<CreateCollectionsIntegrationsRequestDatasetsInner>?>(JsonSerializer.Deserialize<List<CreateCollectionsIntegrationsRequestDatasetsInner>>(ref utf8JsonReader, jsonSerializerOptions)!);
                             break;
                         case "dur":
-                            dur = new Option<List<CreateTeamCollectionsRequestDatasetsInner>?>(JsonSerializer.Deserialize<List<CreateTeamCollectionsRequestDatasetsInner>>(ref utf8JsonReader, jsonSerializerOptions)!);
+                            dur = new Option<List<CreateCollectionsIntegrationsRequestDatasetsInner>?>(JsonSerializer.Deserialize<List<CreateCollectionsIntegrationsRequestDatasetsInner>>(ref utf8JsonReader, jsonSerializerOptions)!);
                             break;
                         case "publications":
-                            publications = new Option<List<CreateTeamCollectionsRequestDatasetsInner>?>(JsonSerializer.Deserialize<List<CreateTeamCollectionsRequestDatasetsInner>>(ref utf8JsonReader, jsonSerializerOptions)!);
+                            publications = new Option<List<CreateCollectionsIntegrationsRequestDatasetsInner>?>(JsonSerializer.Deserialize<List<CreateCollectionsIntegrationsRequestDatasetsInner>>(ref utf8JsonReader, jsonSerializerOptions)!);
                             break;
                         case "collaborators":
                             collaborators = new Option<List<int>?>(JsonSerializer.Deserialize<List<int>>(ref utf8JsonReader, jsonSerializerOptions)!);

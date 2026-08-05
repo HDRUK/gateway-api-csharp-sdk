@@ -59,7 +59,7 @@ namespace GatewayApiSdk.Test.Api
             CreateCsatRequest createCsatRequest = default!;
             var response = await _instance.CreateCsatAsync(createCsatRequest);
             var model = response.Created();
-            Assert.IsType<DeleteAliases200Response>(model);
+            Assert.IsType<DeleteApplications200Response>(model);
         }
 
         /// <summary>

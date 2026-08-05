@@ -56,10 +56,10 @@ namespace GatewayApiSdk.Test.Api
         [Fact (Skip = "not implemented")]
         public async Task CreateCollectionsIntegrationsAsyncTest()
         {
-            UpdateTeamCollectionsRequest updateTeamCollectionsRequest = default!;
-            var response = await _instance.CreateCollectionsIntegrationsAsync(updateTeamCollectionsRequest);
+            CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest = default!;
+            var response = await _instance.CreateCollectionsIntegrationsAsync(createCollectionsIntegrationsRequest);
             var model = response.Created();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteCollectionsIntegrationsAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -81,10 +81,10 @@ namespace GatewayApiSdk.Test.Api
         public async Task EditCollectionsIntegrationsAsyncTest()
         {
             int id = default!;
-            UpdateTeamCollectionsRequest updateTeamCollectionsRequest = default!;
-            var response = await _instance.EditCollectionsIntegrationsAsync(id, updateTeamCollectionsRequest);
+            CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest = default!;
+            var response = await _instance.EditCollectionsIntegrationsAsync(id, createCollectionsIntegrationsRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -119,10 +119,10 @@ namespace GatewayApiSdk.Test.Api
         public async Task UpdateCollectionsIntegrationsAsyncTest()
         {
             int id = default!;
-            UpdateTeamCollectionsRequest updateTeamCollectionsRequest = default!;
-            var response = await _instance.UpdateCollectionsIntegrationsAsync(id, updateTeamCollectionsRequest);
+            CreateCollectionsIntegrationsRequest createCollectionsIntegrationsRequest = default!;
+            var response = await _instance.UpdateCollectionsIntegrationsAsync(id, createCollectionsIntegrationsRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

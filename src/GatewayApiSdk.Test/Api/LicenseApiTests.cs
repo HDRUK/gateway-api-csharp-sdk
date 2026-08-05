@@ -59,7 +59,7 @@ namespace GatewayApiSdk.Test.Api
             CreateLicensesRequest createLicensesRequest = default!;
             var response = await _instance.CreateLicensesAsync(createLicensesRequest);
             var model = response.Ok();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteLicensesAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace GatewayApiSdk.Test.Api
             CreateLicensesRequest createLicensesRequest = default!;
             var response = await _instance.EditLicensesAsync(id, createLicensesRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace GatewayApiSdk.Test.Api
             CreateLicensesRequest createLicensesRequest = default!;
             var response = await _instance.UpdateLicensesAsync(id, createLicensesRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

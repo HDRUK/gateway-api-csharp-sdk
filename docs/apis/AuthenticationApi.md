@@ -6,7 +6,6 @@ All URIs are relative to *http://localhost*
 |--------|--------------|-------------|
 | [**Authentication**](AuthenticationApi.md#authentication) | **POST** /api/v1/auth | AuthController@checkAuthorization |
 | [**Login**](AuthenticationApi.md#login) | **POST** /api/v1/auth/login | AuthController@login |
-| [**RefreshToken**](AuthenticationApi.md#refreshtoken) | **POST** /api/v1/refresh_token | AuthController@refreshToken |
 | [**Register**](AuthenticationApi.md#register) | **POST** /api/v1/auth/register | AuthController@register |
 
 <a id="authentication"></a>
@@ -81,39 +80,6 @@ No authorization required
 | **200** | Success response |  -  |
 | **400** | Validation error |  -  |
 | **401** | Invalid credentials |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="refreshtoken"></a>
-# **RefreshToken**
-> Authentication200Response RefreshToken ()
-
-AuthController@refreshToken
-
-Regenerate jwt token
-
-
-### Parameters
-This endpoint does not need any parameter.
-### Return type
-
-[**Authentication200Response**](Authentication200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success response |  -  |
-| **401** | Missing Property |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

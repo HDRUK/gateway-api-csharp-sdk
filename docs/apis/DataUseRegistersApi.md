@@ -4,7 +4,6 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CountTeamUniqueFieldsDurV2**](DataUseRegistersApi.md#countteamuniquefieldsdurv2) | **GET** /api/v2/teams/{teamId}/dur/count/{field} | TeamDurController@count |
 | [**CreateDur**](DataUseRegistersApi.md#createdur) | **POST** /api/v1/dur | DurController@store |
 | [**CreateDurByTeamV2**](DataUseRegistersApi.md#createdurbyteamv2) | **POST** /api/v2/teams/{teamId}/dur | TeamDurController@store |
 | [**DeleteDur**](DataUseRegistersApi.md#deletedur) | **DELETE** /api/v1/dur/{id} | Delete a dur |
@@ -16,54 +15,15 @@ All URIs are relative to *http://localhost*
 | [**ExportDurV2**](DataUseRegistersApi.md#exportdurv2) | **GET** /api/v2/dur/export | DurController@export |
 | [**FetchAllDur**](DataUseRegistersApi.md#fetchalldur) | **GET** /api/v1/dur | DurController@index |
 | [**FetchAllDurV2**](DataUseRegistersApi.md#fetchalldurv2) | **GET** /api/v2/dur | DurController@indexActive |
-| [**FetchAllTeamDurStatus**](DataUseRegistersApi.md#fetchallteamdurstatus) | **GET** /api/v2/teams/{teamId}/dur/status/{status} | TeamDurController@indexStatus |
 | [**FetchDurById**](DataUseRegistersApi.md#fetchdurbyid) | **GET** /api/v1/dur/{id} | DurController@show |
 | [**FetchDurByIdV2**](DataUseRegistersApi.md#fetchdurbyidv2) | **GET** /api/v2/dur/{id} | DurController@showActive |
-| [**FetchDurByTeamAndByIdV2**](DataUseRegistersApi.md#fetchdurbyteamandbyidv2) | **GET** /api/v1/teams/{teamId}/dur/{id} | TeamDurController@show |
 | [**UpdateDur**](DataUseRegistersApi.md#updatedur) | **PUT** /api/v1/dur/{id} | Update a dur by id |
 | [**UpdateDurV2ByTeamId**](DataUseRegistersApi.md#updatedurv2byteamid) | **PUT** /api/v2/teams/{teamId}/dur/{id} | TeamDurController@update |
 | [**UploadDur**](DataUseRegistersApi.md#uploaddur) | **POST** /api/v1/dur/upload | DurController@upload |
 
-<a id="countteamuniquefieldsdurv2"></a>
-# **CountTeamUniqueFieldsDurV2**
-> CountUniqueFieldsCollections200Response CountTeamUniqueFieldsDurV2 (int teamId, string field)
-
-TeamDurController@count
-
-Get team counts for distinct entries of a field in the model
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | team id |  |
-| **field** | **string** | name of the field to perform a count on |  |
-
-### Return type
-
-[**CountUniqueFieldsCollections200Response**](CountUniqueFieldsCollections200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 <a id="createdur"></a>
 # **CreateDur**
-> CreateCategories200Response CreateDur (CreateDurRequest createDurRequest)
+> CreateDarIntegration201Response CreateDur (CreateDurRequest createDurRequest)
 
 DurController@store
 
@@ -78,7 +38,7 @@ Create a new dur
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -101,7 +61,7 @@ Create a new dur
 
 <a id="createdurbyteamv2"></a>
 # **CreateDurByTeamV2**
-> CreateCategories200Response CreateDurByTeamV2 (int teamId, CreateDurRequest createDurRequest)
+> CreateDarIntegration201Response CreateDurByTeamV2 (int teamId, CreateDurRequest createDurRequest)
 
 TeamDurController@store
 
@@ -117,7 +77,7 @@ Create a new dur by team v2
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 
@@ -140,7 +100,7 @@ Create a new dur by team v2
 
 <a id="deletedur"></a>
 # **DeleteDur**
-> DeleteAliases200Response DeleteDur (int id)
+> DeleteApplications200Response DeleteDur (int id)
 
 Delete a dur
 
@@ -155,7 +115,7 @@ Delete a dur
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 
@@ -178,7 +138,7 @@ Delete a dur
 
 <a id="deletedursv2byteamid"></a>
 # **DeleteDursV2ByTeamId**
-> DeleteAliases200Response DeleteDursV2ByTeamId (int teamId, int id)
+> DeleteApplications200Response DeleteDursV2ByTeamId (int teamId, int id)
 
 TeamDurController@destroy
 
@@ -194,7 +154,7 @@ Delete a dur by team and id v2
 
 ### Return type
 
-[**DeleteAliases200Response**](DeleteAliases200Response.md)
+[**DeleteApplications200Response**](DeleteApplications200Response.md)
 
 ### Authorization
 
@@ -477,48 +437,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="fetchallteamdurstatus"></a>
-# **FetchAllTeamDurStatus**
-> FetchAllDur200Response FetchAllTeamDurStatus (int teamId, string status, ProjectTitleAscupdatedAtAsc sort = null, string projectTitle = null, int perPage = null, bool withRelated = null)
-
-TeamDurController@indexStatus
-
-Returns a list of dur owned by this team with given status
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | team id |  |
-| **status** | **string** | Status of the DUR (active, draft, or archived). Defaults to active if not provided. | [default to active] |
-| **sort** | [**ProjectTitleAscupdatedAtAsc**](ProjectTitleAscupdatedAtAsc.md) | Sort fields in the format field:direction, e.g., project_title:asc,updated_at:asc | [optional]  |
-| **projectTitle** | **string** | Filter dur by project title | [optional]  |
-| **perPage** | **int** | per page | [optional]  |
-| **withRelated** | **bool** | Show related entities | [optional]  |
-
-### Return type
-
-[**FetchAllDur200Response**](FetchAllDur200Response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **404** | Not Found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 <a id="fetchdurbyid"></a>
 # **FetchDurById**
 > FetchDurById200Response FetchDurById (int id)
@@ -568,43 +486,6 @@ Get dur by id
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **id** | **int** | data use register id |  |
-
-### Return type
-
-[**UpdateDur200Response**](UpdateDur200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="fetchdurbyteamandbyidv2"></a>
-# **FetchDurByTeamAndByIdV2**
-> UpdateDur200Response FetchDurByTeamAndByIdV2 (int teamId, int id)
-
-TeamDurController@show
-
-Get dur by team id and by id
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | team id |  |
 | **id** | **int** | data use register id |  |
 
 ### Return type
@@ -709,7 +590,7 @@ Update a dur by team and id v2
 
 <a id="uploaddur"></a>
 # **UploadDur**
-> CreateCategories200Response UploadDur (UploadDurRequest uploadDurRequest)
+> CreateDarIntegration201Response UploadDur (UploadDurRequest uploadDurRequest)
 
 DurController@upload
 
@@ -724,7 +605,7 @@ Create a new dur with upload data
 
 ### Return type
 
-[**CreateCategories200Response**](CreateCategories200Response.md)
+[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
 
 ### Authorization
 

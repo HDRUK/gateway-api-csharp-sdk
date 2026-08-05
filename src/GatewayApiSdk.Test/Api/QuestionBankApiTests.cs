@@ -59,7 +59,7 @@ namespace GatewayApiSdk.Test.Api
             CreateQuestionBankQuestionRequest createQuestionBankQuestionRequest = default!;
             var response = await _instance.CreateQuestionBankQuestionAsync(createQuestionBankQuestionRequest);
             var model = response.Ok();
-            Assert.IsType<CreateCategories200Response>(model);
+            Assert.IsType<CreateDarIntegration201Response>(model);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             var response = await _instance.DeleteQuestionBankQuestionAsync(id);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace GatewayApiSdk.Test.Api
             int fileId = default!;
             var response = await _instance.DownloadQuestionBankQuestionFileAsync(id, fileId);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace GatewayApiSdk.Test.Api
             EditQuestionBankQuestionRequest editQuestionBankQuestionRequest = default!;
             var response = await _instance.EditQuestionBankQuestionAsync(id, editQuestionBankQuestionRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -208,7 +208,7 @@ namespace GatewayApiSdk.Test.Api
             UpdateQuestionBankQuestionRequest updateQuestionBankQuestionRequest = default!;
             var response = await _instance.UpdateQuestionBankQuestionAsync(id, updateQuestionBankQuestionRequest);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
 
         /// <summary>
@@ -221,7 +221,7 @@ namespace GatewayApiSdk.Test.Api
             string status = default!;
             var response = await _instance.UpdateQuestionBankQuestionStatusAsync(id, status);
             var model = response.NotFound();
-            Assert.IsType<FetchAliases404Response>(model);
+            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }
