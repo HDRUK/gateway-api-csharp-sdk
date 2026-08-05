@@ -51,31 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test DeleteDarApplicationFiles
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeleteDarApplicationFilesAsyncTest()
-        {
-            int id = default!;
-            string fileId = default!;
-            var response = await _instance.DeleteDarApplicationFilesAsync(id, fileId);
-            var model = response.NotFound();
-            Assert.IsType<UpdateApplications404Response>(model);
-        }
-
-        /// <summary>
-        /// Test DeleteDarApplications
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeleteDarApplicationsAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.DeleteDarApplicationsAsync(id);
-            var model = response.NotFound();
-            Assert.IsType<UpdateApplications404Response>(model);
-        }
-
-        /// <summary>
         /// Test DeleteTeamDarApplicationFile
         /// </summary>
         [Fact (Skip = "not implemented")]

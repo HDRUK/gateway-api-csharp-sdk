@@ -80,35 +80,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test DeleteTeamDarApplicationQuestionReview
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeleteTeamDarApplicationQuestionReviewAsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            int questionId = default!;
-            int reviewId = default!;
-            var response = await _instance.DeleteTeamDarApplicationQuestionReviewAsync(teamId, id, questionId, reviewId);
-            var model = response.NotFound();
-            Assert.IsType<UpdateApplications404Response>(model);
-        }
-
-        /// <summary>
-        /// Test DeleteTeamDarApplicationReview
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeleteTeamDarApplicationReviewAsyncTest()
-        {
-            int teamId = default!;
-            int id = default!;
-            int reviewId = default!;
-            var response = await _instance.DeleteTeamDarApplicationReviewAsync(teamId, id, reviewId);
-            var model = response.NotFound();
-            Assert.IsType<UpdateApplications404Response>(model);
-        }
-
-        /// <summary>
         /// Test DeleteTeamDarApplicationReviewFile
         /// </summary>
         [Fact (Skip = "not implemented")]

@@ -6,8 +6,6 @@ All URIs are relative to *http://localhost*
 |--------|--------------|-------------|
 | [**CreateTeamDarApplicationQuestionReview**](DataAccessApplicationReviewApi.md#createteamdarapplicationquestionreview) | **POST** /api/v1/teams/{team_id}/dar/applications/{id}/questions/{questionId}/reviews | DataAccessApplicationReview@store |
 | [**CreateTeamDarApplicationReview**](DataAccessApplicationReviewApi.md#createteamdarapplicationreview) | **POST** /api/v1/teams/{team_id}/dar/applications/{id}/reviews | DataAccessApplicationReview@storeGlobal |
-| [**DeleteTeamDarApplicationQuestionReview**](DataAccessApplicationReviewApi.md#deleteteamdarapplicationquestionreview) | **DELETE** /api/v1/teams/{team_id}/dar/applications/{id}/questions/{questionId}/reviews/{reviewId} | DataAccessApplicationReview@destroy |
-| [**DeleteTeamDarApplicationReview**](DataAccessApplicationReviewApi.md#deleteteamdarapplicationreview) | **DELETE** /api/v1/teams/{team_id}/dar/applications/{id}/reviews/{reviewId} | DataAccessApplicationReview@destroyGlobal |
 | [**DeleteTeamDarApplicationReviewFile**](DataAccessApplicationReviewApi.md#deleteteamdarapplicationreviewfile) | **DELETE** /api/v1/teams/{teamId}/dar/applications/{id}/reviews/{reviewId}/files/{fileId} | DataAccessApplicationReview@destroyFile |
 | [**FetchTeamDarApplicationReviewFile**](DataAccessApplicationReviewApi.md#fetchteamdarapplicationreviewfile) | **GET** /api/v1/teams/{teamId}/dar/applications/{id}/reviews/{reviewId}/download/{fileId} | DataAccessApplicationReview@downloadFile |
 | [**FetchTeamDarApplicationReviews**](DataAccessApplicationReviewApi.md#fetchteamdarapplicationreviews) | **GET** /api/v1/teams/{team_id}/dar/applications/{id}/reviews | DataAccessApplicationReview@index |
@@ -88,87 +86,6 @@ Create a new review comment on a DAR application
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="deleteteamdarapplicationquestionreview"></a>
-# **DeleteTeamDarApplicationQuestionReview**
-> DeleteApplications200Response DeleteTeamDarApplicationQuestionReview (int teamId, int id, int questionId, int reviewId)
-
-DataAccessApplicationReview@destroy
-
-Delete a review from a DAR application
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | Team id |  |
-| **id** | **int** | DAR application id |  |
-| **questionId** | **int** | DAR application question id |  |
-| **reviewId** | **int** | DAR application review id |  |
-
-### Return type
-
-[**DeleteApplications200Response**](DeleteApplications200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="deleteteamdarapplicationreview"></a>
-# **DeleteTeamDarApplicationReview**
-> DeleteApplications200Response DeleteTeamDarApplicationReview (int teamId, int id, int reviewId)
-
-DataAccessApplicationReview@destroyGlobal
-
-Delete a review from a DAR application
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | Team id |  |
-| **id** | **int** | DAR application id |  |
-| **reviewId** | **int** | DAR application review id |  |
-
-### Return type
-
-[**DeleteApplications200Response**](DeleteApplications200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
 | **200** | Success |  -  |
 | **500** | Error |  -  |
 

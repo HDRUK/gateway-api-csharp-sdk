@@ -4,130 +4,12 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateDataCustodianNetwork**](DataCustodianNetworksApi.md#createdatacustodiannetwork) | **POST** /api/v2/data_custodian_networks | DataCustodianNetworks@store |
-| [**DeleteDataCustodianNetwork**](DataCustodianNetworksApi.md#deletedatacustodiannetwork) | **DELETE** /api/v2/data_custodian_networks/{id} | DataCustodianNetworks@destroy |
-| [**EditDataCustodianNetwork**](DataCustodianNetworksApi.md#editdatacustodiannetwork) | **PATCH** /api/v2/data_custodian_networks/{id} | DataCustodianNetworks@edit |
 | [**FetchDataCustodianNetwork**](DataCustodianNetworksApi.md#fetchdatacustodiannetwork) | **GET** /api/v2/data_custodian_networks/{id} | DataCustodianNetworks@show |
 | [**FetchDataCustodianNetworkCustodiansSummary**](DataCustodianNetworksApi.md#fetchdatacustodiannetworkcustodianssummary) | **GET** /api/v2/data_custodian_networks/{id}/custodians_summary | DataCustodianNetworks@showCustodiansSummary |
 | [**FetchDataCustodianNetworkDatasetsSummary**](DataCustodianNetworksApi.md#fetchdatacustodiannetworkdatasetssummary) | **GET** /api/v2/data_custodian_networks/{id}/datasets_summary | DataCustodianNetworks@showDatasetsSummary |
 | [**FetchDataCustodianNetworkEntitiesSummary**](DataCustodianNetworksApi.md#fetchdatacustodiannetworkentitiessummary) | **GET** /api/v2/data_custodian_networks/{id}/entities_summary | DataCustodianNetworks@showSummary |
 | [**FetchDataCustodianNetworkInfo**](DataCustodianNetworksApi.md#fetchdatacustodiannetworkinfo) | **GET** /api/v2/data_custodian_networks/{id}/info | DataCustodianNetworks@showInfoSummary |
 | [**FetchDataCustodianNetworks**](DataCustodianNetworksApi.md#fetchdatacustodiannetworks) | **GET** /api/v2/data_custodian_networks | DataCustodianNetworks@index |
-| [**UpdateDataCustodianNetwork**](DataCustodianNetworksApi.md#updatedatacustodiannetwork) | **PUT** /api/v2/data_custodian_networks/{id} | DataCustodianNetworks@update |
-
-<a id="createdatacustodiannetwork"></a>
-# **CreateDataCustodianNetwork**
-> CreateDarIntegration201Response CreateDataCustodianNetwork (CreateDataProviderCollRequest createDataProviderCollRequest)
-
-DataCustodianNetworks@store
-
-Creates a new DataCustodianNetwork
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **createDataProviderCollRequest** | [**CreateDataProviderCollRequest**](CreateDataProviderCollRequest.md) | DataCustodianNetwork definition |  |
-
-### Return type
-
-[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="deletedatacustodiannetwork"></a>
-# **DeleteDataCustodianNetwork**
-> DeleteApplications200Response DeleteDataCustodianNetwork (int id)
-
-DataCustodianNetworks@destroy
-
-Delete a DataCustodianNetwork
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | DataCustodianNetwork ID |  |
-
-### Return type
-
-[**DeleteApplications200Response**](DeleteApplications200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="editdatacustodiannetwork"></a>
-# **EditDataCustodianNetwork**
-> UpdateDataCustodianNetwork200Response EditDataCustodianNetwork (int id, EditDataProviderCollRequest editDataProviderCollRequest)
-
-DataCustodianNetworks@edit
-
-Edit a DataCustodianNetwork
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | DataCustodianNetwork ID |  |
-| **editDataProviderCollRequest** | [**EditDataProviderCollRequest**](EditDataProviderCollRequest.md) | DataCustodianNetwork definition |  |
-
-### Return type
-
-[**UpdateDataCustodianNetwork200Response**](UpdateDataCustodianNetwork200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 <a id="fetchdatacustodiannetwork"></a>
 # **FetchDataCustodianNetwork**
@@ -347,45 +229,6 @@ Returns a list of DataCustodianNetworks enabled on the system
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="updatedatacustodiannetwork"></a>
-# **UpdateDataCustodianNetwork**
-> UpdateDataCustodianNetwork200Response UpdateDataCustodianNetwork (int id, UpdateDataProviderCollRequest updateDataProviderCollRequest)
-
-DataCustodianNetworks@update
-
-Update a DataCustodianNetwork
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | DataCustodianNetworks ID |  |
-| **updateDataProviderCollRequest** | [**UpdateDataProviderCollRequest**](UpdateDataProviderCollRequest.md) | DataCustodianNetwork definition |  |
-
-### Return type
-
-[**UpdateDataCustodianNetwork200Response**](UpdateDataCustodianNetwork200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

@@ -90,33 +90,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CreateDatasetsLinkageExtraction
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreateDatasetsLinkageExtractionAsyncTest()
-        {
-            string authorization = default!;
-            CreateDatasetsLinkageExtractionRequest createDatasetsLinkageExtractionRequest = default!;
-            var response = await _instance.CreateDatasetsLinkageExtractionAsync(authorization, createDatasetsLinkageExtractionRequest);
-            var model = response.Ok();
-            Assert.IsType<CreateDatasetsLinkageExtraction200Response>(model);
-        }
-
-        /// <summary>
-        /// Test CreateDatasetsTermExtraction
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreateDatasetsTermExtractionAsyncTest()
-        {
-            string authorization = default!;
-            string role = default!;
-            CreateDatasetsTermExtractionRequest createDatasetsTermExtractionRequest = default!;
-            var response = await _instance.CreateDatasetsTermExtractionAsync(authorization, role, createDatasetsTermExtractionRequest);
-            var model = response.Ok();
-            Assert.IsType<CreateDatasetsTermExtraction200Response>(model);
-        }
-
-        /// <summary>
         /// Test CreateDatasetsV2
         /// </summary>
         [Fact (Skip = "not implemented")]

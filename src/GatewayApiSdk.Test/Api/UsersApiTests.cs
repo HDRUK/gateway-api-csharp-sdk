@@ -51,43 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CreateUsers
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreateUsersAsyncTest()
-        {
-            CreateUsersRequest createUsersRequest = default!;
-            var response = await _instance.CreateUsersAsync(createUsersRequest);
-            var model = response.Created();
-            Assert.IsType<CreateDarIntegration201Response>(model);
-        }
-
-        /// <summary>
-        /// Test DeleteUsers
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeleteUsersAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.DeleteUsersAsync(id);
-            var model = response.Ok();
-            Assert.IsType<DeleteFederation200Response>(model);
-        }
-
-        /// <summary>
-        /// Test EditUsers
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task EditUsersAsyncTest()
-        {
-            int id = default!;
-            EditUsersRequest editUsersRequest = default!;
-            var response = await _instance.EditUsersAsync(id, editUsersRequest);
-            var model = response.Ok();
-            Assert.IsType<EditUsers200Response>(model);
-        }
-
-        /// <summary>
         /// Test VerifySecondaryEmail
         /// </summary>
         [Fact (Skip = "not implemented")]

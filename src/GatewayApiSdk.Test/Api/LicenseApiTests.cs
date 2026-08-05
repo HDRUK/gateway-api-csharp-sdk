@@ -51,43 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CreateLicenses
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreateLicensesAsyncTest()
-        {
-            CreateLicensesRequest createLicensesRequest = default!;
-            var response = await _instance.CreateLicensesAsync(createLicensesRequest);
-            var model = response.Ok();
-            Assert.IsType<CreateDarIntegration201Response>(model);
-        }
-
-        /// <summary>
-        /// Test DeleteLicenses
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeleteLicensesAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.DeleteLicensesAsync(id);
-            var model = response.NotFound();
-            Assert.IsType<UpdateApplications404Response>(model);
-        }
-
-        /// <summary>
-        /// Test EditLicenses
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task EditLicensesAsyncTest()
-        {
-            int id = default!;
-            CreateLicensesRequest createLicensesRequest = default!;
-            var response = await _instance.EditLicensesAsync(id, createLicensesRequest);
-            var model = response.NotFound();
-            Assert.IsType<UpdateApplications404Response>(model);
-        }
-
-        /// <summary>
         /// Test FetchAllLicenses
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -108,19 +71,6 @@ namespace GatewayApiSdk.Test.Api
             var response = await _instance.FetchLicensesAsync(id);
             var model = response.Ok();
             Assert.IsType<FetchLicenses200Response>(model);
-        }
-
-        /// <summary>
-        /// Test UpdateLicenses
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task UpdateLicensesAsyncTest()
-        {
-            int id = default!;
-            CreateLicensesRequest createLicensesRequest = default!;
-            var response = await _instance.UpdateLicensesAsync(id, createLicensesRequest);
-            var model = response.NotFound();
-            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

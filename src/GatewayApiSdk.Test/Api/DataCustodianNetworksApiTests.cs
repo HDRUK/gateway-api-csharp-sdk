@@ -51,43 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CreateDataCustodianNetwork
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreateDataCustodianNetworkAsyncTest()
-        {
-            CreateDataProviderCollRequest createDataProviderCollRequest = default!;
-            var response = await _instance.CreateDataCustodianNetworkAsync(createDataProviderCollRequest);
-            var model = response.Ok();
-            Assert.IsType<CreateDarIntegration201Response>(model);
-        }
-
-        /// <summary>
-        /// Test DeleteDataCustodianNetwork
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeleteDataCustodianNetworkAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.DeleteDataCustodianNetworkAsync(id);
-            var model = response.NotFound();
-            Assert.IsType<UpdateApplications404Response>(model);
-        }
-
-        /// <summary>
-        /// Test EditDataCustodianNetwork
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task EditDataCustodianNetworkAsyncTest()
-        {
-            int id = default!;
-            EditDataProviderCollRequest editDataProviderCollRequest = default!;
-            var response = await _instance.EditDataCustodianNetworkAsync(id, editDataProviderCollRequest);
-            var model = response.NotFound();
-            Assert.IsType<UpdateApplications404Response>(model);
-        }
-
-        /// <summary>
         /// Test FetchDataCustodianNetwork
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -157,19 +120,6 @@ namespace GatewayApiSdk.Test.Api
             var response = await _instance.FetchDataCustodianNetworksAsync(perPage);
             var model = response.Ok();
             Assert.IsType<FetchDataCustodianNetworks200Response>(model);
-        }
-
-        /// <summary>
-        /// Test UpdateDataCustodianNetwork
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task UpdateDataCustodianNetworkAsyncTest()
-        {
-            int id = default!;
-            UpdateDataProviderCollRequest updateDataProviderCollRequest = default!;
-            var response = await _instance.UpdateDataCustodianNetworkAsync(id, updateDataProviderCollRequest);
-            var model = response.NotFound();
-            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

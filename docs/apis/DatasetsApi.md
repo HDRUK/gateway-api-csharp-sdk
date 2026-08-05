@@ -7,8 +7,6 @@ All URIs are relative to *http://localhost*
 | [**CountUniqueFields**](DatasetsApi.md#countuniquefields) | **GET** /api/v1/datasets/count/{field} | DatasetController@count |
 | [**CreateDatasets**](DatasetsApi.md#createdatasets) | **POST** /api/v1/datasets | DatasetController@store |
 | [**CreateDatasetsIntegrations**](DatasetsApi.md#createdatasetsintegrations) | **POST** /api/v1/integrations/datasets | IntegrationDatasetController@store |
-| [**CreateDatasetsLinkageExtraction**](DatasetsApi.md#createdatasetslinkageextraction) | **POST** /api/v1/datasets/admin_ctrl/trigger/linkage_extraction | Trigger Term Extraction for Datasets |
-| [**CreateDatasetsTermExtraction**](DatasetsApi.md#createdatasetstermextraction) | **POST** /api/v1/datasets/admin_ctrl/trigger/term_extraction | Trigger Term Extraction for Datasets |
 | [**CreateDatasetsV2**](DatasetsApi.md#createdatasetsv2) | **POST** /api/v2/datasets | DatasetController@store |
 | [**CreateTeamDatasetsV2**](DatasetsApi.md#createteamdatasetsv2) | **POST** /api/v2/teams/{teamId}/datasets | TeamDatasetController@store |
 | [**DeleteDatasets**](DatasetsApi.md#deletedatasets) | **DELETE** /api/v1/datasets/{id} | DatasetController@destroy |
@@ -147,83 +145,6 @@ Create a new dataset
 | **201** | Created |  -  |
 | **401** | Unauthorized |  -  |
 | **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="createdatasetslinkageextraction"></a>
-# **CreateDatasetsLinkageExtraction**
-> CreateDatasetsLinkageExtraction200Response CreateDatasetsLinkageExtraction (string authorization, CreateDatasetsLinkageExtractionRequest createDatasetsLinkageExtractionRequest)
-
-Trigger Term Extraction for Datasets
-
-Triggers the term extraction job for datasets within a specified range and controls whether data is partially indexed in Elasticsearch.
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **authorization** | **string** | JWT token for authorization in the format &#39;Bearer {token}&#39; |  |
-| **createDatasetsLinkageExtractionRequest** | [**CreateDatasetsLinkageExtractionRequest**](CreateDatasetsLinkageExtractionRequest.md) |  |  |
-
-### Return type
-
-[**CreateDatasetsLinkageExtraction200Response**](CreateDatasetsLinkageExtraction200Response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Linkage extraction triggered successfully |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="createdatasetstermextraction"></a>
-# **CreateDatasetsTermExtraction**
-> CreateDatasetsTermExtraction200Response CreateDatasetsTermExtraction (string authorization, string role, CreateDatasetsTermExtractionRequest createDatasetsTermExtractionRequest)
-
-Trigger Term Extraction for Datasets
-
-Triggers the term extraction job for datasets within a specified range and controls whether data is partially indexed in Elasticsearch.
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **authorization** | **string** | JWT token for authorization in the format &#39;Bearer {token}&#39; |  |
-| **role** | **string** | Role required to access this endpoint, e.g., &#39;hdruk.superadmin&#39; |  |
-| **createDatasetsTermExtractionRequest** | [**CreateDatasetsTermExtractionRequest**](CreateDatasetsTermExtractionRequest.md) |  |  |
-
-### Return type
-
-[**CreateDatasetsTermExtraction200Response**](CreateDatasetsTermExtraction200Response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Term extraction triggered successfully |  -  |
-| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

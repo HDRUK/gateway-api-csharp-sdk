@@ -51,43 +51,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CreateDataProviderColl
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreateDataProviderCollAsyncTest()
-        {
-            CreateDataProviderCollRequest createDataProviderCollRequest = default!;
-            var response = await _instance.CreateDataProviderCollAsync(createDataProviderCollRequest);
-            var model = response.Ok();
-            Assert.IsType<CreateDarIntegration201Response>(model);
-        }
-
-        /// <summary>
-        /// Test DeleteDataProviderColl
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeleteDataProviderCollAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.DeleteDataProviderCollAsync(id);
-            var model = response.NotFound();
-            Assert.IsType<UpdateApplications404Response>(model);
-        }
-
-        /// <summary>
-        /// Test EditDataProviderColl
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task EditDataProviderCollAsyncTest()
-        {
-            int id = default!;
-            EditDataProviderCollRequest editDataProviderCollRequest = default!;
-            var response = await _instance.EditDataProviderCollAsync(id, editDataProviderCollRequest);
-            var model = response.NotFound();
-            Assert.IsType<UpdateApplications404Response>(model);
-        }
-
-        /// <summary>
         /// Test FetchDataProviderColl
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -121,19 +84,6 @@ namespace GatewayApiSdk.Test.Api
             var response = await _instance.FetchDataProviderCollsAsync(perPage);
             var model = response.Ok();
             Assert.IsType<FetchDataProviderColls200Response>(model);
-        }
-
-        /// <summary>
-        /// Test UpdateDataProviderColl
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task UpdateDataProviderCollAsyncTest()
-        {
-            int id = default!;
-            UpdateDataProviderCollRequest updateDataProviderCollRequest = default!;
-            var response = await _instance.UpdateDataProviderCollAsync(id, updateDataProviderCollRequest);
-            var model = response.NotFound();
-            Assert.IsType<UpdateApplications404Response>(model);
         }
     }
 }

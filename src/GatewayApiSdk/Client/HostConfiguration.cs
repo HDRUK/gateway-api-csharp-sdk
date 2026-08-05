@@ -49,7 +49,6 @@ namespace GatewayApiSdk.Client
             _jsonOptions.Converters.Add(new CategoryJsonConverter());
             _jsonOptions.Converters.Add(new CollectionJsonConverter());
             _jsonOptions.Converters.Add(new CountUniqueFieldsCollections200ResponseJsonConverter());
-            _jsonOptions.Converters.Add(new CreateAdminSearchReindexRequestJsonConverter());
             _jsonOptions.Converters.Add(new CreateApplications200ResponseJsonConverter());
             _jsonOptions.Converters.Add(new CreateApplications200ResponseDataInnerJsonConverter());
             _jsonOptions.Converters.Add(new CreateApplications500ResponseJsonConverter());
@@ -63,13 +62,7 @@ namespace GatewayApiSdk.Client
             _jsonOptions.Converters.Add(new CreateDarSectionRequestJsonConverter());
             _jsonOptions.Converters.Add(new CreateDarTemplateRequestJsonConverter());
             _jsonOptions.Converters.Add(new CreateDarTemplateRequestQuestionsInnerJsonConverter());
-            _jsonOptions.Converters.Add(new CreateDataProviderCollRequestJsonConverter());
-            _jsonOptions.Converters.Add(new CreateDatasetsLinkageExtraction200ResponseJsonConverter());
-            _jsonOptions.Converters.Add(new CreateDatasetsLinkageExtractionRequestJsonConverter());
             _jsonOptions.Converters.Add(new CreateDatasetsRequestJsonConverter());
-            _jsonOptions.Converters.Add(new CreateDatasetsTermExtraction200ResponseJsonConverter());
-            _jsonOptions.Converters.Add(new CreateDatasetsTermExtraction500ResponseJsonConverter());
-            _jsonOptions.Converters.Add(new CreateDatasetsTermExtractionRequestJsonConverter());
             _jsonOptions.Converters.Add(new CreateDatasetsV2RequestJsonConverter());
             _jsonOptions.Converters.Add(new CreateDurIntegrationsRequestJsonConverter());
             _jsonOptions.Converters.Add(new CreateDurRequestJsonConverter());
@@ -78,8 +71,6 @@ namespace GatewayApiSdk.Client
             _jsonOptions.Converters.Add(new CreateDurRequestTeamInnerJsonConverter());
             _jsonOptions.Converters.Add(new CreateDurRequestUsersInnerJsonConverter());
             _jsonOptions.Converters.Add(new CreateFederationTeamRequestJsonConverter());
-            _jsonOptions.Converters.Add(new CreateLicensesRequestJsonConverter());
-            _jsonOptions.Converters.Add(new CreateProgrammingLanguagesRequestJsonConverter());
             _jsonOptions.Converters.Add(new CreatePublicationsRequestJsonConverter());
             _jsonOptions.Converters.Add(new CreatePublicationsRequestDatasetsInnerJsonConverter());
             _jsonOptions.Converters.Add(new CreatePublicationsRequestToolsInnerJsonConverter());
@@ -95,9 +86,6 @@ namespace GatewayApiSdk.Client
             _jsonOptions.Converters.Add(new CreateToolsIntegrationsRequestPublicationsInnerJsonConverter());
             _jsonOptions.Converters.Add(new CreateToolsRequestJsonConverter());
             _jsonOptions.Converters.Add(new CreateToolsRequestCollectionsInnerJsonConverter());
-            _jsonOptions.Converters.Add(new CreateTypeCategoriesRequestJsonConverter());
-            _jsonOptions.Converters.Add(new CreateUserHasRolesRequestJsonConverter());
-            _jsonOptions.Converters.Add(new CreateUsersRequestJsonConverter());
             _jsonOptions.Converters.Add(new CreateWidget201ResponseJsonConverter());
             _jsonOptions.Converters.Add(new CreateWidget400ResponseJsonConverter());
             _jsonOptions.Converters.Add(new CreateWidgetRequestJsonConverter());
@@ -116,11 +104,7 @@ namespace GatewayApiSdk.Client
             _jsonOptions.Converters.Add(new EditCsat200ResponseJsonConverter());
             _jsonOptions.Converters.Add(new EditCsatRequestJsonConverter());
             _jsonOptions.Converters.Add(new EditDarIntegrationRequestJsonConverter());
-            _jsonOptions.Converters.Add(new EditDataProviderCollRequestJsonConverter());
-            _jsonOptions.Converters.Add(new EditProgrammingLanguagesRequestJsonConverter());
             _jsonOptions.Converters.Add(new EditQuestionBankQuestionRequestJsonConverter());
-            _jsonOptions.Converters.Add(new EditUsers200ResponseJsonConverter());
-            _jsonOptions.Converters.Add(new EditUsersRequestJsonConverter());
             _jsonOptions.Converters.Add(new ExportDatasetMetadata400ResponseJsonConverter());
             _jsonOptions.Converters.Add(new ExportMockDataset404ResponseJsonConverter());
             _jsonOptions.Converters.Add(new FetchAllApplications200ResponseJsonConverter());
@@ -265,7 +249,6 @@ namespace GatewayApiSdk.Client
             _jsonOptions.Converters.Add(new ToolJsonConverter());
             _jsonOptions.Converters.Add(new TrackWidgetEventRequestJsonConverter());
             _jsonOptions.Converters.Add(new TypeCategoryJsonConverter());
-            _jsonOptions.Converters.Add(new UpdateAdminSearchFeatureRequestJsonConverter());
             _jsonOptions.Converters.Add(new UpdateApplications200ResponseJsonConverter());
             _jsonOptions.Converters.Add(new UpdateApplications200ResponseDataJsonConverter());
             _jsonOptions.Converters.Add(new UpdateApplications404ResponseJsonConverter());
@@ -276,33 +259,19 @@ namespace GatewayApiSdk.Client
             _jsonOptions.Converters.Add(new UpdateDarSection200ResponseJsonConverter());
             _jsonOptions.Converters.Add(new UpdateDarSection200ResponseDataJsonConverter());
             _jsonOptions.Converters.Add(new UpdateDarTemplateRequestJsonConverter());
-            _jsonOptions.Converters.Add(new UpdateDataCustodianNetwork200ResponseJsonConverter());
-            _jsonOptions.Converters.Add(new UpdateDataProviderColl200ResponseJsonConverter());
-            _jsonOptions.Converters.Add(new UpdateDataProviderCollRequestJsonConverter());
             _jsonOptions.Converters.Add(new UpdateDatasetsRequestJsonConverter());
             _jsonOptions.Converters.Add(new UpdateDur200ResponseJsonConverter());
             _jsonOptions.Converters.Add(new UpdateDurIntegrations200ResponseJsonConverter());
             _jsonOptions.Converters.Add(new UpdateDurIntegrations200ResponseDataJsonConverter());
             _jsonOptions.Converters.Add(new UpdateFederationTeamRequestJsonConverter());
-            _jsonOptions.Converters.Add(new UpdateLicenses200ResponseJsonConverter());
-            _jsonOptions.Converters.Add(new UpdateProgrammingLanguages200ResponseJsonConverter());
-            _jsonOptions.Converters.Add(new UpdateProgrammingLanguagesRequestJsonConverter());
-            _jsonOptions.Converters.Add(new UpdateProgrammingPackages200ResponseJsonConverter());
             _jsonOptions.Converters.Add(new UpdatePublicationsRequestJsonConverter());
             _jsonOptions.Converters.Add(new UpdateQuestionBankQuestion200ResponseJsonConverter());
             _jsonOptions.Converters.Add(new UpdateQuestionBankQuestionRequestJsonConverter());
             _jsonOptions.Converters.Add(new UpdateQuestionBankQuestionStatus200ResponseJsonConverter());
-            _jsonOptions.Converters.Add(new UpdateReviews200ResponseJsonConverter());
-            _jsonOptions.Converters.Add(new UpdateReviews200ResponseDataJsonConverter());
-            _jsonOptions.Converters.Add(new UpdateReviewsRequestJsonConverter());
             _jsonOptions.Converters.Add(new UpdateTeamDarApplicationQuestionReview200ResponseJsonConverter());
             _jsonOptions.Converters.Add(new UpdateTeamDarApplicationRequestJsonConverter());
             _jsonOptions.Converters.Add(new UpdateToolsIntegrationsRequestJsonConverter());
             _jsonOptions.Converters.Add(new UpdateToolsRequestJsonConverter());
-            _jsonOptions.Converters.Add(new UpdateTypeCategories200ResponseJsonConverter());
-            _jsonOptions.Converters.Add(new UpdateTypeCategoriesRequestJsonConverter());
-            _jsonOptions.Converters.Add(new UpdateUserHasRolesRequestJsonConverter());
-            _jsonOptions.Converters.Add(new UpdateUserHasRolesRequestRolesJsonConverter());
             _jsonOptions.Converters.Add(new UpdateWidget200ResponseJsonConverter());
             _jsonOptions.Converters.Add(new UpdateWidgetRequestJsonConverter());
             _jsonOptions.Converters.Add(new UploadDurRequestJsonConverter());
@@ -315,8 +284,6 @@ namespace GatewayApiSdk.Client
             JsonSerializerOptionsProvider jsonSerializerOptionsProvider = new(_jsonOptions);
             _services.AddSingleton(jsonSerializerOptionsProvider);
             _services.AddSingleton<IApiFactory, ApiFactory>();
-            _services.AddSingleton<AdminDataCustodianNetworksApiEvents>();
-            _services.AddSingleton<AdminSearchApiEvents>();
             _services.AddSingleton<ApplicationApiEvents>();
             _services.AddSingleton<AuthenticationApiEvents>();
             _services.AddSingleton<CancerTypeFilterApiEvents>();
@@ -339,13 +306,9 @@ namespace GatewayApiSdk.Client
             _services.AddSingleton<IntegrationsDatasetsTestApiEvents>();
             _services.AddSingleton<LicenseApiEvents>();
             _services.AddSingleton<MetricsApiEvents>();
-            _services.AddSingleton<NotificationApiEvents>();
-            _services.AddSingleton<ProgrammingLanguageApiEvents>();
-            _services.AddSingleton<ProgrammingPackageApiEvents>();
             _services.AddSingleton<ProjectGrantApiEvents>();
             _services.AddSingleton<PublicationApiEvents>();
             _services.AddSingleton<QuestionBankApiEvents>();
-            _services.AddSingleton<ReviewsApiEvents>();
             _services.AddSingleton<SearchCollectionsApiEvents>();
             _services.AddSingleton<SearchDataCustodianNetworksApiEvents>();
             _services.AddSingleton<SearchDataCustodiansApiEvents>();
@@ -358,8 +321,6 @@ namespace GatewayApiSdk.Client
             _services.AddSingleton<TeamDataAccessTemplateApiEvents>();
             _services.AddSingleton<TeamFederationsApiEvents>();
             _services.AddSingleton<ToolsApiEvents>();
-            _services.AddSingleton<TypeCategoryApiEvents>();
-            _services.AddSingleton<UserRolesApiEvents>();
             _services.AddSingleton<UsersApiEvents>();
             _services.AddSingleton<WidgetsApiEvents>();
             OnHostConfigurationCreated();
@@ -407,8 +368,6 @@ namespace GatewayApiSdk.Client
 
             List<IHttpClientBuilder> builders = new List<IHttpClientBuilder>();
 
-            builders.Add(_services.AddHttpClient<IAdminDataCustodianNetworksApi, AdminDataCustodianNetworksApi>("GatewayApiSdk.Api.IAdminDataCustodianNetworksApi", client));
-            builders.Add(_services.AddHttpClient<IAdminSearchApi, AdminSearchApi>("GatewayApiSdk.Api.IAdminSearchApi", client));
             builders.Add(_services.AddHttpClient<IApplicationApi, ApplicationApi>("GatewayApiSdk.Api.IApplicationApi", client));
             builders.Add(_services.AddHttpClient<IAuthenticationApi, AuthenticationApi>("GatewayApiSdk.Api.IAuthenticationApi", client));
             builders.Add(_services.AddHttpClient<ICancerTypeFilterApi, CancerTypeFilterApi>("GatewayApiSdk.Api.ICancerTypeFilterApi", client));
@@ -431,13 +390,9 @@ namespace GatewayApiSdk.Client
             builders.Add(_services.AddHttpClient<IIntegrationsDatasetsTestApi, IntegrationsDatasetsTestApi>("GatewayApiSdk.Api.IIntegrationsDatasetsTestApi", client));
             builders.Add(_services.AddHttpClient<ILicenseApi, LicenseApi>("GatewayApiSdk.Api.ILicenseApi", client));
             builders.Add(_services.AddHttpClient<IMetricsApi, MetricsApi>("GatewayApiSdk.Api.IMetricsApi", client));
-            builders.Add(_services.AddHttpClient<INotificationApi, NotificationApi>("GatewayApiSdk.Api.INotificationApi", client));
-            builders.Add(_services.AddHttpClient<IProgrammingLanguageApi, ProgrammingLanguageApi>("GatewayApiSdk.Api.IProgrammingLanguageApi", client));
-            builders.Add(_services.AddHttpClient<IProgrammingPackageApi, ProgrammingPackageApi>("GatewayApiSdk.Api.IProgrammingPackageApi", client));
             builders.Add(_services.AddHttpClient<IProjectGrantApi, ProjectGrantApi>("GatewayApiSdk.Api.IProjectGrantApi", client));
             builders.Add(_services.AddHttpClient<IPublicationApi, PublicationApi>("GatewayApiSdk.Api.IPublicationApi", client));
             builders.Add(_services.AddHttpClient<IQuestionBankApi, QuestionBankApi>("GatewayApiSdk.Api.IQuestionBankApi", client));
-            builders.Add(_services.AddHttpClient<IReviewsApi, ReviewsApi>("GatewayApiSdk.Api.IReviewsApi", client));
             builders.Add(_services.AddHttpClient<ISearchCollectionsApi, SearchCollectionsApi>("GatewayApiSdk.Api.ISearchCollectionsApi", client));
             builders.Add(_services.AddHttpClient<ISearchDataCustodianNetworksApi, SearchDataCustodianNetworksApi>("GatewayApiSdk.Api.ISearchDataCustodianNetworksApi", client));
             builders.Add(_services.AddHttpClient<ISearchDataCustodiansApi, SearchDataCustodiansApi>("GatewayApiSdk.Api.ISearchDataCustodiansApi", client));
@@ -450,8 +405,6 @@ namespace GatewayApiSdk.Client
             builders.Add(_services.AddHttpClient<ITeamDataAccessTemplateApi, TeamDataAccessTemplateApi>("GatewayApiSdk.Api.ITeamDataAccessTemplateApi", client));
             builders.Add(_services.AddHttpClient<ITeamFederationsApi, TeamFederationsApi>("GatewayApiSdk.Api.ITeamFederationsApi", client));
             builders.Add(_services.AddHttpClient<IToolsApi, ToolsApi>("GatewayApiSdk.Api.IToolsApi", client));
-            builders.Add(_services.AddHttpClient<ITypeCategoryApi, TypeCategoryApi>("GatewayApiSdk.Api.ITypeCategoryApi", client));
-            builders.Add(_services.AddHttpClient<IUserRolesApi, UserRolesApi>("GatewayApiSdk.Api.IUserRolesApi", client));
             builders.Add(_services.AddHttpClient<IUsersApi, UsersApi>("GatewayApiSdk.Api.IUsersApi", client));
             builders.Add(_services.AddHttpClient<IWidgetsApi, WidgetsApi>("GatewayApiSdk.Api.IWidgetsApi", client));
 

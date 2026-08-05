@@ -4,8 +4,6 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**DeleteDarApplicationFiles**](DataAccessApplicationApi.md#deletedarapplicationfiles) | **DELETE** /api/v1/dar/applications/{id}/files/{fileId} | DataAccessApplication@destroyFile |
-| [**DeleteDarApplications**](DataAccessApplicationApi.md#deletedarapplications) | **DELETE** /api/v1/dar/applications/{id} | DataAccessApplication@destroy |
 | [**DeleteTeamDarApplicationFile**](DataAccessApplicationApi.md#deleteteamdarapplicationfile) | **DELETE** /api/v1/teams/{teamId}/dar/applications/{id}/files/{fileId} | DataAccessApplication@destroyFile |
 | [**FetchTeamDarApplicationAnswers**](DataAccessApplicationApi.md#fetchteamdarapplicationanswers) | **GET** /api/v1/teams/{teamId}/dar/applications/{id}/answers | DataAccessApplication@showAnswers |
 | [**FetchTeamDarApplicationDownloadZip**](DataAccessApplicationApi.md#fetchteamdarapplicationdownloadzip) | **GET** /api/v1/teams/{teamId}/dar/applications/{id}/download | DataAccessApplication@download |
@@ -13,83 +11,6 @@ All URIs are relative to *http://localhost*
 | [**FetchTeamDarApplicationFiles**](DataAccessApplicationApi.md#fetchteamdarapplicationfiles) | **GET** /api/v1/teams/{teamId}/dar/applications/{id}/files | DataAccessApplication@showFiles |
 | [**FetchTeamDarApplicationStatusHistory**](DataAccessApplicationApi.md#fetchteamdarapplicationstatushistory) | **GET** /api/v1/teams/{teamId}/dar/applications/{id}/status | DataAccessApplication@status |
 | [**UpdateTeamDarApplication**](DataAccessApplicationApi.md#updateteamdarapplication) | **PATCH** /api/v1/teams/{teamId}/dar/applications/{id} | DataAccessApplication@update |
-
-<a id="deletedarapplicationfiles"></a>
-# **DeleteDarApplicationFiles**
-> DeleteApplications200Response DeleteDarApplicationFiles (int id, string fileId)
-
-DataAccessApplication@destroyFile
-
-Delete a file associated with a DAR application
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | DAR application id |  |
-| **fileId** | **string** | File id |  |
-
-### Return type
-
-[**DeleteApplications200Response**](DeleteApplications200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="deletedarapplications"></a>
-# **DeleteDarApplications**
-> DeleteApplications200Response DeleteDarApplications (int id)
-
-DataAccessApplication@destroy
-
-Delete a system DAR application
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | DAR application id |  |
-
-### Return type
-
-[**DeleteApplications200Response**](DeleteApplications200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 <a id="deleteteamdarapplicationfile"></a>
 # **DeleteTeamDarApplicationFile**
