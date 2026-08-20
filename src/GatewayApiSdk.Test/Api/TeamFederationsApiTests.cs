@@ -77,20 +77,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test EditFederationTeam
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task EditFederationTeamAsyncTest()
-        {
-            int teamId = default!;
-            int federationId = default!;
-            CreateFederationTeamRequest createFederationTeamRequest = default!;
-            var response = await _instance.EditFederationTeamAsync(teamId, federationId, createFederationTeamRequest);
-            var model = response.Created();
-            Assert.IsType<CreateDarIntegration201Response>(model);
-        }
-
-        /// <summary>
         /// Test GetFederationByFederationIdAndTeamId
         /// </summary>
         [Fact (Skip = "not implemented")]

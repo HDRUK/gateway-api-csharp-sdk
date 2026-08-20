@@ -6,11 +6,9 @@ All URIs are relative to *http://localhost*
 |--------|--------------|-------------|
 | [**CountUniqueFields**](DatasetsApi.md#countuniquefields) | **GET** /api/v1/datasets/count/{field} | DatasetController@count |
 | [**CreateDatasets**](DatasetsApi.md#createdatasets) | **POST** /api/v1/datasets | DatasetController@store |
-| [**CreateDatasetsIntegrations**](DatasetsApi.md#createdatasetsintegrations) | **POST** /api/v1/integrations/datasets | IntegrationDatasetController@store |
 | [**CreateDatasetsV2**](DatasetsApi.md#createdatasetsv2) | **POST** /api/v2/datasets | DatasetController@store |
 | [**CreateTeamDatasetsV2**](DatasetsApi.md#createteamdatasetsv2) | **POST** /api/v2/teams/{teamId}/datasets | TeamDatasetController@store |
 | [**DeleteDatasets**](DatasetsApi.md#deletedatasets) | **DELETE** /api/v1/datasets/{id} | DatasetController@destroy |
-| [**DeleteDatasetsIntegrations**](DatasetsApi.md#deletedatasetsintegrations) | **DELETE** /api/v1/integrations/datasets/{id} | IntegrationDatasetController@destroy |
 | [**DeleteDatasetsV2**](DatasetsApi.md#deletedatasetsv2) | **DELETE** /api/v2/datasets/{id} | Delete a dataset |
 | [**DeleteTeamDatasetsV2**](DatasetsApi.md#deleteteamdatasetsv2) | **DELETE** /api/v2/teams/{teamId}/datasets/{id} | TeamDatasetController@destroy |
 | [**ExportDatasetMetadata**](DatasetsApi.md#exportdatasetmetadata) | **GET** /api/v1/datasets/export_metadata/{id} | DatasetController@exportMetadata |
@@ -19,17 +17,13 @@ All URIs are relative to *http://localhost*
 | [**ExportMockDataset**](DatasetsApi.md#exportmockdataset) | **GET** /api/v1/datasets/export/mock | DatasetController@exportMock |
 | [**ExportMockDatasetV2**](DatasetsApi.md#exportmockdatasetv2) | **GET** /api/v2/datasets/export/mock | DatasetController@exportMock |
 | [**FetchAllDatasets**](DatasetsApi.md#fetchalldatasets) | **GET** /api/v1/datasets | DatasetController@index |
-| [**FetchAllDatasetsIntegrations**](DatasetsApi.md#fetchalldatasetsintegrations) | **GET** /api/v1/integrations/datasets | IntegrationDatasetController@index |
 | [**FetchAllDatasetsV2**](DatasetsApi.md#fetchalldatasetsv2) | **GET** /api/v2/datasets | DatasetController@index |
 | [**FetchDatasets**](DatasetsApi.md#fetchdatasets) | **GET** /api/v1/datasets/{id} | DatasetController@show |
-| [**FetchDatasetsIntegrations**](DatasetsApi.md#fetchdatasetsintegrations) | **GET** /api/v1/integrations/datasets/{id} | IntegrationDatasetController@show |
 | [**FetchDatasetsV2**](DatasetsApi.md#fetchdatasetsv2) | **GET** /api/v2/datasets/{id} | DatasetController@showActive |
 | [**PatchDatasets**](DatasetsApi.md#patchdatasets) | **PATCH** /api/v1/datasets/{id} | DatasetController@edit |
-| [**PatchDatasetsIntegrations**](DatasetsApi.md#patchdatasetsintegrations) | **PATCH** /api/v1/integrations/datasets/{id} | IntegrationDatasetController@edit |
 | [**PatchDatasetsV2**](DatasetsApi.md#patchdatasetsv2) | **PATCH** /api/v2/datasets/{id} | DatasetController@edit |
 | [**PatchTeamDatasetsV2**](DatasetsApi.md#patchteamdatasetsv2) | **PATCH** /api/v2/teams/{teamId}/datasets/{id} | TeamDatasetController@edit |
 | [**UpdateDatasets**](DatasetsApi.md#updatedatasets) | **PUT** /api/v1/datasets/{id} | DatasetController@update |
-| [**UpdateDatasetsIntegrations**](DatasetsApi.md#updatedatasetsintegrations) | **PUT** /api/v1/integrations/datasets/{id} | IntegrationDatasetController@update |
 | [**UpdateDatasetsV2**](DatasetsApi.md#updatedatasetsv2) | **PUT** /api/v2/datasets/{id} | DatasetController@update |
 | [**UpdateTeamDatasetsV2**](DatasetsApi.md#updateteamdatasetsv2) | **PUT** /api/v2/teams/{teamId}/datasets/{id} | TeamDatasetController@update |
 
@@ -84,46 +78,6 @@ Create a new dataset
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **createDatasetsRequest** | [**CreateDatasetsRequest**](CreateDatasetsRequest.md) | Pass user credentials |  |
-
-### Return type
-
-[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **201** | Created |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="createdatasetsintegrations"></a>
-# **CreateDatasetsIntegrations**
-> CreateDarIntegration201Response CreateDatasetsIntegrations (DatasetsTestRequest datasetsTestRequest, string inputSchema = null, string inputVersion = null)
-
-IntegrationDatasetController@store
-
-Create a new dataset
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **datasetsTestRequest** | [**DatasetsTestRequest**](DatasetsTestRequest.md) | Pass user credentials |  |
-| **inputSchema** | **string** | Input schema model. | [optional]  |
-| **inputVersion** | **string** | Input schema version. | [optional]  |
 
 ### Return type
 
@@ -230,44 +184,6 @@ Create a new dataset for a team
 > DeleteApplications200Response DeleteDatasets (int id)
 
 DatasetController@destroy
-
-Delete a dataset
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | dataset id |  |
-
-### Return type
-
-[**DeleteApplications200Response**](DeleteApplications200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **404** | Not found response |  -  |
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="deletedatasetsintegrations"></a>
-# **DeleteDatasetsIntegrations**
-> DeleteApplications200Response DeleteDatasetsIntegrations (int id)
-
-IntegrationDatasetController@destroy
 
 Delete a dataset
 
@@ -608,46 +524,6 @@ Get All Datasets
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="fetchalldatasetsintegrations"></a>
-# **FetchAllDatasetsIntegrations**
-> FetchAllDatasets200Response FetchAllDatasetsIntegrations (int teamId, string pid = null, string sort = null, string title = null, string status = null)
-
-IntegrationDatasetController@index
-
-Get All Datasets
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | team id |  |
-| **pid** | **string** | get based on a pid | [optional]  |
-| **sort** | **string** | Field and direction (colon separated) to sort by (default: &#39;created:desc&#39;) ... &lt;br/&gt; &lt;br/&gt;         - ?sort&#x3D;\\&lt;field\\&gt;:\\&lt;direction\\&gt; &lt;br/&gt;         - \\&lt;direction\\&gt; can only be &#39;asc&#39; or &#39;desc&#39;  &lt;br/&gt;         - \\&lt;field\\&gt; can only be a valid field for the dataset table that can be ordered on  &lt;br/&gt;         - \\&lt;field\\&gt; can start with the prefix &#39;metadata.&#39; so that nested values within the field &#39;metadata&#39;  &lt;br/&gt;             (represented by the GWDM JSON structure) can be used to order on.  &lt;br/&gt;  &lt;br/&gt; | [optional]  |
-| **title** | **string** | Three or more characters to filter dataset titles by | [optional]  |
-| **status** | **string** | Dataset status to filter by (&#39;ACTIVE&#39;, &#39;DRAFT&#39;, &#39;ARCHIVED&#39;) | [optional]  |
-
-### Return type
-
-[**FetchAllDatasets200Response**](FetchAllDatasets200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 <a id="fetchalldatasetsv2"></a>
 # **FetchAllDatasetsV2**
 > FetchAllDatasets200Response FetchAllDatasetsV2 (string sort = null, string title = null, string status = null, string withMetadata = null)
@@ -728,46 +604,6 @@ Get dataset by id
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<a id="fetchdatasetsintegrations"></a>
-# **FetchDatasetsIntegrations**
-> FetchDatasets200Response FetchDatasetsIntegrations (int id, string schemaModel = null, string schemaVersion = null)
-
-IntegrationDatasetController@show
-
-Get dataset by id
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | dataset id |  |
-| **schemaModel** | **string** | Alternative output schema model. | [optional]  |
-| **schemaVersion** | **string** | Alternative output schema version. | [optional]  |
-
-### Return type
-
-[**FetchDatasets200Response**](FetchDatasets200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success response |  -  |
-| **401** | Unauthorized |  -  |
-| **404** | Not found response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 <a id="fetchdatasetsv2"></a>
 # **FetchDatasetsV2**
 > FetchDatasets200Response FetchDatasetsV2 (int id, string export = null, string schemaModel = null, string schemaVersion = null)
@@ -814,44 +650,6 @@ Get publicly visible dataset by id
 > DeleteApplications200Response PatchDatasets (int id, string unarchive = null)
 
 DatasetController@edit
-
-Patch dataset by id
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | dataset id |  |
-| **unarchive** | **string** | Unarchive a dataset | [optional]  |
-
-### Return type
-
-[**DeleteApplications200Response**](DeleteApplications200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="patchdatasetsintegrations"></a>
-# **PatchDatasetsIntegrations**
-> DeleteApplications200Response PatchDatasetsIntegrations (int id, string unarchive = null)
-
-IntegrationDatasetController@edit
 
 Patch dataset by id
 
@@ -981,47 +779,6 @@ Update a dataset with a new dataset version
 ### Return type
 
 [**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **201** | Created |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="updatedatasetsintegrations"></a>
-# **UpdateDatasetsIntegrations**
-> FetchDatasets200Response UpdateDatasetsIntegrations (int id, UpdateDatasetsRequest updateDatasetsRequest, string inputSchema = null, string inputVersion = null)
-
-IntegrationDatasetController@update
-
-Update a dataset with a new dataset version
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **int** | dataset id |  |
-| **updateDatasetsRequest** | [**UpdateDatasetsRequest**](UpdateDatasetsRequest.md) | Pass user credentials |  |
-| **inputSchema** | **string** | Input schema model. | [optional]  |
-| **inputVersion** | **string** | Input schema version. | [optional]  |
-
-### Return type
-
-[**FetchDatasets200Response**](FetchDatasets200Response.md)
 
 ### Authorization
 

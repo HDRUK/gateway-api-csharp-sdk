@@ -1,18 +1,18 @@
-# GatewayApiSdk.Api.MetricsApi
+# GatewayApiSdk.Api.DatasetLinkCheckResultsApi
 
 All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**FetchKeyMetricsV2**](MetricsApi.md#fetchkeymetricsv2) | **GET** /api/v2/metrics | KeyMetricController@index |
+| [**FetchDatasetLinkCheckResultsV2**](DatasetLinkCheckResultsApi.md#fetchdatasetlinkcheckresultsv2) | **GET** /api/v2/dataset_link_check_results | DatasetLinkCheckResultController@index |
 
-<a id="fetchkeymetricsv2"></a>
-# **FetchKeyMetricsV2**
-> FetchDatasetLinkCheckResultsV2200Response FetchKeyMetricsV2 ()
+<a id="fetchdatasetlinkcheckresultsv2"></a>
+# **FetchDatasetLinkCheckResultsV2**
+> FetchDatasetLinkCheckResultsV2200Response FetchDatasetLinkCheckResultsV2 ()
 
-KeyMetricController@index
+DatasetLinkCheckResultController@index
 
-Get key metrics
+Get the confirmed dead links (HTTP 404, verified across multiple checks) found in active dataset metadata by the nightly link check
 
 
 ### Parameters

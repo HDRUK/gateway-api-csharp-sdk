@@ -1,18 +1,18 @@
-# GatewayApiSdk.Api.MetricsApi
+# GatewayApiSdk.Api.NightlyDatasetTestsApi
 
 All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**FetchKeyMetricsV2**](MetricsApi.md#fetchkeymetricsv2) | **GET** /api/v2/metrics | KeyMetricController@index |
+| [**FetchNightlyDatasetTestsV2**](NightlyDatasetTestsApi.md#fetchnightlydatasettestsv2) | **GET** /api/v2/nightly_dataset_tests | NightlyDatasetTestController@index |
 
-<a id="fetchkeymetricsv2"></a>
-# **FetchKeyMetricsV2**
-> FetchDatasetLinkCheckResultsV2200Response FetchKeyMetricsV2 ()
+<a id="fetchnightlydatasettestsv2"></a>
+# **FetchNightlyDatasetTestsV2**
+> FetchDatasetLinkCheckResultsV2200Response FetchNightlyDatasetTestsV2 ()
 
-KeyMetricController@index
+NightlyDatasetTestController@index
 
-Get key metrics
+Get the results of the nightly dataset reachability check, with a summary and a list of failures
 
 
 ### Parameters

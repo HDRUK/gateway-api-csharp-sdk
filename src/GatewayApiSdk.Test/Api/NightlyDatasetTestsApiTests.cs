@@ -39,24 +39,24 @@ using GatewayApiSdk.Model;
 namespace GatewayApiSdk.Test.Api
 {
     /// <summary>
-    ///  Class for testing MetricsApi
+    ///  Class for testing NightlyDatasetTestsApi
     /// </summary>
-    public sealed class MetricsApiTests : ApiTestsBase
+    public sealed class NightlyDatasetTestsApiTests : ApiTestsBase
     {
-        private readonly IMetricsApi _instance;
+        private readonly INightlyDatasetTestsApi _instance;
 
-        public MetricsApiTests(): base(Array.Empty<string>())
+        public NightlyDatasetTestsApiTests(): base(Array.Empty<string>())
         {
-            _instance = _host.Services.GetRequiredService<IMetricsApi>();
+            _instance = _host.Services.GetRequiredService<INightlyDatasetTestsApi>();
         }
 
         /// <summary>
-        /// Test FetchKeyMetricsV2
+        /// Test FetchNightlyDatasetTestsV2
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task FetchKeyMetricsV2AsyncTest()
+        public async Task FetchNightlyDatasetTestsV2AsyncTest()
         {
-            var response = await _instance.FetchKeyMetricsV2Async();
+            var response = await _instance.FetchNightlyDatasetTestsV2Async();
             var model = response.Ok();
             Assert.IsType<FetchDatasetLinkCheckResultsV2200Response>(model);
         }

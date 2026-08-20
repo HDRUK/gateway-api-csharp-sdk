@@ -112,6 +112,9 @@ namespace GatewayApiSdk.Test.Api
             var dataUseRegistersApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IDataUseRegistersApi>();
             Assert.True(dataUseRegistersApi.HttpClient.BaseAddress != null);
 
+            var datasetLinkCheckResultsApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IDatasetLinkCheckResultsApi>();
+            Assert.True(datasetLinkCheckResultsApi.HttpClient.BaseAddress != null);
+
             var datasetsApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IDatasetsApi>();
             Assert.True(datasetsApi.HttpClient.BaseAddress != null);
 
@@ -127,14 +130,14 @@ namespace GatewayApiSdk.Test.Api
             var integrationDataUseRegistersApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IIntegrationDataUseRegistersApi>();
             Assert.True(integrationDataUseRegistersApi.HttpClient.BaseAddress != null);
 
-            var integrationsDatasetsTestApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IIntegrationsDatasetsTestApi>();
-            Assert.True(integrationsDatasetsTestApi.HttpClient.BaseAddress != null);
-
             var licenseApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<ILicenseApi>();
             Assert.True(licenseApi.HttpClient.BaseAddress != null);
 
             var metricsApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IMetricsApi>();
             Assert.True(metricsApi.HttpClient.BaseAddress != null);
+
+            var nightlyDatasetTestsApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<INightlyDatasetTestsApi>();
+            Assert.True(nightlyDatasetTestsApi.HttpClient.BaseAddress != null);
 
             var projectGrantApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IProjectGrantApi>();
             Assert.True(projectGrantApi.HttpClient.BaseAddress != null);
@@ -236,6 +239,9 @@ namespace GatewayApiSdk.Test.Api
             var dataUseRegistersApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IDataUseRegistersApi>();
             Assert.True(dataUseRegistersApi.HttpClient.BaseAddress != null);
 
+            var datasetLinkCheckResultsApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IDatasetLinkCheckResultsApi>();
+            Assert.True(datasetLinkCheckResultsApi.HttpClient.BaseAddress != null);
+
             var datasetsApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IDatasetsApi>();
             Assert.True(datasetsApi.HttpClient.BaseAddress != null);
 
@@ -251,14 +257,14 @@ namespace GatewayApiSdk.Test.Api
             var integrationDataUseRegistersApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IIntegrationDataUseRegistersApi>();
             Assert.True(integrationDataUseRegistersApi.HttpClient.BaseAddress != null);
 
-            var integrationsDatasetsTestApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IIntegrationsDatasetsTestApi>();
-            Assert.True(integrationsDatasetsTestApi.HttpClient.BaseAddress != null);
-
             var licenseApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<ILicenseApi>();
             Assert.True(licenseApi.HttpClient.BaseAddress != null);
 
             var metricsApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IMetricsApi>();
             Assert.True(metricsApi.HttpClient.BaseAddress != null);
+
+            var nightlyDatasetTestsApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<INightlyDatasetTestsApi>();
+            Assert.True(nightlyDatasetTestsApi.HttpClient.BaseAddress != null);
 
             var projectGrantApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IProjectGrantApi>();
             Assert.True(projectGrantApi.HttpClient.BaseAddress != null);
@@ -360,6 +366,9 @@ namespace GatewayApiSdk.Test.Api
             var dataUseRegistersApi = _hostUsingAddWithAClient.Services.GetRequiredService<IDataUseRegistersApi>();
             Assert.True(dataUseRegistersApi.HttpClient.BaseAddress != null);
             
+            var datasetLinkCheckResultsApi = _hostUsingAddWithAClient.Services.GetRequiredService<IDatasetLinkCheckResultsApi>();
+            Assert.True(datasetLinkCheckResultsApi.HttpClient.BaseAddress != null);
+            
             var datasetsApi = _hostUsingAddWithAClient.Services.GetRequiredService<IDatasetsApi>();
             Assert.True(datasetsApi.HttpClient.BaseAddress != null);
             
@@ -375,14 +384,14 @@ namespace GatewayApiSdk.Test.Api
             var integrationDataUseRegistersApi = _hostUsingAddWithAClient.Services.GetRequiredService<IIntegrationDataUseRegistersApi>();
             Assert.True(integrationDataUseRegistersApi.HttpClient.BaseAddress != null);
             
-            var integrationsDatasetsTestApi = _hostUsingAddWithAClient.Services.GetRequiredService<IIntegrationsDatasetsTestApi>();
-            Assert.True(integrationsDatasetsTestApi.HttpClient.BaseAddress != null);
-            
             var licenseApi = _hostUsingAddWithAClient.Services.GetRequiredService<ILicenseApi>();
             Assert.True(licenseApi.HttpClient.BaseAddress != null);
             
             var metricsApi = _hostUsingAddWithAClient.Services.GetRequiredService<IMetricsApi>();
             Assert.True(metricsApi.HttpClient.BaseAddress != null);
+            
+            var nightlyDatasetTestsApi = _hostUsingAddWithAClient.Services.GetRequiredService<INightlyDatasetTestsApi>();
+            Assert.True(nightlyDatasetTestsApi.HttpClient.BaseAddress != null);
             
             var projectGrantApi = _hostUsingAddWithAClient.Services.GetRequiredService<IProjectGrantApi>();
             Assert.True(projectGrantApi.HttpClient.BaseAddress != null);
@@ -484,6 +493,9 @@ namespace GatewayApiSdk.Test.Api
             var dataUseRegistersApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IDataUseRegistersApi>();
             Assert.True(dataUseRegistersApi.HttpClient.BaseAddress != null);
 
+            var datasetLinkCheckResultsApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IDatasetLinkCheckResultsApi>();
+            Assert.True(datasetLinkCheckResultsApi.HttpClient.BaseAddress != null);
+
             var datasetsApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IDatasetsApi>();
             Assert.True(datasetsApi.HttpClient.BaseAddress != null);
 
@@ -499,14 +511,14 @@ namespace GatewayApiSdk.Test.Api
             var integrationDataUseRegistersApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IIntegrationDataUseRegistersApi>();
             Assert.True(integrationDataUseRegistersApi.HttpClient.BaseAddress != null);
 
-            var integrationsDatasetsTestApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IIntegrationsDatasetsTestApi>();
-            Assert.True(integrationsDatasetsTestApi.HttpClient.BaseAddress != null);
-
             var licenseApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<ILicenseApi>();
             Assert.True(licenseApi.HttpClient.BaseAddress != null);
 
             var metricsApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IMetricsApi>();
             Assert.True(metricsApi.HttpClient.BaseAddress != null);
+
+            var nightlyDatasetTestsApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<INightlyDatasetTestsApi>();
+            Assert.True(nightlyDatasetTestsApi.HttpClient.BaseAddress != null);
 
             var projectGrantApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IProjectGrantApi>();
             Assert.True(projectGrantApi.HttpClient.BaseAddress != null);

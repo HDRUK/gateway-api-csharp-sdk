@@ -12,7 +12,7 @@
     <Description>A library generated from a OpenAPI doc</Description>
     <Copyright>No Copyright</Copyright>
     <RootNamespace>GatewayApiSdk</RootNamespace>
-    <Version>0.0.0-test6</Version>
+    <Version>2.48.0</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\GatewayApiSdk.xml</DocumentationFile>
     <RepositoryUrl>https://github.com/HDRUK/gateway-api-csharp-sdk.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>

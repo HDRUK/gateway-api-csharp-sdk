@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **RunTimeHour** | **int** |  | [optional] 
 **RunTimeMinute** | **string** |  | [optional] 
 **Enabled** | **bool** |  | [optional] 
+**EnabledAt** | **DateTime** |  | [optional] 
 **Counter** | **int** |  | [optional] 
 **CreatedAt** | **DateTime** |  | [optional] 
 **UpdatedAt** | **DateTime** |  | [optional] 

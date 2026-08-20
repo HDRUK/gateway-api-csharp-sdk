@@ -43,6 +43,7 @@ namespace GatewayApiSdk.Model
         /// <param name="runTimeHour">runTimeHour</param>
         /// <param name="runTimeMinute">runTimeMinute</param>
         /// <param name="enabled">enabled</param>
+        /// <param name="enabledAt">enabledAt</param>
         /// <param name="createdAt">createdAt</param>
         /// <param name="updatedAt">updatedAt</param>
         /// <param name="deletedAt">deletedAt</param>
@@ -51,7 +52,7 @@ namespace GatewayApiSdk.Model
         /// <param name="notifications">notifications</param>
         /// <param name="lastRunAt">lastRunAt</param>
         [JsonConstructor]
-        public GetFederationTeamId200ResponseDataInner(Option<int?> id = default, Option<string?> federationType = default, Option<string?> authType = default, Option<string?> authSecretKey = default, Option<string?> endpointBaseurl = default, Option<string?> endpointDatasets = default, Option<string?> endpointDataset = default, Option<int?> runTimeHour = default, Option<string?> runTimeMinute = default, Option<bool?> enabled = default, Option<DateTime?> createdAt = default, Option<DateTime?> updatedAt = default, Option<DateTime?> deletedAt = default, Option<bool?> tested = default, Option<bool?> isRunning = default, Option<List<Object>?> notifications = default, Option<DateTime?> lastRunAt = default)
+        public GetFederationTeamId200ResponseDataInner(Option<int?> id = default, Option<string?> federationType = default, Option<string?> authType = default, Option<string?> authSecretKey = default, Option<string?> endpointBaseurl = default, Option<string?> endpointDatasets = default, Option<string?> endpointDataset = default, Option<int?> runTimeHour = default, Option<string?> runTimeMinute = default, Option<bool?> enabled = default, Option<DateTime?> enabledAt = default, Option<DateTime?> createdAt = default, Option<DateTime?> updatedAt = default, Option<DateTime?> deletedAt = default, Option<bool?> tested = default, Option<bool?> isRunning = default, Option<List<Object>?> notifications = default, Option<DateTime?> lastRunAt = default)
         {
             IdOption = id;
             FederationTypeOption = federationType;
@@ -63,6 +64,7 @@ namespace GatewayApiSdk.Model
             RunTimeHourOption = runTimeHour;
             RunTimeMinuteOption = runTimeMinute;
             EnabledOption = enabled;
+            EnabledAtOption = enabledAt;
             CreatedAtOption = createdAt;
             UpdatedAtOption = updatedAt;
             DeletedAtOption = deletedAt;
@@ -216,6 +218,19 @@ namespace GatewayApiSdk.Model
         public bool? Enabled { get { return this.EnabledOption.Value; } set { this.EnabledOption = new(value); } }
 
         /// <summary>
+        /// Used to track the state of EnabledAt
+        /// </summary>
+        [JsonIgnore]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public Option<DateTime?> EnabledAtOption { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets EnabledAt
+        /// </summary>
+        [JsonPropertyName("enabled_at")]
+        public DateTime? EnabledAt { get { return this.EnabledAtOption.Value; } set { this.EnabledAtOption = new(value); } }
+
+        /// <summary>
         /// Used to track the state of CreatedAt
         /// </summary>
         [JsonIgnore]
@@ -327,6 +342,7 @@ namespace GatewayApiSdk.Model
             sb.Append("  RunTimeHour: ").Append(RunTimeHour).Append("\n");
             sb.Append("  RunTimeMinute: ").Append(RunTimeMinute).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  EnabledAt: ").Append(EnabledAt).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
             sb.Append("  DeletedAt: ").Append(DeletedAt).Append("\n");
@@ -363,6 +379,11 @@ namespace GatewayApiSdk.Model
         {
             OnCreated();
         }
+
+        /// <summary>
+        /// The format to use to serialize EnabledAt
+        /// </summary>
+        public string EnabledAtFormat { get; private set; } = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK";
 
         /// <summary>
         /// The format to use to serialize CreatedAt
@@ -411,6 +432,7 @@ namespace GatewayApiSdk.Model
             Option<int?> runTimeHour = default;
             Option<string?> runTimeMinute = default;
             Option<bool?> enabled = default;
+            Option<DateTime?> enabledAt = default;
             Option<DateTime?> createdAt = default;
             Option<DateTime?> updatedAt = default;
             Option<DateTime?> deletedAt = default;
@@ -463,6 +485,9 @@ namespace GatewayApiSdk.Model
                             break;
                         case "enabled":
                             enabled = new Option<bool?>(utf8JsonReader.TokenType == JsonTokenType.Null ? (bool?)null : utf8JsonReader.GetBoolean());
+                            break;
+                        case "enabled_at":
+                            enabledAt = new Option<DateTime?>(JsonSerializer.Deserialize<DateTime?>(ref utf8JsonReader, jsonSerializerOptions));
                             break;
                         case "created_at":
                             createdAt = new Option<DateTime?>(JsonSerializer.Deserialize<DateTime>(ref utf8JsonReader, jsonSerializerOptions));
@@ -539,7 +564,7 @@ namespace GatewayApiSdk.Model
             if (notifications.IsSet && notifications.Value == null)
                 throw new ArgumentNullException(nameof(notifications), "Property is not nullable for class GetFederationTeamId200ResponseDataInner.");
 
-            return new GetFederationTeamId200ResponseDataInner(id, federationType, authType, authSecretKey, endpointBaseurl, endpointDatasets, endpointDataset, runTimeHour, runTimeMinute, enabled, createdAt, updatedAt, deletedAt, tested, isRunning, notifications, lastRunAt);
+            return new GetFederationTeamId200ResponseDataInner(id, federationType, authType, authSecretKey, endpointBaseurl, endpointDatasets, endpointDataset, runTimeHour, runTimeMinute, enabled, enabledAt, createdAt, updatedAt, deletedAt, tested, isRunning, notifications, lastRunAt);
         }
 
         /// <summary>
@@ -619,6 +644,12 @@ namespace GatewayApiSdk.Model
 
             if (getFederationTeamId200ResponseDataInner.EnabledOption.IsSet)
                 writer.WriteBoolean("enabled", getFederationTeamId200ResponseDataInner.EnabledOption.Value!.Value);
+
+            if (getFederationTeamId200ResponseDataInner.EnabledAtOption.IsSet)
+                if (getFederationTeamId200ResponseDataInner.EnabledAtOption.Value != null)
+                    writer.WriteString("enabled_at", getFederationTeamId200ResponseDataInner.EnabledAtOption.Value!.Value.ToString(EnabledAtFormat));
+                else
+                    writer.WriteNull("enabled_at");
 
             if (getFederationTeamId200ResponseDataInner.CreatedAtOption.IsSet)
                 writer.WriteString("created_at", getFederationTeamId200ResponseDataInner.CreatedAtOption.Value!.Value.ToString(CreatedAtFormat));

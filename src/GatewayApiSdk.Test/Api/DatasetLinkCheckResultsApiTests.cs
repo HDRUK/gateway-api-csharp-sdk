@@ -39,27 +39,26 @@ using GatewayApiSdk.Model;
 namespace GatewayApiSdk.Test.Api
 {
     /// <summary>
-    ///  Class for testing IntegrationsDatasetsTestApi
+    ///  Class for testing DatasetLinkCheckResultsApi
     /// </summary>
-    public sealed class IntegrationsDatasetsTestApiTests : ApiTestsBase
+    public sealed class DatasetLinkCheckResultsApiTests : ApiTestsBase
     {
-        private readonly IIntegrationsDatasetsTestApi _instance;
+        private readonly IDatasetLinkCheckResultsApi _instance;
 
-        public IntegrationsDatasetsTestApiTests(): base(Array.Empty<string>())
+        public DatasetLinkCheckResultsApiTests(): base(Array.Empty<string>())
         {
-            _instance = _host.Services.GetRequiredService<IIntegrationsDatasetsTestApi>();
+            _instance = _host.Services.GetRequiredService<IDatasetLinkCheckResultsApi>();
         }
 
         /// <summary>
-        /// Test IntegrationsDatasetsTest
+        /// Test FetchDatasetLinkCheckResultsV2
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task IntegrationsDatasetsTestAsyncTest()
+        public async Task FetchDatasetLinkCheckResultsV2AsyncTest()
         {
-            DatasetsTestRequest datasetsTestRequest = default!;
-            var response = await _instance.IntegrationsDatasetsTestAsync(datasetsTestRequest);
-            var model = response.Created();
-            Assert.IsType<CreateDarIntegration201Response>(model);
+            var response = await _instance.FetchDatasetLinkCheckResultsV2Async();
+            var model = response.Ok();
+            Assert.IsType<FetchDatasetLinkCheckResultsV2200Response>(model);
         }
     }
 }

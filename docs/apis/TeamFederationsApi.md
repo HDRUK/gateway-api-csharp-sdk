@@ -6,7 +6,6 @@ All URIs are relative to *http://localhost*
 |--------|--------------|-------------|
 | [**CreateFederationTeam**](TeamFederationsApi.md#createfederationteam) | **POST** /api/v1/teams/{teamId}/federations | FederationController@store |
 | [**DeleteFederation**](TeamFederationsApi.md#deletefederation) | **DELETE** /api/v1/teams/{teamId}/federations/{federationId} | FederationController@destroy |
-| [**EditFederationTeam**](TeamFederationsApi.md#editfederationteam) | **PATCH** /api/v1/teams/{teamId}/federations/{federationId} | FederationController@edit |
 | [**GetFederationByFederationIdAndTeamId**](TeamFederationsApi.md#getfederationbyfederationidandteamid) | **GET** /api/v1/teams/{teamId}/federations/{federationId} | FederationController@show |
 | [**GetFederationHistory**](TeamFederationsApi.md#getfederationhistory) | **GET** /api/v1/teams/{teamId}/federations/{federationId}/history | FederationController@history |
 | [**GetFederationTeamId**](TeamFederationsApi.md#getfederationteamid) | **GET** /api/v1/teams/{teamId}/federations | FederationController@index |
@@ -88,46 +87,6 @@ Delete federation for team
 |-------------|-------------|------------------|
 | **200** | Success response |  -  |
 | **404** | Error response |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-<a id="editfederationteam"></a>
-# **EditFederationTeam**
-> CreateDarIntegration201Response EditFederationTeam (int teamId, int federationId, CreateFederationTeamRequest createFederationTeamRequest)
-
-FederationController@edit
-
-Edit federation for team
-
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **teamId** | **int** | team id |  |
-| **federationId** | **int** | federation id |  |
-| **createFederationTeamRequest** | [**CreateFederationTeamRequest**](CreateFederationTeamRequest.md) | Pass user credentials |  |
-
-### Return type
-
-[**CreateDarIntegration201Response**](CreateDarIntegration201Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **201** | Created |  -  |
 | **401** | Unauthorized |  -  |
 | **500** | Error |  -  |
 

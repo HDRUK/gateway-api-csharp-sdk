@@ -26,17 +26,17 @@ using GatewayApiSdk.Client;
 namespace GatewayApiSdk.Model
 {
     /// <summary>
-    /// FetchKeyMetricsV2200Response
+    /// FetchDatasetLinkCheckResultsV2200Response
     /// </summary>
-    public partial class FetchKeyMetricsV2200Response : IValidatableObject
+    public partial class FetchDatasetLinkCheckResultsV2200Response : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FetchKeyMetricsV2200Response" /> class.
+        /// Initializes a new instance of the <see cref="FetchDatasetLinkCheckResultsV2200Response" /> class.
         /// </summary>
         /// <param name="message">message</param>
         /// <param name="data">data</param>
         [JsonConstructor]
-        public FetchKeyMetricsV2200Response(Option<string?> message = default, Option<List<List<Object>>?> data = default)
+        public FetchDatasetLinkCheckResultsV2200Response(Option<string?> message = default, Option<List<List<Object>>?> data = default)
         {
             MessageOption = message;
             DataOption = data;
@@ -80,7 +80,7 @@ namespace GatewayApiSdk.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class FetchKeyMetricsV2200Response {\n");
+            sb.Append("class FetchDatasetLinkCheckResultsV2200Response {\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
@@ -99,29 +99,29 @@ namespace GatewayApiSdk.Model
     }
 
     /// <summary>
-    /// A Json converter for type <see cref="FetchKeyMetricsV2200Response" />
+    /// A Json converter for type <see cref="FetchDatasetLinkCheckResultsV2200Response" />
     /// </summary>
-    public partial class FetchKeyMetricsV2200ResponseJsonConverter : JsonConverter<FetchKeyMetricsV2200Response>
+    public partial class FetchDatasetLinkCheckResultsV2200ResponseJsonConverter : JsonConverter<FetchDatasetLinkCheckResultsV2200Response>
     {
         partial void OnCreated();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="FetchKeyMetricsV2200ResponseJsonConverter" /> class.
+        /// Initializes a new instance of the <see cref="FetchDatasetLinkCheckResultsV2200ResponseJsonConverter" /> class.
         /// </summary>
-        public FetchKeyMetricsV2200ResponseJsonConverter()
+        public FetchDatasetLinkCheckResultsV2200ResponseJsonConverter()
         {
             OnCreated();
         }
 
         /// <summary>
-        /// Deserializes json to <see cref="FetchKeyMetricsV2200Response" />
+        /// Deserializes json to <see cref="FetchDatasetLinkCheckResultsV2200Response" />
         /// </summary>
         /// <param name="utf8JsonReader"></param>
         /// <param name="typeToConvert"></param>
         /// <param name="jsonSerializerOptions"></param>
         /// <returns></returns>
         /// <exception cref="JsonException"></exception>
-        public override FetchKeyMetricsV2200Response Read(ref Utf8JsonReader utf8JsonReader, Type typeToConvert, JsonSerializerOptions jsonSerializerOptions)
+        public override FetchDatasetLinkCheckResultsV2200Response Read(ref Utf8JsonReader utf8JsonReader, Type typeToConvert, JsonSerializerOptions jsonSerializerOptions)
         {
             int currentDepth = utf8JsonReader.CurrentDepth;
 
@@ -161,51 +161,51 @@ namespace GatewayApiSdk.Model
             }
 
             if (message.IsSet && message.Value == null)
-                throw new ArgumentNullException(nameof(message), "Property is not nullable for class FetchKeyMetricsV2200Response.");
+                throw new ArgumentNullException(nameof(message), "Property is not nullable for class FetchDatasetLinkCheckResultsV2200Response.");
 
             if (data.IsSet && data.Value == null)
-                throw new ArgumentNullException(nameof(data), "Property is not nullable for class FetchKeyMetricsV2200Response.");
+                throw new ArgumentNullException(nameof(data), "Property is not nullable for class FetchDatasetLinkCheckResultsV2200Response.");
 
-            return new FetchKeyMetricsV2200Response(message, data);
+            return new FetchDatasetLinkCheckResultsV2200Response(message, data);
         }
 
         /// <summary>
-        /// Serializes a <see cref="FetchKeyMetricsV2200Response" />
+        /// Serializes a <see cref="FetchDatasetLinkCheckResultsV2200Response" />
         /// </summary>
         /// <param name="writer"></param>
-        /// <param name="fetchKeyMetricsV2200Response"></param>
+        /// <param name="fetchDatasetLinkCheckResultsV2200Response"></param>
         /// <param name="jsonSerializerOptions"></param>
         /// <exception cref="NotImplementedException"></exception>
-        public override void Write(Utf8JsonWriter writer, FetchKeyMetricsV2200Response fetchKeyMetricsV2200Response, JsonSerializerOptions jsonSerializerOptions)
+        public override void Write(Utf8JsonWriter writer, FetchDatasetLinkCheckResultsV2200Response fetchDatasetLinkCheckResultsV2200Response, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
 
-            WriteProperties(writer, fetchKeyMetricsV2200Response, jsonSerializerOptions);
+            WriteProperties(writer, fetchDatasetLinkCheckResultsV2200Response, jsonSerializerOptions);
             writer.WriteEndObject();
         }
 
         /// <summary>
-        /// Serializes the properties of <see cref="FetchKeyMetricsV2200Response" />
+        /// Serializes the properties of <see cref="FetchDatasetLinkCheckResultsV2200Response" />
         /// </summary>
         /// <param name="writer"></param>
-        /// <param name="fetchKeyMetricsV2200Response"></param>
+        /// <param name="fetchDatasetLinkCheckResultsV2200Response"></param>
         /// <param name="jsonSerializerOptions"></param>
         /// <exception cref="NotImplementedException"></exception>
-        public void WriteProperties(Utf8JsonWriter writer, FetchKeyMetricsV2200Response fetchKeyMetricsV2200Response, JsonSerializerOptions jsonSerializerOptions)
+        public void WriteProperties(Utf8JsonWriter writer, FetchDatasetLinkCheckResultsV2200Response fetchDatasetLinkCheckResultsV2200Response, JsonSerializerOptions jsonSerializerOptions)
         {
-            if (fetchKeyMetricsV2200Response.MessageOption.IsSet && fetchKeyMetricsV2200Response.Message == null)
-                throw new ArgumentNullException(nameof(fetchKeyMetricsV2200Response.Message), "Property is required for class FetchKeyMetricsV2200Response.");
+            if (fetchDatasetLinkCheckResultsV2200Response.MessageOption.IsSet && fetchDatasetLinkCheckResultsV2200Response.Message == null)
+                throw new ArgumentNullException(nameof(fetchDatasetLinkCheckResultsV2200Response.Message), "Property is required for class FetchDatasetLinkCheckResultsV2200Response.");
 
-            if (fetchKeyMetricsV2200Response.DataOption.IsSet && fetchKeyMetricsV2200Response.Data == null)
-                throw new ArgumentNullException(nameof(fetchKeyMetricsV2200Response.Data), "Property is required for class FetchKeyMetricsV2200Response.");
+            if (fetchDatasetLinkCheckResultsV2200Response.DataOption.IsSet && fetchDatasetLinkCheckResultsV2200Response.Data == null)
+                throw new ArgumentNullException(nameof(fetchDatasetLinkCheckResultsV2200Response.Data), "Property is required for class FetchDatasetLinkCheckResultsV2200Response.");
 
-            if (fetchKeyMetricsV2200Response.MessageOption.IsSet)
-                writer.WriteString("message", fetchKeyMetricsV2200Response.Message);
+            if (fetchDatasetLinkCheckResultsV2200Response.MessageOption.IsSet)
+                writer.WriteString("message", fetchDatasetLinkCheckResultsV2200Response.Message);
 
-            if (fetchKeyMetricsV2200Response.DataOption.IsSet)
+            if (fetchDatasetLinkCheckResultsV2200Response.DataOption.IsSet)
             {
                 writer.WritePropertyName("data");
-                JsonSerializer.Serialize(writer, fetchKeyMetricsV2200Response.Data, jsonSerializerOptions);
+                JsonSerializer.Serialize(writer, fetchDatasetLinkCheckResultsV2200Response.Data, jsonSerializerOptions);
             }
         }
     }

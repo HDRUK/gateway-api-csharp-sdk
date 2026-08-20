@@ -51,6 +51,17 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
+        /// Test CreateProjectGrant
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task CreateProjectGrantAsyncTest()
+        {
+            var response = await _instance.CreateProjectGrantAsync();
+            var model = response.Created();
+            Assert.IsType<CreateProjectGrant201Response>(model);
+        }
+
+        /// <summary>
         /// Test FetchAllProjectGrants
         /// </summary>
         [Fact (Skip = "not implemented")]

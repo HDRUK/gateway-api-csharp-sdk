@@ -4,8 +4,41 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
+| [**CreateProjectGrant**](ProjectGrantApi.md#createprojectgrant) | **POST** /api/v1/project_grants | ProjectGrantController@store |
 | [**FetchAllProjectGrants**](ProjectGrantApi.md#fetchallprojectgrants) | **GET** /api/v1/project_grants | ProjectGrantController@index |
 | [**FetchProjectGrant**](ProjectGrantApi.md#fetchprojectgrant) | **GET** /api/v1/project_grants/{id} | ProjectGrantController@show |
+
+<a id="createprojectgrant"></a>
+# **CreateProjectGrant**
+> CreateProjectGrant201Response CreateProjectGrant ()
+
+ProjectGrantController@store
+
+Create a project grant (and initial version)
+
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**CreateProjectGrant201Response**](CreateProjectGrant201Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 <a id="fetchallprojectgrants"></a>
 # **FetchAllProjectGrants**

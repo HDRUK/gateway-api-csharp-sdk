@@ -144,6 +144,15 @@ namespace GatewayApiSdk.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'EnabledAt'
+        /// </summary>
+        [Fact]
+        public void EnabledAtTest()
+        {
+            // TODO unit test for the property 'EnabledAt'
+        }
+
+        /// <summary>
         /// Test the property 'CreatedAt'
         /// </summary>
         [Fact]

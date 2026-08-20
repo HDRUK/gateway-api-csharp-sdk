@@ -31,39 +31,39 @@ namespace GatewayApiSdk.Api
     /// Represents a collection of functions to interact with the API endpoints
     /// This class is registered as transient.
     /// </summary>
-    public interface IMetricsApi : IApi
+    public interface IDatasetLinkCheckResultsApi : IApi
     {
         /// <summary>
         /// The class containing the events
         /// </summary>
-        MetricsApiEvents Events { get; }
+        DatasetLinkCheckResultsApiEvents Events { get; }
 
         /// <summary>
-        /// KeyMetricController@index
+        /// DatasetLinkCheckResultController@index
         /// </summary>
         /// <remarks>
-        /// Get key metrics
+        /// Get the confirmed dead links (HTTP 404, verified across multiple checks) found in active dataset metadata by the nightly link check
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchKeyMetricsV2ApiResponse"/>&gt;</returns>
-        Task<IFetchKeyMetricsV2ApiResponse> FetchKeyMetricsV2Async(System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDatasetLinkCheckResultsV2ApiResponse"/>&gt;</returns>
+        Task<IFetchDatasetLinkCheckResultsV2ApiResponse> FetchDatasetLinkCheckResultsV2Async(System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// KeyMetricController@index
+        /// DatasetLinkCheckResultController@index
         /// </summary>
         /// <remarks>
-        /// Get key metrics
+        /// Get the confirmed dead links (HTTP 404, verified across multiple checks) found in active dataset metadata by the nightly link check
         /// </remarks>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchKeyMetricsV2ApiResponse"/>?&gt;</returns>
-        Task<IFetchKeyMetricsV2ApiResponse?> FetchKeyMetricsV2OrDefaultAsync(System.Threading.CancellationToken cancellationToken = default);
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDatasetLinkCheckResultsV2ApiResponse"/>?&gt;</returns>
+        Task<IFetchDatasetLinkCheckResultsV2ApiResponse?> FetchDatasetLinkCheckResultsV2OrDefaultAsync(System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
-    /// The <see cref="IFetchKeyMetricsV2ApiResponse"/>
+    /// The <see cref="IFetchDatasetLinkCheckResultsV2ApiResponse"/>
     /// </summary>
-    public interface IFetchKeyMetricsV2ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchDatasetLinkCheckResultsV2200Response?>
+    public interface IFetchDatasetLinkCheckResultsV2ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.FetchDatasetLinkCheckResultsV2200Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
@@ -75,40 +75,40 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class MetricsApiEvents
+    public class DatasetLinkCheckResultsApiEvents
     {
         /// <summary>
         /// The event raised after the server response
         /// </summary>
-        public event EventHandler<ApiResponseEventArgs>? OnFetchKeyMetricsV2;
+        public event EventHandler<ApiResponseEventArgs>? OnFetchDatasetLinkCheckResultsV2;
 
         /// <summary>
         /// The event raised after an error querying the server
         /// </summary>
-        public event EventHandler<ExceptionEventArgs>? OnErrorFetchKeyMetricsV2;
+        public event EventHandler<ExceptionEventArgs>? OnErrorFetchDatasetLinkCheckResultsV2;
 
-        internal void ExecuteOnFetchKeyMetricsV2(MetricsApi.FetchKeyMetricsV2ApiResponse apiResponse)
+        internal void ExecuteOnFetchDatasetLinkCheckResultsV2(DatasetLinkCheckResultsApi.FetchDatasetLinkCheckResultsV2ApiResponse apiResponse)
         {
-            OnFetchKeyMetricsV2?.Invoke(this, new ApiResponseEventArgs(apiResponse));
+            OnFetchDatasetLinkCheckResultsV2?.Invoke(this, new ApiResponseEventArgs(apiResponse));
         }
 
-        internal void ExecuteOnErrorFetchKeyMetricsV2(Exception exception)
+        internal void ExecuteOnErrorFetchDatasetLinkCheckResultsV2(Exception exception)
         {
-            OnErrorFetchKeyMetricsV2?.Invoke(this, new ExceptionEventArgs(exception));
+            OnErrorFetchDatasetLinkCheckResultsV2?.Invoke(this, new ExceptionEventArgs(exception));
         }
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public sealed partial class MetricsApi : IMetricsApi
+    public sealed partial class DatasetLinkCheckResultsApi : IDatasetLinkCheckResultsApi
     {
         private JsonSerializerOptions _jsonSerializerOptions;
 
         /// <summary>
         /// The logger
         /// </summary>
-        public ILogger<MetricsApi> Logger { get; }
+        public ILogger<DatasetLinkCheckResultsApi> Logger { get; }
 
         /// <summary>
         /// The HttpClient
@@ -118,7 +118,7 @@ namespace GatewayApiSdk.Api
         /// <summary>
         /// The class containing the events
         /// </summary>
-        public MetricsApiEvents Events { get; }
+        public DatasetLinkCheckResultsApiEvents Events { get; }
 
         /// <summary>
         /// A token provider of type <see cref="BearerToken"/>
@@ -126,16 +126,16 @@ namespace GatewayApiSdk.Api
         public TokenProvider<BearerToken> BearerTokenProvider { get; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MetricsApi"/> class.
+        /// Initializes a new instance of the <see cref="DatasetLinkCheckResultsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public MetricsApi(ILogger<MetricsApi> logger, HttpClient httpClient, JsonSerializerOptionsProvider jsonSerializerOptionsProvider, MetricsApiEvents metricsApiEvents,
+        public DatasetLinkCheckResultsApi(ILogger<DatasetLinkCheckResultsApi> logger, HttpClient httpClient, JsonSerializerOptionsProvider jsonSerializerOptionsProvider, DatasetLinkCheckResultsApiEvents datasetLinkCheckResultsApiEvents,
             TokenProvider<BearerToken> bearerTokenProvider)
         {
             _jsonSerializerOptions = jsonSerializerOptionsProvider.Options;
             Logger = logger;
             HttpClient = httpClient;
-            Events = metricsApiEvents;
+            Events = datasetLinkCheckResultsApiEvents;
             BearerTokenProvider = bearerTokenProvider;
         }
 
@@ -143,10 +143,10 @@ namespace GatewayApiSdk.Api
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        private void AfterFetchKeyMetricsV2DefaultImplementation(IFetchKeyMetricsV2ApiResponse apiResponseLocalVar)
+        private void AfterFetchDatasetLinkCheckResultsV2DefaultImplementation(IFetchDatasetLinkCheckResultsV2ApiResponse apiResponseLocalVar)
         {
             bool suppressDefaultLog = false;
-            AfterFetchKeyMetricsV2(ref suppressDefaultLog, apiResponseLocalVar);
+            AfterFetchDatasetLinkCheckResultsV2(ref suppressDefaultLog, apiResponseLocalVar);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -156,7 +156,7 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        partial void AfterFetchKeyMetricsV2(ref bool suppressDefaultLog, IFetchKeyMetricsV2ApiResponse apiResponseLocalVar);
+        partial void AfterFetchDatasetLinkCheckResultsV2(ref bool suppressDefaultLog, IFetchDatasetLinkCheckResultsV2ApiResponse apiResponseLocalVar);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -164,10 +164,10 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        private void OnErrorFetchKeyMetricsV2DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar)
+        private void OnErrorFetchDatasetLinkCheckResultsV2DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorFetchKeyMetricsV2(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar);
+            OnErrorFetchDatasetLinkCheckResultsV2(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -179,18 +179,18 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        partial void OnErrorFetchKeyMetricsV2(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar);
+        partial void OnErrorFetchDatasetLinkCheckResultsV2(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar);
 
         /// <summary>
-        /// KeyMetricController@index Get key metrics
+        /// DatasetLinkCheckResultController@index Get the confirmed dead links (HTTP 404, verified across multiple checks) found in active dataset metadata by the nightly link check
         /// </summary>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchKeyMetricsV2ApiResponse"/>&gt;</returns>
-        public async Task<IFetchKeyMetricsV2ApiResponse?> FetchKeyMetricsV2OrDefaultAsync(System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDatasetLinkCheckResultsV2ApiResponse"/>&gt;</returns>
+        public async Task<IFetchDatasetLinkCheckResultsV2ApiResponse?> FetchDatasetLinkCheckResultsV2OrDefaultAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await FetchKeyMetricsV2Async(cancellationToken).ConfigureAwait(false);
+                return await FetchDatasetLinkCheckResultsV2Async(cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -199,12 +199,12 @@ namespace GatewayApiSdk.Api
         }
 
         /// <summary>
-        /// KeyMetricController@index Get key metrics
+        /// DatasetLinkCheckResultController@index Get the confirmed dead links (HTTP 404, verified across multiple checks) found in active dataset metadata by the nightly link check
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="IFetchKeyMetricsV2ApiResponse"/>&gt;</returns>
-        public async Task<IFetchKeyMetricsV2ApiResponse> FetchKeyMetricsV2Async(System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="IFetchDatasetLinkCheckResultsV2ApiResponse"/>&gt;</returns>
+        public async Task<IFetchDatasetLinkCheckResultsV2ApiResponse> FetchDatasetLinkCheckResultsV2Async(System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
@@ -216,8 +216,8 @@ namespace GatewayApiSdk.Api
                     uriBuilderLocalVar.Port = HttpClient.BaseAddress.Port;
                     uriBuilderLocalVar.Scheme = HttpClient.BaseAddress.Scheme;
                     uriBuilderLocalVar.Path = HttpClient.BaseAddress.AbsolutePath == "/"
-                        ? "/api/v2/metrics"
-                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/metrics");
+                        ? "/api/v2/dataset_link_check_results"
+                        : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/dataset_link_check_results");
 
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
 
@@ -236,20 +236,20 @@ namespace GatewayApiSdk.Api
 
                     using (HttpResponseMessage httpResponseMessageLocalVar = await HttpClient.SendAsync(httpRequestMessageLocalVar, cancellationToken).ConfigureAwait(false))
                     {
-                        FetchKeyMetricsV2ApiResponse apiResponseLocalVar;
+                        FetchDatasetLinkCheckResultsV2ApiResponse apiResponseLocalVar;
 
                         switch ((int)httpResponseMessageLocalVar.StatusCode) {
                             default: {
                                 string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/metrics", requestedAtLocalVar, _jsonSerializerOptions);
+                                apiResponseLocalVar = new(Logger, httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/api/v2/dataset_link_check_results", requestedAtLocalVar, _jsonSerializerOptions);
 
                                 break;
                             }
                         }
 
-                        AfterFetchKeyMetricsV2DefaultImplementation(apiResponseLocalVar);
+                        AfterFetchDatasetLinkCheckResultsV2DefaultImplementation(apiResponseLocalVar);
 
-                        Events.ExecuteOnFetchKeyMetricsV2(apiResponseLocalVar);
+                        Events.ExecuteOnFetchDatasetLinkCheckResultsV2(apiResponseLocalVar);
 
                         return apiResponseLocalVar;
                     }
@@ -257,24 +257,24 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorFetchKeyMetricsV2DefaultImplementation(e, "/api/v2/metrics", uriBuilderLocalVar.Path);
-                Events.ExecuteOnErrorFetchKeyMetricsV2(e);
+                OnErrorFetchDatasetLinkCheckResultsV2DefaultImplementation(e, "/api/v2/dataset_link_check_results", uriBuilderLocalVar.Path);
+                Events.ExecuteOnErrorFetchDatasetLinkCheckResultsV2(e);
                 throw;
             }
         }
 
         /// <summary>
-        /// The <see cref="FetchKeyMetricsV2ApiResponse"/>
+        /// The <see cref="FetchDatasetLinkCheckResultsV2ApiResponse"/>
         /// </summary>
-        public partial class FetchKeyMetricsV2ApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchKeyMetricsV2ApiResponse
+        public partial class FetchDatasetLinkCheckResultsV2ApiResponse : GatewayApiSdk.Client.ApiResponse, IFetchDatasetLinkCheckResultsV2ApiResponse
         {
             /// <summary>
             /// The logger
             /// </summary>
-            public ILogger<MetricsApi> Logger { get; }
+            public ILogger<DatasetLinkCheckResultsApi> Logger { get; }
 
             /// <summary>
-            /// The <see cref="FetchKeyMetricsV2ApiResponse"/>
+            /// The <see cref="FetchDatasetLinkCheckResultsV2ApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -283,14 +283,14 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public FetchKeyMetricsV2ApiResponse(ILogger<MetricsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
+            public FetchDatasetLinkCheckResultsV2ApiResponse(ILogger<DatasetLinkCheckResultsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, string rawContent, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, rawContent, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);
             }
 
             /// <summary>
-            /// The <see cref="FetchKeyMetricsV2ApiResponse"/>
+            /// The <see cref="FetchDatasetLinkCheckResultsV2ApiResponse"/>
             /// </summary>
             /// <param name="logger"></param>
             /// <param name="httpRequestMessage"></param>
@@ -299,7 +299,7 @@ namespace GatewayApiSdk.Api
             /// <param name="path"></param>
             /// <param name="requestedAt"></param>
             /// <param name="jsonSerializerOptions"></param>
-            public FetchKeyMetricsV2ApiResponse(ILogger<MetricsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
+            public FetchDatasetLinkCheckResultsV2ApiResponse(ILogger<DatasetLinkCheckResultsApi> logger, System.Net.Http.HttpRequestMessage httpRequestMessage, System.Net.Http.HttpResponseMessage httpResponseMessage, System.IO.Stream contentStream, string path, DateTime requestedAt, System.Text.Json.JsonSerializerOptions jsonSerializerOptions) : base(httpRequestMessage, httpResponseMessage, contentStream, path, requestedAt, jsonSerializerOptions)
             {
                 Logger = logger;
                 OnCreated(httpRequestMessage, httpResponseMessage);

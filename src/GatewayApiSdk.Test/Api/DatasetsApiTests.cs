@@ -76,20 +76,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test CreateDatasetsIntegrations
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task CreateDatasetsIntegrationsAsyncTest()
-        {
-            DatasetsTestRequest datasetsTestRequest = default!;
-            Client.Option<string> inputSchema = default!;
-            Client.Option<string> inputVersion = default!;
-            var response = await _instance.CreateDatasetsIntegrationsAsync(datasetsTestRequest, inputSchema, inputVersion);
-            var model = response.Created();
-            Assert.IsType<CreateDarIntegration201Response>(model);
-        }
-
-        /// <summary>
         /// Test CreateDatasetsV2
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -122,18 +108,6 @@ namespace GatewayApiSdk.Test.Api
         {
             int id = default!;
             var response = await _instance.DeleteDatasetsAsync(id);
-            var model = response.NotFound();
-            Assert.IsType<UpdateApplications404Response>(model);
-        }
-
-        /// <summary>
-        /// Test DeleteDatasetsIntegrations
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task DeleteDatasetsIntegrationsAsyncTest()
-        {
-            int id = default!;
-            var response = await _instance.DeleteDatasetsIntegrationsAsync(id);
             var model = response.NotFound();
             Assert.IsType<UpdateApplications404Response>(model);
         }
@@ -243,22 +217,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test FetchAllDatasetsIntegrations
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchAllDatasetsIntegrationsAsyncTest()
-        {
-            int teamId = default!;
-            Client.Option<string> pid = default!;
-            Client.Option<string> sort = default!;
-            Client.Option<string> title = default!;
-            Client.Option<string> status = default!;
-            var response = await _instance.FetchAllDatasetsIntegrationsAsync(teamId, pid, sort, title, status);
-            var model = response.Ok();
-            Assert.IsType<FetchAllDatasets200Response>(model);
-        }
-
-        /// <summary>
         /// Test FetchAllDatasetsV2
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -289,20 +247,6 @@ namespace GatewayApiSdk.Test.Api
         }
 
         /// <summary>
-        /// Test FetchDatasetsIntegrations
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task FetchDatasetsIntegrationsAsyncTest()
-        {
-            int id = default!;
-            Client.Option<string> schemaModel = default!;
-            Client.Option<string> schemaVersion = default!;
-            var response = await _instance.FetchDatasetsIntegrationsAsync(id, schemaModel, schemaVersion);
-            var model = response.Ok();
-            Assert.IsType<FetchDatasets200Response>(model);
-        }
-
-        /// <summary>
         /// Test FetchDatasetsV2
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -326,19 +270,6 @@ namespace GatewayApiSdk.Test.Api
             int id = default!;
             Client.Option<string> unarchive = default!;
             var response = await _instance.PatchDatasetsAsync(id, unarchive);
-            var model = response.Ok();
-            Assert.IsType<DeleteApplications200Response>(model);
-        }
-
-        /// <summary>
-        /// Test PatchDatasetsIntegrations
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task PatchDatasetsIntegrationsAsyncTest()
-        {
-            int id = default!;
-            Client.Option<string> unarchive = default!;
-            var response = await _instance.PatchDatasetsIntegrationsAsync(id, unarchive);
             var model = response.Ok();
             Assert.IsType<DeleteApplications200Response>(model);
         }
@@ -381,21 +312,6 @@ namespace GatewayApiSdk.Test.Api
             var response = await _instance.UpdateDatasetsAsync(id, updateDatasetsRequest);
             var model = response.Created();
             Assert.IsType<CreateDarIntegration201Response>(model);
-        }
-
-        /// <summary>
-        /// Test UpdateDatasetsIntegrations
-        /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task UpdateDatasetsIntegrationsAsyncTest()
-        {
-            int id = default!;
-            UpdateDatasetsRequest updateDatasetsRequest = default!;
-            Client.Option<string> inputSchema = default!;
-            Client.Option<string> inputVersion = default!;
-            var response = await _instance.UpdateDatasetsIntegrationsAsync(id, updateDatasetsRequest, inputSchema, inputVersion);
-            var model = response.Created();
-            Assert.IsType<FetchDatasets200Response>(model);
         }
 
         /// <summary>
