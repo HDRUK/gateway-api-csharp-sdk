@@ -36,20 +36,14 @@ namespace GatewayApiSdk.Model
         /// <param name="teamId">teamId</param>
         /// <param name="userId">userId</param>
         /// <param name="createOrigin">createOrigin</param>
-        /// <param name="mongoObjectId">mongoObjectId</param>
-        /// <param name="mongoId">mongoId</param>
-        /// <param name="mongoPid">mongoPid</param>
         /// <param name="datasetid">datasetid</param>
         /// <param name="metadata">metadata</param>
         [JsonConstructor]
-        public CreateDatasetsRequest(Option<int?> teamId = default, Option<int?> userId = default, Option<string?> createOrigin = default, Option<string?> mongoObjectId = default, Option<string?> mongoId = default, Option<string?> mongoPid = default, Option<string?> datasetid = default, Option<Object?> metadata = default)
+        public CreateDatasetsRequest(Option<int?> teamId = default, Option<int?> userId = default, Option<string?> createOrigin = default, Option<string?> datasetid = default, Option<Object?> metadata = default)
         {
             TeamIdOption = teamId;
             UserIdOption = userId;
             CreateOriginOption = createOrigin;
-            MongoObjectIdOption = mongoObjectId;
-            MongoIdOption = mongoId;
-            MongoPidOption = mongoPid;
             DatasetidOption = datasetid;
             MetadataOption = metadata;
             OnCreated();
@@ -100,48 +94,6 @@ namespace GatewayApiSdk.Model
         public string? CreateOrigin { get { return this.CreateOriginOption.Value; } set { this.CreateOriginOption = new(value); } }
 
         /// <summary>
-        /// Used to track the state of MongoObjectId
-        /// </summary>
-        [JsonIgnore]
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Option<string?> MongoObjectIdOption { get; private set; }
-
-        /// <summary>
-        /// Gets or Sets MongoObjectId
-        /// </summary>
-        /* <example>abc123</example> */
-        [JsonPropertyName("mongo_object_id")]
-        public string? MongoObjectId { get { return this.MongoObjectIdOption.Value; } set { this.MongoObjectIdOption = new(value); } }
-
-        /// <summary>
-        /// Used to track the state of MongoId
-        /// </summary>
-        [JsonIgnore]
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Option<string?> MongoIdOption { get; private set; }
-
-        /// <summary>
-        /// Gets or Sets MongoId
-        /// </summary>
-        /* <example>456</example> */
-        [JsonPropertyName("mongo_id")]
-        public string? MongoId { get { return this.MongoIdOption.Value; } set { this.MongoIdOption = new(value); } }
-
-        /// <summary>
-        /// Used to track the state of MongoPid
-        /// </summary>
-        [JsonIgnore]
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Option<string?> MongoPidOption { get; private set; }
-
-        /// <summary>
-        /// Gets or Sets MongoPid
-        /// </summary>
-        /* <example>def789</example> */
-        [JsonPropertyName("mongo_pid")]
-        public string? MongoPid { get { return this.MongoPidOption.Value; } set { this.MongoPidOption = new(value); } }
-
-        /// <summary>
         /// Used to track the state of Datasetid
         /// </summary>
         [JsonIgnore]
@@ -179,9 +131,6 @@ namespace GatewayApiSdk.Model
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  CreateOrigin: ").Append(CreateOrigin).Append("\n");
-            sb.Append("  MongoObjectId: ").Append(MongoObjectId).Append("\n");
-            sb.Append("  MongoId: ").Append(MongoId).Append("\n");
-            sb.Append("  MongoPid: ").Append(MongoPid).Append("\n");
             sb.Append("  Datasetid: ").Append(Datasetid).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
@@ -234,9 +183,6 @@ namespace GatewayApiSdk.Model
             Option<int?> teamId = default;
             Option<int?> userId = default;
             Option<string?> createOrigin = default;
-            Option<string?> mongoObjectId = default;
-            Option<string?> mongoId = default;
-            Option<string?> mongoPid = default;
             Option<string?> datasetid = default;
             Option<Object?> metadata = default;
 
@@ -264,15 +210,6 @@ namespace GatewayApiSdk.Model
                         case "create_origin":
                             createOrigin = new Option<string?>(utf8JsonReader.GetString()!);
                             break;
-                        case "mongo_object_id":
-                            mongoObjectId = new Option<string?>(utf8JsonReader.GetString()!);
-                            break;
-                        case "mongo_id":
-                            mongoId = new Option<string?>(utf8JsonReader.GetString()!);
-                            break;
-                        case "mongo_pid":
-                            mongoPid = new Option<string?>(utf8JsonReader.GetString()!);
-                            break;
                         case "datasetid":
                             datasetid = new Option<string?>(utf8JsonReader.GetString()!);
                             break;
@@ -294,22 +231,13 @@ namespace GatewayApiSdk.Model
             if (createOrigin.IsSet && createOrigin.Value == null)
                 throw new ArgumentNullException(nameof(createOrigin), "Property is not nullable for class CreateDatasetsRequest.");
 
-            if (mongoObjectId.IsSet && mongoObjectId.Value == null)
-                throw new ArgumentNullException(nameof(mongoObjectId), "Property is not nullable for class CreateDatasetsRequest.");
-
-            if (mongoId.IsSet && mongoId.Value == null)
-                throw new ArgumentNullException(nameof(mongoId), "Property is not nullable for class CreateDatasetsRequest.");
-
-            if (mongoPid.IsSet && mongoPid.Value == null)
-                throw new ArgumentNullException(nameof(mongoPid), "Property is not nullable for class CreateDatasetsRequest.");
-
             if (datasetid.IsSet && datasetid.Value == null)
                 throw new ArgumentNullException(nameof(datasetid), "Property is not nullable for class CreateDatasetsRequest.");
 
             if (metadata.IsSet && metadata.Value == null)
                 throw new ArgumentNullException(nameof(metadata), "Property is not nullable for class CreateDatasetsRequest.");
 
-            return new CreateDatasetsRequest(teamId, userId, createOrigin, mongoObjectId, mongoId, mongoPid, datasetid, metadata);
+            return new CreateDatasetsRequest(teamId, userId, createOrigin, datasetid, metadata);
         }
 
         /// <summary>
@@ -339,15 +267,6 @@ namespace GatewayApiSdk.Model
             if (createDatasetsRequest.CreateOriginOption.IsSet && createDatasetsRequest.CreateOrigin == null)
                 throw new ArgumentNullException(nameof(createDatasetsRequest.CreateOrigin), "Property is required for class CreateDatasetsRequest.");
 
-            if (createDatasetsRequest.MongoObjectIdOption.IsSet && createDatasetsRequest.MongoObjectId == null)
-                throw new ArgumentNullException(nameof(createDatasetsRequest.MongoObjectId), "Property is required for class CreateDatasetsRequest.");
-
-            if (createDatasetsRequest.MongoIdOption.IsSet && createDatasetsRequest.MongoId == null)
-                throw new ArgumentNullException(nameof(createDatasetsRequest.MongoId), "Property is required for class CreateDatasetsRequest.");
-
-            if (createDatasetsRequest.MongoPidOption.IsSet && createDatasetsRequest.MongoPid == null)
-                throw new ArgumentNullException(nameof(createDatasetsRequest.MongoPid), "Property is required for class CreateDatasetsRequest.");
-
             if (createDatasetsRequest.DatasetidOption.IsSet && createDatasetsRequest.Datasetid == null)
                 throw new ArgumentNullException(nameof(createDatasetsRequest.Datasetid), "Property is required for class CreateDatasetsRequest.");
 
@@ -362,15 +281,6 @@ namespace GatewayApiSdk.Model
 
             if (createDatasetsRequest.CreateOriginOption.IsSet)
                 writer.WriteString("create_origin", createDatasetsRequest.CreateOrigin);
-
-            if (createDatasetsRequest.MongoObjectIdOption.IsSet)
-                writer.WriteString("mongo_object_id", createDatasetsRequest.MongoObjectId);
-
-            if (createDatasetsRequest.MongoIdOption.IsSet)
-                writer.WriteString("mongo_id", createDatasetsRequest.MongoId);
-
-            if (createDatasetsRequest.MongoPidOption.IsSet)
-                writer.WriteString("mongo_pid", createDatasetsRequest.MongoPid);
 
             if (createDatasetsRequest.DatasetidOption.IsSet)
                 writer.WriteString("datasetid", createDatasetsRequest.Datasetid);

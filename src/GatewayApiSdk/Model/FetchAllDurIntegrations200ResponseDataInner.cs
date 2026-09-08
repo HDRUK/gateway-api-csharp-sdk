@@ -71,12 +71,9 @@ namespace GatewayApiSdk.Model
         /// <param name="requestCategoryType">requestCategoryType</param>
         /// <param name="requestFrequency">requestFrequency</param>
         /// <param name="accessType">accessType</param>
-        /// <param name="mongoObjectDarId">mongoObjectDarId</param>
         /// <param name="enabled">enabled</param>
         /// <param name="lastActivity">lastActivity</param>
         /// <param name="counter">counter</param>
-        /// <param name="mongoObjectId">mongoObjectId</param>
-        /// <param name="mongoId">mongoId</param>
         /// <param name="datasets">datasets</param>
         /// <param name="publications">publications</param>
         /// <param name="tools">tools</param>
@@ -87,7 +84,7 @@ namespace GatewayApiSdk.Model
         /// <param name="application">application</param>
         /// <param name="status">status</param>
         [JsonConstructor]
-        public FetchAllDurIntegrations200ResponseDataInner(Option<int?> id = default, Option<DateTime?> createdAt = default, Option<DateTime?> updatedAt = default, Option<DateTime?> deletedAt = default, Option<List<Object>?> nonGatewayDatasets = default, Option<List<Object>?> nonGatewayApplicants = default, Option<List<Object>?> fundersAndSponsors = default, Option<List<Object>?> otherApprovalCommittees = default, Option<List<Object>?> gatewayOutputsTools = default, Option<List<Object>?> gatewayOutputsPapers = default, Option<List<Object>?> nonGatewayOutputs = default, Option<string?> projectTitle = default, Option<string?> projectIdText = default, Option<string?> organisationName = default, Option<string?> organisationSector = default, Option<string?> laySummary = default, Option<string?> technicalSummary = default, Option<DateTime?> latestApprovalDate = default, Option<bool?> manualUpload = default, Option<string?> rejectionReason = default, Option<string?> sublicenceArrangements = default, Option<string?> publicBenefitStatement = default, Option<string?> dataSensitivityLevel = default, Option<DateTime?> projectStartDate = default, Option<DateTime?> projectEndDate = default, Option<DateTime?> accessDate = default, Option<string?> accreditedResearcherStatus = default, Option<string?> confidentialDataDescription = default, Option<string?> datasetLinkageDescription = default, Option<string?> dutyOfConfidentiality = default, Option<string?> legalBasisForDataArticle6 = default, Option<string?> legalBasisForDataArticle9 = default, Option<string?> nationalDataOptout = default, Option<string?> organisationId = default, Option<string?> privacyEnhancements = default, Option<string?> requestCategoryType = default, Option<string?> requestFrequency = default, Option<string?> accessType = default, Option<string?> mongoObjectDarId = default, Option<bool?> enabled = default, Option<DateTime?> lastActivity = default, Option<int?> counter = default, Option<string?> mongoObjectId = default, Option<string?> mongoId = default, Option<List<Object>?> datasets = default, Option<List<Object>?> publications = default, Option<List<Object>?> tools = default, Option<List<Object>?> keywords = default, Option<List<Object>?> users = default, Option<List<Object>?> user = default, Option<List<Object>?> team = default, Option<string?> application = default, Option<StatusEnum?> status = default)
+        public FetchAllDurIntegrations200ResponseDataInner(Option<int?> id = default, Option<DateTime?> createdAt = default, Option<DateTime?> updatedAt = default, Option<DateTime?> deletedAt = default, Option<List<Object>?> nonGatewayDatasets = default, Option<List<Object>?> nonGatewayApplicants = default, Option<List<Object>?> fundersAndSponsors = default, Option<List<Object>?> otherApprovalCommittees = default, Option<List<Object>?> gatewayOutputsTools = default, Option<List<Object>?> gatewayOutputsPapers = default, Option<List<Object>?> nonGatewayOutputs = default, Option<string?> projectTitle = default, Option<string?> projectIdText = default, Option<string?> organisationName = default, Option<string?> organisationSector = default, Option<string?> laySummary = default, Option<string?> technicalSummary = default, Option<DateTime?> latestApprovalDate = default, Option<bool?> manualUpload = default, Option<string?> rejectionReason = default, Option<string?> sublicenceArrangements = default, Option<string?> publicBenefitStatement = default, Option<string?> dataSensitivityLevel = default, Option<DateTime?> projectStartDate = default, Option<DateTime?> projectEndDate = default, Option<DateTime?> accessDate = default, Option<string?> accreditedResearcherStatus = default, Option<string?> confidentialDataDescription = default, Option<string?> datasetLinkageDescription = default, Option<string?> dutyOfConfidentiality = default, Option<string?> legalBasisForDataArticle6 = default, Option<string?> legalBasisForDataArticle9 = default, Option<string?> nationalDataOptout = default, Option<string?> organisationId = default, Option<string?> privacyEnhancements = default, Option<string?> requestCategoryType = default, Option<string?> requestFrequency = default, Option<string?> accessType = default, Option<bool?> enabled = default, Option<DateTime?> lastActivity = default, Option<int?> counter = default, Option<List<Object>?> datasets = default, Option<List<Object>?> publications = default, Option<List<Object>?> tools = default, Option<List<Object>?> keywords = default, Option<List<Object>?> users = default, Option<List<Object>?> user = default, Option<List<Object>?> team = default, Option<string?> application = default, Option<StatusEnum?> status = default)
         {
             IdOption = id;
             CreatedAtOption = createdAt;
@@ -127,12 +124,9 @@ namespace GatewayApiSdk.Model
             RequestCategoryTypeOption = requestCategoryType;
             RequestFrequencyOption = requestFrequency;
             AccessTypeOption = accessType;
-            MongoObjectDarIdOption = mongoObjectDarId;
             EnabledOption = enabled;
             LastActivityOption = lastActivity;
             CounterOption = counter;
-            MongoObjectIdOption = mongoObjectId;
-            MongoIdOption = mongoId;
             DatasetsOption = datasets;
             PublicationsOption = publications;
             ToolsOption = tools;
@@ -762,20 +756,6 @@ namespace GatewayApiSdk.Model
         public string? AccessType { get { return this.AccessTypeOption.Value; } set { this.AccessTypeOption = new(value); } }
 
         /// <summary>
-        /// Used to track the state of MongoObjectDarId
-        /// </summary>
-        [JsonIgnore]
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Option<string?> MongoObjectDarIdOption { get; private set; }
-
-        /// <summary>
-        /// Gets or Sets MongoObjectDarId
-        /// </summary>
-        /* <example>MOBJIDDAR-2387</example> */
-        [JsonPropertyName("mongo_object_dar_id")]
-        public string? MongoObjectDarId { get { return this.MongoObjectDarIdOption.Value; } set { this.MongoObjectDarIdOption = new(value); } }
-
-        /// <summary>
         /// Used to track the state of Enabled
         /// </summary>
         [JsonIgnore]
@@ -815,34 +795,6 @@ namespace GatewayApiSdk.Model
         /* <example>34319</example> */
         [JsonPropertyName("counter")]
         public int? Counter { get { return this.CounterOption.Value; } set { this.CounterOption = new(value); } }
-
-        /// <summary>
-        /// Used to track the state of MongoObjectId
-        /// </summary>
-        [JsonIgnore]
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Option<string?> MongoObjectIdOption { get; private set; }
-
-        /// <summary>
-        /// Gets or Sets MongoObjectId
-        /// </summary>
-        /* <example>5f32a7d53b1d85c427e97c01</example> */
-        [JsonPropertyName("mongo_object_id")]
-        public string? MongoObjectId { get { return this.MongoObjectIdOption.Value; } set { this.MongoObjectIdOption = new(value); } }
-
-        /// <summary>
-        /// Used to track the state of MongoId
-        /// </summary>
-        [JsonIgnore]
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Option<string?> MongoIdOption { get; private set; }
-
-        /// <summary>
-        /// Gets or Sets MongoId
-        /// </summary>
-        /* <example>38873389090594430</example> */
-        [JsonPropertyName("mongo_id")]
-        public string? MongoId { get { return this.MongoIdOption.Value; } set { this.MongoIdOption = new(value); } }
 
         /// <summary>
         /// Used to track the state of Datasets
@@ -1001,12 +953,9 @@ namespace GatewayApiSdk.Model
             sb.Append("  RequestCategoryType: ").Append(RequestCategoryType).Append("\n");
             sb.Append("  RequestFrequency: ").Append(RequestFrequency).Append("\n");
             sb.Append("  AccessType: ").Append(AccessType).Append("\n");
-            sb.Append("  MongoObjectDarId: ").Append(MongoObjectDarId).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  LastActivity: ").Append(LastActivity).Append("\n");
             sb.Append("  Counter: ").Append(Counter).Append("\n");
-            sb.Append("  MongoObjectId: ").Append(MongoObjectId).Append("\n");
-            sb.Append("  MongoId: ").Append(MongoId).Append("\n");
             sb.Append("  Datasets: ").Append(Datasets).Append("\n");
             sb.Append("  Publications: ").Append(Publications).Append("\n");
             sb.Append("  Tools: ").Append(Tools).Append("\n");
@@ -1141,12 +1090,9 @@ namespace GatewayApiSdk.Model
             Option<string?> requestCategoryType = default;
             Option<string?> requestFrequency = default;
             Option<string?> accessType = default;
-            Option<string?> mongoObjectDarId = default;
             Option<bool?> enabled = default;
             Option<DateTime?> lastActivity = default;
             Option<int?> counter = default;
-            Option<string?> mongoObjectId = default;
-            Option<string?> mongoId = default;
             Option<List<Object>?> datasets = default;
             Option<List<Object>?> publications = default;
             Option<List<Object>?> tools = default;
@@ -1286,9 +1232,6 @@ namespace GatewayApiSdk.Model
                         case "access_type":
                             accessType = new Option<string?>(utf8JsonReader.GetString()!);
                             break;
-                        case "mongo_object_dar_id":
-                            mongoObjectDarId = new Option<string?>(utf8JsonReader.GetString()!);
-                            break;
                         case "enabled":
                             enabled = new Option<bool?>(utf8JsonReader.TokenType == JsonTokenType.Null ? (bool?)null : utf8JsonReader.GetBoolean());
                             break;
@@ -1297,12 +1240,6 @@ namespace GatewayApiSdk.Model
                             break;
                         case "counter":
                             counter = new Option<int?>(utf8JsonReader.TokenType == JsonTokenType.Null ? (int?)null : utf8JsonReader.GetInt32());
-                            break;
-                        case "mongo_object_id":
-                            mongoObjectId = new Option<string?>(utf8JsonReader.GetString()!);
-                            break;
-                        case "mongo_id":
-                            mongoId = new Option<string?>(utf8JsonReader.GetString()!);
                             break;
                         case "datasets":
                             datasets = new Option<List<Object>?>(JsonSerializer.Deserialize<List<Object>>(ref utf8JsonReader, jsonSerializerOptions)!);
@@ -1453,9 +1390,6 @@ namespace GatewayApiSdk.Model
             if (accessType.IsSet && accessType.Value == null)
                 throw new ArgumentNullException(nameof(accessType), "Property is not nullable for class FetchAllDurIntegrations200ResponseDataInner.");
 
-            if (mongoObjectDarId.IsSet && mongoObjectDarId.Value == null)
-                throw new ArgumentNullException(nameof(mongoObjectDarId), "Property is not nullable for class FetchAllDurIntegrations200ResponseDataInner.");
-
             if (enabled.IsSet && enabled.Value == null)
                 throw new ArgumentNullException(nameof(enabled), "Property is not nullable for class FetchAllDurIntegrations200ResponseDataInner.");
 
@@ -1464,12 +1398,6 @@ namespace GatewayApiSdk.Model
 
             if (counter.IsSet && counter.Value == null)
                 throw new ArgumentNullException(nameof(counter), "Property is not nullable for class FetchAllDurIntegrations200ResponseDataInner.");
-
-            if (mongoObjectId.IsSet && mongoObjectId.Value == null)
-                throw new ArgumentNullException(nameof(mongoObjectId), "Property is not nullable for class FetchAllDurIntegrations200ResponseDataInner.");
-
-            if (mongoId.IsSet && mongoId.Value == null)
-                throw new ArgumentNullException(nameof(mongoId), "Property is not nullable for class FetchAllDurIntegrations200ResponseDataInner.");
 
             if (datasets.IsSet && datasets.Value == null)
                 throw new ArgumentNullException(nameof(datasets), "Property is not nullable for class FetchAllDurIntegrations200ResponseDataInner.");
@@ -1498,7 +1426,7 @@ namespace GatewayApiSdk.Model
             if (status.IsSet && status.Value == null)
                 throw new ArgumentNullException(nameof(status), "Property is not nullable for class FetchAllDurIntegrations200ResponseDataInner.");
 
-            return new FetchAllDurIntegrations200ResponseDataInner(id, createdAt, updatedAt, deletedAt, nonGatewayDatasets, nonGatewayApplicants, fundersAndSponsors, otherApprovalCommittees, gatewayOutputsTools, gatewayOutputsPapers, nonGatewayOutputs, projectTitle, projectIdText, organisationName, organisationSector, laySummary, technicalSummary, latestApprovalDate, manualUpload, rejectionReason, sublicenceArrangements, publicBenefitStatement, dataSensitivityLevel, projectStartDate, projectEndDate, accessDate, accreditedResearcherStatus, confidentialDataDescription, datasetLinkageDescription, dutyOfConfidentiality, legalBasisForDataArticle6, legalBasisForDataArticle9, nationalDataOptout, organisationId, privacyEnhancements, requestCategoryType, requestFrequency, accessType, mongoObjectDarId, enabled, lastActivity, counter, mongoObjectId, mongoId, datasets, publications, tools, keywords, users, user, team, application, status);
+            return new FetchAllDurIntegrations200ResponseDataInner(id, createdAt, updatedAt, deletedAt, nonGatewayDatasets, nonGatewayApplicants, fundersAndSponsors, otherApprovalCommittees, gatewayOutputsTools, gatewayOutputsPapers, nonGatewayOutputs, projectTitle, projectIdText, organisationName, organisationSector, laySummary, technicalSummary, latestApprovalDate, manualUpload, rejectionReason, sublicenceArrangements, publicBenefitStatement, dataSensitivityLevel, projectStartDate, projectEndDate, accessDate, accreditedResearcherStatus, confidentialDataDescription, datasetLinkageDescription, dutyOfConfidentiality, legalBasisForDataArticle6, legalBasisForDataArticle9, nationalDataOptout, organisationId, privacyEnhancements, requestCategoryType, requestFrequency, accessType, enabled, lastActivity, counter, datasets, publications, tools, keywords, users, user, team, application, status);
         }
 
         /// <summary>
@@ -1611,15 +1539,6 @@ namespace GatewayApiSdk.Model
 
             if (fetchAllDurIntegrations200ResponseDataInner.AccessTypeOption.IsSet && fetchAllDurIntegrations200ResponseDataInner.AccessType == null)
                 throw new ArgumentNullException(nameof(fetchAllDurIntegrations200ResponseDataInner.AccessType), "Property is required for class FetchAllDurIntegrations200ResponseDataInner.");
-
-            if (fetchAllDurIntegrations200ResponseDataInner.MongoObjectDarIdOption.IsSet && fetchAllDurIntegrations200ResponseDataInner.MongoObjectDarId == null)
-                throw new ArgumentNullException(nameof(fetchAllDurIntegrations200ResponseDataInner.MongoObjectDarId), "Property is required for class FetchAllDurIntegrations200ResponseDataInner.");
-
-            if (fetchAllDurIntegrations200ResponseDataInner.MongoObjectIdOption.IsSet && fetchAllDurIntegrations200ResponseDataInner.MongoObjectId == null)
-                throw new ArgumentNullException(nameof(fetchAllDurIntegrations200ResponseDataInner.MongoObjectId), "Property is required for class FetchAllDurIntegrations200ResponseDataInner.");
-
-            if (fetchAllDurIntegrations200ResponseDataInner.MongoIdOption.IsSet && fetchAllDurIntegrations200ResponseDataInner.MongoId == null)
-                throw new ArgumentNullException(nameof(fetchAllDurIntegrations200ResponseDataInner.MongoId), "Property is required for class FetchAllDurIntegrations200ResponseDataInner.");
 
             if (fetchAllDurIntegrations200ResponseDataInner.DatasetsOption.IsSet && fetchAllDurIntegrations200ResponseDataInner.Datasets == null)
                 throw new ArgumentNullException(nameof(fetchAllDurIntegrations200ResponseDataInner.Datasets), "Property is required for class FetchAllDurIntegrations200ResponseDataInner.");
@@ -1773,9 +1692,6 @@ namespace GatewayApiSdk.Model
             if (fetchAllDurIntegrations200ResponseDataInner.AccessTypeOption.IsSet)
                 writer.WriteString("access_type", fetchAllDurIntegrations200ResponseDataInner.AccessType);
 
-            if (fetchAllDurIntegrations200ResponseDataInner.MongoObjectDarIdOption.IsSet)
-                writer.WriteString("mongo_object_dar_id", fetchAllDurIntegrations200ResponseDataInner.MongoObjectDarId);
-
             if (fetchAllDurIntegrations200ResponseDataInner.EnabledOption.IsSet)
                 writer.WriteBoolean("enabled", fetchAllDurIntegrations200ResponseDataInner.EnabledOption.Value!.Value);
 
@@ -1784,12 +1700,6 @@ namespace GatewayApiSdk.Model
 
             if (fetchAllDurIntegrations200ResponseDataInner.CounterOption.IsSet)
                 writer.WriteNumber("counter", fetchAllDurIntegrations200ResponseDataInner.CounterOption.Value!.Value);
-
-            if (fetchAllDurIntegrations200ResponseDataInner.MongoObjectIdOption.IsSet)
-                writer.WriteString("mongo_object_id", fetchAllDurIntegrations200ResponseDataInner.MongoObjectId);
-
-            if (fetchAllDurIntegrations200ResponseDataInner.MongoIdOption.IsSet)
-                writer.WriteString("mongo_id", fetchAllDurIntegrations200ResponseDataInner.MongoId);
 
             if (fetchAllDurIntegrations200ResponseDataInner.DatasetsOption.IsSet)
             {

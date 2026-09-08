@@ -81,8 +81,8 @@ namespace GatewayApiSdk.Test.Api
         [Fact (Skip = "not implemented")]
         public async Task CreateDatasetsV2AsyncTest()
         {
-            CreateDatasetsV2Request createDatasetsV2Request = default!;
-            var response = await _instance.CreateDatasetsV2Async(createDatasetsV2Request);
+            UpdateDatasetsRequest updateDatasetsRequest = default!;
+            var response = await _instance.CreateDatasetsV2Async(updateDatasetsRequest);
             var model = response.Created();
             Assert.IsType<CreateDarIntegration201Response>(model);
         }
@@ -94,8 +94,8 @@ namespace GatewayApiSdk.Test.Api
         public async Task CreateTeamDatasetsV2AsyncTest()
         {
             int teamId = default!;
-            CreateTeamDatasetsV2Request createTeamDatasetsV2Request = default!;
-            var response = await _instance.CreateTeamDatasetsV2Async(teamId, createTeamDatasetsV2Request);
+            PatchDatasetsV2Request patchDatasetsV2Request = default!;
+            var response = await _instance.CreateTeamDatasetsV2Async(teamId, patchDatasetsV2Request);
             var model = response.Created();
             Assert.IsType<CreateDarIntegration201Response>(model);
         }

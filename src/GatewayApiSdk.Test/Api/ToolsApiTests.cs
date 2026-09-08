@@ -184,12 +184,11 @@ namespace GatewayApiSdk.Test.Api
         [Fact (Skip = "not implemented")]
         public async Task FetchAllToolsAsyncTest()
         {
-            Client.Option<string> mongoId = default!;
             Client.Option<int> teamId = default!;
             Client.Option<int> userId = default!;
             Client.Option<string> title = default!;
             Client.Option<string> sort = default!;
-            var response = await _instance.FetchAllToolsAsync(mongoId, teamId, userId, title, sort);
+            var response = await _instance.FetchAllToolsAsync(teamId, userId, title, sort);
             var model = response.Ok();
             Assert.IsType<FetchAllTools200Response>(model);
         }

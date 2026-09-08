@@ -41,11 +41,10 @@ namespace GatewayApiSdk.Model
         /// <param name="journalName">journalName</param>
         /// <param name="abstract">abstract</param>
         /// <param name="url">url</param>
-        /// <param name="mongoId">mongoId</param>
         /// <param name="datasets">datasets</param>
         /// <param name="tools">tools</param>
         [JsonConstructor]
-        public CreatePublicationsRequest(Option<string?> paperTitle = default, Option<string?> authors = default, Option<string?> yearOfPublication = default, Option<string?> paperDoi = default, Option<string?> publicationType = default, Option<string?> journalName = default, Option<string?> @abstract = default, Option<string?> url = default, Option<string?> mongoId = default, Option<List<CreatePublicationsRequestDatasetsInner>?> datasets = default, Option<List<CreatePublicationsRequestToolsInner>?> tools = default)
+        public CreatePublicationsRequest(Option<string?> paperTitle = default, Option<string?> authors = default, Option<string?> yearOfPublication = default, Option<string?> paperDoi = default, Option<string?> publicationType = default, Option<string?> journalName = default, Option<string?> @abstract = default, Option<string?> url = default, Option<List<CreatePublicationsRequestDatasetsInner>?> datasets = default, Option<List<CreatePublicationsRequestToolsInner>?> tools = default)
         {
             PaperTitleOption = paperTitle;
             AuthorsOption = authors;
@@ -55,7 +54,6 @@ namespace GatewayApiSdk.Model
             JournalNameOption = journalName;
             AbstractOption = @abstract;
             UrlOption = url;
-            MongoIdOption = mongoId;
             DatasetsOption = datasets;
             ToolsOption = tools;
             OnCreated();
@@ -176,20 +174,6 @@ namespace GatewayApiSdk.Model
         public string? Url { get { return this.UrlOption.Value; } set { this.UrlOption = new(value); } }
 
         /// <summary>
-        /// Used to track the state of MongoId
-        /// </summary>
-        [JsonIgnore]
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Option<string?> MongoIdOption { get; private set; }
-
-        /// <summary>
-        /// Gets or Sets MongoId
-        /// </summary>
-        /* <example>38873389090594430</example> */
-        [JsonPropertyName("mongo_id")]
-        public string? MongoId { get { return this.MongoIdOption.Value; } set { this.MongoIdOption = new(value); } }
-
-        /// <summary>
         /// Used to track the state of Datasets
         /// </summary>
         [JsonIgnore]
@@ -231,7 +215,6 @@ namespace GatewayApiSdk.Model
             sb.Append("  JournalName: ").Append(JournalName).Append("\n");
             sb.Append("  Abstract: ").Append(Abstract).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
-            sb.Append("  MongoId: ").Append(MongoId).Append("\n");
             sb.Append("  Datasets: ").Append(Datasets).Append("\n");
             sb.Append("  Tools: ").Append(Tools).Append("\n");
             sb.Append("}\n");
@@ -289,7 +272,6 @@ namespace GatewayApiSdk.Model
             Option<string?> journalName = default;
             Option<string?> varAbstract = default;
             Option<string?> url = default;
-            Option<string?> mongoId = default;
             Option<List<CreatePublicationsRequestDatasetsInner>?> datasets = default;
             Option<List<CreatePublicationsRequestToolsInner>?> tools = default;
 
@@ -332,9 +314,6 @@ namespace GatewayApiSdk.Model
                         case "url":
                             url = new Option<string?>(utf8JsonReader.GetString()!);
                             break;
-                        case "mongo_id":
-                            mongoId = new Option<string?>(utf8JsonReader.GetString()!);
-                            break;
                         case "datasets":
                             datasets = new Option<List<CreatePublicationsRequestDatasetsInner>?>(JsonSerializer.Deserialize<List<CreatePublicationsRequestDatasetsInner>>(ref utf8JsonReader, jsonSerializerOptions)!);
                             break;
@@ -371,16 +350,13 @@ namespace GatewayApiSdk.Model
             if (url.IsSet && url.Value == null)
                 throw new ArgumentNullException(nameof(url), "Property is not nullable for class CreatePublicationsRequest.");
 
-            if (mongoId.IsSet && mongoId.Value == null)
-                throw new ArgumentNullException(nameof(mongoId), "Property is not nullable for class CreatePublicationsRequest.");
-
             if (datasets.IsSet && datasets.Value == null)
                 throw new ArgumentNullException(nameof(datasets), "Property is not nullable for class CreatePublicationsRequest.");
 
             if (tools.IsSet && tools.Value == null)
                 throw new ArgumentNullException(nameof(tools), "Property is not nullable for class CreatePublicationsRequest.");
 
-            return new CreatePublicationsRequest(paperTitle, authors, yearOfPublication, paperDoi, publicationType, journalName, varAbstract, url, mongoId, datasets, tools);
+            return new CreatePublicationsRequest(paperTitle, authors, yearOfPublication, paperDoi, publicationType, journalName, varAbstract, url, datasets, tools);
         }
 
         /// <summary>
@@ -431,9 +407,6 @@ namespace GatewayApiSdk.Model
             if (createPublicationsRequest.UrlOption.IsSet && createPublicationsRequest.Url == null)
                 throw new ArgumentNullException(nameof(createPublicationsRequest.Url), "Property is required for class CreatePublicationsRequest.");
 
-            if (createPublicationsRequest.MongoIdOption.IsSet && createPublicationsRequest.MongoId == null)
-                throw new ArgumentNullException(nameof(createPublicationsRequest.MongoId), "Property is required for class CreatePublicationsRequest.");
-
             if (createPublicationsRequest.DatasetsOption.IsSet && createPublicationsRequest.Datasets == null)
                 throw new ArgumentNullException(nameof(createPublicationsRequest.Datasets), "Property is required for class CreatePublicationsRequest.");
 
@@ -463,9 +436,6 @@ namespace GatewayApiSdk.Model
 
             if (createPublicationsRequest.UrlOption.IsSet)
                 writer.WriteString("url", createPublicationsRequest.Url);
-
-            if (createPublicationsRequest.MongoIdOption.IsSet)
-                writer.WriteString("mongo_id", createPublicationsRequest.MongoId);
 
             if (createPublicationsRequest.DatasetsOption.IsSet)
             {

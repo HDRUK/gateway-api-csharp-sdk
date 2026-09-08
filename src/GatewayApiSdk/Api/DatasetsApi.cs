@@ -97,10 +97,10 @@ namespace GatewayApiSdk.Api
         /// Create a new dataset
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createDatasetsV2Request">Pass user credentials</param>
+        /// <param name="updateDatasetsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateDatasetsV2ApiResponse"/>&gt;</returns>
-        Task<ICreateDatasetsV2ApiResponse> CreateDatasetsV2Async(CreateDatasetsV2Request createDatasetsV2Request, System.Threading.CancellationToken cancellationToken = default);
+        Task<ICreateDatasetsV2ApiResponse> CreateDatasetsV2Async(UpdateDatasetsRequest updateDatasetsRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DatasetController@store
@@ -108,10 +108,10 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Create a new dataset
         /// </remarks>
-        /// <param name="createDatasetsV2Request">Pass user credentials</param>
+        /// <param name="updateDatasetsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateDatasetsV2ApiResponse"/>?&gt;</returns>
-        Task<ICreateDatasetsV2ApiResponse?> CreateDatasetsV2OrDefaultAsync(CreateDatasetsV2Request createDatasetsV2Request, System.Threading.CancellationToken cancellationToken = default);
+        Task<ICreateDatasetsV2ApiResponse?> CreateDatasetsV2OrDefaultAsync(UpdateDatasetsRequest updateDatasetsRequest, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// TeamDatasetController@store
@@ -121,10 +121,10 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">team id</param>
-        /// <param name="createTeamDatasetsV2Request">Pass user credentials</param>
+        /// <param name="patchDatasetsV2Request">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateTeamDatasetsV2ApiResponse"/>&gt;</returns>
-        Task<ICreateTeamDatasetsV2ApiResponse> CreateTeamDatasetsV2Async(int teamId, CreateTeamDatasetsV2Request createTeamDatasetsV2Request, System.Threading.CancellationToken cancellationToken = default);
+        Task<ICreateTeamDatasetsV2ApiResponse> CreateTeamDatasetsV2Async(int teamId, PatchDatasetsV2Request patchDatasetsV2Request, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// TeamDatasetController@store
@@ -133,10 +133,10 @@ namespace GatewayApiSdk.Api
         /// Create a new dataset for a team
         /// </remarks>
         /// <param name="teamId">team id</param>
-        /// <param name="createTeamDatasetsV2Request">Pass user credentials</param>
+        /// <param name="patchDatasetsV2Request">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateTeamDatasetsV2ApiResponse"/>?&gt;</returns>
-        Task<ICreateTeamDatasetsV2ApiResponse?> CreateTeamDatasetsV2OrDefaultAsync(int teamId, CreateTeamDatasetsV2Request createTeamDatasetsV2Request, System.Threading.CancellationToken cancellationToken = default);
+        Task<ICreateTeamDatasetsV2ApiResponse?> CreateTeamDatasetsV2OrDefaultAsync(int teamId, PatchDatasetsV2Request patchDatasetsV2Request, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DatasetController@destroy
@@ -2160,28 +2160,28 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCreateDatasetsV2(CreateDatasetsV2Request createDatasetsV2Request);
+        partial void FormatCreateDatasetsV2(UpdateDatasetsRequest updateDatasetsRequest);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="createDatasetsV2Request"></param>
+        /// <param name="updateDatasetsRequest"></param>
         /// <returns></returns>
-        private void ValidateCreateDatasetsV2(CreateDatasetsV2Request createDatasetsV2Request)
+        private void ValidateCreateDatasetsV2(UpdateDatasetsRequest updateDatasetsRequest)
         {
-            if (createDatasetsV2Request == null)
-                throw new ArgumentNullException(nameof(createDatasetsV2Request));
+            if (updateDatasetsRequest == null)
+                throw new ArgumentNullException(nameof(updateDatasetsRequest));
         }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="createDatasetsV2Request"></param>
-        private void AfterCreateDatasetsV2DefaultImplementation(ICreateDatasetsV2ApiResponse apiResponseLocalVar, CreateDatasetsV2Request createDatasetsV2Request)
+        /// <param name="updateDatasetsRequest"></param>
+        private void AfterCreateDatasetsV2DefaultImplementation(ICreateDatasetsV2ApiResponse apiResponseLocalVar, UpdateDatasetsRequest updateDatasetsRequest)
         {
             bool suppressDefaultLog = false;
-            AfterCreateDatasetsV2(ref suppressDefaultLog, apiResponseLocalVar, createDatasetsV2Request);
+            AfterCreateDatasetsV2(ref suppressDefaultLog, apiResponseLocalVar, updateDatasetsRequest);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -2191,8 +2191,8 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="createDatasetsV2Request"></param>
-        partial void AfterCreateDatasetsV2(ref bool suppressDefaultLog, ICreateDatasetsV2ApiResponse apiResponseLocalVar, CreateDatasetsV2Request createDatasetsV2Request);
+        /// <param name="updateDatasetsRequest"></param>
+        partial void AfterCreateDatasetsV2(ref bool suppressDefaultLog, ICreateDatasetsV2ApiResponse apiResponseLocalVar, UpdateDatasetsRequest updateDatasetsRequest);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -2200,11 +2200,11 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="createDatasetsV2Request"></param>
-        private void OnErrorCreateDatasetsV2DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateDatasetsV2Request createDatasetsV2Request)
+        /// <param name="updateDatasetsRequest"></param>
+        private void OnErrorCreateDatasetsV2DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, UpdateDatasetsRequest updateDatasetsRequest)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCreateDatasetsV2(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, createDatasetsV2Request);
+            OnErrorCreateDatasetsV2(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, updateDatasetsRequest);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -2216,20 +2216,20 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="createDatasetsV2Request"></param>
-        partial void OnErrorCreateDatasetsV2(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, CreateDatasetsV2Request createDatasetsV2Request);
+        /// <param name="updateDatasetsRequest"></param>
+        partial void OnErrorCreateDatasetsV2(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, UpdateDatasetsRequest updateDatasetsRequest);
 
         /// <summary>
         /// DatasetController@store Create a new dataset
         /// </summary>
-        /// <param name="createDatasetsV2Request">Pass user credentials</param>
+        /// <param name="updateDatasetsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateDatasetsV2ApiResponse"/>&gt;</returns>
-        public async Task<ICreateDatasetsV2ApiResponse?> CreateDatasetsV2OrDefaultAsync(CreateDatasetsV2Request createDatasetsV2Request, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<ICreateDatasetsV2ApiResponse?> CreateDatasetsV2OrDefaultAsync(UpdateDatasetsRequest updateDatasetsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await CreateDatasetsV2Async(createDatasetsV2Request, cancellationToken).ConfigureAwait(false);
+                return await CreateDatasetsV2Async(updateDatasetsRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -2241,18 +2241,18 @@ namespace GatewayApiSdk.Api
         /// DatasetController@store Create a new dataset
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createDatasetsV2Request">Pass user credentials</param>
+        /// <param name="updateDatasetsRequest">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateDatasetsV2ApiResponse"/>&gt;</returns>
-        public async Task<ICreateDatasetsV2ApiResponse> CreateDatasetsV2Async(CreateDatasetsV2Request createDatasetsV2Request, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<ICreateDatasetsV2ApiResponse> CreateDatasetsV2Async(UpdateDatasetsRequest updateDatasetsRequest, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCreateDatasetsV2(createDatasetsV2Request);
+                ValidateCreateDatasetsV2(updateDatasetsRequest);
 
-                FormatCreateDatasetsV2(createDatasetsV2Request);
+                FormatCreateDatasetsV2(updateDatasetsRequest);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -2263,9 +2263,9 @@ namespace GatewayApiSdk.Api
                         ? "/api/v2/datasets"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/datasets");
 
-                    httpRequestMessageLocalVar.Content = (createDatasetsV2Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (updateDatasetsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createDatasetsV2Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(updateDatasetsRequest, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -2311,7 +2311,7 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCreateDatasetsV2DefaultImplementation(apiResponseLocalVar, createDatasetsV2Request);
+                        AfterCreateDatasetsV2DefaultImplementation(apiResponseLocalVar, updateDatasetsRequest);
 
                         Events.ExecuteOnCreateDatasetsV2(apiResponseLocalVar);
 
@@ -2325,7 +2325,7 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCreateDatasetsV2DefaultImplementation(e, "/api/v2/datasets", uriBuilderLocalVar.Path, createDatasetsV2Request);
+                OnErrorCreateDatasetsV2DefaultImplementation(e, "/api/v2/datasets", uriBuilderLocalVar.Path, updateDatasetsRequest);
                 Events.ExecuteOnErrorCreateDatasetsV2(e);
                 throw;
             }
@@ -2500,17 +2500,17 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatCreateTeamDatasetsV2(ref int teamId, CreateTeamDatasetsV2Request createTeamDatasetsV2Request);
+        partial void FormatCreateTeamDatasetsV2(ref int teamId, PatchDatasetsV2Request patchDatasetsV2Request);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="createTeamDatasetsV2Request"></param>
+        /// <param name="patchDatasetsV2Request"></param>
         /// <returns></returns>
-        private void ValidateCreateTeamDatasetsV2(CreateTeamDatasetsV2Request createTeamDatasetsV2Request)
+        private void ValidateCreateTeamDatasetsV2(PatchDatasetsV2Request patchDatasetsV2Request)
         {
-            if (createTeamDatasetsV2Request == null)
-                throw new ArgumentNullException(nameof(createTeamDatasetsV2Request));
+            if (patchDatasetsV2Request == null)
+                throw new ArgumentNullException(nameof(patchDatasetsV2Request));
         }
 
         /// <summary>
@@ -2518,11 +2518,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="teamId"></param>
-        /// <param name="createTeamDatasetsV2Request"></param>
-        private void AfterCreateTeamDatasetsV2DefaultImplementation(ICreateTeamDatasetsV2ApiResponse apiResponseLocalVar, int teamId, CreateTeamDatasetsV2Request createTeamDatasetsV2Request)
+        /// <param name="patchDatasetsV2Request"></param>
+        private void AfterCreateTeamDatasetsV2DefaultImplementation(ICreateTeamDatasetsV2ApiResponse apiResponseLocalVar, int teamId, PatchDatasetsV2Request patchDatasetsV2Request)
         {
             bool suppressDefaultLog = false;
-            AfterCreateTeamDatasetsV2(ref suppressDefaultLog, apiResponseLocalVar, teamId, createTeamDatasetsV2Request);
+            AfterCreateTeamDatasetsV2(ref suppressDefaultLog, apiResponseLocalVar, teamId, patchDatasetsV2Request);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -2533,8 +2533,8 @@ namespace GatewayApiSdk.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="teamId"></param>
-        /// <param name="createTeamDatasetsV2Request"></param>
-        partial void AfterCreateTeamDatasetsV2(ref bool suppressDefaultLog, ICreateTeamDatasetsV2ApiResponse apiResponseLocalVar, int teamId, CreateTeamDatasetsV2Request createTeamDatasetsV2Request);
+        /// <param name="patchDatasetsV2Request"></param>
+        partial void AfterCreateTeamDatasetsV2(ref bool suppressDefaultLog, ICreateTeamDatasetsV2ApiResponse apiResponseLocalVar, int teamId, PatchDatasetsV2Request patchDatasetsV2Request);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -2543,11 +2543,11 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="teamId"></param>
-        /// <param name="createTeamDatasetsV2Request"></param>
-        private void OnErrorCreateTeamDatasetsV2DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, CreateTeamDatasetsV2Request createTeamDatasetsV2Request)
+        /// <param name="patchDatasetsV2Request"></param>
+        private void OnErrorCreateTeamDatasetsV2DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, PatchDatasetsV2Request patchDatasetsV2Request)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorCreateTeamDatasetsV2(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, createTeamDatasetsV2Request);
+            OnErrorCreateTeamDatasetsV2(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, patchDatasetsV2Request);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -2560,21 +2560,21 @@ namespace GatewayApiSdk.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="teamId"></param>
-        /// <param name="createTeamDatasetsV2Request"></param>
-        partial void OnErrorCreateTeamDatasetsV2(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, CreateTeamDatasetsV2Request createTeamDatasetsV2Request);
+        /// <param name="patchDatasetsV2Request"></param>
+        partial void OnErrorCreateTeamDatasetsV2(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, PatchDatasetsV2Request patchDatasetsV2Request);
 
         /// <summary>
         /// TeamDatasetController@store Create a new dataset for a team
         /// </summary>
         /// <param name="teamId">team id</param>
-        /// <param name="createTeamDatasetsV2Request">Pass user credentials</param>
+        /// <param name="patchDatasetsV2Request">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateTeamDatasetsV2ApiResponse"/>&gt;</returns>
-        public async Task<ICreateTeamDatasetsV2ApiResponse?> CreateTeamDatasetsV2OrDefaultAsync(int teamId, CreateTeamDatasetsV2Request createTeamDatasetsV2Request, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<ICreateTeamDatasetsV2ApiResponse?> CreateTeamDatasetsV2OrDefaultAsync(int teamId, PatchDatasetsV2Request patchDatasetsV2Request, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await CreateTeamDatasetsV2Async(teamId, createTeamDatasetsV2Request, cancellationToken).ConfigureAwait(false);
+                return await CreateTeamDatasetsV2Async(teamId, patchDatasetsV2Request, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -2587,18 +2587,18 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">team id</param>
-        /// <param name="createTeamDatasetsV2Request">Pass user credentials</param>
+        /// <param name="patchDatasetsV2Request">Pass user credentials</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ICreateTeamDatasetsV2ApiResponse"/>&gt;</returns>
-        public async Task<ICreateTeamDatasetsV2ApiResponse> CreateTeamDatasetsV2Async(int teamId, CreateTeamDatasetsV2Request createTeamDatasetsV2Request, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<ICreateTeamDatasetsV2ApiResponse> CreateTeamDatasetsV2Async(int teamId, PatchDatasetsV2Request patchDatasetsV2Request, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateCreateTeamDatasetsV2(createTeamDatasetsV2Request);
+                ValidateCreateTeamDatasetsV2(patchDatasetsV2Request);
 
-                FormatCreateTeamDatasetsV2(ref teamId, createTeamDatasetsV2Request);
+                FormatCreateTeamDatasetsV2(ref teamId, patchDatasetsV2Request);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -2610,9 +2610,9 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/teams/{teamId}/datasets");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BteamId%7D", Uri.EscapeDataString(teamId.ToString()));
 
-                    httpRequestMessageLocalVar.Content = (createTeamDatasetsV2Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
+                    httpRequestMessageLocalVar.Content = (patchDatasetsV2Request as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
-                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(createTeamDatasetsV2Request, _jsonSerializerOptions));
+                        : httpRequestMessageLocalVar.Content = new StringContent(JsonSerializer.Serialize(patchDatasetsV2Request, _jsonSerializerOptions));
 
                     List<TokenBase> tokenBaseLocalVars = new List<TokenBase>();
                     httpRequestMessageLocalVar.RequestUri = uriBuilderLocalVar.Uri;
@@ -2658,7 +2658,7 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterCreateTeamDatasetsV2DefaultImplementation(apiResponseLocalVar, teamId, createTeamDatasetsV2Request);
+                        AfterCreateTeamDatasetsV2DefaultImplementation(apiResponseLocalVar, teamId, patchDatasetsV2Request);
 
                         Events.ExecuteOnCreateTeamDatasetsV2(apiResponseLocalVar);
 
@@ -2672,7 +2672,7 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorCreateTeamDatasetsV2DefaultImplementation(e, "/api/v2/teams/{teamId}/datasets", uriBuilderLocalVar.Path, teamId, createTeamDatasetsV2Request);
+                OnErrorCreateTeamDatasetsV2DefaultImplementation(e, "/api/v2/teams/{teamId}/datasets", uriBuilderLocalVar.Path, teamId, patchDatasetsV2Request);
                 Events.ExecuteOnErrorCreateTeamDatasetsV2(e);
                 throw;
             }

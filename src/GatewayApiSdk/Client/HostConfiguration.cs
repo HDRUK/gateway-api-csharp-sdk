@@ -63,7 +63,6 @@ namespace GatewayApiSdk.Client
             _jsonOptions.Converters.Add(new CreateDarTemplateRequestJsonConverter());
             _jsonOptions.Converters.Add(new CreateDarTemplateRequestQuestionsInnerJsonConverter());
             _jsonOptions.Converters.Add(new CreateDatasetsRequestJsonConverter());
-            _jsonOptions.Converters.Add(new CreateDatasetsV2RequestJsonConverter());
             _jsonOptions.Converters.Add(new CreateDurIntegrationsRequestJsonConverter());
             _jsonOptions.Converters.Add(new CreateDurRequestJsonConverter());
             _jsonOptions.Converters.Add(new CreateDurRequestDatasetsInnerJsonConverter());
@@ -80,7 +79,6 @@ namespace GatewayApiSdk.Client
             _jsonOptions.Converters.Add(new CreateQuestionBankQuestionRequestOptionsInnerChildrenInnerJsonConverter());
             _jsonOptions.Converters.Add(new CreateQuestionBankQuestionRequestOptionsInnerChildrenInnerOptionsInnerJsonConverter());
             _jsonOptions.Converters.Add(new CreateTeamDarApplicationReviewRequestJsonConverter());
-            _jsonOptions.Converters.Add(new CreateTeamDatasetsV2RequestJsonConverter());
             _jsonOptions.Converters.Add(new CreateToolsIntegrations400ResponseJsonConverter());
             _jsonOptions.Converters.Add(new CreateToolsIntegrationsRequestJsonConverter());
             _jsonOptions.Converters.Add(new CreateToolsIntegrationsRequestDatasetInnerJsonConverter());

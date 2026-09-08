@@ -41,12 +41,11 @@ namespace GatewayApiSdk.Model
         /// <param name="journalName">journalName</param>
         /// <param name="abstract">abstract</param>
         /// <param name="url">url</param>
-        /// <param name="mongoId">mongoId</param>
         /// <param name="status">status</param>
         /// <param name="datasets">datasets</param>
         /// <param name="tools">tools</param>
         [JsonConstructor]
-        public UpdatePublicationsRequest(Option<string?> paperTitle = default, Option<string?> authors = default, Option<string?> yearOfPublication = default, Option<string?> paperDoi = default, Option<string?> publicationType = default, Option<string?> journalName = default, Option<string?> @abstract = default, Option<string?> url = default, Option<string?> mongoId = default, Option<StatusEnum?> status = default, Option<List<CreatePublicationsRequestDatasetsInner>?> datasets = default, Option<List<CreatePublicationsRequestToolsInner>?> tools = default)
+        public UpdatePublicationsRequest(Option<string?> paperTitle = default, Option<string?> authors = default, Option<string?> yearOfPublication = default, Option<string?> paperDoi = default, Option<string?> publicationType = default, Option<string?> journalName = default, Option<string?> @abstract = default, Option<string?> url = default, Option<StatusEnum?> status = default, Option<List<CreatePublicationsRequestDatasetsInner>?> datasets = default, Option<List<CreatePublicationsRequestToolsInner>?> tools = default)
         {
             PaperTitleOption = paperTitle;
             AuthorsOption = authors;
@@ -56,7 +55,6 @@ namespace GatewayApiSdk.Model
             JournalNameOption = journalName;
             AbstractOption = @abstract;
             UrlOption = url;
-            MongoIdOption = mongoId;
             StatusOption = status;
             DatasetsOption = datasets;
             ToolsOption = tools;
@@ -271,20 +269,6 @@ namespace GatewayApiSdk.Model
         public string? Url { get { return this.UrlOption.Value; } set { this.UrlOption = new(value); } }
 
         /// <summary>
-        /// Used to track the state of MongoId
-        /// </summary>
-        [JsonIgnore]
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Option<string?> MongoIdOption { get; private set; }
-
-        /// <summary>
-        /// Gets or Sets MongoId
-        /// </summary>
-        /* <example>38873389090594430</example> */
-        [JsonPropertyName("mongo_id")]
-        public string? MongoId { get { return this.MongoIdOption.Value; } set { this.MongoIdOption = new(value); } }
-
-        /// <summary>
         /// Used to track the state of Datasets
         /// </summary>
         [JsonIgnore]
@@ -326,7 +310,6 @@ namespace GatewayApiSdk.Model
             sb.Append("  JournalName: ").Append(JournalName).Append("\n");
             sb.Append("  Abstract: ").Append(Abstract).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
-            sb.Append("  MongoId: ").Append(MongoId).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Datasets: ").Append(Datasets).Append("\n");
             sb.Append("  Tools: ").Append(Tools).Append("\n");
@@ -385,7 +368,6 @@ namespace GatewayApiSdk.Model
             Option<string?> journalName = default;
             Option<string?> varAbstract = default;
             Option<string?> url = default;
-            Option<string?> mongoId = default;
             Option<UpdatePublicationsRequest.StatusEnum?> status = default;
             Option<List<CreatePublicationsRequestDatasetsInner>?> datasets = default;
             Option<List<CreatePublicationsRequestToolsInner>?> tools = default;
@@ -429,9 +411,6 @@ namespace GatewayApiSdk.Model
                         case "url":
                             url = new Option<string?>(utf8JsonReader.GetString()!);
                             break;
-                        case "mongo_id":
-                            mongoId = new Option<string?>(utf8JsonReader.GetString()!);
-                            break;
                         case "status":
                             string? statusRawValue = utf8JsonReader.GetString();
                             if (statusRawValue != null)
@@ -473,9 +452,6 @@ namespace GatewayApiSdk.Model
             if (url.IsSet && url.Value == null)
                 throw new ArgumentNullException(nameof(url), "Property is not nullable for class UpdatePublicationsRequest.");
 
-            if (mongoId.IsSet && mongoId.Value == null)
-                throw new ArgumentNullException(nameof(mongoId), "Property is not nullable for class UpdatePublicationsRequest.");
-
             if (status.IsSet && status.Value == null)
                 throw new ArgumentNullException(nameof(status), "Property is not nullable for class UpdatePublicationsRequest.");
 
@@ -485,7 +461,7 @@ namespace GatewayApiSdk.Model
             if (tools.IsSet && tools.Value == null)
                 throw new ArgumentNullException(nameof(tools), "Property is not nullable for class UpdatePublicationsRequest.");
 
-            return new UpdatePublicationsRequest(paperTitle, authors, yearOfPublication, paperDoi, publicationType, journalName, varAbstract, url, mongoId, status, datasets, tools);
+            return new UpdatePublicationsRequest(paperTitle, authors, yearOfPublication, paperDoi, publicationType, journalName, varAbstract, url, status, datasets, tools);
         }
 
         /// <summary>
@@ -536,9 +512,6 @@ namespace GatewayApiSdk.Model
             if (updatePublicationsRequest.UrlOption.IsSet && updatePublicationsRequest.Url == null)
                 throw new ArgumentNullException(nameof(updatePublicationsRequest.Url), "Property is required for class UpdatePublicationsRequest.");
 
-            if (updatePublicationsRequest.MongoIdOption.IsSet && updatePublicationsRequest.MongoId == null)
-                throw new ArgumentNullException(nameof(updatePublicationsRequest.MongoId), "Property is required for class UpdatePublicationsRequest.");
-
             if (updatePublicationsRequest.DatasetsOption.IsSet && updatePublicationsRequest.Datasets == null)
                 throw new ArgumentNullException(nameof(updatePublicationsRequest.Datasets), "Property is required for class UpdatePublicationsRequest.");
 
@@ -568,9 +541,6 @@ namespace GatewayApiSdk.Model
 
             if (updatePublicationsRequest.UrlOption.IsSet)
                 writer.WriteString("url", updatePublicationsRequest.Url);
-
-            if (updatePublicationsRequest.MongoIdOption.IsSet)
-                writer.WriteString("mongo_id", updatePublicationsRequest.MongoId);
 
             var statusRawValue = UpdatePublicationsRequest.StatusEnumToJsonValue(updatePublicationsRequest.StatusOption.Value!.Value);
             writer.WriteString("status", statusRawValue);

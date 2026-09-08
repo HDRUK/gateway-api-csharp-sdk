@@ -360,15 +360,6 @@ namespace GatewayApiSdk.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'MongoObjectDarId'
-        /// </summary>
-        [Fact]
-        public void MongoObjectDarIdTest()
-        {
-            // TODO unit test for the property 'MongoObjectDarId'
-        }
-
-        /// <summary>
         /// Test the property 'Enabled'
         /// </summary>
         [Fact]
@@ -393,24 +384,6 @@ namespace GatewayApiSdk.Test.Model
         public void CounterTest()
         {
             // TODO unit test for the property 'Counter'
-        }
-
-        /// <summary>
-        /// Test the property 'MongoObjectId'
-        /// </summary>
-        [Fact]
-        public void MongoObjectIdTest()
-        {
-            // TODO unit test for the property 'MongoObjectId'
-        }
-
-        /// <summary>
-        /// Test the property 'MongoId'
-        /// </summary>
-        [Fact]
-        public void MongoIdTest()
-        {
-            // TODO unit test for the property 'MongoId'
         }
 
         /// <summary>

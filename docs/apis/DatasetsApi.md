@@ -104,7 +104,7 @@ Create a new dataset
 
 <a id="createdatasetsv2"></a>
 # **CreateDatasetsV2**
-> CreateDarIntegration201Response CreateDatasetsV2 (CreateDatasetsV2Request createDatasetsV2Request)
+> CreateDarIntegration201Response CreateDatasetsV2 (UpdateDatasetsRequest updateDatasetsRequest)
 
 DatasetController@store
 
@@ -115,7 +115,7 @@ Create a new dataset
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **createDatasetsV2Request** | [**CreateDatasetsV2Request**](CreateDatasetsV2Request.md) | Pass user credentials |  |
+| **updateDatasetsRequest** | [**UpdateDatasetsRequest**](UpdateDatasetsRequest.md) | Pass user credentials |  |
 
 ### Return type
 
@@ -142,7 +142,7 @@ Create a new dataset
 
 <a id="createteamdatasetsv2"></a>
 # **CreateTeamDatasetsV2**
-> CreateDarIntegration201Response CreateTeamDatasetsV2 (int teamId, CreateTeamDatasetsV2Request createTeamDatasetsV2Request)
+> CreateDarIntegration201Response CreateTeamDatasetsV2 (int teamId, PatchDatasetsV2Request patchDatasetsV2Request)
 
 TeamDatasetController@store
 
@@ -154,7 +154,7 @@ Create a new dataset for a team
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **teamId** | **int** | team id |  |
-| **createTeamDatasetsV2Request** | [**CreateTeamDatasetsV2Request**](CreateTeamDatasetsV2Request.md) | Pass user credentials |  |
+| **patchDatasetsV2Request** | [**PatchDatasetsV2Request**](PatchDatasetsV2Request.md) | Pass user credentials |  |
 
 ### Return type
 

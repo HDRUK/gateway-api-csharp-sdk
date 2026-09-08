@@ -126,15 +126,6 @@ namespace GatewayApiSdk.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'MongoId'
-        /// </summary>
-        [Fact]
-        public void MongoIdTest()
-        {
-            // TODO unit test for the property 'MongoId'
-        }
-
-        /// <summary>
         /// Test the property 'Status'
         /// </summary>
         [Fact]

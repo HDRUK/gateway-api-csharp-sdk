@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **JournalName** | **string** |  | [optional] 
 **Abstract** | **string** |  | [optional] 
 **Url** | **string** |  | [optional] 
-**MongoId** | **string** |  | [optional] 
 **Status** | **string** |  | [optional] 
 **Datasets** | [**List&lt;CreatePublicationsRequestDatasetsInner&gt;**](CreatePublicationsRequestDatasetsInner.md) |  | [optional] 
 **Tools** | [**List&lt;CreatePublicationsRequestToolsInner&gt;**](CreatePublicationsRequestToolsInner.md) |  | [optional] 

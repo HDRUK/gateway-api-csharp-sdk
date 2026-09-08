@@ -305,7 +305,6 @@ namespace GatewayApiSdk.Api
         /// Get all tools with optional filters and sorting
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mongoId">Filter tools by mongo ID (optional)</param>
         /// <param name="teamId">Filter tools by team ID (optional)</param>
         /// <param name="userId">Filter tools by user ID (optional)</param>
         /// <param name="title">Filter tools by title (optional)</param>
@@ -313,7 +312,7 @@ namespace GatewayApiSdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllToolsApiResponse"/>&gt;</returns>
         [Obsolete]
-        Task<IFetchAllToolsApiResponse> FetchAllToolsAsync(Option<string> mongoId = default, Option<int> teamId = default, Option<int> userId = default, Option<string> title = default, Option<string> sort = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IFetchAllToolsApiResponse> FetchAllToolsAsync(Option<int> teamId = default, Option<int> userId = default, Option<string> title = default, Option<string> sort = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Fetch all tools
@@ -321,7 +320,6 @@ namespace GatewayApiSdk.Api
         /// <remarks>
         /// Get all tools with optional filters and sorting
         /// </remarks>
-        /// <param name="mongoId">Filter tools by mongo ID (optional)</param>
         /// <param name="teamId">Filter tools by team ID (optional)</param>
         /// <param name="userId">Filter tools by user ID (optional)</param>
         /// <param name="title">Filter tools by title (optional)</param>
@@ -329,7 +327,7 @@ namespace GatewayApiSdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllToolsApiResponse"/>?&gt;</returns>
         [Obsolete]
-        Task<IFetchAllToolsApiResponse?> FetchAllToolsOrDefaultAsync(Option<string> mongoId = default, Option<int> teamId = default, Option<int> userId = default, Option<string> title = default, Option<string> sort = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IFetchAllToolsApiResponse?> FetchAllToolsOrDefaultAsync(Option<int> teamId = default, Option<int> userId = default, Option<string> title = default, Option<string> sort = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// IntegrationToolController@index
@@ -5117,20 +5115,16 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatFetchAllTools(ref Option<string> mongoId, ref Option<int> teamId, ref Option<int> userId, ref Option<string> title, ref Option<string> sort);
+        partial void FormatFetchAllTools(ref Option<int> teamId, ref Option<int> userId, ref Option<string> title, ref Option<string> sort);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
-        /// <param name="mongoId"></param>
         /// <param name="title"></param>
         /// <param name="sort"></param>
         /// <returns></returns>
-        private void ValidateFetchAllTools(Option<string> mongoId, Option<string> title, Option<string> sort)
+        private void ValidateFetchAllTools(Option<string> title, Option<string> sort)
         {
-            if (mongoId.IsSet && mongoId.Value == null)
-                throw new ArgumentNullException(nameof(mongoId));
-
             if (title.IsSet && title.Value == null)
                 throw new ArgumentNullException(nameof(title));
 
@@ -5142,15 +5136,14 @@ namespace GatewayApiSdk.Api
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="mongoId"></param>
         /// <param name="teamId"></param>
         /// <param name="userId"></param>
         /// <param name="title"></param>
         /// <param name="sort"></param>
-        private void AfterFetchAllToolsDefaultImplementation(IFetchAllToolsApiResponse apiResponseLocalVar, Option<string> mongoId, Option<int> teamId, Option<int> userId, Option<string> title, Option<string> sort)
+        private void AfterFetchAllToolsDefaultImplementation(IFetchAllToolsApiResponse apiResponseLocalVar, Option<int> teamId, Option<int> userId, Option<string> title, Option<string> sort)
         {
             bool suppressDefaultLog = false;
-            AfterFetchAllTools(ref suppressDefaultLog, apiResponseLocalVar, mongoId, teamId, userId, title, sort);
+            AfterFetchAllTools(ref suppressDefaultLog, apiResponseLocalVar, teamId, userId, title, sort);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -5160,12 +5153,11 @@ namespace GatewayApiSdk.Api
         /// </summary>
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
-        /// <param name="mongoId"></param>
         /// <param name="teamId"></param>
         /// <param name="userId"></param>
         /// <param name="title"></param>
         /// <param name="sort"></param>
-        partial void AfterFetchAllTools(ref bool suppressDefaultLog, IFetchAllToolsApiResponse apiResponseLocalVar, Option<string> mongoId, Option<int> teamId, Option<int> userId, Option<string> title, Option<string> sort);
+        partial void AfterFetchAllTools(ref bool suppressDefaultLog, IFetchAllToolsApiResponse apiResponseLocalVar, Option<int> teamId, Option<int> userId, Option<string> title, Option<string> sort);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -5173,15 +5165,14 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="mongoId"></param>
         /// <param name="teamId"></param>
         /// <param name="userId"></param>
         /// <param name="title"></param>
         /// <param name="sort"></param>
-        private void OnErrorFetchAllToolsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<string> mongoId, Option<int> teamId, Option<int> userId, Option<string> title, Option<string> sort)
+        private void OnErrorFetchAllToolsDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> teamId, Option<int> userId, Option<string> title, Option<string> sort)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorFetchAllTools(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, mongoId, teamId, userId, title, sort);
+            OnErrorFetchAllTools(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, teamId, userId, title, sort);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -5193,28 +5184,26 @@ namespace GatewayApiSdk.Api
         /// <param name="exceptionLocalVar"></param>
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
-        /// <param name="mongoId"></param>
         /// <param name="teamId"></param>
         /// <param name="userId"></param>
         /// <param name="title"></param>
         /// <param name="sort"></param>
-        partial void OnErrorFetchAllTools(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<string> mongoId, Option<int> teamId, Option<int> userId, Option<string> title, Option<string> sort);
+        partial void OnErrorFetchAllTools(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<int> teamId, Option<int> userId, Option<string> title, Option<string> sort);
 
         /// <summary>
         /// Fetch all tools Get all tools with optional filters and sorting
         /// </summary>
-        /// <param name="mongoId">Filter tools by mongo ID (optional)</param>
         /// <param name="teamId">Filter tools by team ID (optional)</param>
         /// <param name="userId">Filter tools by user ID (optional)</param>
         /// <param name="title">Filter tools by title (optional)</param>
         /// <param name="sort">Sort tools by a specific field and direction, e.g., &#39;name:asc&#39; or &#39;created_at:desc&#39; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllToolsApiResponse"/>&gt;</returns>
-        public async Task<IFetchAllToolsApiResponse?> FetchAllToolsOrDefaultAsync(Option<string> mongoId = default, Option<int> teamId = default, Option<int> userId = default, Option<string> title = default, Option<string> sort = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IFetchAllToolsApiResponse?> FetchAllToolsOrDefaultAsync(Option<int> teamId = default, Option<int> userId = default, Option<string> title = default, Option<string> sort = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await FetchAllToolsAsync(mongoId, teamId, userId, title, sort, cancellationToken).ConfigureAwait(false);
+                return await FetchAllToolsAsync(teamId, userId, title, sort, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -5226,22 +5215,21 @@ namespace GatewayApiSdk.Api
         /// Fetch all tools Get all tools with optional filters and sorting
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mongoId">Filter tools by mongo ID (optional)</param>
         /// <param name="teamId">Filter tools by team ID (optional)</param>
         /// <param name="userId">Filter tools by user ID (optional)</param>
         /// <param name="title">Filter tools by title (optional)</param>
         /// <param name="sort">Sort tools by a specific field and direction, e.g., &#39;name:asc&#39; or &#39;created_at:desc&#39; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IFetchAllToolsApiResponse"/>&gt;</returns>
-        public async Task<IFetchAllToolsApiResponse> FetchAllToolsAsync(Option<string> mongoId = default, Option<int> teamId = default, Option<int> userId = default, Option<string> title = default, Option<string> sort = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IFetchAllToolsApiResponse> FetchAllToolsAsync(Option<int> teamId = default, Option<int> userId = default, Option<string> title = default, Option<string> sort = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateFetchAllTools(mongoId, title, sort);
+                ValidateFetchAllTools(title, sort);
 
-                FormatFetchAllTools(ref mongoId, ref teamId, ref userId, ref title, ref sort);
+                FormatFetchAllTools(ref teamId, ref userId, ref title, ref sort);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -5253,9 +5241,6 @@ namespace GatewayApiSdk.Api
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v1/tools");
 
                     System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
-
-                    if (mongoId.IsSet)
-                        parseQueryStringLocalVar["mongo_id"] = ClientUtils.ParameterToString(mongoId.Value);
 
                     if (teamId.IsSet)
                         parseQueryStringLocalVar["team_id"] = ClientUtils.ParameterToString(teamId.Value);
@@ -5306,7 +5291,7 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterFetchAllToolsDefaultImplementation(apiResponseLocalVar, mongoId, teamId, userId, title, sort);
+                        AfterFetchAllToolsDefaultImplementation(apiResponseLocalVar, teamId, userId, title, sort);
 
                         Events.ExecuteOnFetchAllTools(apiResponseLocalVar);
 
@@ -5320,7 +5305,7 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorFetchAllToolsDefaultImplementation(e, "/api/v1/tools", uriBuilderLocalVar.Path, mongoId, teamId, userId, title, sort);
+                OnErrorFetchAllToolsDefaultImplementation(e, "/api/v1/tools", uriBuilderLocalVar.Path, teamId, userId, title, sort);
                 Events.ExecuteOnErrorFetchAllTools(e);
                 throw;
             }

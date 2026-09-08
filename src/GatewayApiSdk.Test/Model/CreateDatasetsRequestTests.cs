@@ -81,33 +81,6 @@ namespace GatewayApiSdk.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'MongoObjectId'
-        /// </summary>
-        [Fact]
-        public void MongoObjectIdTest()
-        {
-            // TODO unit test for the property 'MongoObjectId'
-        }
-
-        /// <summary>
-        /// Test the property 'MongoId'
-        /// </summary>
-        [Fact]
-        public void MongoIdTest()
-        {
-            // TODO unit test for the property 'MongoId'
-        }
-
-        /// <summary>
-        /// Test the property 'MongoPid'
-        /// </summary>
-        [Fact]
-        public void MongoPidTest()
-        {
-            // TODO unit test for the property 'MongoPid'
-        }
-
-        /// <summary>
         /// Test the property 'Datasetid'
         /// </summary>
         [Fact]

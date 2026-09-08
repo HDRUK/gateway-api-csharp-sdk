@@ -421,7 +421,7 @@ Edit tool by id
 
 <a id="fetchalltools"></a>
 # **FetchAllTools**
-> FetchAllTools200Response FetchAllTools (string mongoId = null, int teamId = null, int userId = null, string title = null, string sort = null)
+> FetchAllTools200Response FetchAllTools (int teamId = null, int userId = null, string title = null, string sort = null)
 
 Fetch all tools
 
@@ -432,7 +432,6 @@ Get all tools with optional filters and sorting
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **mongoId** | **string** | Filter tools by mongo ID | [optional]  |
 | **teamId** | **int** | Filter tools by team ID | [optional]  |
 | **userId** | **int** | Filter tools by user ID | [optional]  |
 | **title** | **string** | Filter tools by title | [optional]  |
