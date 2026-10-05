@@ -214,5 +214,14 @@ namespace GatewayApiSdk.Test.Model
         {
             // TODO unit test for the property 'LastRunAt'
         }
+
+        /// <summary>
+        /// Test the property 'Progress'
+        /// </summary>
+        [Fact]
+        public void ProgressTest()
+        {
+            // TODO unit test for the property 'Progress'
+        }
     }
 }

@@ -187,6 +187,7 @@ namespace GatewayApiSdk.Client
             _jsonOptions.Converters.Add(new GetFederationHistory200ResponseDataInnerFailedDatasetsInnerJsonConverter());
             _jsonOptions.Converters.Add(new GetFederationTeamId200ResponseJsonConverter());
             _jsonOptions.Converters.Add(new GetFederationTeamId200ResponseDataInnerJsonConverter());
+            _jsonOptions.Converters.Add(new GetFederationTeamId200ResponseDataInnerProgressJsonConverter());
             _jsonOptions.Converters.Add(new KeywordJsonConverter());
             _jsonOptions.Converters.Add(new LicenseJsonConverter());
             _jsonOptions.Converters.Add(new LoginRequestJsonConverter());
@@ -205,6 +206,8 @@ namespace GatewayApiSdk.Client
             _jsonOptions.Converters.Add(new RegisterRequestJsonConverter());
             _jsonOptions.Converters.Add(new RetrieveWidgetData200ResponseJsonConverter());
             _jsonOptions.Converters.Add(new RetrieveWidgetData403ResponseJsonConverter());
+            _jsonOptions.Converters.Add(new RunFederation404ResponseJsonConverter());
+            _jsonOptions.Converters.Add(new RunFederation409ResponseJsonConverter());
             _jsonOptions.Converters.Add(new SavedSearchJsonConverter());
             _jsonOptions.Converters.Add(new SearchCollections200ResponseJsonConverter());
             _jsonOptions.Converters.Add(new SearchCollections200ResponseDataInnerJsonConverter());

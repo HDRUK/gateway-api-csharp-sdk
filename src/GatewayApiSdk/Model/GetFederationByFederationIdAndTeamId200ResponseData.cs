@@ -51,8 +51,9 @@ namespace GatewayApiSdk.Model
         /// <param name="tested">tested</param>
         /// <param name="notifications">notifications</param>
         /// <param name="isRunning">isRunning</param>
+        /// <param name="progress">progress</param>
         [JsonConstructor]
-        public GetFederationByFederationIdAndTeamId200ResponseData(Option<int?> id = default, Option<string?> federationType = default, Option<string?> authType = default, Option<string?> authSecretKey = default, Option<string?> endpointBaseurl = default, Option<string?> endpointDatasets = default, Option<string?> endpointDataset = default, Option<int?> runTimeHour = default, Option<string?> runTimeMinute = default, Option<bool?> enabled = default, Option<DateTime?> enabledAt = default, Option<int?> counter = default, Option<DateTime?> createdAt = default, Option<DateTime?> updatedAt = default, Option<DateTime?> deletedAt = default, Option<bool?> tested = default, Option<List<Object>?> notifications = default, Option<bool?> isRunning = default)
+        public GetFederationByFederationIdAndTeamId200ResponseData(Option<int?> id = default, Option<string?> federationType = default, Option<string?> authType = default, Option<string?> authSecretKey = default, Option<string?> endpointBaseurl = default, Option<string?> endpointDatasets = default, Option<string?> endpointDataset = default, Option<int?> runTimeHour = default, Option<string?> runTimeMinute = default, Option<bool?> enabled = default, Option<DateTime?> enabledAt = default, Option<int?> counter = default, Option<DateTime?> createdAt = default, Option<DateTime?> updatedAt = default, Option<DateTime?> deletedAt = default, Option<bool?> tested = default, Option<List<Object>?> notifications = default, Option<bool?> isRunning = default, Option<GetFederationTeamId200ResponseDataInnerProgress?> progress = default)
         {
             IdOption = id;
             FederationTypeOption = federationType;
@@ -72,6 +73,7 @@ namespace GatewayApiSdk.Model
             TestedOption = tested;
             NotificationsOption = notifications;
             IsRunningOption = isRunning;
+            ProgressOption = progress;
             OnCreated();
         }
 
@@ -326,6 +328,19 @@ namespace GatewayApiSdk.Model
         public bool? IsRunning { get { return this.IsRunningOption.Value; } set { this.IsRunningOption = new(value); } }
 
         /// <summary>
+        /// Used to track the state of Progress
+        /// </summary>
+        [JsonIgnore]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public Option<GetFederationTeamId200ResponseDataInnerProgress?> ProgressOption { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets Progress
+        /// </summary>
+        [JsonPropertyName("progress")]
+        public GetFederationTeamId200ResponseDataInnerProgress? Progress { get { return this.ProgressOption.Value; } set { this.ProgressOption = new(value); } }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -351,6 +366,7 @@ namespace GatewayApiSdk.Model
             sb.Append("  Tested: ").Append(Tested).Append("\n");
             sb.Append("  Notifications: ").Append(Notifications).Append("\n");
             sb.Append("  IsRunning: ").Append(IsRunning).Append("\n");
+            sb.Append("  Progress: ").Append(Progress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -436,6 +452,7 @@ namespace GatewayApiSdk.Model
             Option<bool?> tested = default;
             Option<List<Object>?> notifications = default;
             Option<bool?> isRunning = default;
+            Option<GetFederationTeamId200ResponseDataInnerProgress?> progress = default;
 
             while (utf8JsonReader.Read())
             {
@@ -506,6 +523,9 @@ namespace GatewayApiSdk.Model
                         case "is_running":
                             isRunning = new Option<bool?>(utf8JsonReader.TokenType == JsonTokenType.Null ? (bool?)null : utf8JsonReader.GetBoolean());
                             break;
+                        case "progress":
+                            progress = new Option<GetFederationTeamId200ResponseDataInnerProgress?>(JsonSerializer.Deserialize<GetFederationTeamId200ResponseDataInnerProgress>(ref utf8JsonReader, jsonSerializerOptions));
+                            break;
                         default:
                             break;
                     }
@@ -563,7 +583,7 @@ namespace GatewayApiSdk.Model
             if (isRunning.IsSet && isRunning.Value == null)
                 throw new ArgumentNullException(nameof(isRunning), "Property is not nullable for class GetFederationByFederationIdAndTeamId200ResponseData.");
 
-            return new GetFederationByFederationIdAndTeamId200ResponseData(id, federationType, authType, authSecretKey, endpointBaseurl, endpointDatasets, endpointDataset, runTimeHour, runTimeMinute, enabled, enabledAt, counter, createdAt, updatedAt, deletedAt, tested, notifications, isRunning);
+            return new GetFederationByFederationIdAndTeamId200ResponseData(id, federationType, authType, authSecretKey, endpointBaseurl, endpointDatasets, endpointDataset, runTimeHour, runTimeMinute, enabled, enabledAt, counter, createdAt, updatedAt, deletedAt, tested, notifications, isRunning, progress);
         }
 
         /// <summary>
@@ -672,6 +692,15 @@ namespace GatewayApiSdk.Model
             }
             if (getFederationByFederationIdAndTeamId200ResponseData.IsRunningOption.IsSet)
                 writer.WriteBoolean("is_running", getFederationByFederationIdAndTeamId200ResponseData.IsRunningOption.Value!.Value);
+
+            if (getFederationByFederationIdAndTeamId200ResponseData.ProgressOption.IsSet)
+                if (getFederationByFederationIdAndTeamId200ResponseData.ProgressOption.Value != null)
+                {
+                    writer.WritePropertyName("progress");
+                    JsonSerializer.Serialize(writer, getFederationByFederationIdAndTeamId200ResponseData.Progress, jsonSerializerOptions);
+                }
+                else
+                    writer.WriteNull("progress");
         }
     }
 }

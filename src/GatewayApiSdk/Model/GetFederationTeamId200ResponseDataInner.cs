@@ -51,8 +51,9 @@ namespace GatewayApiSdk.Model
         /// <param name="isRunning">isRunning</param>
         /// <param name="notifications">notifications</param>
         /// <param name="lastRunAt">lastRunAt</param>
+        /// <param name="progress">progress</param>
         [JsonConstructor]
-        public GetFederationTeamId200ResponseDataInner(Option<int?> id = default, Option<string?> federationType = default, Option<string?> authType = default, Option<string?> authSecretKey = default, Option<string?> endpointBaseurl = default, Option<string?> endpointDatasets = default, Option<string?> endpointDataset = default, Option<int?> runTimeHour = default, Option<string?> runTimeMinute = default, Option<bool?> enabled = default, Option<DateTime?> enabledAt = default, Option<DateTime?> createdAt = default, Option<DateTime?> updatedAt = default, Option<DateTime?> deletedAt = default, Option<bool?> tested = default, Option<bool?> isRunning = default, Option<List<Object>?> notifications = default, Option<DateTime?> lastRunAt = default)
+        public GetFederationTeamId200ResponseDataInner(Option<int?> id = default, Option<string?> federationType = default, Option<string?> authType = default, Option<string?> authSecretKey = default, Option<string?> endpointBaseurl = default, Option<string?> endpointDatasets = default, Option<string?> endpointDataset = default, Option<int?> runTimeHour = default, Option<string?> runTimeMinute = default, Option<bool?> enabled = default, Option<DateTime?> enabledAt = default, Option<DateTime?> createdAt = default, Option<DateTime?> updatedAt = default, Option<DateTime?> deletedAt = default, Option<bool?> tested = default, Option<bool?> isRunning = default, Option<List<Object>?> notifications = default, Option<DateTime?> lastRunAt = default, Option<GetFederationTeamId200ResponseDataInnerProgress?> progress = default)
         {
             IdOption = id;
             FederationTypeOption = federationType;
@@ -72,6 +73,7 @@ namespace GatewayApiSdk.Model
             IsRunningOption = isRunning;
             NotificationsOption = notifications;
             LastRunAtOption = lastRunAt;
+            ProgressOption = progress;
             OnCreated();
         }
 
@@ -325,6 +327,19 @@ namespace GatewayApiSdk.Model
         public DateTime? LastRunAt { get { return this.LastRunAtOption.Value; } set { this.LastRunAtOption = new(value); } }
 
         /// <summary>
+        /// Used to track the state of Progress
+        /// </summary>
+        [JsonIgnore]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public Option<GetFederationTeamId200ResponseDataInnerProgress?> ProgressOption { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets Progress
+        /// </summary>
+        [JsonPropertyName("progress")]
+        public GetFederationTeamId200ResponseDataInnerProgress? Progress { get { return this.ProgressOption.Value; } set { this.ProgressOption = new(value); } }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -350,6 +365,7 @@ namespace GatewayApiSdk.Model
             sb.Append("  IsRunning: ").Append(IsRunning).Append("\n");
             sb.Append("  Notifications: ").Append(Notifications).Append("\n");
             sb.Append("  LastRunAt: ").Append(LastRunAt).Append("\n");
+            sb.Append("  Progress: ").Append(Progress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -440,6 +456,7 @@ namespace GatewayApiSdk.Model
             Option<bool?> isRunning = default;
             Option<List<Object>?> notifications = default;
             Option<DateTime?> lastRunAt = default;
+            Option<GetFederationTeamId200ResponseDataInnerProgress?> progress = default;
 
             while (utf8JsonReader.Read())
             {
@@ -510,6 +527,9 @@ namespace GatewayApiSdk.Model
                         case "last_run_at":
                             lastRunAt = new Option<DateTime?>(JsonSerializer.Deserialize<DateTime?>(ref utf8JsonReader, jsonSerializerOptions));
                             break;
+                        case "progress":
+                            progress = new Option<GetFederationTeamId200ResponseDataInnerProgress?>(JsonSerializer.Deserialize<GetFederationTeamId200ResponseDataInnerProgress>(ref utf8JsonReader, jsonSerializerOptions));
+                            break;
                         default:
                             break;
                     }
@@ -564,7 +584,7 @@ namespace GatewayApiSdk.Model
             if (notifications.IsSet && notifications.Value == null)
                 throw new ArgumentNullException(nameof(notifications), "Property is not nullable for class GetFederationTeamId200ResponseDataInner.");
 
-            return new GetFederationTeamId200ResponseDataInner(id, federationType, authType, authSecretKey, endpointBaseurl, endpointDatasets, endpointDataset, runTimeHour, runTimeMinute, enabled, enabledAt, createdAt, updatedAt, deletedAt, tested, isRunning, notifications, lastRunAt);
+            return new GetFederationTeamId200ResponseDataInner(id, federationType, authType, authSecretKey, endpointBaseurl, endpointDatasets, endpointDataset, runTimeHour, runTimeMinute, enabled, enabledAt, createdAt, updatedAt, deletedAt, tested, isRunning, notifications, lastRunAt, progress);
         }
 
         /// <summary>
@@ -676,6 +696,15 @@ namespace GatewayApiSdk.Model
                     writer.WriteString("last_run_at", getFederationTeamId200ResponseDataInner.LastRunAtOption.Value!.Value.ToString(LastRunAtFormat));
                 else
                     writer.WriteNull("last_run_at");
+
+            if (getFederationTeamId200ResponseDataInner.ProgressOption.IsSet)
+                if (getFederationTeamId200ResponseDataInner.ProgressOption.Value != null)
+                {
+                    writer.WritePropertyName("progress");
+                    JsonSerializer.Serialize(writer, getFederationTeamId200ResponseDataInner.Progress, jsonSerializerOptions);
+                }
+                else
+                    writer.WriteNull("progress");
         }
     }
 }

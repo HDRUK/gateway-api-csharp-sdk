@@ -3074,6 +3074,18 @@ paths:
               schema:
                 $ref: "#/components/schemas/test_federation_200_response"
           description: Success response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/run_federation_404_response"
+          description: "Federation not found, not enabled, or not tested"
+        "409":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/run_federation_409_response"
+          description: Federation is already running an integration synchronisation
       security:
       - bearerAuth: []
       summary: FederationController@runNow
@@ -12252,6 +12264,32 @@ components:
             $ref: "#/components/schemas/create_dur_request_datasets_inner"
           type: array
       type: object
+    get_federation_team_id_200_response_data_inner_progress:
+      description: Only present while a sync is actively in progress
+      example:
+        total: 128
+        processed: 63
+        failed: 2
+        pending: 65
+        started_at: 2000-01-23T04:56:07.000+00:00
+      nullable: true
+      properties:
+        total:
+          example: 128
+          type: integer
+        processed:
+          example: 63
+          type: integer
+        failed:
+          example: 2
+          type: integer
+        pending:
+          example: 65
+          type: integer
+        started_at:
+          format: date-time
+          type: string
+      type: object
     get_federation_team_id_200_response_data_inner:
       example:
         id: 123
@@ -12272,6 +12310,12 @@ components:
         is_running: false
         notifications: "[]"
         last_run_at: 2000-01-23T04:56:07.000+00:00
+        progress:
+          total: 128
+          processed: 63
+          failed: 2
+          pending: 65
+          started_at: 2000-01-23T04:56:07.000+00:00
       properties:
         id:
           example: 123
@@ -12330,6 +12374,8 @@ components:
           format: date-time
           nullable: true
           type: string
+        progress:
+          $ref: "#/components/schemas/get_federation_team_id_200_response_data_inner_progress"
       type: object
     get_federation_team_id_200_response:
       example:
@@ -12353,6 +12399,12 @@ components:
           is_running: false
           notifications: "[]"
           last_run_at: 2000-01-23T04:56:07.000+00:00
+          progress:
+            total: 128
+            processed: 63
+            failed: 2
+            pending: 65
+            started_at: 2000-01-23T04:56:07.000+00:00
         - id: 123
           federation_type: federation-type-eqhbjcnl
           auth_type: api_key
@@ -12371,6 +12423,12 @@ components:
           is_running: false
           notifications: "[]"
           last_run_at: 2000-01-23T04:56:07.000+00:00
+          progress:
+            total: 128
+            processed: 63
+            failed: 2
+            pending: 65
+            started_at: 2000-01-23T04:56:07.000+00:00
         first_page_url: http:\/\/localhost:8000\/api\/v1\/teams\/19\/federations?page=1
         from: 1
         last_page: 1
@@ -12483,6 +12541,12 @@ components:
         tested: false
         notifications: "[]"
         is_running: false
+        progress:
+          total: 128
+          processed: 63
+          failed: 2
+          pending: 65
+          started_at: 2000-01-23T04:56:07.000+00:00
       properties:
         id:
           example: 123
@@ -12540,6 +12604,8 @@ components:
         is_running:
           example: false
           type: boolean
+        progress:
+          $ref: "#/components/schemas/get_federation_team_id_200_response_data_inner_progress"
       type: object
     get_federation_by_federation_id_and_team_id_200_response:
       example:
@@ -12563,6 +12629,12 @@ components:
           tested: false
           notifications: "[]"
           is_running: false
+          progress:
+            total: 128
+            processed: 63
+            failed: 2
+            pending: 65
+            started_at: 2000-01-23T04:56:07.000+00:00
       properties:
         message:
           type: string
@@ -12642,6 +12714,22 @@ components:
           type: integer
         title:
           example: Test Unsuccessful
+          type: string
+      type: object
+    run_federation_404_response:
+      example:
+        message: Federation not found!
+      properties:
+        message:
+          example: Federation not found!
+          type: string
+      type: object
+    run_federation_409_response:
+      example:
+        message: Federation is already running an integration synchronisation.
+      properties:
+        message:
+          example: Federation is already running an integration synchronisation.
           type: string
       type: object
     get_federation_history_200_response_data_inner_failed_datasets_inner:

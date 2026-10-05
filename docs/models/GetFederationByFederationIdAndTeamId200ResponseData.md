@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **Tested** | **bool** |  | [optional] 
 **Notifications** | **List&lt;Object&gt;** |  | [optional] 
 **IsRunning** | **bool** |  | [optional] 
+**Progress** | [**GetFederationTeamId200ResponseDataInnerProgress**](GetFederationTeamId200ResponseDataInnerProgress.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
