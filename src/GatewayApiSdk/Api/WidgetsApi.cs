@@ -140,7 +140,7 @@ namespace GatewayApiSdk.Api
         /// WidgetController@getWidgetData
         /// </summary>
         /// <remarks>
-        /// Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, and DURS
+        /// Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, DURS and publications
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
@@ -153,7 +153,7 @@ namespace GatewayApiSdk.Api
         /// WidgetController@getWidgetData
         /// </summary>
         /// <remarks>
-        /// Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, and DURS
+        /// Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, DURS and publications
         /// </remarks>
         /// <param name="teamId">Team ID</param>
         /// <param name="teamIds">Comma-separated list of team IDs to filter data</param>
@@ -165,7 +165,7 @@ namespace GatewayApiSdk.Api
         /// Retrieve data related to a widget
         /// </summary>
         /// <remarks>
-        /// Fetches datasets, data uses, scripts, and collections linked to a widget
+        /// Fetches datasets, data uses, scripts, collections and publications linked to a widget
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
@@ -179,7 +179,7 @@ namespace GatewayApiSdk.Api
         /// Retrieve data related to a widget
         /// </summary>
         /// <remarks>
-        /// Fetches datasets, data uses, scripts, and collections linked to a widget
+        /// Fetches datasets, data uses, scripts, collections and publications linked to a widget
         /// </remarks>
         /// <param name="teamId">Team ID</param>
         /// <param name="id">Widget ID</param>
@@ -1935,7 +1935,7 @@ namespace GatewayApiSdk.Api
         partial void OnErrorFetchWidgetDataSources(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, string teamIds);
 
         /// <summary>
-        /// WidgetController@getWidgetData Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, and DURS
+        /// WidgetController@getWidgetData Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, DURS and publications
         /// </summary>
         /// <param name="teamId">Team ID</param>
         /// <param name="teamIds">Comma-separated list of team IDs to filter data</param>
@@ -1954,7 +1954,7 @@ namespace GatewayApiSdk.Api
         }
 
         /// <summary>
-        /// WidgetController@getWidgetData Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, and DURS
+        /// WidgetController@getWidgetData Fetch lightweight data (id, name, etc.) for multiple teams across datasets, tools, collections, DURS and publications
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
@@ -2241,7 +2241,7 @@ namespace GatewayApiSdk.Api
         partial void OnErrorRetrieveWidgetData(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int teamId, int id, string domainOrigin);
 
         /// <summary>
-        /// Retrieve data related to a widget Fetches datasets, data uses, scripts, and collections linked to a widget
+        /// Retrieve data related to a widget Fetches datasets, data uses, scripts, collections and publications linked to a widget
         /// </summary>
         /// <param name="teamId">Team ID</param>
         /// <param name="id">Widget ID</param>
@@ -2261,7 +2261,7 @@ namespace GatewayApiSdk.Api
         }
 
         /// <summary>
-        /// Retrieve data related to a widget Fetches datasets, data uses, scripts, and collections linked to a widget
+        /// Retrieve data related to a widget Fetches datasets, data uses, scripts, collections and publications linked to a widget
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>

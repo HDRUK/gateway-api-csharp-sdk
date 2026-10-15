@@ -37,13 +37,15 @@ namespace GatewayApiSdk.Model
         /// <param name="tools">tools</param>
         /// <param name="collections">collections</param>
         /// <param name="durs">durs</param>
+        /// <param name="publications">publications</param>
         [JsonConstructor]
-        public FetchWidgetDataSources200Response(Option<List<Object>?> datasets = default, Option<List<Object>?> tools = default, Option<List<Object>?> collections = default, Option<List<Object>?> durs = default)
+        public FetchWidgetDataSources200Response(Option<List<Object>?> datasets = default, Option<List<Object>?> tools = default, Option<List<Object>?> collections = default, Option<List<Object>?> durs = default, Option<List<Object>?> publications = default)
         {
             DatasetsOption = datasets;
             ToolsOption = tools;
             CollectionsOption = collections;
             DursOption = durs;
+            PublicationsOption = publications;
             OnCreated();
         }
 
@@ -102,6 +104,19 @@ namespace GatewayApiSdk.Model
         public List<Object>? Durs { get { return this.DursOption.Value; } set { this.DursOption = new(value); } }
 
         /// <summary>
+        /// Used to track the state of Publications
+        /// </summary>
+        [JsonIgnore]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public Option<List<Object>?> PublicationsOption { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets Publications
+        /// </summary>
+        [JsonPropertyName("publications")]
+        public List<Object>? Publications { get { return this.PublicationsOption.Value; } set { this.PublicationsOption = new(value); } }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -113,6 +128,7 @@ namespace GatewayApiSdk.Model
             sb.Append("  Tools: ").Append(Tools).Append("\n");
             sb.Append("  Collections: ").Append(Collections).Append("\n");
             sb.Append("  Durs: ").Append(Durs).Append("\n");
+            sb.Append("  Publications: ").Append(Publications).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -164,6 +180,7 @@ namespace GatewayApiSdk.Model
             Option<List<Object>?> tools = default;
             Option<List<Object>?> collections = default;
             Option<List<Object>?> durs = default;
+            Option<List<Object>?> publications = default;
 
             while (utf8JsonReader.Read())
             {
@@ -192,6 +209,9 @@ namespace GatewayApiSdk.Model
                         case "durs":
                             durs = new Option<List<Object>?>(JsonSerializer.Deserialize<List<Object>>(ref utf8JsonReader, jsonSerializerOptions)!);
                             break;
+                        case "publications":
+                            publications = new Option<List<Object>?>(JsonSerializer.Deserialize<List<Object>>(ref utf8JsonReader, jsonSerializerOptions)!);
+                            break;
                         default:
                             break;
                     }
@@ -210,7 +230,10 @@ namespace GatewayApiSdk.Model
             if (durs.IsSet && durs.Value == null)
                 throw new ArgumentNullException(nameof(durs), "Property is not nullable for class FetchWidgetDataSources200Response.");
 
-            return new FetchWidgetDataSources200Response(datasets, tools, collections, durs);
+            if (publications.IsSet && publications.Value == null)
+                throw new ArgumentNullException(nameof(publications), "Property is not nullable for class FetchWidgetDataSources200Response.");
+
+            return new FetchWidgetDataSources200Response(datasets, tools, collections, durs, publications);
         }
 
         /// <summary>
@@ -249,6 +272,9 @@ namespace GatewayApiSdk.Model
             if (fetchWidgetDataSources200Response.DursOption.IsSet && fetchWidgetDataSources200Response.Durs == null)
                 throw new ArgumentNullException(nameof(fetchWidgetDataSources200Response.Durs), "Property is required for class FetchWidgetDataSources200Response.");
 
+            if (fetchWidgetDataSources200Response.PublicationsOption.IsSet && fetchWidgetDataSources200Response.Publications == null)
+                throw new ArgumentNullException(nameof(fetchWidgetDataSources200Response.Publications), "Property is required for class FetchWidgetDataSources200Response.");
+
             if (fetchWidgetDataSources200Response.DatasetsOption.IsSet)
             {
                 writer.WritePropertyName("datasets");
@@ -268,6 +294,11 @@ namespace GatewayApiSdk.Model
             {
                 writer.WritePropertyName("durs");
                 JsonSerializer.Serialize(writer, fetchWidgetDataSources200Response.Durs, jsonSerializerOptions);
+            }
+            if (fetchWidgetDataSources200Response.PublicationsOption.IsSet)
+            {
+                writer.WritePropertyName("publications");
+                JsonSerializer.Serialize(writer, fetchWidgetDataSources200Response.Publications, jsonSerializerOptions);
             }
         }
     }

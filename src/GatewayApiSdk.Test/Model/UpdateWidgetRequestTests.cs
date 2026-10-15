@@ -169,5 +169,14 @@ namespace GatewayApiSdk.Test.Model
         {
             // TODO unit test for the property 'IncludedCollections'
         }
+
+        /// <summary>
+        /// Test the property 'IncludedPublications'
+        /// </summary>
+        [Fact]
+        public void IncludedPublicationsTest()
+        {
+            // TODO unit test for the property 'IncludedPublications'
+        }
     }
 }

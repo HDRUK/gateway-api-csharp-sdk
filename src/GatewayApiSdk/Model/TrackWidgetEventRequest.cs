@@ -172,7 +172,12 @@ namespace GatewayApiSdk.Model
             /// <summary>
             /// Enum Dur for value: dur
             /// </summary>
-            Dur = 4
+            Dur = 4,
+
+            /// <summary>
+            /// Enum Publication for value: publication
+            /// </summary>
+            Publication = 5
         }
 
         /// <summary>
@@ -195,6 +200,9 @@ namespace GatewayApiSdk.Model
             if (value.Equals("dur"))
                 return EntityTypeEnum.Dur;
 
+            if (value.Equals("publication"))
+                return EntityTypeEnum.Publication;
+
             throw new NotImplementedException($"Could not convert value to type EntityTypeEnum: '{value}'");
         }
 
@@ -216,6 +224,9 @@ namespace GatewayApiSdk.Model
 
             if (value.Equals("dur"))
                 return EntityTypeEnum.Dur;
+
+            if (value.Equals("publication"))
+                return EntityTypeEnum.Publication;
 
             return null;
         }
@@ -242,6 +253,9 @@ namespace GatewayApiSdk.Model
 
             if (value == EntityTypeEnum.Dur)
                 return "dur";
+
+            if (value == EntityTypeEnum.Publication)
+                return "publication";
 
             throw new NotImplementedException($"Value could not be handled: '{value}'");
         }

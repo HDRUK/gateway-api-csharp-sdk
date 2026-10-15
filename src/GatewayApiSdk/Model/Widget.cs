@@ -40,6 +40,7 @@ namespace GatewayApiSdk.Model
         /// <param name="includedDataUses">includedDataUses</param>
         /// <param name="includedScripts">includedScripts</param>
         /// <param name="includedCollections">includedCollections</param>
+        /// <param name="includedPublications">includedPublications</param>
         /// <param name="includeSearchBar">includeSearchBar</param>
         /// <param name="includeCohortLink">includeCohortLink</param>
         /// <param name="sizeWidth">sizeWidth</param>
@@ -54,7 +55,7 @@ namespace GatewayApiSdk.Model
         /// <param name="createdAt">createdAt</param>
         /// <param name="updatedAt">updatedAt</param>
         [JsonConstructor]
-        public Widget(Option<int?> id = default, Option<int?> teamId = default, Option<string?> dataCustodianEntitiesIds = default, Option<string?> includedDatasets = default, Option<string?> includedDataUses = default, Option<string?> includedScripts = default, Option<string?> includedCollections = default, Option<bool?> includeSearchBar = default, Option<bool?> includeCohortLink = default, Option<int?> sizeWidth = default, Option<int?> sizeHeight = default, Option<UnitEnum?> unit = default, Option<bool?> keepProportions = default, Option<string?> widgetName = default, Option<string?> permittedDomains = default, Option<string?> brandingPrimary = default, Option<string?> brandingSecondary = default, Option<string?> brandingNeutral = default, Option<DateTime?> createdAt = default, Option<DateTime?> updatedAt = default)
+        public Widget(Option<int?> id = default, Option<int?> teamId = default, Option<string?> dataCustodianEntitiesIds = default, Option<string?> includedDatasets = default, Option<string?> includedDataUses = default, Option<string?> includedScripts = default, Option<string?> includedCollections = default, Option<string?> includedPublications = default, Option<bool?> includeSearchBar = default, Option<bool?> includeCohortLink = default, Option<int?> sizeWidth = default, Option<int?> sizeHeight = default, Option<UnitEnum?> unit = default, Option<bool?> keepProportions = default, Option<string?> widgetName = default, Option<string?> permittedDomains = default, Option<string?> brandingPrimary = default, Option<string?> brandingSecondary = default, Option<string?> brandingNeutral = default, Option<DateTime?> createdAt = default, Option<DateTime?> updatedAt = default)
         {
             IdOption = id;
             TeamIdOption = teamId;
@@ -63,6 +64,7 @@ namespace GatewayApiSdk.Model
             IncludedDataUsesOption = includedDataUses;
             IncludedScriptsOption = includedScripts;
             IncludedCollectionsOption = includedCollections;
+            IncludedPublicationsOption = includedPublications;
             IncludeSearchBarOption = includeSearchBar;
             IncludeCohortLinkOption = includeCohortLink;
             SizeWidthOption = sizeWidth;
@@ -274,6 +276,20 @@ namespace GatewayApiSdk.Model
         public string? IncludedCollections { get { return this.IncludedCollectionsOption.Value; } set { this.IncludedCollectionsOption = new(value); } }
 
         /// <summary>
+        /// Used to track the state of IncludedPublications
+        /// </summary>
+        [JsonIgnore]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public Option<string?> IncludedPublicationsOption { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets IncludedPublications
+        /// </summary>
+        /* <example>[3]</example> */
+        [JsonPropertyName("included_publications")]
+        public string? IncludedPublications { get { return this.IncludedPublicationsOption.Value; } set { this.IncludedPublicationsOption = new(value); } }
+
+        /// <summary>
         /// Used to track the state of IncludeSearchBar
         /// </summary>
         [JsonIgnore]
@@ -456,6 +472,7 @@ namespace GatewayApiSdk.Model
             sb.Append("  IncludedDataUses: ").Append(IncludedDataUses).Append("\n");
             sb.Append("  IncludedScripts: ").Append(IncludedScripts).Append("\n");
             sb.Append("  IncludedCollections: ").Append(IncludedCollections).Append("\n");
+            sb.Append("  IncludedPublications: ").Append(IncludedPublications).Append("\n");
             sb.Append("  IncludeSearchBar: ").Append(IncludeSearchBar).Append("\n");
             sb.Append("  IncludeCohortLink: ").Append(IncludeCohortLink).Append("\n");
             sb.Append("  SizeWidth: ").Append(SizeWidth).Append("\n");
@@ -533,6 +550,7 @@ namespace GatewayApiSdk.Model
             Option<string?> includedDataUses = default;
             Option<string?> includedScripts = default;
             Option<string?> includedCollections = default;
+            Option<string?> includedPublications = default;
             Option<bool?> includeSearchBar = default;
             Option<bool?> includeCohortLink = default;
             Option<int?> sizeWidth = default;
@@ -582,6 +600,9 @@ namespace GatewayApiSdk.Model
                             break;
                         case "included_collections":
                             includedCollections = new Option<string?>(utf8JsonReader.GetString());
+                            break;
+                        case "included_publications":
+                            includedPublications = new Option<string?>(utf8JsonReader.GetString());
                             break;
                         case "include_search_bar":
                             includeSearchBar = new Option<bool?>(utf8JsonReader.TokenType == JsonTokenType.Null ? (bool?)null : utf8JsonReader.GetBoolean());
@@ -657,7 +678,7 @@ namespace GatewayApiSdk.Model
             if (updatedAt.IsSet && updatedAt.Value == null)
                 throw new ArgumentNullException(nameof(updatedAt), "Property is not nullable for class Widget.");
 
-            return new Widget(id, teamId, dataCustodianEntitiesIds, includedDatasets, includedDataUses, includedScripts, includedCollections, includeSearchBar, includeCohortLink, sizeWidth, sizeHeight, unit, keepProportions, widgetName, permittedDomains, brandingPrimary, brandingSecondary, brandingNeutral, createdAt, updatedAt);
+            return new Widget(id, teamId, dataCustodianEntitiesIds, includedDatasets, includedDataUses, includedScripts, includedCollections, includedPublications, includeSearchBar, includeCohortLink, sizeWidth, sizeHeight, unit, keepProportions, widgetName, permittedDomains, brandingPrimary, brandingSecondary, brandingNeutral, createdAt, updatedAt);
         }
 
         /// <summary>
@@ -722,6 +743,12 @@ namespace GatewayApiSdk.Model
                     writer.WriteString("included_collections", widget.IncludedCollections);
                 else
                     writer.WriteNull("included_collections");
+
+            if (widget.IncludedPublicationsOption.IsSet)
+                if (widget.IncludedPublicationsOption.Value != null)
+                    writer.WriteString("included_publications", widget.IncludedPublications);
+                else
+                    writer.WriteNull("included_publications");
 
             if (widget.IncludeSearchBarOption.IsSet)
                 writer.WriteBoolean("include_search_bar", widget.IncludeSearchBarOption.Value!.Value);

@@ -37,13 +37,15 @@ namespace GatewayApiSdk.Model
         /// <param name="dataUses">dataUses</param>
         /// <param name="scripts">scripts</param>
         /// <param name="collections">collections</param>
+        /// <param name="publications">publications</param>
         [JsonConstructor]
-        public RetrieveWidgetData200Response(Option<List<Object>?> datasets = default, Option<List<Object>?> dataUses = default, Option<List<Object>?> scripts = default, Option<List<Object>?> collections = default)
+        public RetrieveWidgetData200Response(Option<List<Object>?> datasets = default, Option<List<Object>?> dataUses = default, Option<List<Object>?> scripts = default, Option<List<Object>?> collections = default, Option<List<Object>?> publications = default)
         {
             DatasetsOption = datasets;
             DataUsesOption = dataUses;
             ScriptsOption = scripts;
             CollectionsOption = collections;
+            PublicationsOption = publications;
             OnCreated();
         }
 
@@ -102,6 +104,19 @@ namespace GatewayApiSdk.Model
         public List<Object>? Collections { get { return this.CollectionsOption.Value; } set { this.CollectionsOption = new(value); } }
 
         /// <summary>
+        /// Used to track the state of Publications
+        /// </summary>
+        [JsonIgnore]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public Option<List<Object>?> PublicationsOption { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets Publications
+        /// </summary>
+        [JsonPropertyName("publications")]
+        public List<Object>? Publications { get { return this.PublicationsOption.Value; } set { this.PublicationsOption = new(value); } }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -113,6 +128,7 @@ namespace GatewayApiSdk.Model
             sb.Append("  DataUses: ").Append(DataUses).Append("\n");
             sb.Append("  Scripts: ").Append(Scripts).Append("\n");
             sb.Append("  Collections: ").Append(Collections).Append("\n");
+            sb.Append("  Publications: ").Append(Publications).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -164,6 +180,7 @@ namespace GatewayApiSdk.Model
             Option<List<Object>?> dataUses = default;
             Option<List<Object>?> scripts = default;
             Option<List<Object>?> collections = default;
+            Option<List<Object>?> publications = default;
 
             while (utf8JsonReader.Read())
             {
@@ -192,6 +209,9 @@ namespace GatewayApiSdk.Model
                         case "collections":
                             collections = new Option<List<Object>?>(JsonSerializer.Deserialize<List<Object>>(ref utf8JsonReader, jsonSerializerOptions)!);
                             break;
+                        case "publications":
+                            publications = new Option<List<Object>?>(JsonSerializer.Deserialize<List<Object>>(ref utf8JsonReader, jsonSerializerOptions)!);
+                            break;
                         default:
                             break;
                     }
@@ -210,7 +230,10 @@ namespace GatewayApiSdk.Model
             if (collections.IsSet && collections.Value == null)
                 throw new ArgumentNullException(nameof(collections), "Property is not nullable for class RetrieveWidgetData200Response.");
 
-            return new RetrieveWidgetData200Response(datasets, dataUses, scripts, collections);
+            if (publications.IsSet && publications.Value == null)
+                throw new ArgumentNullException(nameof(publications), "Property is not nullable for class RetrieveWidgetData200Response.");
+
+            return new RetrieveWidgetData200Response(datasets, dataUses, scripts, collections, publications);
         }
 
         /// <summary>
@@ -249,6 +272,9 @@ namespace GatewayApiSdk.Model
             if (retrieveWidgetData200Response.CollectionsOption.IsSet && retrieveWidgetData200Response.Collections == null)
                 throw new ArgumentNullException(nameof(retrieveWidgetData200Response.Collections), "Property is required for class RetrieveWidgetData200Response.");
 
+            if (retrieveWidgetData200Response.PublicationsOption.IsSet && retrieveWidgetData200Response.Publications == null)
+                throw new ArgumentNullException(nameof(retrieveWidgetData200Response.Publications), "Property is required for class RetrieveWidgetData200Response.");
+
             if (retrieveWidgetData200Response.DatasetsOption.IsSet)
             {
                 writer.WritePropertyName("datasets");
@@ -268,6 +294,11 @@ namespace GatewayApiSdk.Model
             {
                 writer.WritePropertyName("collections");
                 JsonSerializer.Serialize(writer, retrieveWidgetData200Response.Collections, jsonSerializerOptions);
+            }
+            if (retrieveWidgetData200Response.PublicationsOption.IsSet)
+            {
+                writer.WritePropertyName("publications");
+                JsonSerializer.Serialize(writer, retrieveWidgetData200Response.Publications, jsonSerializerOptions);
             }
         }
     }

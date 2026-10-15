@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **IncludedDataUses** | **List&lt;int&gt;** |  | [optional] 
 **IncludedScripts** | **List&lt;int&gt;** |  | [optional] 
 **IncludedCollections** | **List&lt;int&gt;** |  | [optional] 
+**IncludedPublications** | **List&lt;int&gt;** |  | [optional] 
 **DataCustodianEntitiesIds** | **List&lt;int&gt;** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

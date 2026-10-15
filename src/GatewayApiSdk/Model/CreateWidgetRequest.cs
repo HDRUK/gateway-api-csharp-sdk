@@ -45,9 +45,10 @@ namespace GatewayApiSdk.Model
         /// <param name="includedDataUses">includedDataUses</param>
         /// <param name="includedScripts">includedScripts</param>
         /// <param name="includedCollections">includedCollections</param>
+        /// <param name="includedPublications">includedPublications</param>
         /// <param name="dataCustodianEntitiesIds">dataCustodianEntitiesIds</param>
         [JsonConstructor]
-        public CreateWidgetRequest(string widgetName, Option<int?> sizeWidth = default, Option<int?> sizeHeight = default, Option<UnitEnum?> unit = default, Option<bool?> includeSearchBar = default, Option<bool?> includeCohortLink = default, Option<bool?> keepProportions = default, Option<List<string>?> permittedDomains = default, Option<List<int>?> includedDatasets = default, Option<List<int>?> includedDataUses = default, Option<List<int>?> includedScripts = default, Option<List<int>?> includedCollections = default, Option<List<int>?> dataCustodianEntitiesIds = default)
+        public CreateWidgetRequest(string widgetName, Option<int?> sizeWidth = default, Option<int?> sizeHeight = default, Option<UnitEnum?> unit = default, Option<bool?> includeSearchBar = default, Option<bool?> includeCohortLink = default, Option<bool?> keepProportions = default, Option<List<string>?> permittedDomains = default, Option<List<int>?> includedDatasets = default, Option<List<int>?> includedDataUses = default, Option<List<int>?> includedScripts = default, Option<List<int>?> includedCollections = default, Option<List<int>?> includedPublications = default, Option<List<int>?> dataCustodianEntitiesIds = default)
         {
             WidgetName = widgetName;
             SizeWidthOption = sizeWidth;
@@ -61,6 +62,7 @@ namespace GatewayApiSdk.Model
             IncludedDataUsesOption = includedDataUses;
             IncludedScriptsOption = includedScripts;
             IncludedCollectionsOption = includedCollections;
+            IncludedPublicationsOption = includedPublications;
             DataCustodianEntitiesIdsOption = dataCustodianEntitiesIds;
             OnCreated();
         }
@@ -309,6 +311,20 @@ namespace GatewayApiSdk.Model
         public List<int>? IncludedCollections { get { return this.IncludedCollectionsOption.Value; } set { this.IncludedCollectionsOption = new(value); } }
 
         /// <summary>
+        /// Used to track the state of IncludedPublications
+        /// </summary>
+        [JsonIgnore]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public Option<List<int>?> IncludedPublicationsOption { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets IncludedPublications
+        /// </summary>
+        /* <example>[3,4]</example> */
+        [JsonPropertyName("included_publications")]
+        public List<int>? IncludedPublications { get { return this.IncludedPublicationsOption.Value; } set { this.IncludedPublicationsOption = new(value); } }
+
+        /// <summary>
         /// Used to track the state of DataCustodianEntitiesIds
         /// </summary>
         [JsonIgnore]
@@ -342,6 +358,7 @@ namespace GatewayApiSdk.Model
             sb.Append("  IncludedDataUses: ").Append(IncludedDataUses).Append("\n");
             sb.Append("  IncludedScripts: ").Append(IncludedScripts).Append("\n");
             sb.Append("  IncludedCollections: ").Append(IncludedCollections).Append("\n");
+            sb.Append("  IncludedPublications: ").Append(IncludedPublications).Append("\n");
             sb.Append("  DataCustodianEntitiesIds: ").Append(DataCustodianEntitiesIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -402,6 +419,7 @@ namespace GatewayApiSdk.Model
             Option<List<int>?> includedDataUses = default;
             Option<List<int>?> includedScripts = default;
             Option<List<int>?> includedCollections = default;
+            Option<List<int>?> includedPublications = default;
             Option<List<int>?> dataCustodianEntitiesIds = default;
 
             while (utf8JsonReader.Read())
@@ -457,6 +475,9 @@ namespace GatewayApiSdk.Model
                         case "included_collections":
                             includedCollections = new Option<List<int>?>(JsonSerializer.Deserialize<List<int>>(ref utf8JsonReader, jsonSerializerOptions)!);
                             break;
+                        case "included_publications":
+                            includedPublications = new Option<List<int>?>(JsonSerializer.Deserialize<List<int>>(ref utf8JsonReader, jsonSerializerOptions)!);
+                            break;
                         case "data_custodian_entities_ids":
                             dataCustodianEntitiesIds = new Option<List<int>?>(JsonSerializer.Deserialize<List<int>>(ref utf8JsonReader, jsonSerializerOptions)!);
                             break;
@@ -505,10 +526,13 @@ namespace GatewayApiSdk.Model
             if (includedCollections.IsSet && includedCollections.Value == null)
                 throw new ArgumentNullException(nameof(includedCollections), "Property is not nullable for class CreateWidgetRequest.");
 
+            if (includedPublications.IsSet && includedPublications.Value == null)
+                throw new ArgumentNullException(nameof(includedPublications), "Property is not nullable for class CreateWidgetRequest.");
+
             if (dataCustodianEntitiesIds.IsSet && dataCustodianEntitiesIds.Value == null)
                 throw new ArgumentNullException(nameof(dataCustodianEntitiesIds), "Property is not nullable for class CreateWidgetRequest.");
 
-            return new CreateWidgetRequest(widgetName.Value!, sizeWidth, sizeHeight, unit, includeSearchBar, includeCohortLink, keepProportions, permittedDomains, includedDatasets, includedDataUses, includedScripts, includedCollections, dataCustodianEntitiesIds);
+            return new CreateWidgetRequest(widgetName.Value!, sizeWidth, sizeHeight, unit, includeSearchBar, includeCohortLink, keepProportions, permittedDomains, includedDatasets, includedDataUses, includedScripts, includedCollections, includedPublications, dataCustodianEntitiesIds);
         }
 
         /// <summary>
@@ -552,6 +576,9 @@ namespace GatewayApiSdk.Model
 
             if (createWidgetRequest.IncludedCollectionsOption.IsSet && createWidgetRequest.IncludedCollections == null)
                 throw new ArgumentNullException(nameof(createWidgetRequest.IncludedCollections), "Property is required for class CreateWidgetRequest.");
+
+            if (createWidgetRequest.IncludedPublicationsOption.IsSet && createWidgetRequest.IncludedPublications == null)
+                throw new ArgumentNullException(nameof(createWidgetRequest.IncludedPublications), "Property is required for class CreateWidgetRequest.");
 
             if (createWidgetRequest.DataCustodianEntitiesIdsOption.IsSet && createWidgetRequest.DataCustodianEntitiesIds == null)
                 throw new ArgumentNullException(nameof(createWidgetRequest.DataCustodianEntitiesIds), "Property is required for class CreateWidgetRequest.");
@@ -599,6 +626,11 @@ namespace GatewayApiSdk.Model
             {
                 writer.WritePropertyName("included_collections");
                 JsonSerializer.Serialize(writer, createWidgetRequest.IncludedCollections, jsonSerializerOptions);
+            }
+            if (createWidgetRequest.IncludedPublicationsOption.IsSet)
+            {
+                writer.WritePropertyName("included_publications");
+                JsonSerializer.Serialize(writer, createWidgetRequest.IncludedPublications, jsonSerializerOptions);
             }
             if (createWidgetRequest.DataCustodianEntitiesIdsOption.IsSet)
             {

@@ -117,6 +117,15 @@ namespace GatewayApiSdk.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IncludedPublications'
+        /// </summary>
+        [Fact]
+        public void IncludedPublicationsTest()
+        {
+            // TODO unit test for the property 'IncludedPublications'
+        }
+
+        /// <summary>
         /// Test the property 'IncludeSearchBar'
         /// </summary>
         [Fact]

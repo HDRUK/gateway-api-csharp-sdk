@@ -88,5 +88,14 @@ namespace GatewayApiSdk.Test.Model
         {
             // TODO unit test for the property 'Durs'
         }
+
+        /// <summary>
+        /// Test the property 'Publications'
+        /// </summary>
+        [Fact]
+        public void PublicationsTest()
+        {
+            // TODO unit test for the property 'Publications'
+        }
     }
 }

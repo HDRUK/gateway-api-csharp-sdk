@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayApiSdk", "src\GatewayApiSdk\GatewayApiSdk.csproj", "{05D2ED17-1D6D-4E6D-892E-B443D99CC48B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayApiSdk", "src\GatewayApiSdk\GatewayApiSdk.csproj", "{59E15D11-BB5B-41DD-860D-14F2484F0D7A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayApiSdk.Test", "src\GatewayApiSdk.Test\GatewayApiSdk.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{05D2ED17-1D6D-4E6D-892E-B443D99CC48B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05D2ED17-1D6D-4E6D-892E-B443D99CC48B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{05D2ED17-1D6D-4E6D-892E-B443D99CC48B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{05D2ED17-1D6D-4E6D-892E-B443D99CC48B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59E15D11-BB5B-41DD-860D-14F2484F0D7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59E15D11-BB5B-41DD-860D-14F2484F0D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59E15D11-BB5B-41DD-860D-14F2484F0D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59E15D11-BB5B-41DD-860D-14F2484F0D7A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU

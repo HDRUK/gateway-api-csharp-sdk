@@ -322,7 +322,9 @@ namespace GatewayApiSdk.Test.Api
         {
             int id = default!;
             UpdateDatasetsRequest updateDatasetsRequest = default!;
-            var response = await _instance.UpdateDatasetsV2Async(id, updateDatasetsRequest);
+            Client.Option<bool> validateInput = default!;
+            Client.Option<bool> validateOutput = default!;
+            var response = await _instance.UpdateDatasetsV2Async(id, updateDatasetsRequest, validateInput, validateOutput);
             var model = response.Created();
             Assert.IsType<CreateDarIntegration201Response>(model);
         }

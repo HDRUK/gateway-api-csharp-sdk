@@ -801,7 +801,7 @@ Update a dataset with a new dataset version
 
 <a id="updatedatasetsv2"></a>
 # **UpdateDatasetsV2**
-> CreateDarIntegration201Response UpdateDatasetsV2 (int id, UpdateDatasetsRequest updateDatasetsRequest)
+> CreateDarIntegration201Response UpdateDatasetsV2 (int id, UpdateDatasetsRequest updateDatasetsRequest, bool validateInput = null, bool validateOutput = null)
 
 DatasetController@update
 
@@ -814,6 +814,8 @@ Update a dataset with a new dataset version
 |------|------|-------------|-------|
 | **id** | **int** | dataset id |  |
 | **updateDatasetsRequest** | [**UpdateDatasetsRequest**](UpdateDatasetsRequest.md) |  |  |
+| **validateInput** | **bool** | Set to false to skip TRASER input validation (ignored for draft datasets, which always skip validation) | [optional]  |
+| **validateOutput** | **bool** | Set to false to skip TRASER output validation (ignored for draft datasets, which always skip validation) | [optional]  |
 
 ### Return type
 

@@ -569,9 +569,11 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">dataset id</param>
         /// <param name="updateDatasetsRequest"></param>
+        /// <param name="validateInput">Set to false to skip TRASER input validation (ignored for draft datasets, which always skip validation) (optional)</param>
+        /// <param name="validateOutput">Set to false to skip TRASER output validation (ignored for draft datasets, which always skip validation) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateDatasetsV2ApiResponse"/>&gt;</returns>
-        Task<IUpdateDatasetsV2ApiResponse> UpdateDatasetsV2Async(int id, UpdateDatasetsRequest updateDatasetsRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<IUpdateDatasetsV2ApiResponse> UpdateDatasetsV2Async(int id, UpdateDatasetsRequest updateDatasetsRequest, Option<bool> validateInput = default, Option<bool> validateOutput = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// DatasetController@update
@@ -581,9 +583,11 @@ namespace GatewayApiSdk.Api
         /// </remarks>
         /// <param name="id">dataset id</param>
         /// <param name="updateDatasetsRequest"></param>
+        /// <param name="validateInput">Set to false to skip TRASER input validation (ignored for draft datasets, which always skip validation) (optional)</param>
+        /// <param name="validateOutput">Set to false to skip TRASER output validation (ignored for draft datasets, which always skip validation) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateDatasetsV2ApiResponse"/>?&gt;</returns>
-        Task<IUpdateDatasetsV2ApiResponse?> UpdateDatasetsV2OrDefaultAsync(int id, UpdateDatasetsRequest updateDatasetsRequest, System.Threading.CancellationToken cancellationToken = default);
+        Task<IUpdateDatasetsV2ApiResponse?> UpdateDatasetsV2OrDefaultAsync(int id, UpdateDatasetsRequest updateDatasetsRequest, Option<bool> validateInput = default, Option<bool> validateOutput = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// TeamDatasetController@update
@@ -7965,7 +7969,7 @@ namespace GatewayApiSdk.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatUpdateDatasetsV2(ref int id, UpdateDatasetsRequest updateDatasetsRequest);
+        partial void FormatUpdateDatasetsV2(ref int id, UpdateDatasetsRequest updateDatasetsRequest, ref Option<bool> validateInput, ref Option<bool> validateOutput);
 
         /// <summary>
         /// Validates the request parameters
@@ -7984,10 +7988,12 @@ namespace GatewayApiSdk.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
         /// <param name="updateDatasetsRequest"></param>
-        private void AfterUpdateDatasetsV2DefaultImplementation(IUpdateDatasetsV2ApiResponse apiResponseLocalVar, int id, UpdateDatasetsRequest updateDatasetsRequest)
+        /// <param name="validateInput"></param>
+        /// <param name="validateOutput"></param>
+        private void AfterUpdateDatasetsV2DefaultImplementation(IUpdateDatasetsV2ApiResponse apiResponseLocalVar, int id, UpdateDatasetsRequest updateDatasetsRequest, Option<bool> validateInput, Option<bool> validateOutput)
         {
             bool suppressDefaultLog = false;
-            AfterUpdateDatasetsV2(ref suppressDefaultLog, apiResponseLocalVar, id, updateDatasetsRequest);
+            AfterUpdateDatasetsV2(ref suppressDefaultLog, apiResponseLocalVar, id, updateDatasetsRequest, validateInput, validateOutput);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -7999,7 +8005,9 @@ namespace GatewayApiSdk.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="id"></param>
         /// <param name="updateDatasetsRequest"></param>
-        partial void AfterUpdateDatasetsV2(ref bool suppressDefaultLog, IUpdateDatasetsV2ApiResponse apiResponseLocalVar, int id, UpdateDatasetsRequest updateDatasetsRequest);
+        /// <param name="validateInput"></param>
+        /// <param name="validateOutput"></param>
+        partial void AfterUpdateDatasetsV2(ref bool suppressDefaultLog, IUpdateDatasetsV2ApiResponse apiResponseLocalVar, int id, UpdateDatasetsRequest updateDatasetsRequest, Option<bool> validateInput, Option<bool> validateOutput);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -8009,10 +8017,12 @@ namespace GatewayApiSdk.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
         /// <param name="updateDatasetsRequest"></param>
-        private void OnErrorUpdateDatasetsV2DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateDatasetsRequest updateDatasetsRequest)
+        /// <param name="validateInput"></param>
+        /// <param name="validateOutput"></param>
+        private void OnErrorUpdateDatasetsV2DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateDatasetsRequest updateDatasetsRequest, Option<bool> validateInput, Option<bool> validateOutput)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorUpdateDatasetsV2(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, updateDatasetsRequest);
+            OnErrorUpdateDatasetsV2(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, id, updateDatasetsRequest, validateInput, validateOutput);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -8026,20 +8036,24 @@ namespace GatewayApiSdk.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="id"></param>
         /// <param name="updateDatasetsRequest"></param>
-        partial void OnErrorUpdateDatasetsV2(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateDatasetsRequest updateDatasetsRequest);
+        /// <param name="validateInput"></param>
+        /// <param name="validateOutput"></param>
+        partial void OnErrorUpdateDatasetsV2(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int id, UpdateDatasetsRequest updateDatasetsRequest, Option<bool> validateInput, Option<bool> validateOutput);
 
         /// <summary>
         /// DatasetController@update Update a dataset with a new dataset version
         /// </summary>
         /// <param name="id">dataset id</param>
         /// <param name="updateDatasetsRequest"></param>
+        /// <param name="validateInput">Set to false to skip TRASER input validation (ignored for draft datasets, which always skip validation) (optional)</param>
+        /// <param name="validateOutput">Set to false to skip TRASER output validation (ignored for draft datasets, which always skip validation) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateDatasetsV2ApiResponse"/>&gt;</returns>
-        public async Task<IUpdateDatasetsV2ApiResponse?> UpdateDatasetsV2OrDefaultAsync(int id, UpdateDatasetsRequest updateDatasetsRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IUpdateDatasetsV2ApiResponse?> UpdateDatasetsV2OrDefaultAsync(int id, UpdateDatasetsRequest updateDatasetsRequest, Option<bool> validateInput = default, Option<bool> validateOutput = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await UpdateDatasetsV2Async(id, updateDatasetsRequest, cancellationToken).ConfigureAwait(false);
+                return await UpdateDatasetsV2Async(id, updateDatasetsRequest, validateInput, validateOutput, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -8053,9 +8067,11 @@ namespace GatewayApiSdk.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">dataset id</param>
         /// <param name="updateDatasetsRequest"></param>
+        /// <param name="validateInput">Set to false to skip TRASER input validation (ignored for draft datasets, which always skip validation) (optional)</param>
+        /// <param name="validateOutput">Set to false to skip TRASER output validation (ignored for draft datasets, which always skip validation) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IUpdateDatasetsV2ApiResponse"/>&gt;</returns>
-        public async Task<IUpdateDatasetsV2ApiResponse> UpdateDatasetsV2Async(int id, UpdateDatasetsRequest updateDatasetsRequest, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IUpdateDatasetsV2ApiResponse> UpdateDatasetsV2Async(int id, UpdateDatasetsRequest updateDatasetsRequest, Option<bool> validateInput = default, Option<bool> validateOutput = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
@@ -8063,7 +8079,7 @@ namespace GatewayApiSdk.Api
             {
                 ValidateUpdateDatasetsV2(updateDatasetsRequest);
 
-                FormatUpdateDatasetsV2(ref id, updateDatasetsRequest);
+                FormatUpdateDatasetsV2(ref id, updateDatasetsRequest, ref validateInput, ref validateOutput);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -8074,6 +8090,16 @@ namespace GatewayApiSdk.Api
                         ? "/api/v2/datasets/{id}"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath.TrimEnd('/'), "/api/v2/datasets/{id}");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7Bid%7D", Uri.EscapeDataString(id.ToString()));
+
+                    System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
+
+                    if (validateInput.IsSet)
+                        parseQueryStringLocalVar["validate_input"] = ClientUtils.ParameterToString(validateInput.Value);
+
+                    if (validateOutput.IsSet)
+                        parseQueryStringLocalVar["validate_output"] = ClientUtils.ParameterToString(validateOutput.Value);
+
+                    uriBuilderLocalVar.Query = parseQueryStringLocalVar.ToString();
 
                     httpRequestMessageLocalVar.Content = (updateDatasetsRequest as object) is GatewayApiSdk.Client.FileParameter fileParameterLocalVar
                         ? httpRequestMessageLocalVar.Content = new StreamContent(fileParameterLocalVar.Content)
@@ -8123,7 +8149,7 @@ namespace GatewayApiSdk.Api
                             }
                         }
 
-                        AfterUpdateDatasetsV2DefaultImplementation(apiResponseLocalVar, id, updateDatasetsRequest);
+                        AfterUpdateDatasetsV2DefaultImplementation(apiResponseLocalVar, id, updateDatasetsRequest, validateInput, validateOutput);
 
                         Events.ExecuteOnUpdateDatasetsV2(apiResponseLocalVar);
 
@@ -8137,7 +8163,7 @@ namespace GatewayApiSdk.Api
             }
             catch(Exception e)
             {
-                OnErrorUpdateDatasetsV2DefaultImplementation(e, "/api/v2/datasets/{id}", uriBuilderLocalVar.Path, id, updateDatasetsRequest);
+                OnErrorUpdateDatasetsV2DefaultImplementation(e, "/api/v2/datasets/{id}", uriBuilderLocalVar.Path, id, updateDatasetsRequest, validateInput, validateOutput);
                 Events.ExecuteOnErrorUpdateDatasetsV2(e);
                 throw;
             }

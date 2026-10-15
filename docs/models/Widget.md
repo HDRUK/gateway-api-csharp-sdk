@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **IncludedDataUses** | **string** |  | [optional] 
 **IncludedScripts** | **string** |  | [optional] 
 **IncludedCollections** | **string** |  | [optional] 
+**IncludedPublications** | **string** |  | [optional] 
 **IncludeSearchBar** | **bool** |  | [optional] 
 **IncludeCohortLink** | **bool** |  | [optional] 
 **SizeWidth** | **int** |  | [optional] 
