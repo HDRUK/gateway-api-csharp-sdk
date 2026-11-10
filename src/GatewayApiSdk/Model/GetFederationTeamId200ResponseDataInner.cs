@@ -323,6 +323,7 @@ namespace GatewayApiSdk.Model
         /// <summary>
         /// Gets or Sets LastRunAt
         /// </summary>
+        /* <example>2026-07-25T09:12:04Z</example> */
         [JsonPropertyName("last_run_at")]
         public DateTime? LastRunAt { get { return this.LastRunAtOption.Value; } set { this.LastRunAtOption = new(value); } }
 

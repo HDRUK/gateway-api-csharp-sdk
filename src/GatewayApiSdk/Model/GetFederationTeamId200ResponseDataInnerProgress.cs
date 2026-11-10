@@ -117,6 +117,7 @@ namespace GatewayApiSdk.Model
         /// <summary>
         /// Gets or Sets StartedAt
         /// </summary>
+        /* <example>2026-09-29T09:12:04Z</example> */
         [JsonPropertyName("started_at")]
         public DateTime? StartedAt { get { return this.StartedAtOption.Value; } set { this.StartedAtOption = new(value); } }
 

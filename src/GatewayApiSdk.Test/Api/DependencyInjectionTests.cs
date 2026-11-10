@@ -70,6 +70,9 @@ namespace GatewayApiSdk.Test.Api
         [Fact]
         public void ConfigureApiWithAClientTest()
         {
+            var adminApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IAdminApi>();
+            Assert.True(adminApi.HttpClient.BaseAddress != null);
+
             var applicationApi = _hostUsingConfigureWithAClient.Services.GetRequiredService<IApplicationApi>();
             Assert.True(applicationApi.HttpClient.BaseAddress != null);
 
@@ -197,6 +200,9 @@ namespace GatewayApiSdk.Test.Api
         [Fact]
         public void ConfigureApiWithoutAClientTest()
         {
+            var adminApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IAdminApi>();
+            Assert.True(adminApi.HttpClient.BaseAddress != null);
+
             var applicationApi = _hostUsingConfigureWithoutAClient.Services.GetRequiredService<IApplicationApi>();
             Assert.True(applicationApi.HttpClient.BaseAddress != null);
 
@@ -324,6 +330,9 @@ namespace GatewayApiSdk.Test.Api
         [Fact]
         public void AddApiWithAClientTest()
         {
+            var adminApi = _hostUsingAddWithAClient.Services.GetRequiredService<IAdminApi>();
+            Assert.True(adminApi.HttpClient.BaseAddress != null);
+            
             var applicationApi = _hostUsingAddWithAClient.Services.GetRequiredService<IApplicationApi>();
             Assert.True(applicationApi.HttpClient.BaseAddress != null);
             
@@ -451,6 +460,9 @@ namespace GatewayApiSdk.Test.Api
         [Fact]
         public void AddApiWithoutAClientTest()
         {
+            var adminApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IAdminApi>();
+            Assert.True(adminApi.HttpClient.BaseAddress != null);
+
             var applicationApi = _hostUsingAddWithoutAClient.Services.GetRequiredService<IApplicationApi>();
             Assert.True(applicationApi.HttpClient.BaseAddress != null);
 

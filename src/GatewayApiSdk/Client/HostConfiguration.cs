@@ -206,6 +206,8 @@ namespace GatewayApiSdk.Client
             _jsonOptions.Converters.Add(new RegisterRequestJsonConverter());
             _jsonOptions.Converters.Add(new RetrieveWidgetData200ResponseJsonConverter());
             _jsonOptions.Converters.Add(new RetrieveWidgetData403ResponseJsonConverter());
+            _jsonOptions.Converters.Add(new RevokeAllTokensV2200ResponseJsonConverter());
+            _jsonOptions.Converters.Add(new RevokeAllTokensV2200ResponseDataJsonConverter());
             _jsonOptions.Converters.Add(new RunFederation404ResponseJsonConverter());
             _jsonOptions.Converters.Add(new RunFederation409ResponseJsonConverter());
             _jsonOptions.Converters.Add(new SavedSearchJsonConverter());
@@ -286,6 +288,7 @@ namespace GatewayApiSdk.Client
             JsonSerializerOptionsProvider jsonSerializerOptionsProvider = new(_jsonOptions);
             _services.AddSingleton(jsonSerializerOptionsProvider);
             _services.AddSingleton<IApiFactory, ApiFactory>();
+            _services.AddSingleton<AdminApiEvents>();
             _services.AddSingleton<ApplicationApiEvents>();
             _services.AddSingleton<AuthenticationApiEvents>();
             _services.AddSingleton<CancerTypeFilterApiEvents>();
@@ -371,6 +374,7 @@ namespace GatewayApiSdk.Client
 
             List<IHttpClientBuilder> builders = new List<IHttpClientBuilder>();
 
+            builders.Add(_services.AddHttpClient<IAdminApi, AdminApi>("GatewayApiSdk.Api.IAdminApi", client));
             builders.Add(_services.AddHttpClient<IApplicationApi, ApplicationApi>("GatewayApiSdk.Api.IApplicationApi", client));
             builders.Add(_services.AddHttpClient<IAuthenticationApi, AuthenticationApi>("GatewayApiSdk.Api.IAuthenticationApi", client));
             builders.Add(_services.AddHttpClient<ICancerTypeFilterApi, CancerTypeFilterApi>("GatewayApiSdk.Api.ICancerTypeFilterApi", client));

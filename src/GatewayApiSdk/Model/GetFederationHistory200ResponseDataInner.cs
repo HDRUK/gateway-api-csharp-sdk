@@ -171,6 +171,7 @@ namespace GatewayApiSdk.Model
         /// <summary>
         /// Gets or Sets StartedAt
         /// </summary>
+        /* <example>2025-03-13T14:00Z</example> */
         [JsonPropertyName("started_at")]
         public DateTime? StartedAt { get { return this.StartedAtOption.Value; } set { this.StartedAtOption = new(value); } }
 
@@ -184,6 +185,7 @@ namespace GatewayApiSdk.Model
         /// <summary>
         /// Gets or Sets FinishedAt
         /// </summary>
+        /* <example>2025-03-13T14:02:31Z</example> */
         [JsonPropertyName("finished_at")]
         public DateTime? FinishedAt { get { return this.FinishedAtOption.Value; } set { this.FinishedAtOption = new(value); } }
 
@@ -314,7 +316,7 @@ namespace GatewayApiSdk.Model
                             startedAt = new Option<DateTime?>(JsonSerializer.Deserialize<DateTime>(ref utf8JsonReader, jsonSerializerOptions));
                             break;
                         case "finished_at":
-                            finishedAt = new Option<DateTime?>(JsonSerializer.Deserialize<DateTime>(ref utf8JsonReader, jsonSerializerOptions));
+                            finishedAt = new Option<DateTime?>(JsonSerializer.Deserialize<DateTime?>(ref utf8JsonReader, jsonSerializerOptions));
                             break;
                         case "status":
                             string? statusRawValue = utf8JsonReader.GetString();
@@ -338,9 +340,6 @@ namespace GatewayApiSdk.Model
 
             if (startedAt.IsSet && startedAt.Value == null)
                 throw new ArgumentNullException(nameof(startedAt), "Property is not nullable for class GetFederationHistory200ResponseDataInner.");
-
-            if (finishedAt.IsSet && finishedAt.Value == null)
-                throw new ArgumentNullException(nameof(finishedAt), "Property is not nullable for class GetFederationHistory200ResponseDataInner.");
 
             if (status.IsSet && status.Value == null)
                 throw new ArgumentNullException(nameof(status), "Property is not nullable for class GetFederationHistory200ResponseDataInner.");
@@ -388,7 +387,10 @@ namespace GatewayApiSdk.Model
                 writer.WriteString("started_at", getFederationHistory200ResponseDataInner.StartedAtOption.Value!.Value.ToString(StartedAtFormat));
 
             if (getFederationHistory200ResponseDataInner.FinishedAtOption.IsSet)
-                writer.WriteString("finished_at", getFederationHistory200ResponseDataInner.FinishedAtOption.Value!.Value.ToString(FinishedAtFormat));
+                if (getFederationHistory200ResponseDataInner.FinishedAtOption.Value != null)
+                    writer.WriteString("finished_at", getFederationHistory200ResponseDataInner.FinishedAtOption.Value!.Value.ToString(FinishedAtFormat));
+                else
+                    writer.WriteNull("finished_at");
 
             var statusRawValue = GetFederationHistory200ResponseDataInner.StatusEnumToJsonValue(getFederationHistory200ResponseDataInner.StatusOption.Value!.Value);
             writer.WriteString("status", statusRawValue);
