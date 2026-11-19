@@ -26,36 +26,36 @@ using GatewayApiSdk.Client;
 namespace GatewayApiSdk.Model
 {
     /// <summary>
-    /// SearchSimilarDatasetsRequest
+    /// PatchTeamDatasetsV2422Response
     /// </summary>
-    public partial class SearchSimilarDatasetsRequest : IValidatableObject
+    public partial class PatchTeamDatasetsV2422Response : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchSimilarDatasetsRequest" /> class.
+        /// Initializes a new instance of the <see cref="PatchTeamDatasetsV2422Response" /> class.
         /// </summary>
-        /// <param name="id">id</param>
+        /// <param name="message">message</param>
         [JsonConstructor]
-        public SearchSimilarDatasetsRequest(Option<int?> id = default)
+        public PatchTeamDatasetsV2422Response(Option<string?> message = default)
         {
-            IdOption = id;
+            MessageOption = message;
             OnCreated();
         }
 
         partial void OnCreated();
 
         /// <summary>
-        /// Used to track the state of Id
+        /// Used to track the state of Message
         /// </summary>
         [JsonIgnore]
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Option<int?> IdOption { get; private set; }
+        public Option<string?> MessageOption { get; private set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Gets or Sets Message
         /// </summary>
-        /* <example>1</example> */
-        [JsonPropertyName("id")]
-        public int? Id { get { return this.IdOption.Value; } set { this.IdOption = new(value); } }
+        /* <example>Dataset metadata is not valid for activation</example> */
+        [JsonPropertyName("message")]
+        public string? Message { get { return this.MessageOption.Value; } set { this.MessageOption = new(value); } }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -64,8 +64,8 @@ namespace GatewayApiSdk.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class SearchSimilarDatasetsRequest {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("class PatchTeamDatasetsV2422Response {\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,29 +82,29 @@ namespace GatewayApiSdk.Model
     }
 
     /// <summary>
-    /// A Json converter for type <see cref="SearchSimilarDatasetsRequest" />
+    /// A Json converter for type <see cref="PatchTeamDatasetsV2422Response" />
     /// </summary>
-    public partial class SearchSimilarDatasetsRequestJsonConverter : JsonConverter<SearchSimilarDatasetsRequest>
+    public partial class PatchTeamDatasetsV2422ResponseJsonConverter : JsonConverter<PatchTeamDatasetsV2422Response>
     {
         partial void OnCreated();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchSimilarDatasetsRequestJsonConverter" /> class.
+        /// Initializes a new instance of the <see cref="PatchTeamDatasetsV2422ResponseJsonConverter" /> class.
         /// </summary>
-        public SearchSimilarDatasetsRequestJsonConverter()
+        public PatchTeamDatasetsV2422ResponseJsonConverter()
         {
             OnCreated();
         }
 
         /// <summary>
-        /// Deserializes json to <see cref="SearchSimilarDatasetsRequest" />
+        /// Deserializes json to <see cref="PatchTeamDatasetsV2422Response" />
         /// </summary>
         /// <param name="utf8JsonReader"></param>
         /// <param name="typeToConvert"></param>
         /// <param name="jsonSerializerOptions"></param>
         /// <returns></returns>
         /// <exception cref="JsonException"></exception>
-        public override SearchSimilarDatasetsRequest Read(ref Utf8JsonReader utf8JsonReader, Type typeToConvert, JsonSerializerOptions jsonSerializerOptions)
+        public override PatchTeamDatasetsV2422Response Read(ref Utf8JsonReader utf8JsonReader, Type typeToConvert, JsonSerializerOptions jsonSerializerOptions)
         {
             int currentDepth = utf8JsonReader.CurrentDepth;
 
@@ -113,7 +113,7 @@ namespace GatewayApiSdk.Model
 
             JsonTokenType startingTokenType = utf8JsonReader.TokenType;
 
-            Option<int?> id = default;
+            Option<string?> message = default;
 
             while (utf8JsonReader.Read())
             {
@@ -130,8 +130,8 @@ namespace GatewayApiSdk.Model
 
                     switch (localVarJsonPropertyName)
                     {
-                        case "id":
-                            id = new Option<int?>(utf8JsonReader.TokenType == JsonTokenType.Null ? (int?)null : utf8JsonReader.GetInt32());
+                        case "message":
+                            message = new Option<string?>(utf8JsonReader.GetString()!);
                             break;
                         default:
                             break;
@@ -139,38 +139,41 @@ namespace GatewayApiSdk.Model
                 }
             }
 
-            if (id.IsSet && id.Value == null)
-                throw new ArgumentNullException(nameof(id), "Property is not nullable for class SearchSimilarDatasetsRequest.");
+            if (message.IsSet && message.Value == null)
+                throw new ArgumentNullException(nameof(message), "Property is not nullable for class PatchTeamDatasetsV2422Response.");
 
-            return new SearchSimilarDatasetsRequest(id);
+            return new PatchTeamDatasetsV2422Response(message);
         }
 
         /// <summary>
-        /// Serializes a <see cref="SearchSimilarDatasetsRequest" />
+        /// Serializes a <see cref="PatchTeamDatasetsV2422Response" />
         /// </summary>
         /// <param name="writer"></param>
-        /// <param name="searchSimilarDatasetsRequest"></param>
+        /// <param name="patchTeamDatasetsV2422Response"></param>
         /// <param name="jsonSerializerOptions"></param>
         /// <exception cref="NotImplementedException"></exception>
-        public override void Write(Utf8JsonWriter writer, SearchSimilarDatasetsRequest searchSimilarDatasetsRequest, JsonSerializerOptions jsonSerializerOptions)
+        public override void Write(Utf8JsonWriter writer, PatchTeamDatasetsV2422Response patchTeamDatasetsV2422Response, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
 
-            WriteProperties(writer, searchSimilarDatasetsRequest, jsonSerializerOptions);
+            WriteProperties(writer, patchTeamDatasetsV2422Response, jsonSerializerOptions);
             writer.WriteEndObject();
         }
 
         /// <summary>
-        /// Serializes the properties of <see cref="SearchSimilarDatasetsRequest" />
+        /// Serializes the properties of <see cref="PatchTeamDatasetsV2422Response" />
         /// </summary>
         /// <param name="writer"></param>
-        /// <param name="searchSimilarDatasetsRequest"></param>
+        /// <param name="patchTeamDatasetsV2422Response"></param>
         /// <param name="jsonSerializerOptions"></param>
         /// <exception cref="NotImplementedException"></exception>
-        public void WriteProperties(Utf8JsonWriter writer, SearchSimilarDatasetsRequest searchSimilarDatasetsRequest, JsonSerializerOptions jsonSerializerOptions)
+        public void WriteProperties(Utf8JsonWriter writer, PatchTeamDatasetsV2422Response patchTeamDatasetsV2422Response, JsonSerializerOptions jsonSerializerOptions)
         {
-            if (searchSimilarDatasetsRequest.IdOption.IsSet)
-                writer.WriteNumber("id", searchSimilarDatasetsRequest.IdOption.Value!.Value);
+            if (patchTeamDatasetsV2422Response.MessageOption.IsSet && patchTeamDatasetsV2422Response.Message == null)
+                throw new ArgumentNullException(nameof(patchTeamDatasetsV2422Response.Message), "Property is required for class PatchTeamDatasetsV2422Response.");
+
+            if (patchTeamDatasetsV2422Response.MessageOption.IsSet)
+                writer.WriteString("message", patchTeamDatasetsV2422Response.Message);
         }
     }
 }

@@ -1,10 +1,11 @@
-# GatewayApiSdk.Model.SearchSimilarDatasets200Response
+# GatewayApiSdk.Model.OnboardingFormSchemasInner
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Data** | [**List&lt;SearchSimilarDatasets200ResponseDataInner&gt;**](SearchSimilarDatasets200ResponseDataInner.md) |  | [optional] 
+**Model** | **string** |  | [optional] 
+**VarVersion** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

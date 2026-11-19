@@ -136,6 +136,18 @@ namespace GatewayApiSdk.Client
                 return Dur.StatusEnumToJsonValue(durStatusEnum);
             if (obj is EditCollectionsV2Request.StatusEnum editCollectionsV2RequestStatusEnum)
                 return EditCollectionsV2Request.StatusEnumToJsonValue(editCollectionsV2RequestStatusEnum);
+            if (obj is Experiment.StatusEnum experimentStatusEnum)
+                return Experiment.StatusEnumToJsonValue(experimentStatusEnum);
+            if (obj is ExperimentDefinitionStepsInnerBlocksInner.TypeEnum experimentDefinitionStepsInnerBlocksInnerTypeEnum)
+                return ExperimentDefinitionStepsInnerBlocksInner.TypeEnumToJsonValue(experimentDefinitionStepsInnerBlocksInnerTypeEnum);
+            if (obj is ExperimentInput.StatusEnum experimentInputStatusEnum)
+                return ExperimentInput.StatusEnumToJsonValue(experimentInputStatusEnum);
+            if (obj is ExperimentTargeting.AudienceEnum experimentTargetingAudienceEnum)
+                return ExperimentTargeting.AudienceEnumToJsonValue(experimentTargetingAudienceEnum);
+            if (obj is ExperimentTrigger.OnEnum experimentTriggerOnEnum)
+                return ExperimentTrigger.OnEnumToJsonValue(experimentTriggerOnEnum);
+            if (obj is ExperimentTrigger.FrequencyEnum experimentTriggerFrequencyEnum)
+                return ExperimentTrigger.FrequencyEnumToJsonValue(experimentTriggerFrequencyEnum);
             if (obj is FetchAllDurIntegrations200ResponseDataInner.StatusEnum fetchAllDurIntegrations200ResponseDataInnerStatusEnum)
                 return FetchAllDurIntegrations200ResponseDataInner.StatusEnumToJsonValue(fetchAllDurIntegrations200ResponseDataInnerStatusEnum);
             if (obj is FetchDurByIdIntegrations200ResponseDataInner.StatusEnum fetchDurByIdIntegrations200ResponseDataInnerStatusEnum)

@@ -26,16 +26,16 @@ using GatewayApiSdk.Client;
 namespace GatewayApiSdk.Model
 {
     /// <summary>
-    /// SearchSimilarDatasets200Response
+    /// SearchSimilarDatasetsV2200Response
     /// </summary>
-    public partial class SearchSimilarDatasets200Response : IValidatableObject
+    public partial class SearchSimilarDatasetsV2200Response : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchSimilarDatasets200Response" /> class.
+        /// Initializes a new instance of the <see cref="SearchSimilarDatasetsV2200Response" /> class.
         /// </summary>
         /// <param name="data">data</param>
         [JsonConstructor]
-        public SearchSimilarDatasets200Response(Option<List<SearchSimilarDatasets200ResponseDataInner>?> data = default)
+        public SearchSimilarDatasetsV2200Response(Option<List<SearchSimilarDatasetsV2200ResponseDataInner>?> data = default)
         {
             DataOption = data;
             OnCreated();
@@ -48,13 +48,13 @@ namespace GatewayApiSdk.Model
         /// </summary>
         [JsonIgnore]
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Option<List<SearchSimilarDatasets200ResponseDataInner>?> DataOption { get; private set; }
+        public Option<List<SearchSimilarDatasetsV2200ResponseDataInner>?> DataOption { get; private set; }
 
         /// <summary>
         /// Gets or Sets Data
         /// </summary>
         [JsonPropertyName("data")]
-        public List<SearchSimilarDatasets200ResponseDataInner>? Data { get { return this.DataOption.Value; } set { this.DataOption = new(value); } }
+        public List<SearchSimilarDatasetsV2200ResponseDataInner>? Data { get { return this.DataOption.Value; } set { this.DataOption = new(value); } }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -63,7 +63,7 @@ namespace GatewayApiSdk.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class SearchSimilarDatasets200Response {\n");
+            sb.Append("class SearchSimilarDatasetsV2200Response {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -81,29 +81,29 @@ namespace GatewayApiSdk.Model
     }
 
     /// <summary>
-    /// A Json converter for type <see cref="SearchSimilarDatasets200Response" />
+    /// A Json converter for type <see cref="SearchSimilarDatasetsV2200Response" />
     /// </summary>
-    public partial class SearchSimilarDatasets200ResponseJsonConverter : JsonConverter<SearchSimilarDatasets200Response>
+    public partial class SearchSimilarDatasetsV2200ResponseJsonConverter : JsonConverter<SearchSimilarDatasetsV2200Response>
     {
         partial void OnCreated();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchSimilarDatasets200ResponseJsonConverter" /> class.
+        /// Initializes a new instance of the <see cref="SearchSimilarDatasetsV2200ResponseJsonConverter" /> class.
         /// </summary>
-        public SearchSimilarDatasets200ResponseJsonConverter()
+        public SearchSimilarDatasetsV2200ResponseJsonConverter()
         {
             OnCreated();
         }
 
         /// <summary>
-        /// Deserializes json to <see cref="SearchSimilarDatasets200Response" />
+        /// Deserializes json to <see cref="SearchSimilarDatasetsV2200Response" />
         /// </summary>
         /// <param name="utf8JsonReader"></param>
         /// <param name="typeToConvert"></param>
         /// <param name="jsonSerializerOptions"></param>
         /// <returns></returns>
         /// <exception cref="JsonException"></exception>
-        public override SearchSimilarDatasets200Response Read(ref Utf8JsonReader utf8JsonReader, Type typeToConvert, JsonSerializerOptions jsonSerializerOptions)
+        public override SearchSimilarDatasetsV2200Response Read(ref Utf8JsonReader utf8JsonReader, Type typeToConvert, JsonSerializerOptions jsonSerializerOptions)
         {
             int currentDepth = utf8JsonReader.CurrentDepth;
 
@@ -112,7 +112,7 @@ namespace GatewayApiSdk.Model
 
             JsonTokenType startingTokenType = utf8JsonReader.TokenType;
 
-            Option<List<SearchSimilarDatasets200ResponseDataInner>?> data = default;
+            Option<List<SearchSimilarDatasetsV2200ResponseDataInner>?> data = default;
 
             while (utf8JsonReader.Read())
             {
@@ -130,7 +130,7 @@ namespace GatewayApiSdk.Model
                     switch (localVarJsonPropertyName)
                     {
                         case "data":
-                            data = new Option<List<SearchSimilarDatasets200ResponseDataInner>?>(JsonSerializer.Deserialize<List<SearchSimilarDatasets200ResponseDataInner>>(ref utf8JsonReader, jsonSerializerOptions)!);
+                            data = new Option<List<SearchSimilarDatasetsV2200ResponseDataInner>?>(JsonSerializer.Deserialize<List<SearchSimilarDatasetsV2200ResponseDataInner>>(ref utf8JsonReader, jsonSerializerOptions)!);
                             break;
                         default:
                             break;
@@ -139,42 +139,42 @@ namespace GatewayApiSdk.Model
             }
 
             if (data.IsSet && data.Value == null)
-                throw new ArgumentNullException(nameof(data), "Property is not nullable for class SearchSimilarDatasets200Response.");
+                throw new ArgumentNullException(nameof(data), "Property is not nullable for class SearchSimilarDatasetsV2200Response.");
 
-            return new SearchSimilarDatasets200Response(data);
+            return new SearchSimilarDatasetsV2200Response(data);
         }
 
         /// <summary>
-        /// Serializes a <see cref="SearchSimilarDatasets200Response" />
+        /// Serializes a <see cref="SearchSimilarDatasetsV2200Response" />
         /// </summary>
         /// <param name="writer"></param>
-        /// <param name="searchSimilarDatasets200Response"></param>
+        /// <param name="searchSimilarDatasetsV2200Response"></param>
         /// <param name="jsonSerializerOptions"></param>
         /// <exception cref="NotImplementedException"></exception>
-        public override void Write(Utf8JsonWriter writer, SearchSimilarDatasets200Response searchSimilarDatasets200Response, JsonSerializerOptions jsonSerializerOptions)
+        public override void Write(Utf8JsonWriter writer, SearchSimilarDatasetsV2200Response searchSimilarDatasetsV2200Response, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
 
-            WriteProperties(writer, searchSimilarDatasets200Response, jsonSerializerOptions);
+            WriteProperties(writer, searchSimilarDatasetsV2200Response, jsonSerializerOptions);
             writer.WriteEndObject();
         }
 
         /// <summary>
-        /// Serializes the properties of <see cref="SearchSimilarDatasets200Response" />
+        /// Serializes the properties of <see cref="SearchSimilarDatasetsV2200Response" />
         /// </summary>
         /// <param name="writer"></param>
-        /// <param name="searchSimilarDatasets200Response"></param>
+        /// <param name="searchSimilarDatasetsV2200Response"></param>
         /// <param name="jsonSerializerOptions"></param>
         /// <exception cref="NotImplementedException"></exception>
-        public void WriteProperties(Utf8JsonWriter writer, SearchSimilarDatasets200Response searchSimilarDatasets200Response, JsonSerializerOptions jsonSerializerOptions)
+        public void WriteProperties(Utf8JsonWriter writer, SearchSimilarDatasetsV2200Response searchSimilarDatasetsV2200Response, JsonSerializerOptions jsonSerializerOptions)
         {
-            if (searchSimilarDatasets200Response.DataOption.IsSet && searchSimilarDatasets200Response.Data == null)
-                throw new ArgumentNullException(nameof(searchSimilarDatasets200Response.Data), "Property is required for class SearchSimilarDatasets200Response.");
+            if (searchSimilarDatasetsV2200Response.DataOption.IsSet && searchSimilarDatasetsV2200Response.Data == null)
+                throw new ArgumentNullException(nameof(searchSimilarDatasetsV2200Response.Data), "Property is required for class SearchSimilarDatasetsV2200Response.");
 
-            if (searchSimilarDatasets200Response.DataOption.IsSet)
+            if (searchSimilarDatasetsV2200Response.DataOption.IsSet)
             {
                 writer.WritePropertyName("data");
-                JsonSerializer.Serialize(writer, searchSimilarDatasets200Response.Data, jsonSerializerOptions);
+                JsonSerializer.Serialize(writer, searchSimilarDatasetsV2200Response.Data, jsonSerializerOptions);
             }
         }
     }

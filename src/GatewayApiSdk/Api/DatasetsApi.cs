@@ -986,13 +986,19 @@ namespace GatewayApiSdk.Api
     /// <summary>
     /// The <see cref="IPatchTeamDatasetsV2ApiResponse"/>
     /// </summary>
-    public interface IPatchTeamDatasetsV2ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.DeleteApplications200Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
+    public interface IPatchTeamDatasetsV2ApiResponse : GatewayApiSdk.Client.IApiResponse, IOk<GatewayApiSdk.Model.DeleteApplications200Response?>, IUnprocessableContent<GatewayApiSdk.Model.PatchTeamDatasetsV2422Response?>, IInternalServerError<GatewayApiSdk.Model.CreateApplications500Response?>
     {
         /// <summary>
         /// Returns true if the response is 200 Ok
         /// </summary>
         /// <returns></returns>
         bool IsOk { get; }
+
+        /// <summary>
+        /// Returns true if the response is 422 UnprocessableContent
+        /// </summary>
+        /// <returns></returns>
+        bool IsUnprocessableContent { get; }
 
         /// <summary>
         /// Returns true if the response is 500 InternalServerError
@@ -7568,6 +7574,44 @@ namespace GatewayApiSdk.Api
                 } catch (Exception e)
                 {
                     OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)200);
+                }
+
+                return result != null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 422 UnprocessableContent
+            /// </summary>
+            /// <returns></returns>
+            public bool IsUnprocessableContent => 422 == (int)StatusCode;
+
+            /// <summary>
+            /// Deserializes the response if the response is 422 UnprocessableContent
+            /// </summary>
+            /// <returns></returns>
+            public GatewayApiSdk.Model.PatchTeamDatasetsV2422Response? UnprocessableContent()
+            {
+                // This logic may be modified with the AsModel.mustache template
+                return IsUnprocessableContent
+                    ? System.Text.Json.JsonSerializer.Deserialize<GatewayApiSdk.Model.PatchTeamDatasetsV2422Response>(RawContent, _jsonSerializerOptions)
+                    : null;
+            }
+
+            /// <summary>
+            /// Returns true if the response is 422 UnprocessableContent and the deserialized response is not null
+            /// </summary>
+            /// <param name="result"></param>
+            /// <returns></returns>
+            public bool TryUnprocessableContent([NotNullWhen(true)]out GatewayApiSdk.Model.PatchTeamDatasetsV2422Response? result)
+            {
+                result = null;
+
+                try
+                {
+                    result = UnprocessableContent();
+                } catch (Exception e)
+                {
+                    OnDeserializationErrorDefaultImplementation(e, (HttpStatusCode)422);
                 }
 
                 return result != null;

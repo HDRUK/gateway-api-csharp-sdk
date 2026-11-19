@@ -56,10 +56,20 @@ namespace GatewayApiSdk.Test.Api
         [Fact (Skip = "not implemented")]
         public async Task SearchSimilarDatasetsAsyncTest()
         {
-            SearchSimilarDatasetsRequest searchSimilarDatasetsRequest = default!;
-            var response = await _instance.SearchSimilarDatasetsAsync(searchSimilarDatasetsRequest);
+            SearchSimilarDatasetsV2Request searchSimilarDatasetsV2Request = default!;
+            await _instance.SearchSimilarDatasetsAsync(searchSimilarDatasetsV2Request);
+        }
+
+        /// <summary>
+        /// Test SearchSimilarDatasetsV2
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task SearchSimilarDatasetsV2AsyncTest()
+        {
+            SearchSimilarDatasetsV2Request searchSimilarDatasetsV2Request = default!;
+            var response = await _instance.SearchSimilarDatasetsV2Async(searchSimilarDatasetsV2Request);
             var model = response.Ok();
-            Assert.IsType<SearchSimilarDatasets200Response>(model);
+            Assert.IsType<SearchSimilarDatasetsV2200Response>(model);
         }
     }
 }
